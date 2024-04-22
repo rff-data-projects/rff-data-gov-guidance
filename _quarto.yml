@@ -2,12 +2,19 @@ project:
   type: website
 
 website:
-  title: "Rff-data-gov-guidance/"
-  navbar:
-    left:
-      - href: index.qmd
-        text: Home
-      - about.qmd
+  title: "RFF Data Governance Guidance"
+  sidebar:
+    style: "docked"
+    search: true
+    contents:
+      - docs/home.md
+      - section: "Version Control"
+        contents:
+          - docs/version-control/vc1.md
+          - docs/version-control/vc2.md
+      - section: "Software"
+        contents:
+          - docs/software/software1.md
 
 format:
   html:
