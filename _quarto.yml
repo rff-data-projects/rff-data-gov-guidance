@@ -7,7 +7,7 @@ website:
     style: "docked"
     search: true
     contents:
-      - docs/home.md
+      - index.qmd
       - section: "Version Control"
         contents:
           - docs/version-control/vc1.md
@@ -15,10 +15,13 @@ website:
       - section: "Software"
         contents:
           - docs/software/software1.md
+      - section: "Data Management"
+        contents:
+          - docs/data-management/sensitive-data.md
 
 format:
   html:
-    theme: cosmo
+    theme: darkly
     css: styles.css
     toc: true
 
