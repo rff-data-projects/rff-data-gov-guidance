@@ -15,6 +15,9 @@ website:
       - section: "Software"
         contents:
           - docs/software/software1.md
+      - section: "Data Management"
+        contents:
+          - docs/data-management/sensitive-data.md
 
 format:
   html:
