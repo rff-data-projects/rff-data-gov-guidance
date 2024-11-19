@@ -21,6 +21,28 @@
     ]
   },
   {
+    "objectID": "docs/software/software1.html",
+    "href": "docs/software/software1.html",
+    "title": "Software Title 1",
+    "section": "",
+    "text": "bulleted\nlist\nalex testing\nEthan editing\n\ncode block\n\n\n\n\nI can also italicize and bold things like this.",
+    "crumbs": [
+      "Software",
+      "Software Title 1"
+    ]
+  },
+  {
+    "objectID": "docs/software/software1.html#subheading",
+    "href": "docs/software/software1.html#subheading",
+    "title": "Software Title 1",
+    "section": "",
+    "text": "I can also italicize and bold things like this.",
+    "crumbs": [
+      "Software",
+      "Software Title 1"
+    ]
+  },
+  {
     "objectID": "docs/data-management/sensitive-data.html",
     "href": "docs/data-management/sensitive-data.html",
     "title": "Sensitive and Proprietary Data, Data Agreements",
@@ -84,28 +106,6 @@
     "crumbs": [
       "Data Management",
       "Sensitive and Proprietary Data, Data Agreements"
-    ]
-  },
-  {
-    "objectID": "docs/software/software1.html",
-    "href": "docs/software/software1.html",
-    "title": "Software Title 1",
-    "section": "",
-    "text": "bulleted\nlist\nalex testing\nEthan editing\n\ncode block\n\n\n\n\nI can also italicize and bold things like this.",
-    "crumbs": [
-      "Software",
-      "Software Title 1"
-    ]
-  },
-  {
-    "objectID": "docs/software/software1.html#subheading",
-    "href": "docs/software/software1.html#subheading",
-    "title": "Software Title 1",
-    "section": "",
-    "text": "I can also italicize and bold things like this.",
-    "crumbs": [
-      "Software",
-      "Software Title 1"
     ]
   },
   {
