@@ -3,6 +3,7 @@ project:
 
 website:
   title: "RFF Data Governance Guidance"
+  site-url: "https://alexandra-thompson-dc.github.io/rff-data-gov-guidance/" # makes site links work on your remote site, update this if we change domain
   sidebar:
     style: "docked"
     search: true
@@ -24,8 +25,5 @@ format:
     theme: darkly
     css: styles.css
     toc: true
-website:
-  site-url: "https://alexandra-thompson-dc.github.io/rff-data-gov-guidance/" # makes site links work on your remote site, update this if we change domain
-
 
 
