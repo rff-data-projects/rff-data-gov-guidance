@@ -12,6 +12,7 @@ website:
     title: "Data Governance Guidance"
     style: "docked"
     search: true
+    background: "#c3e1f9"
     contents:
       - index.qmd
       - section: "Version Control"
@@ -37,11 +38,17 @@ website:
             href: https://github.com/alexandra-thompson-dc/rff-data-gov-guidance
           - text: Report a Bug
             href: https://github.com/alexandra-thompson-dc/rff-data-gov-guidance/issues
+  page-footer:
+    right: "This page is built with [Quarto](https://quarto.org/)."
+    background: "#c3e1f9"
 format:
   html:
     theme: 
-      - cerulean
+      - journal
       - styles.scss
     toc: true
+    toc-expand: 3
+    toc-depth: 4
+
 
 
