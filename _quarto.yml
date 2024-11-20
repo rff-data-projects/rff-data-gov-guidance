@@ -4,7 +4,12 @@ project:
 website:
   title: "RFF Data Governance Guidance"
   site-url: "https://alexandra-thompson-dc.github.io/rff-data-gov-guidance/" # makes site links work on your remote site, update this if we change domain
+  repo-url: "https://github.com/alexandra-thompson-dc/rff-data-gov-guidance"
+  repo-actions: [edit, issue]
+  favicon: images/black-logo.svg
   sidebar:
+    logo: images/black-logomark-vertical.svg
+    title: "Data Governance Guidance"
     style: "docked"
     search: true
     contents:
@@ -25,11 +30,18 @@ website:
               - docs/data-management/storage-organization/organization.md
               - docs/data-management/storage-organization/file-formats.md
               - docs/data-management/storage-organization/sensitive-data.md
-
+    tools:
+      - icon: github
+        menu:
+          - text: Source Code
+            href: https://github.com/alexandra-thompson-dc/rff-data-gov-guidance
+          - text: Report a Bug
+            href: https://github.com/alexandra-thompson-dc/rff-data-gov-guidance/issues
 format:
   html:
-    theme: darkly
-    css: styles.css
+    theme: 
+      - cerulean
+      - styles.scss
     toc: true
 
 
