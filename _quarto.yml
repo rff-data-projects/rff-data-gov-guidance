@@ -18,7 +18,13 @@ website:
           - docs/software/software1.md
       - section: "Data Management"
         contents:
-          - docs/data-management/sensitive-data.md
+          - section: "Storage and Organization"
+            href: docs/data-management/storage-organization/index.md
+            contents:
+              - docs/data-management/storage-organization/storage-options.md
+              - docs/data-management/storage-organization/organization.md
+              - docs/data-management/storage-organization/file-formats.md
+              - docs/data-management/storage-organization/sensitive-data.md
 
 format:
   html:
