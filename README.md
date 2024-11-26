@@ -41,12 +41,12 @@ GitHub will show you a preview of the changes that will be merged.
 ```
 4. Click *Create pull request*
 5. Review the Pull Request. After creating the PR:
-  - Click on the *Files Changed* tab to view highlighted changes or conflicts. Additions will be highlighted and green and deletions will be higlighted in red.
-  - Reviewers can leave comments, suggest changes, or approve the PR.
+   - Click on the *Files Changed* tab to view highlighted changes or conflicts. Additions will be highlighted and green and deletions will be higlighted in red.
+   - Reviewers can leave comments, suggest changes, or approve the PR.
 6. Respond to feedback as needed
-  - Make the changes in your local branch.
-  - Commit and push the changes to the same branch on GitHub:
-  - The PR will automatically update with your new commits.
+   - Make the changes in your local branch.
+   - Commit and push the changes to the same branch on GitHub:
+   - The PR will automatically update with your new commits.
 
 
 ## Adding a Page
