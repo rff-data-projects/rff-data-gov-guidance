@@ -4,9 +4,15 @@ project:
 website:
   title: "RFF Data Governance Guidance"
   site-url: "https://alexandra-thompson-dc.github.io/rff-data-gov-guidance/" # makes site links work on your remote site, update this if we change domain
+  repo-url: "https://github.com/alexandra-thompson-dc/rff-data-gov-guidance"
+  repo-actions: [edit, issue]
+  favicon: images/black-logo.svg
   sidebar:
+    logo: images/black-logomark-vertical.svg
+    title: "Data Governance Guidance"
     style: "docked"
     search: true
+    background: "#c3e1f9"
     contents:
       - index.qmd
       - section: "Version Control"
@@ -25,11 +31,30 @@ website:
               - docs/data-management/storage-organization/organization.md
               - docs/data-management/storage-organization/file-formats.md
               - docs/data-management/storage-organization/sensitive-data.md
-
+    tools:
+      - icon: github
+        menu:
+          - text: Source Code
+            href: https://github.com/alexandra-thompson-dc/rff-data-gov-guidance
+          - text: Report a Bug
+            href: https://github.com/alexandra-thompson-dc/rff-data-gov-guidance/issues
+  page-footer:
+    right: "This page is built with [Quarto](https://quarto.org/)."
+    background: "#c3e1f9"
+  announcement: 
+    icon: info-circle
+    dismissable: true
+    content: "**NOTE** - this site is still under development!"
+    type: primary
+    position: below-navbar
 format:
   html:
-    theme: darkly
-    css: styles.css
+    theme: 
+      - journal
+      - styles.scss
     toc: true
+    toc-expand: 3
+    toc-depth: 4
+
 
 
