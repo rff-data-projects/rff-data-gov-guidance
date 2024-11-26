@@ -4,7 +4,7 @@
 
 Regardless of the specific method deployed, your data project organization should have the following qualities:
 
-* __Raw data are kept in a distinct folder and never modified or overwritten.__ Always keep an unaltered version of original data files, "warts and all." Avoid making any changes directly to this file; instead, perform corrections using a scripted language and save the modified data as separate output files. Consider making raw datasets “read-only” so they cannot be accidentally modified.
+* __Raw data are kept in a distinct folder and never modified or overwritten.__ Always keep an unaltered version of original data files, "warts and all." Avoid making any changes directly to this file; instead, perform corrections using a scripted language and save the modified data as separate output files. Consider making raw datasets "read-only" so they cannot be accidentally modified.
 * __Simple__: The folder structure should be easy to navigate and understand, even for someone new to the project. It should mirror the logical flow of the project and use clear, descriptive names that reflect the contents and purpose of each folder.
 * __Flexible__: The structure should be adaptable to evolving project needs, allowing for the addition of new data, methods, or collaborators without disrupting the existing organization. It should support different types of data and workflows, making it easy to integrate new elements as the project evolves.
 
@@ -36,7 +36,7 @@ project_name/
 
 ### `Data` folder
 
-In the data folder, raw data is preserved in its own subfolder. The intermediate or int folder contains datasets created during data cleaning and processing. If practical, a clean folder can contain cleaned output datasets and associated READMEs [LINK TO SECTION], but note that it's often unclear when datasets are truly “clean” until late project stages.
+In the data folder, raw data is preserved in its own subfolder. The intermediate or int folder contains datasets created during data cleaning and processing. If practical, a clean folder can contain cleaned output datasets and associated READMEs [LINK TO SECTION], but note that it's often unclear when datasets are truly "clean" until late project stages.
 
 ### `Results` folder
 
@@ -50,7 +50,7 @@ The documents folder should contain the data management plan, a link to the GitH
 
 For integration with version control, the code folder has one copy of the project git repository for each of the project collaborators, so that each team member can make changes without affecting the working version of the rest of the team.  Repositories are synced manually, so that changes can be made independently and then merged to the shared, remote version of the codebase stored on Github.
 Each individual's repository folder has subfolders separating types of code. The scripts folder code is the main project workflow. 
-The tools folder (sometimes called util, modules, or helpers) contains scripts with distinct functions that can be “called” (referenced) in the main processing scripts. This is especially useful if functions are used multiple times or are lengthy. Separately storing functions that may be used in multiple source code scripts is an important practice in creating quality software [LINK TO SQ SECTION ABOUT MODULAR PROGRAMMING].
+The tools folder (sometimes called util, modules, or helpers) contains scripts with distinct functions that can be "called" (referenced) in the main processing scripts. This is especially useful if functions are used multiple times or are lengthy. Separately storing functions that may be used in multiple source code scripts is an important practice in creating quality software [LINK TO SQ SECTION ABOUT MODULAR PROGRAMMING].
 
 ### Other project files
 
@@ -93,10 +93,10 @@ Specifically, they should be human readable, machine readable, and compatible wi
   * Avoid storing separate versions of files (e.g. `county_means_map_v2`), and instead rely on version control tools to save and document changes.
   * If you use abbreviations or acronyms, make sure they are defined in documentation such as a README [LINK TO SECTION]
 * __Machine readable__: Files and folders are easy to search for and filter based on name.
-  * Use lowercase characters (avoid “camelCase” method)
+  * Use lowercase characters (avoid "camelCase" method)
   * Contain only ASCII characters (letters, numbers, and underscores)
     * Do not include spaces or special characters (/ \ : * ? <> &)
-    * Use hyphens or underscores instead of spaces (the “snake_case” method)
+    * Use hyphens or underscores instead of spaces (the "snake_case" method)
 * Compatible with default ordering: the ability to sort files by name is useful and helps organization, as shown below.
   * __Chronological order__: If there are temporal measurements, use the ISO 8601 standard for dates `(YYYY-MM-DD)`.
   Here is an example of temporal data files named for compatibility with default ordering:
@@ -117,7 +117,7 @@ Specifically, they should be human readable, machine readable, and compatible wi
     * `04_regressions.R`
 
     ::: {.callout-note}
-    Make sure to “left pad” numbers with zeros. For example, use `01` instead of `1`.  This is to allow default sorting to still apply if and when the filename prefixes enter the double digits.
+    Make sure to "left pad" numbers with zeros. For example, use `01` instead of `1`.  This is to allow default sorting to still apply if and when the filename prefixes enter the double digits.
     :::
 
 

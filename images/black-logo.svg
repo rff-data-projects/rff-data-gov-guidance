@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   version="1.1"
+   id="svg2"
+   width="164.41333"
+   height="106.34667"
+   viewBox="0 0 164.41333 106.34667"
+   sodipodi:docname="black-logo.eps"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs6">
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath18">
+      <path
+         d="M 2.74219,31.0313 435.664,787.191 c 5.684,9.938 18.352,13.379 28.289,7.692 3.215,-1.836 5.871,-4.504 7.707,-7.715 L 587.969,583.355 757.805,285.758 599.973,10.4219 C 596.277,3.97266 589.414,0 581.98,0 H 20.7305 C 9.28906,0 0,9.28125 0,20.7305 c 0,3.6133 0.949219,7.164 2.74219,10.3008 z"
+         id="path16" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath24">
+      <path
+         d="m -4425.33,-11457.5 h 10080 V 2862.52 h -10080 z"
+         id="path22" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath34">
+      <path
+         d="M 757.766,285.73 903.34,540.648 c 5.676,9.942 18.34,13.399 28.281,7.719 3.215,-1.836 5.891,-4.5 7.727,-7.719 L 1230.32,31.0117 C 1236,21.0625 1232.54,8.40234 1222.6,2.73047 1219.46,0.9375 1215.92,0 1212.31,0 H 933.359 c -7.429,0 -14.296,3.98047 -17.988,10.4297 z"
+         id="path32" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath40">
+      <path
+         d="m -4425.33,-11457.5 h 10080 V 2862.52 h -10080 z"
+         id="path38" />
+    </clipPath>
+  </defs>
+  <sodipodi:namedview
+     id="namedview4"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1" />
+  <g
+     id="g8"
+     inkscape:groupmode="layer"
+     inkscape:label="ink_ext_XXXXXX"
+     transform="matrix(1.3333333,0,0,-1.3333333,0,106.34667)">
+    <g
+       id="g10"
+       transform="scale(0.1)">
+      <g
+         id="g12">
+        <g
+           id="g14"
+           clip-path="url(#clipPath18)">
+          <g
+             id="g20"
+             clip-path="url(#clipPath24)">
+            <path
+               d="M -50,847.625 H 807.805 V -50 H -50 v 897.625"
+               style="fill:#132636;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               id="path26" />
+          </g>
+        </g>
+      </g>
+      <g
+         id="g28">
+        <g
+           id="g30"
+           clip-path="url(#clipPath34)">
+          <g
+             id="g36"
+             clip-path="url(#clipPath40)">
+            <path
+               d="M 707.766,601.102 H 1283.05 V -50 H 707.766 v 651.102"
+               style="fill:#132636;fill-opacity:1;fill-rule:nonzero;stroke:none"
+               id="path42" />
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
