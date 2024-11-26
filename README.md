@@ -2,7 +2,7 @@
 Repo for Resources for the Future's Data Governance Working Group's guidance on data science practices for RFF researchers
 
 # Contribution Guidelines
-* *Only members of the Data Governance Working Group may make changes to the content. To submit questions or suggestions, --LINK TO SUBSECTION ON HOW TO USE ISSUES, TO BE DEVELOPED--*
+* ***Only members of the Data Governance Working Group may make changes to the content. To submit questions or suggestions, --LINK TO SUBSECTION ON HOW TO USE ISSUES, TO BE DEVELOPED--***
 ## Local editing (on your computer)
 
 1. In your _Git Bash_ terminal or other Git GUI, navigate to the relevant development branch, e.g., _git checkout feat-data-management_
@@ -26,8 +26,8 @@ git commit -m 'update readme with local editing guidelines'
 ## Review procedure (Pull Requests)
 Once you've made changes to the relevant development branch, create a Pull Request. This will allow others to review the changes you've made.
 1. Navigate to the Pull Request page
-  * GitHub will often show a banner that suggests creating a pull request for the branch you've just pushed. If you see this banner, click on "Compare & pull request".
-  * If you don’t see the banner, go to the "Pull requests" tab, and then click the "New pull request" button.
+  - GitHub will often show a banner that suggests creating a pull request for the branch you've just pushed. If you see this banner, click on "Compare & pull request".
+  - If you don’t see the banner, go to the "Pull requests" tab, and then click the "New pull request" button.
 2. Select the correct branches. In the PR creation interface:
 _Base branch_: Select the branch you want to merge your changes into (usually main or develop).
 _Compare branch_: Select your branch (the branch with your changes).
@@ -39,16 +39,12 @@ GitHub will show you a preview of the changes that will be merged.
 ```
 4. Click *Create pull request*
 5. Review the Pull Request. After creating the PR:
-  * Click on the *Files Changed* tab to view highlighted changes or conflicts, e.g.:
-```
-<span style="background-color: green; color: black;">+ This is a new line of code (added)</span>
-<span style="background-color: red; color: black;">- This line of code has been removed</span>
-```
-* Reviewers can leave comments, suggest changes, or approve the PR.
+  - Click on the *Files Changed* tab to view highlighted changes or conflicts. Additions will be highlighted and green and deletions will be higlighted in red.
+  - Reviewers can leave comments, suggest changes, or approve the PR.
 6. Respond to feedback as needed
-  * Make the changes in your local branch.
-  * Commit and push the changes to the same branch on GitHub:
-  * The PR will automatically update with your new commits.
+  - Make the changes in your local branch.
+  - Commit and push the changes to the same branch on GitHub:
+  - The PR will automatically update with your new commits.
 
 
 ## Adding a Page
