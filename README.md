@@ -1,5 +1,5 @@
 # rff-data-gov-guidance
-Repo for Resources for the Future's Data Governance Working Group's guidance on data science practices for RFF researchers
+Repo for Resources for the Future's Data Governance Working Group's guidance on data science practices for RFF researchers.  
 Link to [guidance website](https://alexandra-thompson-dc.github.io/rff-data-gov-guidance/)
 # Contribution Guidelines
 ***Only members of the Data Governance Working Group may make changes to the content. To submit questions or suggestions, --LINK TO SUBSECTION ON HOW TO USE ISSUES, TO BE DEVELOPED--***
@@ -24,7 +24,6 @@ git commit -m 'update readme with local editing guidelines'
 5. Create a Pull Request (further instruction below).
 
 ## Review procedure (Pull Requests)
-Once you've made changes to the relevant development branch, create a Pull Request. This will allow others to review the changes you've made.
 Once you've made changes to the relevant development branch, create a Pull Request. This will allow others to review the changes you've made.
 
 1. Navigate to the Pull Request page
