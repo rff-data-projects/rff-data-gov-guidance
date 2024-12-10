@@ -15,13 +15,6 @@ website:
     background: "#c3e1f9"
     contents:
       - index.qmd
-      - section: "Version Control"
-        contents:
-          - docs/version-control/vc1.md
-          - docs/version-control/vc2.md
-      - section: "Software"
-        contents:
-          - docs/software/software1.md
       - section: "Data Management"
         contents:
           - section: "Storage and Organization"
@@ -31,6 +24,13 @@ website:
               - docs/data-management/storage-organization/organization.md
               - docs/data-management/storage-organization/file-formats.md
               - docs/data-management/storage-organization/sensitive-data.md
+      - section: "Version Control"
+        contents:
+          - docs/version-control/vc1.md
+          - docs/version-control/vc2.md
+      - section: "Software Quality"
+        contents:
+          - docs/software/software1.md
     tools:
       - icon: github
         menu:
