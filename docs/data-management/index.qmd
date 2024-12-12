@@ -50,7 +50,7 @@ The Data Management section contains:
 A common axiom among data scientists is the application of the 80/20 rule to effort: 80% of time is spent wrangling (managing and preparing) data, while 20% is spent on analysis. 
 Most activities in the data life cycle come before the analysis phase and are closely tied to data management. 
 There are many different models of the data life cycle, and the relevant model for your individual project will vary. 
-A general data life cycle is depicted below, [see also @DMPTool].
+A general data life cycle is depicted below [see also @DMPTool].
 
 
 ```{mermaid}
