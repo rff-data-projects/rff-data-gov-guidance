@@ -16,6 +16,7 @@ website:
     contents:
       - index.qmd
       - section: "Data Management"
+        href: docs/data-management/index.qmd
         contents:
           - section: "Storage and Organization"
             href: docs/data-management/storage-organization/index.md
