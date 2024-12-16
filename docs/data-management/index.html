@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>file-formats – RFF Data Governance Guidance</title>
+<title>Introduction to Data Management – RFF Data Governance Guidance</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,26 +20,46 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
-<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../../../">
-<link href="../../../images/black-logo.svg" rel="icon" type="image/svg+xml">
-<script src="../../../site_libs/quarto-html/quarto.js"></script>
-<script src="../../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap-0fedd72d85f94da33d0700d14c18ae29.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../images/black-logo.svg" rel="icon" type="image/svg+xml">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-0fedd72d85f94da33d0700d14c18ae29.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -67,6 +87,9 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script src="../../site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="../../site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="../../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
 
 </head>
@@ -80,7 +103,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../docs/data-management/index.html">Data Management</a></li><li class="breadcrumb-item"><a href="../../../docs/data-management/storage-organization/index.html">Storage and Organization</a></li><li class="breadcrumb-item"><a href="../../../docs/data-management/storage-organization/file-formats.html">File Formats</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../docs/data-management/index.html">Data Management</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -97,11 +120,11 @@ ul.task-list li input[type="checkbox"] {
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
-      <a href="../../../index.html" class="sidebar-logo-link">
-      <img src="../../../images/black-logomark-vertical.svg" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      <a href="../../index.html" class="sidebar-logo-link">
+      <img src="../../images/black-logomark-vertical.svg" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
       </a>
     <div class="sidebar-title mb-0 py-0">
-      <a href="../../../">Data Governance Guidance</a> 
+      <a href="../../">Data Governance Guidance</a> 
         <div class="sidebar-tools-main">
     <div class="dropdown">
       <a href="" title="" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" role="link" aria-label=""><i class="bi bi-github"></i></a>
@@ -130,13 +153,13 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Home</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../../docs/data-management/index.html" class="sidebar-item-text sidebar-link">
+            <a href="../../docs/data-management/index.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Data Management</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -145,34 +168,34 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../../docs/data-management/storage-organization/index.html" class="sidebar-item-text sidebar-link">
+            <a href="../../docs/data-management/storage-organization/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Storage and Organization</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 show">  
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../docs/data-management/storage-organization/storage-options.html" class="sidebar-item-text sidebar-link">
+  <a href="../../docs/data-management/storage-organization/storage-options.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Storage Options at RFF</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../docs/data-management/storage-organization/organization.html" class="sidebar-item-text sidebar-link">
+  <a href="../../docs/data-management/storage-organization/organization.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Data Organization</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../docs/data-management/storage-organization/file-formats.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../docs/data-management/storage-organization/file-formats.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">File Formats</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../docs/data-management/storage-organization/sensitive-data.html" class="sidebar-item-text sidebar-link">
+  <a href="../../docs/data-management/storage-organization/sensitive-data.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Sensitive and Proprietary Data, Data Agreements</span></a>
   </div>
 </li>
@@ -191,13 +214,13 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../docs/version-control/vc1.html" class="sidebar-item-text sidebar-link">
+  <a href="../../docs/version-control/vc1.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Version Control Title</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../docs/version-control/vc2.html" class="sidebar-item-text sidebar-link">
+  <a href="../../docs/version-control/vc2.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Version Control Title</span></a>
   </div>
 </li>
@@ -214,7 +237,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../docs/software/software1.html" class="sidebar-item-text sidebar-link">
+  <a href="../../docs/software/software1.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Software Title 1</span></a>
   </div>
 </li>
@@ -230,23 +253,113 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#file-formats" id="toc-file-formats" class="nav-link active" data-scroll-target="#file-formats">File Formats</a></li>
+  <li><a href="#foundations" id="toc-foundations" class="nav-link active" data-scroll-target="#foundations">Foundations</a></li>
+  <li><a href="#the-data-life-cycle" id="toc-the-data-life-cycle" class="nav-link" data-scroll-target="#the-data-life-cycle">The Data Life Cycle</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/alexandra-thompson-dc/rff-data-gov-guidance/edit/main/docs/data-management/storage-organization/file-formats.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/alexandra-thompson-dc/rff-data-gov-guidance/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/alexandra-thompson-dc/rff-data-gov-guidance/edit/main/docs/data-management/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/alexandra-thompson-dc/rff-data-gov-guidance/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../docs/data-management/index.html">Data Management</a></li><li class="breadcrumb-item"><a href="../../../docs/data-management/storage-organization/index.html">Storage and Organization</a></li><li class="breadcrumb-item"><a href="../../../docs/data-management/storage-organization/file-formats.html">File Formats</a></li></ol></nav></header>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Introduction to Data Management</h1>
+</div>
 
 
 
+<div class="quarto-title-meta">
 
-<section id="file-formats" class="level1">
-<h1>File Formats</h1>
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="foundations" class="level2">
+<h2 class="anchored" data-anchor-id="foundations">Foundations</h2>
+<p>Data management encompasses the methods used to collect, store, organize, and use data. Good data management can not only save time and headaches but increase the usefulness of data and enhance the reproducibility of the whole project. Good data management practices provide (Langseth et al.&nbsp;2015):</p>
+<ul>
+<li>Short-term benefits
+<ul>
+<li>Spend less time doing data management and more time doing research.</li>
+<li>Easier to prepare and use data.</li>
+<li>Collaborators can readily understand and use data files.</li>
+</ul></li>
+<li>Long-term benefits
+<ul>
+<li>Make your work more transparent, reproducible, and rigorous.</li>
+<li>Other researchers can find, understand, and use your data to address broad questions.</li>
+<li>You get credit for preserving data products and for their use in other products.</li>
+</ul></li>
+</ul>
+<p>The Data Management section contains:</p>
+<ul>
+<li><a href="../../docs/data-management/storage-organization/index.html">Storage and Organization</a>
+<ul>
+<li><a href="../../docs/data-management/storage-organization/storage-options.html">Storage Options at RFF</a></li>
+<li><a href="../../docs/data-management/storage-organization/organization.html">Data Organization</a></li>
+<li><a href="../../docs/data-management/storage-organization/file-formats.html">File Formats</a></li>
+<li><a href="../../docs/data-management/storage-organization/sensitive-data.html">Sensitive and Proprietary Data, Data Agreements</a></li>
+</ul></li>
+</ul>
+</section>
+<section id="the-data-life-cycle" class="level2">
+<h2 class="anchored" data-anchor-id="the-data-life-cycle">The Data Life Cycle</h2>
+<p>A common axiom among data scientists is the application of the 80/20 rule to effort: 80% of time is spent wrangling (managing and preparing) data, while 20% is spent on analysis. Most activities in the data life cycle come before the analysis phase and are closely tied to data management. There are many different models of the data life cycle, and the relevant model for your individual project will vary. A general data life cycle is depicted below <span class="citation" data-cites="DMPTool">(see also <a href="#ref-DMPTool" role="doc-biblioref">Langseth et al. 2015</a>)</span>.</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">graph TB
+  A(Plan) --&gt; B(Collect)
+  B --&gt; C(Process)
+  C --&gt; D(Explore / Visualize)
+  D --&gt; E(Analyze / Model)
+  E --&gt; F(Archive, Publish, Share)
+  E --&gt; C
+  E --&gt; A
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>The data life cycle is often iterative and nonlinear, and does not always follow the order shown. Your actual analysis workflow may include dead ends or repeated steps. Regardless, it is helpful to plan and discuss your data-oriented research using these common components of the data life cycle:</p>
+<ol type="1">
+<li><strong>Plan</strong>: Identify data that will be collected and how it will be managed. Create a data management plan.</li>
+<li><strong>Collect</strong>: Acquire and store raw data.
+<ol type="a">
+<li><strong>Acquire</strong>: Retrieve data from the appropriate source.</li>
+<li><strong>Describe</strong>: Document the raw data source, format, variables, measurement units, coded values, and known problems. Create metadata for primary data. Cite secondary data.</li>
+<li><strong>Quality assurance</strong>: Inspect the raw data for quality and fit for analysis purpose.</li>
+<li><strong>Store</strong>: Store the raw data in the appropriate folder, as determined in the planning stage. Consider access, resilience (backing up), security, and, if relevant, data agreement stipulations. Make raw data files read-only so they cannot be accidentally modified.</li>
+</ol></li>
+<li><strong>Process</strong>: Prepare the data for exploration and analysis.
+<ol type="a">
+<li><strong>Clean</strong>: Preprocess the data to correct errors, standardize missing values, standardize formats, etc.</li>
+<li><strong>Transform</strong>: Convert data into appropriate format and spatiotemporal scale (e.g., convert daily values to annual statistics).</li>
+<li><strong>Integrate</strong>: Combine datasets.</li>
+</ol></li>
+<li><strong>Explore</strong>: Describe, summarize, and visualize statistics and relationships.</li>
+<li><strong>Analyze / Model</strong>: Develop, refine, and implement analysis and model specifications.</li>
+<li><strong>Archive, publish, and share</strong>: Save and publish final data products and documentation.</li>
+</ol>
+
 
 
 </section>
 
-</main> <!-- /main -->
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-DMPTool" class="csl-entry" role="listitem">
+Langseth, M. L., H. S. Henkel, V. B. Hutchison, C.J. Thibodeaux, and L. S. Zolly. 2015. <span>“USGS Data Management Training Modules—Planning for Data Management Part II Using the DMPTool to Create Data Management Plans: U.S. Geological Survey.”</span> <a href="https://doi.org/10.5066/F7RJ4GGJ">https://doi.org/10.5066/F7RJ4GGJ</a>.
+</div>
+</div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -672,7 +785,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/alexandra-thompson-dc/rff-data-gov-guidance/edit/main/docs/data-management/storage-organization/file-formats.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/alexandra-thompson-dc/rff-data-gov-guidance/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/alexandra-thompson-dc/rff-data-gov-guidance/edit/main/docs/data-management/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/alexandra-thompson-dc/rff-data-gov-guidance/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>This page is built with <a href="https://quarto.org/">Quarto</a>.</p>
 </div>

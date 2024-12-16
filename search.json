@@ -105,6 +105,36 @@
     ]
   },
   {
+    "objectID": "docs/data-management/index.html",
+    "href": "docs/data-management/index.html",
+    "title": "Introduction to Data Management",
+    "section": "",
+    "text": "Data management encompasses the methods used to collect, store, organize, and use data. Good data management can not only save time and headaches but increase the usefulness of data and enhance the reproducibility of the whole project. Good data management practices provide (Langseth et al. 2015):\n\nShort-term benefits\n\nSpend less time doing data management and more time doing research.\nEasier to prepare and use data.\nCollaborators can readily understand and use data files.\n\nLong-term benefits\n\nMake your work more transparent, reproducible, and rigorous.\nOther researchers can find, understand, and use your data to address broad questions.\nYou get credit for preserving data products and for their use in other products.\n\n\nThe Data Management section contains:\n\nStorage and Organization\n\nStorage Options at RFF\nData Organization\nFile Formats\nSensitive and Proprietary Data, Data Agreements",
+    "crumbs": [
+      "Data Management"
+    ]
+  },
+  {
+    "objectID": "docs/data-management/index.html#foundations",
+    "href": "docs/data-management/index.html#foundations",
+    "title": "Introduction to Data Management",
+    "section": "",
+    "text": "Data management encompasses the methods used to collect, store, organize, and use data. Good data management can not only save time and headaches but increase the usefulness of data and enhance the reproducibility of the whole project. Good data management practices provide (Langseth et al. 2015):\n\nShort-term benefits\n\nSpend less time doing data management and more time doing research.\nEasier to prepare and use data.\nCollaborators can readily understand and use data files.\n\nLong-term benefits\n\nMake your work more transparent, reproducible, and rigorous.\nOther researchers can find, understand, and use your data to address broad questions.\nYou get credit for preserving data products and for their use in other products.\n\n\nThe Data Management section contains:\n\nStorage and Organization\n\nStorage Options at RFF\nData Organization\nFile Formats\nSensitive and Proprietary Data, Data Agreements",
+    "crumbs": [
+      "Data Management"
+    ]
+  },
+  {
+    "objectID": "docs/data-management/index.html#the-data-life-cycle",
+    "href": "docs/data-management/index.html#the-data-life-cycle",
+    "title": "Introduction to Data Management",
+    "section": "The Data Life Cycle",
+    "text": "The Data Life Cycle\nA common axiom among data scientists is the application of the 80/20 rule to effort: 80% of time is spent wrangling (managing and preparing) data, while 20% is spent on analysis. Most activities in the data life cycle come before the analysis phase and are closely tied to data management. There are many different models of the data life cycle, and the relevant model for your individual project will vary. A general data life cycle is depicted below (see also Langseth et al. 2015).\n\n\n\n\n\ngraph TB\n  A(Plan) --&gt; B(Collect)\n  B --&gt; C(Process)\n  C --&gt; D(Explore / Visualize)\n  D --&gt; E(Analyze / Model)\n  E --&gt; F(Archive, Publish, Share)\n  E --&gt; C\n  E --&gt; A\n\n\n\n\n\n\nThe data life cycle is often iterative and nonlinear, and does not always follow the order shown. Your actual analysis workflow may include dead ends or repeated steps. Regardless, it is helpful to plan and discuss your data-oriented research using these common components of the data life cycle:\n\nPlan: Identify data that will be collected and how it will be managed. Create a data management plan.\nCollect: Acquire and store raw data.\n\nAcquire: Retrieve data from the appropriate source.\nDescribe: Document the raw data source, format, variables, measurement units, coded values, and known problems. Create metadata for primary data. Cite secondary data.\nQuality assurance: Inspect the raw data for quality and fit for analysis purpose.\nStore: Store the raw data in the appropriate folder, as determined in the planning stage. Consider access, resilience (backing up), security, and, if relevant, data agreement stipulations. Make raw data files read-only so they cannot be accidentally modified.\n\nProcess: Prepare the data for exploration and analysis.\n\nClean: Preprocess the data to correct errors, standardize missing values, standardize formats, etc.\nTransform: Convert data into appropriate format and spatiotemporal scale (e.g., convert daily values to annual statistics).\nIntegrate: Combine datasets.\n\nExplore: Describe, summarize, and visualize statistics and relationships.\nAnalyze / Model: Develop, refine, and implement analysis and model specifications.\nArchive, publish, and share: Save and publish final data products and documentation.",
+    "crumbs": [
+      "Data Management"
+    ]
+  },
+  {
     "objectID": "docs/software/software1.html",
     "href": "docs/software/software1.html",
     "title": "Software Title 1",
