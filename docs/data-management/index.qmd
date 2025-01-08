@@ -44,6 +44,7 @@ The Data Management section contains:
   * [Data Organization](./storage-organization/organization.md)
   * [File Formats](./storage-organization/file-formats.md)
   * [Sensitive and Proprietary Data, Data Agreements](./storage-organization/sensitive-data.md)
+  * [Data Quality and Preparation](./data-quality-preparation.qmd)
 
 ## The Data Life Cycle
 

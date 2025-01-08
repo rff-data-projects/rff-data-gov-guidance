@@ -25,6 +25,7 @@ website:
               - docs/data-management/storage-organization/organization.md
               - docs/data-management/storage-organization/file-formats.md
               - docs/data-management/storage-organization/sensitive-data.md
+          - docs/data-management/data-quality-preparation.qmd
       - section: "Version Control"
         contents:
           - docs/version-control/vc1.md
