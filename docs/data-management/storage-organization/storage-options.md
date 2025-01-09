@@ -95,10 +95,17 @@ Alternatives to OneDrive, such as Azure, Google Bucket, or AWS S3, may be well s
 Dropbox is also an option, but note that it can incur additional costs.
 For Azure setups, contact IT at IThelp@rff.org. 
 
+#### ArcGIS Online for Sharing and Exploring Spatial Data
+
+ArcGIS Online is a cloud-based browser platform that allows users to upload, host, and share datasets (both geospatial and tabular).
+In order to access the data and exploratory mapping interface, users need an ArcGIS Online account.
+Online accounts cost $100 per user and data storage costs vary by data size.
+Contact RFF's GIS Coordinator at [Thompson@rff.org](mailto:thompson@rff.org) for more information.
+
 #### Enabling External Collaborator Access to the L: drive
 
 While not recommended, it is possible to enable access to the L: drive for non-RFF staff.
-Temporary accounts can be requested by contacting IT at IThelp@rff.org.
+Temporary accounts can be requested by contacting IT at [IThelp@rff.org](mailto:ithelp@rff.org).
 
 #### Accessing raw data via Application Program Interfaces (APIs)
 
