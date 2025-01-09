@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>sensitive-data – RFF Data Governance Guidance</title>
+<title>Data Quality and Preparation – RFF Data Governance Guidance</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,26 +20,46 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
-<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../../../">
-<link href="../../../images/black-logo.svg" rel="icon" type="image/svg+xml">
-<script src="../../../site_libs/quarto-html/quarto.js"></script>
-<script src="../../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap-0fedd72d85f94da33d0700d14c18ae29.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../images/black-logo.svg" rel="icon" type="image/svg+xml">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-0fedd72d85f94da33d0700d14c18ae29.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -80,7 +100,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../docs/data-management/index.html">Data Management</a></li><li class="breadcrumb-item"><a href="../../../docs/data-management/storage-organization/index.html">Storage and Organization</a></li><li class="breadcrumb-item"><a href="../../../docs/data-management/storage-organization/sensitive-data.html">Sensitive and Proprietary Data, Data Agreements</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../docs/data-management/index.html">Data Management</a></li><li class="breadcrumb-item"><a href="../../docs/data-management/data-quality-preparation.html">Data Quality and Preparation</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -97,11 +117,11 @@ ul.task-list li input[type="checkbox"] {
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
-      <a href="../../../index.html" class="sidebar-logo-link">
-      <img src="../../../images/black-logomark-vertical.svg" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      <a href="../../index.html" class="sidebar-logo-link">
+      <img src="../../images/black-logomark-vertical.svg" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
       </a>
     <div class="sidebar-title mb-0 py-0">
-      <a href="../../../">Data Governance Guidance</a> 
+      <a href="../../">Data Governance Guidance</a> 
         <div class="sidebar-tools-main">
     <div class="dropdown">
       <a href="" title="" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" role="link" aria-label=""><i class="bi bi-github"></i></a>
@@ -130,13 +150,13 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Home</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../../docs/data-management/index.html" class="sidebar-item-text sidebar-link">
+            <a href="../../docs/data-management/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Data Management</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -145,34 +165,34 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../../docs/data-management/storage-organization/index.html" class="sidebar-item-text sidebar-link">
+            <a href="../../docs/data-management/storage-organization/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Storage and Organization</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 show">  
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../docs/data-management/storage-organization/storage-options.html" class="sidebar-item-text sidebar-link">
+  <a href="../../docs/data-management/storage-organization/storage-options.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Storage Options at RFF</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../docs/data-management/storage-organization/organization.html" class="sidebar-item-text sidebar-link">
+  <a href="../../docs/data-management/storage-organization/organization.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Data Organization</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../docs/data-management/storage-organization/file-formats.html" class="sidebar-item-text sidebar-link">
+  <a href="../../docs/data-management/storage-organization/file-formats.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">File Formats</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../docs/data-management/storage-organization/sensitive-data.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../docs/data-management/storage-organization/sensitive-data.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Sensitive and Proprietary Data, Data Agreements</span></a>
   </div>
 </li>
@@ -180,7 +200,7 @@ ul.task-list li input[type="checkbox"] {
   </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../docs/data-management/data-quality-preparation.html" class="sidebar-item-text sidebar-link">
+  <a href="../../docs/data-management/data-quality-preparation.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Data Quality and Preparation</span></a>
   </div>
 </li>
@@ -197,13 +217,13 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../docs/version-control/vc1.html" class="sidebar-item-text sidebar-link">
+  <a href="../../docs/version-control/vc1.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Version Control Title</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../docs/version-control/vc2.html" class="sidebar-item-text sidebar-link">
+  <a href="../../docs/version-control/vc2.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Version Control Title</span></a>
   </div>
 </li>
@@ -220,7 +240,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../docs/software/software1.html" class="sidebar-item-text sidebar-link">
+  <a href="../../docs/software/software1.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Software Title 1</span></a>
   </div>
 </li>
@@ -236,90 +256,184 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#sensitive-and-proprietary-data-data-agreements" id="toc-sensitive-and-proprietary-data-data-agreements" class="nav-link active" data-scroll-target="#sensitive-and-proprietary-data-data-agreements">Sensitive and Proprietary Data, Data Agreements</a>
+  <li><a href="#quality-assurance-for-data-integrity" id="toc-quality-assurance-for-data-integrity" class="nav-link active" data-scroll-target="#quality-assurance-for-data-integrity">Quality Assurance for Data Integrity</a></li>
+  <li><a href="#tidy-data" id="toc-tidy-data" class="nav-link" data-scroll-target="#tidy-data">Tidy Data</a>
   <ul>
-  <li><a href="#identify-and-categorize-sensitive-data." id="toc-identify-and-categorize-sensitive-data." class="nav-link" data-scroll-target="#identify-and-categorize-sensitive-data.">1. Identify and categorize sensitive data.</a></li>
-  <li><a href="#document-data-sensitivity-and-restrictions." id="toc-document-data-sensitivity-and-restrictions." class="nav-link" data-scroll-target="#document-data-sensitivity-and-restrictions.">2. Document data sensitivity and restrictions.</a></li>
-  <li><a href="#determine-appropriate-security-and-privacy-measures." id="toc-determine-appropriate-security-and-privacy-measures." class="nav-link" data-scroll-target="#determine-appropriate-security-and-privacy-measures.">3. Determine appropriate security and privacy measures.</a></li>
-  <li><a href="#data-derivatives-masking-and-aggregation" id="toc-data-derivatives-masking-and-aggregation" class="nav-link" data-scroll-target="#data-derivatives-masking-and-aggregation">4. Data Derivatives: Masking and Aggregation</a></li>
-  <li><a href="#review-before-publication-or-sharing." id="toc-review-before-publication-or-sharing." class="nav-link" data-scroll-target="#review-before-publication-or-sharing.">5. Review before publication or sharing.</a></li>
+  <li><a href="#the-three-core-principles-of-tidy-data" id="toc-the-three-core-principles-of-tidy-data" class="nav-link" data-scroll-target="#the-three-core-principles-of-tidy-data">The Three Core Principles of Tidy Data</a></li>
+  <li><a href="#practical-applications" id="toc-practical-applications" class="nav-link" data-scroll-target="#practical-applications">Practical applications</a></li>
+  <li><a href="#recommended-reading-and-examples" id="toc-recommended-reading-and-examples" class="nav-link" data-scroll-target="#recommended-reading-and-examples">Recommended reading and examples</a></li>
   </ul></li>
+  <li><a href="#data-type-conversion-and-standardization" id="toc-data-type-conversion-and-standardization" class="nav-link" data-scroll-target="#data-type-conversion-and-standardization">Data Type Conversion and Standardization</a>
+  <ul>
+  <li><a href="#key-points-for-type-conversion" id="toc-key-points-for-type-conversion" class="nav-link" data-scroll-target="#key-points-for-type-conversion">Key Points for Type Conversion</a></li>
+  <li><a href="#resources" id="toc-resources" class="nav-link" data-scroll-target="#resources">Resources</a></li>
+  </ul></li>
+  <li><a href="#preparation-for-analysis" id="toc-preparation-for-analysis" class="nav-link" data-scroll-target="#preparation-for-analysis">Preparation for Analysis</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/alexandra-thompson-dc/rff-data-gov-guidance/edit/main/docs/data-management/storage-organization/sensitive-data.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/alexandra-thompson-dc/rff-data-gov-guidance/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/alexandra-thompson-dc/rff-data-gov-guidance/edit/main/docs/data-management/data-quality-preparation.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/alexandra-thompson-dc/rff-data-gov-guidance/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../docs/data-management/index.html">Data Management</a></li><li class="breadcrumb-item"><a href="../../../docs/data-management/storage-organization/index.html">Storage and Organization</a></li><li class="breadcrumb-item"><a href="../../../docs/data-management/storage-organization/sensitive-data.html">Sensitive and Proprietary Data, Data Agreements</a></li></ol></nav></header>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../docs/data-management/index.html">Data Management</a></li><li class="breadcrumb-item"><a href="../../docs/data-management/data-quality-preparation.html">Data Quality and Preparation</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">Data Quality and Preparation</h1>
+</div>
 
 
 
+<div class="quarto-title-meta">
 
-<section id="sensitive-and-proprietary-data-data-agreements" class="level1">
-<h1>Sensitive and Proprietary Data, Data Agreements</h1>
-<p>When using sensitive or proprietary data in your research project, it’s crucial to ensure data security, privacy, and compliance with any agreements or regulations governing its use. There are five steps to addressing this.</p>
-<section id="identify-and-categorize-sensitive-data." class="level2">
-<h2 class="anchored" data-anchor-id="identify-and-categorize-sensitive-data.">1. Identify and categorize sensitive data.</h2>
-<p>Determine if any data used in your project is subject to data use agreements, or are otherwise sensitive or proprietary.</p>
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>Always use and save a scripted program for data processing and analysis. Although it may seem more expeditious to take manual steps, writing code creates a documented and repeatable account of the processing steps taken and will save time and effort in the long-run.</p>
+<p>If it is impossible to write code for processing steps, create a detailed record of the workflow in a document.</p>
+<section id="quality-assurance-for-data-integrity" class="level2">
+<h2 class="anchored" data-anchor-id="quality-assurance-for-data-integrity">Quality Assurance for Data Integrity</h2>
+<p>Quality assurance (QA) is ensuring the accuracy, consistency, and reliability of data. Quality assurance measures should be implemented on both raw data from external sources and your project’s subsequent datasets; for example, after a major processing step such as data merging.</p>
+<p>Eight basic quality assurance measures are listed below, some of which were adopted from <span class="citation" data-cites="DMTraining">(<a href="#ref-DMTraining" role="doc-biblioref">Hutchinson et al. 2015</a>)</span>.</p>
+<ol type="1">
+<li><p><strong>Read documentation / metadata</strong> that accompanies source datasets. It often comes in separate files (text, pdf, word, xml, etc.).</p></li>
+<li><p><strong>Always keep raw data in its original form.</strong> Do not modify raw datasets; save modified versions in the project’s “intermediate” data folder.</p></li>
+<li><p><strong>Visually inspect data</strong> throughout processing. Visual checks can reveal issues with the data (e.g., repeated values or delimitation errors) that would affect analysis. This habit not only aids debugging processing code but also builds an understanding of the dataset.</p></li>
+<li><p><strong>Assure data are delimited and line up in proper columns.</strong> Check that data is correctly delimited and parsed when imported into the processing program.</p></li>
+<li><p><strong>Check for missing values in key parameters.</strong> Identify any missing or NA values in critical fields that could impact analysis. If there are missing values, <a href="https://www.mastersindatascience.org/learning/how-to-deal-with-missing-data/">identify the type of missingness and discuss solutions</a> (<a href="https://r4ds.hadley.nz/missing-values.html#introduction">applied example in R</a>).</p></li>
+<li><p><strong>Identify impossible and anomalous values.</strong> Anomalies include values that are outside the expected range, logically impossible, outliers, or inconsistently formatted. In addition to checking for errors, identifying outliers can aid in data exploration by flagging rare events, errors, or interesting phenomena that require further investigation.</p></li>
+<li><p><strong>Perform and review statistical summaries.</strong> Generate summary statistics to understand data distribution and identify inconsistencies or errors. Use these summaries to guide further cleaning, transformation, or data integrity checks.</p></li>
+<li><p><strong>Visualize data</strong> through maps, boxplots, histograms, etc.</p></li>
+<li><p><strong>Follow good software quality practices</strong> described in the software quality section of this guidance, such as pseudocoding, code review, and defensive programming.</p></li>
+</ol>
+</section>
+<section id="tidy-data" class="level2">
+<h2 class="anchored" data-anchor-id="tidy-data">Tidy Data</h2>
+<p>Raw data rarely comes in structures compatible with your team’s analysis needs. Once the raw data has been checked for quality, additional processing may be required to start exploration and analysis.</p>
+<p><strong><em>Tidy data</em></strong> is a framework for data organization that facilitates efficient exploration, wrangling, and analysis (Wickham 2014). The benefits of storing data in the tidy format are:</p>
 <ul>
-<li>To determine whether any of your project data is sensitive, consider the following:
+<li>Easier data exploration and analysis</li>
+<li>Simpler manipulation and transformation of data</li>
+<li>Compatibility with data analysis tools (e.g., R and Python)</li>
+<li>Improved reproducibility of analysis</li>
+</ul>
+<p>Data in this format are easy to work with, analyze, and combine with other datasets. However, once analyses and data merges start taking place, the structure of newly generated datasets are likely to be more complex and dependent upon the modeling or analysis needs. Discuss the role of tidy data with your team, and if/when in the process project datasets should deviate from the tidy data structure.</p>
+<section id="the-three-core-principles-of-tidy-data" class="level3">
+<h3 class="anchored" data-anchor-id="the-three-core-principles-of-tidy-data">The Three Core Principles of Tidy Data</h3>
+<ol type="1">
+<li>Each variable forms a column: In a tidy dataset, each variable has its own dedicated column. This means all values associated with that variable are listed vertically within that single column. These are also often referred to as fields or attributes.</li>
+<li>Each observation forms a row: Define an observation and emphasize that each row should represent a single data point. In a tidy dataset, each observation occupies a single row in the table. All the information pertaining to that specific observation is listed horizontally across the columns. These are also often referred to as records.</li>
+<li>Each type of observational unit forms a table: In a tidy dataset, data pertaining to different types of observational units should be separated into distinct tables.</li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../images/tidy-data.png" class="img-fluid figure-img"></p>
+<figcaption>image from <a href="https://r4ds.had.co.nz/tidy-data.html#tidy-data-1">https://r4ds.had.co.nz/tidy-data.html#tidy-data-1</a></figcaption>
+</figure>
+</div>
+</section>
+<section id="practical-applications" class="level3">
+<h3 class="anchored" data-anchor-id="practical-applications">Practical applications</h3>
 <ul>
-<li>Was the data acquired through special means, such as a purchase, personal contact, subscription, or a data use agreement?</li>
-<li>Does the data include:
+<li><strong>R</strong>: The R tidyverse is a set of R packages designed to work together within the tidy data framework. It includes dplyr, readr, ggplot2, and other packages useful for wrangling data.</li>
+<li><strong>Python</strong>: The Python pandas library is useful for creating and working with tidy data, as it uses data frames and includes functions for cleaning, transforming, and manipulating data.</li>
+<li><strong>Julia</strong>: The DataFrames.jl library is useful for working with tabular tidy data, and has many powerful tools for manipulating data. The Tidier.jl framework builds on DataFrames.jl and emulates the R tidyverse.</li>
+</ul>
+</section>
+<section id="recommended-reading-and-examples" class="level3">
+<h3 class="anchored" data-anchor-id="recommended-reading-and-examples">Recommended reading and examples</h3>
 <ul>
-<li>Identifying information about individuals (e.g., names, addresses, personal records)?</li>
-<li>Sensitive environmental information (e.g., locations of endangered species, private property soil samples)?</li>
-<li>Sensitive infrastructure information (e.g., detailed electricity grid data)?</li>
-<li>Sensitive economic information (e.g.&nbsp;trade data)</li>
-<li>Information concerning sovereign tribal governments or vulnerable communities?</li>
+<li>General:
+<ul>
+<li><a href="https://www.codecademy.com/article/intro-data-wrangling-and-tidying">Introduction to Data Wrangling and Tidying | Codecademy</a></li>
+<li><a href="https://arimoroolayinka.medium.com/a-gentle-introduction-to-tidy-data-in-r-b6673b4d304c">A Gentle Introduction to Tidy Data in R | by Arimoro Olayinka | Medium</a></li>
 </ul></li>
-<li>Did accessing the data require Institutional Review Board (IRB) approval or human subjects research training?</li>
-<li>Did accessing the data require special security training?</li>
-<li>Was the data collected via surveys, interviews, or focus groups?</li>
-</ul></li>
-<li>If the answer to any of these questions was Yes, classify the sensitivity of the data into one or more of three categories:
+<li>R focus:
 <ul>
-<li><strong>Proprietary Data</strong> has been paid for or for which special access has been granted. This type of data is often owned by a third party and comes with specific use restrictions, such as licensing agreements or purchase conditions.</li>
-<li><strong>Regulated Data</strong> is governed by specific regulations or laws, such as federal or state laws, Institutional Review Board (IRB) regulations, or other oversight requirements. This includes data that involves privacy concerns, such as personally identifiable information (PII) or data subject to HIPAA or GDPR compliance.</li>
-<li><strong>Confidential Data</strong> is sensitive due to its content or potential impact if disclosed. This includes data on sensitive environmental information, sensitive infrastructure details, or vulnerable communities.</li>
+<li><a href="https://tidyr.tidyverse.org/articles/tidy-data">Tidy data | tidyr</a></li>
+<li><a href="https://r4ds.hadley.nz/data-tidy.html">Data tidying – R for Data Science</a></li>
+<li>Helpful libraries and functions:
+<ul>
+<li><a href="https://tidyr.tidyverse.org/reference/separate.html"><code>tidyr::separate</code></a></li>
+<li><a href="cran.r-project.org/web/packages/janitor/vignettes/janitor.html"><code>janitor::clean_names</code></a></li>
+</ul></li>
+</ul></li>
+<li>Python focus:
+<ul>
+<li><a href="https://www.jeannicholashould.com/tidy-data-in-python.html">Tidy Data in Python</a></li>
 </ul></li>
 </ul>
 </section>
-<section id="document-data-sensitivity-and-restrictions." class="level2">
-<h2 class="anchored" data-anchor-id="document-data-sensitivity-and-restrictions.">2. Document data sensitivity and restrictions.</h2>
+</section>
+<section id="data-type-conversion-and-standardization" class="level2">
+<h2 class="anchored" data-anchor-id="data-type-conversion-and-standardization">Data Type Conversion and Standardization</h2>
+<p>Data types, which define how data is stored and interpreted, were presented in the previous section. This section introduces data type conversion and standardization in ensuring consistent and meaningful analysis.</p>
+<p>Data type conversion, or <em>typecasting</em>, is the process of transforming a value from one data type to another. Converting data types ensures compatibility between different datasets and allows for proper analysis. For example, converting age values from string (“25 years”) to integer (25) enables mathematical operations.</p>
+<p><strong>Warning</strong>: Data type conversion can sometimes lead to loss of information, so it’s crucial to understand the implications of conversion before applying it. Examples:</p>
 <ul>
-<li>Document data sensitivity class and details in both the data management plan and a README file in the data folder. Include details about the data’s source, use restrictions, and sensitivity.</li>
-<li>Keep Track of Data Agreements: Maintain organized and secure digital copies of all data use agreements, licenses, and contracts. These should be easily accessible to those managing the data.</li>
-<li>Check with data providers or experts for recommended security measures</li>
+<li>When converting the age column from string (“25 years”) to integer (25), information about the unit (years) was lost.</li>
+<li>Converting a float (2.96) to an integer (3) truncates decimals.</li>
+<li>If a date is formatted as “DD/MM/YYYY” (03/12/2015) but is mistakenly interpreted as “MM/DD/YYYY” during conversion to “YYYY-MM-DD”, the resulting date will be incorrect (2015-03-12, instead of the accurate 2015-12-03).</li>
+</ul>
+<p>Proper type conversion ensures data is correctly interpreted and can prevent errors in calculations, data analysis, and visualization.</p>
+<section id="key-points-for-type-conversion" class="level3">
+<h3 class="anchored" data-anchor-id="key-points-for-type-conversion">Key Points for Type Conversion</h3>
+<ul>
+<li>Understand the source and target types: Knowing the data types involved in conversion helps ensure accurate transformations.</li>
+<li>Handle missing or invalid data: Make sure to manage missing or improperly formatted data that could cause errors during conversion.</li>
+<li>Test conversions: Always verify that conversions produce the expected results to avoid downstream errors in your analysis.</li>
+<li>Remember to always use the ISO 8601 standard format for dates (YYYY-MM-DD).</li>
+<li>Be aware that importing, reimporting, or saving files in certain formats can lead to loss or changes in column data types. For instance, saving data in CSV format often results in date columns being interpreted as text upon re-import, or numeric columns losing precision. This issue arises because formats like CSV lack built-in metadata to store data types, meaning they rely on the importing program to infer types, which can cause inconsistencies and data integrity issues over time. In these cases, columns may need to be re-typecast.</li>
 </ul>
 </section>
-<section id="determine-appropriate-security-and-privacy-measures." class="level2">
-<h2 class="anchored" data-anchor-id="determine-appropriate-security-and-privacy-measures.">3. Determine appropriate security and privacy measures.</h2>
+<section id="resources" class="level3">
+<h3 class="anchored" data-anchor-id="resources">Resources</h3>
 <ul>
-<li>Contact IT to inform them of your data sensitivity and ask for guidance on ensuring the sensitive data is backed up and secure. Implement suitable security measures based on the sensitivity of the data. This may include storing sensitive data in read-only folders accessible only to authorized team members. It is important for IT to know ahead of time if data need to be deleted, so that backups can be managed.</li>
-<li>Ensure all current and prospective team members are aware of data use and sharing constraints. Include sensitivity documentation when sharing data with outside collaborators.</li>
-<li>Do not version control sensitive data, only the code that processes it. Using version control on sensitive data makes it difficult to delete comprehensively.</li>
+<li><a href="https://swcarpentry.github.io/python-novice-gapminder/03-types-conversion.html">Plotting and Programming in Python: Data Types and Type Conversion</a></li>
+<li><a href="https://r4ds.hadley.nz/transform">R for Data Science - Transform</a></li>
 </ul>
 </section>
-<section id="data-derivatives-masking-and-aggregation" class="level2">
-<h2 class="anchored" data-anchor-id="data-derivatives-masking-and-aggregation">4. Data Derivatives: Masking and Aggregation</h2>
+</section>
+<section id="preparation-for-analysis" class="level2">
+<h2 class="anchored" data-anchor-id="preparation-for-analysis">Preparation for Analysis</h2>
+<p>Additional cleaning and transformation steps (often referred to as “data wrangling”) are often necessary, and are highly variable depending on project needs. Examples include:</p>
 <ul>
-<li>Data derivatives are transformed versions of original datasets, generated through processes such as aggregation, summarization, and integration with other data sources. If the raw data is subject to sensitivity restrictions, additional precautions may be necessary when sharing these derivatives.</li>
-<li>Example techniques are shown below. These are not always applicable and specific techniques vary case by case. Sometimes it’s necessary to match specific requirements for proprietary/licensed data, which might be different from those listed here.
+<li>filtering based on criteria</li>
+<li>restructuring/reshaping/pivoting</li>
+<li>removing duplicates</li>
+<li>correcting errors in the source data (e.g.&nbsp;misspellings)</li>
+<li>merging</li>
+</ul>
+<p>The approach depends on specific project and data needs. The following resources go into greater detail, with examples:</p>
 <ul>
-<li><strong>Statistical Disclosure Control</strong>: Ensure that summary statistics or figures can’t be reverse-engineered to re-create the sensitive data. Specific requirements might vary by data agreements.</li>
-<li><strong>Generalization and Anonymization</strong>: When developing derivatives from sensitive data, use generalization techniques to obscure sensitive details, such as aggregating location data into broader regions rather than showing exact points.</li>
-<li><strong>Storage Considerations</strong>: Ensure that any derived datasets are stored securely and in compliance with applicable data protection regulations. Implement access controls to restrict who can view or modify these datasets.</li>
+<li>R
+<ul>
+<li><a href="https://learning.nceas.ucsb.edu/2023-04-coreR/session_07.html">NCEAS Learning Hub’s coreR Course - 7 Cleaning &amp; Wrangling Data (ucsb.edu)</a></li>
+<li><a href="https://r4ds.hadley.nz/transform">Transform – R for Data Science (2e) (hadley.nz)</a></li>
+<li><a href="https://swcarpentry.github.io/r-novice-gapminder/06-data-subsetting.html">R for Reproducible Scientific Analysis: Subsetting Data (swcarpentry.github.io)</a></li>
+<li><a href="https://swcarpentry.github.io/r-novice-gapminder/12-dplyr.html">R for Reproducible Scientific Analysis: Data Frame Manipulation with dplyr (swcarpentry.github.io)</a></li>
+</ul></li>
+<li>Python
+<ul>
+<li><a href="https://datacarpentry.org/python-ecology-lesson/03-index-slice-subset.html">Data Analysis and Visualization in Python for Ecologists: Indexing, Slicing and Subsetting DataFrames in Python (datacarpentry.org)</a></li>
+<li><a href="https://datacarpentry.org/python-ecology-lesson/05-merging-data.html">Data Analysis and Visualization in Python for Ecologists: Combining DataFrames with Pandas (datacarpentry.org)</a></li>
 </ul></li>
 </ul>
-</section>
-<section id="review-before-publication-or-sharing." class="level2">
-<h2 class="anchored" data-anchor-id="review-before-publication-or-sharing.">5. Review before publication or sharing.</h2>
-<p>Revisit and review data sensitivity documentation and agreements prior to sharing or publishing derived data products (data, figures, results). Ensure the whole research team agrees that sharing would not violate data sensitivity agreements or security measures. If appropriate, check with the data provider or expert before moving forward with publication.</p>
+
 
 
 </section>
-</section>
 
-</main> <!-- /main -->
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-DMTraining" class="csl-entry" role="listitem">
+Hutchinson, V. B., T. E. Burley, M. Y. Chang, T. A. Chatfield, and R. B. Cook. 2015. <span>“USGS Data Management Training Modules—Best Practices for Preparing Science Data to Share: U.S. Geological Survey.”</span> <a href="https://doi.org/10.5066/F7RJ4GGJ">https://doi.org/10.5066/F7RJ4GGJ</a>.
+</div>
+</div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -745,7 +859,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/alexandra-thompson-dc/rff-data-gov-guidance/edit/main/docs/data-management/storage-organization/sensitive-data.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/alexandra-thompson-dc/rff-data-gov-guidance/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/alexandra-thompson-dc/rff-data-gov-guidance/edit/main/docs/data-management/data-quality-preparation.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/alexandra-thompson-dc/rff-data-gov-guidance/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>This page is built with <a href="https://quarto.org/">Quarto</a>.</p>
 </div>
