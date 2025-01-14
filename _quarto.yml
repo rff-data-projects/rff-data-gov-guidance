@@ -18,13 +18,7 @@ website:
       - section: "Data Management"
         href: docs/data-management/index.qmd
         contents:
-          - section: "Storage and Organization"
-            href: docs/data-management/storage-organization/index.md
-            contents:
-              - docs/data-management/storage-organization/storage-options.md
-              - docs/data-management/storage-organization/organization.md
-              - docs/data-management/storage-organization/file-formats.md
-              - docs/data-management/storage-organization/sensitive-data.md
+          - docs/data-management/data-storage-organization.qmd
           - docs/data-management/data-quality-preparation.qmd
       - section: "Version Control"
         contents:
@@ -55,8 +49,9 @@ format:
       - journal
       - styles.scss
     toc: true
-    toc-expand: 3
-    toc-depth: 4
+    toc-expand: 1
+    toc-depth: 3
+    number-sections: true
 
 
 
