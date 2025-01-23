@@ -1,5 +1,3 @@
-I'll convert the document to Markdown, preserving the structure and formatting as closely as possible.
-
 # File and Data Formats
 
 ## File Formats
