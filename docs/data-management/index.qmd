@@ -39,12 +39,8 @@ Good data management practices provide (Langseth et al. 2015):
 
 The Data Management section contains:
 
-* [Storage and Organization](./storage-organization/index.md)
-  * [Storage Options at RFF](./storage-organization/storage-options.md)
-  * [Data Organization](./storage-organization/organization.md)
-  * [File Formats](./storage-organization/file-formats.md)
-  * [Sensitive and Proprietary Data, Data Agreements](./storage-organization/sensitive-data.md)
-  * [Data Quality and Preparation](./data-quality-preparation.qmd)
+* [Storage and Organization](./data-storage-organization.qmd)
+* [Data Quality and Preparation](./data-quality-preparation.qmd)
 
 ## The Data Life Cycle
 
