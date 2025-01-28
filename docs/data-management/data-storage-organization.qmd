@@ -264,7 +264,7 @@ Specifically, they should be human readable, machine readable, and compatible wi
 
 The best file format to use will depend on the type and structure of data. In general, data should be stored and/or archived in open formats. Open formats maximize accessibility because they have freely available specifications and generally do not require proprietary software to open them (citation: [UC Santa Barbara's Standard Operating Procedures section on Data Formats](https://emlab-ucsb.github.io/SOP/2.5-data-formats.html)).
 
-### Key Characteristics of Data File Formats
+#### Key characteristics of data file formats:
 
 - **Proprietary vs. Non-Proprietary**: Non-proprietary software formats can be easily imported and accessed using open-source software. This enhances their **interoperability**, or how easily a file format can be used across different software platforms and systems. Formats that are widely supported and compatible with various tools are generally more versatile.
 
@@ -276,23 +276,46 @@ The best file format to use will depend on the type and structure of data. In ge
 
 ### Tabular Formats
 
-The best format to use will vary depending on the file type, but some common examples of proprietary file types to avoid are Excel (.xlsx) and Stata (.dta) (see Note below). Instead, use open-source plain text formats such as comma separated values (.csv).
+The best format to use will vary depending on the characteristics of the data being stored, but some common examples of proprietary file types to avoid are Excel (.xlsx) and Stata (.dta) (see Note below). Instead, use open-source plain text formats such as comma-separated values (.csv).
 
 **Note**: In some cases, where the native format of source data is in a proprietary software format, it is best to use that software to manage data. For example, Stata dataset variables have labels, a kind of embedded metadata, that can only be accessed in Stata.
 
-#### Common Tabular Data File Formats
+#### Characteristics of tabular formats:
 
-| Format | Extension | Open-source or Proprietary | Retains Individual Data Types? | Level of Structure | Description |
-|--------|-----------|----------------------------|--------------------------------|-------------------|-------------|
-| **Recommended: Delimited text CSV** | .csv, .tsv | Open-source | No | Structured | A plain text file where values are separated by commas, tabs, fixed widths, or other symbols. These are widely used for data exchange and simple data storage (CSV being used more commonly in many fields). |
-| TXT (text) | .txt | Open-source | No | Semi-structured | Can contain unformatted or formatted (schema) text. Not recommended for storing complex datasets. |
-| XLS or XLSX (Microsoft Excel spreadsheet) | .xls or .xlsx | Proprietary (avoid creating files of this type) | Yes | Structured | XLS is a binary (not version-control friendly) file compatible with older versions of Excel. XLSX is XML-based and compatible with newer versions of Excel. Generally avoid creating these files due to complex formatting, data formats, formulas, etc. They also complicate quality assurance. These files can easily be exported to CSV type. |
-| DBF (database File) | .dbf | Open-source | Yes | Structured | A file format used by dBASE and other database systems to store tabular data. It supports a fixed schema and metadata. DBF files cannot store full precision. Avoid creating this type of file. |
-| SAS7BDAT (SAS dataset) | .sas7bdat | Proprietary (convert processed data to open-source formats) | Yes | Structured | The proprietary file format used by SAS for storing datasets. It supports metadata and variable attributes. |
-| DTA | .dta | Proprietary | Yes | Structured | Binary files created by the statistical analysis software Stata. Note that they sometimes include metadata (e.g., variable labels) that isn't automatically loaded when importing into other software (e.g. R using the haven package). |
-| Feather | .feather | Open-source | Yes | Structured | A fast, lightweight binary columnar data format used for data exchange between data analysis languages like R and Python. Optimized for performance. |
-| SQLite | .sqlite, .db | Open-source | Yes | Structured | A file-based relational database format used by SQLite. It supports SQL queries and transactions and is used for lightweight, portable databases. |
-| R data files | .rdata or .rds | Open-source | Yes | Structured | Formats used to store R objects and their structures. Useful if working within an R project for efficiency and organization features, but limited interoperability. |
+| Format | Extension | Open-source or Proprietary | Retains Individual Data Types? | Level of Structure |
+|--------|-----------|----------------------------|--------------------------------|-------------------|
+| ***Recommended:*** **comma-separated values** | .csv | Open-source | No | Structured |
+| Tab-separated values | .tsv | Open-source | No | Structured |
+| Plain text | .txt | Open-source | No | Semi-structured |
+| Microsoft Excel spreadsheet/workbook | .xls or .xlsx | Proprietary | Yes | Structured |
+| Database File | .dbf | Open-source | Yes | Structured |
+| SAS dataset | .sas7bdat | Proprietary | Yes | Structured |
+| DTA | .dta | Proprietary | Yes | Structured |
+| Feather | .feather | Open-source | Yes | Structured |
+| SQLite | .sqlite, .db | Open-source | Yes | Structured |
+| RData | .rdata or .rds | Open-source | Yes | Structured |
+
+#### Descriptions of tabular formats:
+
+- ***Recommended:*** **comma-separated values (.csv)**, delimited text files with a consistent predetermined format. Namely, each row contains the same number of values separated by commas. These are widely used for data exchange and simple data storage.
+
+- **Tab-separated values (.tsv)**, files similar to CSV files but with values separated by tabs.
+
+- **Plain text (.txt)**, files which can contain unformatted or formatted (schema) text. Not recommended for storing complex datasets.
+
+- **Excel spreadsheets/workbooks (.xls, .xlsx)**, files designed for use with Microsoft Excel software. XLS is a binary file format compatible only with Excel, both older and newer versions. XLSX was developed more recently. It is XML-based, making it compatible with open-source software such Google Sheets as well as versions of Excel released since 2007. Generally **avoid relying on these files for data storage** due to complex formatting, data formats, formulas, etc. They also complicate quality assurance. XLS is not version-control friendly and XLSX requires special version-control techniques because it is stored in a compressed state. Excel spreadsheets can easily be exported to CSV files.
+
+- **Database File (.dbf)**, files used by dBASE and other database systems to store tabular data. They supports a fixed schema and metadata. DBF files cannot store full precision. Avoid creating this type of file.
+
+- **SAS Dataset (.sas7bdat)**, the proprietary file format used by SAS for storing datasets. It supports metadata and variable attributes. Datasets should be converted to open-source formats after processing.
+
+- **DTA (.dta)**, binary files created by the statistical analysis software Stata. Note that they sometimes include metadata (e.g., variable labels) that isn't automatically loaded when importing into other software (e.g. R using the haven package).
+
+- **Feather (.feather)**, a fast, lightweight binary columnar data format used for data exchange between data analysis languages like R and Python. Optimized for performance.
+
+- **SQLite (.sqlite, .db)**, files used by the SQLite relational database engine, which supports SQL queries and transactions and is used for lightweight, portable databases.
+
+- **RData (.rds, .rdata)**, files used to store one R object (.rds) or an R environment with several objects (.rdata). Useful if working within an R project for efficiency and organization features, but providing limited interoperability.
 
 ### Hierarchical Formats
 
