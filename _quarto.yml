@@ -20,6 +20,7 @@ website:
         contents:
           - docs/data-management/data-storage-organization.qmd
           - docs/data-management/data-quality-preparation.qmd
+          - docs/data-management/data-archival.qmd
       - section: "Version Control"
         contents:
           - docs/version-control/vc1.md
