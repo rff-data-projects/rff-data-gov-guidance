@@ -68,5 +68,5 @@ If you [used an API](./data-storage-organization.qmd#accessing-raw-data-via-appl
 
 * __Download to folder__: During the archival phase, download the source data in its current state and save it to the project folder to be archived.
 * __Document__: Document the dataset version and access date. While not ideal for reproducibility, this is suitable in cases where the source data is large, reliable, and not likely to be modified. 
-* __Download to cloud__: Use a repository service, such as Zenodo, to store source data as it existed when archiving the project. Source data accessed through an API can be downloaded directly to a Zenodo repository, without having to save files locally. This can be done through R (zen4R) or python.
+* __Download to cloud__: Use a repository service, such as Zenodo, to store source data as it existed when archiving the project. Source data accessed through an API can be [downloaded directly to a Zenodo repository](https://developers.zenodo.org/), without having to save files locally. This can be done through R ([zen4R](https://cran.r-project.org/web/packages/zen4R/zen4R.pdf)) or [python](https://pypi.org/project/zenodo-client/).
 
