@@ -35,6 +35,7 @@ book:
       chapters:
         - docs/data-management/data-storage-organization.qmd
         - docs/data-management/data-quality-preparation.qmd
+        - docs/data-management/data-archival.qmd
     - part: docs/software/index.qmd
       chapters:
         - docs/software/sq1.qmd
