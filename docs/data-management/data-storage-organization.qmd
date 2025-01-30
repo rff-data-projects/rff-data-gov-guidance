@@ -405,15 +405,21 @@ For a more in-depth introduction to spatial data types, see [Introduction to Geo
 
 #### Efficiency Trade-offs
 
-Plain text-based formats are often more compatible with version control systems due to their human-readable structure. However, when working with large datasets, consider efficiency in terms of input/output speed and file size. Binary formats are typically more efficient in speed and storage but less suited for version control.
+In addition to being more accessible, plain text-based formats are often more compatible with version control systems than many proprietary formats due to their human-readable structure. However, when working with large datasets, it's important to consider efficiency in terms of input/output speed and file size. Data formats can vary significantly in these aspects—while binary formats are typically more efficient in terms of speed and storage, they are less suited for version control.
+
+For example, in the R ecosystem, **.Rds** and **.RData** are binary file formats that allow for fast and space-efficient data storage. In comparison, large **.shp** (Shapefile) or **.geojson** files can take more than 100 times as long to load than an equivalent **.Rds** or **.RData** file. Other binary formats, such as **.feather** or **.fst** for tabular data, are both fast and lightweight, with the added benefit of being language-agnostic, meaning they can be used across different programming environments.
 
 #### Figures
 
-When generating and saving final figures:
-- Academic journals often accept TIFF and PNG formats with specific resolution requirements
-- Export vector figures with a minimum resolution of 300 dots per inch (DPI)
-- For RFF communications, SVG and PDF formats are best
-- Consider sharing underlying data with the Communications Team for custom figure creation
+It is helpful to think ahead when generating and saving final figures. Academic journals often accept TIFF and PNG formats, but they frequently have resolution and dimension requirements. Export figures with a minimum resolution of 300 dots per inch (DPI). 
+
+For RFF communications, however, vector formats such as **.svg** and **.pdf** are best because they can be easily modified as needed. Academic journals often accept these formats as well.
+
+In addition to saving final figures in appropriate and flexible formats, consider that you may want to be able to share the underlying data with the RFF Communications team so that they and their external design partners can create custom figures for presentation on the website, in the magazine, etc. This means clearly documenting the processing code that created the underlying data / figures, so that output data can be easily identified and shared as needed.
+
+> “Sharing the underlying data of any maps and figures is always helpful for the Communications Team!”
+> 
+> – <cite>Elizabeth Wason (Editorial Director, RFF)</cite>
 
 ### Data Types
 
