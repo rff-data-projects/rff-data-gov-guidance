@@ -14,19 +14,21 @@ website:
     search: true
     background: "#c3e1f9"
     contents:
-      - index.qmd
+      - text: Home
+        href: index.qmd
       - section: "Data Management"
         href: docs/data-management/index.qmd
         contents:
           - docs/data-management/data-storage-organization.qmd
           - docs/data-management/data-quality-preparation.qmd
       - section: "Version Control"
+        href: docs/version-control/index.qmd
         contents:
-          - docs/version-control/vc1.md
-          - docs/version-control/vc2.md
+          - docs/version-control/vc1.qmd
       - section: "Software Quality"
+        href: docs/software/index.qmd
         contents:
-          - docs/software/software1.md
+          - docs/software/sq1.qmd
     tools:
       - icon: github
         menu:

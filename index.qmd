@@ -1,4 +1,12 @@
 ---
-title: "Home"
+title: Data Governance Guidance
+toc: false
+number-sections: false
 ---
-TODO: Add a description of the website here.
+
+## Site Outline
+* [Data Management](./docs/data-management/index.qmd)
+* [Software Quality](./docs/software/index.qmd)
+* [Version Control](./docs/version-control/index.qmd)
+
+
