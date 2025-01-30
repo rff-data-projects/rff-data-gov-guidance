@@ -266,19 +266,21 @@ The best file format to use will depend on the type and structure of data. In ge
 
 #### Key characteristics of data file formats:
 
-- **Proprietary vs. Non-Proprietary**: Non-proprietary software formats can be easily imported and accessed using open-source software. This enhances their **interoperability**, or how easily a file format can be used across different software platforms and systems. Formats that are widely supported and compatible with various tools are generally more versatile.
+- **Proprietary vs. non-proprietary**: Non-proprietary software formats can be easily imported and accessed using open-source software. This enhances their **interoperability**, or how easily a file format can be used across different software platforms and systems. Formats that are widely supported and compatible with various tools are generally more versatile.
 
-- **Tabular vs. Hierarchical**: Tabular data is organized into rows and columns, resembling a table, while hierarchical data is organized in a tree-like structure, with elements nested within others.
+- **Tabular vs. hierarchical**: Tabular data is organized into rows and columns, resembling a table, while hierarchical data is organized in a tree-like structure, with elements nested within others.
 
-- **Structured vs. Unstructured**: Structured formats have well-defined schemas (specified variable names and data types), semi-structured formats are flexible but can be organized with schemas, and unstructured formats are free-form and rely on human interpretation.
+- **Structured vs. unstructured**: Structured formats have well-defined schemas (specified variable names and data types), semi-structured formats are flexible but can be organized with schemas, and unstructured formats are free-form and rely on human interpretation.
 
-- **Retention of Data Types**: Some file formats retain metadata about data types (e.g., whether a column is an integer or string), while others lose this information upon saving.
+- **Retention of data types**: Some file formats retain metadata about data types (e.g., whether a column is an integer or string), while others lose this information upon saving.
 
 ### Tabular Formats
 
-The best format to use will vary depending on the characteristics of the data being stored, but some common examples of proprietary file types to avoid are Excel (.xlsx) and Stata (.dta) (see Note below). Instead, use open-source plain text formats such as comma-separated values (.csv).
+The best format to use will vary depending on the characteristics of the data being stored. Excel spreadsheets/workbooks (.xlsx) and Stata datasets (.dta) are examples of <span style="color:red;">proprietary</span> data that it is usually best to avoid. Instead, use <span style="color:green;">open-source</span> plain text formats such as comma-separated values (.csv).
 
-**Note**: In some cases, where the native format of source data is in a proprietary software format, it is best to use that software to manage data. For example, Stata dataset variables have labels, a kind of embedded metadata, that can only be accessed in Stata.
+::: {.callout-note}
+In cases where the native format of source data is in a proprietary software format, it is often necessary to use that software to view and edit data. For example, Stata dataset variables may have labels, a kind of embedded metadata that can only be accessed in Stata.
+:::
 
 #### Characteristics of tabular formats:
 
@@ -317,7 +319,7 @@ The best format to use will vary depending on the characteristics of the data be
 
 - **RData (.rds, .rdata)**, files used to store one R object (.rds) or an R environment with several objects (.rdata). Useful if working within an R project for efficiency and organization features, but providing limited interoperability.
 
-### Hierarchical Formats
+### Hierarchical Formats {#sec-hierarchical}
 
 Hierarchical data formats are best suited for storing and exchanging complex, nested data structures with parent-child relationships, such as configurations, scientific datasets, or web APIs, where flexibility and the ability to represent variable levels of detail are essential.
 
@@ -351,44 +353,57 @@ Geospatial data are stored in two main ways. The format of input spatial data ty
 
 ##### Vector Data
 
+![](../../images/vector-data.png)
+
 Vector data is stored as pairs of coordinates. Points, lines, and polygons are all vector data.
 
-Recommended open-source vector file formats:
-- [Geopackage](https://www.geopackage.org/) (recommended for its [advantages](http://switchfromshapefile.org/) over the shapefile format)
-- Keyhole markup language (KML)
-- GeoJSON
-- Tables with coordinates (e.g., a CSV file)
+***Recommended*** <span style="color:green;">open-source</span> vector file formats:
 
-Common proprietary vector file formats:
-- Shapefiles (.shp)
-  - Note that a shapefile is actually a collection of several files, including geometry (.shp), projection information (.prj), tabular data (.dbf), and more. Make sure to keep all component files together.
-- Feature classes in geodatabases (.gdb)
+- **[Geopackage](https://www.geopackage.org/)** (**.gpkg**, recommended for its [advantages](http://switchfromshapefile.org/) over the shapefile format)
+- **Keyhole markup language (.kml, .kmz)**
+- **GeoJSON (.json, .geojson)**
+- **Tables with coordinates** (e.g., a CSV file)
+
+Common <span style="color:red;">proprietary</span> vector file formats:
+
+- **Shapefiles (.shp)**
+- **Feature classes in geodatabases (.gdb)**
+
+::: {.callout-note}
+A shapefile is actually a collection of several files, including geometry (.shp), projection information (.prj), tabular data (.dbf), and more. Make sure to keep all component files together.
+:::
 
 All vector data files should have three critical metadata components:
+
 - Coordinate reference system
 - Extent: the geographic area covered by the data, represented by four coordinate pairs
 - Object type: whether the data consists of points, lines, or polygons
 
 ##### Raster Data
 
-Raster data formats store values across a regular grid containing cells of equal size, with each cell containing a value. A raster is similar to a pixelated image, except it's accompanied by information linking it to a particular geographic location. 
+![](../../images/raster-data-1.png)
+![](../../images/raster-data-2.png)
 
-**Recommended** general purpose raster file format: GeoTIFF (.tif)
+Raster data formats store values across a regular grid containing cells of equal size, with each cell containing a value. A raster is similar to a pixelated image, except that it's accompanied by information linking it to a particular geographic location. All cell values within a single raster variable are of the same scalar data type (integer, float, string, etc.). Common examples of raster data are elevation, land cover, and satellite imagery.
 
-Other open-source raster formats:
-- GeoTIFF (.tif): The most widely used format for raster data
-- ASCII grid (.asc): Plain text-based format for elevation models and basic raster grids
-- NetCDF (.nc): A format for storing multi-dimensional scientific data
-- HDF5 (.h5, .hdf5): A hierarchical data format for large, complex, and multi-dimensional datasets
+The ***recommended*** general purpose raster file format is **GeoTIFF (.tif)**, as it supports multiple bands, retention of spatial reference metadata, large file sizes, high compression, and use in a variety of languages/software. Other formats may work better for specific use cases. All of the following common formats are 
+<span style="color:green;">open-source</span>:
 
-Avoid saving rasters as proprietary software file formats.
+- **GeoTIFF (.tif)**, the most widely used format for raster data
+- **ASCII grid (.asc)**, plain-text-based files for elevation models and basic raster grids
+- **NetCDF (.nc) and HDF5 (.hdf5, .h5)**, both described in @sec-hierarchical
+
+Avoid saving rasters as <span style="color:red;">proprietary</span> software file formats, including ESRI grid/tile and ERDAS Imagine (.img) files.
 
 All raster files should have five critical metadata components:
+
 - Coordinate reference system
-- Extent
-- Origin point
-- Resolution
-- No data value
+- Extent: how large the raster is, often represented by the number of rows and columns
+- Origin point: a pair of coordinates pinpointing the bottom left corner of the image
+- Resolution: cell size
+- No data value: the value that represents when a cell’s data value is missing
+
+For a more in-depth introduction to spatial data types, see [Introduction to Geospatial Concepts: Summary and Setup (datacarpentry.org)](https://datacarpentry.org/organization-geospatial/index.html) and [GIS Training (RFF intranet)](https://my.rff.org/it/computer-lab/).
 
 ### Efficiency Trade-offs
 
