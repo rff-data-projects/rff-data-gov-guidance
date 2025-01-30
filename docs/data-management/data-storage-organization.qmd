@@ -284,16 +284,16 @@ The best format to use will vary depending on the characteristics of the data be
 
 | Format | Extension | Open-source or Proprietary | Retains Individual Data Types? | Level of Structure |
 |--------|-----------|----------------------------|--------------------------------|-------------------|
-| ***Recommended:*** **comma-separated values** | .csv | Open-source | No | Structured |
-| Tab-separated values | .tsv | Open-source | No | Structured |
-| Plain text | .txt | Open-source | No | Semi-structured |
-| Microsoft Excel spreadsheet/workbook | .xls or .xlsx | Proprietary | Yes | Structured |
-| Database File | .dbf | Open-source | Yes | Structured |
-| SAS dataset | .sas7bdat | Proprietary | Yes | Structured |
-| DTA | .dta | Proprietary | Yes | Structured |
-| Feather | .feather | Open-source | Yes | Structured |
-| SQLite | .sqlite, .db | Open-source | Yes | Structured |
-| RData | .rdata or .rds | Open-source | Yes | Structured |
+| ***Recommended:*** **comma-separated values** | .csv | <span style="color:green;">Open-source</span> | No | Structured |
+| Tab-separated values | .tsv | <span style="color:green;">Open-source</span> | No | Structured |
+| Plain text | .txt | <span style="color:green;">Open-source</span> | No | Semi-structured |
+| Microsoft Excel spreadsheet/workbook | .xls or .xlsx | <span style="color:red;">Proprietary</span> | Yes | Structured |
+| Database File | .dbf | <span style="color:green;">Open-source</span> | Yes | Structured |
+| SAS dataset | .sas7bdat | <span style="color:red;">Proprietary</span> | Yes | Structured |
+| DTA | .dta | <span style="color:red;">Proprietary</span> | Yes | Structured |
+| Feather | .feather | <span style="color:green;">Open-source</span> | Yes | Structured |
+| SQLite | .sqlite, .db | <span style="color:green;">Open-source</span> | Yes | Structured |
+| RData | .rdata or .rds | <span style="color:green;">Open-source</span> | Yes | Structured |
 
 #### Descriptions of tabular formats:
 
@@ -311,7 +311,7 @@ The best format to use will vary depending on the characteristics of the data be
 
 - **DTA (.dta)**, binary files created by the statistical analysis software Stata. Note that they sometimes include metadata (e.g., variable labels) that isn't automatically loaded when importing into other software (e.g. R using the haven package).
 
-- **Feather (.feather)**, a fast, lightweight binary columnar data format used for data exchange between data analysis languages like R and Python. Optimized for performance.
+- **Feather (.feather)**, a fast, lightweight binary columnar data format used for data exchange between data analysis languages like R and Python. Optimized for performance and efficiency, especially when working with large tables of data.
 
 - **SQLite (.sqlite, .db)**, files used by the SQLite relational database engine, which supports SQL queries and transactions and is used for lightweight, portable databases.
 
@@ -321,13 +321,27 @@ The best format to use will vary depending on the characteristics of the data be
 
 Hierarchical data formats are best suited for storing and exchanging complex, nested data structures with parent-child relationships, such as configurations, scientific datasets, or web APIs, where flexibility and the ability to represent variable levels of detail are essential.
 
-| Format | Extension | Open-source or Proprietary | Retains Individual Data Types? | Level of Structure | Description |
-|--------|-----------|----------------------------|--------------------------------|-------------------|-------------|
-| HDF5 (Hierarchical Data Format version 5) | .h5, .hdf5 | Open-source | Yes | Structured | A format for storing complex and hierarchical datasets. It supports large data volumes and complex data structures. |
-| NetCDF (Network Common Data Form) | .nc | Open-source | Yes | Structured | A format designed for array-oriented scientific data. It is used for multi-dimensional data like time-series and spatial data. |
-| JSON (JavaScript Object Notation) | .json | Open-source | No | Semi-structured | A common text-based format for storing structured data. Often used in web applications and API calls to transfer data between a server and a web application. |
-| XML (eXtensible Markup Language) | .xml | Open-source | No | Semi-structured | A structured text format that organizes data hierarchically with customizable tags, making it both machine-readable and human-readable. XML is widely used in web services, data exchange, and configuration files. |
-| YAML (YAML Ain't Markup Language) | .yml or .yaml | Open-source | No | Unstructured | A human-readable data serialization format used for configuration files and data exchange. It uses indentation to define structure and supports key-value pairs, lists, and nested data, making it simpler and more concise compared to XML or JSON. |
+#### Characteristics of hierarchical formats:
+
+| Format | Extension | Open-source or Proprietary | Retains Individual Data Types? | Level of Structure |
+|--------|-----------|----------------------------|--------------------------------|-------------------|
+| Hierarchical Data Format version 5 (HDF5) | .h5, .hdf5 | <span style="color:green;">Open-source</span> | Yes | Structured |
+| Network Common Data Form (NetCDF) | .nc | <span style="color:green;">Open-source</span> | Yes | Structured |
+| JavaScript Object Notation | .json | <span style="color:green;">Open-source</span> | No | Semi-structured |
+| e*X*tensible Markup Language | .xml | <span style="color:green;">Open-source</span> | No | Semi-structured |
+| YAML | .yml or .yaml | <span style="color:green;">Open-source</span> | No | Unstructured |
+
+#### Descriptions of hierarchical formats:
+
+- **Hierarchical Data Format version 5 (.hdf5, .h5)**, commonly called **HDF5**, files for storing complex and hierarchical datasets, supporting large data volumes and complex data structures.
+
+- **Network Common Data Form (.nc)**, commonly called **NetCDF**, files designed for array-oriented scientific data. They work especially well for multi-dimensional data like time-series and spatial data. 
+
+- **JavaScript Object Notation (.json)**, text-based files used for storing structured data. Often used to transfer data between a server and a web application, as well as when sending and receiving data via an API.
+
+- **e*****X*****tensible Markup Language (.xml)**, files organizing data hierarchically with customizable tags, making them both machine-readable and human-readable. XML is widely used in web services, data exchange, and configuration files.
+
+- **YAML (.yaml or .yml)**, human-readable files using a data serialization format well suited for configuration files and data exchange. It uses indentation to define structure and supports key-value pairs, lists, and nested data, making it simpler and more concise compared to XML or JSON. "YAML" is a recursive acronym: YAML Ain't Markup Language.
 
 ### Geospatial
 
