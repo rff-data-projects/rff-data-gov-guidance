@@ -15,7 +15,7 @@ This section provides storage options and suggested practices for organization a
 * Always create an L: drive folder for your project. Store all data and code here.
 * If working with external collaborators:
   * Use OneDrive to share select data. Only store data in OneDrive that is necessary for collaboration.
-  * Use GitHub to share code. More about setting up version control is in the next section.
+  * Use GitHub to share code.
   * For small datasets, GitHub may be used for both data and code storage.
 * For both L: drive and OneDrive project folder setup, contact [IThelp@rff.org](mailto:ithelp@rff.org) with specifications.
 
