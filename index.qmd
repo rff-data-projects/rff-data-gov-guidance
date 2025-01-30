@@ -1,4 +1,8 @@
----
-title: "Home"
----
-TODO: Add a description of the website here.
+# Home {.unnumbered}
+
+## Site Outline
+* [Data Management](./docs/data-management/index.qmd)
+* [Software Quality](./docs/software/index.qmd)
+* [Version Control](./docs/version-control/index.qmd)
+
+
