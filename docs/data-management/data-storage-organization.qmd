@@ -260,7 +260,7 @@ Specifically, they should be human readable, machine readable, and compatible wi
 
 ## File and Data Formats
 
-## File Formats
+### File Formats
 
 The best file format to use will depend on the type and structure of data. In general, data should be stored and/or archived in open formats. Open formats maximize accessibility because they have freely available specifications and generally do not require proprietary software to open them (citation: [UC Santa Barbara's Standard Operating Procedures section on Data Formats](https://emlab-ucsb.github.io/SOP/2.5-data-formats.html)).
 
@@ -274,7 +274,7 @@ The best file format to use will depend on the type and structure of data. In ge
 
 - **Retention of data types**: Some file formats retain metadata about data types (e.g., whether a column is an integer or string), while others lose this information upon saving.
 
-### Tabular Formats
+#### Tabular Formats
 
 The best format to use will vary depending on the characteristics of the data being stored. Excel spreadsheets/workbooks (.xlsx) and Stata datasets (.dta) are examples of <span style="color:red;">proprietary</span> data that it is usually best to avoid. Instead, use <span style="color:green;">open-source</span> plain text formats such as comma-separated values (.csv).
 
@@ -282,7 +282,7 @@ The best format to use will vary depending on the characteristics of the data be
 In cases where the native format of source data is in a proprietary software format, it is often necessary to use that software to view and edit data. For example, Stata dataset variables may have labels, a kind of embedded metadata that can only be accessed in Stata.
 :::
 
-#### Characteristics of tabular formats:
+##### Characteristics of tabular formats:
 
 | Format | Extension | Open-source or Proprietary | Retains Individual Data Types? | Level of Structure |
 |--------|-----------|----------------------------|--------------------------------|-------------------|
@@ -297,7 +297,7 @@ In cases where the native format of source data is in a proprietary software for
 | SQLite | .sqlite, .db | <span style="color:green;">Open-source</span> | Yes | Structured |
 | RData | .rdata or .rds | <span style="color:green;">Open-source</span> | Yes | Structured |
 
-#### Descriptions of tabular formats:
+##### Descriptions of tabular formats:
 
 - ***Recommended:*** **comma-separated values (.csv)**, delimited text files with a consistent predetermined format. Namely, each row contains the same number of values separated by commas. These are widely used for data exchange and simple data storage.
 
@@ -319,11 +319,11 @@ In cases where the native format of source data is in a proprietary software for
 
 - **RData (.rds, .rdata)**, files used to store one R object (.rds) or an R environment with several objects (.rdata). Useful if working within an R project for efficiency and organization features, but providing limited interoperability.
 
-### Hierarchical Formats {#sec-hierarchical}
+#### Hierarchical Formats {#sec-hierarchical}
 
 Hierarchical data formats are best suited for storing and exchanging complex, nested data structures with parent-child relationships, such as configurations, scientific datasets, or web APIs, where flexibility and the ability to represent variable levels of detail are essential.
 
-#### Characteristics of hierarchical formats:
+##### Characteristics of hierarchical formats:
 
 | Format | Extension | Open-source or Proprietary | Retains Individual Data Types? | Level of Structure |
 |--------|-----------|----------------------------|--------------------------------|-------------------|
@@ -333,7 +333,7 @@ Hierarchical data formats are best suited for storing and exchanging complex, ne
 | e*X*tensible Markup Language | .xml | <span style="color:green;">Open-source</span> | No | Semi-structured |
 | YAML | .yml or .yaml | <span style="color:green;">Open-source</span> | No | Unstructured |
 
-#### Descriptions of hierarchical formats:
+##### Descriptions of hierarchical formats:
 
 - **Hierarchical Data Format version 5 (.hdf5, .h5)**, commonly called **HDF5**, files for storing complex and hierarchical datasets, supporting large data volumes and complex data structures.
 
@@ -344,8 +344,6 @@ Hierarchical data formats are best suited for storing and exchanging complex, ne
 - **e*****X*****tensible Markup Language (.xml)**, files organizing data hierarchically with customizable tags, making them both machine-readable and human-readable. XML is widely used in web services, data exchange, and configuration files.
 
 - **YAML (.yaml or .yml)**, human-readable files using a data serialization format well suited for configuration files and data exchange. It uses indentation to define structure and supports key-value pairs, lists, and nested data, making it simpler and more concise compared to XML or JSON. "YAML" is a recursive acronym: YAML Ain't Markup Language.
-
-### Geospatial
 
 #### Geospatial File Formats
 
@@ -405,11 +403,11 @@ All raster files should have five critical metadata components:
 
 For a more in-depth introduction to spatial data types, see [Introduction to Geospatial Concepts: Summary and Setup (datacarpentry.org)](https://datacarpentry.org/organization-geospatial/index.html) and [GIS Training (RFF intranet)](https://my.rff.org/it/computer-lab/).
 
-### Efficiency Trade-offs
+#### Efficiency Trade-offs
 
 Plain text-based formats are often more compatible with version control systems due to their human-readable structure. However, when working with large datasets, consider efficiency in terms of input/output speed and file size. Binary formats are typically more efficient in speed and storage but less suited for version control.
 
-### Figures
+#### Figures
 
 When generating and saving final figures:
 - Academic journals often accept TIFF and PNG formats with specific resolution requirements
@@ -417,17 +415,17 @@ When generating and saving final figures:
 - For RFF communications, SVG and PDF formats are best
 - Consider sharing underlying data with the Communications Team for custom figure creation
 
-## Data Types
+### Data Types
 
 Individual data values are stored in specific data types. It is important to identify the data types of important variables in raw datasets to understand their precision and to determine whether data type conversion is necessary for your analysis.
 
-### Basic Data Types
+#### Basic Data Types
 
 - **Integer (int)**: Represents positive or negative whole numbers
 - **Floating point number (float)**: Represents real numbers
 - **Character string (string)**: Text
 
-### Detailed Data Types
+#### Detailed Data Types
 
 #### Numeric Types
 
@@ -448,7 +446,7 @@ Individual data values are stored in specific data types. It is important to ide
 - Use cases: Names, addresses, categorical data
 - Storage considerations: Be mindful of memory usage with long strings
 
-### Special Types
+#### Special Types
 
 - **Logical (Boolean)**: True/False values
 - **Factors**: Categorical data with fixed set of values
