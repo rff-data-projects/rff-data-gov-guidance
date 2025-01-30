@@ -15,7 +15,7 @@ book:
     background: "#c3e1f9"
   page-footer:
     right: "This page is built with [Quarto](https://quarto.org/)."
-    background: "#c3e1f9"
+    background: "#04273c"
   announcement: 
     icon: info-circle
     dismissable: true
