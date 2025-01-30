@@ -1,33 +1,18 @@
 project:
-  type: website
+  type: book
 
-website:
-  title: "RFF Data Governance Guidance"
-  site-url: "https://alexandra-thompson-dc.github.io/rff-data-gov-guidance/" # makes site links work on your remote site, update this if we change domain
+book:
+  title: "Data Guidance for Researchers"
+  url: "https://alexandra-thompson-dc.github.io/rff-data-gov-guidance/" # makes site links work on your remote site, update this if we change domain
   repo-url: "https://github.com/alexandra-thompson-dc/rff-data-gov-guidance"
   repo-actions: [edit, issue]
   favicon: images/black-logo.svg
   sidebar:
     logo: images/black-logomark-vertical.svg
-    title: "Data Governance Guidance"
+    title: "Data Guidance for Researchers"
     style: "docked"
     search: true
     background: "#c3e1f9"
-    contents:
-      - index.qmd
-      - section: "Data Management"
-        href: docs/data-management/index.qmd
-        contents:
-          - docs/data-management/data-storage-organization.qmd
-          - docs/data-management/data-quality-preparation.qmd
-          - docs/data-management/data-archival.qmd
-      - section: "Version Control"
-        contents:
-          - docs/version-control/vc1.md
-          - docs/version-control/vc2.md
-      - section: "Software Quality"
-        contents:
-          - docs/software/software1.md
     tools:
       - icon: github
         menu:
@@ -44,6 +29,19 @@ website:
     content: "**NOTE** - this site is still under development!"
     type: primary
     position: below-navbar
+  chapters:
+    - index.qmd
+    - part: docs/data-management/index.qmd
+      chapters:
+        - docs/data-management/data-storage-organization.qmd
+        - docs/data-management/data-quality-preparation.qmd
+        - docs/data-management/data-archival.qmd
+    - part: docs/software/index.qmd
+      chapters:
+        - docs/software/sq1.qmd
+    - part: docs/version-control/index.qmd
+      chapters:
+        - docs/version-control/vc1.qmd
 format:
   html:
     theme: 
@@ -52,7 +50,6 @@ format:
     toc: true
     toc-expand: 1
     toc-depth: 3
-    number-sections: true
-
+    number-depth: 3
 
 
