@@ -1,5 +1,5 @@
 ---
-title: Storage and Organization
+title: Storage & Organization
 ---
 
 Standardized practices for file organization and storage save time and ensure consistency, enhancing the overall quality of research outputs.

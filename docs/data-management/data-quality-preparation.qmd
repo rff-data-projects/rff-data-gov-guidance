@@ -1,5 +1,5 @@
 ---
-title: Quality and Preparation
+title: Quality & Preparation
 references:
 - type: article
   id: DMTraining

@@ -1,4 +1,4 @@
-# Data Governance Guidance {.unnumbered}
+# Home {.unnumbered}
 
 ## Site Outline
 * [Data Management](./docs/data-management/index.qmd)

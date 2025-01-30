@@ -1,5 +1,5 @@
 ---
-title: Introduction to Data Management
+title: Data Management
 references:
 - type: article
   id: DMPTool
