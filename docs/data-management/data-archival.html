@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Introduction to Data Management – RFF Data Governance Guidance</title>
+<title>Data Archival – RFF Data Governance Guidance</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,27 +20,7 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for citations */
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-  margin-bottom: 0em;
-}
-.hanging-indent div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
-}
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
-}
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}</style>
+</style>
 
 
 <script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -87,9 +67,6 @@ div.csl-indent {
     "search-label": "Search"
   }
 }</script>
-<script src="../../site_libs/quarto-diagram/mermaid.min.js"></script>
-<script src="../../site_libs/quarto-diagram/mermaid-init.js"></script>
-<link href="../../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
 
 </head>
@@ -103,7 +80,7 @@ div.csl-indent {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../docs/data-management/index.html">Data Management</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../docs/data-management/index.html">Data Management</a></li><li class="breadcrumb-item"><a href="../../docs/data-management/data-archival.html">Data Archival</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -159,7 +136,7 @@ div.csl-indent {
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../docs/data-management/index.html" class="sidebar-item-text sidebar-link active">
+            <a href="../../docs/data-management/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Data Management</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -180,7 +157,7 @@ div.csl-indent {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../docs/data-management/data-archival.html" class="sidebar-item-text sidebar-link">
+  <a href="../../docs/data-management/data-archival.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Data Archival</span></a>
   </div>
 </li>
@@ -236,17 +213,22 @@ div.csl-indent {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#foundations" id="toc-foundations" class="nav-link active" data-scroll-target="#foundations"><span class="header-section-number">1</span> Foundations</a></li>
-  <li><a href="#the-data-life-cycle" id="toc-the-data-life-cycle" class="nav-link" data-scroll-target="#the-data-life-cycle"><span class="header-section-number">2</span> The Data Life Cycle</a></li>
+  <li><a href="#how-to-archive-data-at-rff" id="toc-how-to-archive-data-at-rff" class="nav-link active" data-scroll-target="#how-to-archive-data-at-rff"><span class="header-section-number">1</span> How to archive data at RFF</a>
+  <ul class="collapse">
+  <li><a href="#finalize-data-organization" id="toc-finalize-data-organization" class="nav-link" data-scroll-target="#finalize-data-organization"><span class="header-section-number">1.1</span> Finalize data organization</a></li>
+  <li><a href="#finalize-documentation" id="toc-finalize-documentation" class="nav-link" data-scroll-target="#finalize-documentation"><span class="header-section-number">1.2</span> Finalize documentation</a></li>
+  <li><a href="#coordinate-with-it-to-ensure-long-term-folder-access." id="toc-coordinate-with-it-to-ensure-long-term-folder-access." class="nav-link" data-scroll-target="#coordinate-with-it-to-ensure-long-term-folder-access."><span class="header-section-number">1.3</span> Coordinate with IT to ensure long-term folder access.</a></li>
+  </ul></li>
+  <li><a href="#archiving-source-data-and-apis" id="toc-archiving-source-data-and-apis" class="nav-link" data-scroll-target="#archiving-source-data-and-apis"><span class="header-section-number">2</span> Archiving Source Data and APIs</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/alexandra-thompson-dc/rff-data-gov-guidance/edit/main/docs/data-management/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/alexandra-thompson-dc/rff-data-gov-guidance/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/alexandra-thompson-dc/rff-data-gov-guidance/edit/main/docs/data-management/data-archival.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/alexandra-thompson-dc/rff-data-gov-guidance/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../docs/data-management/index.html">Data Management</a></li><li class="breadcrumb-item"><a href="../../docs/data-management/data-archival.html">Data Archival</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Introduction to Data Management</h1>
+<h1 class="title">Data Archival</h1>
 </div>
 
 
@@ -263,81 +245,115 @@ div.csl-indent {
 </header>
 
 
-<section id="foundations" class="level2" data-number="1">
-<h2 data-number="1" class="anchored" data-anchor-id="foundations"><span class="header-section-number">1</span> Foundations</h2>
-<p>Data management encompasses the methods used to collect, store, organize, and use data. Good data management can not only save time and headaches but increase the usefulness of data and enhance the reproducibility of the whole project. Good data management practices provide (Langseth et al.&nbsp;2015):</p>
+<p><strong>Archiving</strong> refers to the secure, long-term storage of data in its final state, upon project completion. Archiving often involves moving data to dedicated storage solutions designed for long-term retention, like archive servers or cloud storage. This is sometimes referred to as “cold storage.”</p>
+<p>Archival is important because it:</p>
 <ul>
-<li>Short-term benefits
+<li>ensures long-term and secure storage to projects for reproducibility and reuse,</li>
+<li>improves organization, accessibility, and usability of both active and completed project files, and</li>
+<li>releases computational resources for active projects, reducing energy consumption and storage costs.</li>
+</ul>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Archival takes place when projects are complete. To preserve the state of code and data at major milestones, such as journal article publication, see [LINK TO RELEVANT VERSION CONTROL SECTION / CLOUD STORAGE SECTION].</p>
+</div>
+</div>
+<section id="how-to-archive-data-at-rff" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="how-to-archive-data-at-rff"><span class="header-section-number">1</span> How to archive data at RFF</h2>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>At RFF, archived files can still be accessed, read, and copied to active folders.</p>
+</div>
+</div>
+<p>When RFF data projects are archived, they are migrated to a new storage location, but are still configured to be accessible to certain team members. The folder can be accessed in a way similar to the L drive, except that the files will be read-only to prevent accidental deletion or modification (they can still be copied or fully restored to the L drive).</p>
+<section id="finalize-data-organization" class="level3" data-number="1.1">
+<h3 data-number="1.1" class="anchored" data-anchor-id="finalize-data-organization"><span class="header-section-number">1.1</span> Finalize data organization</h3>
 <ul>
-<li>Spend less time doing data management and more time doing research.</li>
-<li>Easier to prepare and use data.</li>
-<li>Collaborators can readily understand and use data files.</li>
+<li>Delete obsolete and intermediate files.
+<ul>
+<li>Ensure that irrelevant or outdated files are removed, so that only files necessary for reproduction or understanding are retained.</li>
+<li>In general, intermediate data generated by code does not need to be archived, since it can be easily re-created from raw data and code.</li>
 </ul></li>
-<li>Long-term benefits
+<li>The files to be retained may vary by project, but in general should include:
 <ul>
-<li>Make your work more transparent, reproducible, and rigorous.</li>
-<li>Other researchers can find, understand, and use your data to address broad questions.</li>
-<li>You get credit for preserving data products and for their use in other products.</li>
+<li>Source (raw) data
+<ul>
+<li>When possible, source data should be preserved without modification, as external data sources may be modified or become unavailable.</li>
+<li>However, for certain reliable data sources, citation and documentation may be sufficient (make sure to include the access date and dataset version).</li>
+<li>If data were accessed via an API, see <a href="#archiving-source-data-and-apis">section below</a>.</li>
+</ul></li>
+<li>Final analysis data</li>
+<li>Results and visualizations</li>
+<li>Code</li>
+<li>Documentation</li>
 </ul></li>
 </ul>
-<p>The Data Management section contains:</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>For additional guidance choosing which files to archive, see Best Practice: Decide what data to preserve.</p>
+</div>
+</div>
+</section>
+<section id="finalize-documentation" class="level3" data-number="1.2">
+<h3 data-number="1.2" class="anchored" data-anchor-id="finalize-documentation"><span class="header-section-number">1.2</span> Finalize documentation</h3>
 <ul>
-<li><a href="../../docs/data-management/data-storage-organization.html">Storage and Organization</a></li>
-<li><a href="../../docs/data-management/data-quality-preparation.html">Data Quality and Preparation</a></li>
+<li>Finalize data and software documentation [LINK TO DOCUMENTATION SECTION]</li>
+<li>Create a text file called README and record the following information:
+<ul>
+<li>Project name and description</li>
+<li>Project PI and contact information</li>
+<li>List of staff responsible for data management and code development</li>
+<li>Associated final product, date of release, and DOI (if applicable)</li>
+<li>Link to published data/code (if applicable)</li>
+<li>License associated with final product</li>
+<li>Approximate folder size (e.g., 5 GB)</li>
+<li>List of researchers that should retain folder access</li>
+<li>Nature of sensitive or proprietary data, if applicable</li>
+<li>Any other important notes for navigating folder or using data/code</li>
+</ul></li>
 </ul>
 </section>
-<section id="the-data-life-cycle" class="level2" data-number="2">
-<h2 data-number="2" class="anchored" data-anchor-id="the-data-life-cycle"><span class="header-section-number">2</span> The Data Life Cycle</h2>
-<p>A common axiom among data scientists is the application of the 80/20 rule to effort: 80% of time is spent wrangling (managing and preparing) data, while 20% is spent on analysis. Most activities in the data life cycle come before the analysis phase and are closely tied to data management. There are many different models of the data life cycle, and the relevant model for your individual project will vary. A general data life cycle is depicted below <span class="citation" data-cites="DMPTool">(see also <a href="#ref-DMPTool" role="doc-biblioref">Langseth et al. 2015</a>)</span>.</p>
-<div class="cell" data-layout-align="default">
-<div class="cell-output-display">
-<div>
-<p></p><figure class="figure"><p></p>
-<div>
-<pre class="mermaid mermaid-js">graph TB
-  A(Plan) --&gt; B(Collect)
-  B --&gt; C(Process)
-  C --&gt; D(Explore / Visualize)
-  D --&gt; E(Analyze / Model)
-  E --&gt; F(Archive, Publish, Share)
-  E --&gt; C
-  E --&gt; A
-</pre>
-</div>
-<p></p></figure><p></p>
-</div>
-</div>
-</div>
-<p>The data life cycle is often iterative and nonlinear, and does not always follow the order shown. Your actual analysis workflow may include dead ends or repeated steps. Regardless, it is helpful to plan and discuss your data-oriented research using these common components of the data life cycle:</p>
-<ol type="1">
-<li><strong>Plan</strong>: Identify data that will be collected and how it will be managed. Create a data management plan.</li>
-<li><strong>Collect</strong>: Acquire and store raw data.
-<ol type="a">
-<li><strong>Acquire</strong>: Retrieve data from the appropriate source.</li>
-<li><strong>Describe</strong>: Document the raw data source, format, variables, measurement units, coded values, and known problems. Create metadata for primary data. Cite secondary data.</li>
-<li><strong>Quality assurance</strong>: Inspect the raw data for quality and fit for analysis purpose.</li>
-<li><strong>Store</strong>: Store the raw data in the appropriate folder, as determined in the planning stage. Consider access, resilience (backing up), security, and, if relevant, data agreement stipulations. Make raw data files read-only so they cannot be accidentally modified.</li>
-</ol></li>
-<li><strong>Process</strong>: Prepare the data for exploration and analysis.
-<ol type="a">
-<li><strong>Clean</strong>: Preprocess the data to correct errors, standardize missing values, standardize formats, etc.</li>
-<li><strong>Transform</strong>: Convert data into appropriate format and spatiotemporal scale (e.g., convert daily values to annual statistics).</li>
-<li><strong>Integrate</strong>: Combine datasets.</li>
-</ol></li>
-<li><strong>Explore</strong>: Describe, summarize, and visualize statistics and relationships.</li>
-<li><strong>Analyze / Model</strong>: Develop, refine, and implement analysis and model specifications.</li>
-<li><strong>Archive, publish, and share</strong>: Save and publish final data products and documentation.</li>
-</ol>
-
+<section id="coordinate-with-it-to-ensure-long-term-folder-access." class="level3" data-number="1.3">
+<h3 data-number="1.3" class="anchored" data-anchor-id="coordinate-with-it-to-ensure-long-term-folder-access."><span class="header-section-number">1.3</span> Coordinate with IT to ensure long-term folder access.</h3>
+<p>Contact IT at <a href="mailto:ithelp@rff.org">IThelp@rff.org</a> to arrange archival storage of the folder. Include the README with the email. IT will help to configure storage and folder access.</p>
+</section>
+</section>
+<section id="archiving-source-data-and-apis" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="archiving-source-data-and-apis"><span class="header-section-number">2</span> Archiving Source Data and APIs</h2>
+<p>If you <a href="../../docs/data-management/data-storage-organization.html#accessing-raw-data-via-application-program-interfaces-apis">used an API</a> to access source data, the best course for archiving source data will vary based on project needs, dataset size, and nature of the data. Some options are:</p>
+<ul>
+<li><strong>Download to folder</strong>: During the archival phase, download the source data in its current state and save it to the project folder to be archived.</li>
+<li><strong>Document</strong>: Document the dataset version and access date. While not ideal for reproducibility, this is suitable in cases where the source data is large, reliable, and not likely to be modified.</li>
+<li><strong>Download to cloud</strong>: Use a repository service, such as Zenodo, to store source data as it existed when archiving the project. Source data accessed through an API can be downloaded directly to a Zenodo repository, without having to save files locally. This can be done through R (zen4R) or python.</li>
+</ul>
 
 
 </section>
 
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
-<div id="ref-DMPTool" class="csl-entry" role="listitem">
-Langseth, M. L., H. S. Henkel, V. B. Hutchison, C.J. Thibodeaux, and L. S. Zolly. 2015. <span>“USGS Data Management Training Modules—Planning for Data Management Part II Using the DMPTool to Create Data Management Plans: U.S. Geological Survey.”</span> <a href="https://doi.org/10.5066/F7RJ4GGJ">https://doi.org/10.5066/F7RJ4GGJ</a>.
-</div>
-</div></section></div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -763,7 +779,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/alexandra-thompson-dc/rff-data-gov-guidance/edit/main/docs/data-management/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/alexandra-thompson-dc/rff-data-gov-guidance/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/alexandra-thompson-dc/rff-data-gov-guidance/edit/main/docs/data-management/data-archival.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/alexandra-thompson-dc/rff-data-gov-guidance/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>This page is built with <a href="https://quarto.org/">Quarto</a>.</p>
 </div>
