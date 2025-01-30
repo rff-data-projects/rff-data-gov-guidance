@@ -1,9 +1,9 @@
 project:
-  type: website
+  type: book
 
-website:
+book:
   title: "RFF Data Governance Guidance"
-  site-url: "https://alexandra-thompson-dc.github.io/rff-data-gov-guidance/" # makes site links work on your remote site, update this if we change domain
+  url: "https://alexandra-thompson-dc.github.io/rff-data-gov-guidance/" # makes site links work on your remote site, update this if we change domain
   repo-url: "https://github.com/alexandra-thompson-dc/rff-data-gov-guidance"
   repo-actions: [edit, issue]
   favicon: images/black-logo.svg
@@ -13,22 +13,6 @@ website:
     style: "docked"
     search: true
     background: "#c3e1f9"
-    contents:
-      - text: Home
-        href: index.qmd
-      - section: "Data Management"
-        href: docs/data-management/index.qmd
-        contents:
-          - docs/data-management/data-storage-organization.qmd
-          - docs/data-management/data-quality-preparation.qmd
-      - section: "Version Control"
-        href: docs/version-control/index.qmd
-        contents:
-          - docs/version-control/vc1.qmd
-      - section: "Software Quality"
-        href: docs/software/index.qmd
-        contents:
-          - docs/software/sq1.qmd
     tools:
       - icon: github
         menu:
@@ -45,6 +29,18 @@ website:
     content: "**NOTE** - this site is still under development!"
     type: primary
     position: below-navbar
+  chapters:
+    - index.qmd
+    - part: docs/data-management/index.qmd
+      chapters:
+        - docs/data-management/data-storage-organization.qmd
+        - docs/data-management/data-quality-preparation.qmd
+    - part: docs/software/index.qmd
+      chapters:
+        - docs/software/sq1.qmd
+    - part: docs/version-control/index.qmd
+      chapters:
+        - docs/version-control/vc1.qmd
 format:
   html:
     theme: 

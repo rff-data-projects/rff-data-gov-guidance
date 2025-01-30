@@ -1,8 +1,4 @@
----
-title: Data Governance Guidance
-toc: false
-number-sections: false
----
+# Data Governance Guidance {.unnumbered}
 
 ## Site Outline
 * [Data Management](./docs/data-management/index.qmd)
