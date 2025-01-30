@@ -13,13 +13,6 @@ book:
     style: "docked"
     search: true
     background: "#c3e1f9"
-    tools:
-      - icon: github
-        menu:
-          - text: Source Code
-            href: https://github.com/alexandra-thompson-dc/rff-data-gov-guidance
-          - text: Report a Bug
-            href: https://github.com/alexandra-thompson-dc/rff-data-gov-guidance/issues
   page-footer:
     right: "This page is built with [Quarto](https://quarto.org/)."
     background: "#c3e1f9"
