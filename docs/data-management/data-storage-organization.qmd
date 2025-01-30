@@ -454,7 +454,7 @@ Individual data values are stored in specific data types. It is important to ide
 
 **Caution**: Be careful with date conversions to avoid misinterpretation.
 
-# Sensitive and Proprietary Data, Data Agreements
+## Sensitive and Proprietary Data, Data Agreements
 
 When using sensitive or proprietary data in your research project, it's crucial to ensure data security, privacy, and compliance with any agreements or regulations governing its use. There are five steps to addressing this.
 
