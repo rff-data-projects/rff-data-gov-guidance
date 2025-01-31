@@ -423,42 +423,75 @@ In addition to saving final figures in appropriate and flexible formats, conside
 
 ### Data Types
 
-Individual data values are stored in specific data types. It is important to identify the data types of important variables in raw datasets to understand their precision and to determine whether data type conversion is necessary for your analysis.
+Individual data values are stored in specific data types, or formats. It is important to identify the data types of important variables in raw datasets to understand their precision and to determine whether data type conversion is necessary for your analysis.
 
-#### Basic Data Types
+Every value, or object, has a type.
 
-- **Integer (int)**: Represents positive or negative whole numbers
-- **Floating point number (float)**: Represents real numbers
-- **Character string (string)**: Text
+Types control what operations/methods can be performed on a given value.
 
-#### Detailed Data Types
+The choice of data type affects storage requirements. Using larger types (e.g., float64 instead of float32, or int64 instead of int32) increases memory usage, which can be significant in large datasets. Conversely, choosing types that are too small can lead to data loss or overflow errors.
 
-#### Numeric Types
+Data types can be unwittingly changed, affecting precision and operations. For example, including a string in a numerical column of a CSV will likely cause all the column’s values to be read in as strings.
 
-##### Integer (int)
-- Represents whole numbers
-- Subtypes include int8, uint16, etc.
-- Use cases: Counting, indexing
-- Storage considerations: Choose the smallest integer type that fits your data
+#### Basic Types
 
-##### Floating Point Number (float)
-- Represents real numbers
-- Subtypes: 32-bit (single precision) and 64-bit (double precision)
-- Use cases: Scientific calculations, financial modeling
-- Storage considerations: float32 uses less memory, float64 offers higher precision
+##### Examples
 
-#### Character String (string)
-- Text data
-- Use cases: Names, addresses, categorical data
-- Storage considerations: Be mindful of memory usage with long strings
+| Type | Abbreviation | Description | Examples |
+|---|---|---|---|
+| Integer | int | Whole numbers | `0`, `1`, `42`, `-6`,<br />`2e+30` (scientific notation) |
+| Floating point | float | Real numbers, with or without a fractional component | `3.1`, `2.7182818285`, `-1.5`, `0`, `43` |
+| Character string | str | Text, demarcated by quote marks on either side | `"Hello, world!"`, `'apple'`, <br />`"#23"`, `"'Why?', he said."` |
+
+##### Details
+
+Numeric values are a key element of scientific computing:
+
+- **Integers** represent whole numbers, which can be positive, negative, or zero
+  - Subtypes of integers can be further categorized based on their size (bits) and whether they are signed (can represent negative numbers), for example,
+    - int8: 8-bit signed integer, ranges from -128 to 127
+    - uint16: 16-bit unsigned integer, ranges from 0 to 65,535
+  - Use cases include counting, indexing, and scenarios where whole numbers are needed (e.g., population counts, item quantities)
+  - Smaller integer types use less memory but have a limited range, so it is most efficient to use the smallest type with enough room for a given data value, vector, matrix, list, etc.
+
+- **Floating point numbers** represent real numbers, which include all fractions in addition to all integers
+  - Like integers, they can be specified by size (bits), typically 32-bit or 64-bit
+    - float32 is "single precision"
+    - float64 is "double precision"
+  - Use cases include scientific calculations, financial modeling, and any scenario requiring precision for fractional values (e.g., temperature measurements, stock prices)
+  - The float32 type uses less memory than float64 but with less precision, so it is best to use float32 for large datasets where memory is a constraint and float64 when precision is important
+
+Data taking the form of letters, words, or other text are used just as widely as numbers:
+
+- **Character strings** contain text written between quote marks (either single or double)
+  - Use cases include names, addresses, descriptive text, and categories (e.g., gender, region, brand)
+  - Strings longer than a few words often take up more memory than numbers, so it’s important to manage string data carefully, especially in large datasets.
 
 #### Special Types
 
-- **Logical (Boolean)**: True/False values
-- **Factors**: Categorical data with fixed set of values
-- **Dates/Times**: Use ISO 8601 standard format (YYYY-MM-DD)
+Categorical data can be stored more efficiently using more specific types:
 
-**Caution**: Be careful with date conversions to avoid misinterpretation.
+- **Logical (boolean)** data each take one of two possible values (e.g., 0 or 1, true or false)
+  - Examples of use cases include tests (pass/fail), survey responses (yes/no), and signals (on/off)
+  - Very memory-efficient, requiring little more than one bit per value
+  - Programming note: In R, Python, and Julia, the logical or boolean type is considered a distinct type but is often compatible with or represented as integers for underlying storage or arithmetic operations. In Stata, logical values are represented directly as integers, with no separate boolean type.  
+- **Factors** represent data with a finite (usually relatively small) and usually labeled set of possible values, usually referred to as levels or categories
+  - Use cases include non-numeric data that falls into distinct categories, such as colors, months, quality survey responses, or Excel workbook cells with a dropdown list of values
+  - Internally stored as integers with an associated set of labels or levels
+- **Date/time** values can be stored using data types designed for human- and machine-readability
+  - Most programming languages have modules that support specific date formats
+  - We ***recommend*** using the conventional ISO 8601 format (YYYY-MM-DD)
+
+  ::: {.callout-warning}
+  Ensure that date formats are consistent within columns and are correctly interpreted when converting to a standard format. For example, if a date is formatted as "DD/MM/YYYY" but is mistakenly interpreted as "MM/DD/YYYY" during conversion to "YYYY-MM-DD", the resulting date will be incorrect.
+  :::
+
+#### Other resources
+
+See these websites for additional information about data types:
+
+- R-focused: [R for Data Science: Transform](https://r4ds.hadley.nz/transform)
+- Python-focused: [Software Carpentry: Data Types and Type Conversion](https://swcarpentry.github.io/python-novice-gapminder/03-types-conversion.html)
 
 ## Sensitive and Proprietary Data, Data Agreements
 
