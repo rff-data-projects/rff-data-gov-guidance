@@ -262,7 +262,7 @@ Specifically, they should be human readable, machine readable, and compatible wi
 
 ### File Formats
 
-The best file format to use will depend on the type and structure of data. In general, data should be stored and/or archived in open formats. Open formats maximize accessibility because they have freely available specifications and generally do not require proprietary software to open them (citation: [UC Santa Barbara's Standard Operating Procedures section on Data Formats](https://emlab-ucsb.github.io/SOP/2.5-data-formats.html)).
+The best file format to use will depend on the type and structure of data. In general, data should be stored and/or archived in open formats. Open formats maximize accessibility because they have freely available specifications and generally do not require proprietary software to open them ([UC Santa Barbara's Standard Operating Procedures section on Data Formats](https://emlab-ucsb.github.io/SOP/2.5-data-formats.html)).
 
 #### Key characteristics of data file formats:
 
@@ -307,7 +307,7 @@ In cases where the native format of source data is in a proprietary software for
 
 - **Excel spreadsheets/workbooks (.xls, .xlsx)**, files designed for use with Microsoft Excel software. XLS is a binary file format compatible only with Excel, both older and newer versions. XLSX was developed more recently. It is XML-based, making it compatible with open-source software such Google Sheets as well as versions of Excel released since 2007. Generally **avoid relying on these files for data storage** due to complex formatting, data formats, formulas, etc. They also complicate quality assurance. XLS is not version-control friendly and XLSX requires special version-control techniques because it is stored in a compressed state. Excel spreadsheets can easily be exported to CSV files.
 
-- **Database File (.dbf)**, files used by dBASE and other database systems to store tabular data. They supports a fixed schema and metadata. DBF files cannot store full precision. Avoid creating this type of file.
+- **Database File (.dbf)**, files used by dBASE and other database systems to store tabular data. They support a fixed schema and metadata. DBF files cannot store full precision. Avoid creating this type of file.
 
 - **SAS Dataset (.sas7bdat)**, the proprietary file format used by SAS for storing datasets. It supports metadata and variable attributes. Datasets should be converted to open-source formats after processing.
 
