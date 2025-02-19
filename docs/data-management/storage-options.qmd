@@ -75,7 +75,7 @@ GitHub repositories can be "cloned" to a local computer.
 This method leverages GitHub's distributed version control features to streamline collaboration, organization, and resilience by allowing users to "clone" GitHub repositories to a local computer (such as an RFF server folder or personal OneDrive folder), make changes independently, and then upload those changes to a shared workspace that can be accessed through any web browser or any computer with git installed
 [LINK TO VC SECTION]
 
-As with data organization, use the same folder structure for code across shared folders
+As with data organization, use the same folder structure for code across shared folders.
 In addition, it is particularly important to allow for easily configurable paths.
 One way to do this would be to use relative paths [LINK TO SOFTWARE QUALITY SECTION ON RELATIVE FILE PATHS] so that other code users don't need to modify the absolute paths to be custom to their computer setup, and code can be run "out-of-the-box".
 
@@ -93,7 +93,7 @@ Considerations:
 
 #### Other Cloud Storage Options for large data
 
-Alternatives to OneDrive, such as Azure, Google Bucket, or AWS S3, may be well suited to your project. Especially for short-term storage and file transfer.
+Alternatives to OneDrive, such as Azure, Google Bucket, or AWS S3, may be well suited to your project, especially for short-term storage and file transfer.
 Dropbox is also an option, but note that it can incur additional costs.
 For Azure setups, contact IT at [IThelp@rff.org](mailto:ithelp@rff.org). 
 
