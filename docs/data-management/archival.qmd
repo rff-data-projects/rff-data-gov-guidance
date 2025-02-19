@@ -1,5 +1,5 @@
 ---
-title: Archiving
+title: Archival
 ---
 
 __Archiving__ refers to the secure, long-term storage of data in its final state, upon project completion.
