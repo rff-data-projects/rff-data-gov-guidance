@@ -1,0 +1,51 @@
+---
+title: Terminology
+---
+
+There are a few terms that we need to define before we get up and running with Git and GitHub.
+
+#### Git
+A popular version control system
+
+#### Github
+A website used for hosting and organizing git-version-controlled folders to facilitate collaboration
+
+#### User
+A github account associated with a person.  For example, [Ethan-Russell](https://github.com/Ethan-Russell)
+
+#### Organization
+A github account associated with a group.  Users can be part of multiple organizations.  I.e. e4st-dev
+
+#### Repository
+A git version-controlled folder.  Repositories can be hosted by a user or an organization.
+
+* Local Repository: A local copy of a repository
+* Remote Repository: A copy of the repository stored on the cloud, in Github
+
+#### Branch
+A duplicate of the repository that can be modified independently of the original repository.  One could create a branch, then make changes to the branch, then merge the branch back into the original copy of the repository, all while preserving the original.
+
+
+## Basic Git Commands
+
+Here we will list all the git commands that would be helpful to know for the recommended git workflows found in the [Usage subsection](./usage.qmd).  Git is an extremely powerful and complete tool, and we will only cover a small fraction of its functionality for our purposes.  Complete documentation on each of these commands can be found in the official [git documentation](https://git-scm.com/docs).
+
+#### Clone
+A git command used for copying a remote version of a repository onto a computer, to make a local repository.
+
+#### Pull
+A git command for used for retrieving changes made to a remote repository, and applying them to a local repository
+
+#### Add
+A git command to signal that particular file changes should be tracked
+
+#### Commit
+A git command to publish the added file changes to the current repository, creates a unique commit hash by which this code version can be referred to.
+
+#### Push
+A git command used to publish commits made to a local repository to the remote repository
+
+#### Checkout
+Updates files in the local directory to match a specific branch or commit, and updates the working branch name.  Additional options can be specified to create a new branch at the current commit.
+
+
