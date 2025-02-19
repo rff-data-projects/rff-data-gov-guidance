@@ -123,5 +123,5 @@ Using APIs is ideal for a variety of reasons:
 APIs do require some special considerations:
 
 * __Consistency__: Remote data may change. It is important to use version control and smaller intermediate datasets within a version control framework to ensure that past results can be reproduced consistently
-* __Longevity__: APIs may stop being accessible/maintained. It is not always a safe assumption that data stored remotely will continue to be accessible via an API. However, public government datasets tend to be more reliable due to laws enforcing their accessibility. Even so, API packages and query formats may change, so project code may need to be debugged occasionally to maintain compatibility with an API.
+* __Longevity__: APIs may stop being accessible/maintained. It is not always a safe assumption that data stored remotely will continue to be accessible via an API. API packages and query formats may also change, so project code may need to be debugged occasionally to maintain compatibility with an API.
 * __Accessibility__: Not all online data sources have convenient API functions in a programmer's language of choice. Some have URL formats that allow data to be accessed regardless. The amount of documentation and the level of technical skill required to understand it can vary.
