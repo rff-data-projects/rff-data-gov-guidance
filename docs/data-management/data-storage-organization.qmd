@@ -431,7 +431,9 @@ Types control what operations/methods can be performed on a given value.
 
 The choice of data type affects storage requirements. Using larger types (e.g., float64 instead of float32, or int64 instead of int32) increases memory usage, which can be significant in large datasets. Conversely, choosing types that are too small can lead to data loss or overflow errors.
 
+::: {.callout-warning}
 Data types can be unwittingly changed, affecting precision and operations. For example, including a string in a numerical column of a CSV will likely cause all the column’s values to be read in as strings.
+:::
 
 #### Basic Types
 
