@@ -37,10 +37,11 @@ Good data management practices provide (Langseth et al. 2015):
   * Other researchers can find, understand, and use your data to address broad questions.
   * You get credit for preserving data products and for their use in other products.
 
-The Data Management section contains:
+Standardized practices for file organization and storage save time and ensure consistency, enhancing the overall quality of research outputs.
+A simple and flexible folder structure not only promotes long-term data stability but also supports seamless project growth, adaptability, and researcher transitions.
+Such an approach reduces the complexity of project management and aligns effectively with version control systems, enhancing collaborative efforts and preserving institutional knowledge.
 
-* [Storage and Organization](./data-storage-organization.qmd)
-* [Data Quality and Preparation](./data-quality-preparation.qmd)
+This section provides storage options and suggested practices for organization and preservation. 
 
 ## The Data Life Cycle
 

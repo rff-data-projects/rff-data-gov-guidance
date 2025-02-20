@@ -26,9 +26,12 @@ book:
     - index.qmd
     - part: docs/data-management/index.qmd
       chapters:
-        - docs/data-management/data-storage-organization.qmd
-        - docs/data-management/data-quality-preparation.qmd
-        - docs/data-management/data-archival.qmd
+        - docs/data-management/storage-options.qmd
+        - docs/data-management/organization.qmd
+        - docs/data-management/file-formats.qmd
+        - docs/data-management/sensitive-proprietary.qmd
+        - docs/data-management/quality-preparation.qmd
+        - docs/data-management/archival.qmd
     - part: docs/software/index.qmd
       chapters:
         - docs/software/sq1.qmd
