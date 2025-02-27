@@ -6,7 +6,9 @@ title: Usage
 * Users should commit changes frequently, with descriptive messages. 
 * Pull often to ensure that you are incorporating the changes of others.
 * A local clone of a repository should generally ONLY have a single user.
-* Take care with encoding file paths within a repository.  You want other people to be able to use the repository without having to move files around or change all the file paths in the repository.  You could either:
+* Take care with encoding file paths within a repository.
+You want other people to be able to use the repository without having to move files around or change all the file paths in the repository.
+You could either:
   * Use [relative file paths](./terminology.qmd#relative-file-paths) to point to other files that are located in the repository.
   * Use absolute file paths (i.e. on a shared network drive like the L drive) consider making a variable for the path directory, especially if used multiple times. That way, if a collaborator has their data at a different path on their system, they only need to change a single path.
     ```
@@ -28,7 +30,12 @@ Here are a couple examples of how a project / team might choose to use repositor
 
 ## Basic Workflow
 
-This section outlines the bare-bones workflow for using Git and GitHub.  Start here and familiarize yourself with these concepts before optionally moving onto the [Branch Workflow](#branch-workflow).  Essentially, the workflow begins with either [create a new repository](#creating-a-repository) or [clone an existing repository](#cloning-a-repository).  Then, after [editing the files](#editing-files), it is necessary to [stage the file changes](#staging-file-changes), then [commit the file changes](#commiting-file-changes), then [push the committed changes](#pushing-committed-changes) to the remote repository.  When collaborating with others, it may be necessary to [pull published commits made by others](#pulling-changes-from-others).  If both you and the collaborator have made changes, it may prove necessary to [handle any merge conflicts](#handling-merge-conflicts)
+This section outlines the bare-bones workflow for using Git and GitHub.
+Start here and familiarize yourself with these concepts before optionally moving onto the [Branch Workflow](#branch-workflow).
+Essentially, the workflow begins with either [create a new repository](#creating-a-repository) or [clone an existing repository](#cloning-a-repository).
+Then, after [editing the files](#editing-files), it is necessary to [stage the file changes](#staging-file-changes), then [commit the file changes](#commiting-file-changes), then [push the committed changes](#pushing-committed-changes) to the remote repository.
+When collaborating with others, it may be necessary to [pull published commits made by others](#pulling-changes-from-others).
+If both you and the collaborator have made changes, it may prove necessary to [handle any merge conflicts](#handling-merge-conflicts)
 
 <TODO: add detail to the basic concepts>
 
@@ -41,12 +48,21 @@ This section outlines the bare-bones workflow for using Git and GitHub.  Start h
 #### Pulling changes from others
 #### Handling merge conflicts
 
-A team could do all their software development using these basic concepts.  One person would create a repository in github, then all team members would clone the repository to make a copy on their computers.  Then, every time a team member needs to make a code change, they would first pull any changes made by other team members, then they would commit and pushing their changes as they make them. If another team member had pushed changes first, then one would need to pull and resolve merge conflicts prior to pushing their changes.  This workflow is great for small teams because it has very little overhead for using git.  However it is only a good choice if the team doesn’t need to be make too many concurrent code changes, and doesn’t need to review each other’s code changes.  A team can always start off using this workflow, and introduce some of the more advanced concepts later on.
+A team could do all their software development using these basic concepts.
+One person would create a repository in github, then all team members would clone the repository to make a copy on their computers.
+Then, every time a team member needs to make a code change, they would first pull any changes made by other team members, then they would commit and pushing their changes as they make them. If another team member had pushed changes first, then one would need to pull and resolve merge conflicts prior to pushing their changes.
+This workflow is great for small teams because it has very little overhead for using git.
+However it is only a good choice if the team doesn’t need to be make too many concurrent code changes, and doesn’t need to review each other’s code changes.
+A team can always start off using this workflow, and introduce some of the more advanced concepts later on.
 For sample RFF repositories using this workflow, see:
 
 ## Branch Workflow
 
-In the basic workflow, we talked about the problem of concurrent changes causing conflicts.  In order to get around that process, we can use a concept called “branches”.  In the basic workflow above, we have a single branch, by default usually named “main”.  Branches allow you to create a separate version of the repository, make changes to it, then, when ready, review and merge those code changes into the main branch, or any other branch.  We’ll break down the steps below.
+In the basic workflow, we talked about the problem of concurrent changes causing conflicts.
+In order to get around that process, we can use a concept called “branches”.
+In the basic workflow above, we have a single branch, by default usually named “main”.
+Branches allow you to create a separate version of the repository, make changes to it, then, when ready, review and merge those code changes into the main branch, or any other branch.
+We’ll break down the steps below.
 
 <TODO: add detail to the advanced concepts>
 

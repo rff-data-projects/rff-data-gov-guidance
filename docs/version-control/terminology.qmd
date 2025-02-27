@@ -11,22 +11,29 @@ A popular version control system
 A website used for hosting and organizing git-version-controlled folders to facilitate collaboration
 
 #### User
-A github account associated with a person.  For example, [Ethan-Russell](https://github.com/Ethan-Russell)
+A github account associated with a person.
+For example, [Ethan-Russell](https://github.com/Ethan-Russell)
 
 #### Organization
-A github account associated with a group.  Users can be part of multiple organizations.  I.e. [e4st-dev](https://github.com/e4st-dev)
+A github account associated with a group.
+Users can be part of multiple organizations.
+I.e. [e4st-dev](https://github.com/e4st-dev)
 
 #### Repository
-A git version-controlled folder.  Repositories can be hosted by a user or an organization.
+A git version-controlled folder.
+Repositories can be hosted by a user or an organization.
 
 * __Local Repository__: A local copy of a repository
-* __Remote Repository__: A copy of the repository stored on the cloud, for our purposes in Github.  I.e. [E4ST.jl](https://github.com/e4st-dev/E4ST.jl)
+* __Remote Repository__: A copy of the repository stored on the cloud, for our purposes in Github.
+I.e. [E4ST.jl](https://github.com/e4st-dev/E4ST.jl)
 
 #### Branch
-A duplicate of the repository that can be modified independently of the original repository.  One could create a branch, then make changes to the branch, then merge the branch back into the original copy of the repository, all while preserving the original.
+A duplicate of the repository that can be modified independently of the original repository.
+One could create a branch, then make changes to the branch, then merge the branch back into the original copy of the repository, all while preserving the original.
 
 #### Relative File Paths
-A path telling how to get from one file to another.  For example, say I have a script `process.jl` and I need to reference a data file, `data.csv`, but they are in different folders:
+A path telling how to get from one file to another.
+For example, say I have a script `process.jl` and I need to reference a data file, `data.csv`, but they are in different folders:
 
 ```
 project/
@@ -36,11 +43,15 @@ project/
 │   ├── process.jl
 ```
 
-From within the `process.jl`, the relative filepath to `data.csv` would be `../data/data.csv`.  The prepending `../` represents "backing up" one folder level.  In this example, `../` backs up from the `project/scripts/` to `project/`.
+From within the `process.jl`, the relative filepath to `data.csv` would be `../data/data.csv`.
+The prepending `../` represents "backing up" one folder level.
+In this example, `../` backs up from the `project/scripts/` to `project/`.
 
 ## Basic Git Commands
 
-Here we will list all the git commands that would be helpful to know for the recommended git workflows found in the [Usage subsection](./usage.qmd).  Git is an extremely powerful and complete tool, and we will only cover a small fraction of its functionality for our purposes.  Complete documentation on each of these commands can be found in the official [git documentation](https://git-scm.com/docs).
+Here we will list all the git commands that would be helpful to know for the recommended git workflows found in the [Usage subsection](./usage.qmd).
+Git is an extremely powerful and complete tool, and we will only cover a small fraction of its functionality for our purposes.
+Complete documentation on each of these commands can be found in the official [git documentation](https://git-scm.com/docs).
 
 #### Clone
 A git command used for copying a remote version of a repository onto a computer, to make a local repository.
@@ -58,6 +69,7 @@ A git command to publish the added file changes to the current repository, creat
 A git command used to publish commits made to a local repository to the remote repository
 
 #### Checkout
-Updates files in the local directory to match a specific branch or commit, and updates the working branch name.  Additional options can be specified to create a new branch at the current commit.
+Updates files in the local directory to match a specific branch or commit, and updates the working branch name.
+Additional options can be specified to create a new branch at the current commit.
 
 
