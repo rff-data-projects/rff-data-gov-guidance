@@ -4,7 +4,12 @@ title: Version Control
 
 ## What is version control and what can it do for you?
 
-Version control is a system that records changes to a file or set of files over time so that you can recall specific versions later.  You know how Microsoft Word will periodically save your file, and you can recover previous versions if you really mess up?  That is one simplistic form of version control, with other forms offering far more functionality.  Some commonly used version control systems are Git, Mercurial, and SVN.  Here at RFF, we strongly advise using Git, which we will discuss for the remainder of the section.  We also recommend using Github to host Git repositories online.  Here are some of the benefits of using Git/Github for version control:
+Version control is a system that records changes to a file or set of files over time so that you can recall specific versions later.
+You know how Microsoft Word will periodically save your file, and you can recover previous versions if you really mess up?  That is one simplistic form of version control, with other forms offering far more functionality.
+Some commonly used version control systems are Git, Mercurial, and SVN.
+Here at RFF, we strongly advise using Git, which we will discuss for the remainder of the section.
+We also recommend using Github to host Git repositories online.
+Here are some of the benefits of using Git/Github for version control:
 
 * Grants __peace of mind__ knowing work is stored safely and can be recalled with minimal effort, which gives greater __liberty__ to test out new ideas (even when a computer breaks!)
 
