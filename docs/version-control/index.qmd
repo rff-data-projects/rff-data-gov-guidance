@@ -19,7 +19,9 @@ Here are some of the benefits of using Git/Github for version control:
 
 * __Documents__ when, why, and by whom specific changes were made, which helps with debugging and troubleshooting
 
-* __Preserves__ easy access to all versions of the code for a given project or tool, which can be stored on the cloud using widely available, well-maintained software like GitHub
+* __Consolidates__ project code and documentation in the same, easily-accessible, backed-up location.
+
+* __Preserves__ easy web browser access to all versions of code.
 
 * __Organize__ documentation so it can be kept alongside the code itself
 
@@ -27,6 +29,4 @@ Here are some of the benefits of using Git/Github for version control:
 
 * __Empowers audiences__ to answer their own questions about the data and methods used in publications, reducing overhead for researchers who would otherwise be given that task
 
-## What is the purpose of this section?
-
-The purpose of this section is to train RFF Staff to use the basics of Git and GitHub so that using version control will become a standard part of the project life cycle.
+This section of the guidance will help you get started in making version control a standard part of the project life cycle.
