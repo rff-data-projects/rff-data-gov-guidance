@@ -1,6 +1,16 @@
 ---
-title: Archival
+title: Disposition and Archival
 ---
+
+## Data Disposal
+
+Some data may need to be deleted to protect sensitive information or comply with regulations, data agreements, or funder requirements. This is often referred to as __data disposition__. If any of these requirements applies to a project, follow these best practices when deleting data:
+
+* __Verify Requirements__: confirm funder agreements and legal obligations regarding data retention and deletion.
+* __ Source Deletion__: 
+* __ Documentation__: Record when and how data was deleted.
+
+## Data Archival
 
 __Archiving__ refers to the secure, long-term storage of data in its final state, upon project completion.
 Archiving often involves moving data to dedicated storage solutions designed for long-term retention, like archive servers or cloud storage.
@@ -16,7 +26,7 @@ Archival is important because it:
 Archival takes place when projects are complete. To preserve the state of code and data at major milestones, such as journal article publication, see [LINK TO RELEVANT VERSION CONTROL SECTION / CLOUD STORAGE SECTION].
 :::
 
-## How to archive data at RFF
+### How to archive data at RFF
 
 ::: {.callout-note}
 At RFF, archived files can still be accessed, read, and copied to active folders.
@@ -25,7 +35,7 @@ At RFF, archived files can still be accessed, read, and copied to active folders
 When RFF data projects are archived, they are migrated to a new storage location, but are still configured to be accessible to certain team members.
 The folder can be accessed in a way similar to the L drive, except that the files will be read-only to prevent accidental deletion or modification (they can still be copied or fully restored to the L drive).
 
-### Finalize data organization
+#### Finalize data organization
 
 * Delete obsolete and intermediate files. 
   * Ensure that irrelevant or outdated files are removed, so that only files necessary for reproduction or understanding are retained.
@@ -58,7 +68,7 @@ For additional guidance choosing which files to archive, see Best Practice: Deci
   * Nature of sensitive or proprietary data, if applicable
   * Any other important notes for navigating folder or using data/code
 
-### Coordinate with IT to ensure long-term folder access. 
+#### Coordinate with IT to ensure long-term folder access. 
 
 Contact IT at [IThelp@rff.org](mailto:ithelp@rff.org) to arrange archival storage of the folder. Include the README with the email. IT will help to configure storage and folder access. 
 
