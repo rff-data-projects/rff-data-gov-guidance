@@ -4,7 +4,7 @@ title: Setup
 
 ## Make a GitHub Account
 
-Before using GitHub, it is necessary to have a Github account.
+Before using GitHub, it is necessary to have a GitHub account.
 To make an account, go to the [GitHub website](https://github.com/) and click __Sign Up__, following the prompts to create your account.
 As part of the process you will need to verify your email address.
 Note that GitHub accounts are associated with people, along the lines of a LinkedIn account, and it may be helpful to have a single personal GitHub account even if you plan to use it outside of your work at RFF.
@@ -50,13 +50,13 @@ The process for creating a local copy on your computer is called [cloning](./ter
 ## Optional: Set up SSH Keys
 
 If you will be using Git with private repositories, it is worth setting up a key on your PC so that you can freely pull and push from a remote repository without having to enter your password each time.
-Follow [these instructions](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#generating-a-new-ssh-key) for setting up an SSH key, and [these instructions](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account#adding-a-new-ssh-key-to-your-account) for adding it to your Github account.
+Follow [these instructions](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#generating-a-new-ssh-key) for setting up an SSH key, and [these instructions](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account#adding-a-new-ssh-key-to-your-account) for adding it to your GitHub account.
 
 There is a small configuration change we need in order to enable the SSH protocol to work with RFF IT systems.
 From a git bash window, run the following lines:
 
 * `touch ~/.ssh/config` - This command creates a new empty file in your user home `directory/.ssh` directory.
-* `printf "Host github.com\n  Hostname ssh.github.com\n  Port 443" >> ~/.ssh/config` - This command writes 3 line to the newly created config file.
+* `printf "Host github.com\n  Hostname ssh.github.com\n  Port 443" >> ~/.ssh/config` - This command writes 3 lines to the newly created config file.
 If you were to open the file in a text editor, it would look like:
 
 ```
@@ -65,5 +65,6 @@ Host github.com
   Port 443
 ```
 
-Once you have that set up, when you clone a repository, when copying the URL for the repository, simply select "SSH" before copying the URL.
-We’ll go into that in greater detail later.
+Once you have that set up, when cloning a repository to your local folder, simply select "SSH" before copying the URL.
+
+

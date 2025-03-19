@@ -5,9 +5,9 @@ title: Terminology
 There are a few terms that we need to define before we get up and running with Git and GitHub.
 
 #### Git
-A popular version control system
+A popular version control system.  This is software that you download and use on your computer.
 
-#### Github
+#### GitHub
 A website used for hosting and organizing git-version-controlled folders to facilitate collaboration
 
 #### User
@@ -23,8 +23,8 @@ I.e. [e4st-dev](https://github.com/e4st-dev)
 A git version-controlled folder.
 Repositories can be hosted by a user or an organization.
 
-* __Local Repository__: A local copy of a repository
-* __Remote Repository__: A copy of the repository stored on the cloud, for our purposes in Github.
+* __Local Repository__: A copy of a repository located in a folder on your computer.
+* __Remote Repository__: A copy of the repository stored on the cloud, for our purposes in GitHub.
 I.e. [E4ST.jl](https://github.com/e4st-dev/E4ST.jl)
 
 #### Branch
@@ -60,10 +60,10 @@ A git command used for copying a remote version of a repository onto a computer,
 A git command for used for retrieving changes made to a remote repository, and applying them to a local repository
 
 #### Add
-A git command to signal that particular file changes should be tracked
+A git command to signal that particular file changes should be tracked ("staged").
 
 #### Commit
-A git command to publish the added file changes to the current repository, creates a unique commit hash by which this code version can be referred to.
+A git command to publish the added file changes to the current branch of the repository, creates a unique commit hash by which this code version can be referred to.
 
 #### Push
 A git command used to publish commits made to a local repository to the remote repository

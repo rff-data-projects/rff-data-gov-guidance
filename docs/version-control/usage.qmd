@@ -10,7 +10,7 @@ title: Usage
 You want other people to be able to use the repository without having to move files around or change all the file paths in the repository.
 You could either:
   * Use [relative file paths](./terminology.qmd#relative-file-paths) to point to other files that are located in the repository.
-  * Use absolute file paths (i.e. on a shared network drive like the L drive) consider making a variable for the path directory, especially if used multiple times. That way, if a collaborator has their data at a different path on their system, they only need to change a single path.
+  * Use absolute file paths (i.e. on a shared network drive like the L drive) and consider making a variable for the path directory, especially if used multiple times. That way, if a collaborator has their data at a different path on their system, they only need to change a single path.
     ```
     data_path = “L:/ProjectName/Data”
     data_file_1 = joinpath(data_path, “data_file_1.csv”)
@@ -19,13 +19,13 @@ You could either:
 
   * If you use relative file paths pointing to files outside the repository, specify in the project README how the external files and the repository should be positioned relative to each other.
 
-Here are a couple examples of how a project / team might choose to use repositories.
+Here are two examples of how a project / team might choose to use repositories.
 
-* Each person keeps their own version of a repository somewhere on the `C:/` drive of their personal computer, or on the RFF servers.
+* Each team member keeps their own working version of a repository somewhere private, either on the `C:/` drive of their personal computer, or on the RFF servers, with the intention of no other team members having access to it.
   * __Pros__: it is “clean”, with no accidental file changes from other users.
   * __Cons__: It would require care to be taken for access to non-version-controlled data files.
-* Each person keeps their own version of a repository on a shared drive, i.e. the L drive, which could (but probably shouldn’t) be accessed by others, i.e. inside of a larger project directory
-  * __Pros__: it allows easy access to shared project files, allows to see changes made by others if they have forgotten to commit and are unavailable
+* Each team member keeps their own working version of a repository on a shared drive, i.e. the L drive, which could (but probably shouldn’t) be accessed by others, i.e. inside of a larger project directory
+  * __Pros__: it allows easy access to shared project files; specifically, users can see changes made by others if they haven't pushed them to the repository due to outside circumstances
   * __Cons__: files could be accidentally  changed by others if they are working in the incorrect version of the repository
 
 ## Basic Workflow
@@ -35,7 +35,7 @@ Start here and familiarize yourself with these concepts before optionally moving
 Essentially, the workflow begins with either [create a new repository](#creating-a-repository) or [clone an existing repository](#cloning-a-repository).
 Then, after [editing the files](#editing-files), it is necessary to [stage the file changes](#staging-file-changes), then [commit the file changes](#commiting-file-changes), then [push the committed changes](#pushing-committed-changes) to the remote repository.
 When collaborating with others, it may be necessary to [pull published commits made by others](#pulling-changes-from-others).
-If both you and the collaborator have made changes, it may prove necessary to [handle any merge conflicts](#handling-merge-conflicts)
+If both you and the collaborator have made changes, it may prove necessary to [handle any merge conflicts](#handling-merge-conflicts).  If these conflicts happen often, it may be worth considering the [branch workflow](#branch-workflow), which is better suited for frequent collaboration on the same set of files.
 
 <TODO: add detail to the basic concepts>
 
@@ -50,11 +50,11 @@ If both you and the collaborator have made changes, it may prove necessary to [h
 
 A team could do all their software development using these basic concepts.
 One person would create a repository in github, then all team members would clone the repository to make a copy on their computers.
-Then, every time a team member needs to make a code change, they would first pull any changes made by other team members, then they would commit and pushing their changes as they make them. If another team member had pushed changes first, then one would need to pull and resolve merge conflicts prior to pushing their changes.
+Then, every time a team member needs to make a code change, they would first pull any changes made by other team members, then they would commit and push their changes as they make them. If another team member had pushed changes first, then one would need to pull and resolve merge conflicts prior to pushing their changes.
 This workflow is great for small teams because it has very little overhead for using git.
-However it is only a good choice if the team doesn’t need to be make too many concurrent code changes, and doesn’t need to review each other’s code changes.
+However it is only a good choice if the team doesn’t need to make too many concurrent code changes, and doesn’t need to review each other’s code changes.
 A team can always start off using this workflow, and introduce some of the more advanced concepts later on.
-For sample RFF repositories using this workflow, see:
+For sample RFF repositories using this workflow, see: <TODO: Insert link(s) here>
 
 ## Branch Workflow
 

@@ -50,7 +50,7 @@ The documents folder should contain the data management plan, a link to the GitH
 
 ### `Code` folder
 
-For integration with version control, the code folder has one copy of the project git repository for each of the project collaborators, so that each team member can make changes without affecting the working version of the rest of the team.  Repositories are synced manually, so that changes can be made independently and then merged to the shared, remote version of the codebase stored on Github.
+For integration with version control, the code folder has one copy of the project git repository for each of the project collaborators, so that each team member can make changes without affecting the working version of the rest of the team.  Repositories are synced manually, so that changes can be made independently and then merged to the shared, remote version of the codebase stored on GitHub.
 Each individual's repository folder has subfolders separating types of code. The scripts folder code is the main project workflow. 
 The tools folder (sometimes called util, modules, or helpers) contains scripts with distinct functions that can be "called" (referenced) in the main processing scripts. This is especially useful if functions are used multiple times or are lengthy. Separately storing functions that may be used in multiple source code scripts is an important practice in creating quality software [LINK TO SQ SECTION ABOUT MODULAR PROGRAMMING].
 
