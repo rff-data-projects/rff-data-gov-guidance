@@ -1,5 +1,5 @@
 ---
-title: Disposition and Archival
+title: Disposition & Archival
 ---
 
 ## Data Disposal
