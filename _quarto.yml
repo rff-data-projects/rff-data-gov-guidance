@@ -32,6 +32,7 @@ book:
         - docs/data-management/sensitive-proprietary.qmd
         - docs/data-management/quality-preparation.qmd
         - docs/data-management/archival.qmd
+        - docs/data-management/publication.qmd
     - part: docs/software/index.qmd
       chapters:
         - docs/software/sq1.qmd
