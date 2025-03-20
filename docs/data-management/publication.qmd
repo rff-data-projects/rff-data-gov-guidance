@@ -1,3 +1,37 @@
 ---
 title: Publication
 ---
+
+**Publication** is making code/data available to the broader community, often through formal dissemination channels such as data repositories, journal articles, or public databases. Publication ensures that data is discoverable and can be accessed by other researchers, stakeholders, or the public. Documentation and metadata are included to facilitate understanding and reuse. Publication may also involve adherence to specific standards and best practices to enhance the visibility and impact of the data.
+
+**While RFF does not mandate the publication of code and data, it is highly encouraged.**
+
+Increasingly, journals require code and data to be submitted along with the article. In addition, many funders and stakeholders value open source software and data availability. Planning for this in the early stages of a project facilitates reproducibility, access, and the ability of others to use and cite your work.  
+
+## Licensing
+
+A well-chosen license clarifies permissions, prevents misunderstandings, and encourages responsible use. The next section provides guidance on selecting and attaching appropriate licenses to ensure your data and code remain accessible and properly credited.
+
+::: {.callout-note}
+Data and code products are licensed separately from RFF publication products. All work on the RFF.org and Resources.org websites (working papers, reports, issue briefs, explainers, Common Resources blog posts, Resources magazine articles, Resources Radio podcast episodes, graphs, charts, photographs, audio, and video) are listed under the Deed - Attribution-NonCommercial-NoDerivatives 4.0 International - Creative Commons license. This Creative Commons license is **not** suitable for either software or data.
+:::
+
+### Verify Data and Code Rights and Ownership
+
+Before proceeding with choosing licenses, confirm that your team owns IP rights to the work produced and has full discretion over licensing your project’s data and code—without restrictions from funders, institutional policies, or legal/data agreements.
+
+In some cases the research team may have joint IP ownership with partners or funders. In this case, licensing options must be agreed upon by both parties.
+
+### Choose Appropriate Licenses 
+
+Some important terms to review before choosing licenses are:
+
+* **Attribution** refers to the requirement for users of the data or software to give appropriate credit to the original creator, author, or source as specified in the licensing terms. Attribution ensures recognition of the intellectual property and efforts of the creators while allowing others to use, modify, or distribute the licensed material.
+
+* **Copyleft** is a concept in software licensing that ensures any derivative works (modifications or adaptations) of a particular work remain subject to the same licensing terms as the original work.
+
+* **Enclosure** is process of restricting access, usage, or modification of software or its source code through the imposition of licensing terms. It involves the application of intellectual property rights (such as copyright, patents, or trade secrets) to create boundaries around software, typically to protect the developer's or organization's control over its distribution and use.
+
+* **Share-alike** requires that any derivative works (adaptations or modifications) are licensed under the same or a compatible license. This ensures that future users of the adapted work can use it under similar terms.
+
+* **Viral**: Licenses like the GNU General Public License (GPL) and the Open Database License (ODbL) are often described as "viral" because they require derivative works to comply with the same licensing terms as the original work. This characteristic ensures that the freedoms granted by the license (such as the ability to use, modify, and share) are preserved in all subsequent versions or derivatives, but it also imposes specific obligations on those who modify or build upon the original.
