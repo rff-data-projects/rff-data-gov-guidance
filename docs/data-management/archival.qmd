@@ -8,7 +8,7 @@ Some data may need to be deleted to protect sensitive information or comply with
 
 * __Verify Requirements__: Confirm funder agreements and legal obligations regarding data retention and deletion.
 * __ Documentation__: Record when and how data was deleted.
-* __ Source Deletion__: Confirm with IT that the files were fully deleted in accordance with requirements (e.g., backup files).
+* __ Source Deletion__: Confirm with [IT](mailto:ithelp@rff.org) that the files were fully deleted in accordance with requirements (e.g., backup files).
 
 
 ## Data Archival
