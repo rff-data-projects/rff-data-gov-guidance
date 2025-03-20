@@ -106,7 +106,8 @@ There are various metadata formats and standards for specific disciplines. Addit
 
 ##### Step 1: Prepare the research data
 
-Before uploading, ensure that-
+Before uploading, ensure that:
+
 * The data is well-organized (e.g., structured folders, clear file names).
 * Metadata [LINKS] file are prepared for each data file or sets of data files, including dataset title, description, author names, and relevant keywords.
 * A license is attached.
