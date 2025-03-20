@@ -59,7 +59,7 @@ For data and software, there are three license suites common in the academic spa
 4. If there are other requirements or the team would like to review a broader range of software licenses and their specifications, visit [ChooseALicense](https://choosealicense.com/).
 
 ### Attach licenses to data and code
-
+ 
 * Download or create a .txt license file from the license website. Save the file as LICENSE.txt in the codebase or data folder. 
 
 * Review the license terms and modify where necessary (most open-source and open-data licenses are designed to be used as-is, but others may require you to fill in specific details, such as name or organization).
@@ -106,7 +106,7 @@ There are various metadata formats and standards for specific disciplines. Addit
 
 ##### Step 1: Prepare the research data
 
-Before uploading, ensure that:
+Before uploading, ensure that-
 * The data is well-organized (e.g., structured folders, clear file names).
 * Metadata [LINKS] file are prepared for each data file or sets of data files, including dataset title, description, author names, and relevant keywords.
 * A license is attached.
@@ -129,6 +129,7 @@ Before uploading, ensure that:
 
 ##### Step 4 (Optional): Link to GitHub for Software Preservation
 If the dataset is associated with published code:
+
 * Connect Zenodo to GitHub via the GitHub integration.
 * Select a GitHub repository to archive as a DOI-backed Zenodo release.
 
@@ -139,6 +140,7 @@ If the dataset is associated with published code:
 
 ##### Versioning & Updates
 If the dataset needs to be udpated:
+
 * Use the "New Version" option in Zenodo instead of creating a separate upload.
 * Zenodo will link versions together and maintain persistent DOIs.
 
