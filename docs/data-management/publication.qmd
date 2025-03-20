@@ -58,9 +58,9 @@ For data and software, there are three license suites common in the academic spa
 
 4. If there are other requirements or the team would like to review a broader range of software licenses and their specifications, visit [ChooseALicense](https://choosealicense.com/).
 
-### Attach licenses to data and code
+### Create and customize license files
  
-* Download or create a .txt license file from the license website. Save the file as LICENSE.txt in the codebase or data folder. 
+* Once the license has been selected, download or create a .txt license file from the license website. Save the file as LICENSE.txt in the project folder and/or repository. 
 
 * Review the license terms and modify where necessary (most open-source and open-data licenses are designed to be used as-is, but others may require you to fill in specific details, such as name or organization).
 
