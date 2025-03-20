@@ -36,7 +36,7 @@ At RFF, archived files can still be accessed, read, and copied to active folders
 When RFF data projects are archived, they are migrated to a new storage location, but are still configured to be accessible to certain team members.
 The folder can be accessed in a way similar to the L drive, except that the files will be read-only to prevent accidental deletion or modification (they can still be copied or fully restored to the L drive).
 
-#### Finalize data organization
+#### Step 1: Finalize data organization
 
 * Delete obsolete and intermediate files. 
   * Ensure that irrelevant or outdated files are removed, so that only files necessary for reproduction or understanding are retained.
@@ -55,7 +55,7 @@ The folder can be accessed in a way similar to the L drive, except that the file
 For additional guidance choosing which files to archive, see Best Practice: Decide what data to preserve.
 :::
 
-### Finalize documentation
+#### Step 2: Finalize documentation
 * Finalize data and software documentation [LINK TO DOCUMENTATION SECTION]
 * Create a text file called PROJECT_README.txt and record the following information:
   * Project name and description
@@ -69,7 +69,7 @@ For additional guidance choosing which files to archive, see Best Practice: Deci
   * Nature of sensitive or proprietary data, if applicable
   * Any other important notes for navigating folder or using data/code
 
-#### Coordinate with IT to ensure long-term folder access. 
+#### Step 3: Coordinate with IT to ensure long-term folder access. 
 
 Contact IT at [IThelp@rff.org](mailto:ithelp@rff.org) to arrange archival storage of the folder. Include the README with the email. IT will help to configure storage and folder access. 
 
