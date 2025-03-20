@@ -57,7 +57,7 @@ For additional guidance choosing which files to archive, see Best Practice: Deci
 
 ### Finalize documentation
 * Finalize data and software documentation [LINK TO DOCUMENTATION SECTION]
-* Create a text file called README and record the following information:
+* Create a text file called PROJECT_README.txt and record the following information:
   * Project name and description
   * Project PI and contact information
   * List of staff responsible for data management and code development 
