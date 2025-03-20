@@ -35,3 +35,13 @@ Some important terms to review before choosing licenses are:
 * **Share-alike** requires that any derivative works (adaptations or modifications) are licensed under the same or a compatible license. This ensures that future users of the adapted work can use it under similar terms.
 
 * **Viral**: Licenses like the GNU General Public License (GPL) and the Open Database License (ODbL) are often described as "viral" because they require derivative works to comply with the same licensing terms as the original work. This characteristic ensures that the freedoms granted by the license (such as the ability to use, modify, and share) are preserved in all subsequent versions or derivatives, but it also imposes specific obligations on those who modify or build upon the original.
+
+#### Common Licenses
+
+For data and software, there are three license suites common in the academic space: *MIT*, *GNU GPU*, and *ODC*.
+
+##### Software licenses
+*	[MIT](https://choosealicense.com/licenses/mit/): The most permissive and flexible. Users, including commercial entities, can view, use, modify, and distribute the work freely. Allows for commercial use and enclosure. Attribution is required.
+* [GNU General Public Use (GPU)](https://choosealicense.com/licenses/gpl-3.0/): Users, including commercial entities, can view, use, modify, and distribute the work freely. However, it carries copyleft, so all distributions must be released under the same GNU GPU license, ensuring open access (viral). Attribution is required.
+
+
