@@ -78,6 +78,7 @@ For publishing both code and data, ensure that the project-level README is up to
 #### Data-level documentation
 
 It is recommended to attach metadata files to published datasets. Metadata documentation is structured, often in a standardized format, and machine-generated and machine-readable. Metadata records document the “who, what, when, where, how, and why” of a data resource. The advantages of machine-generated and machine-readable metadata files include:
+
 * They not only allow users (your future self included) to understand and use datasets, but also facilitates search and retrieval of the data when deposited in a data repository.
 * Metadata can be maintained with version control systems to track changes over time, enhancing transparency and reproducibility.
 * Metadata formatted for automated processing, such as JSON or XML standards, can integrate with data repositories or APIs for broader accessibility.
