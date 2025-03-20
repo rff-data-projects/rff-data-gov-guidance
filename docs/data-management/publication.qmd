@@ -120,6 +120,7 @@ Before uploading, ensure that:
 
 ##### Step 3: Upload the data files, fill in metadata, set access
 
+* Upload data, metadata, and the project-level README file.
 * Enter metadata information in applicable fields (contributors, associated journal article or conference presentation, etc.)
 * Choose an Access Level
   *	Open Access: Publicly available for anyone.
