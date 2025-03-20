@@ -96,8 +96,8 @@ Key Components of Metadata:
 * __Access Constraints__: Restrictions on data use
 * __Attribute / field definitions__: Define all abbreviations and coded entries 
 * __Additional geospatial metadata components, if applicable__
- * __Spatial Extent__: Geographic coverage (bounding coordinates)
- * __Projection Information__: Coordinate system details
+  *	__Spatial Extent__: Geographic coverage (bounding coordinates)
+  *	__Projection Information__: Coordinate system details
 
 There are various metadata formats and standards for specific disciplines. Additional guidance and resources for generating machine-readable metadata are here: [Metadata and describing data – Cornell Data Services](https://data.research.cornell.edu/data-management/storing-and-managing/metadata/).
 
