@@ -7,8 +7,8 @@ title: Disposition and Archival
 Some data may need to be deleted to protect sensitive information or comply with regulations, data agreements, or funder requirements. This is often referred to as __data disposition__. If any of these requirements applies to a project, follow these best practices when deleting data:
 
 * __Verify Requirements__: Confirm funder agreements and legal obligations regarding data retention and deletion.
-* __Documentation__: Record when and how data was deleted.
 * __Source Deletion__: Confirm with [IT](mailto:ithelp@rff.org) that the files were fully deleted in accordance with requirements (e.g., backup files).
+* __Documentation__: Record when and how data was deleted.
 
 
 ## Data Archival
