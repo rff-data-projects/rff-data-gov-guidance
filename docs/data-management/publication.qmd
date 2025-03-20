@@ -85,19 +85,19 @@ It is recommended to attach metadata files to published datasets. Metadata docum
 
 Key Components of Metadata: 
 
-* Title: Descriptive name of the dataset. 
-* DOI number
-* Abstract: Summary of the dataset’s content. 
-* Keywords: Relevant terms for search and discovery. 
-* Temporal Extent: Time period covered by the data. 
-* Data Format: File format.
-* Data Source(s): Origin of the data. 
-* Accuracy and Precision: Information about data quality. 
-* Access Constraints: Restrictions on data use
-* Attribute / field definitions: Define all abbreviations and coded entries 
-Additional geospatial metadata components:
-* Spatial Extent: Geographic coverage (bounding coordinates). 
-* Projection Information: Coordinate system details.
+* __Title__: Descriptive name of the dataset. 
+* __DOI number__: Associated with the final publication, dataset, or both
+* __Abstract__: Summary of the dataset’s content
+* __Keywords__: Relevant terms for search and discovery
+* __Temporal Extent__: Time period covered by the data
+* __Data Format__: File format
+* __Data Source(s)__: Origin of the data
+* __Accuracy and Precision__: Information about data quality
+* __Access Constraints__: Restrictions on data use
+* __Attribute / field definitions__: Define all abbreviations and coded entries 
+* __Additional geospatial metadata components, if applicable__
+** __Spatial Extent__: Geographic coverage (bounding coordinates)
+** __Projection Information__: Coordinate system details
 
 There are various metadata formats and standards for specific disciplines. Additional guidance and resources for generating machine-readable metadata are here: [Metadata and describing data – Cornell Data Services](https://data.research.cornell.edu/data-management/storing-and-managing/metadata/).
 
