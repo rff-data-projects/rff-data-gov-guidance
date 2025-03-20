@@ -10,6 +10,8 @@ Some data may need to be deleted to protect sensitive information or comply with
 * __Source Deletion__: Confirm with [IT](mailto:ithelp@rff.org) that the files were fully deleted in accordance with requirements (e.g., backup files).
 * __Documentation__: Record when and how data was deleted.
 
+These practices should apply to data stored the RFF network, OneDrive, or Microsoft Teams.
+
 
 ## Data Archival
 
