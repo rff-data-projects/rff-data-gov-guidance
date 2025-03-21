@@ -154,15 +154,15 @@ __Product__ documentation provides information to accompany code and data of com
 
 __Data management planning__, a form of __preliminary__ documentation, is the process of thinking ahead about how your team will access, use, create, modify, store, share, and describe data related to your research project. Data management plans (DMPs) __enhance collaboration by establishing baseline expectations, make projects resilient to turnover, and save time in the long run.__ In addition, [many funders require data management plans](https://dmptool.org/public_templates) be submitted with grant proposals, so thinking about these issues early can facilitate the proposal process. 
 
-This guidance resource provides general instructions for good data management practices and addresses many of the core questions that are part of the DMP process. *__At a minimum, the following questions should be reviewed at the start of a project__*:
+This guidance resource provides general instructions for data practices and addresses many of the core questions that are part of the DMP process. *__At a minimum, the questions below should be reviewed at the start of a project__*. Associated guidance is linked.
 
-1.	Where will data/code be stored and how will it be organized?
+1.	[Where will data/code be stored and how will it be organized?](../data-management/organization.qmd)
 
 2.	How will the team use Microsoft Teams for file storage and communication? What types of files will be stored in the Teams folder versus the project’s L:/ drive folder? What will be communicated over Teams chat versus email or GitHub?
 
-3.	Who will be responsible for disposing / archiving data?
+3.	Who will be responsible for [disposing / archiving data](../data-management/archival.qmd)?
 
-4.	Who will be responsible for publishing data/code and attaching appropriate documentation and use licenses?
+4.	Who will be responsible for [publishing data/code and attaching appropriate documentation and use licenses](../data-management/publication.qmd)?
 
 5.	What will the version control / git / GitHub workflow be?
 
@@ -172,11 +172,11 @@ This guidance resource provides general instructions for good data management pr
 
 8.	What are expectations around data quality and code quality?
 
-9.	How will data sources, code, and major methodological decisions be documented?
+9.	How will [data sources](../data-management/raw-data-documentation.qmd), code, and major methodological decisions be documented?
 
 10.	Has the appropriate budget been allocated to implement this DMP?
 
-
+Certain projects may require additional considerations. For development of a more thorough DMP, refer to the [UCSB NCEAS data management planning section](https://learning.nceas.ucsb.edu/2023-04-coreR/session_14.html#document-your-project-using-a-dmp).
 
 
 ### The project-level README file

@@ -1,0 +1,30 @@
+---
+title: Raw Data Documentation
+---
+
+__The provenance of all downloaded raw datasets should be documented in a README file.__
+
+Best practices:
+
+* The README file associated with a raw data file(s) should be located in the same folder as the raw data file.
+* Create README files for logical “clusters” of related files / data.
+* Name the README so that it is easily associated with the data file(s) it describes (e.g., README_PRISM_data.txt).
+* Format README files consistently.
+* Write the README document in an plain text and open source file format, such as .txt or .md.
+
+Below is a README template and example. Include in the README file the information shown in the example.
+
+Filename: `README_PRISM_Daily_Temperature.txt`
+```
+Dataset name & format: PRISM_Daily_Temperature_2024.csv
+
+Data source: Downloaded from the PRISM Climate Group website: https://prism.oregonstate.edu/ on 2024-02-28.
+
+Acquired by: [Name of researcher who downloaded the data]
+
+Data description: This dataset contains daily minimum and maximum temperature data for Washington State for the year 2024, with a spatial resolution of 4km.
+
+Preprocessing: No modifications were made to the raw dataset. The file is stored exactly as downloaded from the source.
+
+License & Usage Restrictions: This dataset is publicly available under the PRISM Climate Group's data use policy. Refer to https://prism.oregonstate.edu/documents/PRISM_terms_of_use.pdf for more details.
+```

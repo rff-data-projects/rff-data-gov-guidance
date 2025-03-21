@@ -30,6 +30,7 @@ book:
         - docs/data-management/storage-options.qmd
         - docs/data-management/organization.qmd
         - docs/data-management/file-formats.qmd
+        - docs/data-management/raw-data-documentation.qmd
         - docs/data-management/sensitive-proprietary.qmd
         - docs/data-management/quality-preparation.qmd
         - docs/data-management/archival.qmd

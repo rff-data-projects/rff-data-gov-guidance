@@ -26,7 +26,7 @@ Determine if any data used in your project is subject to data use agreements, or
 
 ## Document data sensitivity and restrictions.
 
-* Document data sensitivity class and details in both the data management plan and a README file in the data folder. Include details about the data's source, use restrictions, and sensitivity.
+* Document data sensitivity class and details in both the project-level README and, if the data are secondary, the associated raw data README file. Include details about the data's source, use restrictions, and sensitivity.
 * Keep Track of Data Agreements: Maintain organized and secure digital copies of all data use agreements, licenses, and contracts. These should be easily accessible to those managing the data.
 * Check with data providers or experts for recommended security measures
 
