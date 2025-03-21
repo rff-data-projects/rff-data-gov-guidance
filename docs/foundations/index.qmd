@@ -20,8 +20,8 @@ references:
   title: 'USGS Data Management Training Modules—Planning for Data Management Part II Using the DMPTool to Create Data Management Plans: U.S. Geological Survey.'
   DOI: 10.5066/F7RJ4GGJ
   URL: https://doi.org/10.5066/F7RJ4GGJ
-references:
 - type: article
+  id: Stoudt
   author:
   - family: Stoudt
     given: S.
@@ -36,6 +36,7 @@ references:
   DOI: 10.1371/e1008770
   URL: https://doi.org/10.1371/journal.pcbi.1008770
 - type: article
+  id: Michener
   author:
   - family: Michener
     given: W. K.
@@ -51,8 +52,8 @@ references:
     date-parts:
     - - 1997
   title: 'Nongeospatial Metadata for the Ecological Sciences.'
-  DOI: 10.1371/e1008770
-  URL: https://doi.org/10.1371/journal.pcbi.1008770
+  DOI: 10.1890/1051-0761
+  URL: https://doi.org/10.1890/1051-0761(1997)007%5b0330:NMFTES%5d2.0.CO;2
 ---
 
 ## Foundations
@@ -111,11 +112,10 @@ c. **Integrate**: Combine datasets.
 
 ## Documentation
 
-“If we are not conscientious documenters, we can easily end up… without the ability to coherently describe our research process up to that point” (Stoudt, Vásquez, and Martinez 2021).
+“*__If we are not conscientious documenters, we can easily end up… without the ability to coherently describe our research process up to that point__*” (@Stoudt).
 
 Quality documentation is critical for ensuring that your work is understandable, reusable, and interpretable over time by external users, your colleagues, and your future self. It reduces errors, facilitates smooth project team transitions, and helps avoid confusion and duplication of efforts. 
 
-Without documentation, projects lose their usefulness over time, as illustrated below.
+Without documentation, projects lose their usefulness over time, as illustrated below [see also @Michener].
 
-![Image from [https://edirepository.org/resources/creating-metadata-for-publication](https://edirepository.org/resources/creating-metadata-for-publication)](../../images/tidy-data.png)
-<img class="figure-img" src="/static/images/information_loss.png" width="65%">
+![Image from [Michener et al. 1997](https://doi.org/10.1890/1051-0761(1997)007%5b0330:NMFTES%5d2.0.CO;2)](../../images/information_loss.png)
