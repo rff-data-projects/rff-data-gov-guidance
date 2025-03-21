@@ -5,4 +5,18 @@
 * [Software Quality](./docs/software/index.qmd)
 * [Version Control](./docs/version-control/index.qmd)
 
+## Questions and Feedback
 
+To submit questions, suggestions, or feedback on this guidance, click `Report an issue` on the right-hand side of this page and submit an Issue to the repository. Note that your comment will be publicly visible. 
+
+To submit a question or comment over email, reach out to Alexandra Thompson.
+
+## Site authors and members of the RFF Data Governance Working Group
+
+* Aris Awang
+* Penny Liao
+* Ethan Russell
+* John Valdez
+* Matthew Wibbenmeyer
+* Jordan Wingenroth
+* Alexandra Thompson
