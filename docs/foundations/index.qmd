@@ -179,7 +179,7 @@ This guidance resource provides general instructions for data practices and addr
 Certain projects may require additional considerations. For development of a more thorough DMP, refer to the [UCSB NCEAS data management planning section](https://learning.nceas.ucsb.edu/2023-04-coreR/session_14.html#document-your-project-using-a-dmp).
 
 
-### The project-level README file
+### The project-level README file {#project-readme}
 
 At a minimum, the project should have a README file in text or markdown format with the information listed below. This can be an evolving, living document. While it's technically __product documentation__, it's easiest to start it early in the project's development.
 

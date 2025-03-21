@@ -4,11 +4,16 @@ title: Raw Data Documentation
 
 __The provenance of all downloaded raw datasets should be documented in a README file.__
 
+::: {.callout-note}
+As described in the [Organization](../data-management/organization.qmd) section, __all raw data should be retained in its raw form and not directly modified__.
+:::
+
+
 Best practices:
 
 * The README file associated with a raw data file(s) should be located in the same folder as the raw data file.
 * Create README files for logical “clusters” of related files / data.
-* Name the README so that it is easily associated with the data file(s) it describes (e.g., README_PRISM_data.txt).
+* Name the README so that it is easily associated with the data file(s) it describes (e.g., `README_PRISM_data.txt`).
 * Format README files consistently.
 * Write the README document in an plain text and open source file format, such as .txt or .md.
 
