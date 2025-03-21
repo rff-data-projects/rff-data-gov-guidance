@@ -68,8 +68,7 @@ For data and software, there are three license suites common in the academic spa
 
 ## Publishing
 
-### Documentation
-For publishing both code and data, ensure that the project-level README is up to date.
+*__For publishing both code and data, ensure that the project-level README is up to date.__*
 
 ### Code
 
