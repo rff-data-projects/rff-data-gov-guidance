@@ -35,7 +35,24 @@ references:
   title: 'Principles for Data Analysis Workflows.'
   DOI: 10.1371/e1008770
   URL: https://doi.org/10.1371/journal.pcbi.1008770
-  
+- type: article
+  author:
+  - family: Michener
+    given: W. K.
+  - family: Brunt
+    given: J. W.
+  - family: Helly
+    given: J. J.
+  - family: Kirchner
+    given: T. B.
+  - family: Stafford
+    given: S. G.
+  issued:
+    date-parts:
+    - - 1997
+  title: 'Nongeospatial Metadata for the Ecological Sciences.'
+  DOI: 10.1371/e1008770
+  URL: https://doi.org/10.1371/journal.pcbi.1008770
 ---
 
 ## Foundations
@@ -44,13 +61,13 @@ Good data practices can not only save time and headaches but increase the useful
 Good data practices provide (Langseth et al. 2015):
 
 * Short-term benefits
-  * Spend less time doing data management and more time doing research.
-  * Easier to prepare and use data.
-  * Collaborators can readily understand and use data files.
+* Spend less time doing data management and more time doing research.
+* Easier to prepare and use data.
+* Collaborators can readily understand and use data files.
 * Long-term benefits
-  * Make your work more transparent, reproducible, and rigorous.
-  * Other researchers can find, understand, and use your data to address broad questions.
-  * You get credit for preserving data products and for their use in other products.
+* Make your work more transparent, reproducible, and rigorous.
+* Other researchers can find, understand, and use your data to address broad questions.
+* You get credit for preserving data products and for their use in other products.
 
 
 ## The Data Life Cycle
@@ -63,13 +80,13 @@ A general data life cycle is depicted below [see also @DMPTool].
 
 ```{mermaid}
 graph TB
-  A(Plan) --> B(Collect)
-  B --> C(Process)
-  C --> D(Explore / Visualize)
-  D --> E(Analyze / Model)
-  E --> F(Archive, Publish, Share)
-  E --> C
-  E --> A
+A(Plan) --> B(Collect)
+B --> C(Process)
+C --> D(Explore / Visualize)
+D --> E(Analyze / Model)
+E --> F(Archive, Publish, Share)
+E --> C
+E --> A
 ```
 
 The data life cycle is often iterative and nonlinear, and does not always follow the order shown. Your actual analysis workflow may include dead ends or repeated steps. Regardless, it is helpful to plan and discuss your data-oriented research using these common components of the data life cycle:
@@ -77,17 +94,17 @@ The data life cycle is often iterative and nonlinear, and does not always follow
 1. **Plan**: Identify data that will be collected and how it will be managed.
 Create a data management plan.
 2. **Collect**: Acquire and store raw data.
-    a. **Acquire**: Retrieve data from the appropriate source.
-    b. **Describe**: Document the raw data source, format, variables, measurement units, coded values, and known problems. 
-    Create metadata for primary data. Cite secondary data. 
-    c. **Quality assurance**: Inspect the raw data for quality and fit for analysis purpose.
-    d. **Store**: Store the raw data in the appropriate folder, as determined in the planning stage. 
-    Consider access, resilience (backing up), security, and, if relevant, data agreement stipulations. 
-    Make raw data files read-only so they cannot be accidentally modified.
+a. **Acquire**: Retrieve data from the appropriate source.
+b. **Describe**: Document the raw data source, format, variables, measurement units, coded values, and known problems. 
+Create metadata for primary data. Cite secondary data. 
+c. **Quality assurance**: Inspect the raw data for quality and fit for analysis purpose.
+d. **Store**: Store the raw data in the appropriate folder, as determined in the planning stage. 
+Consider access, resilience (backing up), security, and, if relevant, data agreement stipulations. 
+Make raw data files read-only so they cannot be accidentally modified.
 3. **Process**: Prepare the data for exploration and analysis. 
-    a. **Clean**: Preprocess the data to correct errors, standardize missing values, standardize formats, etc.
-    b. **Transform**: Convert data into appropriate format and spatiotemporal scale (e.g., convert daily values to annual statistics).
-    c. **Integrate**: Combine datasets.
+a. **Clean**: Preprocess the data to correct errors, standardize missing values, standardize formats, etc.
+b. **Transform**: Convert data into appropriate format and spatiotemporal scale (e.g., convert daily values to annual statistics).
+c. **Integrate**: Combine datasets.
 4. **Explore**: Describe, summarize, and visualize statistics and relationships.
 5. **Analyze / Model**: Develop, refine, and implement analysis and model specifications.
 6. **Archive, publish, and share**: Save and publish final data products and documentation.
@@ -100,3 +117,5 @@ Quality documentation is critical for ensuring that your work is understandable,
 
 Without documentation, projects lose their usefulness over time, as illustrated below.
 
+![Image from [https://edirepository.org/resources/creating-metadata-for-publication](https://edirepository.org/resources/creating-metadata-for-publication)](../../images/tidy-data.png)
+<img class="figure-img" src="/static/images/information_loss.png" width="65%">

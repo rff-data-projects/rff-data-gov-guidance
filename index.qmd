@@ -1,6 +1,7 @@
 # Home {.unnumbered}
 
 ## Site Outline
+* [Foundations](./docs/foundations/index.qmd)
 * [Data Management](./docs/data-management/index.qmd)
 * [Software Quality](./docs/software/index.qmd)
 * [Version Control](./docs/version-control/index.qmd)

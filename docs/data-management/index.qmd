@@ -1,1 +1,4 @@
+---
+title: Data Management
+---
 Data management encompasses the methods used to collect, store, organize, and use data. 
