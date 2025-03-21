@@ -323,5 +323,25 @@
       "Data Management",
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>Archival</span>"
     ]
+  },
+  {
+    "objectID": "docs/software/index.html",
+    "href": "docs/software/index.html",
+    "title": "7  Software Quality",
+    "section": "",
+    "text": "Content coming soon.\nExisting style guide resources:\n\nR: Tidyverse Style Guide by Hadley Wickham\nPython: Google Python Style Guide\nStata: Suggestions on Stata programming style by Nicholas Fox\nOther languages: Google style guides for other languages",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Software Quality</span>"
+    ]
+  },
+  {
+    "objectID": "docs/version-control/index.html",
+    "href": "docs/version-control/index.html",
+    "title": "8  Version Control",
+    "section": "",
+    "text": "Content coming soon.\nGet started with GitHub documentation.",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Version Control</span>"
+    ]
   }
 ]
