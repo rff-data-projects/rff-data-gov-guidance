@@ -117,6 +117,9 @@ Before uploading, ensure that:
 * Any sensitive or restricted data is removed or anonymized (if applicable).
 * The project-level README is up to date.
 
+For guidance on choosing which files to publish and how to handle API-accessed data, see [Finalize data organization](../data-management/archival.qmd#archival-finalize-data-org).
+
+
 ##### Step 2: Create a Zenodo account & access the upload dashboard
 
 * Go to [Zenodo](https://zenodo.org/) and sign in (or create an account). Note that you can create an account using your GitHub profile.

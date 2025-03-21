@@ -111,7 +111,7 @@ Temporary accounts can be requested by contacting IT at [IThelp@rff.org](mailto:
 #### Accessing raw data via Application Program Interfaces (APIs)
 
 For large datasets, it is best to include lines in your code for downloading raw data from the web via an API, where available, rather than downloading data to disk and importing it.
-If an API is not available, having code download data from remote servers via other methods (e.g., curl) is still preferable.
+If an API is not available, having code download data from remote servers via other methods (e.g., `curl`) is still preferable.
 
 Using APIs is ideal for a variety of reasons:
 
@@ -124,3 +124,11 @@ APIs do require some special considerations:
 * __Consistency__: Remote data may change. It is important to use version control and smaller intermediate datasets within a version control framework to ensure that past results can be reproduced consistently
 * __Longevity__: APIs may stop being accessible/maintained. It is not always a safe assumption that data stored remotely will continue to be accessible via an API. API packages and query formats may also change, so project code may need to be debugged occasionally to maintain compatibility with an API.
 * __Accessibility__: Not all online data sources have convenient API functions in a programmer's language of choice. Some have URL formats that allow data to be accessed regardless. The amount of documentation and the level of technical skill required to understand it can vary.
+
+##### Publishing/Archiving data sourced from APIs {#publish-archive-apis}
+
+If you used an API to access source data, the best course for publishing or archiving source data will vary based on project needs, dataset size, and nature of the data. Some options are:
+
+* __Download to folder__: During the archival phase, download the source data in its current state and save it to the project folder to be archived.
+* __Document__: Document the dataset version and access date in lieu of providing source data. While not ideal for reproducibility, this is suitable in cases where the source data is large, reliable, and not likely to be modified. 
+* __Download to cloud__: Use a repository service, such as Zenodo, to store source data as it existed when archiving the project. Source data accessed through an API can be [downloaded directly to a Zenodo repository](https://developers.zenodo.org/), without having to save files locally. This can be done through R ([zen4R](https://cran.r-project.org/web/packages/zen4R/zen4R.pdf)) or [python](https://pypi.org/project/zenodo-client/).
