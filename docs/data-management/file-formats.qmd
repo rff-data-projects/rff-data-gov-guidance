@@ -4,7 +4,7 @@ title: File & Data Types
 
 ## File Formats
 
-The best file format to use will depend on the type and structure of data. In general, data should be stored and/or archived in open formats. Open formats maximize accessibility because they have freely available specifications and generally do not require proprietary software to open them ([UC Santa Barbara's Standard Operating Procedures section on Data Formats](https://emlab-ucsb.github.io/SOP/2.5-data-formats.html)).
+In general, data should be stored and/or archived in open formats. Open formats maximize accessibility because they have freely available specifications and generally do not require proprietary software to open them ([UC Santa Barbara's Standard Operating Procedures section on Data Formats](https://emlab-ucsb.github.io/SOP/2.5-data-formats.html)). The best file format to use will depend on the type and structure of data. 
 
 ### Key characteristics of data file formats:
 
@@ -18,7 +18,7 @@ The best file format to use will depend on the type and structure of data. In ge
 
 ### Tabular Formats
 
-The best format to use will vary depending on the characteristics of the data being stored. Excel spreadsheets/workbooks (.xlsx) and Stata datasets (.dta) are examples of <span style="color:red;">proprietary</span> data that it is usually best to avoid. Instead, use <span style="color:green;">open-source</span> plain text formats such as comma-separated values (.csv).
+In general, it is best to use <span style="color:green;">open-source</span> plain text formats such as comma-separated values (.csv). In some cases, other file formats may be useful for optimizing file size or read/write speed, or for retaining data type information; however, alternative data types may have reduced interoperability. It is generally best to avoid Excel spreadsheets/workbooks (.xlsx) and Stata datasets (.dta) <span style="color:red;">proprietary</span>, except in special cases where these required features offered by these file formats (e.g. variable labels in Stata .dta files) are not available in open-source file formats.
 
 ::: {.callout-note}
 In cases where the native format of source data is in a proprietary software format, it is often necessary to use that software to view and edit data. For example, Stata dataset variables may have labels, a kind of embedded metadata that can only be accessed in Stata.
@@ -41,7 +41,7 @@ In cases where the native format of source data is in a proprietary software for
 
 #### Descriptions of tabular formats:
 
-- ***Recommended:*** **comma-separated values (.csv)**, delimited text files with a consistent predetermined format. Namely, each row contains the same number of values separated by commas. These are widely used for data exchange and simple data storage.
+- ***Recommended:*** **comma-separated values (.csv)**, delimited text files widely used for data exchange and simple data storage. Each row contains the same number of values separated by commas.
 
 - **Tab-separated values (.tsv)**, files similar to CSV files but with values separated by tabs.
 
@@ -89,7 +89,7 @@ Hierarchical data formats are best suited for storing and exchanging complex, ne
 
 ### Geospatial File Formats
 
-Geospatial data are stored in two main ways. The format of input spatial data typically dictates which geospatial tools can be applied to it.
+Geospatial data are stored as either vector data or raster data. The format of input spatial data typically dictates which geospatial tools can be applied to it.
 
 #### Vector Data
 
@@ -110,7 +110,7 @@ Common <span style="color:red;">proprietary</span> vector file formats:
 - **Feature classes in geodatabases (.gdb)**
 
 ::: {.callout-note}
-A shapefile is actually a collection of several files, including geometry (.shp), projection information (.prj), tabular data (.dbf), and more. Make sure to keep all component files together.
+A shapefile is actually a collection of several files, including geometry (.shp), projection information (.prj), tabular data (.dbf), and more. Make sure to store all component files together within the same folder.
 :::
 
 All vector data files should have three critical metadata components:
@@ -153,11 +153,11 @@ For example, in the R ecosystem, **.Rds** and **.RData** are binary file formats
 
 ### Figures
 
-It is helpful to think ahead when generating and saving final figures. Academic journals often accept TIFF and PNG formats, but they frequently have resolution and dimension requirements. Export figures with a minimum resolution of 300 dots per inch (DPI). 
+It is helpful to think ahead when generating and saving data visualizations and plots. Academic journals often accept TIFF and PNG formats, but they frequently have resolution and dimension requirements. Export figures with a minimum resolution of 300 dots per inch (DPI). 
 
-For RFF communications, however, vector formats such as **.svg** and **.pdf** are best because they can be easily modified as needed. Academic journals often accept these formats as well.
+For RFF communications, however, vector formats such as **.svg** and **.pdf** are best because they can be easily modified by the RFF Comms team. Academic journals often accept these formats as well. You may want to consider saving plots in multiple file formats.
 
-In addition to saving final figures in appropriate and flexible formats, consider that you may want to be able to share the underlying data with the RFF Communications team so that they and their external design partners can create custom figures for presentation on the website, in the magazine, etc. This means clearly documenting the processing code that created the underlying data / figures, so that output data can be easily identified and shared as needed.
+Consider that you may want to be able to share the underlying data with the RFF Communications team so that they and their external design partners can create custom figures for presentation on the website, in the magazine, etc. This means clearly documenting the processing code that created the underlying data / figures, so that output data can be easily reproduced and shared as needed. If figure data is time-consuming to reproduce, you may want to save a copy of it to the L:/ drive or to your GitHub repository.
 
 > “Sharing the underlying data of any maps and figures is always helpful for the Communications Team!”
 > 
