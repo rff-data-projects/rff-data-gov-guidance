@@ -16,7 +16,7 @@ In general, data should be stored and/or archived in open formats. Open formats 
 
 - **Retention of data types**: Some file formats retain metadata about data types (e.g., whether a column is an integer or string), while others lose this information upon saving.
 
-### Tabular Formats
+### Tabular formats
 
 In general, it is best to use <span style="color:green;">open-source</span> plain text formats such as comma-separated values (.csv). In some cases, other file formats may be useful for optimizing file size or read/write speed, or for retaining data type information; however, alternative data types may have reduced interoperability. It is generally best to avoid Excel spreadsheets/workbooks (.xlsx) and Stata datasets (.dta) <span style="color:red;">proprietary</span>, except in special cases where these required features offered by these file formats (e.g. variable labels in Stata .dta files) are not available in open-source file formats.
 
@@ -87,11 +87,11 @@ Hierarchical data formats are best suited for storing and exchanging complex, ne
 
 - **YAML (.yaml or .yml)**, human-readable files using a data serialization format well suited for configuration files and data exchange. It uses indentation to define structure and supports key-value pairs, lists, and nested data, making it simpler and more concise compared to XML or JSON. "YAML" is a recursive acronym: YAML Ain't Markup Language.
 
-### Geospatial File Formats
+### Geospatial file formats
 
 Geospatial data are stored as either vector data or raster data. The format of input spatial data typically dictates which geospatial tools can be applied to it.
 
-#### Vector Data
+#### Vector data
 
 ![](../../images/vector-data.png)
 
@@ -119,7 +119,7 @@ All vector data files should have three critical metadata components:
 - Extent: the geographic area covered by the data, represented by four coordinate pairs
 - Object type: whether the data consists of points, lines, or polygons
 
-#### Raster Data
+#### Raster data
 
 ![](../../images/raster-data-1.png)
 ![](../../images/raster-data-2.png)
@@ -145,7 +145,7 @@ All raster files should have five critical metadata components:
 
 For a more in-depth introduction to spatial data types, see [Introduction to Geospatial Concepts: Summary and Setup (datacarpentry.org)](https://datacarpentry.org/organization-geospatial/index.html) and [GIS Training (RFF intranet)](https://my.rff.org/it/computer-lab/).
 
-### Efficiency Trade-offs
+### Efficiency trade-offs
 
 In addition to being more accessible, plain text-based formats are often more compatible with version control systems than many proprietary formats due to their human-readable structure. However, when working with large datasets, it's important to consider efficiency in terms of input/output speed and file size. Data formats can vary significantly in these aspects—while binary formats are typically more efficient in terms of speed and storage, they are less suited for version control.
 
@@ -177,7 +177,7 @@ The choice of data type affects storage requirements. Using larger types (e.g., 
 Data types can be unwittingly changed, affecting precision and operations. For example, including a string in a numerical column of a CSV will likely cause all the column’s values to be read in as strings.
 :::
 
-### Basic Types
+### Basic types
 
 #### Examples
 
@@ -211,7 +211,7 @@ Data taking the form of letters, words, or other text are used just as widely as
   - Use cases include names, addresses, descriptive text, and categories (e.g., gender, region, brand)
   - Strings longer than a few words often take up more memory than numbers, so it’s important to manage string data carefully, especially in large datasets.
 
-### Special Types
+### Special types
 
 Categorical data can be stored more efficiently using more specific types:
 
