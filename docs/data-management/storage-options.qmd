@@ -43,9 +43,18 @@ At the start of a project (or upon major changes to specifications, such as time
 An RFF account is required for access to the L:/ drive. Therefore, when working with external collaborators it may be necessary to store and share data in other ways (in addition to storing data on the L:/ drive).
 In that case, there are a few options.
 
-### OneDrive and GitHub
-For projects with external collaborators, we recommend using a combination of OneDrive and Github. Github can be used for sharing code and sufficiently small data (well below 100 MB), and OneDrive can be used from sharing raw and processed data files between RFF analysts working on RFF servers, and external collaborators working elsewhere.
-For projects with external collaborators, we recommend using a combination of OneDrive and Github. Github can be used for sharing code and sufficiently small data (well below 100 MB), and OneDrive can be used from sharing raw and processed data files between RFF analysts working on RFF servers, and external collaborators working elsewhere.
+### GitHub and OneDrive
+For projects with external collaborators, we recommend using a combination of GitHub and OneDrive. Github can be used for sharing code and sufficiently small data (well below 100 MB), and OneDrive can be used from sharing raw and processed data files between RFF analysts working on RFF servers, and external collaborators working elsewhere.
+
+#### Sharing code
+
+In addition to being the primary tool for code sharing, GitHub may be used to store and share small datasets. GitHub repositories can be "cloned" to a local computer.
+
+GitHub's distributed version control system enables users to collaboratively develop, organize, and share code across multiple computers. Unlike personal cloud storage services such as OneDrive, GitHub allows users to maintain independent local versions of a repository, using version control to track edits, reconcile differences, and seamlessly synchronize changes across devices. On the other hand, a disadvantage of using GitHub for sharing is that it does not support sharing large files. Files larger than 10GB need to be shared in other ways.
+
+As with data organization, use the same folder structure for code across shared folders.
+In addition, it is particularly important to allow for easily configurable paths.
+One way to do this would be to use relative paths so that other code users don't need to modify the absolute paths to be custom to their computer setup, and code can be run "out-of-the-box".
 
 #### Sharing data
 
@@ -66,16 +75,6 @@ Git version control is most applicable for data that is small (well below 100 MB
 ::: {.callout-note}
 When a function to load data from a OneDrive folder is included in code, if the data is not already synchronized, it can sometimes automatically trigger the OneDrive program to download/sync the data. That may "freeze" the console where the code is running, without an informative message. This can be avoided by manually syncing the OneDrive folder before running code that depends on the data.
 :::
-
-#### Sharing code
-
-In addition to being the primary tool for code sharing, GitHub may be used to store and share small datasets. GitHub repositories can be "cloned" to a local computer.
-
-GitHub's distributed version control system enables users to collaboratively develop, organize, and share code across multiple computers. Unlike personal cloud storage services such as OneDrive, GitHub allows users to maintain independent local versions of a repository, using version control to track edits, reconcile differences, and seamlessly synchronize changes across devices. On the other hand, a disadvantage of using GitHub for sharing is that it does not support sharing large files. Files larger than 10GB need to be shared in other ways.
-
-As with data organization, use the same folder structure for code across shared folders.
-In addition, it is particularly important to allow for easily configurable paths.
-One way to do this would be to use relative paths so that other code users don't need to modify the absolute paths to be custom to their computer setup, and code can be run "out-of-the-box".
 
 Considerations:
 
