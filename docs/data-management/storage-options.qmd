@@ -40,17 +40,16 @@ At the start of a project (or upon major changes to specifications, such as time
 
 ## Working with External Collaborators
 
-Because an RFF account is required for access to the L:/ drive, it may be necessary to incorporate additional storage options into the project.
+An RFF account is required for access to the L:/ drive. Therefore, when working with external collaborators it may be necessary to store and share data in other ways (in addition to storing data on the L:/ drive).
 In that case, there are a few options.
 
 ### OneDrive and GitHub
-The recommended method for project data and code organization when working with external collaborators is to use a combination of OneDrive and GitHub.
-If access to data is the main consideration, OneDrive may be ideal. If external collaborators will be contributing to the codebase, using GitHub for code and sufficiently small data (well below 100 MB) can work well.
+For projects with external collaborators, we recommend using a combination of OneDrive and Github. Github can be used for sharing code and sufficiently small data (well below 100 MB), and OneDrive can be used from sharing raw and processed data files between RFF analysts working on RFF servers, and external collaborators working elsewhere.
+For projects with external collaborators, we recommend using a combination of OneDrive and Github. Github can be used for sharing code and sufficiently small data (well below 100 MB), and OneDrive can be used from sharing raw and processed data files between RFF analysts working on RFF servers, and external collaborators working elsewhere.
 
 #### For Data
 
 Folders created on RFF's OneDrive account have an initial capacity of 5 TB and can be shared with non-RFF staff.
-This folder can be accessed from any computer logged into a OneDrive account.
 However, OneDrive is not accessible from RFF lab computers.
 To accommodate this, use the L:/ drive project folder for all data storage, and copy only necessary data files to the OneDrive folder (for example, do not transfer over intermediate data files, only inputs and outputs).
 Because lab computers don't have access to OneDrive, it might be necessary to copy files using the web browser.
