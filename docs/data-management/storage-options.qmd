@@ -47,7 +47,7 @@ In that case, there are a few options.
 For projects with external collaborators, we recommend using a combination of OneDrive and Github. Github can be used for sharing code and sufficiently small data (well below 100 MB), and OneDrive can be used from sharing raw and processed data files between RFF analysts working on RFF servers, and external collaborators working elsewhere.
 For projects with external collaborators, we recommend using a combination of OneDrive and Github. Github can be used for sharing code and sufficiently small data (well below 100 MB), and OneDrive can be used from sharing raw and processed data files between RFF analysts working on RFF servers, and external collaborators working elsewhere.
 
-#### For Data
+#### Sharing data
 
 Folders created on RFF's OneDrive account have an initial capacity of 5 TB and can be shared with non-RFF staff.
 However, OneDrive is not accessible from RFF lab computers.
@@ -67,7 +67,7 @@ Git version control is most applicable for data that is small (well below 100 MB
 When a function to load data from a OneDrive folder is included in code, if the data is not already synchronized, it can sometimes automatically trigger the OneDrive program to download/sync the data. That may "freeze" the console where the code is running, without an informative message. This can be avoided by manually syncing the OneDrive folder before running code that depends on the data.
 :::
 
-#### Collaborative Coding
+#### Sharing code
 
 In addition to being the primary tool for code sharing, GitHub may be used to store and share small datasets. GitHub repositories can be "cloned" to a local computer.
 
