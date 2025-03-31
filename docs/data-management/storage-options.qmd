@@ -4,10 +4,10 @@ title: Storage Options
 
 ## Summary
 
-* Store data and code for RFF projects in a project-specific L:/ drive folder.
+* Store data and code for RFF projects in a project-specific L:/ drive folder, and use GitHub to share and version control code.
 * If working with external collaborators:
   * Use OneDrive to share select data. Only store data in OneDrive that is necessary for collaboration.
-  * Use GitHub to share code.
+  * Use GitHub to share and review code.
   * For small datasets, GitHub may be used for both data and code storage.
 * For both L:/ drive and OneDrive project folder setup, contact [IThelp@rff.org](mailto:ithelp@rff.org) with specifications.
 
