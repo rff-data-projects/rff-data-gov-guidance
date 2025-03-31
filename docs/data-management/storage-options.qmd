@@ -70,8 +70,7 @@ When a function to load data from a OneDrive folder is included in code, if the 
 
 #### Collaborative Coding
 
-Use GitHub as the primary storage solution.
-GitHub repositories can be "cloned" to a local computer.
+In addition to being the primary tool for code sharing, GitHub may be used to store and share small datasets. GitHub repositories can be "cloned" to a local computer.
 This method leverages GitHub's distributed version control features to streamline collaboration, organization, and resilience by allowing users to "clone" GitHub repositories to a local computer (such as an RFF server folder or personal OneDrive folder), make changes independently, and then upload those changes to a shared workspace that can be accessed through any web browser or any computer with git installed.
 
 As with data organization, use the same folder structure for code across shared folders.
