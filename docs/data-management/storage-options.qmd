@@ -56,7 +56,7 @@ Because lab computers don't have access to OneDrive, it might be necessary to co
 If necessary, OneDrive storage capacity can be increased on a project basis (but not the OneDrive accounts of external collaborators).
 
 External collaborators can choose to work directly from the OneDrive folder or use it for file transfer to their own preferred storage.
-Directory structures should be mirrored across the L:/ and OneDrive folders to maintain consistency and code functionality.
+Directory structures should be mirrored across the L:/ and OneDrive folders to instruct other users to where files should be placed if they are copying the file to their own directory.
 For example, if a file is saved as `raw_data/fires/data.shp` in the L:/ drive, it should be shared with external collaborators in a OneDrive folder under the same directory structure.
 
 One consideration when using this strategy is that if different copies of data are edited on both the L:/ drive and OneDrive, it can sometimes be difficult to determine who edited them and reconcile different versions.
