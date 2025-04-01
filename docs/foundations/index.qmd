@@ -80,7 +80,7 @@ A general data life cycle is depicted below [see also @DMPTool].
 
 
 ```{mermaid}
-graph TB
+graph LR
 A(Plan) --> B(Collect)
 B --> C(Process)
 C --> D(Explore / Visualize)
