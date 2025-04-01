@@ -2,4 +2,4 @@
 /_site/
 /_book/
 .Rproj.user
-.Rproj
+*.Rproj
