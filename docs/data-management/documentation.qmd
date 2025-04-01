@@ -32,7 +32,9 @@ __Process__ documentation involves capturing step-by-step procedures and workflo
 
 __Product__ documentation provides information to accompany code and data of completed projects, ensuring usability and transparency. This documentation can be a part of or accompanying written products.
 
-## The project-level README file {#project-readme}
+## Core documentation 
+
+### The project-level README file {#project-readme}
 
 At a minimum, the project should have a README file in text or markdown format with the information listed below. This can be an evolving, living document. While it's technically __product documentation__, it's easiest to start it early in the project's development.
 
@@ -45,9 +47,9 @@ At a minimum, the project should have a README file in text or markdown format w
 * Nature of sensitive or proprietary data (if applicable)
 * Any other important notes for navigating folder or using data/code
 
-## Raw data
+### Raw data
 
-__The provenance of all downloaded raw datasets should be documented in a README file.__
+__The source of all downloaded raw datasets should be documented in a README file.__
 
 ::: {.callout-note}
 As described in the [Organization](../data-management/organization.qmd) section, __all raw data should be retained in its raw form and not directly modified__.
@@ -57,7 +59,7 @@ Best practices:
 
 * The README file associated with a raw data file(s) should be located in the same folder as the raw data file.
 * Create README files for logical “clusters” of related files / data.
-* Name the README so that it is easily associated with the data file(s) it describes (e.g., `README_PRISM_data.txt`).
+* Name the README so that it is easily associated with the data file(s) it describes (e.g., `README_PRISM_Daily_Temperature.txt`).
 * Format README files consistently.
 * Write the README document in an plain text and open source file format, such as .txt or .md.
 
