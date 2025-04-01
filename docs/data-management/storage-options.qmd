@@ -115,8 +115,7 @@ If you used an API to access source data, the best course for publishing or arch
 
 #### Other Cloud Storage Options for large data
 
-Alternatives to OneDrive, such as Azure, Google Bucket, or AWS S3, may be well suited to your project, especially for short-term storage and file transfer.
-Dropbox is also an option, but note that it can incur additional costs.
+Alternatives to OneDrive, such as Azure, Google Bucket, AWS S3, or Dropbox may be well suited to your project, especially for short-term storage and file transfer. However, note that these storage options may incur additional costs, depending on data size (even the "free tiers" of these services may incur pay-as-you-go costs).
 For Azure setups, contact IT at [IThelp@rff.org](mailto:ithelp@rff.org). 
 
 #### ArcGIS Online for Sharing and Exploring Spatial Data
