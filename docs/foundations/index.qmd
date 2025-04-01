@@ -22,6 +22,7 @@ references:
   URL: https://doi.org/10.5066/F7RJ4GGJ
 ---
 
+<<<<<<< HEAD
 ## Introduction
 
 Good data practices can not only save time and headaches but increase the usefulness of your data and code and enhance the reproducibility of the whole project.
