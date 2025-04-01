@@ -12,7 +12,7 @@ The best file format to use will depend on the type and structure of data. In ge
 
 - **Tabular vs. hierarchical**: Tabular data is organized into rows and columns, resembling a table, while hierarchical data is organized in a tree-like structure, with elements nested within others.
 
-- **Structured vs. unstructured**: Structured formats have well-defined schemas (specified variable names and data types), semi-structured formats are flexible but can be organized with schemas, and unstructured formats are free-form and rely on human interpretation.
+- **Structured vs. unstructured**: Structured data refers to data that is organized in a predefined format, typically in rows and columns, like databases or spreadsheets, which allows for easy search, analysis, and processing. Unstructured data, on the other hand, lacks a predefined format and is often textual or multimedia in nature, such as emails, social media posts, or video files.
 
 - **Retention of data types**: Some file formats retain metadata about data types (e.g., whether a column is an integer or string), while others lose this information upon saving.
 
