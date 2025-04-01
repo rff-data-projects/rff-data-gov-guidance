@@ -112,7 +112,7 @@ Before uploading, ensure that:
 
 * The data is well-organized (e.g., structured folders, clear file names).
 * Metadata file are prepared for each data file or sets of data files, including dataset title, description, author names, and relevant keywords.
-* A license is attached.
+* A license is attached. 
 * Any sensitive or restricted data is removed or anonymized (if applicable).
 * The project-level README is up to date.
 
