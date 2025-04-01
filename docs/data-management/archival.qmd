@@ -53,8 +53,8 @@ The folder can be accessed in a way similar to the L drive, except that the file
   * Results and visualizations
   * Code
   * Documentation
-    * [one project-level README](../foundations/index.qmd#project-readme)
-    * all [raw data README files](../data-management/raw-data-documentation.qmd)
+    * [one project-level README](../data-management/documentation.qmd#project-readme)
+    * all [raw data README files](../data-management/documentation.qmd#raw-data)
     * any [metadata files](../data-management/publication.qmd#metadata)
 
 This is generalized guidance. For additional guidance choosing which files to archive, see [Decide what data to preserve](https://dataoneorg.github.io/Education/bestpractices/decide-what-data).

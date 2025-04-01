@@ -22,7 +22,7 @@ references:
   URL: https://doi.org/10.5066/F7RJ4GGJ
 ---
 
-## Foundations
+## Foundations {.unnumbered}
 
 Good data practices can not only save time and headaches but increase the usefulness of your data and code and enhance the reproducibility of the whole project.
 Good data practices provide (Langseth et al. 2015):
@@ -98,7 +98,7 @@ This guidance resource provides general instructions for data practices and addr
 
 8.	What are expectations around data quality and code quality?
 
-9.	How will [data sources](../data-management/raw-data-documentation.qmd), code, and major methodological decisions be documented?
+9.	How will [data sources](../data-management/documentation.qmd), code, and major methodological decisions be documented?
 
 10.	Has the appropriate budget been allocated to implement this DMP?
 
