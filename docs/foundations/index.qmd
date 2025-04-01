@@ -28,13 +28,13 @@ Good data practices can not only save time and headaches but increase the useful
 Good data practices provide (Langseth et al. 2015):
 
 * Short-term benefits
-* Spend less time doing data management and more time doing research.
-* Easier to prepare and use data.
-* Collaborators can readily understand and use data files.
+* Spend less time doing data management and more time doing research
+* Easier to prepare and use data
+* Collaborators can readily understand and use data files
 * Long-term benefits
-* Make your work more transparent, reproducible, and rigorous.
-* Other researchers can find, understand, and use your data to address broad questions.
-* You get credit for preserving data products and for their use in other products.
+* Make your work more transparent, reproducible, and rigorous
+* Other researchers can find, understand, and use your data to address broad questions
+* You get credit for preserving data products and for their use in other products
 
 
 ## The Data Life Cycle
