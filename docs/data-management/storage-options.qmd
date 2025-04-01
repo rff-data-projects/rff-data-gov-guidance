@@ -19,7 +19,7 @@ It is optimized for data-intensive work, has large storage capacity, is regularl
 An RFF account is required to access the network, which can be accessed from work computers or remotely.
 Git repositories can be setup within L drive project folders, as described in the Organization section below.
 
-### L:/ Drive Storage Request
+### L:/ Drive storage request
 For both L:/ drive and OneDrive storage, coordinate with IT to ensure appropriate resources are available when you need them.
 At the start of a project (or upon major changes to specifications, such as timeline or disk space), email [IThelp@rff.org](mailto:ithelp@rff.org) with the following information. Example answers are provided.
 
@@ -38,7 +38,7 @@ At the start of a project (or upon major changes to specifications, such as time
 | Archival date | December 2026 |
 | Data agreement or sensitive data security considerations | Proprietary data will be in raw data folder and will need to be made read-only |
 
-## Working with External Collaborators
+## Working with external collaborators
 
 An RFF account is required for access to the L:/ drive. Therefore, when working with external collaborators it may be necessary to store and share data in other ways (in addition to storing data on the L:/ drive).
 In that case, there are a few options.
@@ -86,7 +86,7 @@ Considerations:
 
 * __Security__: Consider the security implications of storing sensitive data on the cloud and specify access accordingly.
 
-### Other Options for Collaborating with External Partners
+### Other options for collaborating with external partners
 
 #### Accessing raw data via Application Program Interfaces (APIs)
 
@@ -113,19 +113,19 @@ If you used an API to access source data, the best course for publishing or arch
 * __Document__: Document the dataset version and access date in lieu of providing source data. While not ideal for reproducibility, this is suitable in cases where the source data is large, reliable, and not likely to be modified. 
 * __Download to cloud__: Use a repository service, such as Zenodo, to store source data as it existed when archiving the project. Source data accessed through an API can be [downloaded directly to a Zenodo repository](https://developers.zenodo.org/), without having to save files locally. This can be done through R ([zen4R](https://cran.r-project.org/web/packages/zen4R/zen4R.pdf)) or [python](https://pypi.org/project/zenodo-client/).
 
-#### Other Cloud Storage Options for large data
+#### Other cloud storage options for large data
 
 Alternatives to OneDrive, such as Azure, Google Bucket, AWS S3, or Dropbox may be well suited to your project, especially for short-term storage and file transfer. However, note that these storage options may incur additional costs, depending on data size (even the "free tiers" of these services may incur pay-as-you-go costs).
 For Azure setups, contact IT at [IThelp@rff.org](mailto:ithelp@rff.org). 
 
-#### ArcGIS Online for Sharing and Exploring Spatial Data
+#### ArcGIS Online for sharing and exploring spatial data
 
 ArcGIS Online is a cloud-based browser platform that allows users to upload, host, and share datasets (both geospatial and tabular).
 In order to access the data and exploratory mapping interface, users need an ArcGIS Online account.
 Online accounts cost $100 per user and data storage costs vary by data size.
 Contact RFF's GIS Coordinator at [Thompson@rff.org](mailto:thompson@rff.org) for more information.
 
-#### Enabling External Collaborator Access to the L:/ drive
+#### Enabling external collaborator access to the L:/ drive
 
 While not recommended, it is possible to enable access to the L:/ drive for non-RFF staff.
 Temporary accounts can be requested by contacting IT at [IThelp@rff.org](mailto:ithelp@rff.org).
