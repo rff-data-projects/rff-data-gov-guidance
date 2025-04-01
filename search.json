@@ -20,6 +20,26 @@
     ]
   },
   {
+    "objectID": "index.html#questions-and-feedback",
+    "href": "index.html#questions-and-feedback",
+    "title": "Data Guidance for Researchers",
+    "section": "Questions and feedback",
+    "text": "Questions and feedback\nTo submit questions, bug (e.g., broken hyperlinks), suggestions, or feedback on this guidance, click Report an issue on the right-hand side of this page and submit an issue to the repository. Note that your comment will be publicly visible.\nTo submit a question or comment over email, reach out to Alexandra Thompson.",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#site-authors",
+    "href": "index.html#site-authors",
+    "title": "Data Guidance for Researchers",
+    "section": "Site authors",
+    "text": "Site authors\nMembers of the RFF Data Governance Working Group\n\nAris Awang\nPenny Liao\nEthan Russell\nJohn Valdez\nMatthew Wibbenmeyer\nJordan Wingenroth\nAlexandra Thompson",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
     "objectID": "docs/data-management/index.html",
     "href": "docs/data-management/index.html",
     "title": "Data Management",
