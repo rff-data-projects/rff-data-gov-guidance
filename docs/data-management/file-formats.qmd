@@ -2,7 +2,7 @@
 title: File & Data Types
 ---
 
-## File Formats
+## Data File Formats
 
 The best file format to use will depend on the type and structure of data. In general, data should be stored and/or archived in open formats. Open formats maximize accessibility because they have freely available specifications and generally do not require proprietary software to open them ([UC Santa Barbara's Standard Operating Procedures section on Data Formats](https://emlab-ucsb.github.io/SOP/2.5-data-formats.html)).
 
@@ -65,7 +65,7 @@ In cases where the native format of source data is in a proprietary software for
 
 Hierarchical data formats are best suited for storing and exchanging complex, nested data structures with parent-child relationships, such as configurations, scientific datasets, or web APIs, where flexibility and the ability to represent variable levels of detail are essential.
 
-#### Characteristics of hierarchical formats:
+#### Characteristics of hierarchical formats
 
 | Format | Extension | Open-source or Proprietary | Retains Individual Data Types? | Level of Structure |
 |--------|-----------|----------------------------|--------------------------------|-------------------|
@@ -145,7 +145,13 @@ All raster files should have five critical metadata components:
 
 For a more in-depth introduction to spatial data types, see [Introduction to Geospatial Concepts: Summary and Setup (datacarpentry.org)](https://datacarpentry.org/organization-geospatial/index.html) and [GIS Training (RFF intranet)](https://my.rff.org/it/computer-lab/).
 
-### Figures
+### Efficiency Trade-offs
+
+In addition to being more accessible, plain text-based formats are often more compatible with version control systems than many proprietary formats due to their human-readable structure. However, when working with large datasets, it's important to consider efficiency in terms of input/output speed and file size. Data formats can vary significantly in these aspects—while binary formats are typically more efficient in terms of speed and storage, they are less suited for version control.
+
+For example, in the R ecosystem, **.Rds** and **.RData** are binary file formats that allow for fast and space-efficient data storage. In comparison, large **.shp** (Shapefile) or **.geojson** files can take more than 100 times as long to load than an equivalent **.Rds** or **.RData** file. Other binary formats, such as **.feather** or **.fst** for tabular data, are both fast and lightweight, with the added benefit of being language-agnostic, meaning they can be used across different programming environments.
+
+## Figure File Formats
 
 It is helpful to think ahead when generating and saving final figures. Academic journals often accept TIFF and PNG formats, but they frequently have resolution and dimension requirements. Export figures with a minimum resolution of 300 dots per inch (DPI). 
 
@@ -156,13 +162,6 @@ In addition to saving final figures in appropriate and flexible formats, conside
 > “Sharing the underlying data of any maps and figures is always helpful for the Communications Team!”
 > 
 > – <cite>Elizabeth Wason (Editorial Director, RFF)</cite>
-
-### Efficiency Trade-offs
-
-In addition to being more accessible, plain text-based formats are often more compatible with version control systems than many proprietary formats due to their human-readable structure. However, when working with large datasets, it's important to consider efficiency in terms of input/output speed and file size. Data formats can vary significantly in these aspects—while binary formats are typically more efficient in terms of speed and storage, they are less suited for version control.
-
-For example, in the R ecosystem, **.Rds** and **.RData** are binary file formats that allow for fast and space-efficient data storage. In comparison, large **.shp** (Shapefile) or **.geojson** files can take more than 100 times as long to load than an equivalent **.Rds** or **.RData** file. Other binary formats, such as **.feather** or **.fst** for tabular data, are both fast and lightweight, with the added benefit of being language-agnostic, meaning they can be used across different programming environments.
-
 
 ## Data Types
 
