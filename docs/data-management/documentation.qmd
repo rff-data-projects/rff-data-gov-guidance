@@ -12,16 +12,6 @@ Without documentation, projects lose their usefulness over time, as illustrated 
 
 ![Image from [Michener et al. 1997](https://doi.org/10.1890/1051-0761(1997)007%5b0330:NMFTES%5d2.0.CO;2)](../../images/information_loss.png)
 
-## Reducing costs of data documentation
-
-Effective documentation saves time but requires planning and intentional effort. Good practices for reducing costs are:
-
-* Set and communicate expectations early for how technical aspects of the project will be documented.
-* Incorporate documentation into data processing, version control, and software development to save time (and headaches) later.
-* Consider the time and resources required to create, manage, and maintain documentation in the project budget and schedule.
-* Use the guidance and resources provided here to reduce manual effort.
-This resource outlines key documentation strategies for three types of research documentation: preliminary, process, and product.
-
 ## Types of documentation
 
 This summary can help guide team conversations around documentation strategies.
