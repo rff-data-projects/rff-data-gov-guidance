@@ -22,7 +22,7 @@ references:
   URL: https://doi.org/10.5066/F7RJ4GGJ
 ---
 
-## Foundations {.unnumbered}
+## Introduction
 
 Good data practices can not only save time and headaches but increase the usefulness of your data and code and enhance the reproducibility of the whole project.
 Good data practices provide (Langseth et al. 2015):
@@ -75,6 +75,8 @@ Make raw data files read-only so they cannot be accidentally modified.
 * **Step 4: Explore** Describe, summarize, and visualize statistics and relationships.
 * **Step 5: Analyze / Model** Develop, refine, and implement analysis and model specifications.
 * **Step 6: Archive, publish, and share** Finalize documentation (project-level README and metadata). Dispose and/or archive data. Publish final data products and documentation.
+
+## About this guidance
 
 ## The first step: Data management planning for reproducibility {#sec-dmp}
 
