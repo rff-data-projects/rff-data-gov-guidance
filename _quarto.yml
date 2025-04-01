@@ -35,12 +35,8 @@ book:
         - docs/data-management/quality-preparation.qmd
         - docs/data-management/archival.qmd
         - docs/data-management/publication.qmd
-    - part: docs/software/index.qmd
-      chapters:
-        - docs/software/sq1.qmd
-    - part: docs/version-control/index.qmd
-      chapters:
-        - docs/version-control/vc1.qmd
+    - docs/software/index.qmd
+    - docs/version-control/index.qmd
 format:
   html:
     theme: 

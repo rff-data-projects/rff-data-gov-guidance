@@ -48,7 +48,7 @@ For projects with external collaborators, we recommend using a combination of Gi
 
 #### Sharing code
 
-GitHub's distributed version control system enables users to collaboratively develop, organize, and share code across multiple computers. Unlike personal cloud storage services such as OneDrive, sharing code via GitHub allows users to maintain independent local versions of a project's codebase, using version control to track edits, reconcile differences, and seamlessly synchronize changes across devices. On the other hand, a disadvantage of using GitHub for sharing is that it does not support sharing large files. Files larger than 10GB need to be shared in other ways.
+GitHub's distributed version control system enables users to collaboratively develop, organize, and share code across multiple computers. Unlike personal cloud storage services such as OneDrive, sharing code via GitHub allows users to maintain independent local versions of a project's codebase, using version control to track edits, reconcile differences, and seamlessly synchronize changes across devices. On the other hand, a disadvantage of using GitHub for sharing is that it does not support sharing files larger than 100MB; files above the size limit need to be shared in other ways.
 
 #### Sharing data
 
