@@ -6,7 +6,7 @@ title: File & Data Types
 
 The best file format to use will depend on the type and structure of data. In general, data should be stored and/or archived in open formats. Open formats maximize accessibility because they have freely available specifications and generally do not require proprietary software to open them ([UC Santa Barbara's Standard Operating Procedures section on Data Formats](https://emlab-ucsb.github.io/SOP/2.5-data-formats.html)).
 
-### Key characteristics of data file formats:
+### Key characteristics of data file formats
 
 - **Proprietary vs. non-proprietary**: Non-proprietary software formats can be easily imported and accessed using open-source software. This enhances their **interoperability**, or how easily a file format can be used across different software platforms and systems. Formats that are widely supported and compatible with various tools are generally more versatile.
 
