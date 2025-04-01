@@ -110,7 +110,7 @@ Make raw data files read-only so they cannot be accidentally modified.
 * **Step 5: Analyze / Model** Develop, refine, and implement analysis and model specifications.
 * **Step 6: Archive, publish, and share** Finalize documentation (project-level README and metadata). Dispose and/or archive data. Publish final data products and documentation.
 
-## Start here: Data management planning for reproducibility {#sec-dmp}
+## The first step: Data management planning for reproducibility {#sec-dmp}
 
 __Data management planning__, a form of __preliminary__ documentation, is the process of thinking ahead about how your team will access, use, create, modify, store, share, and describe data related to your research project. Data management plans (DMPs) __enhance collaboration by establishing baseline expectations, make projects resilient to turnover, and save time in the long run.__ In addition, [many funders require data management plans](https://dmptool.org/public_templates) be submitted with grant proposals, so thinking about these issues early can facilitate the proposal process. 
 
