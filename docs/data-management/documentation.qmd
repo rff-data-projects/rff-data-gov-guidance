@@ -1,6 +1,8 @@
 ---
-title: Raw Data Documentation
+title: Documentation
 ---
+
+# Raw data
 
 __The provenance of all downloaded raw datasets should be documented in a README file.__
 
