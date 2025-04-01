@@ -1,8 +1,12 @@
 # rff-data-gov-guidance
+
 Repo for Resources for the Future's Data Governance Working Group's guidance on data science practices for RFF researchers.  
 Link to [guidance website](https://alexandra-thompson-dc.github.io/rff-data-gov-guidance/)
+
 # Contribution Guidelines
-***Only members of the Data Governance Working Group may make changes to the content. To submit questions or suggestions, --LINK TO SUBSECTION ON HOW TO USE ISSUES, TO BE DEVELOPED--***
+
+***Only members of the Data Governance Working Group may make changes to the content. To submit questions or suggestions, please submit submit an issue by clicking the `Issues` tab and `New issue`.
+
 ## Local editing (on your computer)
 
 1. In your _Git Bash_ terminal or other Git GUI, navigate to the relevant development branch, e.g., _git checkout feat-data-management_
@@ -66,3 +70,7 @@ or
 1. At the top of the GitHub page, navigate to **Settings**
 2. Navigate to **Pages** on the left-hand menu
 3. Click the link at the top of the page, or click **Visit Site**
+
+## Formatting notes
+
+Headers in subsections should follow sentence case, e.g., "Data formats", not "Data Formats."
