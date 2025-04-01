@@ -7,7 +7,7 @@
 
 ## Questions and feedback
 
-To submit questions, suggestions, or feedback on this guidance, click `Report an issue` on the right-hand side of this page and submit an __issue__ to the repository. Note that your comment will be publicly visible. 
+To submit questions, bug (e.g., broken hyperlinks), suggestions, or feedback on this guidance, click `Report an issue` on the right-hand side of this page and submit an __issue__ to the repository. Note that your comment will be publicly visible. 
 
 To submit a question or comment over email, reach out to [Alexandra Thompson](mailto:thompson@rff.org).
 
