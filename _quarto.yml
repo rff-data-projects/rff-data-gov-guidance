@@ -1,60 +1,49 @@
 project:
-  type: website
+  type: book
 
-website:
-  title: "RFF Data Governance Guidance"
-  site-url: "https://alexandra-thompson-dc.github.io/rff-data-gov-guidance/" # makes site links work on your remote site, update this if we change domain
+book:
+  title: "Data Guidance for Researchers"
+  url: "https://alexandra-thompson-dc.github.io/rff-data-gov-guidance/" # makes site links work on your remote site, update this if we change domain
   repo-url: "https://github.com/alexandra-thompson-dc/rff-data-gov-guidance"
   repo-actions: [edit, issue]
   favicon: images/black-logo.svg
   sidebar:
     logo: images/black-logomark-vertical.svg
-    title: "Data Governance Guidance"
+    title: "Data Guidance for Researchers"
     style: "docked"
     search: true
     background: "#c3e1f9"
-    contents:
-      - index.qmd
-      - section: "Data Management"
-        contents:
-          - section: "Storage and Organization"
-            href: docs/data-management/storage-organization/index.md
-            contents:
-              - docs/data-management/storage-organization/storage-options.md
-              - docs/data-management/storage-organization/organization.md
-              - docs/data-management/storage-organization/file-formats.md
-              - docs/data-management/storage-organization/sensitive-data.md
-      - section: "Version Control"
-        contents:
-          - docs/version-control/vc1.md
-          - docs/version-control/vc2.md
-      - section: "Software Quality"
-        contents:
-          - docs/software/software1.md
-    tools:
-      - icon: github
-        menu:
-          - text: Source Code
-            href: https://github.com/alexandra-thompson-dc/rff-data-gov-guidance
-          - text: Report a Bug
-            href: https://github.com/alexandra-thompson-dc/rff-data-gov-guidance/issues
   page-footer:
     right: "This page is built with [Quarto](https://quarto.org/)."
-    background: "#c3e1f9"
+    background: "#04273c"
   announcement: 
     icon: info-circle
     dismissable: true
     content: "**NOTE** - this site is still under development!"
     type: primary
     position: below-navbar
+  chapters:
+    - index.qmd
+    - part: docs/data-management/index.qmd
+      chapters:
+        - docs/data-management/storage-options.qmd
+        - docs/data-management/organization.qmd
+        - docs/data-management/file-formats.qmd
+        - docs/data-management/sensitive-proprietary.qmd
+        - docs/data-management/quality-preparation.qmd
+        - docs/data-management/archival.qmd
+    - docs/software/index.qmd
+    - docs/version-control/index.qmd
 format:
   html:
     theme: 
       - journal
       - styles.scss
     toc: true
-    toc-expand: 3
-    toc-depth: 4
+    toc-expand: 1
+    toc-depth: 3
+    number-sections: true
+    number-depth: 3
 
 
 

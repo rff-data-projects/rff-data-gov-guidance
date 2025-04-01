@@ -1,0 +1,83 @@
+---
+title: Data Management
+references:
+- type: article
+  id: DMPTool
+  author:
+  - family: Langseth
+    given: M. L.
+  - family: Henkel
+    given: H. S.
+  - family: Hutchison
+    given: V. B.
+  - family: Thibodeaux
+    given: C.J.
+  - family: Zolly
+    given: L. S.
+  issued:
+    date-parts:
+    - - 2015
+  title: 'USGS Data Management Training Modules—Planning for Data Management Part II Using the DMPTool to Create Data Management Plans: U.S. Geological Survey.'
+  DOI: 10.5066/F7RJ4GGJ
+  URL: https://doi.org/10.5066/F7RJ4GGJ
+---
+
+## Foundations
+
+Data management encompasses the methods used to collect, store, organize, and use data. 
+Good data management can not only save time and headaches but increase the usefulness of data and enhance the reproducibility of the whole project.
+Good data management practices provide (Langseth et al. 2015):
+
+* Short-term benefits
+  * Spend less time doing data management and more time doing research.
+  * Easier to prepare and use data.
+  * Collaborators can readily understand and use data files.
+* Long-term benefits
+  * Make your work more transparent, reproducible, and rigorous.
+  * Other researchers can find, understand, and use your data to address broad questions.
+  * You get credit for preserving data products and for their use in other products.
+
+Standardized practices for file organization and storage save time and ensure consistency, enhancing the overall quality of research outputs.
+A simple and flexible folder structure not only promotes long-term data stability but also supports seamless project growth, adaptability, and researcher transitions.
+Such an approach reduces the complexity of project management and aligns effectively with version control systems, enhancing collaborative efforts and preserving institutional knowledge.
+
+This section provides storage options and suggested practices for organization and preservation. 
+
+## The Data Life Cycle
+
+A common axiom among data scientists is the application of the 80/20 rule to effort: 80% of time is spent wrangling (managing and preparing) data, while 20% is spent on analysis. 
+Most activities in the data life cycle come before the analysis phase and are closely tied to data management. 
+There are many different models of the data life cycle, and the relevant model for your individual project will vary. 
+A general data life cycle is depicted below [see also @DMPTool].
+
+
+```{mermaid}
+graph TB
+  A(Plan) --> B(Collect)
+  B --> C(Process)
+  C --> D(Explore / Visualize)
+  D --> E(Analyze / Model)
+  E --> F(Archive, Publish, Share)
+  E --> C
+  E --> A
+```
+
+The data life cycle is often iterative and nonlinear, and does not always follow the order shown. Your actual analysis workflow may include dead ends or repeated steps. Regardless, it is helpful to plan and discuss your data-oriented research using these common components of the data life cycle:
+
+1. **Plan**: Identify data that will be collected and how it will be managed.
+Create a data management plan.
+2. **Collect**: Acquire and store raw data.
+    a. **Acquire**: Retrieve data from the appropriate source.
+    b. **Describe**: Document the raw data source, format, variables, measurement units, coded values, and known problems. 
+    Create metadata for primary data. Cite secondary data. 
+    c. **Quality assurance**: Inspect the raw data for quality and fit for analysis purpose.
+    d. **Store**: Store the raw data in the appropriate folder, as determined in the planning stage. 
+    Consider access, resilience (backing up), security, and, if relevant, data agreement stipulations. 
+    Make raw data files read-only so they cannot be accidentally modified.
+3. **Process**: Prepare the data for exploration and analysis. 
+    a. **Clean**: Preprocess the data to correct errors, standardize missing values, standardize formats, etc.
+    b. **Transform**: Convert data into appropriate format and spatiotemporal scale (e.g., convert daily values to annual statistics).
+    c. **Integrate**: Combine datasets.
+4. **Explore**: Describe, summarize, and visualize statistics and relationships.
+5. **Analyze / Model**: Develop, refine, and implement analysis and model specifications.
+6. **Archive, publish, and share**: Save and publish final data products and documentation.

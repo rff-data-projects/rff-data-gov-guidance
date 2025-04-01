@@ -1,4 +1,6 @@
-# Data Organization
+---
+title: Organization
+---
 
 ## Directory Structure
 
@@ -11,7 +13,7 @@ Regardless of the specific method deployed, your data project organization shoul
 These qualities also facilitate version control practices. There is additional guidance on organization for version control here 
 
 <!-- [TODO: Insert LINK TO RELEVANT SUBSECTION]. -->
-Below is an example of a directory structure that would be compatible with version control implementation on RFF's L: drive. It has four main folders: data, results, code, and docs. This version illustrates a personal repository folder model of code version control, which operates best on the L: drive. Similar directories with slight changes to the code folder can be employed in other cases.
+Below is an example of a directory structure that would be compatible with version control implementation on RFF's L:/ drive. It has four main folders: data, results, code, and docs. This version illustrates a personal repository folder model of code version control, which operates best on the L:/ drive. Similar directories with slight changes to the code folder can be employed in other cases.
 
 ```
 project_name/
@@ -119,5 +121,3 @@ Specifically, they should be human readable, machine readable, and compatible wi
     ::: {.callout-note}
     Make sure to "left pad" numbers with zeros. For example, use `01` instead of `1`.  This is to allow default sorting to still apply if and when the filename prefixes enter the double digits.
     :::
-
-
