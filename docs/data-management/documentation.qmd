@@ -2,14 +2,66 @@
 title: Documentation
 ---
 
-# Raw data
+## Introduction
+
+“*__If we are not conscientious documenters, we can easily end up… without the ability to coherently describe our research process up to that point__*” (@Stoudt). 
+
+Quality documentation is critical for ensuring that your work is understandable, reusable, and interpretable over time by external users, your colleagues, and your future self. It reduces errors, facilitates smooth project team transitions, and helps avoid confusion and duplication of efforts. 
+
+Without documentation, projects lose their usefulness over time, as illustrated below [see also @Michener].
+
+![Image from [Michener et al. 1997](https://doi.org/10.1890/1051-0761(1997)007%5b0330:NMFTES%5d2.0.CO;2)](../../images/information_loss.png)
+
+## Reducing costs of data documentation
+
+Effective documentation saves time but requires planning and intentional effort. Good practices for reducing costs are:
+
+* Set and communicate expectations early for how technical aspects of the project will be documented.
+* Incorporate documentation into data processing, version control, and software development to save time (and headaches) later.
+* Consider the time and resources required to create, manage, and maintain documentation in the project budget and schedule.
+* Use the guidance and resources provided here to reduce manual effort.
+This resource outlines key documentation strategies for three types of research documentation: preliminary, process, and product.
+
+## Types of documentation
+
+This summary can help guide team conversations around documentation strategies.
+
+### Preliminary
+
+__Preliminary__ documentation refers to early-stage descriptions created during the planning phase. This often includes a data management plan (DMP), which outlines data collection, organization, storage, and sharing strategies. 
+
+### Process 
+
+__Process__ documentation involves capturing step-by-step procedures and workflows used to collect, process, analyze, and model data, including:
+
+* Documenting raw data sources
+* Documenting methods with code comments
+* Documenting methods with version control tools
+
+### Product 
+
+__Product__ documentation provides information to accompany code and data of completed projects, ensuring usability and transparency. This documentation can be a part of or accompanying written products.
+
+## The project-level README file {#project-readme}
+
+At a minimum, the project should have a README file in text or markdown format with the information listed below. This can be an evolving, living document. While it's technically __product documentation__, it's easiest to start it early in the project's development.
+
+* Project name and description
+* Project PI and contact information
+* List of staff responsible for data management and code development
+* Associated final product(s), date of release, and DOI (if applicable)
+* Link to published data/code (if applicable)
+* License associated with final product(s)
+* Nature of sensitive or proprietary data (if applicable)
+* Any other important notes for navigating folder or using data/code
+
+## Raw data
 
 __The provenance of all downloaded raw datasets should be documented in a README file.__
 
 ::: {.callout-note}
 As described in the [Organization](../data-management/organization.qmd) section, __all raw data should be retained in its raw form and not directly modified__.
 :::
-
 
 Best practices:
 
