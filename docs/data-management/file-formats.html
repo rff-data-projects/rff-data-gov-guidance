@@ -191,16 +191,16 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#file-formats" id="toc-file-formats" class="nav-link active" data-scroll-target="#file-formats"><span class="header-section-number">3.1</span> File Formats</a>
   <ul class="collapse">
   <li><a href="#key-characteristics-of-data-file-formats" id="toc-key-characteristics-of-data-file-formats" class="nav-link" data-scroll-target="#key-characteristics-of-data-file-formats"><span class="header-section-number">3.1.1</span> Key characteristics of data file formats:</a></li>
-  <li><a href="#tabular-formats" id="toc-tabular-formats" class="nav-link" data-scroll-target="#tabular-formats"><span class="header-section-number">3.1.2</span> Tabular Formats</a></li>
+  <li><a href="#tabular-formats" id="toc-tabular-formats" class="nav-link" data-scroll-target="#tabular-formats"><span class="header-section-number">3.1.2</span> Tabular formats</a></li>
   <li><a href="#sec-hierarchical" id="toc-sec-hierarchical" class="nav-link" data-scroll-target="#sec-hierarchical"><span class="header-section-number">3.1.3</span> Hierarchical Formats</a></li>
-  <li><a href="#geospatial-file-formats" id="toc-geospatial-file-formats" class="nav-link" data-scroll-target="#geospatial-file-formats"><span class="header-section-number">3.1.4</span> Geospatial File Formats</a></li>
-  <li><a href="#efficiency-trade-offs" id="toc-efficiency-trade-offs" class="nav-link" data-scroll-target="#efficiency-trade-offs"><span class="header-section-number">3.1.5</span> Efficiency Trade-offs</a></li>
+  <li><a href="#geospatial-file-formats" id="toc-geospatial-file-formats" class="nav-link" data-scroll-target="#geospatial-file-formats"><span class="header-section-number">3.1.4</span> Geospatial file formats</a></li>
+  <li><a href="#efficiency-trade-offs" id="toc-efficiency-trade-offs" class="nav-link" data-scroll-target="#efficiency-trade-offs"><span class="header-section-number">3.1.5</span> Efficiency trade-offs</a></li>
   <li><a href="#figures" id="toc-figures" class="nav-link" data-scroll-target="#figures"><span class="header-section-number">3.1.6</span> Figures</a></li>
   </ul></li>
   <li><a href="#data-types" id="toc-data-types" class="nav-link" data-scroll-target="#data-types"><span class="header-section-number">3.2</span> Data Types</a>
   <ul class="collapse">
-  <li><a href="#basic-types" id="toc-basic-types" class="nav-link" data-scroll-target="#basic-types"><span class="header-section-number">3.2.1</span> Basic Types</a></li>
-  <li><a href="#special-types" id="toc-special-types" class="nav-link" data-scroll-target="#special-types"><span class="header-section-number">3.2.2</span> Special Types</a></li>
+  <li><a href="#basic-types" id="toc-basic-types" class="nav-link" data-scroll-target="#basic-types"><span class="header-section-number">3.2.1</span> Basic types</a></li>
+  <li><a href="#special-types" id="toc-special-types" class="nav-link" data-scroll-target="#special-types"><span class="header-section-number">3.2.2</span> Special types</a></li>
   <li><a href="#other-resources" id="toc-other-resources" class="nav-link" data-scroll-target="#other-resources"><span class="header-section-number">3.2.3</span> Other resources</a></li>
   </ul></li>
   </ul>
@@ -230,7 +230,7 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="file-formats" class="level2" data-number="3.1">
 <h2 data-number="3.1" class="anchored" data-anchor-id="file-formats"><span class="header-section-number">3.1</span> File Formats</h2>
-<p>The best file format to use will depend on the type and structure of data. In general, data should be stored and/or archived in open formats. Open formats maximize accessibility because they have freely available specifications and generally do not require proprietary software to open them (<a href="https://emlab-ucsb.github.io/SOP/2.5-data-formats.html">UC Santa Barbara’s Standard Operating Procedures section on Data Formats</a>).</p>
+<p>In general, data should be stored and/or archived in open formats. Open formats maximize accessibility because they have freely available specifications and generally do not require proprietary software to open them (<a href="https://emlab-ucsb.github.io/SOP/2.5-data-formats.html">UC Santa Barbara’s Standard Operating Procedures section on Data Formats</a>). The best file format to use will depend on the type and structure of data.</p>
 <section id="key-characteristics-of-data-file-formats" class="level3" data-number="3.1.1">
 <h3 data-number="3.1.1" class="anchored" data-anchor-id="key-characteristics-of-data-file-formats"><span class="header-section-number">3.1.1</span> Key characteristics of data file formats:</h3>
 <ul>
@@ -241,8 +241,8 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 </section>
 <section id="tabular-formats" class="level3" data-number="3.1.2">
-<h3 data-number="3.1.2" class="anchored" data-anchor-id="tabular-formats"><span class="header-section-number">3.1.2</span> Tabular Formats</h3>
-<p>The best format to use will vary depending on the characteristics of the data being stored. Excel spreadsheets/workbooks (.xlsx) and Stata datasets (.dta) are examples of <span style="color:red;">proprietary</span> data that it is usually best to avoid. Instead, use <span style="color:green;">open-source</span> plain text formats such as comma-separated values (.csv).</p>
+<h3 data-number="3.1.2" class="anchored" data-anchor-id="tabular-formats"><span class="header-section-number">3.1.2</span> Tabular formats</h3>
+<p>In general, it is best to use <span style="color:green;">open-source</span> plain text formats such as comma-separated values (.csv). In some cases, other file formats may be useful for optimizing file size or read/write speed, or for retaining data type information; however, alternative data types may have reduced interoperability. It is generally best to avoid Excel spreadsheets/workbooks (.xlsx) and Stata datasets (.dta) <span style="color:red;">proprietary</span>, except in special cases where these required features offered by these file formats (e.g.&nbsp;variable labels in Stata .dta files) are not available in open-source file formats.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -352,7 +352,7 @@ Note
 <section id="descriptions-of-tabular-formats" class="level4">
 <h4 class="anchored" data-anchor-id="descriptions-of-tabular-formats">Descriptions of tabular formats:</h4>
 <ul>
-<li><p><strong><em>Recommended:</em></strong> <strong>comma-separated values (.csv)</strong>, delimited text files with a consistent predetermined format. Namely, each row contains the same number of values separated by commas. These are widely used for data exchange and simple data storage.</p></li>
+<li><p><strong><em>Recommended:</em></strong> <strong>comma-separated values (.csv)</strong>, delimited text files widely used for data exchange and simple data storage. Each row contains the same number of values separated by commas.</p></li>
 <li><p><strong>Tab-separated values (.tsv)</strong>, files similar to CSV files but with values separated by tabs.</p></li>
 <li><p><strong>Plain text (.txt)</strong>, files which can contain unformatted or formatted (schema) text. Not recommended for storing complex datasets.</p></li>
 <li><p><strong>Excel spreadsheets/workbooks (.xls, .xlsx)</strong>, files designed for use with Microsoft Excel software. XLS is a binary file format compatible only with Excel, both older and newer versions. XLSX was developed more recently. It is XML-based, making it compatible with open-source software such Google Sheets as well as versions of Excel released since 2007. Generally <strong>avoid relying on these files for data storage</strong> due to complex formatting, data formats, formulas, etc. They also complicate quality assurance. XLS is not version-control friendly and XLSX requires special version-control techniques because it is stored in a compressed state. Excel spreadsheets can easily be exported to CSV files.</p></li>
@@ -438,10 +438,10 @@ Note
 </section>
 </section>
 <section id="geospatial-file-formats" class="level3" data-number="3.1.4">
-<h3 data-number="3.1.4" class="anchored" data-anchor-id="geospatial-file-formats"><span class="header-section-number">3.1.4</span> Geospatial File Formats</h3>
-<p>Geospatial data are stored in two main ways. The format of input spatial data typically dictates which geospatial tools can be applied to it.</p>
+<h3 data-number="3.1.4" class="anchored" data-anchor-id="geospatial-file-formats"><span class="header-section-number">3.1.4</span> Geospatial file formats</h3>
+<p>Geospatial data are stored as either vector data or raster data. The format of input spatial data typically dictates which geospatial tools can be applied to it.</p>
 <section id="vector-data" class="level4">
-<h4 class="anchored" data-anchor-id="vector-data">Vector Data</h4>
+<h4 class="anchored" data-anchor-id="vector-data">Vector data</h4>
 <p><img src="../../images/vector-data.png" class="img-fluid"></p>
 <p>Vector data is stored as pairs of coordinates. Points, lines, and polygons are all vector data.</p>
 <p><strong><em>Recommended</em></strong> <span style="color:green;">open-source</span> vector file formats:</p>
@@ -466,7 +466,7 @@ Note
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>A shapefile is actually a collection of several files, including geometry (.shp), projection information (.prj), tabular data (.dbf), and more. Make sure to keep all component files together.</p>
+<p>A shapefile is actually a collection of several files, including geometry (.shp), projection information (.prj), tabular data (.dbf), and more. Make sure to store all component files together within the same folder.</p>
 </div>
 </div>
 <p>All vector data files should have three critical metadata components:</p>
@@ -477,7 +477,7 @@ Note
 </ul>
 </section>
 <section id="raster-data" class="level4">
-<h4 class="anchored" data-anchor-id="raster-data">Raster Data</h4>
+<h4 class="anchored" data-anchor-id="raster-data">Raster data</h4>
 <p><img src="../../images/raster-data-1.png" class="img-fluid"> <img src="../../images/raster-data-2.png" class="img-fluid"></p>
 <p>Raster data formats store values across a regular grid containing cells of equal size, with each cell containing a value. A raster is similar to a pixelated image, except that it’s accompanied by information linking it to a particular geographic location. All cell values within a single raster variable are of the same scalar data type (integer, float, string, etc.). Common examples of raster data are elevation, land cover, and satellite imagery.</p>
 <p>The <strong><em>recommended</em></strong> general purpose raster file format is <strong>GeoTIFF (.tif)</strong>, as it supports multiple bands, retention of spatial reference metadata, large file sizes, high compression, and use in a variety of languages/software. Other formats may work better for specific use cases. All of the following common formats are <span style="color:green;">open-source</span>:</p>
@@ -499,15 +499,15 @@ Note
 </section>
 </section>
 <section id="efficiency-trade-offs" class="level3" data-number="3.1.5">
-<h3 data-number="3.1.5" class="anchored" data-anchor-id="efficiency-trade-offs"><span class="header-section-number">3.1.5</span> Efficiency Trade-offs</h3>
+<h3 data-number="3.1.5" class="anchored" data-anchor-id="efficiency-trade-offs"><span class="header-section-number">3.1.5</span> Efficiency trade-offs</h3>
 <p>In addition to being more accessible, plain text-based formats are often more compatible with version control systems than many proprietary formats due to their human-readable structure. However, when working with large datasets, it’s important to consider efficiency in terms of input/output speed and file size. Data formats can vary significantly in these aspects—while binary formats are typically more efficient in terms of speed and storage, they are less suited for version control.</p>
 <p>For example, in the R ecosystem, <strong>.Rds</strong> and <strong>.RData</strong> are binary file formats that allow for fast and space-efficient data storage. In comparison, large <strong>.shp</strong> (Shapefile) or <strong>.geojson</strong> files can take more than 100 times as long to load than an equivalent <strong>.Rds</strong> or <strong>.RData</strong> file. Other binary formats, such as <strong>.feather</strong> or <strong>.fst</strong> for tabular data, are both fast and lightweight, with the added benefit of being language-agnostic, meaning they can be used across different programming environments.</p>
 </section>
 <section id="figures" class="level3" data-number="3.1.6">
 <h3 data-number="3.1.6" class="anchored" data-anchor-id="figures"><span class="header-section-number">3.1.6</span> Figures</h3>
-<p>It is helpful to think ahead when generating and saving final figures. Academic journals often accept TIFF and PNG formats, but they frequently have resolution and dimension requirements. Export figures with a minimum resolution of 300 dots per inch (DPI).</p>
-<p>For RFF communications, however, vector formats such as <strong>.svg</strong> and <strong>.pdf</strong> are best because they can be easily modified as needed. Academic journals often accept these formats as well.</p>
-<p>In addition to saving final figures in appropriate and flexible formats, consider that you may want to be able to share the underlying data with the RFF Communications team so that they and their external design partners can create custom figures for presentation on the website, in the magazine, etc. This means clearly documenting the processing code that created the underlying data / figures, so that output data can be easily identified and shared as needed.</p>
+<p>It is helpful to think ahead when generating and saving data visualizations and plots. Academic journals often accept TIFF and PNG formats, but they frequently have resolution and dimension requirements. Export figures with a minimum resolution of 300 dots per inch (DPI).</p>
+<p>For RFF communications, however, vector formats such as <strong>.svg</strong> and <strong>.pdf</strong> are best because they can be easily modified by the RFF Comms team. Academic journals often accept these formats as well. You may want to consider saving plots in multiple file formats.</p>
+<p>Consider that you may want to be able to share the underlying data with the RFF Communications team so that they and their external design partners can create custom figures for presentation on the website, in the magazine, etc. This means clearly documenting the processing code that created the underlying data / figures, so that output data can be easily reproduced and shared as needed. If figure data is time-consuming to reproduce, you may want to save a copy of it to the L:/ drive or to your GitHub repository.</p>
 <blockquote class="blockquote">
 <p>“Sharing the underlying data of any maps and figures is always helpful for the Communications Team!”</p>
 <p>– <cite>Elizabeth Wason (Editorial Director, RFF)</cite></p>
@@ -534,7 +534,7 @@ Warning
 </div>
 </div>
 <section id="basic-types" class="level3" data-number="3.2.1">
-<h3 data-number="3.2.1" class="anchored" data-anchor-id="basic-types"><span class="header-section-number">3.2.1</span> Basic Types</h3>
+<h3 data-number="3.2.1" class="anchored" data-anchor-id="basic-types"><span class="header-section-number">3.2.1</span> Basic types</h3>
 <section id="examples" class="level4">
 <h4 class="anchored" data-anchor-id="examples">Examples</h4>
 <table class="caption-top table">
@@ -610,7 +610,7 @@ Warning
 </section>
 </section>
 <section id="special-types" class="level3" data-number="3.2.2">
-<h3 data-number="3.2.2" class="anchored" data-anchor-id="special-types"><span class="header-section-number">3.2.2</span> Special Types</h3>
+<h3 data-number="3.2.2" class="anchored" data-anchor-id="special-types"><span class="header-section-number">3.2.2</span> Special types</h3>
 <p>Categorical data can be stored more efficiently using more specific types:</p>
 <ul>
 <li><strong>Logical (boolean)</strong> data each take one of two possible values (e.g., 0 or 1, true or false)
