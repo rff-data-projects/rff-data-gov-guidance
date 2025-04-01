@@ -53,8 +53,6 @@ In addition to being the primary tool for code sharing, GitHub may be used to st
 GitHub's distributed version control system enables users to collaboratively develop, organize, and share code across multiple computers. Unlike personal cloud storage services such as OneDrive, GitHub allows users to maintain independent local versions of a repository, using version control to track edits, reconcile differences, and seamlessly synchronize changes across devices. On the other hand, a disadvantage of using GitHub for sharing is that it does not support sharing large files. Files larger than 10GB need to be shared in other ways.
 
 As with data organization, use the same folder structure for code across shared folders.
-In addition, it is particularly important to allow for easily configurable paths.
-One way to do this would be to use relative paths so that other code users don't need to modify the absolute paths to be custom to their computer setup, and code can be run "out-of-the-box".
 
 #### Sharing data
 
