@@ -40,7 +40,7 @@ At the start of a project (or upon major changes to specifications, such as time
 
 ## Working with external collaborators
 
-An RFF account is required for access to the L:/ drive. Therefore, when working with external collaborators it may be necessary to store and share data in other ways (in addition to storing data on the L:/ drive).
+An RFF account is required for access to the L:/ drive. Therefore, when working with external collaborators, it may be necessary to store and share data in other ways (in addition to storing data on the L:/ drive).
 In that case, there are a few options.
 
 ### GitHub and OneDrive
