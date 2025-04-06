@@ -44,7 +44,7 @@ An RFF account is required for access to the L:/ drive. Therefore, when working 
 In that case, there are a few options.
 
 ### GitHub and OneDrive
-For projects with external collaborators, we recommend using a combination of GitHub and OneDrive. Github can be used for sharing code and sufficiently small data (well below 100 MB), and OneDrive can be used from sharing raw and processed data files between RFF analysts working on RFF servers, and external collaborators working elsewhere.
+For projects with external collaborators, we recommend using a combination of GitHub and OneDrive. Github can be used for sharing code and sufficiently small data (well below 100 MB), and OneDrive can be used from sharing raw and processed data files between RFF analysts working on RFF servers and external collaborators working elsewhere.
 
 #### Sharing code
 
