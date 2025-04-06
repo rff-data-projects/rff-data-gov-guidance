@@ -11,7 +11,7 @@ title: Storage Options
   * For small datasets, GitHub may be used for both data and code storage.
 * For both L:/ drive and OneDrive project folder setup, contact [IThelp@rff.org](mailto:ithelp@rff.org) with specifications.
 
-## L:/ Drive
+## L:/ drive
 
 The primary place to store project data and code is the L:/ drive.
 All projects should have an L:/ drive folder, even when working with external collaborators.
@@ -19,7 +19,7 @@ It is optimized for data-intensive work, has large storage capacity, is regularl
 An RFF account is required to access the network, which can be accessed from work computers or remotely.
 Git repositories can be setup within L drive project folders, as described in the Organization section below.
 
-### L:/ Drive storage request
+### L:/ drive storage request
 For both L:/ drive and OneDrive storage, coordinate with IT to ensure appropriate resources are available when you need them.
 At the start of a project (or upon major changes to specifications, such as timeline or disk space), email [IThelp@rff.org](mailto:ithelp@rff.org) with the following information. Example answers are provided.
 
