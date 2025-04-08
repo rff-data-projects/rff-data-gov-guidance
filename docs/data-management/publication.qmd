@@ -26,7 +26,7 @@ In some cases the research team may have joint IP ownership with partners or fun
 
 Some important terms to review before choosing licenses are:
 
-* **Attribution** refers to the requirement for users of the data or software to give appropriate credit to the original creator, author, or source as specified in the licensing terms. Attribution ensures recognition of the intellectual property and efforts of the creators while allowing others to use, modify, or distribute the licensed material.
+* **Attribution** refers to crediting to the original creator, author, or source as specified in the licensing terms. Attribution ensures recognition of the intellectual property and efforts of the creators while allowing others to use, modify, or distribute the licensed material.
 
 * **Copyleft** is a concept in software licensing that ensures any derivative works (modifications or adaptations) of a particular work remain subject to the same licensing terms as the original work.
 
