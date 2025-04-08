@@ -87,7 +87,7 @@ Considerations:
 APIs enable users or programs to download relevant subsets of data directly into memory, eliminating the need to download and store entire datasets on disk. This approach not only reduces storage requirements but also improves efficiency by allowing applications to process relevant data immediately without managing large raw files.
 
 Writing code that uses an API is especially advantageous for working with large datasets, because it often allows for subsets of the data to be loaded (e.g., part of a state map covering one city), which can reduce the need for local disk space.
-If an API is not available, having code download data from remote servers via other methods (e.g., `curl`) is still preferable.
+If an API is not available, having code download data from remote servers via other methods (e.g., `curl`) can also be a good option.
 
 Using APIs is ideal for a variety of reasons:
 
