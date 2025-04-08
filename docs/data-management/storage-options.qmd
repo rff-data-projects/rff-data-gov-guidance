@@ -93,7 +93,7 @@ Using APIs is ideal for a variety of reasons:
 
 * __Storage size__: An API allows the user/program to access specific data of relevance without needing to find room to store an entire, broader dataset (which is instead hosted on the data provider's server)
 * __Reproducibility__: Using public APIs or other ways of accessing public data on the internet allows for code produced using other best practices to run "out of the box" on any computer/VM with internet access
-* __Updates__: Code that uses API queries retrieves the most current data available each time it is executed, removing the need to manually update a local dataset.
+* __Updates__: Code that uses API queries can be programmed to retrieve the most current data available each time it is executed, removing the need to manually update a local dataset.
 
 APIs do require some special considerations:
 
