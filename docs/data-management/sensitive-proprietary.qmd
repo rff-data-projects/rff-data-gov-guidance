@@ -36,7 +36,7 @@ Determine if any data used in your project is subject to data use agreements, or
 * Ensure all current and prospective team members are aware of data use and sharing constraints. Include sensitivity documentation when sharing data with outside collaborators. 
 * Do not version control sensitive data, only the code that processes it. Using version control on sensitive data makes it difficult to delete comprehensively.
 
-## Data Derivatives: Masking and Aggregation
+## Data derivatives: masking and aggregation
 
 * Data derivatives are transformed versions of original datasets, generated through processes such as aggregation, summarization, and integration with other data sources. If the raw data is subject to sensitivity restrictions, additional precautions may be necessary when sharing these derivatives.
 * Example techniques are shown below. These are not always applicable and specific techniques vary case by case. Sometimes it’s necessary to match specific requirements for proprietary/licensed data, which might be different from those listed here.

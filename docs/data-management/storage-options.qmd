@@ -11,7 +11,7 @@ title: Storage Options
   * For small datasets, GitHub may be used for both data and code storage.
 * For both L:/ drive and OneDrive project folder setup, contact [IThelp@rff.org](mailto:ithelp@rff.org) with specifications.
 
-## L:/ Drive
+## L:/ drive
 
 The primary place to store project data and code is the L:/ drive.
 All projects should have an L:/ drive folder, even when working with external collaborators.
@@ -19,7 +19,7 @@ It is optimized for data-intensive work, has large storage capacity, is regularl
 An RFF account is required to access the network, which can be accessed from work computers or remotely.
 Git repositories can be setup within L drive project folders, as described in the Organization section below.
 
-### L:/ Drive storage request
+### L:/ drive storage request
 For both L:/ drive and OneDrive storage, coordinate with IT to ensure appropriate resources are available when you need them.
 At the start of a project (or upon major changes to specifications, such as timeline or disk space), email [IThelp@rff.org](mailto:ithelp@rff.org) with the following information. Example answers are provided.
 
@@ -40,15 +40,15 @@ At the start of a project (or upon major changes to specifications, such as time
 
 ## Working with external collaborators
 
-An RFF account is required for access to the L:/ drive. Therefore, when working with external collaborators it may be necessary to store and share data in other ways (in addition to storing data on the L:/ drive).
+An RFF account is required for access to the L:/ drive. Therefore, when working with external collaborators, it may be necessary to store and share data in other ways (in addition to storing data on the L:/ drive).
 In that case, there are a few options.
 
 ### GitHub and OneDrive
-For projects with external collaborators, we recommend using a combination of GitHub and OneDrive. Github can be used for sharing code and sufficiently small data (well below 100 MB), and OneDrive can be used from sharing raw and processed data files between RFF analysts working on RFF servers, and external collaborators working elsewhere.
+For projects with external collaborators, we recommend using a combination of GitHub and OneDrive. Github can be used for sharing code and sufficiently small data (well below 100 MB), and OneDrive can be used from sharing raw and processed data files between RFF analysts working on RFF servers and external collaborators working elsewhere.
 
 #### Sharing code
 
-GitHub's distributed version control system enables users to collaboratively develop, organize, and share code across multiple computers. Unlike personal cloud storage services such as OneDrive, sharing code via GitHub allows users to maintain independent local versions of a project's codebase, using version control to track edits, reconcile differences, and seamlessly synchronize changes across devices. On the other hand, a disadvantage of using GitHub for sharing is that it does not support sharing files larger than 100MB; files above the size limit need to be shared in other ways.
+GitHub's distributed version control system enables users to collaboratively develop, organize, and share code across multiple computers. Unlike personal cloud storage services such as OneDrive, sharing code via GitHub allows users to maintain independent local versions of a project's codebase, using version control to track edits, reconcile differences, and seamlessly synchronize changes across devices. GitHub is intended for code and small data; files larger than 100 MB should be shared using other tools.
 
 #### Sharing data
 
@@ -86,14 +86,14 @@ Considerations:
 
 APIs enable users or programs to download relevant subsets of data directly into memory, eliminating the need to download and store entire datasets on disk. This approach not only reduces storage requirements but also improves efficiency by allowing applications to process relevant data immediately without managing large raw files.
 
-For large datasets, it is best to include lines in your code for downloading raw data from the web via an API, where available, rather than downloading data to disk and importing it.
-If an API is not available, having code download data from remote servers via other methods (e.g., `curl`) is still preferable.
+Writing code that uses an API is especially advantageous for working with large datasets, because it often allows for subsets of the data to be loaded (e.g., part of a state map covering one city), which can reduce the need for local disk space.
+If an API is not available, having code download data from remote servers via other methods (e.g., `curl`) can also be a good option.
 
 Using APIs is ideal for a variety of reasons:
 
 * __Storage size__: An API allows the user/program to access specific data of relevance without needing to find room to store an entire, broader dataset (which is instead hosted on the data provider's server)
 * __Reproducibility__: Using public APIs or other ways of accessing public data on the internet allows for code produced using other best practices to run "out of the box" on any computer/VM with internet access
-* __Updates__: Code that uses API queries retrieves the most current data available each time it is executed, removing the need to manually update a local dataset.
+* __Updates__: Code that uses API queries can be programmed to retrieve the most current data available each time it is executed, removing the need to manually update a local dataset.
 
 APIs do require some special considerations:
 
