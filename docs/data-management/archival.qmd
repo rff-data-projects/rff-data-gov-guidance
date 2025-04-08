@@ -1,17 +1,6 @@
 ---
-title: Disposal & Archival
+title: Archival & Disposal
 ---
-
-## Disposal
-
-Some data may need to be deleted to protect sensitive information or comply with regulations, data agreements, or funder requirements. This is often referred to as __data disposition__. If any of these requirements applies to a project, follow these best practices when deleting data:
-
-* __Verify Requirements__: Confirm funder agreements and legal obligations regarding data retention and deletion.
-* __Source Deletion__: Confirm with [IT](mailto:ithelp@rff.org) that the files were fully deleted in accordance with requirements (e.g., backup files).
-* __Documentation__: Record when and how data was deleted.
-
-These practices should apply to data stored the RFF network, OneDrive, or Microsoft Teams.
-
 
 ## Archival
 
@@ -72,6 +61,14 @@ Contact IT at [IThelp@rff.org](mailto:ithelp@rff.org) to arrange and configure a
 * Approximate folder size (e.g., 5 GB)
 * The nature of sensitive/proprietary datasets
 
+## Disposal
 
+Some data may need to be deleted to protect sensitive information or comply with regulations, data agreements, or funder requirements. This is often referred to as __data disposition__. If any of these requirements applies to a project, follow these best practices when deleting data:
+
+* __Verify Requirements__: Confirm funder agreements and legal obligations regarding data retention and deletion.
+* __Source Deletion__: Confirm with [IT](mailto:ithelp@rff.org) that the files were fully deleted in accordance with requirements (e.g., backup files).
+* __Documentation__: Record when and how data was deleted.
+
+These practices should apply to data stored the RFF network, OneDrive, or Microsoft Teams.
 
 
