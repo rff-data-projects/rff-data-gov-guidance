@@ -17,7 +17,7 @@ The primary place to store project data and code is the L:/ drive.
 All projects should have an L:/ drive folder, even when working with external collaborators.
 It is optimized for data-intensive work, has large storage capacity, is regularly backed up, and is more secure than personal drives.
 An RFF account is required to access the network, which can be accessed from work computers or remotely.
-Git repositories can be set up within L drive project folders, as described in the Organization section below.
+Git repositories can be set up within L drive project folders, as described in the [Organization](../data-management/organization.qmd) section.
 
 ### L:/ drive storage request
 For both L:/ drive and OneDrive storage, coordinate with IT to ensure appropriate resources are available when you need them.
