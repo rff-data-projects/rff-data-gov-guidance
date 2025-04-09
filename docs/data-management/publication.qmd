@@ -72,6 +72,41 @@ For data and software, there are three license suites common in the academic spa
 
 ### Code
 
+Options:
+
+1. follow journal specifiations, e.g. 
+
+some journals require codebases to be uploaded to zenodo or dataverse, DOI, include link to github (links to how-to)
+
+2. Options for publishing code associated with other types of publications: Linking code to RFF GitHub organization:
+
+(change create repo recommendation to create private repository in github) if your repository is already part of the RFF github org...
+
+make it public
+
+if your repository is in a personal account...
+
+for repositories on personal github accounts:
+
+for projects you might continue work on / expand on:
+
+step 1. contact RFF org github (probably Alex) to fork that version of the repo, specify the publication associated w/ that version of the repo (put it in readme)
+step 2. rff org owner create a tag on your repository associated with a publication (link to how-to)
+step 3. future published versions of code 
+
+for projects you do not anticipate 
+
+
+
+
+
+
+
+
+
+
+
+
 ### Data
 
 #### Data-level documentation (metadata) {#metadata}
