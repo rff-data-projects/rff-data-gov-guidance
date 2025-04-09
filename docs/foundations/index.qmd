@@ -38,7 +38,7 @@ Good data practices provide (Langseth et al. 2015):
   * Ensure that you get credit for data products and for their use in other products
 
 
-## The Data Life Cycle
+## The data life cycle
 
 A common axiom among data scientists is the application of the 80/20 rule to effort: 80% of time is spent wrangling (managing and preparing) data, while 20% is spent on analysis. 
 Most activities in the data life cycle come before the analysis phase and are closely tied to data management. 
