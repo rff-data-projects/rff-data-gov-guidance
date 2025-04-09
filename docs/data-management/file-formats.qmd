@@ -4,7 +4,7 @@ title: File & Data Types
 
 ## Data file formats
 
-In general, data should be stored and/or archived in open formats. Open formats maximize accessibility because they have freely available specifications and generally do not require proprietary software to open them ([UC Santa Barbara's Standard Operating Procedures section on Data Formats](https://emlab-ucsb.github.io/SOP/2.5-data-formats.html)). The best file format to use will depend on the type and structure of data. 
+In general, data should be stored and/or archived in open formats. Open formats are non-proprietary, and therefore maximize accessibility because they have freely available specifications and generally do not require proprietary software to open them ([UC Santa Barbara's Standard Operating Procedures section on Data Formats](https://emlab-ucsb.github.io/SOP/2.5-data-formats.html)). The best file format to use will depend on the type and structure of data. 
 
 ### Key characteristics of data file formats
 
