@@ -97,8 +97,7 @@ Specifically, they should be human readable, machine readable, and compatible wi
     * For example, if you're generating output visualizations of the same metric, instead of `county_means_a` and `county_means_b`, use `county_means_map` and `county_means_boxplot`.
   * Avoid storing separate versions of files (e.g. `county_means_map_v2`), and instead rely on version control tools to save and document changes.
   * If you use abbreviations or acronyms, make sure they are defined in documentation such as a project-level README file.
-* __Machine readable__: Files and folders are easy to search for and filter based on name.
-  * Use lowercase characters (avoid "camelCase" method)
+* __Machine readable__: Files and folders should be easy to search and filter based on name.
   * Contain only ASCII characters (letters, numbers, and underscores)
     * Do not include spaces or special characters (/ \ : * ? <> &)
     * Use hyphens or underscores instead of spaces (the "snake_case" method)
