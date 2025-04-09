@@ -87,7 +87,7 @@ At a minimum, the project should have a README file in text or markdown format w
 __The source of all downloaded raw datasets should be documented in a README file.__
 
 ::: {.callout-note}
-As described in the [Organization](../data-management/organization.qmd) section, __all raw data should be retained in its raw form and not directly modified__.
+As described in the [Organization](../data-management/organization.qmd) section, __all raw data should be retained in their raw form and not directly modified__.
 :::
 
 Best practices:

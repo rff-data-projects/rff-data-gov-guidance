@@ -75,7 +75,7 @@ Make raw data files read-only so they cannot be accidentally modified.
   * *c. Integrate* Combine datasets.
 * **Step 4: Explore** Describe, summarize, and visualize statistics and relationships.
 * **Step 5: Analyze / Model** Develop, refine, and implement analysis and model specifications.
-* **Step 6: Archive, publish, and share** Finalize documentation (project-level README and metadata). Dispose and/or archive data. Publish final data products and documentation.
+* **Step 6: Archive, Publish, and Share** Finalize documentation (project-level README and metadata). Dispose and/or archive data. Publish final data products and documentation.
 
 ## About this guidance
 
