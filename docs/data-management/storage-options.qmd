@@ -25,17 +25,17 @@ At the start of a project (or upon major changes to specifications, such as time
 
 | Field | Response |
 | --- | --- |
-| Project name | SLR-Septic |
+| Project name | LUFA-AgSubsidies |
 | Storage location | L drive |
-| Folder name | L:/Project-SLR-Septic |
-| Short description | This project analyzes problems with septic systems in areas subject to sea level rise and potential solutions |
-| Principal Investigator(s) | Margaret Walls and Penny Liao |
-| RFF collaborators  | Sophie Pesek |
-| External collaborators | Several University of Maryland collaborators but they will not need access to the project folder |
+| Folder name | L:/Project-lufa-agsubsidies |
+| Short description | This project analyzes how variations in agricultural subsidy structures across U.S. counties influence land-use change |
+| Principal Investigator(s) | Otgonbayar Aquila and Léonce Dominique |
+| RFF collaborators  | Evelyn Loren |
+| External collaborators | Several University of Eastern Colorado collaborators but they will not need access to the project folder |
 | Data types | R, Stata, GIS datasets |
 | Size requested | 80 GB |
 | Estimated max. size | 150GB |
-| Archival date | December 2026 |
+| Archival date | December 2028 |
 | Data agreement or sensitive data security considerations | Proprietary data will be in raw data folder and will need to be made read-only |
 
 ## Working with external collaborators
