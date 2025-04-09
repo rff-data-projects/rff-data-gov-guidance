@@ -79,6 +79,8 @@ Make raw data files read-only so they cannot be accidentally modified.
 
 ## About this guidance
 
+TO BE WRITTEN
+
 ## The first step: Data management planning for reproducibility {#sec-dmp}
 
 __Data management planning__, a form of __preliminary__ documentation, is the process of thinking ahead about how your team will access, use, create, modify, store, share, and describe data related to your research project. Data management plans (DMPs) __enhance collaboration by establishing baseline expectations, make projects resilient to turnover, and save time in the long run.__ In addition, [many funders require data management plans](https://dmptool.org/public_templates) be submitted with grant proposals, so thinking about these issues early can facilitate the proposal process. 
