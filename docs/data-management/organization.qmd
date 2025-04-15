@@ -32,7 +32,7 @@ project_name/
 │   │   │   ├── processing/
 │   │   │   ├── analysis/
 │   │   ├── tools/
-│   ├── pesek/
+│   ├── caudle/
 │   │   ├── scripts/
 │   │   │   ├── processing/
 │   │   │   ├── analysis/
