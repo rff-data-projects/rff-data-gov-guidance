@@ -81,13 +81,12 @@ However, it's important to strike a balance.
 Too many subfolders can complicate navigation and make the project harder to understand.
 Aim to create subfolders only when they help categorize files meaningfully—like separating raw data from processed data or utility functions from analysis scripts—without over-complicating the structure.
 
-### Miscellaneous Practices
+## Naming Folders, Files and Scripts
 
-* When creating folders, follow the naming conventions outlined in the following section.
+When creating folders:
+
 * Avoid ambiguous/overlapping categories and generic catch-all folders (e.g. "temp" or "new").
 * Avoid creating or storing copies of the same file in different folders
-
-## Naming Folders, Files and Scripts
 
 Folder (including subfolder), file, and script names should be consistent and descriptive. 
 Specifically, they should be human readable, machine readable, and compatible with default ordering. 
