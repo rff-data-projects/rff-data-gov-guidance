@@ -61,7 +61,7 @@ The tools folder (sometimes called util, modules, or helpers) contains scripts w
 
 Note that this template does not include specific folders for notes, literature reviews, presentations, products, project management, etc., because those types of files are not the focus of this guidance.
 Folders for these documents should exist either with the data folders or in another project folder, such as the shared Teams folder.
-If other departments or external collaborators should have access to a folder or file, we recommend storing them in Teams. See the RFF Communication Norms guidance for more information.
+If other departments or external collaborators should have access to a folder or file, we recommend storing them in Teams. See the [RFF Communication Norms and Guidance](https://my.rff.org/human-resources/rff-communication-norms-and-guidelines/) for more information.
 
 ## Other Organization Practices
 
