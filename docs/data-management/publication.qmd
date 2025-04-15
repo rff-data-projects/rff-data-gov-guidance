@@ -24,29 +24,30 @@ In some cases the research team may have joint IP ownership with partners or fun
 
 ### Choose Appropriate Licenses 
 
-Some important terms to review before choosing licenses are:
-
-* **Attribution** refers to crediting to the original creator, author, or source as specified in the licensing terms. Attribution ensures recognition of the intellectual property and efforts of the creators while allowing others to use, modify, or distribute the licensed material.
-
-* **Copyleft** is a concept in software licensing that ensures any derivative works (modifications or adaptations) of a particular work remain subject to the same licensing terms as the original work.
-
-* **Enclosure** is process of restricting access, usage, or modification of software or its source code through the imposition of licensing terms. It involves the application of intellectual property rights (such as copyright, patents, or trade secrets) to create boundaries around software, typically to protect the developer's or organization's control over its distribution and use.
-
-* **Share-alike** requires that any derivative works (adaptations or modifications) are licensed under the same or a compatible license. This ensures that future users of the adapted work can use it under similar terms.
-
-* **Viral**: Licenses like the GNU General Public License (GPL) and the Open Database License (ODbL) are often described as "viral" because they require derivative works to comply with the same licensing terms as the original work. This characteristic ensures that the freedoms granted by the license (such as the ability to use, modify, and share) are preserved in all subsequent versions or derivatives, but it also imposes specific obligations on those who modify or build upon the original.
-
 #### Common Licenses
 
-For data and software, there are three license suites common in the academic space: *MIT*, *GNU GPU*, and *ODC*.
+For software and data, there are three main license suites common in the academic space: *MIT*, *GNU GPU*, and *ODC*. *MIT* and *GNU GPU* are separate software licenses, while *ODC* has two commonly-used data licenses. All four are described below.
 
 ##### Software licenses
-*	[MIT](https://choosealicense.com/licenses/mit/): The more permissive and flexible. Users, including commercial entities, can view, use, modify, and distribute the work freely. Allows for commercial use and enclosure. Attribution is required.
-* [GNU General Public Use (GPU)](https://choosealicense.com/licenses/gpl-3.0/): Users, including commercial entities, can view, use, modify, and distribute the work freely. However, it carries copyleft, so all distributions must be released under the same GNU GPU license, ensuring open access (viral). Attribution is required.
+*	[MIT](https://choosealicense.com/licenses/mit/): The more permissive and flexible. Users, including commercial entities, can view, use, modify, and distribute the work freely. Allows for commercial use and **enclosure**. **Attribution** is required.
+
+(_**Enclosure** is the process of restricting access, usage, or modification of software or its source code through the imposition of licensing terms. It involves the application of intellectual property rights (such as copyright, patents, or trade secrets) to create boundaries around software, typically to protect the developer's or organization's control over its distribution and use._)
+
+(_**Attribution** refers to crediting to the original creator, author, or source as specified in the licensing terms. Attribution ensures recognition of the intellectual property and efforts of the creators while allowing others to use, modify, or distribute the licensed material._)
+
+* [GNU General Public Use (GPU)](https://choosealicense.com/licenses/gpl-3.0/): Users, including commercial entities, can view, use, modify, and distribute the work freely. However, it carries **copyleft**, so all distributions must be released under the same GNU GPU license, ensuring open access (**viral**). **Attribution** is required.
+
+(_**Copyleft** is a concept in software licensing that ensures any derivative works (modifications or adaptations) of a particular work remain subject to the same licensing terms as the original work._)
+
+(_**Viral**: Licenses like the GNU General Public License (GPL) and the Open Database License (ODbL) are often described as "viral" because they require derivative works to comply with the same licensing terms as the original work. This characteristic ensures that the freedoms granted by the license (such as the ability to use, modify, and share) are preserved in all subsequent versions or derivatives, but it also imposes specific obligations on those who modify or build upon the original._)
+
 
 ##### Data licenses by Open Data Commons (ODC)
-* [ODC-By](https://opendatacommons.org/licenses/by/1-0/): The more permissive and flexible. Users, including commercial entities, can view, use, modify, and distribute the work freely. Allows for commercial use and enclosure. Attribution is required.
-* [ODCbL](https://opendatacommons.org/licenses/odbl/): Users, including commercial entities, can view, use, modify, and distribute the work freely. However, it carries share-alike, so all distributions must be released under the same ODCbL license, ensuring open access (viral). Attribution is required.
+* [ODC-By](https://opendatacommons.org/licenses/by/1-0/): The more permissive and flexible. Users, including commercial entities, can view, use, modify, and distribute the work freely. Allows for commercial use and **enclosure**. **Attribution** is required.
+
+* [ODCbL](https://opendatacommons.org/licenses/odbl/): Users, including commercial entities, can view, use, modify, and distribute the work freely. However, it carries **share-alike**, so all distributions must be released under the same ODCbL license, ensuring open access (**viral**). **Attribution** is required.
+
+(_**Share-alike**, similar to **copyleft**, requires that any derivative works (adaptations or modifications) are licensed under the same or a compatible license. This ensures that future users of the adapted work can use it under similar terms._)
 
 #### Recommendations for selecting licenses
 
