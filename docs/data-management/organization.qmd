@@ -13,7 +13,7 @@ Regardless of the specific method deployed, your data project organization shoul
 * __Simple__: The folder structure should be easy to navigate and understand, even for someone new to the project. It should mirror the logical flow of the project and use clear, descriptive names that reflect the contents and purpose of each folder.
 * __Flexible__: The structure should be adaptable to evolving project needs, allowing for the addition of new data, methods, or collaborators without disrupting the existing organization. It should support different types of data and workflows, making it easy to integrate new elements as the project evolves.
 
-These qualities also facilitate version control practices. There is additional guidance on organization for version control here 
+These qualities also facilitate version control practices. There is additional guidance on organization for version control [here](../version-control/index.qmd).
 
 <!-- [TODO: Insert LINK TO RELEVANT SUBSECTION]. -->
 Below is an example of a directory structure that would be compatible with version control implementation on RFF's L:/ drive. It has four main folders: data, results, code, and docs. This version illustrates a personal repository folder model of code version control, which operates best on the L:/ drive. Similar directories with slight changes to the code folder can be employed in other cases.
