@@ -111,15 +111,10 @@ for projects you do not anticipate
 
 #### Data-level documentation (metadata) {#metadata}
 
-It is recommended to attach **metadata** files to published datasets. Metadata documentation is structured, often in a standardized format, and machine-generated and machine-readable. Metadata records document the “who, what, when, where, how, and why” of a data resource. The advantages of machine-generated and machine-readable metadata files include:
+It is recommended to attach **metadata** files to published datasets. Metadata ("data about data") documents the “who, what, when, where, how, and why” of a data resource. Metadata not only allows users (your future self included) to understand and use datasets, but also facilitates search and retrieval of the data when deposited in a data repository. 
 
-* They not only allow users (your future self included) to understand and use datasets, but also facilitates search and retrieval of the data when deposited in a data repository.
-* Metadata can be maintained with version control systems to track changes over time, enhancing transparency and reproducibility.
-* Metadata formatted for automated processing, such as JSON or XML standards, can integrate with data repositories or APIs for broader accessibility.
+Below are the key components of metadata. They can be stored in a simple text or markdown file.
 
-Key Components of Metadata: 
-
-```
 * Title: Descriptive name of the dataset. 
 * DOI number: Associated with the final publication, dataset, or both
 * Abstract: Summary of the dataset’s content
@@ -133,9 +128,8 @@ Key Components of Metadata:
 * Additional geospatial metadata components, if applicable
   *	Spatial Extent: Geographic coverage (bounding coordinates)
   *	Projection Information: Coordinate system details
-```
 
-There are various metadata formats and standards for specific disciplines. Additional guidance and resources for generating machine-readable metadata are here: [Metadata and describing data – Cornell Data Services](https://data.research.cornell.edu/data-management/storing-and-managing/metadata/).
+In some contexts, generating machine-readable metadata that adheres to certain disciplinary standards is useful. There are various metadata formats and standards for specific disciplines. Additional guidance and resources for generating machine-readable metadata are here: [Metadata and describing data – Cornell Data Services](https://data.research.cornell.edu/data-management/storing-and-managing/metadata/).
 
 #### Uploading data to Zenodo
 
