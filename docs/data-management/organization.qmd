@@ -22,7 +22,7 @@ Below is an example of a directory structure that would be compatible with versi
 project_name/
 ├── data/
 │   ├── raw/
-│   ├── intermediate or int/
+│   ├── intermediate/
 │   ├── clean/ (optional)
 ├── results/
 ├── docs/
