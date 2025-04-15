@@ -157,18 +157,13 @@ For guidance on choosing which files to publish and how to handle API-accessed d
 
 * Upload data, metadata, and the project-level README file.
 * Enter metadata information in applicable fields (contributors, associated journal article or conference presentation, etc.)
+* Include a link to the GitHub code repository.
 * Choose an Access Level
   *	Open Access: Publicly available for anyone.
   * Embargoed: Set a release date if the data must remain private for a certain period.
   * Restricted Access: Requires users to request access.
 
-##### Step 4 (Optional): Link to GitHub for Software Preservation
-If the dataset is associated with published code:
-
-* Connect Zenodo to GitHub via the GitHub integration.
-* Select a GitHub repository to archive as a DOI-backed Zenodo release.
-
-##### Step 5: Publish & Get a DOI
+##### Step 4: Publish & Get a DOI
 * Review all details and make any necessary edits.
 * Click "Publish" to finalize the upload.
 * Zenodo will generate a DOI — use this when citing the dataset in publications.
