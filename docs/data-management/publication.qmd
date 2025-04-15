@@ -29,6 +29,7 @@ In some cases the research team may have joint IP ownership with partners or fun
 For software and data, there are three main license suites common in the academic space: *MIT*, *GNU GPU*, and *ODC*. *MIT* and *GNU GPU* are separate software licenses, while *ODC* has two commonly-used data licenses. All four are described below.
 
 ##### Software licenses
+
 *	[MIT](https://choosealicense.com/licenses/mit/): The more permissive and flexible. Users, including commercial entities, can view, use, modify, and distribute the work freely. Allows for commercial use and **enclosure**. **Attribution** is required.
 
 (_**Enclosure** is the process of restricting access, usage, or modification of software or its source code through the imposition of licensing terms. It involves the application of intellectual property rights (such as copyright, patents, or trade secrets) to create boundaries around software, typically to protect the developer's or organization's control over its distribution and use._)
@@ -72,6 +73,12 @@ For software and data, there are three main license suites common in the academi
 *__For publishing both code and data, ensure that the project-level README is up to date.__*
 
 ### Code
+
+There are two options: 
+ 
+The RFF github organization can fork the repository. This would basically make a copy of the repository at a certain point in your process. This would work well if you want to capture a certain snapshot of the model that's, say, associated with a certain publication. It can also be updated to sync with the latest version of the repository.
+ 
+You can transfer ownership of the repository to the RFF org. All existing collaborators would still have write access (with no new permissions granted to anyone other than the organization owners). The repo URL would change. This is a good option for a more permanent re-homing with a neat URL.
 
 Options:
 
