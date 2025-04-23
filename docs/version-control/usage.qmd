@@ -32,21 +32,24 @@ Here are two examples of how a project / team might choose to use repositories.
 
 This section outlines the bare-bones workflow for using Git and GitHub.
 Start here and familiarize yourself with these concepts before optionally moving onto the [Branch Workflow](#branch-workflow).
-Essentially, the workflow begins with either [create a new repository](#creating-a-repository) or [clone an existing repository](#cloning-a-repository).
+Essentially, the workflow begins with either [create a new repository](#creating-a-repository) or [clone an existing repository](#cloning-a-repository).  A repository is simply a folder that is version-controlled by Git, and usually hosted by GitHub.  
 Then, after [editing the files](#editing-files), it is necessary to [stage the file changes](#staging-file-changes), then [commit the file changes](#commiting-file-changes), then [push the committed changes](#pushing-committed-changes) to the remote repository.
 When collaborating with others, it may be necessary to [pull published commits made by others](#pulling-changes-from-others).
 If both you and the collaborator have made changes, it may prove necessary to [handle any merge conflicts](#handling-merge-conflicts).  If these conflicts happen often, it may be worth considering the [branch workflow](#branch-workflow), which is better suited for frequent collaboration on the same set of files.
 
 <TODO: add detail to the basic concepts>
 
-#### Creating a repository
-#### Cloning a repository
-#### Editing files
-#### Staging file changes
-#### Committing file changes
-#### Pushing committed changes
-#### Pulling changes from others
-#### Handling merge conflicts
+#### Downloading an Existing Repository
+
+The process for downloading an existing GitHub repository is called "cloning".
+In order to clone an existing project repository, navigate to that repository <TODO: Finish this>
+
+### Editing files
+### Staging file changes
+### Committing file changes
+### Pushing committed changes
+### Pulling changes from others
+### Handling merge conflicts
 
 A team could do all their software development using these basic concepts.
 One person would create a repository in github, then all team members would clone the repository to make a copy on their computers.

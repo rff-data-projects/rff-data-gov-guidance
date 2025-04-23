@@ -37,8 +37,9 @@ book:
         - docs/software/sq1.qmd
     - part: docs/version-control/index.qmd
       chapters:
-        - docs/version-control/terminology.qmd
+        # - docs/version-control/terminology.qmd
         - docs/version-control/setup.qmd
+        - docs/version-control/tutorial.qmd
         - docs/version-control/usage.qmd
         - docs/version-control/project-management.qmd
         - docs/version-control/faq.qmd

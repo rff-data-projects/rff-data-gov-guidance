@@ -1,0 +1,135 @@
+---
+title: Tutorial
+---
+
+Before you begin this tutorial, make sure you have:
+
+- [x] [Installed Git](./setup.qmd#git-installation)
+- [x] [Created a GitHub account](./setup.qmd#make-a-github-account)
+
+## First Steps
+
+### Introduce Yourself to Git
+
+First, open Git Bash.  You can hit the windows key and type "bash" and it should pop up for you to open.
+
+In the Git Bash window, you can type all kinds of commands, including Git commands, which are always prependended with "git", or bash commands that are commonly run in terminals.
+
+Let's start with:
+
+```bash
+git --version
+```
+
+It should have printed out what version you are running, something like `git bersion 1.47.0.windows.2`.  Now, let's introduce ourselves to Git:
+
+```bash
+git config --global user.name 'Your Name Here'
+git config --global user.email 'your-name-here@rff.org'
+git config --global --list
+```
+
+Now, Git will include your name and email when you publish changes.
+
+### Creating a Repository in GitHub
+
+1. To create a repository hosted on GitHub, first navigate to [github.com](https://github.com/) and click the plus button in the top right corner, then click the "new repository" button. 
+
+![Creating a Repository](../../images/git-create-repo.png)
+
+2. Next, you may select who you would like to **own** the repository.
+It could either by owned by your user account, or an organization you are a member of.
+This may be something to discuss with your project team.
+The repository owner will show up in the URL of the repository, in the structure of: `https://github.com/<owner-name>/<repository-name>`.
+For example, for the `E4ST.jl` repo created in the `e4st-dev` organization, the URL is: `https://github.com/e4st-dev/E4ST.jl`.
+If in doubt, you can specify yourself as the owner, and change ownership later on.
+
+![Repository Ownership](../../images/git-repo-ownership.png)
+
+3. Now you must enter the repository name.
+We recommend all lowercase names with dashes separating words, like `my-repo-name`.
+The only exception is when a programming language’s best practices prescribe a specific repository naming convention.
+(i.e. julia package repositories are supposed to be camelcase as in `MyRepoName.jl`)
+
+4. Now you must choose whether the repository is to be public or private.
+Choose private for repositories that will contain sensitive information, and public if the project requires it to be public.
+It is easy to change from private to public later on, so when in doubt choose private.
+If you have chosen to make your project public, you will need to also select which license to use.
+See the [section on software licenses]() <TODO: Link to software licenses section here> to help make this decision.
+
+5. Check the box to add a README file.
+This will create a file called `README.md` located in the repository's root folder, where you can add basic documentation for the repository.
+
+6. Optional: Choose a `.gitignore` template from the dropdown menu.
+`.gitignore` specifies certain file types that Git will not track the changes of, by default.
+For example, it is best to ignore an auto-created config file made by R studio that is user-specific.
+Generally it is a good idea to select the .gitignore template for the programming language you will be using.
+
+7. Click the "Create Repository"!!
+This should take you to the home page of your new repository.
+
+### Cloning Your First Repository with Git
+
+Now that we've made a remote repository, let's get it copied onto our computer.
+Copying a remote Git repository is called _cloning_.
+This process will work the same way for any existing repository, including the one that we made in the steps above.
+
+First, it's important to choose a good file location to store the git repository.  While it's not required, many people like to have a single folder to store all of their Git repositories.  An alternative would be to store the Git repository in an associated project folder.
+
+Git Bash has a _working directory_, which is the location that it is operating in.  To see what the current working directory is, we can enter the `pwd` command, which stands for **p**rimary **w**orking **d**irectory.
+
+```bash
+pwd
+```
+
+Now lets try **c**hanging the working **d**irectory with the `cd` command, to whatever directory you would like to store your Git repository in.  For example:
+
+```bash
+cd 'C:/Users/<my-user-name>/OneDrive - rff/repos'
+```
+
+::: {.callout-note}
+It is only necessary to use quotes for filenames in bash if there is a space in the path, as in the example above.
+:::
+
+Now, in an internet browser, navigate to the home page of the repository you wish to clone.  
+Click the button labeled `< > Code`, then copy the URL to clipboard by clicking the logo with intersecting squares.
+
+In the Git bash window, type `git clone ` then paste in the repository URL from your clipboard by right-clicking.  Altogether this would look like:
+  
+```bash
+git clone https://github.com/<owner-name>/<repository-name>
+```
+
+If the repository is private, Git Bash may prompt you for your GitHub credentials.  After entering them, you should be left with the cloned repository located in the working directory!  Finally, you can navigate into that newly created repo using the `cd` command:
+
+```bash
+cd <repository-name>
+```
+
+::: {.callout-note}
+If you have set up SSH keys as in the [optional setup section](./setup.qmd#optional-set-up-ssh-keys), you can copy the SSH address for the repository.  To do this, after clicking the `< > Code` button, select `SSH` before copying the URL to your clipboard.  If properly set up, when cloning from an SSH URL, you should not be prompted for GitHub credentials, even for a private repository.
+:::
+
+
+### Making and Publishing File Changes 
+
+You can now make file changes in any file editor, like RStudio, Visual Studio Code, MATLAB, etc.
+
+<TODO: finish this section>
+
+### Handling Conflicts
+
+<TODO: Finish this section>
+
+## Branching
+
+<TODO: add explanation of what it is, and why use it, including a visual>
+
+### Creating a Branch
+
+<TODO: add description of branch naming convention, and how to make one, how to check out different branches>
+
+### Merging a Branch
+
+<TODO: talk about the PR process, etc>

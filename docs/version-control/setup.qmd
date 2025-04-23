@@ -12,40 +12,26 @@ It is simple to associate multiple email addresses with your account later on, s
 
 ## Git Installation
 
-It is necessary to install git onto any computer that you may wish to interact with local repositories.
-There are many ways to interact with git, including several applications with graphical user interfaces, which may help to visualize what is happening.
-Normally, IT has installed Git on RFF computers. If not, please send a request to [IThelp@rff.org](mailto:ithelp@rff.org) to request a git install on an RFF machine.  For personal computers you may install manually following [these instructions](https://git-scm.com/downloads/win).
+It is necessary to install git onto any computer from which you wish to interact with local repositories.
+Normally, IT has installed Git on RFF computers. If not, please send a request to [IThelp@rff.org](mailto:ithelp@rff.org) to request a git install on an RFF machine.  For personal computers, you may install manually following [these instructions](https://git-scm.com/downloads/win).
 
 ## Choose a User Interface
 When you install git, it generally will already install a couple of applications you can use to interface with git.
 
 1. __Git Bash/CMD__ – This is just like a command prompt for windows, where you enter text-based commands for git.
-This is the industry standard, so it is what we suggest for new git users.
-Git Bash allows for git commands in addition to standard UNIX commands, whereas Git CMD allows for git commands in addition to standard windows CMD prompt commands.
+This is the industry standard, so it is what we suggest for new git users, and __we will use Git Bash for tutorials on this site__.
+Git Bash allows for git commands in addition to standard UNIX commands, whereas Git CMD allows for git commands in addition to standard windows CMD prompt commands.  The examples in this guidance will use this.
 
 ![Git Bash](../../images/git-bash.png)
 
 2. __Git GUI__ – This is a minimalist graphical user interface letting you use git without having to use a command line.
 It also allows for simplistic visualization of branches.
+While our tutorials will use Git Bash, it should be fairly straightforward to use the Git GUI instead.
 
 ![Git Gui](../../images/git-gui.png)
 
-
 If you wish to learn a different user interface, check out the list [here](https://git-scm.com/downloads/guis?os=windows), and check with the IT team before installing.
 Most of the concepts will be fairly similar to what we share in the guide.
-
-## Cloning Your First Repository
-
-Say there is an existing repository on GitHub that you would like to download in order to modify or explore on your computer.
-The process for creating a local copy on your computer is called [cloning](./terminology.qmd#clone).
-
-1. Open Git Bash or CMD. Navigate to the folder you would like to clone the repository into.  For example `cd 'C:\Users\<my-user-name>\OneDrive - rff\repos'`.
-2. In a browser, navigate to the repository's GitHub page.  For example, [https://github.com/e4st-dev/E4ST.jl](https://github.com/e4st-dev/E4ST.jl).
-3. Click the button labeled `< > Code`, then copy the URL to clipboard by clicking the logo with intersecting squares.
-4. In the Git bash window, type `git clone ` then paste in the repository URL from your clipboard by right-clicking.  Altogether this would look like:
-  ```
-  git clone https://github.com/e4st-dev/E4ST.jl.git
-  ```
 
 ## Optional: Set up SSH Keys
 
