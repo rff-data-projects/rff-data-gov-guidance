@@ -101,26 +101,144 @@ In the Git bash window, type `git clone ` then paste in the repository URL from 
 git clone https://github.com/<owner-name>/<repository-name>
 ```
 
-If the repository is private, Git Bash may prompt you for your GitHub credentials.  After entering them, you should be left with the cloned repository located in the working directory!  Finally, you can navigate into that newly created repo using the `cd` command:
-
-```bash
-cd <repository-name>
-```
+If the repository is private, Git Bash may prompt you for your GitHub credentials.  After entering them, you should be left with the cloned repository located in the working directory!
 
 ::: {.callout-note}
 If you have set up SSH keys as in the [optional setup section](./setup.qmd#optional-set-up-ssh-keys), you can copy the SSH address for the repository.  To do this, after clicking the `< > Code` button, select `SSH` before copying the URL to your clipboard.  If properly set up, when cloning from an SSH URL, you should not be prompted for GitHub credentials, even for a private repository.
 :::
 
+Finally, you can navigate into that newly created repo using the `cd` command:
+
+```bash
+cd <repository-name>
+```
 
 ### Making and Publishing File Changes 
 
-You can now make file changes in any file editor, like RStudio, Visual Studio Code, MATLAB, etc.
+Now that we have a Git repository on our computer, let's explore the process of making file changes and saving versions.  To give a conceptual outline, there are four steps.
+0. __Pull__ changes from others.  This is to ensure we are working on the latest version of the repository. `git pull`
+1. __Make changes__ to files.  You can do this with any text editor.
+2. __Stage__ changes. This tells Git which changes you would like to select for the next version. `git add`
+3. __Commit__ staged changes.  This publishes any staged changes as a new version. `git commit`
+4. __Push__ commit(s) to the remote/online repository.  `git push`
 
-<TODO: finish this section>
+Let's walk through that process together.  In Git Bash, type `git status` to show the status of the repository.  It should give you a short report about which __branch__ you are on (more about branches later), whether your local copy is up to date with the remote copy, and any file changes you've made.
+
+```
+On branch main                                 # this is the default branch
+Your branch is up to date with 'origin/main'.  # the local version matches the version in GitHub
+
+nothing to commit, working tree clean          # we haven't made file changes
+```
+
+At this point, it is __ALWAYS__ a good idea to run the `git pull` command to make sure we are up to date with the latest version.  This command first checks to see if the remote repository version (the version stored in GitHub) has had any commits since the last time we pushed or pulled.  If there are any, it will download them incorporating those changes into your working version.
+
+Now, let's open up the README file and make some changes.  
+You can either navigate to the file in explorer or type `notepad README.md` to open the README file in the notepad text editor.
+Add a few lines to your README, then save and close the file.
+In the future, you can use whatever editor you prefer, such as RStudio, MATLAB, Visual Studio Code, etc.
+After making that change, let's type our `git status` command into Git Bash again.
+
+```
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+```
+
+This message is telling us that there are some file changes that have not yet been staged for commit.  Let's stage the changes from the README file with the command `git add README.md`.
+
+::: {callout.note}
+You can use the command `git add -p` in order to interactively select which files, and even sections of files you would like to stage for commit.
+:::
+
+Now let's check the status once more:
+
+```
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   README.md
+```
+
+Now, our `README.md` file is under the heading `Changes to be committed`, so it is ready to be published.  Let's publish with the command `git commit`.  It should open up notepad and prompt you to enter a commit message.  In the first line, enter a concise commit message describing the changes that you are publishing, more info on that here <TODO: create and link section>.  Save and close the file, and you have successfully authored your first commit!
+
+::: {callout.note}
+If you find typing your commit message in notepad arduous, we have the command for you!
+
+```bash
+git commit -m "Simply type your messsage here"
+```
+
+__OR__ if you want to be even more lazy, see the [section for the commit alias][#commit-message-alias]
+:::
+
+The last step is to **push** commits to the online repository.  At this point, `git status` indicates that the local version of the repository is 1 commit ahead of the online version.  To send the commits to the online repository, we will simply enter the command `git push`!  Now, if you navigate to the online version of the repository in GitHub, you should be able to see the changes you made.  Congratulations!!
 
 ### Handling Conflicts
 
-<TODO: Finish this section>
+Have you ever been working on a Word document with another person, and maybe your computer gets disconnected, and you accidentally both edit the same paragraph?  Usually Word will get smart and show both sets of changes and allow you to choose which one you would like.  Sometimes, the same thing happens in Git/GitHub.
+
+Say, for example, my collaborator pushes a commit to our project repository without me realizing.  In an ideal world, I would run the `git pull` command to make sure I have that commit incorporated into my local copy.  However, maybe I forgot to pull, or my collaborator pushed that commit as I was already making file changes.  Then, I commit my changes and push them and am greeted with the following ugly message:
+
+```
+$ git push
+To github.com:Ethan-Russell/MyTestRepo.jl.git
+ ! [rejected]        main -> main (fetch first)
+error: failed to push some refs to 'github.com:Ethan-Russell/MyTestRepo.jl.git'
+hint: Updates were rejected because the remote contains work that you do not
+hint: have locally. This is usually caused by another repository pushing to
+hint: the same ref. If you want to integrate the remote changes, use
+hint: 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+```
+
+Don't panic!  Git is built for this.  This message is Git telling us that we can't push because of the other commit, and it also tells us that the solution is to `git pull` before pushing again.  When we run `git pull`, Git will try to automatically merge the changes for us.  Ideally, if changes are made in separate sections of the file (or different files altogether), Git will be able to merge everything, and you can simply `git push` again to push your commit(s).  However, if both versions have changed the same file, Git will flag it as a conflict and it will enter "MERGING" mode (denoted in git bash to the right of the prompt).  This is the type of message Git will print if there is a conflict:
+
+```
+$ git pull
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+Unpacking objects: 100% (3/3), 947 bytes | 55.00 KiB/s, done.
+From github.com:Ethan-Russell/MyTestRepo.jl
+   6449e68..a3b9c32  main       -> origin/main
+Auto-merging README.md
+CONFLICT (content): Merge conflict in README.md
+Automatic merge failed; fix conflicts and then commit the result.
+```
+
+Fortunately, Git has identified which file(s) have conflicts: in this case, only the README.md file has a conflict.  So let's open the file where there is a conflict.  Git identifies which lines have conflicts by adding some helpful syntax, which we can search for to find the conflict.  You can do a search for "====" and that will take you to the conflict:
+
+```
+<<<<<<< HEAD
+# My Test Repo
+=======
+# MyTestRepo
+>>>>>>> a3b9c323e36238db4a26a91addc5c699add04b6a
+```
+
+Git will list the local version first, right after printing `<<<<<<< HEAD`, followed by a line of `=======`, then the version that was pulled in from the remote repository, then `>>>>>>>` and a unique identifier for the commit in the remote repository.  Translating the above chunk of text, it looks like someone else had added the title `MyTestRepo` to the README.md file, and I added the title `My Test Repo`.  All we need to do here is:
+
+1. Select which version of the changes we want (or we could edit it to be a combination of the two!)
+2. delete the other version, as well as all of the notation that Git has added (`<<<`, `===`, `>>>`)
+3. Save and commit the resulting file.
+
+In the example above, I would change that portion of the file to be:
+
+```
+# MyTestRepoFinalName
+```
+
+After adding and committing that change, we can then safely run `git push`.  
 
 ## Branching
 
@@ -133,3 +251,32 @@ You can now make file changes in any file editor, like RStudio, Visual Studio Co
 ### Merging a Branch
 
 <TODO: talk about the PR process, etc>
+
+## Tips
+
+### Aliases
+
+An __Alias__ is like creating a shortcut for a git command so that you don't have to type out the whole command.  
+
+For example, we type `git status` fairly often and it would be nice to simply type `git st`.  We can tell Git that we want to create an `alias` called `git st` that simply executes `git status` instead.  Here is how we tell Git Bash to save that into its configuration file.
+
+```
+git config --global alias.st status
+```
+
+#### Commit Message Alias
+
+This alias makes it easier to type a commit message without opening notepad.  
+
+##### Setup
+
+```
+git config --global alias.cm 'commit -m'
+```
+
+##### Usage
+
+```
+git cm "Commit message here"
+```
+
