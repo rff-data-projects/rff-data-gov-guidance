@@ -22,13 +22,13 @@ When you install git, it generally will already install a couple of applications
 This is the industry standard, so it is what we suggest for new git users, and __we will use Git Bash for tutorials on this site__.
 Git Bash allows for git commands in addition to standard UNIX commands, whereas Git CMD allows for git commands in addition to standard windows CMD prompt commands.  The examples in this guidance will use this.
 
-![Git Bash](../../images/git-bash.png)
+![Git Bash](../../images/git-bash.png)\
 
 2. __Git GUI__ – This is a minimalist graphical user interface letting you use git without having to use a command line.
 It also allows for simplistic visualization of branches.
 While our tutorials will use Git Bash, it should be fairly straightforward to use the Git GUI instead.
 
-![Git Gui](../../images/git-gui.png)
+![Git Gui](../../images/git-gui.png)\
 
 If you wish to learn a different user interface, check out the list [here](https://git-scm.com/downloads/guis?os=windows), and check with the IT team before installing.
 Most of the concepts will be fairly similar to what we share in the guide.

@@ -35,7 +35,7 @@ Now, Git will include your name and email when you publish changes.
 
 1. To create a repository hosted on GitHub, first navigate to [github.com](https://github.com/) and click the plus button in the top right corner, then click the "new repository" button. 
 
-![Creating a Repository](../../images/git-create-repo.png)
+![Creating a Repository](../../images/git-create-repo.png)\
 
 2. Next, you may select who you would like to **own** the repository.
 It could either by owned by your user account, or an organization you are a member of.
@@ -44,7 +44,7 @@ The repository owner will show up in the URL of the repository, in the structure
 For example, for the `E4ST.jl` repo created in the `e4st-dev` organization, the URL is: `https://github.com/e4st-dev/E4ST.jl`.
 If in doubt, you can specify yourself as the owner, and change ownership later on.
 
-![Repository Ownership](../../images/git-repo-ownership.png)
+![Repository Ownership](../../images/git-repo-ownership.png)\
 
 3. Now you must enter the repository name.
 We recommend all lowercase names with dashes separating words, like `my-repo-name`.
@@ -242,17 +242,64 @@ After adding and committing that change, we can then safely run `git push`.
 
 ## Branching
 
-<TODO: add explanation of what it is, and why use it, including a visual>
+This is one of the most amazing features of Git.  Git allows us to create different working versions, or `branches` of our repository.  This lets me take a snapshot of the repository and try out a new idea _without affecting my main branch_.  Then, once I (and all my collaborators) are satisfied with the changes in my new branch, we can `merge` it back into the main branch.  This is how the majority of modern software is developed.  It allows easy review of the portions of the code that have changed, and gives me confidence that my changes are not messing up the `main` branch until they are fully developed.  
+
+```{mermaid}
+---
+title: Example Git Branching
+---
+gitGraph
+   commit id: "initial commit"
+   commit id: "starting point for the new feature"
+   branch my-feature
+   checkout main
+   commit id: "ongoing development of main"
+   checkout my-feature
+   commit id: "trying new feature"
+   commit id: "perfecting new feature"
+   checkout main
+   merge my-feature id: "now it is merged!"
+   commit id: "continued development"
+```
+
+Here's an overview of the process:
+
+0. Pull any code updates! `git pull`
+1. Create and check out a new branch with an appropriate branch name. `git branch` and `git checkout`
+2. Make and push commits to the new branch. `git add`, `git commit`, and `git push`.
+3. When ready to merge, create a __Pull Request__ from GitHub.
+4. Review the Pull Request.
+5. Merge the Pull Request.
+6. Check out and pull main branch in Git Bash. `get checkout` and `git pull`
 
 ### Creating a Branch
 
-<TODO: add description of branch naming convention, and how to make one, how to check out different branches>
+You may have realized that Git creates a branch by default, called `main`.
+You could think of the `main` branch as the trunk of a tree.
+(If you encounter any older repositories, the default was the `master` branch, but the default was changed in mid-2020).
+You may notice that Git Bash has the branch name `main` written to the right of the prompt.  
+
+![Git Main Branch](../../images/git-main-branch.png)\
+
+To create a new branch, simply enter the command `git branch <my-branch-name>`.
+Generally, branch names should be:
+* concise yet descriptive. `plot-results` > `plot-all-results-with-numpy`
+* lowercase and hyphen-separated. `plot-results` rather than `PlotResults` or `plot_results`
+* no special characters (numbers, letters, and hyphens only)
 
 ### Merging a Branch
 
 <TODO: talk about the PR process, etc>
 
 ## Tips
+
+### Commit Messages
+
+
+
+### Branch Naming
+
+[Here](https://medium.com/@abhay.pixolo/naming-conventions-for-git-branches-a-cheatsheet-8549feca2534) is a great resource for learning more about branch naming conventions.
 
 ### Aliases
 
