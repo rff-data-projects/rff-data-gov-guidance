@@ -43,6 +43,7 @@ This may be something to discuss with your project team.
 The repository owner will show up in the URL of the repository, in the structure of: `https://github.com/<owner-name>/<repository-name>`.
 For example, for the `E4ST.jl` repo created in the `e4st-dev` organization, the URL is: `https://github.com/e4st-dev/E4ST.jl`.
 If in doubt, you can specify yourself as the owner, and change ownership later on.
+See the [Workflows section on repository ownership](./workflows.qmd#should-our-repository-be-hosted-by-a-github-organization-or-user) for more information.
 
 ![Repository Ownership](../../images/git-repo-ownership.png)\
 
@@ -52,8 +53,9 @@ The only exception is when a programming language’s best practices prescribe a
 (i.e. julia package repositories are supposed to be camelcase as in `MyRepoName.jl`)
 
 4. Now you must choose whether the repository is to be public or private.
-Choose private for repositories that will contain sensitive information, and public if the project requires it to be public.
+Generally, choose private for repositories that will contain sensitive information, and public if the project requires it to be public.
 It is easy to change from private to public later on, so when in doubt choose private.
+See the [public/private section in Workflows](./workflows.qmd#should-our-repository-be-public-or-private) for more information.
 If you have chosen to make your project public, you will need to also select which license to use.
 See the [section on software licenses]() <TODO: Link to software licenses section here> to help make this decision.
 
@@ -169,7 +171,7 @@ Changes to be committed:
         modified:   README.md
 ```
 
-Now, our `README.md` file is under the heading `Changes to be committed`, so it is ready to be published.  Let's publish with the command `git commit`.  It should open up notepad and prompt you to enter a commit message.  In the first line, enter a concise commit message describing the changes that you are publishing, more info on that here <TODO: create and link section>.  Save and close the file, and you have successfully authored your first commit!
+Now, our `README.md` file is under the heading `Changes to be committed`, so it is ready to be published.  Let's publish with the command `git commit`.  It should open up notepad and prompt you to enter a commit message.  In the first line, enter a concise commit message describing the changes that you are publishing, more info on that [here](./faq.qmd#commit-messages).  Save and close the file, and you have successfully authored your first commit!
 
 ::: {callout.note}
 If you find typing your commit message in notepad arduous, we have the command for you!
@@ -178,7 +180,7 @@ If you find typing your commit message in notepad arduous, we have the command f
 git commit -m "Simply type your messsage here"
 ```
 
-__OR__ if you want to be even more lazy, see the [section for the commit alias][#commit-message-alias]
+__OR__ if you want to be even more lazy, see the [section for the commit alias][./faq.qmd#commit-message-alias]
 :::
 
 The last step is to **push** commits to the online repository.  At this point, `git status` indicates that the local version of the repository is 1 commit ahead of the online version.  To send the commits to the online repository, we will simply enter the command `git push`!  Now, if you navigate to the online version of the repository in GitHub, you should be able to see the changes you made.  Congratulations!!
@@ -287,6 +289,7 @@ Generally, branch names should be:
 * concise yet descriptive. `plot-results` > `plot-all-results-with-numpy`
 * lowercase and hyphen-separated. `plot-results` rather than `PlotResults` or `plot_results`
 * no special characters (numbers, letters, and hyphens only)
+* See more info in the [branch naming tip](./faq.qmd#branch-naming)
 
 You will notice that after running the `git branch` command, the `main` branch is still designated as the active branch.
 To work on the newly created branch, simply use the command `git checkout <new-branch-name>`.  
@@ -350,40 +353,3 @@ git merge <new-branch-name>
 ```
 
 If any conflicts come up, follow the instructions in the [Handling Conflicts section](#handling-conflicts).  Once you have dealt with the conflicts (if any), you are done, and can push the main branch, which now has updates from your new branch.
-
-## Tips
-
-### Commit Messages
-
-If you want to learn to write better commit messages, [this is a great resource!](https://www.freecodecamp.org/news/how-to-write-better-git-commit-messages/)
-
-### Branch Naming
-
-[Here](https://medium.com/@abhay.pixolo/naming-conventions-for-git-branches-a-cheatsheet-8549feca2534) is a great resource for learning more about branch naming conventions.
-
-### Aliases
-
-An __Alias__ is like creating a shortcut for a git command so that you don't have to type out the whole command.  
-
-For example, we type `git status` fairly often and it would be nice to simply type `git st`.  We can tell Git that we want to create an `alias` called `git st` that simply executes `git status` instead.  Here is how we tell Git Bash to save that into its configuration file.
-
-```
-git config --global alias.st status
-```
-
-#### Commit Message Alias
-
-This alias makes it easier to type a commit message without opening notepad.  
-
-##### Setup
-
-```
-git config --global alias.cm 'commit -m'
-```
-
-##### Usage
-
-```
-git cm "Commit message here"
-```
-
