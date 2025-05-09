@@ -40,8 +40,7 @@ book:
         # - docs/version-control/terminology.qmd
         - docs/version-control/setup.qmd
         - docs/version-control/tutorial.qmd
-        - docs/version-control/usage.qmd
-        - docs/version-control/project-management.qmd
+        - docs/version-control/workflows.qmd
         - docs/version-control/faq.qmd
 format:
   html:

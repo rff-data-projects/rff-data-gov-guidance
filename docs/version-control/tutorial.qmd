@@ -116,6 +116,7 @@ cd <repository-name>
 ### Making and Publishing File Changes 
 
 Now that we have a Git repository on our computer, let's explore the process of making file changes and saving versions.  To give a conceptual outline, there are four steps.
+
 0. __Pull__ changes from others.  This is to ensure we are working on the latest version of the repository. `git pull`
 1. __Make changes__ to files.  You can do this with any text editor.
 2. __Stage__ changes. This tells Git which changes you would like to select for the next version. `git add`
@@ -340,14 +341,21 @@ To handle these conflicts, use the process described in the [Handling Conflicts 
 
 #### Merging Branches without Pull Requests
 
-<TODO: finish this>
+Merging with a Pull Request may, at times, feel a bit unwieldy, especially if you are in a hurry or working on a project by yourself.  It is still possible to merge into the main branch without making and reviewing a Pull Request.  We just advise caution with this method because it does not facilitate easy review, and so could easily introduce mistakes into the main branch.  If you are confident that the branch is ready to merge without additional review, in Git Bash, simply enter the following commands:
+
+```
+git checkout main
+git pull
+git merge <new-branch-name>
+```
+
+If any conflicts come up, follow the instructions in the [Handling Conflicts section](#handling-conflicts).  Once you have dealt with the conflicts (if any), you are done, and can push the main branch, which now has updates from your new branch.
 
 ## Tips
 
 ### Commit Messages
 
-<TODO: add link to resource here>
-
+If you want to learn to write better commit messages, [this is a great resource!](https://www.freecodecamp.org/news/how-to-write-better-git-commit-messages/)
 
 ### Branch Naming
 

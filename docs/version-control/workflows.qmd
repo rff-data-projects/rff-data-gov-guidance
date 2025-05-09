@@ -1,6 +1,9 @@
 ---
-title: Usage
+title: Workflows
 ---
+
+Now that we know some basic Git principles, how do we make a workflow for a given project?  First, let's start by talking about some key principles for _any_ workflow, then we can get into some of the specific considerations for a project team at RFF.
+
 ## Key Principles
 
 * Users should commit changes frequently, with descriptive messages. 
