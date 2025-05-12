@@ -14,7 +14,7 @@ Here are some of the benefits of using Git with GitHub for version control:
 
 * Grants __peace of mind__ knowing work is stored safely and can be recalled with minimal effort, which gives greater __liberty__ to test out new ideas (even when a computer breaks!)
 
-* Facilitates __collaboration__ by allowing multiple versions to coexist and to efficiently borrow code from one another
+* Facilitates __collaboration__ by allowing multiple versions to coexist and efficiently borrow code from one another
 
 * Enables efficient __review and discussion__ of code changes before incorporating them into the main branch of the repository
 
@@ -24,7 +24,7 @@ Here are some of the benefits of using Git with GitHub for version control:
 
 * __Preserves__ easy web browser access to all versions of code.
 
-* __Organize__ documentation so it can be kept alongside the code itself
+* __Organizes__ documentation so it can be kept alongside the code itself
 
 * __Provides public access__ to datasets and code under the auspices of a software license
 
@@ -38,7 +38,8 @@ Before we get started in using Git for version control, let's cover a few basic 
 **Git** is a popular version control system, which is software that we can download and use on our computer.
 Git works by monitoring the changes of the contents of an otherwise ordinary file folder, called a repository.
 In a Git repository, a user can tell Git which file changes to keep, which to discard, and can label those changes, go back to previous file versions, and much more!
-While it is possible to use Git only on your computer without posting it online, it is often advisable to host repositories online so that they are synced in the cloud, making it easy to share and back-up.
-While there are many websites that can host Git repositories, the most popular is called **GitHub**, which is what we recommend using at RFF. (Some others you may come across GitLab and BitBucket)
+
+While it is possible to use Git only on your computer without posting it online, it is often advisable to host repositories online so that they are synced in the cloud, making it easy to share them and back them up.
+There are many websites that can host Git repositories, but the most popular is called **GitHub**, which is what we recommend using at RFF. (Some others you may come across GitLab and BitBucket)
 Not only does GitHub host these repositories, but it also provides convenient ways to host documentations, discuss code changes, and report bugs.
 GitHub has individual user accounts, but also groups of users called **organizations**.
