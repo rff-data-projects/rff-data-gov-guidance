@@ -80,7 +80,7 @@ OneDrive/.../raw_data/fires/data.shp.
 
 ### GitHub
 
-While we recommend only using GitHub to version control script files, experienced users can also use it to share and version control small data files (well below 100 MB). 
+While we recommend only using GitHub to version control script files, experienced users can also use it to share and version control small data files (well below 100 MB). This is also discussed in the [Organization](../data-management/organization.qmd/#Directory-Structure) section.
 
 Consider security, sensitivity, and license restrictions when hosting data on GitHub.
 
