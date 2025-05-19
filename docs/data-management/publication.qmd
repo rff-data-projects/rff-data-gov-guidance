@@ -84,8 +84,6 @@ Some journals require authors to:
 * Include a link to the GitHub code repository in the manuscript
 * Reference the codebase DOI in the manuscript
 
-See [GitHub + Zenodo integration](https://docs.github.com/en/repositories/archiving-a-github-repository/referencing-and-citing-content) for creating a DOI for your GitHub repository.
-
 #### Sharing code via the RFF GitHub Organization
 
 You can link your GitHub repository to the RFF GitHub organization in one of two ways:
