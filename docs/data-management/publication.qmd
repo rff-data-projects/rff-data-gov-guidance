@@ -61,8 +61,8 @@ For software and data, there are three main license suites common in the academi
 4. If there are other requirements or the team would like to review a broader range of software licenses and their specifications, visit [ChooseALicense](https://choosealicense.com/).
 
 ### Create and customize license files
- 
-* Once the license has been selected, download or create a .txt license file from the license website. Save the file as LICENSE.txt in the project folder and/or repository. 
+
+* Once the license has been selected, download or create a .txt license file from the license website. Save the file as `LICENSE.txt` in the project folder and/or repository. 
 
 * Review the license terms and modify where necessary (most open-source and open-data licenses are designed to be used as-is, but others may require you to fill in specific details, such as name or organization).
 
@@ -70,50 +70,64 @@ For software and data, there are three main license suites common in the academi
 
 ## Publishing
 
-*__For publishing both code and data, ensure that the project-level README is up to date.__*
+*__For publishing both code and data, ensure that the [project-level README](../data-management/documentation.qmd#project-readme) is up to date.__*
 
 ### Code
 
-There are two options: 
- 
-The RFF github organization can fork the repository. This would basically make a copy of the repository at a certain point in your process. This would work well if you want to capture a certain snapshot of the model that's, say, associated with a certain publication. It can also be updated to sync with the latest version of the repository.
- 
-You can transfer ownership of the repository to the RFF org. All existing collaborators would still have write access (with no new permissions granted to anyone other than the organization owners). The repo URL would change. This is a good option for a more permanent re-homing with a neat URL.
+When your project is ready to publish code—whether alongside a journal article, report, or other research output—there are a few options for how to share it, especially if your code is hosted on GitHub.
 
-Options:
+#### Note on journal requirements
 
-1. follow journal specifiations, e.g. 
+Some journals require authors to:
 
-some journals require codebases to be uploaded to zenodo or dataverse, DOI, include link to github (links to how-to)
+* Make the codebase publicly accessible
+* Include a link to the GitHub code repository in the manuscript
+* Reference the codebase DOI in the manuscript
 
-2. Options for publishing code associated with other types of publications: Linking code to RFF GitHub organization:
+See [GitHub + Zenodo integration](https://docs.github.com/en/repositories/archiving-a-github-repository/referencing-and-citing-content) for creating a DOI for your GitHub repository.
 
-(change create repo recommendation to create private repository in github) if your repository is already part of the RFF github org...
+#### Sharing code via the RFF GitHub Organization
 
-make it public
+You can link your GitHub repository to the RFF GitHub organization in one of two ways:
 
-if your repository is in a personal account...
+##### Option 1: Forking into the RFF GitHub Organization
 
-for repositories on personal github accounts:
+*Best for*: Capturing a snapshot of a repository at a specific point in time (e.g., associated with a publication).
 
-for projects you might continue work on / expand on:
+* A fork creates a copy of your repository under the RFF organization account.
+* This snapshot can be tagged to align with a publication version (e.g., v1.0-paper-release).
+* The fork can be updated to stay in sync with the original repo, or kept as a fixed version.
+* Include a note in the README linking the snapshot to the relevant publication.
 
-step 1. contact RFF org github (probably Alex) to fork that version of the repo, specify the publication associated w/ that version of the repo (put it in readme)
-step 2. rff org owner create a tag on your repository associated with a publication (link to how-to)
-step 3. future published versions of code 
+##### Option 2: Transferring Ownership to the RFF Organization
 
-for projects you do not anticipate 
+*Best for*: Ongoing or institutional projects requiring a permanent home and clean URL.
 
+* The repository is moved under the RFF GitHub organization.
+* All existing collaborators retain their permissions.
+* The repository URL will change, but redirects will be preserved by GitHub.
+* Organization owners (e.g., staff managing RFF's GitHub) gain administrative control.
 
+#### Recommended Publishing Workflow
 
+If your repository is already in the RFF GitHub organization:
 
+1. Make the repository public once you're ready to publish.
 
+2. Tag the version associated with the publication (e.g., v1.0-publication-name) ([how to create GitHub tags](https://git-scm.com/book/en/v2/Git-Basics-Tagging)).
 
+3. Archive it on Zenodo if a DOI is needed.
 
+If your repository is under a personal GitHub account:
 
+1. Decide whether you plan to continue developing the code:
 
+* For **ongoing or reusable projects**, consider transferring the repository to the RFF organizational GitHub.
+* For **static, published versions**, request that the RFF GitHub account fork your repository.
 
+2. Contact the RFF GitHub organization admins via [DGWG@rff.org](mailto:dgwg@rff.org) so that they can fork or migrate the repository and add a tag associated with the publication (tags do not automatically transfer with the fork).
 
+3. Optionally, deposit the tagged version to Zenodo and link the DOI in your README.
 
 ### Data
 
@@ -134,8 +148,8 @@ Below are the key components of metadata. They can be stored in a simple text or
 * Access Constraints: Restrictions on data use
 * Attribute / field definitions: Define all abbreviations and coded entries 
 * Additional geospatial metadata components, if applicable
-  *	Spatial Extent: Geographic coverage (bounding coordinates)
-  *	Projection Information: Coordinate system details
+*	Spatial Extent: Geographic coverage (bounding coordinates)
+*	Projection Information: Coordinate system details
 
 In some contexts, generating machine-readable metadata that adheres to certain disciplinary standards is useful. There are various metadata formats and standards for specific disciplines. Additional guidance and resources for generating machine-readable metadata are here: [Metadata and describing data – Cornell Data Services](https://data.research.cornell.edu/data-management/storing-and-managing/metadata/).
 
@@ -167,9 +181,9 @@ For guidance on choosing which files to publish and how to handle API-accessed d
 * Enter metadata information in applicable fields (contributors, associated journal article or conference presentation, etc.)
 * Include a link to the GitHub code repository.
 * Choose an Access Level
-  *	Open Access: Publicly available for anyone.
-  * Embargoed: Set a release date if the data must remain private for a certain period.
-  * Restricted Access: Requires users to request access.
+*	Open Access: Publicly available for anyone.
+* Embargoed: Set a release date if the data must remain private for a certain period.
+* Restricted Access: Requires users to request access.
 
 ##### Step 4: Publish & Get a DOI
 * Review all details and make any necessary edits.
