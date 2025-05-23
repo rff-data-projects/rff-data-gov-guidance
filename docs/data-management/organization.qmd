@@ -94,42 +94,33 @@ Examples of logical groupings for subfolder names are by
 
 ## Naming folders, files and scripts
 
-When creating folders:
+*When creating folders:*
 
 * Avoid ambiguous/overlapping categories and generic catch-all folders (e.g. "temp" or "new").
-* Avoid creating or storing copies of the same file in different folders
+* Avoid creating or storing copies of the same file in different folders.
 
-Folder (including subfolder), file, and script names should be consistent and descriptive. 
-Specifically, they should be human readable, machine readable, and compatible with default ordering. 
+*When creating data or script files, make them:*
 
 * __Human readable__: Create brief but meaningful names that can be interpreted by colleagues.
-* Make names descriptive: they should convey information about file/folder content.
-* For example, if you're generating output visualizations of the same metric, instead of `county_means_a` and `county_means_b`, use `county_means_map` and `county_means_boxplot`.
-* Avoid storing separate versions of files (e.g. `county_means_map_v2`), and instead rely on version control tools to save and document changes.
-* If you use abbreviations or acronyms, make sure they are defined in documentation such as a project-level README file.
-* __Machine readable__: Files and folders should be easy to search and filter based on name.
-* Contain only ASCII characters (letters, numbers, and underscores)
-* Do not include spaces or special characters (/ \ : * ? <> &)
-* Use hyphens or underscores instead of spaces (the "snake_case" method)
-* Compatible with default ordering: the ability to sort files by name is useful and helps organization, as shown below.
-* __Chronological order__: If there are temporal measurements, use the ISO 8601 standard for dates `(YYYY-MM-DD)`.
-Here is an example of temporal data files named for compatibility with default ordering:
-* `2021_01_01_precipitation_mm.csv`
-* `2021_01_02_precipitation_mm.csv`
-* `2021_01_01_temperature_statistics_f.csv`
-* `2021_01_02_temperature_statistics_f.csv`
 
-::: {.callout-note}
-It is not recommended to use dates in script file names, except in cases of individual temporal measurements. Instead, leverage version control to save different script versions.
-:::
+  * Make names __descriptive__: they should convey information about file/folder content. For example, if you're generating output visualizations of the same metric, instead of `county_means_a` and `county_means_b`, use `county_means_map` and `county_means_boxplot`.
+  * __Avoid storing separate versions of files__ (e.g. `county_means_map_v2`), and instead rely on version control tools to save and document changes. 
+  * If you must create different versions of files, make sure to __document__ the distinction in a README file.
+  * If you use __abbreviations or acronyms__, make sure they are defined in documentation such as a project-level README file.
+  
 
-* __Logical order__: one way to organize scripts or folders is by using numbered prefixes signaling the processing order. 
-Example of source code files named for compatibility with default ordering:
-* `01_clean_raw_data.R`
-* `02_merge_clean_data.R`
-* `03_descriptive_statistics.R`
-* `04_regressions.R`
+* __Machine readable__: 
 
-::: {.callout-note}
-Make sure to "left pad" numbers with zeros. For example, use `01` instead of `1`.  This is to allow default sorting to still apply if and when the filename prefixes enter the double digits.
-:::
+  * Use only __ASCII__ characters (letters, numbers, and underscores).
+  * __Do not__ include spaces or special characters (/ \ : * ? <> &).
+  * Use hyphens or underscores instead of spaces (the __"snake_case"__ method).
+  * Files and folders should be easy to search and filter based on name using __structured file names__. The ability to sort and read files by name is useful and helps organization but requires specific conventions. See examples in the table below, keeping in mind that:
+    * It is not recommended to use dates in __script__ file names to denote when a script was created or modified. Instead, leverage version control to save and document different script versions.
+    * Make sure to __"left pad"__ numbers with zeros. For example, use `01` instead of `1`.  This is to allow default sorting to still apply if and when the file name prefixes enter the double digits.
+
+| Practice for structured file names | Description | Example |
+| --- | --- | --- |
+| ID-based names | Structure file paths and names in a way that makes them easy to access programmatically—e.g., enabling batch loading or iteration across identifiers like years/dates, counties, or scenarios. For example, storing county-level data as shown would allow data to be read into memory by simply looping over FIPS codes as they appear in the directory file names. | `53019_data.csv`<br>`53033_data.csv`<br>`53061_data.csv` |
+| Chronological order | Use ISO 8601 format for date-based files: `YYYY-MM-DD`. This ensures dates sort correctly by default. | `2021_01_01_precipitation_mm.csv`<br>`2021_01_02_precipitation_mm.csv`<br>`2021_01_01_temperature_statistics_f.csv`<br>`2021_01_02_temperature_statistics_f.csv` |
+| Logical processing order | For scripts or folders that must run in sequence, use numeric prefixes to indicate the intended order of execution. | `01_clean_raw_data.R`<br>`02_merge_clean_data.R`<br>`03_descriptive_statistics.R`<br>`04_regressions.R` |
+
