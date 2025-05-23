@@ -26,6 +26,17 @@ You could either:
 
 When a project team is deciding to use Git, it is important to think through the following considerations.  We recommend answering these questions at the beginning of a version-controlled project.
 
+### Where should each team member store their local repositories?
+
+Here are two examples of how a project / team might choose to store their repositories.
+
+* Each team member keeps their own working version of a repository somewhere private, either on the `C:/` drive of their personal computer, or on the RFF servers, with the intention of no other team members having access to it.
+  * __Pros__: it is “clean”, with no accidental file changes from other users.
+  * __Cons__: It would require care to be taken for access (file paths) to non-version-controlled data files.
+* Each team member keeps their own working version of a repository on a shared drive, i.e. the L drive, which could (but probably shouldn’t) be accessed by other team members., i.e. inside of a larger project directory
+  * __Pros__: it allows easy access to shared project files; specifically, users can see changes made by others if they haven't pushed them to the repository due to outside circumstances
+  * __Cons__: files could be accidentally changed by others if they are working in the incorrect version of the repository
+
 ### Should our repository be hosted by a GitHub Organization or User?
 
 * Do you work on a team with their own GitHub Organization (i.e. [`E4ST`](https://github.com/e4st-dev))?
@@ -46,17 +57,6 @@ It is easy to change from private to public later on, so when in doubt choose pr
 If you have chosen to make your project public, you will need to also select which license to use.
 See the [section on software licenses]() <TODO: Link to software licenses section here> to help make this decision.
 
-### Where should each team member store their local repositories?
-
-Here are two examples of how a project / team might choose to store their repositories.
-
-* Each team member keeps their own working version of a repository somewhere private, either on the `C:/` drive of their personal computer, or on the RFF servers, with the intention of no other team members having access to it.
-  * __Pros__: it is “clean”, with no accidental file changes from other users.
-  * __Cons__: It would require care to be taken for access (file paths) to non-version-controlled data files.
-* Each team member keeps their own working version of a repository on a shared drive, i.e. the L drive, which could (but probably shouldn’t) be accessed by other team members., i.e. inside of a larger project directory
-  * __Pros__: it allows easy access to shared project files; specifically, users can see changes made by others if they haven't pushed them to the repository due to outside circumstances
-  * __Cons__: files could be accidentally changed by others if they are working in the incorrect version of the repository
-
 ### Should our team use branches?
 
 To learn about branches, what they are for, and how to use them, see the [Branching section of the Tutorial](./tutorial.qmd#branching).  There are a few aspects to consider with this question.
@@ -72,6 +72,7 @@ To learn about branches, what they are for, and how to use them, see the [Branch
 ### If using branches, how do we want to handle code review?
 
 It would be good to talk about the following questions with your team:
+
 * Should code review be required for every change to the code?
   * One example of this would be requiring that every change be made in a branch and submitted via Pull Request, and that at least one person who did not author the Pull Request must approve it in order for the branch to be merged into the main branch.
   * Your team may decide to only require a Pull Request and code review for major features.

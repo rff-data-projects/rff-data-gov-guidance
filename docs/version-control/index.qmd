@@ -40,4 +40,3 @@ In a Git repository, a user can tell Git which file changes to keep, which to di
 While it is possible to use Git only on your computer without posting it online, it is often advisable to host repositories online so that they are synced in the cloud, making it easy to share and back-up.
 While there are many websites that can host Git repositories, the most popular is called **GitHub**, which is what we recommend using at RFF. (Some others you may come across GitLab and BitBucket)
 Not only does GitHub host these repositories, but it also provides convenient ways to host documentations, discuss code changes, and report bugs.
-GitHub has individual user accounts, but also groups of users called **organizations**.
