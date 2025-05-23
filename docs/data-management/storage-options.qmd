@@ -98,12 +98,12 @@ If an API is not available, having code download data from remote servers via ot
 Using APIs is ideal for a variety of reasons:
 
 * __Storage size__: An API allows the user/program to access specific data of relevance without needing to find room to store an entire, broader dataset (which is instead hosted on the data provider's server)
-* __Reproducibility__: Using public APIs or other ways of accessing public data on the internet allows for code produced using other best practices to run "out of the box" on any computer/VM with internet access
-* __Updates__: Code that uses API queries can be programmed to retrieve the most current data available each time it is executed, removing the need to manually update a local dataset.
+* __Reproducibility advantage__: Using public APIs or other ways of accessing public data on the internet allows for code produced using other best practices to run "out of the box" on any computer/VM with internet access
+* __Fresh data__: Code that queries an API can automatically retrieve the most current data each time it runs, eliminating the need to manually update local files.
 
 APIs do require some special considerations:
 
-* __Consistency__: Remote data may change. It is important to use version control and smaller intermediate datasets within a version control framework to ensure that past results can be reproduced consistently
+* __Reproducibility risk__: Because API data can change over time, it’s important to save a local copy of the queried data at key stages (e.g., before analysis or publication). This helps ensure results can be reproduced later, even if the live API data has changed.
 * __Longevity__: APIs may stop being accessible/maintained. It is not always a safe assumption that data stored remotely will continue to be accessible via an API. API packages and query formats may also change, so project code may need to be debugged occasionally to maintain compatibility with an API.
 * __Accessibility__: Not all online data sources have convenient API functions in a programmer's language of choice. Some have URL formats that allow data to be accessed regardless. The amount of documentation and the level of technical skill required to understand it can vary.
 
