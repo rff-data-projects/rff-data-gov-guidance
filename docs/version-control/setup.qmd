@@ -12,7 +12,7 @@ It is simple to associate multiple email addresses with your account later on, s
 
 ## Git Installation
 
-It is necessary to install git onto any computer from which you wish to interact with local repositories.
+It is necessary to install Git onto any computer from which you wish to interact with local repositories.
 Normally, IT has installed Git on RFF computers. If not, please send a request to [IThelp@rff.org](mailto:ithelp@rff.org) to request a git install on an RFF machine.  For personal computers, you may install manually following [these instructions](https://git-scm.com/downloads/win).
 
 ## Choose a User Interface
