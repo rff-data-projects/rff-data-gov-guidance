@@ -44,12 +44,12 @@ project_name/
 ### `Data` folder
 
 * The `data` folder contains all project data sets. 
-* Raw data is preserved in its own subfolder. 
+* __Raw data is preserved in its own subfolder.__
 * The `intermediate` folder contains datasets created during data cleaning and processing. 
 * If practical, a `clean` folder can contain cleaned output datasets, but note that it's often unclear when datasets are truly "clean" until late project stages.
 
 ::: {.callout-note}
-For projects with small datasets, this folder can be version controlled. In this case, this folder would be a subfolder of individuals' repository folders.
+For projects with small datasets, this folder can be version controlled, with larger files ignored using the `.gitignore` file. In this case, this folder would be a subfolder of individuals' repository folders.
 :::
 
 ### `Results` folder
