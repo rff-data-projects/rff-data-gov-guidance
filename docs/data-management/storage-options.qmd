@@ -105,11 +105,11 @@ APIs do require some special considerations:
 
 * __Reproducibility risk__: Because API data can change over time, it’s important to save a local copy of the queried data at key stages (e.g., before analysis or publication). This helps ensure results can be reproduced later, even if the live API data has changed.
 * __Longevity__: APIs may stop being accessible/maintained. It is not always a safe assumption that data stored remotely will continue to be accessible via an API. API packages and query formats may also change, so project code may need to be debugged occasionally to maintain compatibility with an API.
-* __Accessibility__: Not all online data sources have convenient API functions in a programmer's language of choice. Some have URL formats that allow data to be accessed regardless. The amount of documentation and the level of technical skill required to understand it can vary.
+* __Accessibility__: Not all online data sources have convenient API functions in a programmer's language of choice. Some have URL formats that allow data to be accessed regardless. The amount of documentation and the level of technical skill required to understand and use an API can vary.
 
 #### Publishing/Archiving data sourced from APIs {#publish-archive-apis}
 
-If you used an API to access source data, the best course for publishing or archiving source data will vary based on project needs, dataset size, and nature of the data. Some options are:
+If you use an API to access source data, the best course for publishing or archiving source data will vary based on project needs, dataset size, and nature of the data. Some options are:
 
 * __Download to folder__: During the archival phase, download the source data in its current state and save it to the project folder to be archived.
 * __Document__: Document the dataset version and access date in lieu of providing source data. While not ideal for reproducibility, this is suitable in cases where the source data is large, reliable, and not likely to be modified. 
