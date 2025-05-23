@@ -15,7 +15,7 @@ Regardless of the specific method deployed, your data project organization shoul
 
 These qualities also facilitate version control practices. There is additional guidance on organization for version control [here](../version-control/index.qmd).
 
-Below is an example of a directory structure that would be compatible with version control implementation on RFF's `L:/` drive. This version illustrates a personal repository folder model of code version control, which operates best on the `L:/` drive. Similar directories with slight changes to the scripts folder can be employed in other cases.
+Below is an example of a directory structure that would be compatible with version control implementation on RFF's `L:/` drive. This version illustrates a [personal repository](#repos-folder) folder model of code version control, which operates best on the `L:/` drive.
 
 ```
 project_name/
@@ -58,9 +58,9 @@ For projects with small datasets, this folder can be version controlled. In this
 * *For internal RFF projects, the `results` folder can be stored in the main directory and not within repositories.
 * **For projects with external collaborators, it may be useful to store the `results` folder within repositories. These files are generally smaller than 100 MB and can be stored in a main repository using GitHub; however, some formats (such as SVG) can be quite large. The .gitignore file can be configured to ignore certain file types (such as SVG files, when both PNG and SVG file formats are generated).
 
-### `Repos` folder
+### `Repos` folder {#repos-folder}
 
-* The `repos`, or repositories, directory contains version-controlled files. To allow individuals to work on version controlled files without interfering with others' versions, each researcher should have their own folder that's linked to the GitHub remote repository. Team members can then clone the project's Git repository into their respective folders and work exclusively within their own copies. Changes can be synced and reconciled using GitHub, preventing simultaneous edits of the same file and ensuring effective version control.
+* This directory structure is based on __personal repositories__. The `repos`, or repositories, directory contains version-controlled files. To allow individuals to work on version controlled files without interfering with others' versions, each researcher should have their own folder that's linked to the GitHub remote repository. Team members can then clone the project's Git repository into their respective folders and work exclusively within their own copies. Changes can be synced and reconciled using GitHub, preventing simultaneous edits of the same file and ensuring effective version control.
 * Individual folders (e.g. `Edgar`, `Caudle`) should have mirrored (the same) directory structures.
 
 ### `Scripts` folders
