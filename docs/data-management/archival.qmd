@@ -24,7 +24,7 @@ Archival takes place when projects are complete. To preserve the state of code a
 At RFF, archived files can still be accessed, read, and copied to active folders.
 :::
 
-When RFF data projects are archived, they are migrated to a new storage location, but are still configured to be accessible to certain team members.
+When RFF data projects are archived, they are migrated to a new storage location, but are still configured to be accessible to specified team members.
 The folder can be accessed in a way similar to the L drive, except that the files will be read-only to prevent accidental deletion or modification (they can still be copied or fully restored to the L drive).
 
 #### Step 1: Finalize data organization {#archival-finalize-data-org}
