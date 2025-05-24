@@ -1,5 +1,5 @@
 ---
-title: Sensitive & Proprietary
+title: Sensitive & Proprietary Data
 ---
 
 When using sensitive or proprietary data in your research project, it's crucial to ensure data security, privacy, and compliance with any agreements or regulations governing its use. There are five steps to addressing this.
