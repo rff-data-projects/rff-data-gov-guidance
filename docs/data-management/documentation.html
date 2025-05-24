@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Data Management – Data Guidance for Researchers</title>
+<title>4&nbsp; Documentation – Data Guidance for Researchers</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -30,8 +50,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
-<link href="../../docs/data-management/storage-options.html" rel="next">
-<link href="../../docs/foundations/index.html" rel="prev">
+<link href="../../docs/data-management/file-formats.html" rel="next">
+<link href="../../docs/data-management/organization.html" rel="prev">
 <link href="../../images/black-logo.svg" rel="icon" type="image/svg+xml">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
@@ -83,7 +103,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../docs/data-management/index.html">Data Management</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../docs/data-management/index.html">Data Management</a></li><li class="breadcrumb-item"><a href="../../docs/data-management/documentation.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Documentation</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -128,7 +148,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../docs/data-management/index.html" class="sidebar-item-text sidebar-link active">
+            <a href="../../docs/data-management/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Data Management</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -149,7 +169,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../docs/data-management/documentation.html" class="sidebar-item-text sidebar-link">
+  <a href="../../docs/data-management/documentation.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Documentation</span></span></a>
   </div>
 </li>
@@ -202,15 +222,32 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active" data-toc-expanded="1">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction"><span class="header-section-number">4.1</span> Introduction</a></li>
+  <li><a href="#types-of-documentation" id="toc-types-of-documentation" class="nav-link" data-scroll-target="#types-of-documentation"><span class="header-section-number">4.2</span> Types of documentation</a>
+  <ul class="collapse">
+  <li><a href="#preliminary" id="toc-preliminary" class="nav-link" data-scroll-target="#preliminary"><span class="header-section-number">4.2.1</span> Preliminary</a></li>
+  <li><a href="#process" id="toc-process" class="nav-link" data-scroll-target="#process"><span class="header-section-number">4.2.2</span> Process</a></li>
+  <li><a href="#product" id="toc-product" class="nav-link" data-scroll-target="#product"><span class="header-section-number">4.2.3</span> Product</a></li>
+  </ul></li>
+  <li><a href="#core-documentation" id="toc-core-documentation" class="nav-link" data-scroll-target="#core-documentation"><span class="header-section-number">4.3</span> Core documentation</a>
+  <ul class="collapse">
+  <li><a href="#project-readme" id="toc-project-readme" class="nav-link" data-scroll-target="#project-readme"><span class="header-section-number">4.3.1</span> The project-level README file</a></li>
+  <li><a href="#raw-data" id="toc-raw-data" class="nav-link" data-scroll-target="#raw-data"><span class="header-section-number">4.3.2</span> Raw data</a></li>
+  </ul></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/alexandra-thompson-dc/rff-data-gov-guidance/edit/main/docs/data-management/documentation.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/alexandra-thompson-dc/rff-data-gov-guidance/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../docs/data-management/index.html">Data Management</a></li><li class="breadcrumb-item"><a href="../../docs/data-management/documentation.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Documentation</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Data Management</h1>
+<h1 class="title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Documentation</span></h1>
 </div>
 
 
@@ -227,9 +264,103 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Data management encompasses the methods used to collect, store, organize, and use data.</p>
+<section id="introduction" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="introduction"><span class="header-section-number">4.1</span> Introduction</h2>
+<p>“<em><strong>If we are not conscientious documenters, we can easily end up… without the ability to coherently describe our research process up to that point</strong></em>” (<span class="citation" data-cites="Stoudt">Stoudt, Vásquez, and Martinez (<a href="#ref-Stoudt" role="doc-biblioref">2021</a>)</span>).</p>
+<p>Quality documentation is critical for ensuring that your work is understandable, reusable, and interpretable over time by external users, your colleagues, and your future self. It reduces errors, facilitates smooth project team transitions, and helps avoid confusion and duplication of efforts.</p>
+<p>Without documentation, projects lose their usefulness over time, as illustrated below <span class="citation" data-cites="Michener">(see also <a href="#ref-Michener" role="doc-biblioref">Michener et al. 1997</a>)</span>.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../images/information_loss.png" class="img-fluid figure-img"></p>
+<figcaption>Image from <a href="https://doi.org/10.1890/1051-0761(1997)007%5b0330:NMFTES%5d2.0.CO;2">Michener et al.&nbsp;1997</a></figcaption>
+</figure>
+</div>
+</section>
+<section id="types-of-documentation" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="types-of-documentation"><span class="header-section-number">4.2</span> Types of documentation</h2>
+<p>This summary can help guide team conversations around documentation strategies.</p>
+<section id="preliminary" class="level3" data-number="4.2.1">
+<h3 data-number="4.2.1" class="anchored" data-anchor-id="preliminary"><span class="header-section-number">4.2.1</span> Preliminary</h3>
+<p><strong>Preliminary</strong> documentation refers to early-stage descriptions created during the planning phase. This often includes a data management plan (DMP), which outlines data collection, organization, storage, and sharing strategies.</p>
+</section>
+<section id="process" class="level3" data-number="4.2.2">
+<h3 data-number="4.2.2" class="anchored" data-anchor-id="process"><span class="header-section-number">4.2.2</span> Process</h3>
+<p><strong>Process</strong> documentation involves capturing step-by-step procedures and workflows used to collect, process, analyze, and model data, including:</p>
+<ul>
+<li>Documenting raw data sources</li>
+<li>Documenting methods with code comments</li>
+<li>Documenting methods with version control tools</li>
+</ul>
+</section>
+<section id="product" class="level3" data-number="4.2.3">
+<h3 data-number="4.2.3" class="anchored" data-anchor-id="product"><span class="header-section-number">4.2.3</span> Product</h3>
+<p><strong>Product</strong> documentation provides information to accompany code and data of completed projects, ensuring usability and transparency. This documentation can be a part of or accompanying written products.</p>
+</section>
+</section>
+<section id="core-documentation" class="level2" data-number="4.3">
+<h2 data-number="4.3" class="anchored" data-anchor-id="core-documentation"><span class="header-section-number">4.3</span> Core documentation</h2>
+<section id="project-readme" class="level3" data-number="4.3.1">
+<h3 data-number="4.3.1" class="anchored" data-anchor-id="project-readme"><span class="header-section-number">4.3.1</span> The project-level README file</h3>
+<p>At a minimum, the project should have a README file in text or markdown format with the information listed below. This can be an evolving, living document. While it’s technically <strong>product documentation</strong>, it’s easiest to start it early in the project’s development.</p>
+<ul>
+<li>Project name and description</li>
+<li>Project PI and contact information</li>
+<li>List of staff responsible for data management and code development</li>
+<li>Associated final product(s), date of release, and DOI (if applicable)</li>
+<li>Link to published data/code (if applicable)</li>
+<li>License associated with final product(s)</li>
+<li>Nature of sensitive or proprietary data (if applicable)</li>
+<li>Any other important notes for navigating folder or using data/code</li>
+</ul>
+</section>
+<section id="raw-data" class="level3" data-number="4.3.2">
+<h3 data-number="4.3.2" class="anchored" data-anchor-id="raw-data"><span class="header-section-number">4.3.2</span> Raw data</h3>
+<p>Best practices:</p>
+<ul>
+<li>The source of all downloaded raw datasets should be documented in a README file.</li>
+<li>Create a README file associated with each raw data file, or each logical “cluster” of related raw data files, in the same folder as the data.</li>
+<li>If there are multiple data files in a folder, name the README so that it is easily associated with the data file(s) it describes (e.g., <code>README_PRISM_Daily_Temperature.txt</code>).</li>
+<li>Format README files consistently.</li>
+<li>Write the README document in an plain text and open source file format, such as .txt or .md.</li>
+</ul>
+<p>Below is a README template and example. Include in the README file the information shown in the example.</p>
+<p>Filename: <code>README_PRISM_Daily_Temperature.txt</code></p>
+<pre><code>Dataset name &amp; format: PRISM_Daily_Temperature_2024.csv
+
+Data source: Downloaded from the PRISM Climate Group website: https://prism.oregonstate.edu/ on 2024-02-28.
+
+Acquired by: [Name of researcher who downloaded the data]
+
+Data description: This dataset contains daily minimum and maximum temperature data for Washington State for the year 2024, with a spatial resolution of 4km.
+
+Preprocessing: No modifications were made to the raw dataset. The file is stored exactly as downloaded from the source.
+
+License &amp; Usage Restrictions: This dataset is publicly available under the PRISM Climate Group's data use policy. Refer to https://prism.oregonstate.edu/documents/PRISM_terms_of_use.pdf for more details.</code></pre>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>As described in the <a href="../../docs/data-management/organization.html">Organization</a> section, <strong>all raw data should be retained in their raw form and not directly modified</strong>.</p>
+</div>
+</div>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-Michener" class="csl-entry" role="listitem">
+Michener, W. K., J. W. Brunt, J. J. Helly, T. B. Kirchner, and S. G. Stafford. 1997. <span>“Nongeospatial Metadata for the Ecological Sciences.”</span> <a href="https://doi.org/10.1890/1051-0761">https://doi.org/10.1890/1051-0761</a>.
+</div>
+<div id="ref-Stoudt" class="csl-entry" role="listitem">
+Stoudt, S., V. N. Vásquez, and C. C. Martinez. 2021. <span>“Principles for Data Analysis Workflows.”</span> <a href="https://doi.org/10.1371/e1008770">https://doi.org/10.1371/e1008770</a>.
+</div>
+</div>
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -633,13 +764,13 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../../docs/foundations/index.html" class="pagination-link" aria-label="Foundations">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Foundations</span></span>
+      <a href="../../docs/data-management/organization.html" class="pagination-link" aria-label="Organization">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Organization</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../../docs/data-management/storage-options.html" class="pagination-link" aria-label="Storage Options">
-        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Storage Options</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../../docs/data-management/file-formats.html" class="pagination-link" aria-label="File &amp; Data Types">
+        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">File &amp; Data Types</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -651,7 +782,7 @@ ul.task-list li input[type="checkbox"] {
     </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions"><ul><li><a href="https://github.com/alexandra-thompson-dc/rff-data-gov-guidance/edit/main/docs/data-management/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/alexandra-thompson-dc/rff-data-gov-guidance/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/alexandra-thompson-dc/rff-data-gov-guidance/edit/main/docs/data-management/documentation.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/alexandra-thompson-dc/rff-data-gov-guidance/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>This page is built with <a href="https://quarto.org/">Quarto</a>.</p>
 </div>

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Data Management – Data Guidance for Researchers</title>
+<title>Foundations – Data Guidance for Researchers</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -30,8 +50,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
-<link href="../../docs/data-management/storage-options.html" rel="next">
-<link href="../../docs/foundations/index.html" rel="prev">
+<link href="../../docs/data-management/index.html" rel="next">
+<link href="../../index.html" rel="prev">
 <link href="../../images/black-logo.svg" rel="icon" type="image/svg+xml">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
@@ -70,6 +90,9 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script src="../../site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="../../site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="../../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
 
 </head>
@@ -83,7 +106,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../docs/data-management/index.html">Data Management</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../docs/foundations/index.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Foundations</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -122,13 +145,13 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../docs/foundations/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../docs/foundations/index.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Foundations</span></span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../docs/data-management/index.html" class="sidebar-item-text sidebar-link active">
+            <a href="../../docs/data-management/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Data Management</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -202,15 +225,24 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active" data-toc-expanded="1">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
+  <li><a href="#the-data-life-cycle" id="toc-the-data-life-cycle" class="nav-link" data-scroll-target="#the-data-life-cycle">The data life cycle</a></li>
+  <li><a href="#about-this-guidance" id="toc-about-this-guidance" class="nav-link" data-scroll-target="#about-this-guidance">About this guidance</a></li>
+  <li><a href="#sec-dmp" id="toc-sec-dmp" class="nav-link" data-scroll-target="#sec-dmp">The first step: Data management planning for reproducibility</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/alexandra-thompson-dc/rff-data-gov-guidance/edit/main/docs/foundations/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/alexandra-thompson-dc/rff-data-gov-guidance/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Data Management</h1>
+<h1 class="title"><span class="chapter-title">Foundations</span></h1>
 </div>
 
 
@@ -227,9 +259,96 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Data management encompasses the methods used to collect, store, organize, and use data.</p>
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>Good data practices can not only save time and headaches but increase the usefulness of your data and code and enhance the reproducibility of the whole project. Good data practices provide (<span class="citation" data-cites="USGS_training">Langseth et al. (<a href="#ref-USGS_training" role="doc-biblioref">2015</a>)</span>):</p>
+<ul>
+<li>Short-term benefits
+<ul>
+<li>Allow you to spend less time doing data management and more time doing research</li>
+<li>Make it easier to prepare and use data</li>
+<li>Ensure that collaborators can readily understand and use data files</li>
+</ul></li>
+<li>Long-term benefits
+<ul>
+<li>Make your work more transparent, reproducible, and rigorous</li>
+<li>Allow other researchers to find, understand, and use your data to address broad questions</li>
+<li>Ensure that you get credit for data products and for their use in other products</li>
+</ul></li>
+</ul>
+</section>
+<section id="the-data-life-cycle" class="level2">
+<h2 class="anchored" data-anchor-id="the-data-life-cycle">The data life cycle</h2>
+<p>A common axiom among data scientists is the application of the 80/20 rule to effort: 80% of time is spent wrangling (managing and preparing) data, while 20% is spent on analysis. Most activities in the data life cycle come before the analysis phase and are closely tied to data management. There are many different models of the data life cycle, and the relevant model for your individual project will vary. A general data life cycle is depicted below <span class="citation" data-cites="USGS_training">(see also <a href="#ref-USGS_training" role="doc-biblioref">Langseth et al. 2015</a>)</span>.</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">graph LR
+A(Plan) --&gt; B(Collect)
+B --&gt; C(Process)
+C --&gt; D(Explore / Visualize)
+D --&gt; E(Analyze / Model)
+E --&gt; F(Archive, Publish, Share)
+E --&gt; C
+E --&gt; A
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>The data life cycle is often iterative and nonlinear, and does not always follow the order shown. Your actual analysis workflow may include dead ends or repeated steps. Regardless, it is helpful to plan and discuss your data-oriented research using these common components of the data life cycle:</p>
+<ul>
+<li><strong>Step 1: Plan</strong> Identify data that will be collected and how it will be managed. Create a <a href="@sec-dmp">data management plan</a>.</li>
+<li><strong>Step 2: Collect</strong> Acquire and store raw data.
+<ul>
+<li><em>a. Acquire</em> Retrieve data from the appropriate source.</li>
+<li><em>b. Describe</em> Document the raw data source, format, variables, measurement units, coded values, and known problems.</li>
+<li><em>c.&nbsp;Quality assurance</em> Inspect the raw data for quality and fit for analysis purpose.</li>
+<li><em>d.&nbsp;Store</em> Store the raw data in the appropriate folder, as determined in the planning stage. Consider access, resilience (backing up), security, and, if relevant, data agreement stipulations. Make raw data files read-only so they cannot be accidentally modified.</li>
+</ul></li>
+<li><strong>Step 3: Process</strong> Prepare the data for exploration and analysis.
+<ul>
+<li><em>a. Clean</em> Preprocess the data to correct errors, standardize missing values, standardize formats, etc.</li>
+<li><em>b. Transform</em> Convert data into appropriate format and spatiotemporal scale (e.g., convert daily values to annual statistics).</li>
+<li><em>c.&nbsp;Integrate</em> Combine datasets.</li>
+</ul></li>
+<li><strong>Step 4: Explore</strong> Describe, summarize, and visualize statistics and relationships.</li>
+<li><strong>Step 5: Analyze / Model</strong> Develop, refine, and implement analysis and model specifications.</li>
+<li><strong>Step 6: Archive, Publish, and Share</strong> Finalize documentation (project-level README and metadata). Dispose and/or archive data. Publish final data products and documentation.</li>
+</ul>
+</section>
+<section id="about-this-guidance" class="level2">
+<h2 class="anchored" data-anchor-id="about-this-guidance">About this guidance</h2>
+<p>TO BE WRITTEN</p>
+</section>
+<section id="sec-dmp" class="level2">
+<h2 class="anchored" data-anchor-id="sec-dmp">The first step: Data management planning for reproducibility</h2>
+<p><strong>Data management planning</strong>, a form of <strong>preliminary</strong> documentation, is the process of thinking ahead about how your team will access, use, create, modify, store, share, and describe data related to your research project. Data management plans (DMPs) <strong>enhance collaboration by establishing baseline expectations, make projects resilient to turnover, and save time in the long run.</strong> In addition, <a href="https://dmptool.org/public_templates">many funders require data management plans</a> be submitted with grant proposals, so thinking about these issues early can facilitate the proposal process.</p>
+<p>This guidance resource provides general instructions for data practices and addresses many of the core questions that are part of the DMP process. <em><strong>At a minimum, the questions below should be reviewed at the start of a project</strong></em>. Associated guidance is linked.</p>
+<ol type="1">
+<li><p><a href="../../docs/data-management/organization.html">Where will data/code be stored and how will it be organized?</a></p></li>
+<li><p>How will the team use Microsoft Teams for file storage and communication? What types of files will be stored in the Teams folder versus the project’s L:/ drive folder? What will be communicated over Teams chat versus email or GitHub?</p></li>
+<li><p>Who will be responsible for <a href="../../docs/data-management/archival.html">disposing / archiving data</a>?</p></li>
+<li><p>Who will be responsible for <a href="../../docs/data-management/publication.html">publishing data/code and attaching appropriate documentation and use licenses</a>?</p></li>
+<li><p>What will the version control / git / GitHub workflow be?</p></li>
+<li><p>What coding software and main libraries will be used?</p></li>
+<li><p>How will code be reviewed for quality?</p></li>
+<li><p>What are expectations around data quality and code quality?</p></li>
+<li><p>How will <a href="../../docs/data-management/documentation.html">data sources</a>, code, and major methodological decisions be documented?</p></li>
+<li><p>Has the appropriate budget been allocated to implement this DMP?</p></li>
+</ol>
+<p>Certain projects may require additional considerations. For development of a more thorough DMP, refer to the <a href="https://learning.nceas.ucsb.edu/2023-04-coreR/session_14.html#document-your-project-using-a-dmp">UCSB NCEAS data management planning section</a>.</p>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-USGS_training" class="csl-entry" role="listitem">
+Langseth, M. L., H. S. Henkel, V. B. Hutchison, C.J. Thibodeaux, and L. S. Zolly. 2015. <span>“USGS Data Management Training Modules—Planning for Data Management Part II Using the DMPTool to Create Data Management Plans: U.S. Geological Survey.”</span> <a href="https://doi.org/10.5066/F7RJ4GGJ">https://doi.org/10.5066/F7RJ4GGJ</a>.
+</div>
+</div>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -633,13 +752,13 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../../docs/foundations/index.html" class="pagination-link" aria-label="Foundations">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Foundations</span></span>
+      <a href="../../index.html" class="pagination-link" aria-label="Home">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Home</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../../docs/data-management/storage-options.html" class="pagination-link" aria-label="Storage Options">
-        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Storage Options</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../../docs/data-management/index.html" class="pagination-link" aria-label="Data Management">
+        <span class="nav-page-text">Data Management</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -651,7 +770,7 @@ ul.task-list li input[type="checkbox"] {
     </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions"><ul><li><a href="https://github.com/alexandra-thompson-dc/rff-data-gov-guidance/edit/main/docs/data-management/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/alexandra-thompson-dc/rff-data-gov-guidance/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/alexandra-thompson-dc/rff-data-gov-guidance/edit/main/docs/foundations/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/alexandra-thompson-dc/rff-data-gov-guidance/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>This page is built with <a href="https://quarto.org/">Quarto</a>.</p>
 </div>
