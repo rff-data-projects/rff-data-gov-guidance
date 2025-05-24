@@ -1,3 +1,6 @@
 /.quarto/
 /_site/
 /_book/
+.Rproj.user
+*.Rproj
+*.Rhistory

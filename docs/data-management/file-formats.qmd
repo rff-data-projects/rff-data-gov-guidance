@@ -2,29 +2,29 @@
 title: File & Data Types
 ---
 
-## File Formats
+## Data file formats
 
-In general, data should be stored and/or archived in open formats. Open formats maximize accessibility because they have freely available specifications and generally do not require proprietary software to open them ([UC Santa Barbara's Standard Operating Procedures section on Data Formats](https://emlab-ucsb.github.io/SOP/2.5-data-formats.html)). The best file format to use will depend on the type and structure of data. 
+In general, data should be stored and/or archived in open formats. __Open formats are non-proprietary__, and therefore maximize accessibility because they have freely available specifications and generally do not require proprietary software to open them ([UC Santa Barbara's Standard Operating Procedures section on Data Formats](https://emlab-ucsb.github.io/SOP/2.5-data-formats.html)). The best file format to use will depend on the type and structure of data. 
 
-### Key characteristics of data file formats:
+### Key characteristics of data file formats
 
 - **Proprietary vs. non-proprietary**: Non-proprietary software formats can be easily imported and accessed using open-source software. This enhances their **interoperability**, or how easily a file format can be used across different software platforms and systems. Formats that are widely supported and compatible with various tools are generally more versatile.
 
 - **Tabular vs. hierarchical**: Tabular data is organized into rows and columns, resembling a table, while hierarchical data is organized in a tree-like structure, with elements nested within others.
 
-- **Structured vs. unstructured**: Structured formats have well-defined schemas (specified variable names and data types), semi-structured formats are flexible but can be organized with schemas, and unstructured formats are free-form and rely on human interpretation.
+- **Structured vs. unstructured**: Structured data refers to data that is organized in a predefined format, typically in rows and columns, like databases or spreadsheets, which allows for easy search, analysis, and processing. Unstructured data, on the other hand, lacks a predefined format and is often textual or multimedia in nature, such as emails, social media posts, or video files.
 
 - **Retention of data types**: Some file formats retain metadata about data types (e.g., whether a column is an integer or string), while others lose this information upon saving.
 
 ### Tabular formats
 
-In general, it is best to use <span style="color:green;">open-source</span> plain text formats such as comma-separated values (.csv). In some cases, other file formats may be useful for optimizing file size or read/write speed, or for retaining data type information; however, alternative data types may have reduced interoperability. It is generally best to avoid Excel spreadsheets/workbooks (.xlsx) and Stata datasets (.dta) <span style="color:red;">proprietary</span>, except in special cases where these required features offered by these file formats (e.g. variable labels in Stata .dta files) are not available in open-source file formats.
+In general, it is best to use <span style="color:green;">open-source</span> plain text formats such as comma-separated values (.csv). In some cases, other file formats may be useful for optimizing file size or read/write speed, or for retaining data type information; however, alternative data types may have reduced interoperability. It is generally best to avoid Excel spreadsheets/workbooks (.xlsx) and Stata datasets (.dta) because they are <span style="color:red;">proprietary</span>, except in special cases where these required features offered by these file formats (e.g. variable labels in Stata .dta files) are not available in open-source file formats.
 
 ::: {.callout-note}
 In cases where the native format of source data is in a proprietary software format, it is often necessary to use that software to view and edit data. For example, Stata dataset variables may have labels, a kind of embedded metadata that can only be accessed in Stata.
 :::
 
-#### Characteristics of tabular formats:
+#### Characteristics of tabular formats
 
 | Format | Extension | Open-source or Proprietary | Retains Individual Data Types? | Level of Structure |
 |--------|-----------|----------------------------|--------------------------------|-------------------|
@@ -39,7 +39,7 @@ In cases where the native format of source data is in a proprietary software for
 | SQLite | .sqlite, .db | <span style="color:green;">Open-source</span> | Yes | Structured |
 | RData | .rdata or .rds | <span style="color:green;">Open-source</span> | Yes | Structured |
 
-#### Descriptions of tabular formats:
+#### Descriptions of tabular formats
 
 - ***Recommended:*** **comma-separated values (.csv)**, delimited text files widely used for data exchange and simple data storage. Each row contains the same number of values separated by commas.
 
@@ -61,11 +61,11 @@ In cases where the native format of source data is in a proprietary software for
 
 - **RData (.rds, .rdata)**, files used to store one R object (.rds) or an R environment with several objects (.rdata). Useful if working within an R project for efficiency and organization features, but providing limited interoperability.
 
-### Hierarchical Formats {#sec-hierarchical}
+### Hierarchical formats {#sec-hierarchical}
 
 Hierarchical data formats are best suited for storing and exchanging complex, nested data structures with parent-child relationships, such as configurations, scientific datasets, or web APIs, where flexibility and the ability to represent variable levels of detail are essential.
 
-#### Characteristics of hierarchical formats:
+#### Characteristics of hierarchical formats
 
 | Format | Extension | Open-source or Proprietary | Retains Individual Data Types? | Level of Structure |
 |--------|-----------|----------------------------|--------------------------------|-------------------|
@@ -151,7 +151,7 @@ In addition to being more accessible, plain text-based formats are often more co
 
 For example, in the R ecosystem, **.Rds** and **.RData** are binary file formats that allow for fast and space-efficient data storage. In comparison, large **.shp** (Shapefile) or **.geojson** files can take more than 100 times as long to load than an equivalent **.Rds** or **.RData** file. Other binary formats, such as **.feather** or **.fst** for tabular data, are both fast and lightweight, with the added benefit of being language-agnostic, meaning they can be used across different programming environments.
 
-### Figures
+## Figure file formats
 
 It is helpful to think ahead when generating and saving data visualizations and plots. Academic journals often accept TIFF and PNG formats, but they frequently have resolution and dimension requirements. Export figures with a minimum resolution of 300 dots per inch (DPI). 
 
@@ -163,7 +163,7 @@ Consider that you may want to be able to share the underlying data with the RFF 
 > 
 > – <cite>Elizabeth Wason (Editorial Director, RFF)</cite>
 
-## Data Types
+## Data types
 
 Individual data values are stored in specific data types, or formats. It is important to identify the data types of important variables in raw datasets to understand their precision and to determine whether data type conversion is necessary for your analysis.
 
