@@ -52,7 +52,7 @@ This is generalized guidance. For additional guidance choosing which files to ar
 
 Ensure the project-level README file, raw data README files, and any metadata files are up to date.
 
-#### Step 3: Coordinate with IT to ensure long-term folder access. 
+#### Step 3: Coordinate with IT to ensure long-term folder access
 
 Contact IT at [IThelp@rff.org](mailto:ithelp@rff.org) to arrange and configure archival storage of the folder. Include the following with the email:
 
