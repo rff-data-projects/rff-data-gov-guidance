@@ -38,7 +38,7 @@ For software and data, there are three main license suites common in the academi
 
 * [GNU General Public Use (GPU)](https://choosealicense.com/licenses/gpl-3.0/): Users, including commercial entities, can view, use, modify, and distribute the work freely. However, it carries **copyleft**, so all distributions must be released under the same GNU GPU license, ensuring open access (**viral**). **Attribution** is required.
 
-(_**Copyleft** is a concept in software licensing that ensures any derivative works (modifications or adaptations) of a particular work remain subject to the same licensing terms as the original work. For example, if a developer modifies a program released under the GNU General Public License (GPL), they are required to distribute their modified version under the same GPL license. This means they must also make the source code available and allow others to freely use, modify, and redistribute it under the same terms. Copyleft aims to preserve software freedom by preventing proprietary restrictions from being reintroduced into derivative works._)
+(_**Copyleft** is a concept in software (code/script) licensing that ensures any derivative works (modifications or adaptations) of a particular work remain subject to the same licensing terms as the original work. For example, if a developer modifies a program released under the GNU General Public License (GPL), they are required to distribute their modified version under the same GPL license. This means they must also make the source code available and allow others to freely use, modify, and redistribute it under the same terms. Copyleft aims to preserve software freedom by preventing proprietary restrictions from being reintroduced into derivative works._)
 
 (_**Viral**: Licenses like the GNU General Public License (GPL) and the Open Database License (ODbL) are often described as "viral" because they require derivative works to comply with the same licensing terms as the original work. This characteristic ensures that the freedoms granted by the license (such as the ability to use, modify, and share) are preserved in all subsequent versions or derivatives, but it also imposes specific obligations on those who modify or build upon the original._)
 
@@ -48,7 +48,7 @@ For software and data, there are three main license suites common in the academi
 
 * [ODCbL](https://opendatacommons.org/licenses/odbl/): Users, including commercial entities, can view, use, modify, and distribute the work freely. However, it carries **share-alike**, so all distributions must be released under the same ODCbL license, ensuring open access (**viral**). **Attribution** is required.
 
-(_**Share-alike**, similar to **copyleft**, requires that any derivative works (adaptations or modifications) are licensed under the same or a compatible license. This ensures that future users of the adapted work can use it under similar terms._)
+(_**Share-alike**, similar to **copyleft** but applied to datasets, requires that any derivative works of content (adaptations or modifications) are licensed under the same or a compatible license. This ensures that future users of the adapted work can use it under similar terms._)
 
 #### Recommendations for selecting licenses
 
