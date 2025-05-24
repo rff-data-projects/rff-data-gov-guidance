@@ -86,15 +86,10 @@ At a minimum, the project should have a README file in text or markdown format w
 
 __The source of all downloaded raw datasets should be documented in a README file.__
 
-::: {.callout-note}
-As described in the [Organization](../data-management/organization.qmd) section, __all raw data should be retained in their raw form and not directly modified__.
-:::
-
 Best practices:
 
-* The README file associated with a raw data file(s) should be located in the same folder as the raw data file.
-* Create README files for logical “clusters” of related files / data.
-* Name the README so that it is easily associated with the data file(s) it describes (e.g., `README_PRISM_Daily_Temperature.txt`).
+* Create a README file associated with each raw data file, or each logical "cluster" of related raw data files, in the same folder as the data.
+* If there are multiple data files in a folder, name the README so that it is easily associated with the data file(s) it describes (e.g., `README_PRISM_Daily_Temperature.txt`).
 * Format README files consistently.
 * Write the README document in an plain text and open source file format, such as .txt or .md.
 
@@ -114,3 +109,7 @@ Preprocessing: No modifications were made to the raw dataset. The file is stored
 
 License & Usage Restrictions: This dataset is publicly available under the PRISM Climate Group's data use policy. Refer to https://prism.oregonstate.edu/documents/PRISM_terms_of_use.pdf for more details.
 ```
+
+::: {.callout-note}
+As described in the [Organization](../data-management/organization.qmd) section, __all raw data should be retained in their raw form and not directly modified__.
+:::
