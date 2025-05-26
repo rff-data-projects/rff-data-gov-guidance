@@ -62,7 +62,7 @@ See the [section on software licenses]() <TODO: Link to software licenses sectio
 To learn about branches, what they are for, and how to use them, see the [Branching section of the Tutorial](./tutorial.qmd#branching).  There are a few aspects to consider with this question.
 
 * How many people will be making commits?
-  * If only one person will be making commits, it may save time and effort to not create additional branches.
+  * If only one person will be making commits, it may save time and effort to maintain a single branch, without creating additional branches.
   * With more people making commits, using multiple branches may help avoid unnecessary merge conflicts.
 * Is it important to have a fully functional version at all times?
   * Branches can be very good for preserving a functional version of the code, while allowing for risk-free experimental features to be developed.

@@ -16,21 +16,21 @@ It is necessary to install Git onto any computer from which you wish to interact
 Normally, IT has installed Git on RFF computers. If not, please send a request to [IThelp@rff.org](mailto:ithelp@rff.org) to request a git install on an RFF machine.  For personal computers, you may install manually following [these instructions](https://git-scm.com/downloads/win).
 
 ## Choose a User Interface
-When you install git, it generally will already install a couple of applications you can use to interface with git.
+When you install Git, it generally will already install a couple of applications you can use to interface with git.
 
-1. __Git Bash/CMD__ – These options allow you to enter text-based commands for Git in an interface similar to the command prompt window in Windows.
+1. __Git Bash/CMD__ – (Installed with Git) These options allow you to enter text-based commands for Git in an interface similar to the command prompt window in Windows.
 Git Bash allows for git commands in addition to standard UNIX commands, whereas Git CMD allows for git commands in addition to standard windows CMD prompt commands.
 This type of interface is the industry standard, so it is what we suggest for new git users, and we will use Git Bash for tutorials on this site.
 
 ![Git Bash](../../images/git-bash.png)\
 
-2. __Git GUI__ – This is a minimalist graphical user interface letting you use git without having to use a command line.
+2. __Git GUI__ – (Installed with Git) This is a minimalist graphical user interface letting you use git without having to use a command line.
 It also allows for simplistic visualization of branches.
 While our tutorials will use Git Bash, it should be fairly straightforward to use the Git GUI instead.
 
 ![Git Gui](../../images/git-gui.png)\
 
-3. __RStudio Git Integration__ - RStudio comes with a Git user interface built in.  This may be a good option for R users once they have learned the fundamentals with Git Bash.
+3. __RStudio Git Integration__ - (Installed Separately) RStudio, a popular editor for R code, comes with a Git user interface built in.  This may be a good option for R users once they have learned the fundamentals with Git Bash.
 
 If you wish to learn a different user interface, check out the list [here](https://git-scm.com/downloads/guis?os=windows), and check with the IT team before installing.
 Most of the concepts will be fairly similar to what we share in the guide.
@@ -56,6 +56,6 @@ Host github.com
   Port 443
 ```
 
-Once you have that set up, when cloning a repository to your local folder, simply select "SSH" before copying the URL.
+Once you have that set up, when cloning a repository to your local folder, simply select the "SSH" option before copying the URL.
 
 
