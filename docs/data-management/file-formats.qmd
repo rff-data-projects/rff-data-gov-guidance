@@ -1,0 +1,238 @@
+---
+title: File & Data Types
+---
+
+## Data file formats
+
+In general, data should be stored and/or archived in open formats. __Open formats are non-proprietary__, and therefore maximize accessibility because they have freely available specifications and generally do not require proprietary software to open them ([UC Santa Barbara's Standard Operating Procedures section on Data Formats](https://emlab-ucsb.github.io/SOP/2.5-data-formats.html)). The best file format to use will depend on the type and structure of data. 
+
+### Key characteristics of data file formats
+
+- **Proprietary vs. non-proprietary**: Non-proprietary software formats can be easily imported and accessed using open-source software. This enhances their **interoperability**, or how easily a file format can be used across different software platforms and systems. Formats that are widely supported and compatible with various tools are generally more versatile.
+
+- **Tabular vs. hierarchical**: Tabular data is organized into rows and columns, resembling a table, while hierarchical data is organized in a tree-like structure, with elements nested within others.
+
+- **Structured vs. unstructured**: Structured data refers to data that is organized in a predefined format, typically in rows and columns, like databases or spreadsheets, which allows for easy search, analysis, and processing. Unstructured data, on the other hand, lacks a predefined format and is often textual or multimedia in nature, such as emails, social media posts, or video files.
+
+- **Retention of data types**: Some file formats retain metadata about data types (e.g., whether a column is an integer or string), while others lose this information upon saving.
+
+### Tabular formats
+
+In general, it is best to use <span style="color:green;">open-source</span> plain text formats such as comma-separated values (.csv). In some cases, other file formats may be useful for optimizing file size or read/write speed, or for retaining data type information; however, alternative data types may have reduced interoperability. It is generally best to avoid Excel spreadsheets/workbooks (.xlsx) and Stata datasets (.dta) because they are <span style="color:red;">proprietary</span>, except in special cases where these required features offered by these file formats (e.g. variable labels in Stata .dta files) are not available in open-source file formats.
+
+::: {.callout-note}
+In cases where the native format of source data is in a proprietary software format, it is often necessary to use that software to view and edit data. For example, Stata dataset variables may have labels, a kind of embedded metadata that can only be accessed in Stata.
+:::
+
+#### Characteristics of tabular formats
+
+| Format | Extension | Open-source or Proprietary | Retains Individual Data Types? | Level of Structure |
+|--------|-----------|----------------------------|--------------------------------|-------------------|
+| ***Recommended:*** **comma-separated values** | .csv | <span style="color:green;">Open-source</span> | No | Structured |
+| Tab-separated values | .tsv | <span style="color:green;">Open-source</span> | No | Structured |
+| Plain text | .txt | <span style="color:green;">Open-source</span> | No | Semi-structured |
+| Microsoft Excel spreadsheet/workbook | .xls or .xlsx | <span style="color:red;">Proprietary</span> | Yes | Structured |
+| Database File | .dbf | <span style="color:green;">Open-source</span> | Yes | Structured |
+| SAS dataset | .sas7bdat | <span style="color:red;">Proprietary</span> | Yes | Structured |
+| DTA | .dta | <span style="color:red;">Proprietary</span> | Yes | Structured |
+| Feather | .feather | <span style="color:green;">Open-source</span> | Yes | Structured |
+| SQLite | .sqlite, .db | <span style="color:green;">Open-source</span> | Yes | Structured |
+| RData | .rdata or .rds | <span style="color:green;">Open-source</span> | Yes | Structured |
+
+#### Descriptions of tabular formats
+
+- ***Recommended:*** **comma-separated values (.csv)**, delimited text files widely used for data exchange and simple data storage. Each row contains the same number of values separated by commas.
+
+- **Tab-separated values (.tsv)**, files similar to CSV files but with values separated by tabs.
+
+- **Plain text (.txt)**, files which can contain unformatted or formatted (schema) text. Not recommended for storing complex datasets.
+
+- **Excel spreadsheets/workbooks (.xls, .xlsx)**, files designed for use with Microsoft Excel software. XLS is a binary file format compatible only with Excel, both older and newer versions. XLSX was developed more recently. It is XML-based, making it compatible with open-source software such Google Sheets as well as versions of Excel released since 2007. Generally **avoid relying on these files for data storage** due to complex formatting, data formats, formulas, etc. They also complicate quality assurance. XLS is not version-control friendly and XLSX requires special version-control techniques because it is stored in a compressed state. Excel spreadsheets can easily be exported to CSV files.
+
+- **Database File (.dbf)**, files used by dBASE and other database systems to store tabular data. They support a fixed schema and metadata. DBF files cannot store full precision. Avoid creating this type of file.
+
+- **SAS Dataset (.sas7bdat)**, the proprietary file format used by SAS for storing datasets. It supports metadata and variable attributes. Datasets should be converted to open-source formats after processing.
+
+- **DTA (.dta)**, binary files created by the statistical analysis software Stata. Note that they sometimes include metadata (e.g., variable labels) that isn't automatically loaded when importing into other software (e.g. R using the haven package).
+
+- **Feather (.feather)**, a fast, lightweight binary columnar data format used for data exchange between data analysis languages like R and Python. Optimized for performance and efficiency, especially when working with large tables of data.
+
+- **SQLite (.sqlite, .db)**, files used by the SQLite relational database engine, which supports SQL queries and transactions and is used for lightweight, portable databases.
+
+- **RData (.rds, .rdata)**, files used to store one R object (.rds) or an R environment with several objects (.rdata). Useful if working within an R project for efficiency and organization features, but providing limited interoperability.
+
+### Hierarchical formats {#sec-hierarchical}
+
+Hierarchical data formats are best suited for storing and exchanging complex, nested data structures with parent-child relationships, such as configurations, scientific datasets, or web APIs, where flexibility and the ability to represent variable levels of detail are essential.
+
+#### Characteristics of hierarchical formats
+
+| Format | Extension | Open-source or Proprietary | Retains Individual Data Types? | Level of Structure |
+|--------|-----------|----------------------------|--------------------------------|-------------------|
+| Hierarchical Data Format version 5 (HDF5) | .h5, .hdf5 | <span style="color:green;">Open-source</span> | Yes | Structured |
+| Network Common Data Form (NetCDF) | .nc | <span style="color:green;">Open-source</span> | Yes | Structured |
+| JavaScript Object Notation | .json | <span style="color:green;">Open-source</span> | No | Semi-structured |
+| e*X*tensible Markup Language | .xml | <span style="color:green;">Open-source</span> | No | Semi-structured |
+| YAML | .yml or .yaml | <span style="color:green;">Open-source</span> | No | Unstructured |
+
+#### Descriptions of hierarchical formats:
+
+- **Hierarchical Data Format version 5 (.hdf5, .h5)**, commonly called **HDF5**, files for storing complex and hierarchical datasets, supporting large data volumes and complex data structures.
+
+- **Network Common Data Form (.nc)**, commonly called **NetCDF**, files designed for array-oriented scientific data. They work especially well for multi-dimensional data like time-series and spatial data. 
+
+- **JavaScript Object Notation (.json)**, text-based files used for storing structured data. Often used to transfer data between a server and a web application, as well as when sending and receiving data via an API.
+
+- **e*****X*****tensible Markup Language (.xml)**, files organizing data hierarchically with customizable tags, making them both machine-readable and human-readable. XML is widely used in web services, data exchange, and configuration files.
+
+- **YAML (.yaml or .yml)**, human-readable files using a data serialization format well suited for configuration files and data exchange. It uses indentation to define structure and supports key-value pairs, lists, and nested data, making it simpler and more concise compared to XML or JSON. "YAML" is a recursive acronym: YAML Ain't Markup Language.
+
+### Geospatial file formats
+
+Geospatial data are stored as either vector data or raster data. The format of input spatial data typically dictates which geospatial tools can be applied to it.
+
+#### Vector data
+
+![](../../images/vector-data.png)
+
+Vector data is stored as pairs of coordinates. Points, lines, and polygons are all vector data.
+
+***Recommended*** <span style="color:green;">open-source</span> vector file formats:
+
+- **[Geopackage](https://www.geopackage.org/)** (**.gpkg**, recommended for its [advantages](http://switchfromshapefile.org/) over the shapefile format)
+- **Keyhole markup language (.kml, .kmz)**
+- **GeoJSON (.json, .geojson)**
+- **Tables with coordinates** (e.g., a CSV file)
+
+Common <span style="color:red;">proprietary</span> vector file formats:
+
+- **Shapefiles (.shp)**
+- **Feature classes in geodatabases (.gdb)**
+
+::: {.callout-note}
+A shapefile is actually a collection of several files, including geometry (.shp), projection information (.prj), tabular data (.dbf), and more. Make sure to store all component files together within the same folder.
+:::
+
+All vector data files should have three critical metadata components:
+
+- Coordinate reference system
+- Extent: the geographic area covered by the data, represented by four coordinate pairs
+- Object type: whether the data consists of points, lines, or polygons
+
+#### Raster data
+
+![](../../images/raster-data-1.png)
+![](../../images/raster-data-2.png)
+
+Raster data formats store values across a regular grid containing cells of equal size, with each cell containing a value. A raster is similar to a pixelated image, except that it's accompanied by information linking it to a particular geographic location. All cell values within a single raster variable are of the same scalar data type (integer, float, string, etc.). Common examples of raster data are elevation, land cover, and satellite imagery.
+
+The ***recommended*** general purpose raster file format is **GeoTIFF (.tif)**, as it supports multiple bands, retention of spatial reference metadata, large file sizes, high compression, and use in a variety of languages/software. Other formats may work better for specific use cases. All of the following common formats are 
+<span style="color:green;">open-source</span>:
+
+- **GeoTIFF (.tif)**, the most widely used format for raster data
+- **ASCII grid (.asc)**, plain-text-based files for elevation models and basic raster grids
+- **NetCDF (.nc) and HDF5 (.hdf5, .h5)**, both described in @sec-hierarchical
+
+Avoid saving rasters as <span style="color:red;">proprietary</span> software file formats, including ESRI grid/tile and ERDAS Imagine (.img) files.
+
+All raster files should have five critical metadata components:
+
+- Coordinate reference system
+- Extent: how large the raster is, often represented by the number of rows and columns
+- Origin point: a pair of coordinates pinpointing the bottom left corner of the image
+- Resolution: cell size
+- No data value: the value that represents when a cell’s data value is missing
+
+For a more in-depth introduction to spatial data types, see [Introduction to Geospatial Concepts: Summary and Setup (datacarpentry.org)](https://datacarpentry.org/organization-geospatial/index.html) and [GIS Training (RFF intranet)](https://my.rff.org/it/computer-lab/).
+
+### Efficiency trade-offs
+
+In addition to being more accessible, plain text-based formats are often more compatible with version control systems than many proprietary formats due to their human-readable structure. However, when working with large datasets, it's important to consider efficiency in terms of input/output speed and file size. Data formats can vary significantly in these aspects—while binary formats are typically more efficient in terms of speed and storage, they are less suited for version control.
+
+For example, in the R ecosystem, **.Rds** and **.RData** are binary file formats that allow for fast and space-efficient data storage. In comparison, large **.shp** (Shapefile) or **.geojson** files can take more than 100 times as long to load than an equivalent **.Rds** or **.RData** file. Other binary formats, such as **.feather** or **.fst** for tabular data, are both fast and lightweight, with the added benefit of being language-agnostic, meaning they can be used across different programming environments.
+
+## Figure file formats
+
+It is helpful to think ahead when generating and saving data visualizations and plots. Academic journals often accept TIFF and PNG formats, but they frequently have resolution and dimension requirements. Export figures with a minimum resolution of 300 dots per inch (DPI). 
+
+For RFF communications, however, the vector format **.svg** is best because it can be easily modified as needed. Academic journals often accept this format as well.
+
+Consider that you may want to be able to share the underlying data with the RFF Communications team so that they and their external design partners can create custom figures for presentation on the website, in the magazine, etc. This means clearly documenting the processing code that created the underlying data / figures, so that output data can be easily reproduced and shared as needed. If figure data is time-consuming to reproduce, you may want to save a copy of it to the L:/ drive or to your GitHub repository.
+
+> “Sharing the underlying data of any maps and figures is always helpful for the Communications Team!”
+> 
+> – <cite>Elizabeth Wason (Editorial Director, RFF)</cite>
+
+## Data types
+
+Individual data values are stored in specific data types, or formats. It is important to identify the data types of important variables in raw datasets to understand their precision and to determine whether data type conversion is necessary for your analysis.
+
+Every value, or object, has a type.
+
+Types control what operations/methods can be performed on a given value.
+
+The choice of data type affects storage requirements. Using larger types (e.g., float64 instead of float32, or int64 instead of int32) increases memory usage, which can be significant in large datasets. Conversely, choosing types that are too small can lead to data loss or overflow errors.
+
+::: {.callout-warning}
+Data types can be unwittingly changed, affecting precision and operations. For example, including a string in a numerical column of a CSV will likely cause all the column’s values to be read in as strings.
+:::
+
+### Basic types
+
+#### Examples
+
+| Type | Abbreviation | Description | Examples |
+|---|---|---|---|
+| Integer | int | Whole numbers | `0`, `1`, `42`, `-6`,<br />`2e+30` (scientific notation) |
+| Floating point | float | Real numbers, with or without a fractional component | `3.1`, `2.7182818285`, `-1.5`, `0`, `43` |
+| Character string | str | Text, demarcated by quote marks on either side | `"Hello, world!"`, `'apple'`, <br />`"#23"`, `"'Why?', he said."` |
+
+#### Details
+
+Numeric values are a key element of scientific computing:
+
+- **Integers** represent whole numbers, which can be positive, negative, or zero
+  - Subtypes of integers can be further categorized based on their size (bits) and whether they are signed (can represent negative numbers), for example,
+    - int8: 8-bit signed integer, ranges from -128 to 127
+    - uint16: 16-bit unsigned integer, ranges from 0 to 65,535
+  - Use cases include counting, indexing, and scenarios where whole numbers are needed (e.g., population counts, item quantities)
+  - Smaller integer types use less memory but have a limited range, so it is most efficient to use the smallest type with enough room for a given data value, vector, matrix, list, etc.
+
+- **Floating point numbers** represent real numbers, which include all fractions in addition to all integers
+  - Like integers, they can be specified by size (bits), typically 32-bit or 64-bit
+    - float32 is "single precision"
+    - float64 is "double precision"
+  - Use cases include scientific calculations, financial modeling, and any scenario requiring precision for fractional values (e.g., temperature measurements, stock prices)
+  - The float32 type uses less memory than float64 but with less precision, so it is best to use float32 for large datasets where memory is a constraint and float64 when precision is important
+
+Data taking the form of letters, words, or other text are used just as widely as numbers:
+
+- **Character strings** contain text written between quote marks (either single or double)
+  - Use cases include names, addresses, descriptive text, and categories (e.g., gender, region, brand)
+  - Strings longer than a few words often take up more memory than numbers, so it’s important to manage string data carefully, especially in large datasets.
+
+### Special types
+
+Categorical data can be stored more efficiently using more specific types:
+
+- **Logical (boolean)** data each take one of two possible values (e.g., 0 or 1, true or false)
+  - Examples of use cases include tests (pass/fail), survey responses (yes/no), and signals (on/off)
+  - Very memory-efficient, requiring little more than one bit per value
+  - Programming note: In R, Python, and Julia, the logical or boolean type is considered a distinct type but is often compatible with or represented as integers for underlying storage or arithmetic operations. In Stata, logical values are represented directly as integers, with no separate boolean type.  
+- **Factors** represent data with a finite (usually relatively small) and usually labeled set of possible values, usually referred to as levels or categories
+  - Use cases include non-numeric data that falls into distinct categories, such as colors, months, quality survey responses, or Excel workbook cells with a dropdown list of values
+  - Internally stored as integers with an associated set of labels or levels
+- **Date/time** values can be stored using data types designed for human- and machine-readability
+  - Most programming languages have modules that support specific date formats
+  - We ***recommend*** using the conventional ISO 8601 format (YYYY-MM-DD)
+
+  ::: {.callout-warning}
+  Ensure that date formats are consistent within columns and are correctly interpreted when converting to a standard format. For example, if a date is formatted as "DD/MM/YYYY" but is mistakenly interpreted as "MM/DD/YYYY" during conversion to "YYYY-MM-DD", the resulting date will be incorrect.
+  :::
+
+### Other resources
+
+See these websites for additional information about data types:
+
+- R-focused: [R for Data Science: Transform](https://r4ds.hadley.nz/transform)
+- Python-focused: [Software Carpentry: Data Types and Type Conversion](https://swcarpentry.github.io/python-novice-gapminder/03-types-conversion.html)

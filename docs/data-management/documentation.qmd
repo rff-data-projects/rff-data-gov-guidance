@@ -1,0 +1,115 @@
+---
+title: Documentation
+references:
+- type: article
+  id: Stoudt
+  author:
+  - family: Stoudt
+    given: S.
+  - family: Vásquez
+    given: V. N.
+  - family: Martinez
+    given: C. C.
+  issued:
+    date-parts:
+    - - 2021
+  title: 'Principles for Data Analysis Workflows.'
+  DOI: 10.1371/e1008770
+  URL: https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1008770
+- type: article
+  id: Michener
+  author:
+  - family: Michener
+    given: W. K.
+  - family: Brunt
+    given: J. W.
+  - family: Helly
+    given: J. J.
+  - family: Kirchner
+    given: T. B.
+  - family: Stafford
+    given: S. G.
+  issued:
+    date-parts:
+    - - 1997
+  title: 'Nongeospatial Metadata for the Ecological Sciences.'
+  DOI: 10.1890/1051-0761
+  URL: https://doi.org/10.1890/1051-0761(1997)007%5b0330:NMFTES%5d2.0.CO;2
+---
+
+## Introduction
+
+“*__If we are not conscientious documenters, we can easily end up… without the ability to coherently describe our research process up to that point__*” (@Stoudt). 
+
+Quality documentation is critical for ensuring that your work is understandable, reusable, and interpretable over time by external users, your colleagues, and your future self. It reduces errors, facilitates smooth project team transitions, and helps avoid confusion and duplication of efforts. 
+
+Without documentation, projects lose their usefulness over time, as illustrated below [see also @Michener].
+
+![Image from [Michener et al. 1997](https://doi.org/10.1890/1051-0761(1997)007%5b0330:NMFTES%5d2.0.CO;2)](../../images/information_loss.png)
+
+## Types of documentation
+
+This summary can help guide team conversations around documentation strategies.
+
+### Preliminary
+
+__Preliminary__ documentation refers to early-stage descriptions created during the planning phase. This often includes a data management plan (DMP), which outlines data collection, organization, storage, and sharing strategies. 
+
+### Process 
+
+__Process__ documentation involves capturing step-by-step procedures and workflows used to collect, process, analyze, and model data, including:
+
+* Documenting raw data sources
+* Documenting methods with code comments
+* Documenting methods with version control tools
+
+### Product 
+
+__Product__ documentation provides information to accompany code and data of completed projects, ensuring usability and transparency. This documentation can be a part of or accompanying written products.
+
+## Core documentation 
+
+### The project-level README file {#project-readme}
+
+At a minimum, the project should have a README file in text or markdown format with the information listed below. This can be an evolving, living document. While it's technically __product documentation__, it's easiest to start it early in the project's development.
+
+* Project name and description
+* Project PI and contact information
+* List of staff responsible for data management and code development
+* Associated final product(s), date of release, and DOI (if applicable)
+* Link to published data/code (if applicable)
+* License associated with final product(s)
+* Nature of sensitive or proprietary data (if applicable)
+* Any other important notes for navigating folder or using data/code
+
+### Raw data
+
+
+Best practices:
+
+* The source of all downloaded raw datasets should be documented in a README file.
+* Create a README file associated with each raw data file, or each logical "cluster" of related raw data files, in the same folder as the data.
+* If there are multiple data files in a folder, name the README so that it is easily associated with the data file(s) it describes (e.g., `README_PRISM_Daily_Temperature.txt`).
+* Format README files consistently.
+* Write the README document in an plain text and open source file format, such as .txt or .md.
+
+Below is a README template and example. Include in the README file the information shown in the example.
+
+Filename: `README_PRISM_Daily_Temperature.txt`
+```
+Dataset name & format: PRISM_Daily_Temperature_2024.csv
+
+Data source: Downloaded from the PRISM Climate Group website: https://prism.oregonstate.edu/ on 2024-02-28.
+
+Acquired by: [Name of researcher who downloaded the data]
+
+Data description: This dataset contains daily minimum and maximum temperature data for Washington State for the year 2024, with a spatial resolution of 4km.
+
+Preprocessing: No modifications were made to the raw dataset. The file is stored exactly as downloaded from the source.
+
+License & Usage Restrictions: This dataset is publicly available under the PRISM Climate Group's data use policy. Refer to https://prism.oregonstate.edu/documents/PRISM_terms_of_use.pdf for more details.
+```
+
+::: {.callout-note}
+As described in the [Organization](../data-management/organization.qmd) section, __all raw data should be retained in their raw form and not directly modified__.
+:::

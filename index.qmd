@@ -19,6 +19,7 @@ It includes practical support to:
 **This is a living resource** — it will continue to evolve as needs shift and feedback is incorporated.
 
 ## Site Outline
+* [Foundations](./docs/foundations/index.qmd)
 * [Data Management](./docs/data-management/index.qmd)
 * [Software Quality](./docs/software/index.qmd)
 * [Version Control](./docs/version-control/index.qmd)
@@ -27,7 +28,7 @@ It includes practical support to:
 
 To submit questions, bugs (e.g., broken hyperlinks), suggestions, or feedback on this guidance, click `Report an issue` on the right-hand side of this page and submit an __issue__ to the repository. Note that your comment will be publicly visible. 
 
-To submit a question or comment over email, reach out to [Alexandra Thompson](mailto:thompson@rff.org).
+To submit a question or comment over email, reach out to the [Data Governance Working Group](mailto:dgwg@rff.org).
 
 ## Site authors
 
