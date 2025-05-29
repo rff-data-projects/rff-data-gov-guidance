@@ -217,7 +217,7 @@ Categorical data can be stored more efficiently using more specific types:
 
 - **Logical (boolean)** data each take one of two possible values (e.g., 0 or 1, true or false)
   - Examples of use cases include tests (pass/fail), survey responses (yes/no), and signals (on/off)
-  - Very memory-efficient, requiring little more than one bit per value
+  - Very memory-efficient, requiring little more than one byte per value
   - Programming note: In R, Python, and Julia, the logical or boolean type is considered a distinct type but is often compatible with or represented as integers for underlying storage or arithmetic operations. In Stata, logical values are represented directly as integers, with no separate boolean type.  
 - **Factors** represent data with a finite (usually relatively small) and usually labeled set of possible values, usually referred to as levels or categories
   - Use cases include non-numeric data that falls into distinct categories, such as colors, months, quality survey responses, or Excel workbook cells with a dropdown list of values
