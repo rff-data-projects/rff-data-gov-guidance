@@ -1,5 +1,23 @@
 # Home {.unnumbered}
 
+## About this resource
+
+This guidance is designed to help RFF research teams:
+
+* **Save time** through clear data practices, templates, and reusable workflows
+* **Increase flexibility** for collaboration, future reuse, and reproducibility
+* **Reduce risk** by supporting consistent and transparent workflows
+
+It includes practical support to:
+
+* Build foundational skills and concepts
+* Plan and manage data-driven research from start to finish
+* Navigate RFF-specific systems like storage and access
+* Set up new projects effectively
+* Improve existing workflows
+
+**This is a living resource** — it will continue to evolve as needs shift and feedback is incorporated.
+
 ## Site Outline
 * [Data Management](./docs/data-management/index.qmd)
 * [Software Quality](./docs/software/index.qmd)
@@ -7,7 +25,7 @@
 
 ## Questions and feedback
 
-To submit questions, bug (e.g., broken hyperlinks), suggestions, or feedback on this guidance, click `Report an issue` on the right-hand side of this page and submit an __issue__ to the repository. Note that your comment will be publicly visible. 
+To submit questions, bugs (e.g., broken hyperlinks), suggestions, or feedback on this guidance, click `Report an issue` on the right-hand side of this page and submit an __issue__ to the repository. Note that your comment will be publicly visible. 
 
 To submit a question or comment over email, reach out to [Alexandra Thompson](mailto:thompson@rff.org).
 
