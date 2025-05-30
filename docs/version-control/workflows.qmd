@@ -33,12 +33,13 @@ When a project team is deciding to use Git, it is important to think through the
 
 Here are two examples of how a project / team might choose to store their repositories.
 
-* Each team member keeps their own working version of a repository somewhere private, either on the `C:/` drive of their personal computer, or on the RFF servers, with the intention of no other team members having access to it.
-  * __Pros__: it is “clean”, with no accidental file changes from other users.
-  * __Cons__: It would require care to be taken for access (file paths) to non-version-controlled data files.
-* Each team member keeps their own working version of a repository on a shared drive, i.e. the L drive, which could (but probably shouldn’t) be accessed by other team members., i.e. inside of a larger project directory
+* __Generally Recommended:__  Each team member keeps their own working version of a repository on a shared drive, i.e. the L drive, which could (but probably shouldn’t) be accessed by other team members., i.e. inside of a larger project directory
   * __Pros__: it allows easy access to shared project files; specifically, users can see changes made by others if they haven't pushed them to the repository due to outside circumstances
   * __Cons__: files could be accidentally changed by others if they are working in the incorrect version of the repository
+
+* Each team member keeps their own working version of a repository somewhere private, either on the `C:/` drive of their personal computer, or on the RFF servers, with the intention of no other team members having access to it.  This is suitable for teams that have many repositories where it would get very confusing to store all the repositories in the same location for the whole team.
+  * __Pros__: it is “clean”, with no accidental file changes from other users.
+  * __Cons__: It would require care to be taken for access (file paths) to non-version-controlled data files.
 
 ### Should our repository be hosted by a GitHub Organization or User?
 
