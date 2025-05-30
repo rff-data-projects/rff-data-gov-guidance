@@ -182,7 +182,7 @@ If you find typing your commit message in notepad arduous, we have the command f
 git commit -m "Simply type your messsage here"
 ```
 
-__OR__ if you want to be even more lazy, see the (section for the commit alias)[./faq.qmd#commit-message-alias]
+__OR__ if you want to be even more lazy, see the [section for the commit alias](./faq.qmd#commit-message-alias)
 :::
 
 The last step is to **push** commits to the online repository.  At this point, `git status` indicates that the local version of the repository is 1 commit ahead of the online version.  To send the commits to the online repository, we will simply enter the command `git push`!  Now, if you navigate to the online version of the repository in GitHub, you should be able to see the changes you made.  Congratulations!!
