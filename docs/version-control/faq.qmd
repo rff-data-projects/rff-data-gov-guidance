@@ -40,6 +40,15 @@ If you want to learn to write better commit messages, [this is a great resource!
 
 [Here](https://medium.com/@abhay.pixolo/naming-conventions-for-git-branches-a-cheatsheet-8549feca2534) is a great resource for learning more about branch naming conventions.
 
+### Tags
+
+Sometimes it is helpful to name a specific commit of a repository.  For example, say you have a version of the repository that you used to generate analysis for a publication.  You can easily use the `git tag` command to "name" that specific commit.  For example,
+
+```bash
+git tag <tag-name>
+git push --tags
+```
+
 ### Aliases
 
 An __Alias__ is like creating a shortcut for a git command so that you don't have to type out the whole command.  
