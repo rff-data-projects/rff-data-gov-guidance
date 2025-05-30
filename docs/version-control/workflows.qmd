@@ -72,6 +72,11 @@ To learn about branches, what they are for, and how to use them, see the [Branch
 * Is it important to have code review for this project?
   * Branches facilitate streamlined code review, where reviewers only review sections that have changed (via Pull Requests).
 
+Here are some examples of when a branch might be useful:
+* __Major Changes/Experimental Feature__:  Say you have an idea on how to improve your code, and it requires significantly re-vamping the code. It would make sense to create a branch for this experimental feature, so that you can develop the feature without worrying about making changes to the main branch.  Then the whole team can use the Pull Request to evaluate whether or not they'd like to merge into the main branch.
+* __New Team Member__:  You have an existing model that is already working well.  A new researcher joins the project team and is tasked with a code improvement.  They are new to the model, so you want to review their changes carefully before applying them to the main branch.  It makes sense to have them create a branch for their development, and review it with the pull request.
+* __Concurrent Development__:  Your team has a couple of features that need to be developed in tandem. To prevent extensive conflicts and streamline the process of combining the new features, each feature gets its own branch.
+
 ### If using branches, how do we want to handle code review?
 
 It would be good to talk about the following questions with your team:
