@@ -6,7 +6,10 @@ Now that we know some basic Git principles, how do we make a workflow for a give
 
 ## Key Principles
 
-* Users should commit changes frequently, with descriptive messages. 
+* Users should commit changes frequently, with descriptive messages.
+  * Frequent commits make it so that it is easier to find discrete check-points in the repository, rather than having everything committed at the same time.
+  * Try to have commits provide incremental improvements.  For example, a commit might include the addition of a single function, or a 2-line fix to an existing script.
+  * If you find yourself coding for hours between commits, consider trying to break up your task into discrete sub-tasks.
 * Pull often to ensure that you are incorporating the changes of others.
 * A local clone of a repository should generally ONLY have a single user.
 * Take care with encoding file paths within a repository.
