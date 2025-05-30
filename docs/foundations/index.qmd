@@ -1,0 +1,116 @@
+---
+title: Foundations
+number-sections: false
+references:
+- type: article
+  id: USGS_training
+  author:
+  - family: Langseth
+    given: M. L.
+  - family: Henkel
+    given: H. S.
+  - family: Hutchison
+    given: V. B.
+  - family: Thibodeaux
+    given: C.J.
+  - family: Zolly
+    given: L. S.
+  issued:
+    date-parts:
+    - - 2015
+  title: 'USGS Data Management Training Modules—Planning for Data Management Part II Using the DMPTool to Create Data Management Plans: U.S. Geological Survey.'
+  DOI: 10.5066/F7RJ4GGJ
+  URL: https://www.usgs.gov/data-management/training
+---
+
+## Introduction
+
+Good data practices can not only save time and headaches but increase the usefulness of your data and code and enhance the reproducibility of the whole project.
+Good data practices provide (@USGS_training):
+
+* Short-term benefits
+  * Allow you to spend less time doing data management and more time doing research
+  * Make it easier to prepare and use data
+  * Ensure that collaborators can readily understand and use data files
+* Long-term benefits
+  * Make your work more transparent, reproducible, and rigorous
+  * Allow other researchers to find, understand, and use your data to address broad questions
+  * Ensure that you get credit for data products and for their use in other products
+
+
+## The data life cycle
+
+A common axiom among data scientists is the application of the 80/20 rule to effort: 80% of time is spent wrangling (managing and preparing) data, while 20% is spent on analysis. 
+Most activities in the data life cycle come before the analysis phase and are closely tied to data management. 
+There are many different models of the data life cycle, and the relevant model for your individual project will vary. 
+A general data life cycle is depicted below [see also @USGS_training].
+
+
+```{mermaid}
+graph LR
+A(Plan) --> B(Collect)
+B --> C(Process)
+C --> D(Explore / Visualize)
+D --> E(Analyze / Model)
+E --> F(Archive, Publish, Share)
+E --> C
+E --> A
+```
+
+The data life cycle is often iterative and nonlinear, and does not always follow the order shown. Your actual analysis workflow may include dead ends or repeated steps. Regardless, it is helpful to plan and discuss your data-oriented research using these common components of the data life cycle:
+
+* **Step 1: Plan** Identify data that will be collected and how it will be managed.
+Create a [data management plan](@sec-dmp).
+* **Step 2: Collect** Acquire and store raw data.
+  * *a. Acquire* Retrieve data from the appropriate source.
+  * *b. Describe* Document the raw data source, format, variables, measurement units, coded values, and known problems. 
+  * *c. Quality assurance* Inspect the raw data for quality and fit for analysis purpose.
+  * *d. Store* Store the raw data in the appropriate folder, as determined in the planning stage. 
+  Consider access, resilience (backing up), security, and, if relevant, data agreement stipulations. 
+Make raw data files read-only so they cannot be accidentally modified.
+
+* **Step 3: Process** Prepare the data for exploration and analysis. 
+  * *a. Clean* Preprocess the data to correct errors, standardize missing values, standardize formats, etc.
+  * *b. Transform* Convert data into appropriate format and spatiotemporal scale (e.g., convert daily values to annual statistics).
+  * *c. Integrate* Combine datasets.
+* **Step 4: Explore** Describe, summarize, and visualize statistics and relationships.
+* **Step 5: Analyze / Model** Develop, refine, and implement analysis and model specifications.
+* **Step 6: Archive, Publish, and Share** Finalize documentation (project-level README and metadata). Dispose and/or archive data. Publish final data products and documentation.
+
+## About this guidance
+
+TO BE WRITTEN
+
+## The first step: Data management planning for reproducibility {#sec-dmp}
+
+__Data management planning__, a form of __preliminary__ documentation, is the process of thinking ahead about how your team will access, use, create, modify, store, share, and describe data related to your research project. Data management plans (DMPs) __enhance collaboration by establishing baseline expectations, make projects resilient to turnover, and save time in the long run.__ In addition, [many funders require data management plans](https://dmptool.org/public_templates) be submitted with grant proposals, so thinking about these issues early can facilitate the proposal process. 
+
+This guidance resource provides general instructions for data practices and addresses many of the core questions that are part of the DMP process. *__At a minimum, the questions below should be reviewed at the start of a project__*. Associated guidance is linked.
+
+1.	[Where will data/code be stored and how will it be organized?](../data-management/organization.qmd)
+
+2.	How will the team use Microsoft Teams for file storage and communication? What types of files will be stored in the Teams folder versus the project’s L:/ drive folder? What will be communicated over Teams chat versus email or GitHub?
+
+3.	Who will be responsible for [disposing / archiving data](../data-management/archival.qmd)?
+
+4.	Who will be responsible for [publishing data/code and attaching appropriate documentation and use licenses](../data-management/publication.qmd)?
+
+5.	What will the version control / git / GitHub workflow be?
+
+6.	What coding software and main libraries will be used?
+
+7.	How will code be reviewed for quality?
+
+8.	What are expectations around data quality and code quality?
+
+9.	How will [data sources](../data-management/documentation.qmd), code, and major methodological decisions be documented?
+
+10.	Has the appropriate budget been allocated to implement this DMP?
+
+Certain projects may require additional considerations. For development of a more thorough DMP, refer to the [UCSB NCEAS data management planning section](https://learning.nceas.ucsb.edu/2023-04-coreR/session_14.html#document-your-project-using-a-dmp).
+
+
+
+
+
+

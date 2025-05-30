@@ -1,8 +1,11 @@
 ---
 title: Organization
 ---
+Standardized practices for file organization and storage save time and ensure consistency, enhancing the overall quality of research outputs.
+A simple and flexible folder structure not only promotes long-term data stability but also supports seamless project growth, adaptability, and researcher transitions.
+Such an approach reduces the complexity of project management and aligns effectively with version control systems, enhancing collaborative efforts and preserving institutional knowledge.
 
-## Directory Structure
+## Directory structure
 
 Regardless of the specific method deployed, your data project organization should have the following qualities:
 
@@ -10,57 +13,72 @@ Regardless of the specific method deployed, your data project organization shoul
 * __Simple__: The folder structure should be easy to navigate and understand, even for someone new to the project. It should mirror the logical flow of the project and use clear, descriptive names that reflect the contents and purpose of each folder.
 * __Flexible__: The structure should be adaptable to evolving project needs, allowing for the addition of new data, methods, or collaborators without disrupting the existing organization. It should support different types of data and workflows, making it easy to integrate new elements as the project evolves.
 
-These qualities also facilitate version control practices. There is additional guidance on organization for version control here 
+These qualities also facilitate version control practices. There is additional guidance on organization for version control [here](../version-control/index.qmd).
 
-<!-- [TODO: Insert LINK TO RELEVANT SUBSECTION]. -->
-Below is an example of a directory structure that would be compatible with version control implementation on RFF's L:/ drive. It has four main folders: data, results, code, and docs. This version illustrates a personal repository folder model of code version control, which operates best on the L:/ drive. Similar directories with slight changes to the code folder can be employed in other cases.
+Below is an example of a directory structure that would be compatible with version control implementation on RFF's `L:/` drive. This version illustrates a [personal repository](#repos-folder) folder model of code version control, which operates best on the `L:/` drive.
 
 ```
 project_name/
 ├── data/
 │   ├── raw/
-│   ├── intermediate or int/
+│   ├── intermediate/
 │   ├── clean/ (optional)
-├── results/
-├── docs/
+├── results*/
 ├── repos/
-│   ├── smith/
+│   ├── edgar/
 │   │   ├── scripts/
 │   │   │   ├── processing/
 │   │   │   ├── analysis/
-│   │   ├── tools/
-│   ├── pesek/
+│   │   │   ├── tools/
+│   │   ├── results**/
+│   │   ├── docs/
+│   ├── caudle/
 │   │   ├── scripts/
 │   │   │   ├── processing/
 │   │   │   ├── analysis/
-│   │   ├── tools/
+│   │   │   ├── tools/
+│   │   ├── results**/
+│   │   ├── docs/
 ```
 
 ### `Data` folder
 
-In the data folder, raw data is preserved in its own subfolder. The intermediate or int folder contains datasets created during data cleaning and processing. If practical, a clean folder can contain cleaned output datasets and associated READMEs [LINK TO SECTION], but note that it's often unclear when datasets are truly "clean" until late project stages.
+* The `data` folder contains all project data sets. 
+* __Raw data is preserved in its own subfolder.__
+* The `intermediate` folder contains datasets created during data cleaning and processing. 
+* If practical, a `clean` folder can contain cleaned output datasets, but note that it's often unclear when datasets are truly "clean" until late project stages.
+
+::: {.callout-note}
+For projects with small datasets, this folder can be version controlled, with larger files ignored using the `.gitignore` file. In this case, this folder would be a subfolder of individuals' repository folders.
+:::
 
 ### `Results` folder
 
-The results folder contains analysis results, model outputs, and all figures.
+* The `results` folder contains analysis results, and model outputs. For example, it can be used to store tables, figures, and model estimates. 
+* *For internal RFF projects, the `results` folder can be stored in the main directory and not within repositories.
+* **For projects with external collaborators, it may be useful to store the `results` folder within repositories. These files are generally smaller than 100 MB and can be stored in a main repository using GitHub; however, some formats (such as SVG) can be quite large. The .gitignore file can be configured to ignore certain file types (such as SVG files, when both PNG and SVG file formats are generated).
+
+### `Repos` folder {#repos-folder}
+
+* This directory structure is based on __personal repositories__. The `repos`, or repositories, directory contains version-controlled files. To allow individuals to work on version controlled files without interfering with others' versions, each researcher should have their own folder that's linked to the GitHub remote repository. Team members can then clone the project's Git repository into their respective folders and work exclusively within their own copies. Changes can be synced and reconciled using GitHub, preventing simultaneous edits of the same file and ensuring effective version control.
+* Individual folders (e.g. `Edgar`, `Caudle`) should have mirrored (the same) directory structures.
+
+### `Scripts` folders
+
+* The `scripts` folder contains all code files (e.g. `.R`, `.py`, `.do`) for the project. These scripts provide explicit instructions for processing data and performing analyses. It should be possible to reproduce the entirety of the project's processed data sets and results using only these scripts and the raw data.
+* The scripts folder can be parsed into subfolders containing scripts that process raw data (`processing`), analyze processed data (`analysis`), and `tools`. The `tools` folder (sometimes called `util`, `modules`, or `helpers`) contains scripts with distinct functions that can be "called" (referenced) in the main processing scripts. This is especially useful if functions are used multiple times or are lengthy. Separately storing functions that may be used in multiple source code scripts is an important practice in creating quality software.
 
 ### `Docs` folder
 
-The documents folder should contain the data management plan, a link to the GitHub site, and any other version-controlled shared documents (such as LaTeX or Markdown).
-
-### `Code` folder
-
-For integration with version control, the code folder has one copy of the project git repository for each of the project collaborators, so that each team member can make changes without affecting the working version of the rest of the team.  Repositories are synced manually, so that changes can be made independently and then merged to the shared, remote version of the codebase stored on GitHub.
-Each individual's repository folder has subfolders separating types of code. The scripts folder code is the main project workflow. 
-The tools folder (sometimes called util, modules, or helpers) contains scripts with distinct functions that can be "called" (referenced) in the main processing scripts. This is especially useful if functions are used multiple times or are lengthy. Separately storing functions that may be used in multiple source code scripts is an important practice in creating quality software [LINK TO SQ SECTION ABOUT MODULAR PROGRAMMING].
+The `documents` folder should contain any version-controlled shared documents (e.g. LaTeX, Markdown, Overleaf).
 
 ### Other project files
 
-Note that this template does not include specific folders for notes, literature reviews, presentations, products, project management, etc., because those types of files are not the focus of this guidance.
-Folders for these documents should exist either with the data folders or in another project folder, such as the shared Teams folder.
-If other departments or external collaborators should have access to a folder or file, we recommend storing them in Teams. See the RFF Communication Norms guidance for more information [LINK].
+This template does not include specific folders for meeting notes, literature reviews, presentations, project management, etc., because those types of files are not the focus of this guidance. 
 
-## Other Organization Practices
+We recommend storing these types of files in the project-level Microsoft Teams folder. See the [RFF Communication Norms and Guidance](https://my.rff.org/human-resources/rff-communication-norms-and-guidelines/) for more information.
+
+## Other organization practices
 
 ### Subfolders
 
@@ -74,50 +92,35 @@ Examples of logical groupings for subfolder names are by
 * processing step (`merge`), or
 * results category (`figures` or `model_results`).
 
-However, it's important to strike a balance.
-Too many subfolders can complicate navigation and make the project harder to understand.
-Aim to create subfolders only when they help categorize files meaningfully—like separating raw data from processed data or utility functions from analysis scripts—without over-complicating the structure.
+## Naming folders, files and scripts
 
-### Miscellaneous Practices
+*When creating folders:*
 
-* When creating folders, follow the naming conventions outlined in the following section.
 * Avoid ambiguous/overlapping categories and generic catch-all folders (e.g. "temp" or "new").
-* Avoid creating or storing copies of the same file in different folders
+* Avoid creating or storing copies of the same file in different folders.
 
-## Naming Folders, Files and Scripts
-
-Folder (including subfolder), file, and script names should be consistent and descriptive. 
-Specifically, they should be human readable, machine readable, and compatible with default ordering. 
+*When creating data or script files, make them:*
 
 * __Human readable__: Create brief but meaningful names that can be interpreted by colleagues.
-  * Make names descriptive: they should convey information about file/folder content.
-    * For example, if you're generating output visualizations of the same metric, instead of `county_means_a` and `county_means_b`, use `county_means_map` and `county_means_boxplot`.
-  * Avoid storing separate versions of files (e.g. `county_means_map_v2`), and instead rely on version control tools to save and document changes.
-  * If you use abbreviations or acronyms, make sure they are defined in documentation such as a README [LINK TO SECTION]
-* __Machine readable__: Files and folders are easy to search for and filter based on name.
-  * Use lowercase characters (avoid "camelCase" method)
-  * Contain only ASCII characters (letters, numbers, and underscores)
-    * Do not include spaces or special characters (/ \ : * ? <> &)
-    * Use hyphens or underscores instead of spaces (the "snake_case" method)
-* Compatible with default ordering: the ability to sort files by name is useful and helps organization, as shown below.
-  * __Chronological order__: If there are temporal measurements, use the ISO 8601 standard for dates `(YYYY-MM-DD)`.
-  Here is an example of temporal data files named for compatibility with default ordering:
-    * `2021_01_01_precipitation_mm.csv`
-    * `2021_01_02_precipitation_mm.csv`
-    * `2021_01_01_temperature_statistics_f.csv`
-    * `2021_01_02_temperature_statistics_f.csv`
-    
-    ::: {.callout-note}
-    It is not recommended to use dates in script file names, except in cases of individual temporal measurements. Instead, leverage version control to save different script versions.
-    :::
 
-  * __Logical order__: one way to organize scripts or folders is by using numbered prefixes signaling the processing order. 
-  Example of source code files named for compatibility with default ordering:
-    * `01_clean_raw_data.R`
-    * `02_merge_clean_data.R`
-    * `03_descriptive_statistics.R`
-    * `04_regressions.R`
+  * Make names __descriptive__: they should convey information about file/folder content. For example, if you're generating output visualizations of the same metric, instead of `county_means_a` and `county_means_b`, use `county_means_map` and `county_means_boxplot`.
+  * __Avoid storing separate versions of files__ (e.g. `county_means_map_v2`), and instead rely on version control tools to save and document changes. 
+  * If you must create different versions of files, make sure to __document__ the distinction in a README file.
+  * If you use __abbreviations or acronyms__, make sure they are defined in documentation such as a project-level README file.
+  
 
-    ::: {.callout-note}
-    Make sure to "left pad" numbers with zeros. For example, use `01` instead of `1`.  This is to allow default sorting to still apply if and when the filename prefixes enter the double digits.
-    :::
+* __Machine readable__: 
+
+  * Use only __ASCII__ characters (letters, numbers, and underscores).
+  * __Do not__ include spaces or special characters (/ \ : * ? <> &).
+  * Use hyphens or underscores instead of spaces (the __"snake_case"__ method).
+  * Files and folders should be easy to search and filter based on name using __structured file names__. The ability to sort and read files by name is useful and helps organization but requires specific conventions. See examples in the table below, keeping in mind that:
+    * It is not recommended to use dates in __script__ file names to denote when a script was created or modified. Instead, leverage version control to save and document different script versions.
+    * Make sure to __"left pad"__ numbers with zeros. For example, use `01` instead of `1`.  This is to allow default sorting to still apply if and when the file name prefixes enter the double digits.
+
+| Practice for structured file names | Description | Example |
+| --- | --- | --- |
+| ID-based names | Structure file paths and names in a way that makes them easy to access programmatically—e.g., enabling batch loading or iteration across identifiers like years/dates, counties, or scenarios. For example, storing county-level data as shown would allow data to be read into memory by simply looping over FIPS codes as they appear in the directory file names. | `53019_data.csv`<br>`53033_data.csv`<br>`53061_data.csv` |
+| Chronological order | Use ISO 8601 format for date-based files: `YYYY-MM-DD`. This ensures dates sort correctly by default. | `2021_01_01_precipitation_mm.csv`<br>`2021_01_02_precipitation_mm.csv`<br>`2021_01_01_temperature_statistics_f.csv`<br>`2021_01_02_temperature_statistics_f.csv` |
+| Logical processing order | For scripts or folders that must run in sequence, use numeric prefixes to indicate the intended order of execution. | `01_clean_raw_data.R`<br>`02_merge_clean_data.R`<br>`03_descriptive_statistics.R`<br>`04_regressions.R` |
+
