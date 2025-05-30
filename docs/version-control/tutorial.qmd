@@ -33,6 +33,8 @@ Now, Git will include your name and email when you publish changes.
 
 ### Creating a Repository in GitHub
 
+This section is useful for learning, but you can also skip to the [next section on cloning repositories](#cloning-your-first-repository-with-git) if you already have a repository (i.e. for a project) that you'd like to clone.
+
 1. To create a repository hosted on GitHub, first navigate to [github.com](https://github.com/) and click the plus button in the top right corner, then click the "new repository" button. 
 
 ![Creating a Repository](../../images/git-create-repo.png)\
