@@ -59,7 +59,7 @@ Generally, choose private for repositories that will contain sensitive informati
 It is easy to change from private to public later on, so when in doubt choose private.
 See the [public/private section in Workflows](./workflows.qmd#should-our-repository-be-public-or-private) for more information.
 If you have chosen to make your project public, you will need to also select which license to use.
-See the [section on software licenses]() <TODO: Link to software licenses section here> to help make this decision.
+See the [section on software licenses](../data-management/publication.qmd#software-licenses) to help make this decision.
 
 5. Check the box to add a README file.
 This will create a file called `README.md` located in the repository's root folder, where you can add basic documentation for the repository.

@@ -45,8 +45,10 @@ Here are two examples of how a project / team might choose to store their reposi
 * Do you work on a team with their own GitHub Organization (i.e. [`E4ST`](https://github.com/e4st-dev))?
   * If so, verify with the other members of the team that it would be acceptable to use the organization to host the repository
   * If your team doesn't already have one, does it make sense to create an organization for your team?  Are there likely to be multiple repositories that would make sense to group under the same organization?  If so, follow the steps in the [GitHub Documentation for creating organizations.](https://docs.github.com/en/enterprise-server@3.14/organizations/collaborating-with-groups-in-organizations/creating-a-new-organization-from-scratch)
-* Does this repository belong in the RFF Organization?
-  * If so, we generally suggest creating the repository as a personal repository and changing it later.  <TODO: discuss our official guidance on this>
+* Does this repository belong in the [RFF Organization](https://github.com/rff-data-projects)?
+  * Generally, if the repository is associated with a publication, the code should be forked or transferred to the organization.
+  * We suggest creating the repository as a personal repository and changing ownership or forking.
+  * See the [Data Management section on code publication](../data-management/publication.qmd#code) for additional guidance.
 
 ### Should our repository be public or private?
 
@@ -58,7 +60,7 @@ If you have sensitive data but would like for the repository to remain public, c
 It is easy to change from private to public later on, so when in doubt choose private.
 
 If you have chosen to make your project public, you will need to also select which license to use.
-See the [section on software licenses]() <TODO: Link to software licenses section here> to help make this decision.
+See the [section on software licenses](../data-management/publication.qmd#software-licenses) to help make this decision.
 
 ### Should our team use branches?
 
