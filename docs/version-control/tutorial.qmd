@@ -309,7 +309,6 @@ git checkout -b <new-branch-name>
 
 Now that your new branch is active, you can safely make changes and commits to this branch without worrying about modifying the main branch.  When you push the branch, Git will give you an error saying that there is no "upstream" branch for the branch you are pushing.  You can simply run the command it gives you, i.e. `git push --set-upstream origin <new-branch-name>`, and it should push with no problems.
 
-
 ### Merging a Branch
 
 #### Creating a Pull Request
@@ -327,9 +326,17 @@ Now to finish creating the Pull Request, click the "Create pull request" button 
 
 #### Reviewing and Merging a Pull Request
 
-In order to merge the Pull Request, we recommend having someone else look through the "files changed" section of the resulting Pull Request.  From there, they can insert comments on particular lines of code, and choose whether or not to approve the pull request.  To learn more about reviewing Pull Requests, see the [appropriate section of the GitHub documentation](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/reviewing-proposed-changes-in-a-pull-request).
+In order to merge the Pull Request, we recommend having someone else on the team to review the changes.
+You may have heard of the concept of "code review", where someone reviews code made by another person.
+Code review can be daunting, especially if there are only changes to specific parts of a larger codebase.
+GitHub makes this process very easy through Pull Requests, showing and allowing comments on the lines of code that have changed.
+To review a pull request, the reviewer would navigate to the Pull Request and click on the "files changed" tab.
+From there, they can see each of the lines added, changed, or deleted, and insert comments on particular lines of code.
+After reviewing all the files changed, they can complete their review and choose whether or not to approve the pull request.
+To learn more about reviewing Pull Requests, see the [appropriate section of the GitHub documentation](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/reviewing-proposed-changes-in-a-pull-request).
 
-When you or your collaborator has reviewed and approved the Pull Request, you can go back to the "Conversation" tab of the Pull Request and click the "Merge pull request" button at the bottom of the page, and your branch's changes will be reflected in the `main` branch!
+If the reviewer has requested changes to the code based on their review, you can simply make changes, commit, and push to the same branch, and the Pull Request will be updated with those changes.
+Once the Pull Request has been reviewed and approved, you can go back to the "Conversation" tab of the Pull Request and click the "Merge pull request" button at the bottom of the page, and your branch's changes will be reflected in the `main` branch!  
 
 #### Conflicting Branches
 
