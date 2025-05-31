@@ -36,6 +36,7 @@ In cases where the native format of source data is in a proprietary software for
 | SAS dataset | .sas7bdat | <span style="color:red;">Proprietary</span> | Yes | Structured |
 | DTA | .dta | <span style="color:red;">Proprietary</span> | Yes | Structured |
 | Feather | .feather | <span style="color:green;">Open-source</span> | Yes | Structured |
+| Parquet | .parquet | <span style="color:green;">Open-source</span> | Yes | Structured |
 | SQLite | .sqlite, .db | <span style="color:green;">Open-source</span> | Yes | Structured |
 | RData | .rdata or .rds | <span style="color:green;">Open-source</span> | Yes | Structured |
 
@@ -55,7 +56,9 @@ In cases where the native format of source data is in a proprietary software for
 
 - **DTA (.dta)**, binary files created by the statistical analysis software Stata. Note that they sometimes include metadata (e.g., variable labels) that isn't automatically loaded when importing into other software (e.g. R using the haven package).
 
-- **Feather (.feather)**, a fast, lightweight binary columnar data format used for data exchange between data analysis languages like R and Python. Optimized for performance and efficiency, especially when working with large tables of data.
+- **Feather (.feather)**, a fast, lightweight binary columnar data format used for data exchange between data analysis languages like R and Python. Optimized for performance and efficiency, especially when working with large tables of data. Faster than Parquet at in-memory work, reading, and writing.
+
+- **Parquet (.parquet)**, a binary columnar data format designed for efficient storage and processing of large datasets. Supports compression and is optimized for performance across data tools like R, Python, and SQL engines. Better file size efficiency than Feather.
 
 - **SQLite (.sqlite, .db)**, files used by the SQLite relational database engine, which supports SQL queries and transactions and is used for lightweight, portable databases.
 
