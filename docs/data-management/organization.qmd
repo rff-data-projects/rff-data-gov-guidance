@@ -5,6 +5,18 @@ Standardized practices for file organization and storage save time and ensure co
 A simple and flexible folder structure not only promotes long-term data stability but also supports seamless project growth, adaptability, and researcher transitions.
 Such an approach reduces the complexity of project management and aligns effectively with version control systems, enhancing collaborative efforts and preserving institutional knowledge.
 
+## Summary
+
+* Keep raw data in a dedicated folder (`raw/`) and never modify it directly.
+
+* Use a simple, descriptive folder structure that reflects project logic and is easy for new users to understand.
+
+* Support version control by organizing code and outputs in a way that works with Git, i.e. by creating separate repository folders for each user.
+
+* Design for flexibility, allowing new data, methods, or collaborators without major reorganization.
+
+* Name files/folders to be human- and machine-readable: use clear names, avoid spaces/special characters, and include numeric prefixes for order.
+
 ## Directory structure
 
 Regardless of the specific method deployed, your data project organization should have the following qualities:
