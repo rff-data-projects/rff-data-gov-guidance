@@ -113,3 +113,11 @@ License & Usage Restrictions: This dataset is publicly available under the PRISM
 ::: {.callout-note}
 As described in the [Organization](../data-management/organization.qmd) section, __all raw data should be retained in their raw form and not directly modified__.
 :::
+
+### Methods
+
+There are two critical strategies for documenting methods effectively:
+
+* Use [version control](../version-control/index.qmd) to track and explain changes to scripts over time (e.g., through clear and consistent commit messages).
+
+* Use [code comments](../software/index.qmd) to document the purpose and logic of scripts and key functions, helping others (and your future self) understand how the code works.
