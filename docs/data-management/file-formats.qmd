@@ -32,8 +32,8 @@ In cases where the native format of source data is in a proprietary software for
 | Tab-separated values | .tsv | <span style="color:green;">Open-source</span> | No | Structured |
 | Plain text | .txt | <span style="color:green;">Open-source</span> | No | Semi-structured |
 | Microsoft Excel spreadsheet/workbook | .xls or .xlsx | <span style="color:red;">Proprietary</span> | Yes | Structured |
-| Parquet | .parquet | <span style="color:green;">Open-source</span> | Yes | Structured |
 | Feather | .feather | <span style="color:green;">Open-source</span> | Yes | Structured |
+| Parquet | .parquet | <span style="color:green;">Open-source</span> | Yes | Structured |
 | RData | .rdata or .rds | <span style="color:green;">Open-source</span> | Yes | Structured |
 | Lightning Fast Serialization of Data Frames | .fst | <span style="color:green;">Open-source</span> | Yes | Structured |
 | SQLite | .sqlite, .db | <span style="color:green;">Open-source</span> | Yes | Structured |
@@ -43,29 +43,29 @@ In cases where the native format of source data is in a proprietary software for
 
 #### Descriptions of tabular formats
 
-- ***Recommended:*** **comma-separated values (.csv)**, delimited text files widely used for data exchange and simple data storage. Each row contains the same number of values separated by commas.
+- ***Recommended:*** **comma-separated values (.csv)** delimited text files widely used for data exchange and simple data storage. Each row contains the same number of values separated by commas.
 
-- **Tab-separated values (.tsv)**, files similar to CSV files but with values separated by tabs.
+- **Tab-separated values (.tsv)** files similar to CSV files but with values separated by tabs.
 
-- **Plain text (.txt)**, files which can contain unformatted or formatted (schema) text. Not recommended for storing complex datasets.
+- **Plain text (.txt)** files which can contain unformatted or formatted (schema) text. Not recommended for storing complex datasets.
 
-- **Excel spreadsheets/workbooks (.xls, .xlsx)**, files designed for use with `Microsoft Excel software.` XLS is a binary file format compatible only with Excel, both older and newer versions. XLSX was developed more recently. It is XML-based, making it compatible with open-source software such Google Sheets as well as versions of Excel released since 2007. Generally **avoid relying on these files for data storage** due to complex formatting, data formats, formulas, etc. They also complicate quality assurance. XLS is not version-control friendly and XLSX requires special version-control techniques because it is stored in a compressed state. Excel spreadsheets can easily be exported to CSV files.
+- **Excel spreadsheets/workbooks (.xls, .xlsx)** files designed for use with `Microsoft Excel software.` XLS is a binary file format compatible only with Excel, both older and newer versions. XLSX was developed more recently. It is XML-based, making it compatible with open-source software such Google Sheets as well as versions of Excel released since 2007. Generally **avoid relying on these files for data storage** due to complex formatting, data formats, formulas, etc. They also complicate quality assurance. XLS is not version-control friendly and XLSX requires special version-control techniques because it is stored in a compressed state. Excel spreadsheets can easily be exported to CSV files.
 
-- **Parquet (.parquet)**, a binary columnar data format designed for efficient storage and processing of large datasets. Supports compression and is optimized for performance across data tools like `R`, `Python`, and `SQL` engines. Better file size efficiency than Feather.
+- **Feather (.feather)** a fast, lightweight binary columnar data format used for data exchange between data analysis languages like `R` and `Python.` Optimized for performance and efficiency, especially when working with large tables of data. Faster than Parquet at in-memory work, reading, and writing.
 
-- **Feather (.feather)**, a fast, lightweight binary columnar data format used for data exchange between data analysis languages like `R` and `Python.` Optimized for performance and efficiency, especially when working with large tables of data. Faster than Parquet at in-memory work, reading, and writing.
+- **Parquet (.parquet)** a binary columnar data format designed for efficient storage and processing of large datasets. Supports compression and is optimized for performance across data tools like `R`, `Python`, and `SQL` engines. Better file size efficiency than Feather.
 
-- **RData (.rds, .rdata)**, files used to store one `R` object (.rds) or an R environment with several objects (.rdata). Useful if working within an R project for efficiency and organization features, but providing limited interoperability.
+- **RData (.rds, .rdata)** files used to store one `R` object (.rds) or an R environment with several objects (.rdata). Useful if working within an R project for efficiency and organization features, but providing limited interoperability.
 
-- **Lightning Fast Serialization of Data Frames (.fst)**, a fast, compressed, columnar binary format designed specifically for `R`, optimized for high-speed reading and writing of large data frames. Ideal for efficient storage and selective column access in R workflows, but not designed for cross-language interoperability.
+- **Lightning Fast Serialization of Data Frames (.fst)** a fast, compressed, columnar binary format designed specifically for `R`, optimized for high-speed reading and writing of large data frames. Ideal for efficient storage and selective column access in R workflows, but not designed for cross-language interoperability.
 
-- **SQLite (.sqlite, .db)**, files used by the `SQLite` relational database engine, which supports SQL queries and transactions and is used for lightweight, portable databases.
+- **SQLite (.sqlite, .db)** files used by the `SQLite` relational database engine, which supports SQL queries and transactions and is used for lightweight, portable databases.
 
-- **Stata data file (.dta)**, binary files created by the statistical analysis software `Stata.` Note that they sometimes include metadata (e.g., variable labels) that isn't automatically loaded when importing into other software (e.g. R using the haven package).
+- **Stata data file (.dta)** binary files created by the statistical analysis software `Stata.` Note that they sometimes include metadata (e.g., variable labels) that isn't automatically loaded when importing into other software (e.g. R using the haven package).
 
-- **SAS Dataset (.sas7bdat)**, the proprietary file format used by `SAS` for storing datasets. It supports metadata and variable attributes. Datasets should be converted to open-source formats after processing.
+- **SAS Dataset (.sas7bdat)** the proprietary file format used by `SAS` for storing datasets. It supports metadata and variable attributes. Datasets should be converted to open-source formats after processing.
 
-- **Database File (.dbf)**, files used by `dBASE` and other database systems to store tabular data. They support a fixed schema and metadata. DBF files cannot store full precision. Avoid creating this type of file.
+- **Database File (.dbf)** files used by `dBASE` and other database systems to store tabular data. They support a fixed schema and metadata. DBF files cannot store full precision. Avoid creating this type of file.
 
 
 ### Hierarchical formats {#sec-hierarchical}
