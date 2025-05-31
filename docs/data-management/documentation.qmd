@@ -121,3 +121,5 @@ There are two critical strategies for documenting methods effectively:
 * Use [version control](../version-control/index.qmd) to track and explain changes to scripts over time (e.g., through clear and consistent commit messages).
 
 * Use [code comments](../software/index.qmd) to document the purpose and logic of scripts and key functions, helping others (and your future self) understand how the code works.
+
+## References
