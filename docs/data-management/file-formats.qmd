@@ -18,7 +18,7 @@ In general, data should be stored and/or archived in open formats. __Open format
 
 ### Tabular formats
 
-In general, it is best to use <span style="color:green;">open-source</span> plain text formats such as comma-separated values (.csv). In some cases, other file formats may be useful for optimizing file size or read/write speed, or for retaining data type information; however, alternative data types may have reduced interoperability. It is generally best to avoid Excel spreadsheets/workbooks (.xlsx) and Stata datasets (.dta) because they are <span style="color:red;">proprietary</span>, except in special cases where these required features offered by these file formats (e.g. variable labels in Stata .dta files) are not available in open-source file formats.
+In general, it is best to use <span style="color:green;">open-source</span> plain text formats such as comma-separated values (.csv). In some cases, other file formats may be useful for optimizing file size or read/write speed, or for retaining data type information; however, alternative data types may have reduced interoperability. It is generally best to avoid Excel spreadsheets/workbooks (.xlsx) and Stata datasets (.dta) because they are <span style="color:red;">proprietary</span>, except in special cases where these required features offered by these file formats (e.g., variable labels in Stata .dta files) are not available in open-source file formats.
 
 ::: {.callout-note}
 In cases where the native format of source data is in a proprietary software format, it is often necessary to use that software to view and edit data. For example, Stata dataset variables may have labels, a kind of embedded metadata that can only be accessed in Stata.
@@ -165,74 +165,83 @@ Consider that you may want to be able to share the underlying data with the RFF 
 
 ## Data types
 
-Individual data values are stored in specific data types, or formats. It is important to identify the data types of important variables in raw datasets to understand their precision and to determine whether data type conversion is necessary for your analysis.
+Individual data values are represented in specific data types by certain software, which determine how the values are interpreted and stored in memory. Recognizing the data types of variables in a dataset is essential for ensuring analytical accuracy, understanding precision, and avoiding errors during data processing.
 
-Every value, or object, has a type.
+### General data types
 
-Types control what operations/methods can be performed on a given value.
+| Data type | Definition | Typical memory | Precision | Common Operations | Examples |
+|--------|--------------|------------|-------------|------------|------------|
+| Character (string/text) | text or string values | ~1 byte per character | Not applicable (stores characters, not numeric values) | Concatenation, substring, pattern matching | `"Hello, world!"`,<br />`'#23'`,<br />`"'Why?', they asked."` |
+| Integer | Whole numbers (no decimal point) | 4 bytes (32-bit) | Exact for values within allowed range | Arithemtic, comparisons, indexing | `0`, `42`, `-6`,<br />`2e+30` (scientific notation) |
+| Floating point | Numbers with decimals (real numbers, including fractions) | 4 bytes (*float*), 8 bytes (*double*) | Approximate - may introduce small rounding errors | Arithmetic, scientific calculations | `-54.3`,<br />`3.14159` |
+| Boolean / Logical | Binary values | Typically 1 byte | Exact | Logical operations (e.g., `AND`, `OR`, `NOT`) | `TRUE`, `FALSE`,<br />`0`, `1` |
+| Date/time | Calendar dates and/or clock times | Varies by system (~8+ bytes) | High precision in supported range | Often require specialized functions; format inconsistencies can cause import errors | `2025-05-29`, <br />`1990-01-24 14:30:00` |
 
-The choice of data type affects storage requirements. Using larger types (e.g., float64 instead of float32, or int64 instead of int32) increases memory usage, which can be significant in large datasets. Conversely, choosing types that are too small can lead to data loss or overflow errors.
+### Notes and considerations
 
-::: {.callout-warning}
-Data types can be unwittingly changed, affecting precision and operations. For example, including a string in a numerical column of a CSV will likely cause all the column’s values to be read in as strings.
-:::
+* **Floating point rounding errors** Floating point types represent real numbers, including fractions. However, not all decimal values can be represented exactly in *binary*. As a result, small rounding errors may occur during arithmetic operations. These are usually minor but can accumulate in complex calculations. Example: `0.1 + 0.2` might result in `0.30000000000000004` due to binary representation limits.
 
-### Basic types
+- **Date formats**
+  - Use the conventional ISO 8601 format (`YYYY-MM-DD`)
+  - Ensure that date formats are consistent within columns and are correctly interpreted when converting to a standard format. For example, if a date is formatted as `DD/MM/YYYY` but is mistakenly interpreted as `MM/DD/YYYY` during conversion to `YYYY-MM-DD`, the resulting date will be incorrect.
 
-#### Examples
+* **Memory efficiency** Efficient data type choices can improve performance for large datasets. For example, integer values (such as number of people) stored as float values incurs unnecessary memory costs.
 
-| Type | Abbreviation | Description | Examples |
-|---|---|---|---|
-| Integer | int | Whole numbers | `0`, `1`, `42`, `-6`,<br />`2e+30` (scientific notation) |
-| Floating point | float | Real numbers, with or without a fractional component | `3.1`, `2.7182818285`, `-1.5`, `0`, `43` |
-| Character string | str | Text, demarcated by quote marks on either side | `"Hello, world!"`, `'apple'`, <br />`"#23"`, `"'Why?', he said."` |
+* **Changing data types** (e.g., from float to integer) modifies the values. This can lead to loss of information, as shown in the example below. Always check whether conversion is appropriate for your analysis.
+    
+    ```
+    float_value = 3.7
+    int_value = int(float_value)  # Becomes 3
+    ```
 
-#### Details
+### Limitations of text-based formats
 
-Numeric values are a key element of scientific computing:
+**Text-based formats like CSVs do not store data type metadata.**
 
-- **Integers** represent whole numbers, which can be positive, negative, or zero
-  - Subtypes of integers can be further categorized based on their size (bits) and whether they are signed (can represent negative numbers), for example,
-    - int8: 8-bit signed integer, ranges from -128 to 127
-    - uint16: 16-bit unsigned integer, ranges from 0 to 65,535
-  - Use cases include counting, indexing, and scenarios where whole numbers are needed (e.g., population counts, item quantities)
-  - Smaller integer types use less memory but have a limited range, so it is most efficient to use the smallest type with enough room for a given data value, vector, matrix, list, etc.
+**Be cautious when reading and writing CSVs or other plain-text formats. Understand that data types will be inferred, not preserved, and this may introduce rounding or formatting errors.**
 
-- **Floating point numbers** represent real numbers, which include all fractions in addition to all integers
-  - Like integers, they can be specified by size (bits), typically 32-bit or 64-bit
-    - float32 is "single precision"
-    - float64 is "double precision"
-  - Use cases include scientific calculations, financial modeling, and any scenario requiring precision for fractional values (e.g., temperature measurements, stock prices)
-  - The float32 type uses less memory than float64 but with less precision, so it is best to use float32 for large datasets where memory is a constraint and float64 when precision is important
+*All values are saved as **character strings** in text-based file formats* — there is no embedded information about whether something is an integer, float, etc. This has several implications:
 
-Data taking the form of letters, words, or other text are used just as widely as numbers:
+* **Type guessing on import** When reading a CSV, software tools typically infer column types automatically. This can result in:
+  * Inconsistent interpretation across tools (e.g., a column read as numeric in one program might be read as text in another).
+  * Conversion errors, especially with dates, floating points, or missing values.
+<br />
+<br />
 
-- **Character strings** contain text written between quote marks (either single or double)
-  - Use cases include names, addresses, descriptive text, and categories (e.g., gender, region, brand)
-  - Strings longer than a few words often take up more memory than numbers, so it’s important to manage string data carefully, especially in large datasets.
+* **Precision loss on export** If you're exporting a floating point column to CSV, the software may:
+  * Round or truncate values.
+  * Drop trailing digits or use limited decimal precision.
+  * These changes might not be obvious but can affect downstream calculations.
+<br />
+<br />
 
-### Special types
+* **No built-in support for special types** Since all values are strings, CSV files cannot inherently distinguish between:
+  * `3` as an integer vs. `3.0` as a float
+  * `2023-01-01` as a string vs. a date object
+  * `TRUE` as a logical value vs. a text label
 
-Categorical data can be stored more efficiently using more specific types:
+```
+DRAFT
+POTENTIAL SOLUTIONS TO LOSS OF DATA TYPE METADATA IN CSVS
 
-- **Logical (boolean)** data each take one of two possible values (e.g., 0 or 1, true or false)
-  - Examples of use cases include tests (pass/fail), survey responses (yes/no), and signals (on/off)
-  - Very memory-efficient, requiring little more than one byte per value
-  - Programming note: In R, Python, and Julia, the logical or boolean type is considered a distinct type but is often compatible with or represented as integers for underlying storage or arithmetic operations. In Stata, logical values are represented directly as integers, with no separate boolean type.  
-- **Factors** represent data with a finite (usually relatively small) and usually labeled set of possible values, usually referred to as levels or categories
-  - Use cases include non-numeric data that falls into distinct categories, such as colors, months, quality survey responses, or Excel workbook cells with a dropdown list of values
-  - Internally stored as integers with an associated set of labels or levels
-- **Date/time** values can be stored using data types designed for human- and machine-readability
-  - Most programming languages have modules that support specific date formats
-  - We ***recommend*** using the conventional ISO 8601 format (YYYY-MM-DD)
+type guessing on import:
+- Explicitly specify column types when importing data (e.g., using read_csv(..., col_types=...) in R or dtype=... in pandas).
+- Validate types after import.
 
-  ::: {.callout-warning}
-  Ensure that date formats are consistent within columns and are correctly interpreted when converting to a standard format. For example, if a date is formatted as "DD/MM/YYYY" but is mistakenly interpreted as "MM/DD/YYYY" during conversion to "YYYY-MM-DD", the resulting date will be incorrect.
-  :::
-
+precision loss on export & no built-in support for special types:
+- Use formats that preserve numeric precision (e.g., binary formats like .rds, .feather, .parquet) during analysis.
+- Export summaries/outputs to CSV only WHEN NEEDED? WHEN PUBLISHING / SHARING?
+- Clearly document data types in metadata or codebook when using and sharing CSVs.
+```
+  
 ### Other resources
 
 See these websites for additional information about data types:
 
-- R-focused: [R for Data Science: Transform](https://r4ds.hadley.nz/transform)
-- Python-focused: [Software Carpentry: Data Types and Type Conversion](https://swcarpentry.github.io/python-novice-gapminder/03-types-conversion.html)
+- R-focused: 
+  - [R for Data Science: Data import](https://r4ds.hadley.nz/data-import.html)
+  - [R for Data Science: Transforming data types](https://r4ds.hadley.nz/transform)
+- Python-focused: 
+  - [Software Carpentry: Data types and type conversion](https://swcarpentry.github.io/python-novice-gapminder/03-types-conversion.html)
+  - [pandas.pydata.org: Data file formats and input/output tools](https://pandas.pydata.org/docs/user_guide/io.html)
+  
