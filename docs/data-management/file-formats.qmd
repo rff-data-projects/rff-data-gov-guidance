@@ -37,6 +37,7 @@ In cases where the native format of source data is in a proprietary software for
 | DTA | .dta | <span style="color:red;">Proprietary</span> | Yes | Structured |
 | Feather | .feather | <span style="color:green;">Open-source</span> | Yes | Structured |
 | Parquet | .parquet | <span style="color:green;">Open-source</span> | Yes | Structured |
+| Lightning Fast Serialization of Data Frames | .fst | <span style="color:green;">Open-source</span> | Yes | Structured |
 | SQLite | .sqlite, .db | <span style="color:green;">Open-source</span> | Yes | Structured |
 | RData | .rdata or .rds | <span style="color:green;">Open-source</span> | Yes | Structured |
 
@@ -59,6 +60,8 @@ In cases where the native format of source data is in a proprietary software for
 - **Feather (.feather)**, a fast, lightweight binary columnar data format used for data exchange between data analysis languages like R and Python. Optimized for performance and efficiency, especially when working with large tables of data. Faster than Parquet at in-memory work, reading, and writing.
 
 - **Parquet (.parquet)**, a binary columnar data format designed for efficient storage and processing of large datasets. Supports compression and is optimized for performance across data tools like R, Python, and SQL engines. Better file size efficiency than Feather.
+
+- **Lightning Fast Serialization of Data Frames (.fst)**, a fast, compressed, columnar binary format designed **specifically for R**, optimized for high-speed reading and writing of large data frames. Ideal for efficient storage and selective column access in R workflows, but not designed for cross-language interoperability.
 
 - **SQLite (.sqlite, .db)**, files used by the SQLite relational database engine, which supports SQL queries and transactions and is used for lightweight, portable databases.
 
