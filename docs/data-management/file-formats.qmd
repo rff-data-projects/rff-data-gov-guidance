@@ -162,9 +162,13 @@ For example, in the R ecosystem, **.Rds** and **.RData** are binary file formats
 
 It is helpful to think ahead when generating and saving data visualizations and plots. Academic journals often accept `TIFF` and `PNG` formats, but they frequently have resolution and dimension requirements. Export figures with a minimum resolution of 300 dots per inch (DPI). 
 
-For RFF communications, however, the Scalable Vector Graphics format `.svg` is best because it can be easily modified as needed. Academic journals often accept this format as well.
+For RFF communications, however, vector formats are best. because it can be easily modified as needed. These include:
+- Scalable Vector Graphics (`.svg`)
+- Encapsulated PostScript (`.eps`) 
 
 Consider that you may want to be able to share the underlying data with the RFF Communications team so that they and their external design partners can create custom figures for presentation on the website, in the magazine, etc. This means clearly documenting the processing code that created the underlying data / figures, so that output data can be easily reproduced and shared as needed. If figure data is time-consuming to reproduce, you may want to save a copy of it to the L:/ drive or to your GitHub repository.
+
+For more information on figure (and table) style guidelines, refer to [the RFF Style Guide](https://my.rff.org/communications/resources-for-the-future-style-guide/).
 
 > “Sharing the underlying data of any maps and figures is always helpful for the Communications Team!”
 > 
