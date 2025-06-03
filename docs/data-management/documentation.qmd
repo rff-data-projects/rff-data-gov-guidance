@@ -99,7 +99,9 @@ Filename: `README_PRISM_Daily_Temperature.txt`
 ```
 Dataset name & format: PRISM_Daily_Temperature_2024.csv
 
-Data source: Downloaded from the PRISM Climate Group website: https://prism.oregonstate.edu/ on 2024-02-28.
+Data source: Downloaded from the PRISM Climate Group website: https://prism.oregonstate.edu/ 
+
+Date acquired: 2024-02-28.
 
 Acquired by: [Name of researcher who downloaded the data]
 
