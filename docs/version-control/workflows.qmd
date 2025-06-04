@@ -11,7 +11,8 @@ Now that we know some basic Git principles, how do we make a workflow for a give
   * Try to have commits provide incremental improvements.  For example, a commit might include the addition of a single function, or a 2-line fix to an existing script.
   * If you find yourself coding for hours between commits, consider trying to break up your task into discrete sub-tasks.
 * Pull often to ensure that you are incorporating the changes of others.
-* A local clone of a repository should generally ONLY have a single user.
+* A local clone of a repository should generally ONLY have a single user. 
+  * This is why in section (<INSERT LINK TO DM SECTION>) we recommend that each user works from a repository clone stored in their own individual subfolder within the L:/ drive project folder.  
 * Take care with encoding file paths within a repository.
 You want other people to be able to use the repository without having to move files around or change all the file paths in the repository.
 You could either:
