@@ -21,7 +21,7 @@ Let's start with:
 git --version
 ```
 
-It should have printed out what version you are running, something like `git bersion 1.47.0.windows.2`.  Now, let's introduce ourselves to Git:
+It should have printed out what version you are running, something like `git version 1.47.0.windows.2`.  Now, let's introduce ourselves to Git:
 
 ```bash
 git config --global user.name 'Your Name Here'
@@ -32,6 +32,8 @@ git config --global --list
 Now, Git will include your name and email when you publish changes.
 
 ### Creating a Repository in GitHub
+
+This section is useful for learning, but you can also skip to the [next section on cloning repositories](#cloning-your-first-repository-with-git) if you already have a repository (i.e. for a project) that you'd like to clone.
 
 1. To create a repository hosted on GitHub, first navigate to [github.com](https://github.com/) and click the plus button in the top right corner, then click the "new repository" button. 
 
@@ -57,17 +59,17 @@ Generally, choose private for repositories that will contain sensitive informati
 It is easy to change from private to public later on, so when in doubt choose private.
 See the [public/private section in Workflows](./workflows.qmd#should-our-repository-be-public-or-private) for more information.
 If you have chosen to make your project public, you will need to also select which license to use.
-See the [section on software licenses]() <TODO: Link to software licenses section here> to help make this decision.
+See the [section on software licenses](../data-management/publication.qmd#software-licenses) to help make this decision.
 
 5. Check the box to add a README file.
 This will create a file called `README.md` located in the repository's root folder, where you can add basic documentation for the repository.
 
 6. Optional: Choose a `.gitignore` template from the dropdown menu.
-`.gitignore` specifies certain file types that Git will not track the changes of, by default.
+A `.gitignore` file specifies certain file types that Git will not track the changes of, by default.
 For example, it is best to ignore an auto-created config file made by R studio that is user-specific.
 Generally it is a good idea to select the .gitignore template for the programming language you will be using.
 
-7. Click the "Create Repository"!!
+7. Click the "Create Repository" button!!
 This should take you to the home page of your new repository.
 
 ### Cloning Your First Repository with Git
@@ -127,7 +129,7 @@ Now that we have a Git repository on our computer, let's explore the process of 
 
 Let's walk through that process together.  In Git Bash, type `git status` to show the status of the repository.  It should give you a short report about which __branch__ you are on (more about branches later), whether your local copy is up to date with the remote copy, and any file changes you've made.
 
-```
+```bash
 On branch main                                 # this is the default branch
 Your branch is up to date with 'origin/main'.  # the local version matches the version in GitHub
 
@@ -137,12 +139,12 @@ nothing to commit, working tree clean          # we haven't made file changes
 At this point, it is __ALWAYS__ a good idea to run the `git pull` command to make sure we are up to date with the latest version.  This command first checks to see if the remote repository version (the version stored in GitHub) has had any commits since the last time we pushed or pulled.  If there are any, it will download them incorporating those changes into your working version.
 
 Now, let's open up the README file and make some changes.  
-You can either navigate to the file in explorer or type `notepad README.md` to open the README file in the notepad text editor.
+You can either navigate to the file in Windows File Explorer or type `notepad README.md` to open the README file in the notepad text editor.
 Add a few lines to your README, then save and close the file.
 In the future, you can use whatever editor you prefer, such as RStudio, MATLAB, Visual Studio Code, etc.
 After making that change, let's type our `git status` command into Git Bash again.
 
-```
+```bash
 On branch main
 Your branch is up to date with 'origin/main'.
 
@@ -162,7 +164,7 @@ You can use the command `git add -p` in order to interactively select which file
 
 Now let's check the status once more:
 
-```
+```bash
 On branch main
 Your branch is up to date with 'origin/main'.
 
@@ -180,7 +182,7 @@ If you find typing your commit message in notepad arduous, we have the command f
 git commit -m "Simply type your messsage here"
 ```
 
-__OR__ if you want to be even more lazy, see the [section for the commit alias][./faq.qmd#commit-message-alias]
+__OR__ if you want to be even more lazy, see the [section for the commit alias](./faq.qmd#commit-message-alias)
 :::
 
 The last step is to **push** commits to the online repository.  At this point, `git status` indicates that the local version of the repository is 1 commit ahead of the online version.  To send the commits to the online repository, we will simply enter the command `git push`!  Now, if you navigate to the online version of the repository in GitHub, you should be able to see the changes you made.  Congratulations!!
@@ -191,7 +193,7 @@ Have you ever been working on a Word document with another person, and maybe you
 
 Say, for example, my collaborator pushes a commit to our project repository without me realizing.  In an ideal world, I would run the `git pull` command to make sure I have that commit incorporated into my local copy.  However, maybe I forgot to pull, or my collaborator pushed that commit as I was already making file changes.  Then, I commit my changes and push them and am greeted with the following ugly message:
 
-```
+```bash
 $ git push
 To github.com:Ethan-Russell/MyTestRepo.jl.git
  ! [rejected]        main -> main (fetch first)
@@ -205,7 +207,7 @@ hint: See the 'Note about fast-forwards' in 'git push --help' for details.
 
 Don't panic!  Git is built for this.  This message is Git telling us that we can't push because of the other commit, and it also tells us that the solution is to `git pull` before pushing again.  When we run `git pull`, Git will try to automatically merge the changes for us.  Ideally, if changes are made in separate sections of the file (or different files altogether), Git will be able to merge everything, and you can simply `git push` again to push your commit(s).  However, if both versions have changed the same file, Git will flag it as a conflict and it will enter "MERGING" mode (denoted in git bash to the right of the prompt).  This is the type of message Git will print if there is a conflict:
 
-```
+```bash
 $ git pull
 remote: Enumerating objects: 5, done.
 remote: Counting objects: 100% (5/5), done.
@@ -221,7 +223,7 @@ Automatic merge failed; fix conflicts and then commit the result.
 
 Fortunately, Git has identified which file(s) have conflicts: in this case, only the README.md file has a conflict.  So let's open the file where there is a conflict.  Git identifies which lines have conflicts by adding some helpful syntax, which we can search for to find the conflict.  You can do a search for "====" and that will take you to the conflict:
 
-```
+```md
 <<<<<<< HEAD
 # My Test Repo
 =======
@@ -237,7 +239,7 @@ Git will list the local version first, right after printing `<<<<<<< HEAD`, foll
 
 In the example above, I would change that portion of the file to be:
 
-```
+```md
 # MyTestRepoFinalName
 ```
 
@@ -300,13 +302,12 @@ After running that command, your new branch should be active.
 ::: {.callout-note}
 You can use the following command to create a new branch and check it out in one step:
 
-```
+```bash
 git checkout -b <new-branch-name>
 ```
 :::
 
 Now that your new branch is active, you can safely make changes and commits to this branch without worrying about modifying the main branch.  When you push the branch, Git will give you an error saying that there is no "upstream" branch for the branch you are pushing.  You can simply run the command it gives you, i.e. `git push --set-upstream origin <new-branch-name>`, and it should push with no problems.
-
 
 ### Merging a Branch
 
@@ -325,15 +326,23 @@ Now to finish creating the Pull Request, click the "Create pull request" button 
 
 #### Reviewing and Merging a Pull Request
 
-In order to merge the Pull Request, we recommend having someone else look through the "files changed" section of the resulting Pull Request.  From there, they can insert comments on particular lines of code, and choose whether or not to approve the pull request.  To learn more about reviewing Pull Requests, see the [appropriate section of the GitHub documentation](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/reviewing-proposed-changes-in-a-pull-request).
+In order to merge the Pull Request, we recommend having someone else on the team to review the changes.
+You may have heard of the concept of "code review", where someone reviews code made by another person.
+Code review can be daunting, especially if there are only changes to specific parts of a larger codebase.
+GitHub makes this process very easy through Pull Requests, showing and allowing comments on the lines of code that have changed.
+To review a pull request, the reviewer would navigate to the Pull Request and click on the "files changed" tab.
+From there, they can see each of the lines added, changed, or deleted, and insert comments on particular lines of code.
+After reviewing all the files changed, they can complete their review and choose whether or not to approve the pull request.
+To learn more about reviewing Pull Requests, see the [appropriate section of the GitHub documentation](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/reviewing-proposed-changes-in-a-pull-request).
 
-When you or your collaborator has reviewed and approved the Pull Request, you can go back to the "Conversation" tab of the Pull Request and click the "Merge pull request" button at the bottom of the page, and your branch's changes will be reflected in the `main` branch!
+If the reviewer has requested changes to the code based on their review, you can simply make changes, commit, and push to the same branch, and the Pull Request will be updated with those changes.
+Once the Pull Request has been reviewed and approved, you can go back to the "Conversation" tab of the Pull Request and click the "Merge pull request" button at the bottom of the page, and your branch's changes will be reflected in the `main` branch!  
 
 #### Conflicting Branches
 
 Sometimes, when we try merging our new branch into the `main` branch, the Pull Request indicates that there have been changes made to the `main` branch that conflict with the changes in the new branch.  When this happens, let's go back to Git Bash and merge any new changes from the `main` branch into our branch, then resolve any potential conflicts.  To do this, let's pull updates to `main` and then merge `main` into our new branch by running the following commands:
 
-```
+```bash
 git checkout main
 git pull
 git checkout <new-branch-name>
@@ -346,7 +355,7 @@ To handle these conflicts, use the process described in the [Handling Conflicts 
 
 Merging with a Pull Request may, at times, feel a bit unwieldy, especially if you are in a hurry or working on a project by yourself.  It is still possible to merge into the main branch without making and reviewing a Pull Request.  We just advise caution with this method because it does not facilitate easy review, and so could easily introduce mistakes into the main branch.  If you are confident that the branch is ready to merge without additional review, in Git Bash, simply enter the following commands:
 
-```
+```bash
 git checkout main
 git pull
 git merge <new-branch-name>

@@ -6,7 +6,10 @@ Now that we know some basic Git principles, how do we make a workflow for a give
 
 ## Key Principles
 
-* Users should commit changes frequently, with descriptive messages. 
+* Users should commit changes frequently, with descriptive messages.
+  * Frequent commits make it so that it is easier to find discrete check-points in the repository, rather than having everything committed at the same time.
+  * Try to have commits provide incremental improvements.  For example, a commit might include the addition of a single function, or a 2-line fix to an existing script.
+  * If you find yourself coding for hours between commits, consider trying to break up your task into discrete sub-tasks.
 * Pull often to ensure that you are incorporating the changes of others.
 * A local clone of a repository should generally ONLY have a single user.
 * Take care with encoding file paths within a repository.
@@ -26,13 +29,27 @@ You could either:
 
 When a project team is deciding to use Git, it is important to think through the following considerations.  We recommend answering these questions at the beginning of a version-controlled project.
 
+### Where should each team member store their local repositories?
+
+Here are two examples of how a project / team might choose to store their repositories.
+
+* __Generally Recommended:__  Each team member keeps their own working version of a repository on a shared drive, i.e. the L drive, which could (but probably shouldn’t) be accessed by other team members., i.e. inside of a larger project directory
+  * __Pros__: it allows easy access to shared project files; specifically, users can see changes made by others if they haven't pushed them to the repository due to outside circumstances
+  * __Cons__: files could be accidentally changed by others if they are working in the incorrect version of the repository
+
+* Each team member keeps their own working version of a repository somewhere private, either on the `C:/` drive of their personal computer, or on the RFF servers, with the intention of no other team members having access to it.  This is suitable for teams that have many repositories where it would get very confusing to store all the repositories in the same location for the whole team.
+  * __Pros__: it is “clean”, with no accidental file changes from other users.
+  * __Cons__: It would require care to be taken for access (file paths) to non-version-controlled data files.
+
 ### Should our repository be hosted by a GitHub Organization or User?
 
 * Do you work on a team with their own GitHub Organization (i.e. [`E4ST`](https://github.com/e4st-dev))?
   * If so, verify with the other members of the team that it would be acceptable to use the organization to host the repository
   * If your team doesn't already have one, does it make sense to create an organization for your team?  Are there likely to be multiple repositories that would make sense to group under the same organization?  If so, follow the steps in the [GitHub Documentation for creating organizations.](https://docs.github.com/en/enterprise-server@3.14/organizations/collaborating-with-groups-in-organizations/creating-a-new-organization-from-scratch)
-* Does this repository belong in the RFF Organization?
-  * If so, we generally suggest creating the repository as a personal repository and changing it later.  <TODO: discuss our official guidance on this>
+* Does this repository belong in the [RFF Organization](https://github.com/rff-data-projects)?
+  * Generally, if the repository is associated with a publication, the code should be forked or transferred to the organization.
+  * We suggest creating the repository as a personal repository and changing ownership or forking.
+  * See the [Data Management section on code publication](../data-management/publication.qmd#code) for additional guidance.
 
 ### Should our repository be public or private?
 
@@ -44,34 +61,30 @@ If you have sensitive data but would like for the repository to remain public, c
 It is easy to change from private to public later on, so when in doubt choose private.
 
 If you have chosen to make your project public, you will need to also select which license to use.
-See the [section on software licenses]() <TODO: Link to software licenses section here> to help make this decision.
-
-### Where should each team member store their local repositories?
-
-Here are two examples of how a project / team might choose to store their repositories.
-
-* Each team member keeps their own working version of a repository somewhere private, either on the `C:/` drive of their personal computer, or on the RFF servers, with the intention of no other team members having access to it.
-  * __Pros__: it is “clean”, with no accidental file changes from other users.
-  * __Cons__: It would require care to be taken for access (file paths) to non-version-controlled data files.
-* Each team member keeps their own working version of a repository on a shared drive, i.e. the L drive, which could (but probably shouldn’t) be accessed by other team members., i.e. inside of a larger project directory
-  * __Pros__: it allows easy access to shared project files; specifically, users can see changes made by others if they haven't pushed them to the repository due to outside circumstances
-  * __Cons__: files could be accidentally changed by others if they are working in the incorrect version of the repository
+See the [section on software licenses](../data-management/publication.qmd#software-licenses) to help make this decision.
 
 ### Should our team use branches?
 
 To learn about branches, what they are for, and how to use them, see the [Branching section of the Tutorial](./tutorial.qmd#branching).  There are a few aspects to consider with this question.
 
 * How many people will be making commits?
-  * If only one person will be making commits, it may save time and effort to not create additional branches.
+  * If only one person will be making commits, it may save time and effort to maintain a single branch, without creating additional branches.
   * With more people making commits, using multiple branches may help avoid unnecessary merge conflicts.
 * Is it important to have a fully functional version at all times?
   * Branches can be very good for preserving a functional version of the code, while allowing for risk-free experimental features to be developed.
 * Is it important to have code review for this project?
   * Branches facilitate streamlined code review, where reviewers only review sections that have changed (via Pull Requests).
 
+Here are some examples of when a branch might be useful:
+* __Major Changes/Experimental Feature__:  Say you have an idea on how to improve your code, and it requires significantly re-vamping the code. It would make sense to create a branch for this experimental feature, so that you can develop the feature without worrying about making changes to the main branch.  Then the whole team can use the Pull Request to evaluate whether or not they'd like to merge into the main branch.
+* __New Team Member__:  You have an existing model that is already working well.  A new researcher joins the project team and is tasked with a code improvement.  They are new to the model, so you want to review their changes carefully before applying them to the main branch.  It makes sense to have them create a branch for their development, and review it with the pull request.
+* __Concurrent Development__:  Your team has a couple of features that need to be developed in tandem. To prevent extensive conflicts and streamline the process of combining the new features, each feature gets its own branch.
+* __Project__:  If your team has a project that requires making project-specific changes, it _could_ be a good idea to create a project branch, with no intention to merge the project branch into `main`.  :warning:However, for features that would be useful to have in the `main` branch, it is best to implement those in the main branch or in a separate branch (to be merged with main).  It is difficult to selectively merge changes from the project branch into the `main` branch.
+
 ### If using branches, how do we want to handle code review?
 
 It would be good to talk about the following questions with your team:
+
 * Should code review be required for every change to the code?
   * One example of this would be requiring that every change be made in a branch and submitted via Pull Request, and that at least one person who did not author the Pull Request must approve it in order for the branch to be merged into the main branch.
   * Your team may decide to only require a Pull Request and code review for major features.

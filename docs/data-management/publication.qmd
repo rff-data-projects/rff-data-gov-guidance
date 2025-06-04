@@ -1,0 +1,196 @@
+---
+title: Publication
+---
+
+**Publication** is making code/data available to the broader community, often through formal dissemination channels such as data repositories, journal articles, or public databases. Publication ensures that data is discoverable and can be accessed by other researchers, stakeholders, or the public. Documentation and metadata are included to facilitate understanding and reuse. Publication may also involve adherence to specific standards and best practices to enhance the visibility and impact of the data.
+
+**While RFF does not mandate the publication of code and data, it is highly encouraged.**
+
+Increasingly, journals require code and data to be submitted along with the article. In addition, many funders and stakeholders value open source software and data availability. Planning for this in the early stages of a project facilitates reproducibility, access, and the ability of others to use and cite your work.  
+
+## Licensing
+
+A well-chosen license clarifies permissions, prevents misunderstandings, and encourages responsible use. The next section provides guidance on selecting and attaching appropriate licenses to ensure your data and code remain accessible and properly credited.
+
+::: {.callout-note}
+Data and code products are licensed separately from RFF publication products. All work on the RFF.org and Resources.org websites (working papers, reports, issue briefs, explainers, Common Resources blog posts, Resources magazine articles, Resources Radio podcast episodes, graphs, charts, photographs, audio, and video) are listed under the Deed - Attribution-NonCommercial-NoDerivatives 4.0 International - Creative Commons license. This Creative Commons license is **not** suitable for either software or data.
+:::
+
+### Verify Data and Code Rights and Ownership
+
+Before proceeding with choosing licenses, confirm that your team owns IP rights to the work produced and has full discretion over licensing the project’s data and code—without restrictions from funders, institutional policies, or legal/data agreements.
+
+In some cases the research team may have joint IP ownership with partners or funders. In this case, licensing options must be agreed upon by both parties.
+
+### Choose Appropriate Licenses 
+
+#### Common Licenses
+
+For software and data, there are three main license suites common in the academic space: *MIT*, *GNU GPU*, and *ODC*. *MIT* and *GNU GPU* are separate software licenses, while *ODC* has two commonly-used data licenses. All four are described below.
+
+##### Software licenses
+
+*	[MIT](https://choosealicense.com/licenses/mit/): The more permissive and flexible. Users, including commercial entities, can view, use, modify, and distribute the work freely. Allows for commercial use and **enclosure**. **Attribution** is required.
+
+(_**Enclosure** is the process of restricting access, usage, or modification of software or its source code through the imposition of licensing terms. It involves the application of intellectual property rights (such as copyright, patents, or trade secrets) to create boundaries around software, typically to protect the developer's or organization's control over its distribution and use._)
+
+(_**Attribution** refers to crediting to the original creator, author, or source as specified in the licensing terms. Attribution ensures recognition of the intellectual property and efforts of the creators while allowing others to use, modify, or distribute the licensed material._)
+
+* [GNU General Public Use (GPU)](https://choosealicense.com/licenses/gpl-3.0/): Users, including commercial entities, can view, use, modify, and distribute the work freely. However, it carries **copyleft**, so all distributions must be released under the same GNU GPU license, ensuring open access (**viral**). **Attribution** is required.
+
+(_**Copyleft** is a concept in software (code/script) licensing that ensures any derivative works (modifications or adaptations) of a particular work remain subject to the same licensing terms as the original work. For example, if a developer modifies a program released under the GNU General Public License (GPL), they are required to distribute their modified version under the same GPL license. This means they must also make the source code available and allow others to freely use, modify, and redistribute it under the same terms. Copyleft aims to preserve software freedom by preventing proprietary restrictions from being reintroduced into derivative works._)
+
+(_**Viral**: Licenses like the GNU General Public License (GPL) and the Open Database License (ODbL) are often described as "viral" because they require derivative works to comply with the same licensing terms as the original work. This characteristic ensures that the freedoms granted by the license (such as the ability to use, modify, and share) are preserved in all subsequent versions or derivatives, but it also imposes specific obligations on those who modify or build upon the original._)
+
+
+##### Data licenses by Open Data Commons (ODC)
+* [ODC-By](https://opendatacommons.org/licenses/by/1-0/): The more permissive and flexible. Users, including commercial entities, can view, use, modify, and distribute the work freely. Allows for commercial use and **enclosure**. **Attribution** is required.
+
+* [ODCbL](https://opendatacommons.org/licenses/odbl/): Users, including commercial entities, can view, use, modify, and distribute the work freely. However, it carries **share-alike**, so all distributions must be released under the same ODCbL license, ensuring open access (**viral**). **Attribution** is required.
+
+(_**Share-alike**, similar to **copyleft** but applied to datasets, requires that any derivative works of content (adaptations or modifications) are licensed under the same or a compatible license. This ensures that future users of the adapted work can use it under similar terms._)
+
+#### Recommendations for selecting licenses
+
+1.	Adhere to any product licensing requirements from the funding agreement and the source data/software.
+
+2.	Consider whether the common academic licenses that are more permissive and flexible (MIT for software, ODC-By for data) are appropriate. If so, use those. These licenses are suitable for most applications.
+
+3.	If project authors/partners and RFF would prefer that all derivative works remain open source and accessible, use GNU GPLv3 plus citation request for software and ODbL for data. Caution that these licenses, because they are more restrictive, are more complex, so review license terms carefully.
+
+4. If there are other requirements or the team would like to review a broader range of software licenses and their specifications, visit [ChooseALicense](https://choosealicense.com/).
+
+### Create and customize license files
+
+* Once the license has been selected, download or create a .txt license file from the license website. Save the file as `LICENSE.txt` in the project folder and/or repository. 
+
+* Review the license terms and modify where necessary (most open-source and open-data licenses are designed to be used as-is, but others may require you to fill in specific details, such as name or organization).
+
+* If adding additional terms, include them in a separate README or license appendix to avoid conflicting with the main license.
+
+## Publishing
+
+*__For publishing both code and data, ensure that the [project-level README](../data-management/documentation.qmd#project-readme) is up to date.__*
+
+### Code
+
+When your project is ready to publish code—whether alongside a journal article, report, or other research output—there are a few options for how to share it, especially if your code is hosted on GitHub.
+
+#### Note on journal requirements
+
+Some journals require authors to:
+
+* Make the codebase publicly accessible
+* Include a link to the GitHub code repository in the manuscript
+* Reference the codebase DOI in the manuscript
+
+#### Sharing code via the RFF GitHub Organization
+
+You can link your GitHub repository to the RFF GitHub organization in one of two ways:
+
+##### Option 1: Forking into the RFF GitHub Organization
+
+*Best for*: Capturing a snapshot of a repository at a specific point in time (e.g., associated with a publication).
+
+* A fork creates a copy of your repository under the RFF organization account.
+* This snapshot can be tagged to align with a publication version (e.g., v1.0-paper-release).
+* The fork can be updated to stay in sync with the original repo, or kept as a fixed version.
+* Include a note in the README linking the snapshot to the relevant publication.
+
+##### Option 2: Transferring Ownership to the RFF Organization
+
+*Best for*: Ongoing or institutional projects requiring a permanent home and clean URL.
+
+* The repository is moved under the RFF GitHub organization.
+* All existing collaborators retain their permissions.
+* The repository URL will change, but redirects will be preserved by GitHub.
+* Organization owners (e.g., staff managing RFF's GitHub) gain administrative control.
+
+#### Recommended Publishing Workflow
+
+If your repository is already in the RFF GitHub organization:
+
+1. Make the repository public once you're ready to publish.
+
+2. Tag the version associated with the publication (e.g., v1.0-publication-name) ([how to create GitHub tags](https://git-scm.com/book/en/v2/Git-Basics-Tagging)).
+
+3. Archive it on Zenodo if a DOI is needed.
+
+If your repository is under a personal GitHub account:
+
+1. Decide whether you plan to continue developing the code:
+
+* For **ongoing or reusable projects**, consider transferring the repository to the RFF organizational GitHub.
+* For **static, published versions**, request that the RFF GitHub account fork your repository.
+
+2. Contact the RFF GitHub organization admins via [DGWG@rff.org](mailto:dgwg@rff.org) so that they can fork or migrate the repository and add a tag associated with the publication (tags do not automatically transfer with the fork).
+
+3. Optionally, deposit the tagged version to Zenodo and link the DOI in your README.
+
+### Data
+
+#### Data-level documentation (metadata) {#metadata}
+
+It is recommended to attach **metadata** files to published datasets. Metadata ("data about data") documents the “who, what, when, where, how, and why” of a data resource. Metadata not only allows users (your future self included) to understand and use datasets, but also facilitates search and retrieval of the data when deposited in a data repository. 
+
+Below are the key components of metadata. They can be stored in a simple text or markdown file.
+
+* Title: Descriptive name of the dataset. 
+* DOI number: Associated with the final publication, dataset, or both
+* Abstract: Summary of the dataset’s content
+* Keywords: Relevant terms for search and discovery
+* Temporal Extent: Time period covered by the data
+* Data Format: File format
+* Data Source(s): Origin of the data
+* Accuracy and Precision: Information about data quality
+* Access Constraints: Restrictions on data use
+* Attribute / field definitions: Define all abbreviations and coded entries 
+* Additional geospatial metadata components, if applicable
+*	Spatial Extent: Geographic coverage (bounding coordinates)
+*	Projection Information: Coordinate system details
+
+In some contexts, generating machine-readable metadata that adheres to certain disciplinary standards is useful. There are various metadata formats and standards for specific disciplines. Additional guidance and resources for generating machine-readable metadata are here: [Metadata and describing data – Cornell Data Services](https://data.research.cornell.edu/data-management/storing-and-managing/metadata/).
+
+#### Uploading data to Zenodo
+
+[Zenodo](https://zenodo.org/) is an online repository for sharing research data, software, and other scientific outputs. It has a broad disciplinary focus and is safe, citeable (every upload is assigned a DOI), compatible with GitHub, and free for up to 50GB of storage.
+
+##### Step 1: Prepare the research data
+
+Before uploading, ensure that:
+
+* The data is well-organized (e.g., structured folders, clear file names).
+* Metadata file are prepared for each data file or sets of data files, including dataset title, description, author names, and relevant keywords.
+* A license is attached. 
+* Any [sensitive or restricted data](../data-management/sensitive-proprietary.qmd) is removed or anonymized (if applicable).
+* The project-level README is up to date.
+
+For guidance on choosing which files to publish and how to handle API-accessed data, see [Finalize data organization](../data-management/archival.qmd#archival-finalize-data-org).
+
+
+##### Step 2: Create a Zenodo account & access the upload dashboard
+
+* Go to [Zenodo](https://zenodo.org/) and sign in (or create an account). Note that you can create an account using your GitHub profile.
+* Click the "New Upload" button on the Zenodo dashboard.
+
+##### Step 3: Upload the data files, fill in metadata, set access
+
+* Upload data, metadata, and the project-level README file.
+* Enter metadata information in applicable fields (contributors, associated journal article or conference presentation, etc.)
+* Include a link to the GitHub code repository.
+* Choose an Access Level
+*	Open Access: Publicly available for anyone.
+* Embargoed: Set a release date if the data must remain private for a certain period.
+* Restricted Access: Requires users to request access.
+
+##### Step 4: Publish & Get a DOI
+* Review all details and make any necessary edits.
+* Click "Publish" to finalize the upload.
+* Zenodo will generate a DOI — use this when citing the dataset in publications.
+
+##### Versioning & Updates
+If the dataset needs to be udpated:
+
+* Use the "New Version" option in Zenodo instead of creating a separate upload.
+* Zenodo will link versions together and maintain persistent DOIs.
+
