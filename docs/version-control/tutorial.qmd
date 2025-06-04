@@ -326,10 +326,10 @@ Now to finish creating the Pull Request, click the "Create pull request" button 
 
 #### Reviewing and Merging a Pull Request
 
-In order to merge the Pull Request, we recommend having someone else on the team to review the changes.
-You may have heard of the concept of "code review", where someone reviews code made by another person.
+Pull requests provide a great opportunity for collaborators to review one anothers' code, to ensure accuracy.
 Code review can be daunting, especially if there are only changes to specific parts of a larger codebase.
-GitHub makes this process very easy through Pull Requests, showing and allowing comments on the lines of code that have changed.
+GitHub makes this process very easy, by identifying lines of code that have changed, and allowing collaborators to comment on them.
+
 To review a pull request, the reviewer would navigate to the Pull Request and click on the "files changed" tab.
 From there, they can see each of the lines added, changed, or deleted, and insert comments on particular lines of code.
 After reviewing all the files changed, they can complete their review and choose whether or not to approve the pull request.
