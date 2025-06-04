@@ -35,8 +35,8 @@ book:
         - docs/data-management/quality-preparation.qmd
         - docs/data-management/archival.qmd
     - part: docs/software/index.qmd
-      chapters:
-        - docs/software/sq1.qmd
+      # chapters:
+      #   - docs/software/sq1.qmd
     - part: docs/version-control/index.qmd
       chapters:
         # - docs/version-control/terminology.qmd
