@@ -16,8 +16,6 @@ It includes practical support to:
 * Set up new projects effectively
 * Improve existing workflows
 
-**This is a living resource** — it will continue to evolve as needs shift and feedback is incorporated.
-
 ## Site Outline
 * [Foundations](./docs/foundations/index.qmd)
 * [Data Management](./docs/data-management/index.qmd)
@@ -25,6 +23,8 @@ It includes practical support to:
 * [Version Control](./docs/version-control/index.qmd)
 
 ## Questions and feedback
+
+**This is a living resource** — it will continue to evolve as needs shift and feedback is incorporated.
 
 To submit questions, bugs (e.g., broken hyperlinks), suggestions, or feedback on this guidance, click `Report an issue` on the right-hand side of this page and submit an __issue__ to the repository. Note that your comment will be publicly visible. 
 
