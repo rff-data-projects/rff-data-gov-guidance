@@ -112,20 +112,20 @@ If your repository is already in the RFF GitHub organization:
 
 1. Make the repository public once you're ready to publish.
 
-2. Tag the version associated with the publication (e.g., v1.0-publication-name) ([how to create GitHub tags](https://git-scm.com/book/en/v2/Git-Basics-Tagging)).
+2. Tag the publication version (e.g., v1.0-publication-name) ([Learn how to create GitHub tags](https://git-scm.com/book/en/v2/Git-Basics-Tagging)).
 
-3. Archive it on Zenodo if a DOI is needed.
+3. Archive the release on Zenodo if you need a DOI.
 
 If your repository is under a personal GitHub account:
 
-1. Decide whether you plan to continue developing the code:
+1. Decide whether you will continue development:
 
 * For **ongoing or reusable projects**, consider transferring the repository to the RFF organizational GitHub.
 * For **static, published versions**, request that the RFF GitHub account fork your repository.
 
-2. Contact the RFF GitHub organization admins via [DGWG@rff.org](mailto:dgwg@rff.org) so that they can fork or migrate the repository and add a tag associated with the publication (tags do not automatically transfer with the fork).
+2. Contact the RFF GitHub organization admins at [DGWG@rff.org](mailto:dgwg@rff.org) to initiate the fork or transfer and add a tag associated with the publication (*note: tags do not transfer automatically when a repo is forked*).
 
-3. Optionally, deposit the tagged version to Zenodo and link the DOI in your README.
+3. (**Optional**) Archive the tagged version on Zenodo and link the DOI in your README.
 
 ### Data
 
