@@ -33,7 +33,7 @@ See [instructions for setting up a project `L:/` drive folder](#L-drive-storage-
 
 ### Code: `L:/` drive and GitHub
 
-Project code should be stored in the project's `L:/` drive folder alongside data. To support collaboration and reproducibility, also enable version control for directories containing scripts (e.g., `.R`, `.py`, `.do` files) and create a remote GitHub repository.
+Project code (e.g., `.R`, `.py`, `.do` files) should be stored in the project's `L:/` drive folder alongside data, and should be version controlled within Git repository synced to GitHub.
 
 GitHub’s distributed version control system allows team members to:
 
@@ -43,9 +43,10 @@ GitHub’s distributed version control system allows team members to:
 
 For example, you can revise a script locally and commit changes, with documentation, when they’re ready—without interfering with your colleague's workflow.
 
+To prevent users from simultaneously editing scripts stored within a shared folder, and to support use of version control, **each team member who will be viewing, running, or editing code should have their own personal folder containing a clone of the project's GitHub repository **. Specific suggestions for how to organize your project folder are in the [Organization](../data-management/organization.qmd/#Directory-Structure) section.
+
 Instructions for setting up the version control system are forthcoming. In the meantime, see [available external  resources](../version-control/index.qmd).
 
-In order for your project to be enabled for version control in the future, **each team member who will be viewing, running, or editing code should have their own script folder**. Specific instructions are in the [Organization](../data-management/organization.qmd/#Directory-Structure) section.
 
 ## Solutions for collaborative projects {#collab}
 
