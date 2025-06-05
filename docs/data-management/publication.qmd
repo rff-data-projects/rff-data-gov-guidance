@@ -90,7 +90,7 @@ You can link your GitHub repository to the RFF GitHub organization in one of two
 
 ##### Option 1: Forking into the RFF GitHub Organization
 
-*Best for*: Capturing a snapshot of a repository at a specific point in time (e.g., associated with a publication).
+This approach is suitable for most situations and provides significant flexibility. It creates a **snapshot** of the repository at a specific point in time—such as for a publication—and allows that version to be archived under the RFF GitHub organization. However, the **original repository owner retains full ownership and administrative control** of the main repository, including managing settings and collaborators.
 
 * A fork creates a copy of your repository under the RFF organization account.
 * This snapshot can be tagged to align with a publication version (e.g., v1.0-paper-release).
@@ -99,9 +99,9 @@ You can link your GitHub repository to the RFF GitHub organization in one of two
 
 ##### Option 2: Transferring Ownership to the RFF Organization
 
-*Best for*: Ongoing or institutional projects requiring a permanent home and clean URL.
+For institutional or long-term projects, it may be most effective to **transfer ownership and administrative privileges** of the repository to the GitHub organization. This simplifies management and ensures continuity, especially during researcher transitions, by centralizing control in the organization rather than with an individual. Researchers can **retain collaborator-level permissions**, allowing them to push code, create branches, and submit pull requests.
 
-* The repository is moved under the RFF GitHub organization.
+* The repository is permanently transferred to the RFF GitHub organization.
 * All existing collaborators retain their permissions.
 * The repository URL will change, but redirects will be preserved by GitHub.
 * Organization owners (e.g., staff managing RFF's GitHub) gain administrative control.
