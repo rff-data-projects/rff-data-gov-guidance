@@ -48,13 +48,9 @@ In general, data should be stored and/or archived in open formats. __Open format
 
 ### Tabular formats
 
-**Use open-source formats whenever possible.**
-Plain text formats like CSV (.csv) are preferred for their transparency, interoperability, and long-term accessibility. Excel (`.xlsx`) and Stata (`.dta`) are <span style="color:red;">proprietary</span> and should generally be avoided—except when essential features (like Stata variable labels) are required.
+**Use open-source formats whenever possible.**Plain text formats like CSV (.csv) are preferred for their transparency, interoperability, and long-term accessibility. Excel (`.xlsx`) and Stata (`.dta`) are <span style="color:red;">proprietary</span> and should generally be avoided—except when essential features (like Stata variable labels) are required.
 
-**Other formats may be appropriate when needed.**
-The preferred type of open source format would depend on the project team's preference for software, retaining data types, etc.
-Formats such as Feather, Parquet, or RDS can optimize performance (e.g., faster read/write) or preserve data types, but may reduce compatibility across tools.
-
+**Choosing an open source format.**The preferred open source format will depend on the project team's preferences for accessibility, software, interoperability, need for computational efficiency, etc. The features of common formats are described below.
 
 ::: {.callout-note}
 In cases where the native format of source data is in a proprietary software format, it is often necessary to use that software to view and edit data. For example, Stata dataset variables may have labels, a kind of embedded metadata that can only be accessed in Stata.
