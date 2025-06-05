@@ -1,6 +1,36 @@
 ---
-title: File & Data Types
+title: Data & File Types
 ---
+## Data types
+
+Individual data values are represented in specific data types by certain software, which determine how the values are interpreted and stored in memory. Recognizing the data types of variables in a dataset is essential for ensuring analytical accuracy, understanding precision, and avoiding errors during data processing.
+
+### General data types
+
+| Data type | Definition | Typical memory | Precision | Common Operations | Examples |
+|--------|--------------|------------|-------------|------------|------------|
+| Character (string/text) | text or string values | ~1 byte per character | Not applicable (stores characters, not numeric values) | Concatenation, substring, pattern matching | `"Hello, world!"`,<br />`'#23'`,<br />`"'Why?', they asked."` |
+| Integer | Whole numbers (no decimal point) | 4 bytes (32-bit) | Exact for values within allowed range | Arithemtic, comparisons, indexing | `0`, `42`, `-6`,<br />`2e+30` (scientific notation) |
+| Floating point | Numbers with decimals (real numbers, including fractions) | 4 bytes (*float*), 8 bytes (*double*) | Approximate - may introduce small rounding errors | Arithmetic, scientific calculations | `-54.3`,<br />`3.14159` |
+| Boolean / Logical | Binary values | Typically 1 byte | Exact | Logical operations (e.g., `AND`, `OR`, `NOT`) | `TRUE`, `FALSE`,<br />`0`, `1` |
+| Date/time | Calendar dates and/or clock times | Varies by system (~8+ bytes) | High precision in supported range | Often require specialized functions; format inconsistencies can cause import errors | `2025-05-29`, <br />`1990-01-24 14:30:00` |
+
+### Notes and considerations
+
+* **Floating point rounding errors** Floating point types represent real numbers, including fractions. However, not all decimal values can be represented exactly in *binary*. As a result, small rounding errors may occur during arithmetic operations. These are usually minor but can accumulate in complex calculations. Example: `0.1 + 0.2` might result in `0.30000000000000004` due to binary representation limits.
+
+- **Date formats**
+  - Use the conventional ISO 8601 format (`YYYY-MM-DD`)
+  - Ensure that date formats are consistent within columns and are correctly interpreted when converting to a standard format. For example, if a date is formatted as `DD/MM/YYYY` but is mistakenly interpreted as `MM/DD/YYYY` during conversion to `YYYY-MM-DD`, the resulting date will be incorrect.
+
+* **Changing data types** (e.g., from float to integer) modifies the values. This can lead to loss of information, as shown in the example below. Always check whether conversion is appropriate for your analysis.
+    
+    ```
+    float_value = 3.7
+    int_value = int(float_value)  # Becomes 3
+    ```
+
+* **Memory efficiency** Efficient data type choices can improve performance for large datasets. For example, integer values (such as number of people) stored as float values incurs unnecessary memory costs.
 
 ## Data file formats
 
@@ -19,13 +49,12 @@ In general, data should be stored and/or archived in open formats. __Open format
 ### Tabular formats
 
 **Use open-source formats whenever possible.**
-Plain text formats like CSV (.csv) are preferred for their transparency, interoperability, and long-term accessibility.
+Plain text formats like CSV (.csv) are preferred for their transparency, interoperability, and long-term accessibility. Excel (`.xlsx`) and Stata (`.dta`) are <span style="color:red;">proprietary</span> and should generally be avoided—except when essential features (like Stata variable labels) are required.
 
 **Other formats may be appropriate when needed.**
+The preferred type of open source format would depend on the project team's preference for software, retaining data types, etc.
 Formats such as Feather, Parquet, or RDS can optimize performance (e.g., faster read/write) or preserve data types, but may reduce compatibility across tools.
 
-**Avoid proprietary formats unless necessary.**
-Excel (`.xlsx`) and Stata (`.dta`) are <span style="color:red;">proprietary</span> and should generally be avoided—except when essential features (like Stata variable labels) are required.
 
 ::: {.callout-note}
 In cases where the native format of source data is in a proprietary software format, it is often necessary to use that software to view and edit data. For example, Stata dataset variables may have labels, a kind of embedded metadata that can only be accessed in Stata.
@@ -50,30 +79,74 @@ In cases where the native format of source data is in a proprietary software for
 
 #### Descriptions of tabular formats
 
-- ***Recommended:*** **comma-separated values (.csv)** delimited text files widely used for data exchange and simple data storage. Each row contains the same number of values separated by commas.
+- **Text-based formats** These formats are highly accessible and can be opened with common tools like Excel, Notepad, or any text editor, making them ideal for sharing *output/final* datasets. Text-based formats also work well with version control systems. However, be aware of their [drawbacks and follow best practices](#textbasedissues).
 
-- **Tab-separated values (.tsv)** files similar to CSV files but with values separated by tabs.
+  - **Comma-separated values (.csv)** delimited text files widely used for data exchange and simple data storage. Each row contains the same number of values separated by commas.
 
-- **Plain text (.txt)** files which can contain unformatted or formatted (schema) text. Not recommended for storing complex datasets.
+  - **Tab-separated values (.tsv)** files similar to CSV files but with values separated by tabs.
 
-- **Excel spreadsheets/workbooks (.xls, .xlsx)** files designed for use with `Microsoft Excel software.` XLS is a binary file format compatible only with Excel, both older and newer versions. XLSX was developed more recently. It is XML-based, making it compatible with open-source software such Google Sheets as well as versions of Excel released since 2007. Generally **avoid relying on these files for data storage** due to complex formatting, data formats, formulas, etc. They also complicate quality assurance. XLS is not version-control friendly and XLSX requires special version-control techniques because it is stored in a compressed state. Excel spreadsheets can easily be exported to CSV files.
+  - **Plain text (.txt)** files which can contain unformatted or formatted (schema) text. Not recommended for storing complex datasets.
 
-- **Feather (.feather)** a fast, lightweight binary columnar data format used for data exchange between data analysis languages like `R` and `Python.` Optimized for performance and efficiency, especially when working with large tables of data. Faster than Parquet at in-memory work, reading, and writing.
+- **Excel spreadsheets/workbooks (.xls, .xlsx)** files designed for use with `Microsoft Excel software.` XLS is a binary file format compatible only with Excel, both older and newer versions. XLSX was developed more recently. It is XML-based, making it compatible with open-source software such Google Sheets as well as versions of Excel released since 2007. Generally <span style="color:green;">avoid</span> relying on these files for data storage due to complex formatting, data formats, formulas, etc. They also complicate quality assurance. XLS is not version-control friendly and XLSX requires special version-control techniques because it is stored in a compressed state. Excel spreadsheets can easily be exported to CSV files.
 
-- **Parquet (.parquet)** a binary columnar data format designed for efficient storage and processing of large datasets. Supports compression and is optimized for performance across data tools like `R`, `Python`, and `SQL` engines. Better file size efficiency than Feather.
+- **Common data science formats** These formats are well suited for working with data during analysis and collaboration (e.g., intermediate data), because they retain metadata (e.g., data types) and are optimized for reading and writing. They are **more computationally efficient** in terms of input/output speed and file size, but often less suited to version control than text-based formats.
 
-- **RData (.rds, .rdata)** files used to store one `R` object (.rds) or an R environment with several objects (.rdata). Useful if working within an R project for efficiency and organization features, but providing limited interoperability.
+  - **Feather (.feather)** a fast, lightweight binary columnar data format used for data exchange between data analysis languages like `R` and `Python.` Optimized for performance and efficiency, especially when working with large tables of data. Faster than Parquet at in-memory work, reading, and writing.
 
-- **Lightning Fast Serialization of Data Frames (.fst)** a fast, compressed, columnar binary format designed specifically for `R`, optimized for high-speed reading and writing of large data frames. Ideal for efficient storage and selective column access in R workflows, but not designed for cross-language interoperability.
+  - **Parquet (.parquet)** a binary columnar data format designed for efficient storage and processing of large datasets. Supports compression and is optimized for performance across data tools like `R`, `Python`, and `SQL` engines. Better file size efficiency than Feather.
 
-- **SQLite (.sqlite, .db)** files used by the `SQLite` relational database engine, which supports SQL queries and transactions and is used for lightweight, portable databases.
+  - **RData (.rds, .rdata)** files used to store one `R` object (.rds) or an R environment with several objects (.rdata). Useful if working within an R project for efficiency and organization features, but providing limited interoperability.
 
-- **Stata data file (.dta)** binary files created by the statistical analysis software `Stata.` Note that they sometimes include metadata (e.g., variable labels) that isn't automatically loaded when importing into other software (e.g. R using the haven package).
+  - **Lightning Fast Serialization of Data Frames (.fst)** a fast, compressed, columnar binary format designed specifically for `R`, optimized for high-speed reading and writing of large data frames. Ideal for efficient storage and selective column access in R workflows, but not designed for cross-language interoperability.
 
-- **SAS Dataset (.sas7bdat)** the proprietary file format used by `SAS` for storing datasets. It supports metadata and variable attributes. Datasets should be converted to open-source formats after processing.
+  - **SQLite (.sqlite, .db)** files used by the `SQLite` relational database engine, which supports SQL queries and transactions and is used for lightweight, portable databases.
 
-- **Database File (.dbf)** files used by `dBASE` and other database systems to store tabular data. They support a fixed schema and metadata. DBF files cannot store full precision. Avoid creating this type of file.
+  - **Stata data file (.dta)** binary files created by the statistical analysis software `Stata.` Note that they sometimes include metadata (e.g., variable labels) that isn't automatically loaded when importing into other software (e.g. R using the haven package).
 
+  - **SAS Dataset (.sas7bdat)** the proprietary file format used by `SAS` for storing datasets. It supports metadata and variable attributes. Datasets should be converted to open-source formats after processing.
+
+  - **Database File (.dbf)** files used by `dBASE` and other database systems to store tabular data. They support a fixed schema and metadata. DBF files cannot store full precision. Avoid creating this type of file.
+
+## Working with text-based file formats{#textbasedissues}
+
+### Limitations of text-based formats
+
+Text-based formats like CSVs **do not store data type metadata.**
+
+**Be cautious** when reading and writing CSVs or other plain-text formats. Understand that **data types will be inferred**, not preserved, and this may introduce rounding or formatting errors. *All values are saved as **character strings** in text-based file formats* — there is no embedded information about whether something is an integer, float, etc. 
+
+This has several implications:
+
+* **Type guessing on import** When reading a CSV, software tools typically infer column types automatically. This can result in:
+  * Inconsistent interpretation across tools (e.g., a column read as numeric in one program might be read as text in another).
+  * Conversion errors, especially with dates, floating points, or missing values.
+<br />
+<br />
+
+* **Precision loss on export** If you're exporting a floating point column to CSV, the software may:
+  * Round or truncate values.
+  * Drop trailing digits or use limited decimal precision.
+  * These changes might not be obvious but can affect downstream calculations.
+<br />
+<br />
+
+* **No built-in support for special types** Since all values are strings, CSV files cannot inherently distinguish between:
+  * `3` as an integer vs. `3.0` as a float
+  * `2023-01-01` as a string vs. a date object
+  * `TRUE` as a logical value vs. a text label
+
+### Practices for working with text-based formats
+
+* Reading/importing text-based data
+  * Explicitly **specify** column types when importing data (e.g., using `read_csv(..., col_types=...)` in `R` or `dtype=...` in `python pandas`).
+  * **Validate** types after import, either by manually inspecting or using scripted tests.
+<br />
+<br />
+
+* Exporting/sharing text-based data
+  * Use text-based formats **only when useful**, such as when publishing / sharing data with those without specialized software, or when version-controlling data.
+  * Use formats that preserve numeric precision (e.g., binary formats like .rds, .feather, .parquet) during analysis.
+  * Clearly **document** data types in metadata or a readme when sharing text-based formats.
 
 ### Hierarchical formats {#sec-hierarchical}
 
@@ -159,12 +232,6 @@ All raster files should have five critical metadata components:
 
 For a more in-depth introduction to spatial data types, see [Introduction to Geospatial Concepts: Summary and Setup (datacarpentry.org)](https://datacarpentry.org/organization-geospatial/index.html) and [GIS Training (RFF intranet)](https://my.rff.org/it/computer-lab/).
 
-### Efficiency trade-offs
-
-In addition to being more accessible, plain text-based formats are often more compatible with version control systems than many proprietary formats due to their human-readable structure. However, when working with large datasets, it's important to consider efficiency in terms of input/output speed and file size. Data formats can vary significantly in these aspects—while binary formats are typically more efficient in terms of speed and storage, they are less suited for version control.
-
-For example, in the R ecosystem, **.Rds** and **.RData** are binary file formats that allow for fast and space-efficient data storage. In comparison, large **.shp** (Shapefile) or **.geojson** files can take more than 100 times as long to load than an equivalent **.Rds** or **.RData** file. Other binary formats, such as **.feather** or **.fst** for tabular data, are both fast and lightweight, with the added benefit of being language-agnostic, meaning they can be used across different programming environments.
-
 ## Figure file formats
 
 It is helpful to think ahead when generating and saving data visualizations and plots. Academic journals often accept `TIFF` and `PNG` formats, but they frequently have resolution and dimension requirements. Export figures with a minimum resolution of 300 dots per inch (DPI). 
@@ -181,77 +248,6 @@ For more information on figure (and table) style guidelines, refer to [the RFF S
 > 
 > – <cite>Elizabeth Wason (Editorial Director, RFF)</cite>
 
-## Data types
-
-Individual data values are represented in specific data types by certain software, which determine how the values are interpreted and stored in memory. Recognizing the data types of variables in a dataset is essential for ensuring analytical accuracy, understanding precision, and avoiding errors during data processing.
-
-### General data types
-
-| Data type | Definition | Typical memory | Precision | Common Operations | Examples |
-|--------|--------------|------------|-------------|------------|------------|
-| Character (string/text) | text or string values | ~1 byte per character | Not applicable (stores characters, not numeric values) | Concatenation, substring, pattern matching | `"Hello, world!"`,<br />`'#23'`,<br />`"'Why?', they asked."` |
-| Integer | Whole numbers (no decimal point) | 4 bytes (32-bit) | Exact for values within allowed range | Arithemtic, comparisons, indexing | `0`, `42`, `-6`,<br />`2e+30` (scientific notation) |
-| Floating point | Numbers with decimals (real numbers, including fractions) | 4 bytes (*float*), 8 bytes (*double*) | Approximate - may introduce small rounding errors | Arithmetic, scientific calculations | `-54.3`,<br />`3.14159` |
-| Boolean / Logical | Binary values | Typically 1 byte | Exact | Logical operations (e.g., `AND`, `OR`, `NOT`) | `TRUE`, `FALSE`,<br />`0`, `1` |
-| Date/time | Calendar dates and/or clock times | Varies by system (~8+ bytes) | High precision in supported range | Often require specialized functions; format inconsistencies can cause import errors | `2025-05-29`, <br />`1990-01-24 14:30:00` |
-
-### Notes and considerations
-
-* **Floating point rounding errors** Floating point types represent real numbers, including fractions. However, not all decimal values can be represented exactly in *binary*. As a result, small rounding errors may occur during arithmetic operations. These are usually minor but can accumulate in complex calculations. Example: `0.1 + 0.2` might result in `0.30000000000000004` due to binary representation limits.
-
-- **Date formats**
-  - Use the conventional ISO 8601 format (`YYYY-MM-DD`)
-  - Ensure that date formats are consistent within columns and are correctly interpreted when converting to a standard format. For example, if a date is formatted as `DD/MM/YYYY` but is mistakenly interpreted as `MM/DD/YYYY` during conversion to `YYYY-MM-DD`, the resulting date will be incorrect.
-
-* **Memory efficiency** Efficient data type choices can improve performance for large datasets. For example, integer values (such as number of people) stored as float values incurs unnecessary memory costs.
-
-* **Changing data types** (e.g., from float to integer) modifies the values. This can lead to loss of information, as shown in the example below. Always check whether conversion is appropriate for your analysis.
-    
-    ```
-    float_value = 3.7
-    int_value = int(float_value)  # Becomes 3
-    ```
-
-### Limitations of text-based formats
-
-**Text-based formats like CSVs do not store data type metadata.**
-
-**Be cautious when reading and writing CSVs or other plain-text formats. Understand that data types will be inferred, not preserved, and this may introduce rounding or formatting errors.**
-
-*All values are saved as **character strings** in text-based file formats* — there is no embedded information about whether something is an integer, float, etc. This has several implications:
-
-* **Type guessing on import** When reading a CSV, software tools typically infer column types automatically. This can result in:
-  * Inconsistent interpretation across tools (e.g., a column read as numeric in one program might be read as text in another).
-  * Conversion errors, especially with dates, floating points, or missing values.
-<br />
-<br />
-
-* **Precision loss on export** If you're exporting a floating point column to CSV, the software may:
-  * Round or truncate values.
-  * Drop trailing digits or use limited decimal precision.
-  * These changes might not be obvious but can affect downstream calculations.
-<br />
-<br />
-
-* **No built-in support for special types** Since all values are strings, CSV files cannot inherently distinguish between:
-  * `3` as an integer vs. `3.0` as a float
-  * `2023-01-01` as a string vs. a date object
-  * `TRUE` as a logical value vs. a text label
-
-```
-DRAFT
-POTENTIAL SOLUTIONS TO LOSS OF DATA TYPE METADATA IN CSVS
-
-type guessing on import:
-- Explicitly specify column types when importing data (e.g., using read_csv(..., col_types=...) in R or dtype=... in pandas).
-- Validate types after import.
-
-precision loss on export & no built-in support for special types:
-- Use formats that preserve numeric precision (e.g., binary formats like .rds, .feather, .parquet) during analysis.
-- Export summaries/outputs to CSV only WHEN NEEDED? WHEN PUBLISHING / SHARING?
-- Clearly document data types in metadata or codebook when using and sharing CSVs.
-```
-  
 ### Other resources
 
 See these websites for additional information about data types:
