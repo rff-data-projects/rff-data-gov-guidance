@@ -102,7 +102,13 @@ Examples of logical groupings for subfolder names are by
 * data source (e.g., `usda`), 
 * variable (`precipitation`), 
 * processing step (`merge`), or
-* results category (`figures` or `model_results`).
+* results category (`regressions` or `projections`).
+
+Ideally, project folders should be organized so that each file's complete path is informative about the role of the folder's contents in the project. Some examples are:
+
+* A script for cleaning Corelogic transactions data: `scripts/corelogic/01_cleaning/01_clean_trans_data.R`
+* Raw Corelogic transactions data from Los Angeles County (FIPS code 06037): `raw_data/corelogic/transactions/06037.dta`
+* A regression table for the outcome variable property values, with heterogeneity results by region: `results/regressions/property_value/table_region.tex`
 
 ## Naming folders, files and scripts
 
