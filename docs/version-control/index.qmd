@@ -1,5 +1,5 @@
 ---
-title: Version Control
+title: Version Control (Beta)
 ---
 
 ## What is version control and what can it do for you?
