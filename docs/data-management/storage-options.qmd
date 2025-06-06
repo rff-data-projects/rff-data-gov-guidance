@@ -33,7 +33,7 @@ See [instructions for setting up a project `L:/` drive folder](#L-drive-storage-
 
 ### Code: `L:/` drive and GitHub
 
-Project code (e.g., `.R`, `.py`, `.do` files) should be stored in the project's `L:/` drive folder alongside data, and should be version controlled within Git repository synced to GitHub.
+Project code (e.g., `.R`, `.py`, `.do` files) should be stored in the project's `L:/` drive folder alongside data, and should be version controlled within a Git repository synced to GitHub.
 
 GitHub’s distributed version control system allows team members to:
 
