@@ -23,7 +23,7 @@ Individual data values are represented in specific data types by certain softwar
   - Use the conventional ISO 8601 format (`YYYY-MM-DD`)
   - Ensure that date formats are consistent within columns and are correctly interpreted when converting to a standard format. For example, if a date is formatted as `DD/MM/YYYY` but is mistakenly interpreted as `MM/DD/YYYY` during conversion to `YYYY-MM-DD`, the resulting date will be incorrect.
 
-* **Changing data types** (e.g., from float to integer) modifies the values. This can lead to loss of information, as shown in the example below. Always check whether conversion is appropriate for your analysis.
+* **Changing data types** Changing a variable’s data type (e.g., from float to integer or from number to string) can alter how the data is stored and interpreted. Even if the displayed values seem the same (e.g., `5`, `5.0`, or `"5"`), the underlying representation differs—and in some cases (like converting from float to integer), it may result in loss of precision or information. Always check whether a conversion is appropriate for your analysis.
     
     ```
     float_value = 3.7
