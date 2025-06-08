@@ -134,14 +134,14 @@ This has several implications:
 ### Practices for working with text-based formats
 
 * Reading/importing text-based data
-  * Explicitly **specify** column types when importing data (e.g., using `read_csv(..., col_types=...)` in `R` or `dtype=...` in `python pandas`).
+  * Explicitly **specify** column types when importing data (e.g., using `read_csv(..., col_types=...)` in `R` or `dtype=...` in `python pandas`). Another strategy is to specify all column types as character (`col_types = 'character`), view how they are stored, and then decides which columns to convert and how.
   * **Validate** types after import, either by manually inspecting or using scripted tests.
 <br />
 <br />
 
 * Exporting/sharing text-based data
   * Use text-based formats **only when useful**, such as when publishing / sharing data with those without specialized software, or when version-controlling data.
-  * Use formats that preserve numeric precision (e.g., binary formats like .rds, .feather, .parquet) during analysis.
+  * Use formats that preserve numeric precision (e.g., binary formats like `.rds`, `.feather`, `.parquet`) during analysis.
   * Clearly **document** data types in metadata or a readme when sharing text-based formats.
 
 ### Hierarchical formats {#sec-hierarchical}
