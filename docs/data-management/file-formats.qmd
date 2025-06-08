@@ -30,7 +30,7 @@ Individual data values are represented in specific data types by certain softwar
     int_value = int(float_value)  # Becomes 3
     ```
 
-* **Memory efficiency** Efficient data type choices can improve performance for large datasets. For example, integer values (such as number of people) stored as float values incurs unnecessary memory costs.
+* **Memory efficiency** Choosing efficient data types can improve performance for large datasets. For example, storing whole numbers (like counts of people) as double-precision floats instead of integers can use more memory than necessary. While both floats and integers can be 4 or 8 bytes depending on the system, using types with more precision than needed (e.g., doubles for integers) can lead to unnecessary memory overhead.
 
 ## Data file formats
 
