@@ -10,6 +10,16 @@
     ]
   },
   {
+    "objectID": "index.html#about-this-resource",
+    "href": "index.html#about-this-resource",
+    "title": "Data Guidance for Researchers",
+    "section": "About this resource",
+    "text": "About this resource\nThis guidance is designed to help RFF research teams:\n\nSave time through clear data practices, templates, and reusable workflows\nIncrease flexibility for collaboration, future reuse, and reproducibility\nReduce risk by supporting consistent and transparent workflows\n\nIt includes practical support to:\n\nBuild foundational skills and concepts\nPlan and manage data-driven research from start to finish\nNavigate RFF-specific systems like storage and access\nSet up new projects effectively\nImprove existing workflows",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
     "objectID": "index.html#site-outline",
     "href": "index.html#site-outline",
     "title": "Data Guidance for Researchers",
@@ -24,7 +34,7 @@
     "href": "index.html#questions-and-feedback",
     "title": "Data Guidance for Researchers",
     "section": "Questions and feedback",
-    "text": "Questions and feedback\nTo submit questions, bug (e.g., broken hyperlinks), suggestions, or feedback on this guidance, click Report an issue on the right-hand side of this page and submit an issue to the repository. Note that your comment will be publicly visible.\nTo submit a question or comment over email, reach out to the Data Governance Working Group.",
+    "text": "Questions and feedback\nThis is a living resource — it will continue to evolve as needs shift and feedback is incorporated.\nTo submit questions, bugs (e.g., broken hyperlinks), suggestions, or feedback on this guidance, click Report an issue on the right-hand side of this page and submit an issue to the repository. Note that your comment will be publicly visible.\nTo submit a question or comment over email, reach out to the Data Governance Working Group.",
     "crumbs": [
       "Home"
     ]
@@ -65,16 +75,6 @@
     "title": "Foundations",
     "section": "The data life cycle",
     "text": "The data life cycle\nA common axiom among data scientists is the application of the 80/20 rule to effort: 80% of time is spent wrangling (managing and preparing) data, while 20% is spent on analysis. Most activities in the data life cycle come before the analysis phase and are closely tied to data management. There are many different models of the data life cycle, and the relevant model for your individual project will vary. A general data life cycle is depicted below (see also Langseth et al. 2015).\n\n\n\n\n\ngraph LR\nA(Plan) --&gt; B(Collect)\nB --&gt; C(Process)\nC --&gt; D(Explore / Visualize)\nD --&gt; E(Analyze / Model)\nE --&gt; F(Archive, Publish, Share)\nE --&gt; C\nE --&gt; A\n\n\n\n\n\n\nThe data life cycle is often iterative and nonlinear, and does not always follow the order shown. Your actual analysis workflow may include dead ends or repeated steps. Regardless, it is helpful to plan and discuss your data-oriented research using these common components of the data life cycle:\n\nStep 1: Plan Identify data that will be collected and how it will be managed. Create a data management plan.\nStep 2: Collect Acquire and store raw data.\n\na. Acquire Retrieve data from the appropriate source.\nb. Describe Document the raw data source, format, variables, measurement units, coded values, and known problems.\nc. Quality assurance Inspect the raw data for quality and fit for analysis purpose.\nd. Store Store the raw data in the appropriate folder, as determined in the planning stage. Consider access, resilience (backing up), security, and, if relevant, data agreement stipulations. Make raw data files read-only so they cannot be accidentally modified.\n\nStep 3: Process Prepare the data for exploration and analysis.\n\na. Clean Preprocess the data to correct errors, standardize missing values, standardize formats, etc.\nb. Transform Convert data into appropriate format and spatiotemporal scale (e.g., convert daily values to annual statistics).\nc. Integrate Combine datasets.\n\nStep 4: Explore Describe, summarize, and visualize statistics and relationships.\nStep 5: Analyze / Model Develop, refine, and implement analysis and model specifications.\nStep 6: Archive, Publish, and Share Finalize documentation (project-level README and metadata). Dispose and/or archive data. Publish final data products and documentation.",
-    "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Foundations</span>"
-    ]
-  },
-  {
-    "objectID": "docs/foundations/index.html#about-this-guidance",
-    "href": "docs/foundations/index.html#about-this-guidance",
-    "title": "Foundations",
-    "section": "About this guidance",
-    "text": "About this guidance\nTO BE WRITTEN",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Foundations</span>"
     ]
