@@ -16,7 +16,7 @@ Now that we know some basic Git principles, how do we make a workflow for a give
 * Take care with encoding file paths within a repository.
 You want other people to be able to use the repository without having to move files around or change all the file paths in the repository.
 You could either:
-  * Use [relative file paths](<TODO: INSERT LINK TO SQ SECTION>) to point to other files that are located in the repository.
+  * Use [relative file paths](<TODO: INSERT LINK TO SQ SECTION, POSSIBLY SHORTEN>) to point to other files that are located in the repository.
   * Use absolute file paths (i.e. on a shared network drive like the L drive) and consider making a variable for the path directory, especially if used multiple times. That way, if a collaborator has their data at a different path on their system, they only need to change a single path.
     ```
     data_path = “L:/ProjectName/Data”
@@ -42,7 +42,7 @@ Here are two examples of how a project / team might choose to store their reposi
   * __Pros__: it is “clean”, with no accidental file changes from other users.
   * __Cons__: It would require care to be taken for access (file paths) to non-version-controlled data files.
 
-### Should our repository be hosted by a GitHub Organization or User?
+### Where should the GitHub repository be hosted?
 
 * Do you work on a team with their own GitHub Organization (i.e. [`E4ST`](https://github.com/e4st-dev))?
   * If so, verify with the other members of the team that it would be acceptable to use the organization to host the repository
@@ -51,6 +51,7 @@ Here are two examples of how a project / team might choose to store their reposi
   * Generally, if the repository is associated with a publication, the code should be forked or transferred to the organization.
   * We suggest creating the repository as a personal repository and changing ownership or forking.
   * See the [Data Management section on code publication](../data-management/publication.qmd#code) for additional guidance.
+* If it doesn't make sense to host the repository in an organization, we recommend having one of project members host it with their GitHub account.
 
 ### Should our repository be public or private?
 

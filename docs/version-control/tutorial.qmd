@@ -40,7 +40,7 @@ This section is useful for learning, but you can also skip to the [next section 
 ![Creating a Repository](../../images/git-create-repo.png)\
 
 2. Next, you may select who you would like to **own** the repository.
-It could either by owned by your user account, or an organization you are a member of.
+It could either be owned by your user account, or an organization you are a member of.
 This may be something to discuss with your project team.
 The repository owner will show up in the URL of the repository, in the structure of: `https://github.com/<owner-name>/<repository-name>`.
 For example, for the `E4ST.jl` repo created in the `e4st-dev` organization, the URL is: `https://github.com/e4st-dev/E4ST.jl`.
@@ -158,8 +158,9 @@ no changes added to commit (use "git add" and/or "git commit -a")
 
 This message is telling us that there are some file changes that have not yet been staged for commit.  Let's stage the changes from the README file with the command `git add README.md`.
 
-::: {callout.note}
+::: {.callout-note}
 You can use the command `git add -p` in order to interactively select which files, and even sections of files you would like to stage for commit.
+You can also use the command `git add *` to add all of the files that have been changed since the previous commit.
 :::
 
 Now let's check the status once more:
@@ -247,7 +248,7 @@ After adding and committing that change, we can then safely run `git push`.
 
 ## Branching
 
-This is one of the most amazing features of Git.  Git allows us to create different working versions, or `branches` of our repository.  This lets me take a snapshot of the repository and try out a new idea _without affecting my main branch_.  Then, once I (and all my collaborators) are satisfied with the changes in my new branch, we can `merge` it back into the main branch.  This is how the majority of modern software is developed.  It allows easy review of the portions of the code that have changed, and gives me confidence that my changes are not messing up the `main` branch until they are fully developed.  
+This is one of the most amazing features of Git.  Git allows us to create different working versions, or `branches` of our repository.  This lets me take a snapshot of the repository and try out a new idea _without affecting my main branch_.  Then, once I (and all my collaborators) are satisfied with the changes in my new branch, we can `merge` it back into the main branch using a Pull Request, which gives tools for reviewing and providing feedback on the proposed changes. This is how the majority of modern software is developed.  It allows easy review of the portions of the code that have changed, and gives me confidence that my changes are not messing up the `main` branch until they are fully developed.  
 
 ```{mermaid}
 ---
@@ -288,6 +289,7 @@ You may notice that Git Bash has the branch name `main` written to the right of 
 
 To create a new branch, simply enter the command `git branch <my-branch-name>`.
 Generally, branch names should be:
+
 * concise yet descriptive. `plot-results` > `plot-all-results-with-numpy`
 * lowercase and hyphen-separated. `plot-results` rather than `PlotResults` or `plot_results`
 * no special characters (numbers, letters, and hyphens only)

@@ -20,7 +20,7 @@ When you install Git, it generally will already install a couple of applications
 
 1. __Git Bash/CMD__ – (Installed with Git) These options allow you to enter text-based commands for Git in an interface similar to the command prompt window in Windows.
 Git Bash allows for git commands in addition to standard UNIX commands, whereas Git CMD allows for git commands in addition to standard windows CMD prompt commands.
-This type of interface is the industry standard, so it is what we suggest for new git users, and we will use Git Bash for tutorials on this site.
+This is a great environment for learning the main processes of Git as a new user, and we will use Git Bash for tutorials on this site.
 
 ![Git Bash](../../images/git-bash.png)\
 
