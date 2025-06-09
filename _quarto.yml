@@ -34,9 +34,16 @@ book:
         - docs/data-management/sensitive-proprietary.qmd
         - docs/data-management/quality-preparation.qmd
         - docs/data-management/archival.qmd
-        - docs/data-management/publication.qmd
-    - docs/software/index.qmd
-    - docs/version-control/index.qmd
+    - part: docs/software/index.qmd
+      # chapters:
+      #   - docs/software/sq1.qmd
+    - part: docs/version-control/index.qmd
+      chapters:
+        # - docs/version-control/terminology.qmd
+        - docs/version-control/setup.qmd
+        - docs/version-control/tutorial.qmd
+        - docs/version-control/workflows.qmd
+        - docs/version-control/faq.qmd
 format:
   html:
     theme: 
