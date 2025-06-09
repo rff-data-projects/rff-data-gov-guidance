@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>9&nbsp; Publication – Data Guidance for Researchers</title>
+<title>12&nbsp; Tips and FAQ – Data Guidance for Researchers</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,6 +20,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -30,8 +65,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
-<link href="../../docs/software/index.html" rel="next">
-<link href="../../docs/data-management/archival.html" rel="prev">
+<link href="../../docs/version-control/workflows.html" rel="prev">
 <link href="../../images/black-logo.svg" rel="icon" type="image/svg+xml">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
@@ -83,7 +117,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../docs/data-management/index.html">Data Management</a></li><li class="breadcrumb-item"><a href="../../docs/data-management/publication.html"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Publication</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../docs/version-control/index.html">Version Control (Beta)</a></li><li class="breadcrumb-item"><a href="../../docs/version-control/faq.html"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Tips and FAQ</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -177,26 +211,47 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Archival &amp; Disposal</span></span></a>
   </div>
 </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <span class="sidebar-item-text sidebar-link text-start">
+ <span class="menu-text">Software Quality</span></span>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../docs/version-control/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Version Control (Beta)</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../docs/data-management/publication.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Publication</span></span></a>
+  <a href="../../docs/version-control/setup.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Setup</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/version-control/tutorial.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Tutorial</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/version-control/workflows.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Workflows</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/version-control/faq.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Tips and FAQ</span></span></a>
   </div>
 </li>
       </ul>
   </li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../docs/software/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Software Quality</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../docs/version-control/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Version Control</span></span></a>
-  </div>
-</li>
     </ul>
     </div>
 </nav>
@@ -207,26 +262,23 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#licensing" id="toc-licensing" class="nav-link active" data-scroll-target="#licensing"><span class="header-section-number">9.1</span> Licensing</a>
+  <li><a href="#faq" id="toc-faq" class="nav-link active" data-scroll-target="#faq"><span class="header-section-number">12.1</span> FAQ</a></li>
+  <li><a href="#tips" id="toc-tips" class="nav-link" data-scroll-target="#tips"><span class="header-section-number">12.2</span> Tips</a>
   <ul class="collapse">
-  <li><a href="#verify-data-and-code-rights-and-ownership" id="toc-verify-data-and-code-rights-and-ownership" class="nav-link" data-scroll-target="#verify-data-and-code-rights-and-ownership"><span class="header-section-number">9.1.1</span> Verify Data and Code Rights and Ownership</a></li>
-  <li><a href="#choose-appropriate-licenses" id="toc-choose-appropriate-licenses" class="nav-link" data-scroll-target="#choose-appropriate-licenses"><span class="header-section-number">9.1.2</span> Choose Appropriate Licenses</a></li>
-  <li><a href="#create-and-customize-license-files" id="toc-create-and-customize-license-files" class="nav-link" data-scroll-target="#create-and-customize-license-files"><span class="header-section-number">9.1.3</span> Create and customize license files</a></li>
-  </ul></li>
-  <li><a href="#publishing" id="toc-publishing" class="nav-link" data-scroll-target="#publishing"><span class="header-section-number">9.2</span> Publishing</a>
-  <ul class="collapse">
-  <li><a href="#code" id="toc-code" class="nav-link" data-scroll-target="#code"><span class="header-section-number">9.2.1</span> Code</a></li>
-  <li><a href="#data" id="toc-data" class="nav-link" data-scroll-target="#data"><span class="header-section-number">9.2.2</span> Data</a></li>
+  <li><a href="#commit-messages" id="toc-commit-messages" class="nav-link" data-scroll-target="#commit-messages"><span class="header-section-number">12.2.1</span> Commit Messages</a></li>
+  <li><a href="#branch-naming" id="toc-branch-naming" class="nav-link" data-scroll-target="#branch-naming"><span class="header-section-number">12.2.2</span> Branch Naming</a></li>
+  <li><a href="#tags" id="toc-tags" class="nav-link" data-scroll-target="#tags"><span class="header-section-number">12.2.3</span> Tags</a></li>
+  <li><a href="#aliases" id="toc-aliases" class="nav-link" data-scroll-target="#aliases"><span class="header-section-number">12.2.4</span> Aliases</a></li>
   </ul></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/alexandra-thompson-dc/rff-data-gov-guidance/edit/main/docs/data-management/publication.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/alexandra-thompson-dc/rff-data-gov-guidance/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/alexandra-thompson-dc/rff-data-gov-guidance/edit/main/docs/version-control/faq.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/alexandra-thompson-dc/rff-data-gov-guidance/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../docs/data-management/index.html">Data Management</a></li><li class="breadcrumb-item"><a href="../../docs/data-management/publication.html"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Publication</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../docs/version-control/index.html">Version Control (Beta)</a></li><li class="breadcrumb-item"><a href="../../docs/version-control/faq.html"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Tips and FAQ</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Publication</span></h1>
+<h1 class="title"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Tips and FAQ</span></h1>
 </div>
 
 
@@ -243,209 +295,84 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p><strong>Publication</strong> is making code/data available to the broader community, often through formal dissemination channels such as data repositories, journal articles, or public databases. Publication ensures that data is discoverable and can be accessed by other researchers, stakeholders, or the public. Documentation and metadata are included to facilitate understanding and reuse. Publication may also involve adherence to specific standards and best practices to enhance the visibility and impact of the data.</p>
-<p><strong>While RFF does not mandate the publication of code and data, it is highly encouraged.</strong></p>
-<p>Increasingly, journals require code and data to be submitted along with the article. In addition, many funders and stakeholders value open source software and data availability. Planning for this in the early stages of a project facilitates reproducibility, access, and the ability of others to use and cite your work.</p>
-<section id="licensing" class="level2" data-number="9.1">
-<h2 data-number="9.1" class="anchored" data-anchor-id="licensing"><span class="header-section-number">9.1</span> Licensing</h2>
-<p>A well-chosen license clarifies permissions, prevents misunderstandings, and encourages responsible use. The next section provides guidance on selecting and attaching appropriate licenses to ensure your data and code remain accessible and properly credited.</p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Data and code products are licensed separately from RFF publication products. All work on the RFF.org and Resources.org websites (working papers, reports, issue briefs, explainers, Common Resources blog posts, Resources magazine articles, Resources Radio podcast episodes, graphs, charts, photographs, audio, and video) are listed under the Deed - Attribution-NonCommercial-NoDerivatives 4.0 International - Creative Commons license. This Creative Commons license is <strong>not</strong> suitable for either software or data.</p>
-</div>
-</div>
-<section id="verify-data-and-code-rights-and-ownership" class="level3" data-number="9.1.1">
-<h3 data-number="9.1.1" class="anchored" data-anchor-id="verify-data-and-code-rights-and-ownership"><span class="header-section-number">9.1.1</span> Verify Data and Code Rights and Ownership</h3>
-<p>Before proceeding with choosing licenses, confirm that your team owns IP rights to the work produced and has full discretion over licensing the project’s data and code—without restrictions from funders, institutional policies, or legal/data agreements.</p>
-<p>In some cases the research team may have joint IP ownership with partners or funders. In this case, licensing options must be agreed upon by both parties.</p>
-</section>
-<section id="choose-appropriate-licenses" class="level3" data-number="9.1.2">
-<h3 data-number="9.1.2" class="anchored" data-anchor-id="choose-appropriate-licenses"><span class="header-section-number">9.1.2</span> Choose Appropriate Licenses</h3>
-<section id="common-licenses" class="level4">
-<h4 class="anchored" data-anchor-id="common-licenses">Common Licenses</h4>
-<p>For software and data, there are three main license suites common in the academic space: <em>MIT</em>, <em>GNU GPU</em>, and <em>ODC</em>. <em>MIT</em> and <em>GNU GPU</em> are separate software licenses, while <em>ODC</em> has two commonly-used data licenses. All four are described below.</p>
-<section id="software-licenses" class="level5">
-<h5 class="anchored" data-anchor-id="software-licenses">Software licenses</h5>
+<section id="faq" class="level2" data-number="12.1">
+<h2 data-number="12.1" class="anchored" data-anchor-id="faq"><span class="header-section-number">12.1</span> FAQ</h2>
+<section id="what-types-of-files-can-i-store-in-my-repository" class="level4">
+<h4 class="anchored" data-anchor-id="what-types-of-files-can-i-store-in-my-repository">What types of files can I store in my repository?</h4>
+<p>In general, git works well with:</p>
 <ul>
-<li><a href="https://choosealicense.com/licenses/mit/">MIT</a>: The more permissive and flexible. Users, including commercial entities, can view, use, modify, and distribute the work freely. Allows for commercial use and <strong>enclosure</strong>. <strong>Attribution</strong> is required.</li>
-</ul>
-<p>(<em><strong>Enclosure</strong> is the process of restricting access, usage, or modification of software or its source code through the imposition of licensing terms. It involves the application of intellectual property rights (such as copyright, patents, or trade secrets) to create boundaries around software, typically to protect the developer’s or organization’s control over its distribution and use.</em>)</p>
-<p>(<em><strong>Attribution</strong> refers to crediting to the original creator, author, or source as specified in the licensing terms. Attribution ensures recognition of the intellectual property and efforts of the creators while allowing others to use, modify, or distribute the licensed material.</em>)</p>
+<li><p><strong>Small files.</strong> It is not advisable to store large data files in git, because it makes the repository large and subsequent operations get slow and unwieldy. For storing large files, see the <a href="../../docs/data-management/storage-options.html">Storage Options section</a></p></li>
+<li><p><strong>Human-readable files.</strong> One of the biggest perks of version control is the ability to see specific changes to files. That feature only works for files composed of human-readable characters, examples of which include comma-separated values (.csv) and plain text (.txt), as well as source code. However, there are some commonly-used filetypes that are not human-readable, and thus do not work very well with version control, including:</p>
 <ul>
-<li><a href="https://choosealicense.com/licenses/gpl-3.0/">GNU General Public Use (GPU)</a>: Users, including commercial entities, can view, use, modify, and distribute the work freely. However, it carries <strong>copyleft</strong>, so all distributions must be released under the same GNU GPU license, ensuring open access (<strong>viral</strong>). <strong>Attribution</strong> is required.</li>
-</ul>
-<p>(<em><strong>Copyleft</strong> is a concept in software (code/script) licensing that ensures any derivative works (modifications or adaptations) of a particular work remain subject to the same licensing terms as the original work. For example, if a developer modifies a program released under the GNU General Public License (GPL), they are required to distribute their modified version under the same GPL license. This means they must also make the source code available and allow others to freely use, modify, and redistribute it under the same terms. Copyleft aims to preserve software freedom by preventing proprietary restrictions from being reintroduced into derivative works.</em>)</p>
-<p>(<em><strong>Viral</strong>: Licenses like the GNU General Public License (GPL) and the Open Database License (ODbL) are often described as “viral” because they require derivative works to comply with the same licensing terms as the original work. This characteristic ensures that the freedoms granted by the license (such as the ability to use, modify, and share) are preserved in all subsequent versions or derivatives, but it also imposes specific obligations on those who modify or build upon the original.</em>)</p>
-</section>
-<section id="data-licenses-by-open-data-commons-odc" class="level5">
-<h5 class="anchored" data-anchor-id="data-licenses-by-open-data-commons-odc">Data licenses by Open Data Commons (ODC)</h5>
-<ul>
-<li><p><a href="https://opendatacommons.org/licenses/by/1-0/">ODC-By</a>: The more permissive and flexible. Users, including commercial entities, can view, use, modify, and distribute the work freely. Allows for commercial use and <strong>enclosure</strong>. <strong>Attribution</strong> is required.</p></li>
-<li><p><a href="https://opendatacommons.org/licenses/odbl/">ODCbL</a>: Users, including commercial entities, can view, use, modify, and distribute the work freely. However, it carries <strong>share-alike</strong>, so all distributions must be released under the same ODCbL license, ensuring open access (<strong>viral</strong>). <strong>Attribution</strong> is required.</p></li>
-</ul>
-<p>(<em><strong>Share-alike</strong>, similar to <strong>copyleft</strong> but applied to datasets, requires that any derivative works of content (adaptations or modifications) are licensed under the same or a compatible license. This ensures that future users of the adapted work can use it under similar terms.</em>)</p>
-</section>
-</section>
-<section id="recommendations-for-selecting-licenses" class="level4">
-<h4 class="anchored" data-anchor-id="recommendations-for-selecting-licenses">Recommendations for selecting licenses</h4>
-<ol type="1">
-<li><p>Adhere to any product licensing requirements from the funding agreement and the source data/software.</p></li>
-<li><p>Consider whether the common academic licenses that are more permissive and flexible (MIT for software, ODC-By for data) are appropriate. If so, use those. These licenses are suitable for most applications.</p></li>
-<li><p>If project authors/partners and RFF would prefer that all derivative works remain open source and accessible, use GNU GPLv3 plus citation request for software and ODbL for data. Caution that these licenses, because they are more restrictive, are more complex, so review license terms carefully.</p></li>
-<li><p>If there are other requirements or the team would like to review a broader range of software licenses and their specifications, visit <a href="https://choosealicense.com/">ChooseALicense</a>.</p></li>
-</ol>
-</section>
-</section>
-<section id="create-and-customize-license-files" class="level3" data-number="9.1.3">
-<h3 data-number="9.1.3" class="anchored" data-anchor-id="create-and-customize-license-files"><span class="header-section-number">9.1.3</span> Create and customize license files</h3>
-<ul>
-<li><p>Once the license has been selected, download or create a .txt license file from the license website. Save the file as <code>LICENSE.txt</code> in the project folder and/or repository.</p></li>
-<li><p>Review the license terms and modify where necessary (most open-source and open-data licenses are designed to be used as-is, but others may require you to fill in specific details, such as name or organization).</p></li>
-<li><p>If adding additional terms, include them in a separate README or license appendix to avoid conflicting with the main license.</p></li>
+<li>Any Microsoft office format (.docx, .xlsx, .pptx, etc.)</li>
+<li>MATLAB notebooks (.mlx)</li>
+</ul></li>
 </ul>
 </section>
-</section>
-<section id="publishing" class="level2" data-number="9.2">
-<h2 data-number="9.2" class="anchored" data-anchor-id="publishing"><span class="header-section-number">9.2</span> Publishing</h2>
-<p><em><strong>For publishing both code and data, ensure that the <a href="../../docs/data-management/documentation.html#project-readme">project-level README</a> is up to date.</strong></em></p>
-<section id="code" class="level3" data-number="9.2.1">
-<h3 data-number="9.2.1" class="anchored" data-anchor-id="code"><span class="header-section-number">9.2.1</span> Code</h3>
-<p>When your project is ready to publish code—whether alongside a journal article, report, or other research output—there are a few options for how to share it, especially if your code is hosted on GitHub.</p>
-<section id="note-on-journal-requirements" class="level4">
-<h4 class="anchored" data-anchor-id="note-on-journal-requirements">Note on journal requirements</h4>
-<p>Some journals require authors to:</p>
+<section id="what-if-there-is-a-file-in-my-local-repository-that-i-dont-want-in-the-remote-repository" class="level4">
+<h4 class="anchored" data-anchor-id="what-if-there-is-a-file-in-my-local-repository-that-i-dont-want-in-the-remote-repository">What if there is a file in my local repository that I don’t want in the remote repository?</h4>
+<p>Great question! If I may want to add that file to the repository later, I could simply avoid staging it for current commit, and stage it when it is ready later. If that file or folder should never be tracked, you can also create a file called <code>.gitignore</code> in the repository. Inside the file, you can simply add the names of the file(s), folder(s), or file extension types (i.e.&nbsp;<code>*.log</code>) that you wish for Git to ignore.Generally, it is good to ignore files/folders that get automatically generated by existing scripts, are too big for git, or are not relevant to other users of the repository. Here are some examples of files that you may consider adding to a <code>.gitignore</code> file:</p>
 <ul>
-<li>Make the codebase publicly accessible</li>
-<li>Include a link to the GitHub code repository in the manuscript</li>
-<li>Reference the codebase DOI in the manuscript</li>
+<li>a folder containing intermediate data files</li>
+<li>a folder containing dependencies that get downloaded using a script</li>
+<li>a project file created by a code editor</li>
 </ul>
 </section>
-<section id="sharing-code-via-the-rff-github-organization" class="level4">
-<h4 class="anchored" data-anchor-id="sharing-code-via-the-rff-github-organization">Sharing code via the RFF GitHub Organization</h4>
-<p>You can link your GitHub repository to the RFF GitHub organization in one of two ways:</p>
-<section id="option-1-forking-into-the-rff-github-organization" class="level5">
-<h5 class="anchored" data-anchor-id="option-1-forking-into-the-rff-github-organization">Option 1: Forking into the RFF GitHub Organization</h5>
-<p><em>Best for</em>: Capturing a snapshot of a repository at a specific point in time (e.g., associated with a publication).</p>
-<ul>
-<li>A fork creates a copy of your repository under the RFF organization account.</li>
-<li>This snapshot can be tagged to align with a publication version (e.g., v1.0-paper-release).</li>
-<li>The fork can be updated to stay in sync with the original repo, or kept as a fixed version.</li>
-<li>Include a note in the README linking the snapshot to the relevant publication.</li>
-</ul>
-</section>
-<section id="option-2-transferring-ownership-to-the-rff-organization" class="level5">
-<h5 class="anchored" data-anchor-id="option-2-transferring-ownership-to-the-rff-organization">Option 2: Transferring Ownership to the RFF Organization</h5>
-<p><em>Best for</em>: Ongoing or institutional projects requiring a permanent home and clean URL.</p>
-<ul>
-<li>The repository is moved under the RFF GitHub organization.</li>
-<li>All existing collaborators retain their permissions.</li>
-<li>The repository URL will change, but redirects will be preserved by GitHub.</li>
-<li>Organization owners (e.g., staff managing RFF’s GitHub) gain administrative control.</li>
-</ul>
+<section id="what-if-i-dont-have-anyone-who-can-review-my-code-or-pull-request" class="level4">
+<h4 class="anchored" data-anchor-id="what-if-i-dont-have-anyone-who-can-review-my-code-or-pull-request">What if I don’t have anyone who can review my code or pull request?</h4>
+<p>The importance and benefits of code review was presented in the Software Quality section of the guidance &lt;TODO: LINK TO SUBSECTION&gt;. If you don’t have anyone working on a project with you who is available to review your code, feel free to reach out to &lt;TODO: figure out if this is something we can support&gt;</p>
 </section>
 </section>
-<section id="recommended-publishing-workflow" class="level4">
-<h4 class="anchored" data-anchor-id="recommended-publishing-workflow">Recommended Publishing Workflow</h4>
-<p>If your repository is already in the RFF GitHub organization:</p>
-<ol type="1">
-<li><p>Make the repository public once you’re ready to publish.</p></li>
-<li><p>Tag the version associated with the publication (e.g., v1.0-publication-name) (<a href="https://git-scm.com/book/en/v2/Git-Basics-Tagging">how to create GitHub tags</a>).</p></li>
-<li><p>Archive it on Zenodo if a DOI is needed.</p></li>
-</ol>
-<p>If your repository is under a personal GitHub account:</p>
-<ol type="1">
-<li>Decide whether you plan to continue developing the code:</li>
-</ol>
-<ul>
-<li>For <strong>ongoing or reusable projects</strong>, consider transferring the repository to the RFF organizational GitHub.</li>
-<li>For <strong>static, published versions</strong>, request that the RFF GitHub account fork your repository.</li>
-</ul>
-<ol start="2" type="1">
-<li><p>Contact the RFF GitHub organization admins via <a href="mailto:dgwg@rff.org">DGWG@rff.org</a> so that they can fork or migrate the repository and add a tag associated with the publication (tags do not automatically transfer with the fork).</p></li>
-<li><p>Optionally, deposit the tagged version to Zenodo and link the DOI in your README.</p></li>
-</ol>
+<section id="tips" class="level2" data-number="12.2">
+<h2 data-number="12.2" class="anchored" data-anchor-id="tips"><span class="header-section-number">12.2</span> Tips</h2>
+<section id="commit-messages" class="level3" data-number="12.2.1">
+<h3 data-number="12.2.1" class="anchored" data-anchor-id="commit-messages"><span class="header-section-number">12.2.1</span> Commit Messages</h3>
+<p>If you want to learn to write better commit messages, <a href="https://www.freecodecamp.org/news/how-to-write-better-git-commit-messages/">this is a great resource!</a></p>
+</section>
+<section id="branch-naming" class="level3" data-number="12.2.2">
+<h3 data-number="12.2.2" class="anchored" data-anchor-id="branch-naming"><span class="header-section-number">12.2.2</span> Branch Naming</h3>
+<p><a href="https://medium.com/@abhay.pixolo/naming-conventions-for-git-branches-a-cheatsheet-8549feca2534">Here</a> is a great resource for learning more about branch naming conventions.</p>
+</section>
+<section id="tags" class="level3" data-number="12.2.3">
+<h3 data-number="12.2.3" class="anchored" data-anchor-id="tags"><span class="header-section-number">12.2.3</span> Tags</h3>
+<p>Sometimes it is helpful to name a specific commit of a repository. For example, say you have a version of the repository that you used to generate analysis for a publication. You can easily use the <code>git tag</code> command to “name” that specific commit. For example,</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> tag <span class="op">&lt;</span>tag-name<span class="op">&gt;</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push <span class="at">--tags</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="aliases" class="level3" data-number="12.2.4">
+<h3 data-number="12.2.4" class="anchored" data-anchor-id="aliases"><span class="header-section-number">12.2.4</span> Aliases</h3>
+<p>An <strong>Alias</strong> is like creating a shortcut for a git command so that you don’t have to type out the whole command.</p>
+<p>For example, we type <code>git status</code> fairly often and it would be nice to simply type <code>git st</code>. We can tell Git that we want to create an <code>alias</code> called <code>git st</code> that simply executes <code>git status</code> instead. Here is how we tell Git Bash to save that into its configuration file.</p>
+<pre><code>git config --global alias.st status</code></pre>
+<section id="commit-message-alias" class="level4">
+<h4 class="anchored" data-anchor-id="commit-message-alias">Commit Message Alias</h4>
+<p>This alias makes it easier to type a commit message without opening notepad.</p>
+<section id="setup" class="level5">
+<h5 class="anchored" data-anchor-id="setup">Setup</h5>
+<pre><code>git config --global alias.cm 'commit -m'</code></pre>
+</section>
+<section id="usage" class="level5">
+<h5 class="anchored" data-anchor-id="usage">Usage</h5>
+<pre><code>git cm "Commit message here"</code></pre>
 </section>
 </section>
-<section id="data" class="level3" data-number="9.2.2">
-<h3 data-number="9.2.2" class="anchored" data-anchor-id="data"><span class="header-section-number">9.2.2</span> Data</h3>
-<section id="metadata" class="level4">
-<h4 class="anchored" data-anchor-id="metadata">Data-level documentation (metadata)</h4>
-<p>It is recommended to attach <strong>metadata</strong> files to published datasets. Metadata (“data about data”) documents the “who, what, when, where, how, and why” of a data resource. Metadata not only allows users (your future self included) to understand and use datasets, but also facilitates search and retrieval of the data when deposited in a data repository.</p>
-<p>Below are the key components of metadata. They can be stored in a simple text or markdown file.</p>
-<ul>
-<li>Title: Descriptive name of the dataset.</li>
-<li>DOI number: Associated with the final publication, dataset, or both</li>
-<li>Abstract: Summary of the dataset’s content</li>
-<li>Keywords: Relevant terms for search and discovery</li>
-<li>Temporal Extent: Time period covered by the data</li>
-<li>Data Format: File format</li>
-<li>Data Source(s): Origin of the data</li>
-<li>Accuracy and Precision: Information about data quality</li>
-<li>Access Constraints: Restrictions on data use</li>
-<li>Attribute / field definitions: Define all abbreviations and coded entries</li>
-<li>Additional geospatial metadata components, if applicable</li>
-<li>Spatial Extent: Geographic coverage (bounding coordinates)</li>
-<li>Projection Information: Coordinate system details</li>
-</ul>
-<p>In some contexts, generating machine-readable metadata that adheres to certain disciplinary standards is useful. There are various metadata formats and standards for specific disciplines. Additional guidance and resources for generating machine-readable metadata are here: <a href="https://data.research.cornell.edu/data-management/storing-and-managing/metadata/">Metadata and describing data – Cornell Data Services</a>.</p>
+<section id="tree-visualization" class="level4">
+<h4 class="anchored" data-anchor-id="tree-visualization">Tree Visualization</h4>
+<p>Git Bash offers tools to visualize commits/branches. Usually these are based on the command <code>git log</code>, which has <strong>many</strong> different options for customization. Below is a customized <code>git log</code> command that is nicely color-coded, shows user, date, and commit message.</p>
+<pre><code>git log --graph --oneline --exclude=origin/gh-pages --branches --pretty=format:'%C(yellow)%h %Cred%ad %Cblue%an%Cgreen%d %Creset%s' --date=short</code></pre>
+<p><img src="../../images/git-tree-visualization.png" class="img-fluid" alt="Git Branch Visualization"><br>
+</p>
+<p>As you can see, it prints the commit hash, the date of the commit, the author, the name of the branch, and the commit message, as well as the branching structure at the far left.</p>
+<section id="setup-1" class="level5">
+<h5 class="anchored" data-anchor-id="setup-1">Setup</h5>
+<p>To make an alias for it with the name <code>tree</code>, enter the following command in Git Bash:</p>
+<pre><code>git config --global alias.tree "log --graph --oneline --exclude=origin/gh-pages --branches --pretty=format:'%C(yellow)%h %Cred%ad %Cblue%an%Cgreen%d %Creset%s' --date=short"</code></pre>
 </section>
-<section id="uploading-data-to-zenodo" class="level4">
-<h4 class="anchored" data-anchor-id="uploading-data-to-zenodo">Uploading data to Zenodo</h4>
-<p><a href="https://zenodo.org/">Zenodo</a> is an online repository for sharing research data, software, and other scientific outputs. It has a broad disciplinary focus and is safe, citeable (every upload is assigned a DOI), compatible with GitHub, and free for up to 50GB of storage.</p>
-<section id="step-1-prepare-the-research-data" class="level5">
-<h5 class="anchored" data-anchor-id="step-1-prepare-the-research-data">Step 1: Prepare the research data</h5>
-<p>Before uploading, ensure that:</p>
-<ul>
-<li>The data is well-organized (e.g., structured folders, clear file names).</li>
-<li>Metadata file are prepared for each data file or sets of data files, including dataset title, description, author names, and relevant keywords.</li>
-<li>A license is attached.</li>
-<li>Any <a href="../../docs/data-management/sensitive-proprietary.html">sensitive or restricted data</a> is removed or anonymized (if applicable).</li>
-<li>The project-level README is up to date.</li>
-</ul>
-<p>For guidance on choosing which files to publish and how to handle API-accessed data, see <a href="../../docs/data-management/archival.html#archival-finalize-data-org">Finalize data organization</a>.</p>
-</section>
-<section id="step-2-create-a-zenodo-account-access-the-upload-dashboard" class="level5">
-<h5 class="anchored" data-anchor-id="step-2-create-a-zenodo-account-access-the-upload-dashboard">Step 2: Create a Zenodo account &amp; access the upload dashboard</h5>
-<ul>
-<li>Go to <a href="https://zenodo.org/">Zenodo</a> and sign in (or create an account). Note that you can create an account using your GitHub profile.</li>
-<li>Click the “New Upload” button on the Zenodo dashboard.</li>
-</ul>
-</section>
-<section id="step-3-upload-the-data-files-fill-in-metadata-set-access" class="level5">
-<h5 class="anchored" data-anchor-id="step-3-upload-the-data-files-fill-in-metadata-set-access">Step 3: Upload the data files, fill in metadata, set access</h5>
-<ul>
-<li>Upload data, metadata, and the project-level README file.</li>
-<li>Enter metadata information in applicable fields (contributors, associated journal article or conference presentation, etc.)</li>
-<li>Include a link to the GitHub code repository.</li>
-<li>Choose an Access Level</li>
-<li>Open Access: Publicly available for anyone.</li>
-<li>Embargoed: Set a release date if the data must remain private for a certain period.</li>
-<li>Restricted Access: Requires users to request access.</li>
-</ul>
-</section>
-<section id="step-4-publish-get-a-doi" class="level5">
-<h5 class="anchored" data-anchor-id="step-4-publish-get-a-doi">Step 4: Publish &amp; Get a DOI</h5>
-<ul>
-<li>Review all details and make any necessary edits.</li>
-<li>Click “Publish” to finalize the upload.</li>
-<li>Zenodo will generate a DOI — use this when citing the dataset in publications.</li>
-</ul>
-</section>
-<section id="versioning-updates" class="level5">
-<h5 class="anchored" data-anchor-id="versioning-updates">Versioning &amp; Updates</h5>
-<p>If the dataset needs to be udpated:</p>
-<ul>
-<li>Use the “New Version” option in Zenodo instead of creating a separate upload.</li>
-<li>Zenodo will link versions together and maintain persistent DOIs.</li>
-</ul>
+<section id="usage-1" class="level5">
+<h5 class="anchored" data-anchor-id="usage-1">Usage</h5>
+<p>Now, to print the visualization, simply enter:</p>
+<pre><code>git tree
+git tree -10     # this option makes it only print the latest 10 commits.</code></pre>
 
 
 </section>
@@ -855,14 +782,11 @@ Note
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../../docs/data-management/archival.html" class="pagination-link" aria-label="Archival &amp; Disposal">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Archival &amp; Disposal</span></span>
+      <a href="../../docs/version-control/workflows.html" class="pagination-link" aria-label="Workflows">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Workflows</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../../docs/software/index.html" class="pagination-link" aria-label="Software Quality">
-        <span class="nav-page-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Software Quality</span></span> <i class="bi bi-arrow-right-short"></i>
-      </a>
   </div>
 </nav>
 </div> <!-- /content -->
@@ -873,7 +797,7 @@ Note
     </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/alexandra-thompson-dc/rff-data-gov-guidance/edit/main/docs/data-management/publication.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/alexandra-thompson-dc/rff-data-gov-guidance/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/alexandra-thompson-dc/rff-data-gov-guidance/edit/main/docs/version-control/faq.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/alexandra-thompson-dc/rff-data-gov-guidance/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>This page is built with <a href="https://quarto.org/">Quarto</a>.</p>
 </div>

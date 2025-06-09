@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>11&nbsp; Version Control – Data Guidance for Researchers</title>
+<title>Version Control (Beta) – Data Guidance for Researchers</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,6 +30,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
+<link href="../../docs/version-control/setup.html" rel="next">
 <link href="../../docs/software/index.html" rel="prev">
 <link href="../../images/black-logo.svg" rel="icon" type="image/svg+xml">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
@@ -82,7 +83,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../docs/version-control/index.html"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Version Control</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../docs/version-control/index.html">Version Control (Beta)</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -176,40 +177,68 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Archival &amp; Disposal</span></span></a>
   </div>
 </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <span class="sidebar-item-text sidebar-link text-start">
+ <span class="menu-text">Software Quality</span></span>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../docs/version-control/index.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Version Control (Beta)</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../docs/data-management/publication.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Publication</span></span></a>
+  <a href="../../docs/version-control/setup.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Setup</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/version-control/tutorial.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Tutorial</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/version-control/workflows.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Workflows</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../docs/version-control/faq.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Tips and FAQ</span></span></a>
   </div>
 </li>
       </ul>
   </li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../docs/software/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Software Quality</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../docs/version-control/index.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Version Control</span></span></a>
-  </div>
-</li>
     </ul>
     </div>
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active" data-toc-expanded="1">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#what-is-version-control-and-what-can-it-do-for-you" id="toc-what-is-version-control-and-what-can-it-do-for-you" class="nav-link active" data-scroll-target="#what-is-version-control-and-what-can-it-do-for-you">What is version control and what can it do for you?</a></li>
+  <li><a href="#version-control-basics" id="toc-version-control-basics" class="nav-link" data-scroll-target="#version-control-basics">Version Control Basics</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/alexandra-thompson-dc/rff-data-gov-guidance/edit/main/docs/version-control/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/alexandra-thompson-dc/rff-data-gov-guidance/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Version Control</span></h1>
+<h1 class="title">Version Control (Beta)</h1>
 </div>
 
 
@@ -226,10 +255,30 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p><strong>Content coming soon.</strong></p>
-<p><a href="https://docs.github.com/en/get-started/start-your-journey">Get started with GitHub documentation</a>.</p>
+<section id="what-is-version-control-and-what-can-it-do-for-you" class="level2">
+<h2 class="anchored" data-anchor-id="what-is-version-control-and-what-can-it-do-for-you">What is version control and what can it do for you?</h2>
+<p>Version control is a system that records changes to a file or set of files over time so that you can recall specific versions later. You know how Microsoft Word will periodically save your file, and you can recover previous versions if you really mess up? That is a simple form of version control. Other forms offer far more functionality, including the ability to save and recover versions of an entire project, tools for collaboration, and more.</p>
+<p>Some commonly used version control systems are Git, Mercurial, and SVN. Here at RFF, we strongly advise using Git, which we will discuss for the remainder of the section. We also recommend using GitHub to host Git repositories online. Here are some of the benefits of using Git with GitHub for version control:</p>
+<ul>
+<li><p>Grants <strong>peace of mind</strong> knowing work is stored safely and can be recalled with minimal effort, which gives greater <strong>liberty</strong> to test out new ideas (even when a computer breaks!)</p></li>
+<li><p>Facilitates <strong>collaboration</strong> by allowing multiple versions to coexist and efficiently borrow code from one another</p></li>
+<li><p>Enables efficient <strong>review and discussion</strong> of code changes before incorporating them into the main branch of the repository</p></li>
+<li><p><strong>Documents</strong> when, why, and by whom specific changes were made, which helps with debugging and troubleshooting</p></li>
+<li><p><strong>Consolidates</strong> project code and documentation in the same, easily-accessible, backed-up location.</p></li>
+<li><p><strong>Preserves</strong> easy web browser access to all versions of code.</p></li>
+<li><p><strong>Organizes</strong> documentation so it can be kept alongside the code itself</p></li>
+<li><p><strong>Provides public access</strong> to datasets and code under the auspices of a software license</p></li>
+<li><p><strong>Empowers audiences</strong> to answer their own questions about the data and methods used in publications, reducing overhead for researchers who would otherwise be given that task</p></li>
+</ul>
+<p>This section of the guidance will help you get started in making version control a standard part of the project life cycle.</p>
+</section>
+<section id="version-control-basics" class="level2">
+<h2 class="anchored" data-anchor-id="version-control-basics">Version Control Basics</h2>
+<p>Before we get started in using Git for version control, let’s cover a few basic principles. <strong>Git</strong> is a popular version control system, which is software that we can download and use on our computer. Git works by monitoring the changes of the contents of an otherwise ordinary file folder, called a repository. In a Git repository, a user can tell Git which file changes to keep, which to discard, and can label those changes, go back to previous file versions, and much more!</p>
+<p>While it is possible to use Git only on your computer without posting it online, it is often advisable to host repositories online so that they are synced in the cloud, making it easy to share them and back them up. There are many websites that can host Git repositories, but the most popular is called <strong>GitHub</strong>, which is what we recommend using at RFF. (Some others you may come across GitLab and BitBucket) Not only does GitHub host these repositories, but it also provides convenient ways to host documentations, discuss code changes, and report bugs.</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -634,10 +683,13 @@ ul.task-list li input[type="checkbox"] {
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="../../docs/software/index.html" class="pagination-link" aria-label="Software Quality">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Software Quality</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Software Quality</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
+      <a href="../../docs/version-control/setup.html" class="pagination-link" aria-label="Setup">
+        <span class="nav-page-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Setup</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
   </div>
 </nav>
 </div> <!-- /content -->
@@ -648,7 +700,7 @@ ul.task-list li input[type="checkbox"] {
     </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions"><ul><li><a href="https://github.com/alexandra-thompson-dc/rff-data-gov-guidance/edit/main/docs/version-control/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/alexandra-thompson-dc/rff-data-gov-guidance/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/alexandra-thompson-dc/rff-data-gov-guidance/edit/main/docs/version-control/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/alexandra-thompson-dc/rff-data-gov-guidance/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>This page is built with <a href="https://quarto.org/">Quarto</a>.</p>
 </div>
