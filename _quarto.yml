@@ -41,7 +41,8 @@ book:
       chapters:
         # - docs/version-control/terminology.qmd
         - docs/version-control/setup.qmd
-        - docs/version-control/tutorial.qmd
+        - docs/version-control/tutorial-basics.qmd
+        - docs/version-control/tutorial-branching.qmd
         - docs/version-control/workflows.qmd
         - docs/version-control/faq.qmd
 format:
