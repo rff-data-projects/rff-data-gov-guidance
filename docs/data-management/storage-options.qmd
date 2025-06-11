@@ -54,9 +54,33 @@ Instructions for setting up the version control system are forthcoming. In the m
 
 The GitHub repository method for storing and sharing scripts is ideal for collaborating with people who do not have access to the RFF network and `L:/` drive. If they are made collaborators on the GitHub repository, they're able to **clone** a copy of the repository codebase to their local folder directly from the web browser. (See [external resources provided](../version-control/index.qmd).)
 
-### Sharing data
+### Sharing and accessing data
 
-In addition to storing data and code on the `L:/` drive project folder, it may be necessary to store and share files in other ways when collaborating with team members without RFF network access. In that case, there are a few options.
+In addition to storing data and code on the `L:/` drive project folder, it may be necessary to store, access, and share files in other ways when collaborating with team members without RFF network access. In that case, there are a few options.
+
+#### Accessing raw data via Application Program Interfaces (APIs){#apis}
+
+APIs (Application Programming Interfaces) allow programs to access data directly from remote servers. Many public datasets — such as the [US Census](https://www.census.gov/data/developers/data-sets.html) or [USDA NASS](https://www.nass.usda.gov/developer/index.php) — can be queried through APIs, enabling efficient workflows without needing to download and store large raw files. If APIs are not available, similar workflows can often be built by downloading data directly from URLs using tools like `curl.`
+
+Benefits of Using APIs
+
+- **Reduced storage**: APIs allow you to retrieve only the data you need, rather than storing large or comprehensive datasets locally.
+
+- **Up-to-date data**: API calls can return the most recent available data each time code is run.
+
+- **Reproducibility**: API-based workflows can support reproducible research when combined with version control and well-documented queries.
+
+Considerations and Caveats
+
+- **Stability and longevity**: APIs can change or become deprecated. Keep this in mind when building workflows that rely on long-term access.
+
+- **Accessibility**: Not all APIs have well-documented libraries in your programming language of choice. Some require constructing URLs manually or navigating limited documentation.
+
+- **Reproducibility and archiving API-sourced data**: To support reproducibility, consider the following approaches when publishing or archiving projects that rely on API-sourced data. Choose the strategy that best balances reproducibility, storage constraints, and project scope.
+
+  - *Download and archive locally*: Save a copy of the queried dataset in your project directory at the time of analysis or publication.
+  - *Deposit in a repository*: Archive the data on platforms like Zenodo using tools such as [zen4R (R)](https://cran.r-project.org/web/packages/zen4R/zen4R.pdf) or zenodo-client ([python](https://pypi.org/project/zenodo-client/)).
+  - *Document query details*: If data is too large and/or static, document the API source, parameters, and access date to support partial reproducibility.
 
 #### OneDrive
 
@@ -88,33 +112,6 @@ While we recommend only using GitHub to version control script files, experience
 Consider security, sensitivity, and license restrictions when hosting data on GitHub.
 
 Files larger than 100 MB should be shared using other tools.
-
-### Accessing raw data via Application Program Interfaces (APIs)
-
-Some data sources allow access to data via APIs, such as the [US Census](https://www.census.gov/data/developers/data-sets.html) and the [USDA National Agricultural Statistics Service](https://www.nass.usda.gov/developer/index.php). APIs enable users or programs to download relevant subsets of data directly into memory, eliminating the need to download and store entire datasets on disk. This approach not only reduces storage requirements but also improves efficiency by allowing applications to process relevant data immediately without managing large raw files.
-
-Writing code that uses an API is especially advantageous for working with large datasets, because it often allows for subsets of the data to be loaded (e.g., part of a state map covering one city), which can reduce the need for local disk space.
-If an API is not available, having code download data from remote servers via other methods (e.g., `curl`) can also be a good option.
-
-Using APIs is ideal for a variety of reasons:
-
-* __Storage size__: An API allows the user/program to access specific data of relevance without needing to find room to store an entire, broader dataset (which is instead hosted on the data provider's server)
-* __Reproducibility advantage__: Using public APIs or other ways of accessing public data on the internet allows for code produced using other best practices to run "out of the box" on any computer/VM with internet access
-* __Fresh data__: Code that queries an API can automatically retrieve the most current data each time it runs, eliminating the need to manually update local files.
-
-APIs do require some special considerations:
-
-* __Reproducibility risk__: Because API data can change over time, it’s important to save a local copy of the queried data at key stages (e.g., before analysis or publication). This helps ensure results can be reproduced later, even if the live API data has changed.
-* __Longevity__: APIs may stop being accessible/maintained. It is not always a safe assumption that data stored remotely will continue to be accessible via an API. API packages and query formats may also change, so project code may need to be debugged occasionally to maintain compatibility with an API.
-* __Accessibility__: Not all online data sources have convenient API functions in a programmer's language of choice. Some have URL formats that allow data to be accessed regardless. The amount of documentation and the level of technical skill required to understand and use an API can vary.
-
-#### Publishing/Archiving data sourced from APIs {#publish-archive-apis}
-
-If you use an API to access source data, the best course for publishing or archiving source data will vary based on project needs, dataset size, and nature of the data. Some options are:
-
-* __Download to folder__: During the archival phase, download the source data in its current state and save it to the project folder to be archived.
-* __Document__: Document the dataset version and access date in lieu of providing source data. While not ideal for reproducibility, this is suitable in cases where the source data is large, reliable, and not likely to be modified. 
-* __Download to cloud__: Use a repository service, such as Zenodo, to store source data as it existed when archiving the project. Source data accessed through an API can be [downloaded directly to a Zenodo repository](https://developers.zenodo.org/), without having to save files locally. This can be done through R ([zen4R](https://cran.r-project.org/web/packages/zen4R/zen4R.pdf)) or [python](https://pypi.org/project/zenodo-client/).
 
 ### Other cloud storage options for large data
 

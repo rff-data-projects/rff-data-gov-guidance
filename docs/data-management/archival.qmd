@@ -37,7 +37,7 @@ The folder can be accessed in a way similar to the L drive, except that the file
   * Source (raw) data 
     * When possible, source data should be preserved without modification, as external data sources may be modified or become unavailable. 
     * However, for certain reliable data sources, citation and documentation may be sufficient (make sure to include the access date and dataset version).
-    * If data were accessed via an API, see [Publishing/Archiving data sourced from APIs](../data-management/storage-options.qmd#publish-archive-apis).
+    * If data were accessed via an API, see [sharing API data](../data-management/storage-options.qmd#apis).
   * Final analysis data
   * Results and visualizations
   * Code
