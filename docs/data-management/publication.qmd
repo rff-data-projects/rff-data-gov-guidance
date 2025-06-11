@@ -91,7 +91,6 @@ You can link your GitHub repository to the RFF GitHub organization in one of two
 ##### Option 1: Forking into the RFF GitHub Organization
 
 * This approach is suitable for most situations and provides significant flexibility.
-
 * A fork creates a copy of your repository under the RFF organization account.
 * This snapshot can be tagged to align with a publication version (e.g., v1.0-paper-release).
 * The fork can be updated to stay in sync with the original repo, or kept as a fixed version.
