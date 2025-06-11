@@ -233,6 +233,7 @@ For a more in-depth introduction to spatial data types, see [Introduction to Geo
 It is helpful to think ahead when generating and saving data visualizations and plots. Academic journals often accept `TIFF` and `PNG` formats, but they frequently have resolution and dimension requirements. Export figures with a minimum resolution of 300 dots per inch (DPI). 
 
 For RFF communications, however, vector formats are best. because it can be easily modified as needed. These include:
+
 - Scalable Vector Graphics (`.svg`)
 - Encapsulated PostScript (`.eps`) 
 
