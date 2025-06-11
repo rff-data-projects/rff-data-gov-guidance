@@ -103,9 +103,9 @@ In cases where the native format of source data is in a proprietary software for
 
   - **Database File (.dbf)** files used by `dBASE` and other database systems to store tabular data. They support a fixed schema and metadata. DBF files cannot store full precision. Avoid creating this type of file.
 
-## Working with text-based file formats{#textbasedissues}
+#### Working with text-based file formats{#textbasedissues}
 
-### Limitations of text-based formats
+##### Limitations of text-based formats
 
 Text-based formats like CSVs **do not store data type metadata.**
 
@@ -131,7 +131,7 @@ This has several implications:
   * `2023-01-01` as a string vs. a date object
   * `TRUE` as a logical value vs. a text label
 
-### Practices for working with text-based formats
+##### Practices for working with text-based formats
 
 * Reading/importing text-based data
   * Explicitly **specify** column types when importing data (e.g., using `read_csv(..., col_types=...)` in `R` or `dtype=...` in `python pandas`). Another strategy is to specify all column types as character (`col_types = 'character`), view how they are stored, and then decides which columns to convert and how.
