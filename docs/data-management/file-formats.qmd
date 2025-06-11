@@ -3,7 +3,7 @@ title: Data & File Types
 ---
 ## Data types
 
-Individual data values are represented in specific data types by certain software, which determine how the values are interpreted and stored in memory. Recognizing the data types of variables in a dataset is essential for ensuring analytical accuracy, understanding precision, and avoiding errors during data processing.
+In coding environments and other software, data are classified into specific "types", which determine how the values are interpreted and stored in memory. Recognizing the data types of variables in a dataset is essential for ensuring analytical accuracy, understanding precision, and avoiding errors during data processing.
 
 ### General data types
 
