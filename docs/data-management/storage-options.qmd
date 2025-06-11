@@ -87,11 +87,11 @@ OneDrive can be used to share data with external collaborators. However, the `L:
 
 Storage considerations
 
-* Folders created on RFF’s institutional OneDrive accounts have an **initial capacity of 5 TB** and can be shared with non-RFF staff. If needed, storage capacity can be increased for RFF project folders (but not for individual external users’ accounts).
-* If external collaborators are "guests" in the OneDrive folder, they are also limited to your account's storage limits.
-* OneDrive is not suitable to support large data. There are synchronizations issues when working with single files bigger than 10GB.
-* While it's possible to load data from a OneDrive folder into a script, it is not recommended because a) the `L:/` drive should be used as the primary storage location for authoritative datasets and b) loading from OneDrive can automatically trigger the OneDrive program to download/sync the data, causing hangups. Instead, copy new data from the OneDrive folder to the project `L:/` drive folder.
-* OneDrive files are only accessible from the web browser on RFF lab computers. The ability to sync OneDrive folders to the local drive on lab computers is unavailable at this time. The `L:/` drive should be used to accessed data from lab computers.
+* RFF OneDrive project folders start with 5 TB of storage, which can be increased if needed (not for external users’ accounts).
+* External collaborators added as guests are subject to your account’s storage limits.
+* Not suitable for large files: syncing can fail with files over 10 GB.
+* It is not recommended to load data directly from OneDrive into scripts—this can cause sync issues and delays. Instead, copy data to the project’s `L:/` drive folder, which is the authoritative storage location.
+* RFF lab computers can only access OneDrive through a web browser. Use the `L:/` drive to access data on lab machines.
 
 When using OneDrive for sharing:
 
