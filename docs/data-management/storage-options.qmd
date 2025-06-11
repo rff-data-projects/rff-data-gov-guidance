@@ -106,7 +106,7 @@ If a file is stored at `raw_data/fires/data.shp` on the `L:/` drive, it should a
 
 ### GitHub
 
-While we recommend only using GitHub to version control script files, experienced users can also use it to share and version control small data files (well below 100 MB). This is also discussed in the [Organization](../data-management/organization.qmd#sec-directory-structure) section.
+While we recommend only using GitHub to version control scripts, figures and tables intended for publication, and code documentation, experienced users can also use it to share and version control other small data files (well below 100 MB). This is also discussed in the [Organization](../data-management/organization.qmd#sec-directory-structure) section.
 
 Consider security, sensitivity, and license restrictions when hosting data on GitHub.
 

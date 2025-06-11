@@ -15,7 +15,7 @@ Such an approach reduces the complexity of project management and aligns effecti
 
 * Design for flexibility, allowing new data, methods, or collaborators without major reorganization.
 
-* Name files/folders to be human- and machine-readable: use clear names, avoid spaces/special characters, and include numeric prefixes for order.
+* Name files/folders to be human- and machine-readable: use clear names, avoid spaces and special characters, and include numeric prefixes for order.
 
 ## Directory structure {#sec-directory-structure}
 
