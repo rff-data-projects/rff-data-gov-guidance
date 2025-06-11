@@ -95,6 +95,7 @@ You can link your GitHub repository to the RFF GitHub organization in one of two
 * This snapshot can be tagged to align with a publication version (e.g., v1.0-paper-release).
 * The fork can be updated to stay in sync with the original repo, or kept as a fixed version.
 * Include a note in the README linking the snapshot to the relevant publication.
+* Note that while the RFF GitHub organization takes control of the new fork, the original repository owner retains administrative control of the upstream repository.
 
 ##### Option 2: Transferring Ownership to the RFF Organization
 
