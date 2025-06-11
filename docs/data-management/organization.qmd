@@ -102,7 +102,7 @@ Examples of logical groupings for subfolder names are by
 * data source (e.g., `usda`), 
 * variable (`precipitation`), 
 * processing step (`merge`), or
-* results category (`regressions` or `projections`).
+* results category (e.g., `regressions` or `projections`).
 
 Ideally, project folders should be organized so that each file's complete path is informative about the role of the folder's contents in the project. Some examples are:
 
