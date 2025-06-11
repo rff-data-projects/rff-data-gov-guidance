@@ -52,7 +52,7 @@ Instructions for setting up the version control system are forthcoming. In the m
 
 ### Sharing code
 
-The GitHub repository method for storing and sharing scripts is ideal for collaborating with people who do not have access to the RFF network and `L:/` drive. If they are made collaborators on the GitHub repository, they're able to **clone** a copy of the repository codebase to their local folder directly from the web browser. (See [external resources provided](../version-control/index.qmd).)
+The GitHub repository method (see [Organization section](../data-management/organization.qmd#repos-folder)) for storing and sharing scripts is ideal for collaborating with people who do not have access to the RFF network and `L:/` drive. If they are made collaborators on the GitHub repository, they're able to **clone** a copy of the repository codebase to their local folder directly from the web browser. (See [external resources provided](../version-control/index.qmd).)
 
 ### Sharing and accessing data
 
