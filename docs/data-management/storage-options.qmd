@@ -77,7 +77,6 @@ Considerations and Caveats
 - **Accessibility**: Not all APIs have well-documented libraries in your programming language of choice. Some require constructing URLs manually or navigating limited documentation.
 
 - **Reproducibility and archiving API-sourced data**: To support reproducibility, consider the following approaches when publishing or archiving projects that rely on API-sourced data. Choose the strategy that best balances reproducibility, storage constraints, and project scope.
-
   - *Download and archive locally*: Save a copy of the queried dataset in your project directory at the time of analysis or publication.
   - *Deposit in a repository*: Archive the data on platforms like Zenodo using tools such as [zen4R (R)](https://cran.r-project.org/web/packages/zen4R/zen4R.pdf) or zenodo-client ([python](https://pypi.org/project/zenodo-client/)).
   - *Document query details*: If data is too large and/or static, document the API source, parameters, and access date to support partial reproducibility.
