@@ -104,7 +104,7 @@ If a file is stored at `raw_data/fires/data.shp` on the `L:/` drive, it should a
 `OneDrive/.../raw_data/fires/data.shp`.
 * Be mindful of who is making changes and consider using version control or clear file-naming conventions to track edits to data files. When files exist in both locations (`L:/` drive and OneDrive), edits made separately on the `L:/` drive and OneDrive can lead to **version conflicts**. 
 
-### GitHub
+#### GitHub
 
 While we recommend only using GitHub to version control scripts, figures and tables intended for publication, and code documentation, experienced users can also use it to share and version control other small data files (well below 100 MB). This is also discussed in the [Organization](../data-management/organization.qmd#sec-directory-structure) section.
 
@@ -112,19 +112,19 @@ Consider security, sensitivity, and license restrictions when hosting data on Gi
 
 Files larger than 100 MB should be shared using other tools.
 
-### Other cloud storage options for large data
+#### Other cloud storage options for large data
 
 Alternatives to OneDrive, such as Azure, Google Bucket, AWS S3, or Dropbox may be well suited to your project, especially for short-term storage and file transfer. However, note that these storage options may incur additional costs, depending on data size (even the "free tiers" of these services may incur pay-as-you-go costs).
 For Azure setups, contact IT at [IThelp@rff.org](mailto:ithelp@rff.org). 
 
-### ArcGIS Online for sharing and exploring spatial data
+#### ArcGIS Online for sharing and exploring spatial data
 
 ArcGIS Online is a cloud-based browser platform that allows users to upload, host, and share datasets (both geospatial and tabular).
 In order to access the data and exploratory mapping interface, users need an ArcGIS Online account.
 Online accounts cost $100 per user and data storage costs vary by data size.
 Contact RFF's GIS Coordinator at [Thompson@rff.org](mailto:thompson@rff.org) for more information.
 
-### Enabling external collaborator access to the `L:/` drive
+#### Enabling external collaborator access to the `L:/` drive
 
 While not recommended, it is possible to enable access to the `L:/` drive for non-RFF staff. See [Server Access for Non-Employees](https://my.rff.org/it/server-access-for-non-employees/).
 Temporary accounts can be requested by contacting IT at [IThelp@rff.org](mailto:ithelp@rff.org). 
