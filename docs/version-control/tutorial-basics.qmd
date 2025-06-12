@@ -62,10 +62,11 @@ See the [section on software licenses](../data-management/publication.qmd#softwa
 5. Check the box to add a README file.
 This will create a file called `README.md` located in the repository's root folder, where you can add basic documentation for the repository.
 
-6. Optional: Choose a `.gitignore` template from the dropdown menu.
+6. Choose a `.gitignore` template from the dropdown menu.
 A `.gitignore` file specifies certain file types that Git will not track the changes of, by default.
 For example, it is best to ignore an auto-created config file made by R studio that is user-specific.
 Generally it is a good idea to select the .gitignore template for the programming language you will be using.
+Please see the [section on `.gitignore` files](./faq.qmd#gitignore-files) for more information.
 
 7. Click the "Create Repository" button!!
 This should take you to the home page of your new repository.
