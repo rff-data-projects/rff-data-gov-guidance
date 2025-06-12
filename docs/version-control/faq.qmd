@@ -46,7 +46,7 @@ Here are some examples of files that you may consider adding to a `.gitignore` f
 * a project file created by a code editor
 
 The easiest way to set up a `.gitignore` file is to select the template corresponding to your desired programming language upon [creation of the repository.](./tutorial-basics.qmd#creating-a-repository-in-github)
-However, it is always possible to create your own manually later on, or borrow from [GitHub's `.gitignore` templates.](https://github.com/github/gitignore/blob/main)
+To add a `.gitignore` file to an existing repository, you can find the [GitHub `.gitignore` template corresponding to your programming language.](https://github.com/github/gitignore/blob/main)
 
 ::: {.callout-tip collapse="true"}
 ## Expand to see a sample of the `.gitignore` template for R, from [GitHub's Website](https://github.com/github/gitignore/blob/main/R.gitignore)
@@ -103,6 +103,16 @@ po/*~
 rsconnect/
 ```
 :::
+
+We also recommend appending any output file types that can grow large to the `.gitignore` file.
+For example, you could append the following to your `.gitignore file`:
+
+```
+# Output File Types
+*.svg
+*.csv
+*.xlsx
+```
 
 
 ### Branch Naming
