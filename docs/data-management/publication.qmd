@@ -102,7 +102,7 @@ You can link your GitHub repository to the RFF GitHub organization in one of two
 For institutional or long-term projects, it may be most effective to **transfer ownership and administrative privileges** of the repository to the GitHub organization. This simplifies management and ensures continuity, especially during researcher transitions, by centralizing control in the organization rather than with an individual. Researchers can **retain collaborator-level permissions**, allowing them to push code, create branches, and submit pull requests.
 
 * The repository is permanently transferred to the RFF GitHub organization.
-* All existing collaborators retain their permissions.
+* All existing collaborators retain their roles.
 * The repository URL will change, but redirects will be preserved by GitHub.
 * Organization owners (e.g., staff managing RFF's GitHub) gain administrative control.
 
