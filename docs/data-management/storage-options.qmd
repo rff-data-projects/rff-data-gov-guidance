@@ -83,26 +83,17 @@ Considerations and Caveats
 
 #### OneDrive
 
-OneDrive can be used to share data with external collaborators. However, the `L:/` drive should remain the primary storage location for project data, due to its advantages in access from RFF lab computers, computing capacity, storage space, and data security.
+OneDrive can be used to share data with external collaborators, but **the `L:/` drive should remain the primary storage location** due to better access from RFF lab computers, greater computing capacity, more storage, fewer sync issues, and improved data security. 
 
-Storage considerations
+Storage considerations for OneDrive:
 
-* RFF OneDrive project folders start with 5 TB of storage, which can be increased if needed (not for external users’ accounts).
-* External collaborators added as guests are subject to your account’s storage limits.
-* Not suitable for large files: syncing can fail with files over 10 GB.
-* It is not recommended to load data directly from OneDrive into scripts—this can cause sync issues and delays. Instead, copy data to the project’s `L:/` drive folder, which is the authoritative storage location.
-* RFF lab computers can only access OneDrive through a web browser. Use the `L:/` drive to access data on lab machines.
+* Project folders start with 5 TB of storage (expandable). 
+* Files over 10 GB may fail to sync — OneDrive is not ideal for large files.
+* Share only essential files (e.g., inputs/outputs — not intermediate files).
+* Mirror (replicate) the folder structure between `L:/` and OneDrive to ensure clarity and consistency.
+* **Sensitive data** should be handled carefully; set access permissions appropriately. 
 
-When using OneDrive for sharing:
-
-* Consider the **security implications** of storing sensitive data on the cloud and specify access accordingly.
-* **Copy only necessary data files** to the OneDrive folder (e.g., inputs and outputs, not intermediate processing files).
-* External collaborators can either work directly from the shared OneDrive folder or download files to their own preferred storage.
-* External collaborators can be given OneDrive folder access as **Editors** (ability to create, edit, and delete files) or **Viewers** (read-only access). [How to set up collaboration in OneDrive.](https://support.microsoft.com/en-us/office/collaborate-in-onedrive-d8a2a19a-e306-4ca5-9b00-19b0e96890d6)
-* **Mirror** (replicate) the directory structure between the `L:/` and OneDrive folders to maintain clarity and consistency. This helps collaborators understand where each file fits within the overall project structure. For example:
-If a file is stored at `raw_data/fires/data.shp` on the `L:/` drive, it should appear in the OneDrive folder under the same path:
-`OneDrive/.../raw_data/fires/data.shp`.
-* Be mindful of who is making changes and consider using version control or clear file-naming conventions to track edits to data files. When files exist in both locations (`L:/` drive and OneDrive), edits made separately on the `L:/` drive and OneDrive can lead to **version conflicts**. 
+[How to set up collaboration in OneDrive.](https://support.microsoft.com/en-us/office/collaborate-in-onedrive-d8a2a19a-e306-4ca5-9b00-19b0e96890d6)
 
 #### GitHub
 
