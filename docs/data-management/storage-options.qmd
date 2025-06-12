@@ -45,14 +45,13 @@ For example, you can revise a script locally and commit changes, with documentat
 
 To prevent users from simultaneously editing scripts stored within a shared folder, and to support use of version control, **each team member who will be viewing, running, or editing code should have their own personal folder containing a clone of the project's GitHub repository **. Specific suggestions for how to organize your project folder are in the [Organization](../data-management/organization.qmd#sec-directory-structure) section.
 
-Instructions for setting up the version control system are forthcoming. In the meantime, see [available external  resources](../version-control/index.qmd).
-
+See [Version Control](../version-control/index.qmd) for setup instructions.
 
 ## Solutions for collaborative projects {#collab}
 
 ### Sharing code
 
-The GitHub repository method (see [Organization section](../data-management/organization.qmd#repos-folder)) for storing and sharing scripts is ideal for collaborating with people who do not have access to the RFF network and `L:/` drive. If they are made collaborators on the GitHub repository, they're able to **clone** a copy of the repository codebase to their local folder directly from the web browser. (See [external resources provided](../version-control/index.qmd).)
+The GitHub repository method (see [Organization section](../data-management/organization.qmd#repos-folder)) for storing and sharing scripts is ideal for collaborating with people who do not have access to the RFF network and `L:/` drive. If they are made collaborators on the GitHub repository, they're able to **clone** a copy of the repository codebase to their local folder directly from the web browser.
 
 ### Sharing and accessing data
 
@@ -65,17 +64,13 @@ APIs (Application Programming Interfaces) allow programs to access data directly
 Benefits of Using APIs
 
 - **Reduced storage**: APIs allow you to retrieve only the data you need, rather than storing large or comprehensive datasets locally.
-
 - **Up-to-date data**: API calls can return the most recent available data each time code is run.
-
 - **Reproducibility**: API-based workflows can support reproducible research when combined with version control and well-documented queries.
 
 Considerations and Caveats
 
 - **Stability and longevity**: APIs can change or become deprecated. Keep this in mind when building workflows that rely on long-term access.
-
 - **Accessibility**: Not all APIs have well-documented libraries in your programming language of choice. Some require constructing URLs manually or navigating limited documentation.
-
 - **Reproducibility and archiving API-sourced data**: To support reproducibility, consider the following approaches when publishing or archiving projects that rely on API-sourced data. Choose the strategy that best balances reproducibility, storage constraints, and project scope.
   - *Download and archive locally*: Save a copy of the queried dataset in your project directory at the time of analysis or publication.
   - *Deposit in a repository*: Archive the data on platforms like Zenodo using tools such as [zen4R (R)](https://cran.r-project.org/web/packages/zen4R/zen4R.pdf) or zenodo-client ([python](https://pypi.org/project/zenodo-client/)).
