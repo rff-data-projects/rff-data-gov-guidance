@@ -120,7 +120,7 @@ If your repository is under a personal GitHub account:
 
 1. Decide whether you will continue development:
 
-* For **ongoing or reusable projects**, consider transferring the repository to the RFF organizational GitHub.
+* If you are finished working on the project and no longer want administrative duties, consider transferring the repository to the RFF organizational GitHub.
 * If you intend to continue developing the code for purposes unrelated to RFF, request that the RFF GitHub account fork your repository to retain a version tied to the publication.
 
 2. Contact the RFF GitHub organization admins at [DGWG@rff.org](mailto:dgwg@rff.org) to initiate the fork or transfer and add a tag associated with the publication (*note: tags do not transfer automatically when a repo is forked*).
