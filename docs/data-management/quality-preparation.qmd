@@ -92,7 +92,7 @@ Discuss the role of tidy data with your team, and if/when in the process project
 * **Python**: The Python pandas library is useful for creating and working with tidy data, as it uses data frames and includes functions for cleaning, transforming, and manipulating data.
 * **Julia**: The DataFrames.jl library is useful for working with tabular tidy data, and has many powerful tools for manipulating data. The Tidier.jl framework builds on DataFrames.jl and emulates the R tidyverse.
 
-### Recommended reading and examples
+### Resources
 
 * General: 
   * [Introduction to Data Wrangling and Tidying | Codecademy](https://www.codecademy.com/article/intro-data-wrangling-and-tidying)
@@ -148,6 +148,8 @@ Additional cleaning and transformation steps (often referred to as "data wrangli
 * correcting errors in the source data (e.g. misspellings)
 * merging
 
+### Resources
+
 The approach depends on specific project and data needs. 
 The following resources go into greater detail, with examples:
 
@@ -159,3 +161,5 @@ The following resources go into greater detail, with examples:
 * Python
   * [Data Analysis and Visualization in Python for Ecologists: Indexing, Slicing and Subsetting DataFrames in Python (datacarpentry.org)](https://datacarpentry.org/python-ecology-lesson/03-index-slice-subset.html)
   * [Data Analysis and Visualization in Python for Ecologists: Combining DataFrames with Pandas (datacarpentry.org)](https://datacarpentry.org/python-ecology-lesson/05-merging-data.html)
+  
+## References
