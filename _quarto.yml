@@ -26,10 +26,6 @@ website:
           - docs/data-management/quality-preparation.qmd
           - docs/data-management/archival.qmd
           - docs/data-management/publication.qmd
-      - section: "Software Quality"
-        href: docs/software/index.qmd
-        contents:
-          # - docs/software/setup.qmd
       - section: "Version Control"
         href: docs/version-control/index.qmd
         contents:
@@ -38,6 +34,10 @@ website:
           - docs/version-control/tutorial-branching.qmd
           - docs/version-control/workflows.qmd
           - docs/version-control/faq.qmd
+      - section: "Software Quality"
+        href: docs/software/index.qmd
+        contents:
+          # - docs/software/setup.qmd
       - presentations/index.qmd
     tools:
       - icon: github
