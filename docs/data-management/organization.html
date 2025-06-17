@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.31">
+<meta name="generator" content="quarto-1.7.32">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -39,10 +39,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-e1a5c8363afafaef2c763b6775fbf3ca.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-ccf3fe9a8ac998910cd04068443da790.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-1dd19f5d8aa827be63dfedc021fd998f.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -156,7 +156,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../docs/data-management/file-formats.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">File &amp; Data Types</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Data &amp; File Types</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -228,20 +228,21 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#directory-structure" id="toc-directory-structure" class="nav-link active" data-scroll-target="#directory-structure"><span class="header-section-number">3.1</span> Directory structure</a>
+  <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary"><span class="header-section-number">3.1</span> Summary</a></li>
+  <li><a href="#sec-directory-structure" id="toc-sec-directory-structure" class="nav-link" data-scroll-target="#sec-directory-structure"><span class="header-section-number">3.2</span> Directory structure</a>
   <ul class="collapse">
-  <li><a href="#data-folder" id="toc-data-folder" class="nav-link" data-scroll-target="#data-folder"><span class="header-section-number">3.1.1</span> <code>Data</code> folder</a></li>
-  <li><a href="#results-folder" id="toc-results-folder" class="nav-link" data-scroll-target="#results-folder"><span class="header-section-number">3.1.2</span> <code>Results</code> folder</a></li>
-  <li><a href="#repos-folder" id="toc-repos-folder" class="nav-link" data-scroll-target="#repos-folder"><span class="header-section-number">3.1.3</span> <code>Repos</code> folder</a></li>
-  <li><a href="#scripts-folders" id="toc-scripts-folders" class="nav-link" data-scroll-target="#scripts-folders"><span class="header-section-number">3.1.4</span> <code>Scripts</code> folders</a></li>
-  <li><a href="#docs-folder" id="toc-docs-folder" class="nav-link" data-scroll-target="#docs-folder"><span class="header-section-number">3.1.5</span> <code>Docs</code> folder</a></li>
-  <li><a href="#other-project-files" id="toc-other-project-files" class="nav-link" data-scroll-target="#other-project-files"><span class="header-section-number">3.1.6</span> Other project files</a></li>
+  <li><a href="#data-folder" id="toc-data-folder" class="nav-link" data-scroll-target="#data-folder"><span class="header-section-number">3.2.1</span> <code>Data</code> folder</a></li>
+  <li><a href="#results-folder" id="toc-results-folder" class="nav-link" data-scroll-target="#results-folder"><span class="header-section-number">3.2.2</span> <code>Results</code> folder</a></li>
+  <li><a href="#repos-folder" id="toc-repos-folder" class="nav-link" data-scroll-target="#repos-folder"><span class="header-section-number">3.2.3</span> <code>Repos</code> folder</a></li>
+  <li><a href="#scripts-folders" id="toc-scripts-folders" class="nav-link" data-scroll-target="#scripts-folders"><span class="header-section-number">3.2.4</span> <code>Scripts</code> folders</a></li>
+  <li><a href="#docs-folder" id="toc-docs-folder" class="nav-link" data-scroll-target="#docs-folder"><span class="header-section-number">3.2.5</span> <code>Docs</code> folder</a></li>
+  <li><a href="#other-project-files" id="toc-other-project-files" class="nav-link" data-scroll-target="#other-project-files"><span class="header-section-number">3.2.6</span> Other project files</a></li>
   </ul></li>
-  <li><a href="#other-organization-practices" id="toc-other-organization-practices" class="nav-link" data-scroll-target="#other-organization-practices"><span class="header-section-number">3.2</span> Other organization practices</a>
+  <li><a href="#other-organization-practices" id="toc-other-organization-practices" class="nav-link" data-scroll-target="#other-organization-practices"><span class="header-section-number">3.3</span> Other organization practices</a>
   <ul class="collapse">
-  <li><a href="#subfolders" id="toc-subfolders" class="nav-link" data-scroll-target="#subfolders"><span class="header-section-number">3.2.1</span> Subfolders</a></li>
+  <li><a href="#subfolders" id="toc-subfolders" class="nav-link" data-scroll-target="#subfolders"><span class="header-section-number">3.3.1</span> Subfolders</a></li>
   </ul></li>
-  <li><a href="#naming-folders-files-and-scripts" id="toc-naming-folders-files-and-scripts" class="nav-link" data-scroll-target="#naming-folders-files-and-scripts"><span class="header-section-number">3.3</span> Naming folders, files and scripts</a></li>
+  <li><a href="#naming-folders-files-and-scripts" id="toc-naming-folders-files-and-scripts" class="nav-link" data-scroll-target="#naming-folders-files-and-scripts"><span class="header-section-number">3.4</span> Naming folders, files and scripts</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/alexandra-thompson-dc/rff-data-gov-guidance/edit/main/docs/data-management/organization.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/alexandra-thompson-dc/rff-data-gov-guidance/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -268,8 +269,18 @@ ul.task-list li input[type="checkbox"] {
 
 
 <p>Standardized practices for file organization and storage save time and ensure consistency, enhancing the overall quality of research outputs. A simple and flexible folder structure not only promotes long-term data stability but also supports seamless project growth, adaptability, and researcher transitions. Such an approach reduces the complexity of project management and aligns effectively with version control systems, enhancing collaborative efforts and preserving institutional knowledge.</p>
-<section id="directory-structure" class="level2" data-number="3.1">
-<h2 data-number="3.1" class="anchored" data-anchor-id="directory-structure"><span class="header-section-number">3.1</span> Directory structure</h2>
+<section id="summary" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="summary"><span class="header-section-number">3.1</span> Summary</h2>
+<ul>
+<li><p>Keep raw data in a dedicated folder (<code>raw/</code>) and never modify it directly.</p></li>
+<li><p>Use a simple, descriptive folder structure that reflects project logic and is easy for new users to understand.</p></li>
+<li><p>Support version control by organizing code and outputs in a way that works with Git, i.e.&nbsp;by creating separate repository folders for each user.</p></li>
+<li><p>Design for flexibility, allowing new data, methods, or collaborators without major reorganization.</p></li>
+<li><p>Name files/folders to be human- and machine-readable: use clear names, avoid spaces and special characters, and include numeric prefixes for order.</p></li>
+</ul>
+</section>
+<section id="sec-directory-structure" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="sec-directory-structure"><span class="header-section-number">3.2</span> Directory structure</h2>
 <p>Regardless of the specific method deployed, your data project organization should have the following qualities:</p>
 <ul>
 <li><strong>Raw data are kept in a distinct folder and never modified or overwritten.</strong> Always keep an unaltered version of original data files, “warts and all.” Avoid making any changes directly to this file; instead, perform corrections using a scripted language and save the modified data as separate output files. Consider making raw datasets “read-only” so they cannot be accidentally modified.</li>
@@ -299,8 +310,8 @@ ul.task-list li input[type="checkbox"] {
 │   │   │   ├── tools/
 │   │   ├── results**/
 │   │   ├── docs/</code></pre>
-<section id="data-folder" class="level3" data-number="3.1.1">
-<h3 data-number="3.1.1" class="anchored" data-anchor-id="data-folder"><span class="header-section-number">3.1.1</span> <code>Data</code> folder</h3>
+<section id="data-folder" class="level3" data-number="3.2.1">
+<h3 data-number="3.2.1" class="anchored" data-anchor-id="data-folder"><span class="header-section-number">3.2.1</span> <code>Data</code> folder</h3>
 <ul>
 <li>The <code>data</code> folder contains all project data sets.</li>
 <li><strong>Raw data is preserved in its own subfolder.</strong></li>
@@ -321,53 +332,59 @@ Note
 </div>
 </div>
 </section>
-<section id="results-folder" class="level3" data-number="3.1.2">
-<h3 data-number="3.1.2" class="anchored" data-anchor-id="results-folder"><span class="header-section-number">3.1.2</span> <code>Results</code> folder</h3>
+<section id="results-folder" class="level3" data-number="3.2.2">
+<h3 data-number="3.2.2" class="anchored" data-anchor-id="results-folder"><span class="header-section-number">3.2.2</span> <code>Results</code> folder</h3>
 <ul>
 <li>The <code>results</code> folder contains analysis results, and model outputs. For example, it can be used to store tables, figures, and model estimates.</li>
 <li>*For internal RFF projects, the <code>results</code> folder can be stored in the main directory and not within repositories.</li>
 <li>**For projects with external collaborators, it may be useful to store the <code>results</code> folder within repositories. These files are generally smaller than 100 MB and can be stored in a main repository using GitHub; however, some formats (such as SVG) can be quite large. The .gitignore file can be configured to ignore certain file types (such as SVG files, when both PNG and SVG file formats are generated).</li>
 </ul>
 </section>
-<section id="repos-folder" class="level3" data-number="3.1.3">
-<h3 data-number="3.1.3" class="anchored" data-anchor-id="repos-folder"><span class="header-section-number">3.1.3</span> <code>Repos</code> folder</h3>
+<section id="repos-folder" class="level3" data-number="3.2.3">
+<h3 data-number="3.2.3" class="anchored" data-anchor-id="repos-folder"><span class="header-section-number">3.2.3</span> <code>Repos</code> folder</h3>
 <ul>
 <li>This directory structure is based on <strong>personal repositories</strong>. The <code>repos</code>, or repositories, directory contains version-controlled files. To allow individuals to work on version controlled files without interfering with others’ versions, each researcher should have their own folder that’s linked to the GitHub remote repository. Team members can then clone the project’s Git repository into their respective folders and work exclusively within their own copies. Changes can be synced and reconciled using GitHub, preventing simultaneous edits of the same file and ensuring effective version control.</li>
 <li>Individual folders (e.g.&nbsp;<code>Edgar</code>, <code>Caudle</code>) should have mirrored (the same) directory structures.</li>
 </ul>
 </section>
-<section id="scripts-folders" class="level3" data-number="3.1.4">
-<h3 data-number="3.1.4" class="anchored" data-anchor-id="scripts-folders"><span class="header-section-number">3.1.4</span> <code>Scripts</code> folders</h3>
+<section id="scripts-folders" class="level3" data-number="3.2.4">
+<h3 data-number="3.2.4" class="anchored" data-anchor-id="scripts-folders"><span class="header-section-number">3.2.4</span> <code>Scripts</code> folders</h3>
 <ul>
 <li>The <code>scripts</code> folder contains all code files (e.g.&nbsp;<code>.R</code>, <code>.py</code>, <code>.do</code>) for the project. These scripts provide explicit instructions for processing data and performing analyses. It should be possible to reproduce the entirety of the project’s processed data sets and results using only these scripts and the raw data.</li>
 <li>The scripts folder can be parsed into subfolders containing scripts that process raw data (<code>processing</code>), analyze processed data (<code>analysis</code>), and <code>tools</code>. The <code>tools</code> folder (sometimes called <code>util</code>, <code>modules</code>, or <code>helpers</code>) contains scripts with distinct functions that can be “called” (referenced) in the main processing scripts. This is especially useful if functions are used multiple times or are lengthy. Separately storing functions that may be used in multiple source code scripts is an important practice in creating quality software.</li>
 </ul>
 </section>
-<section id="docs-folder" class="level3" data-number="3.1.5">
-<h3 data-number="3.1.5" class="anchored" data-anchor-id="docs-folder"><span class="header-section-number">3.1.5</span> <code>Docs</code> folder</h3>
+<section id="docs-folder" class="level3" data-number="3.2.5">
+<h3 data-number="3.2.5" class="anchored" data-anchor-id="docs-folder"><span class="header-section-number">3.2.5</span> <code>Docs</code> folder</h3>
 <p>The <code>documents</code> folder should contain any version-controlled shared documents (e.g.&nbsp;LaTeX, Markdown, Overleaf).</p>
 </section>
-<section id="other-project-files" class="level3" data-number="3.1.6">
-<h3 data-number="3.1.6" class="anchored" data-anchor-id="other-project-files"><span class="header-section-number">3.1.6</span> Other project files</h3>
+<section id="other-project-files" class="level3" data-number="3.2.6">
+<h3 data-number="3.2.6" class="anchored" data-anchor-id="other-project-files"><span class="header-section-number">3.2.6</span> Other project files</h3>
 <p>This template does not include specific folders for meeting notes, literature reviews, presentations, project management, etc., because those types of files are not the focus of this guidance.</p>
 <p>We recommend storing these types of files in the project-level Microsoft Teams folder. See the <a href="https://my.rff.org/human-resources/rff-communication-norms-and-guidelines/">RFF Communication Norms and Guidance</a> for more information.</p>
 </section>
 </section>
-<section id="other-organization-practices" class="level2" data-number="3.2">
-<h2 data-number="3.2" class="anchored" data-anchor-id="other-organization-practices"><span class="header-section-number">3.2</span> Other organization practices</h2>
-<section id="subfolders" class="level3" data-number="3.2.1">
-<h3 data-number="3.2.1" class="anchored" data-anchor-id="subfolders"><span class="header-section-number">3.2.1</span> Subfolders</h3>
+<section id="other-organization-practices" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="other-organization-practices"><span class="header-section-number">3.3</span> Other organization practices</h2>
+<section id="subfolders" class="level3" data-number="3.3.1">
+<h3 data-number="3.3.1" class="anchored" data-anchor-id="subfolders"><span class="header-section-number">3.3.1</span> Subfolders</h3>
 <p>Organizing files into subfolders can help manage complexity and improve workflow. Subfolders are particularly useful when a single folder grows too large, making it hard to locate specific scripts, data, or results. By creating logical groupings you can keep related files together and streamline collaboration. Examples of logical groupings for subfolder names are by</p>
 <ul>
 <li>data source (e.g., <code>usda</code>),</li>
 <li>variable (<code>precipitation</code>),</li>
 <li>processing step (<code>merge</code>), or</li>
-<li>results category (<code>figures</code> or <code>model_results</code>).</li>
+<li>results category (e.g., <code>regressions</code> or <code>projections</code>).</li>
+</ul>
+<p>Ideally, project folders should be organized so that each file’s complete path is informative about the role of the folder’s contents in the project. Some examples are:</p>
+<ul>
+<li>A script for cleaning Corelogic transactions data: <code>scripts/corelogic/01_cleaning/01_clean_trans_data.R</code></li>
+<li>Raw Corelogic transactions data from Los Angeles County (FIPS code 06037): <code>raw_data/corelogic/transactions/06037.dta</code></li>
+<li>A regression table for the outcome variable property values, with heterogeneity results by region: <code>results/regressions/property_value/table_region.tex</code></li>
 </ul>
 </section>
 </section>
-<section id="naming-folders-files-and-scripts" class="level2" data-number="3.3">
-<h2 data-number="3.3" class="anchored" data-anchor-id="naming-folders-files-and-scripts"><span class="header-section-number">3.3</span> Naming folders, files and scripts</h2>
+<section id="naming-folders-files-and-scripts" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="naming-folders-files-and-scripts"><span class="header-section-number">3.4</span> Naming folders, files and scripts</h2>
 <p><em>When creating folders:</em></p>
 <ul>
 <li>Avoid ambiguous/overlapping categories and generic catch-all folders (e.g.&nbsp;“temp” or “new”).</li>

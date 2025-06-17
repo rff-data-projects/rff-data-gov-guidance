@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.31">
+<meta name="generator" content="quarto-1.7.32">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -39,10 +39,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-e1a5c8363afafaef2c763b6775fbf3ca.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-ccf3fe9a8ac998910cd04068443da790.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-1dd19f5d8aa827be63dfedc021fd998f.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -156,7 +156,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../docs/data-management/file-formats.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">File &amp; Data Types</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Data &amp; File Types</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -237,14 +237,9 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#collab" id="toc-collab" class="nav-link" data-scroll-target="#collab"><span class="header-section-number">2.3</span> Solutions for collaborative projects</a>
   <ul class="collapse">
   <li><a href="#sharing-code" id="toc-sharing-code" class="nav-link" data-scroll-target="#sharing-code"><span class="header-section-number">2.3.1</span> Sharing code</a></li>
-  <li><a href="#sharing-data" id="toc-sharing-data" class="nav-link" data-scroll-target="#sharing-data"><span class="header-section-number">2.3.2</span> Sharing data</a></li>
-  <li><a href="#github" id="toc-github" class="nav-link" data-scroll-target="#github"><span class="header-section-number">2.3.3</span> GitHub</a></li>
-  <li><a href="#accessing-raw-data-via-application-program-interfaces-apis" id="toc-accessing-raw-data-via-application-program-interfaces-apis" class="nav-link" data-scroll-target="#accessing-raw-data-via-application-program-interfaces-apis"><span class="header-section-number">2.3.4</span> Accessing raw data via Application Program Interfaces (APIs)</a></li>
-  <li><a href="#other-cloud-storage-options-for-large-data" id="toc-other-cloud-storage-options-for-large-data" class="nav-link" data-scroll-target="#other-cloud-storage-options-for-large-data"><span class="header-section-number">2.3.5</span> Other cloud storage options for large data</a></li>
-  <li><a href="#arcgis-online-for-sharing-and-exploring-spatial-data" id="toc-arcgis-online-for-sharing-and-exploring-spatial-data" class="nav-link" data-scroll-target="#arcgis-online-for-sharing-and-exploring-spatial-data"><span class="header-section-number">2.3.6</span> ArcGIS Online for sharing and exploring spatial data</a></li>
-  <li><a href="#enabling-external-collaborator-access-to-the-l-drive" id="toc-enabling-external-collaborator-access-to-the-l-drive" class="nav-link" data-scroll-target="#enabling-external-collaborator-access-to-the-l-drive"><span class="header-section-number">2.3.7</span> Enabling external collaborator access to the <code>L:/</code> drive</a></li>
+  <li><a href="#sharing-and-accessing-data" id="toc-sharing-and-accessing-data" class="nav-link" data-scroll-target="#sharing-and-accessing-data"><span class="header-section-number">2.3.2</span> Sharing and accessing data</a></li>
   </ul></li>
-  <li><a href="#L-drive-storage-request" id="toc-L-drive-storage-request" class="nav-link" data-scroll-target="#L-drive-storage-request"><span class="header-section-number">3</span> <code>L:/</code> drive storage request</a></li>
+  <li><a href="#L-drive-storage-request" id="toc-L-drive-storage-request" class="nav-link" data-scroll-target="#L-drive-storage-request"><span class="header-section-number">2.4</span> <code>L:/</code> drive storage request</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/alexandra-thompson-dc/rff-data-gov-guidance/edit/main/docs/data-management/storage-options.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/alexandra-thompson-dc/rff-data-gov-guidance/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -303,7 +298,7 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="code-l-drive-and-github" class="level3" data-number="2.2.2">
 <h3 data-number="2.2.2" class="anchored" data-anchor-id="code-l-drive-and-github"><span class="header-section-number">2.2.2</span> Code: <code>L:/</code> drive and GitHub</h3>
-<p>Project code should be stored in the project’s <code>L:/</code> drive folder alongside data. To support collaboration and reproducibility, also enable version control for directories containing scripts (e.g., <code>.R</code>, <code>.py</code>, <code>.do</code> files) and create a remote GitHub repository.</p>
+<p>Project code (e.g., <code>.R</code>, <code>.py</code>, <code>.do</code> files) should be stored in the project’s <code>L:/</code> drive folder alongside data, and should be version controlled within a Git repository synced to GitHub.</p>
 <p>GitHub’s distributed version control system allows team members to:</p>
 <ul>
 <li>Work on scripts independently without disrupting others</li>
@@ -311,88 +306,75 @@ ul.task-list li input[type="checkbox"] {
 <li>Reconcile and sync updates across folders</li>
 </ul>
 <p>For example, you can revise a script locally and commit changes, with documentation, when they’re ready—without interfering with your colleague’s workflow.</p>
-<p>Instructions for setting up the version control system are forthcoming. In the meantime, see <a href="../../docs/version-control/index.html">available external resources</a>.</p>
-<p>In order for your project to be enabled for version control in the future, <strong>each team member who will be viewing, running, or editing code should have their own script folder</strong>. Specific instructions are in the <a href="../data-management/organization.qmd/#Directory-Structure">Organization</a> section.</p>
+<p>To prevent users from simultaneously editing scripts stored within a shared folder, and to support use of version control, <strong>each team member who will be viewing, running, or editing code should have their own personal folder containing a clone of the project’s GitHub repository </strong>. Specific suggestions for how to organize your project folder are in the <a href="../../docs/data-management/organization.html#sec-directory-structure">Organization</a> section.</p>
+<p>See <a href="../../docs/version-control/index.html">Version Control</a> for setup instructions.</p>
 </section>
 </section>
 <section id="collab" class="level2" data-number="2.3">
 <h2 data-number="2.3" class="anchored" data-anchor-id="collab"><span class="header-section-number">2.3</span> Solutions for collaborative projects</h2>
 <section id="sharing-code" class="level3" data-number="2.3.1">
 <h3 data-number="2.3.1" class="anchored" data-anchor-id="sharing-code"><span class="header-section-number">2.3.1</span> Sharing code</h3>
-<p>The GitHub repository method for storing and sharing scripts is ideal for collaborating with people who do not have access to the RFF network and <code>L:/</code> drive. If they are made collaborators on the GitHub repository, they’re able to <strong>clone</strong> a copy of the repository codebase to their local folder directly from the web browser. (See <a href="../../docs/version-control/index.html">external resources provided</a>.)</p>
+<p>The GitHub repository method (see <a href="../../docs/data-management/organization.html#repos-folder">Organization section</a>) for storing and sharing scripts is ideal for collaborating with people who do not have access to the RFF network and <code>L:/</code> drive. If they are made collaborators on the GitHub repository, they’re able to <strong>clone</strong> a copy of the repository codebase to their local folder directly from the web browser.</p>
 </section>
-<section id="sharing-data" class="level3" data-number="2.3.2">
-<h3 data-number="2.3.2" class="anchored" data-anchor-id="sharing-data"><span class="header-section-number">2.3.2</span> Sharing data</h3>
-<p>In addition to storing data and code on the <code>L:/</code> drive project folder, it may be necessary to store and share files in other ways when collaborating with team members without RFF network access. In that case, there are a few options.</p>
+<section id="sharing-and-accessing-data" class="level3" data-number="2.3.2">
+<h3 data-number="2.3.2" class="anchored" data-anchor-id="sharing-and-accessing-data"><span class="header-section-number">2.3.2</span> Sharing and accessing data</h3>
+<p>In addition to storing data and code on the <code>L:/</code> drive project folder, it may be necessary to store, access, and share files in other ways when collaborating with team members without RFF network access. In that case, there are a few options.</p>
+<section id="apis" class="level4">
+<h4 class="anchored" data-anchor-id="apis">Accessing raw data via Application Program Interfaces (APIs)</h4>
+<p>APIs (Application Programming Interfaces) allow programs to access data directly from remote servers. Many public datasets — such as the <a href="https://www.census.gov/data/developers/data-sets.html">US Census</a> or <a href="https://www.nass.usda.gov/developer/index.php">USDA NASS</a> — can be queried through APIs, enabling efficient workflows without needing to download and store large raw files. If APIs are not available, similar workflows can often be built by downloading data directly from URLs using tools like <code>curl.</code></p>
+<p>Benefits of Using APIs</p>
+<ul>
+<li><strong>Reduced storage</strong>: APIs allow you to retrieve only the data you need, rather than storing large or comprehensive datasets locally.</li>
+<li><strong>Up-to-date data</strong>: API calls can return the most recent available data each time code is run.</li>
+<li><strong>Reproducibility</strong>: API-based workflows can support reproducible research when combined with version control and well-documented queries.</li>
+</ul>
+<p>Considerations and Caveats</p>
+<ul>
+<li><strong>Stability and longevity</strong>: APIs can change or become deprecated. Keep this in mind when building workflows that rely on long-term access.</li>
+<li><strong>Accessibility</strong>: Not all APIs have well-documented libraries in your programming language of choice. Some require constructing URLs manually or navigating limited documentation.</li>
+<li><strong>Reproducibility and archiving API-sourced data</strong>: To support reproducibility, consider the following approaches when publishing or archiving projects that rely on API-sourced data. Choose the strategy that best balances reproducibility, storage constraints, and project scope.
+<ul>
+<li><em>Download and archive locally</em>: Save a copy of the queried dataset in your project directory at the time of analysis or publication.</li>
+<li><em>Deposit in a repository</em>: Archive the data on platforms like Zenodo using tools such as <a href="https://cran.r-project.org/web/packages/zen4R/zen4R.pdf">zen4R (R)</a> or zenodo-client (<a href="https://pypi.org/project/zenodo-client/">python</a>).</li>
+<li><em>Document query details</em>: If data is too large and/or static, document the API source, parameters, and access date to support partial reproducibility.</li>
+</ul></li>
+</ul>
+</section>
 <section id="onedrive" class="level4">
 <h4 class="anchored" data-anchor-id="onedrive">OneDrive</h4>
-<p>OneDrive can be used to share data with external collaborators. However, the <code>L:/</code> drive should remain the primary storage location for project data, due to its advantages in access from RFF lab computers, computing capacity, storage space, and data security.</p>
-<p>Storage considerations</p>
+<p>OneDrive can be used to share data with external collaborators, but <strong>the <code>L:/</code> drive should remain the primary storage location</strong> due to better access from RFF lab computers, greater computing capacity, more storage, fewer sync issues, and improved data security.</p>
+<p>Storage considerations for OneDrive:</p>
 <ul>
-<li>Folders created on RFF’s institutional OneDrive accounts have an <strong>initial capacity of 5 TB</strong> and can be shared with non-RFF staff. If needed, storage capacity can be increased for RFF project folders (but not for individual external users’ accounts).</li>
-<li>If external collaborators are “guests” in the OneDrive folder, they are also limited to your account’s storage limits.</li>
-<li>OneDrive is not suitable to support large data. There are synchronizations issues when working with single files bigger than 10GB.</li>
-<li>While it’s possible to load data from a OneDrive folder into a script, it is not recommended because a) the <code>L:/</code> drive should be used as the primary storage location for authoritative datasets and b) loading from OneDrive can automatically trigger the OneDrive program to download/sync the data, causing hangups. Instead, copy new data from the OneDrive folder to the project <code>L:/</code> drive folder.</li>
-<li>OneDrive files are only accessible from the web browser on RFF lab computers. The ability to sync OneDrive folders to the local drive on lab computers is unavailable at this time. The <code>L:/</code> drive should be used to accessed data from lab computers.</li>
+<li>Project folders start with 5 TB of storage (expandable).</li>
+<li>Files over 10 GB may fail to sync — OneDrive is not ideal for large files.</li>
+<li>Share only essential files (e.g., inputs/outputs — not intermediate files).</li>
+<li>Mirror (replicate) the folder structure between <code>L:/</code> and OneDrive to ensure clarity and consistency.</li>
+<li><strong>Sensitive data</strong> should be handled carefully; set access permissions appropriately.</li>
 </ul>
-<p>When using OneDrive for sharing:</p>
-<ul>
-<li>Consider the <strong>security implications</strong> of storing sensitive data on the cloud and specify access accordingly.</li>
-<li><strong>Copy only necessary data files</strong> to the OneDrive folder (e.g., inputs and outputs, not intermediate processing files).</li>
-<li>External collaborators can either work directly from the shared OneDrive folder or download files to their own preferred storage.</li>
-<li>External collaborators can be given OneDrive folder access as <strong>Editors</strong> (ability to create, edit, and delete files) or <strong>Viewers</strong> (read-only access). <a href="https://support.microsoft.com/en-us/office/collaborate-in-onedrive-d8a2a19a-e306-4ca5-9b00-19b0e96890d6">How to set up collaboration in OneDrive.</a></li>
-<li><strong>Mirror</strong> (replicate) the directory structure between the <code>L:/</code> and OneDrive folders to maintain clarity and consistency. This helps collaborators understand where each file fits within the overall project structure. For example: If a file is stored at <code>raw_data/fires/data.shp</code> on the <code>L:/</code> drive, it should appear in the OneDrive folder under the same path: <code>OneDrive/.../raw_data/fires/data.shp</code>.</li>
-<li>Be mindful of who is making changes and consider using version control or clear file-naming conventions to track edits to data files. When files exist in both locations (<code>L:/</code> drive and OneDrive), edits made separately on the <code>L:/</code> drive and OneDrive can lead to <strong>version conflicts</strong>.</li>
-</ul>
+<p><a href="https://support.microsoft.com/en-us/office/collaborate-in-onedrive-d8a2a19a-e306-4ca5-9b00-19b0e96890d6">How to set up collaboration in OneDrive.</a></p>
 </section>
-</section>
-<section id="github" class="level3" data-number="2.3.3">
-<h3 data-number="2.3.3" class="anchored" data-anchor-id="github"><span class="header-section-number">2.3.3</span> GitHub</h3>
-<p>While we recommend only using GitHub to version control script files, experienced users can also use it to share and version control small data files (well below 100 MB). This is also discussed in the <a href="../data-management/organization.qmd/#Directory-Structure">Organization</a> section.</p>
+<section id="github" class="level4">
+<h4 class="anchored" data-anchor-id="github">GitHub</h4>
+<p>While we recommend only using GitHub to version control scripts, figures and tables intended for publication, and code documentation, experienced users can also use it to share and version control other small data files (well below 100 MB). This is also discussed in the <a href="../../docs/data-management/organization.html#sec-directory-structure">Organization</a> section.</p>
 <p>Consider security, sensitivity, and license restrictions when hosting data on GitHub.</p>
 <p>Files larger than 100 MB should be shared using other tools.</p>
 </section>
-<section id="accessing-raw-data-via-application-program-interfaces-apis" class="level3" data-number="2.3.4">
-<h3 data-number="2.3.4" class="anchored" data-anchor-id="accessing-raw-data-via-application-program-interfaces-apis"><span class="header-section-number">2.3.4</span> Accessing raw data via Application Program Interfaces (APIs)</h3>
-<p>Some data sources allow access to data via APIs, such as the <a href="https://www.census.gov/data/developers/data-sets.html">US Census</a> and the <a href="https://www.nass.usda.gov/developer/index.php">USDA National Agricultural Statistics Service</a>. APIs enable users or programs to download relevant subsets of data directly into memory, eliminating the need to download and store entire datasets on disk. This approach not only reduces storage requirements but also improves efficiency by allowing applications to process relevant data immediately without managing large raw files.</p>
-<p>Writing code that uses an API is especially advantageous for working with large datasets, because it often allows for subsets of the data to be loaded (e.g., part of a state map covering one city), which can reduce the need for local disk space. If an API is not available, having code download data from remote servers via other methods (e.g., <code>curl</code>) can also be a good option.</p>
-<p>Using APIs is ideal for a variety of reasons:</p>
-<ul>
-<li><strong>Storage size</strong>: An API allows the user/program to access specific data of relevance without needing to find room to store an entire, broader dataset (which is instead hosted on the data provider’s server)</li>
-<li><strong>Reproducibility advantage</strong>: Using public APIs or other ways of accessing public data on the internet allows for code produced using other best practices to run “out of the box” on any computer/VM with internet access</li>
-<li><strong>Fresh data</strong>: Code that queries an API can automatically retrieve the most current data each time it runs, eliminating the need to manually update local files.</li>
-</ul>
-<p>APIs do require some special considerations:</p>
-<ul>
-<li><strong>Reproducibility risk</strong>: Because API data can change over time, it’s important to save a local copy of the queried data at key stages (e.g., before analysis or publication). This helps ensure results can be reproduced later, even if the live API data has changed.</li>
-<li><strong>Longevity</strong>: APIs may stop being accessible/maintained. It is not always a safe assumption that data stored remotely will continue to be accessible via an API. API packages and query formats may also change, so project code may need to be debugged occasionally to maintain compatibility with an API.</li>
-<li><strong>Accessibility</strong>: Not all online data sources have convenient API functions in a programmer’s language of choice. Some have URL formats that allow data to be accessed regardless. The amount of documentation and the level of technical skill required to understand and use an API can vary.</li>
-</ul>
-<section id="publish-archive-apis" class="level4">
-<h4 class="anchored" data-anchor-id="publish-archive-apis">Publishing/Archiving data sourced from APIs</h4>
-<p>If you use an API to access source data, the best course for publishing or archiving source data will vary based on project needs, dataset size, and nature of the data. Some options are:</p>
-<ul>
-<li><strong>Download to folder</strong>: During the archival phase, download the source data in its current state and save it to the project folder to be archived.</li>
-<li><strong>Document</strong>: Document the dataset version and access date in lieu of providing source data. While not ideal for reproducibility, this is suitable in cases where the source data is large, reliable, and not likely to be modified.</li>
-<li><strong>Download to cloud</strong>: Use a repository service, such as Zenodo, to store source data as it existed when archiving the project. Source data accessed through an API can be <a href="https://developers.zenodo.org/">downloaded directly to a Zenodo repository</a>, without having to save files locally. This can be done through R (<a href="https://cran.r-project.org/web/packages/zen4R/zen4R.pdf">zen4R</a>) or <a href="https://pypi.org/project/zenodo-client/">python</a>.</li>
-</ul>
-</section>
-</section>
-<section id="other-cloud-storage-options-for-large-data" class="level3" data-number="2.3.5">
-<h3 data-number="2.3.5" class="anchored" data-anchor-id="other-cloud-storage-options-for-large-data"><span class="header-section-number">2.3.5</span> Other cloud storage options for large data</h3>
+<section id="other-cloud-storage-options-for-large-data" class="level4">
+<h4 class="anchored" data-anchor-id="other-cloud-storage-options-for-large-data">Other cloud storage options for large data</h4>
 <p>Alternatives to OneDrive, such as Azure, Google Bucket, AWS S3, or Dropbox may be well suited to your project, especially for short-term storage and file transfer. However, note that these storage options may incur additional costs, depending on data size (even the “free tiers” of these services may incur pay-as-you-go costs). For Azure setups, contact IT at <a href="mailto:ithelp@rff.org">IThelp@rff.org</a>.</p>
 </section>
-<section id="arcgis-online-for-sharing-and-exploring-spatial-data" class="level3" data-number="2.3.6">
-<h3 data-number="2.3.6" class="anchored" data-anchor-id="arcgis-online-for-sharing-and-exploring-spatial-data"><span class="header-section-number">2.3.6</span> ArcGIS Online for sharing and exploring spatial data</h3>
+<section id="arcgis-online-for-sharing-and-exploring-spatial-data" class="level4">
+<h4 class="anchored" data-anchor-id="arcgis-online-for-sharing-and-exploring-spatial-data">ArcGIS Online for sharing and exploring spatial data</h4>
 <p>ArcGIS Online is a cloud-based browser platform that allows users to upload, host, and share datasets (both geospatial and tabular). In order to access the data and exploratory mapping interface, users need an ArcGIS Online account. Online accounts cost $100 per user and data storage costs vary by data size. Contact RFF’s GIS Coordinator at <a href="mailto:thompson@rff.org">Thompson@rff.org</a> for more information.</p>
 </section>
-<section id="enabling-external-collaborator-access-to-the-l-drive" class="level3" data-number="2.3.7">
-<h3 data-number="2.3.7" class="anchored" data-anchor-id="enabling-external-collaborator-access-to-the-l-drive"><span class="header-section-number">2.3.7</span> Enabling external collaborator access to the <code>L:/</code> drive</h3>
-<p>While not recommended, it is possible to enable access to the <code>L:/</code> drive for non-RFF staff. Temporary accounts can be requested by contacting IT at <a href="mailto:ithelp@rff.org">IThelp@rff.org</a>.</p>
+<section id="enabling-external-collaborator-access-to-the-l-drive" class="level4">
+<h4 class="anchored" data-anchor-id="enabling-external-collaborator-access-to-the-l-drive">Enabling external collaborator access to the <code>L:/</code> drive</h4>
+<p>While not recommended, it is possible to enable access to the <code>L:/</code> drive for non-RFF staff. See <a href="https://my.rff.org/it/server-access-for-non-employees/">Server Access for Non-Employees</a>. Temporary accounts can be requested by contacting IT at <a href="mailto:ithelp@rff.org">IThelp@rff.org</a>.</p>
 </section>
 </section>
-<section id="L-drive-storage-request" class="level1" data-number="3">
-<h1 data-number="3"><span class="header-section-number">3</span> <code>L:/</code> drive storage request</h1>
+</section>
+<section id="L-drive-storage-request" class="level2" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="L-drive-storage-request"><span class="header-section-number">2.4</span> <code>L:/</code> drive storage request</h2>
 <p>At the start of a project (or upon major changes to specifications, such as timeline or disk space), email <a href="mailto:ithelp@rff.org">IThelp@rff.org</a> with the following information. Example answers are provided.</p>
 <table class="caption-top table">
 <colgroup>

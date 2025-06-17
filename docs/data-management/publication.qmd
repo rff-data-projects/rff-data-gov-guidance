@@ -90,19 +90,19 @@ You can link your GitHub repository to the RFF GitHub organization in one of two
 
 ##### Option 1: Forking into the RFF GitHub Organization
 
-*Best for*: Capturing a snapshot of a repository at a specific point in time (e.g., associated with a publication).
-
+* This approach is suitable for most situations and provides significant flexibility.
 * A fork creates a copy of your repository under the RFF organization account.
 * This snapshot can be tagged to align with a publication version (e.g., v1.0-paper-release).
 * The fork can be updated to stay in sync with the original repo, or kept as a fixed version.
 * Include a note in the README linking the snapshot to the relevant publication.
+* Note that while the RFF GitHub organization takes control of the new fork, the original repository owner retains administrative control of the upstream repository.
 
 ##### Option 2: Transferring Ownership to the RFF Organization
 
-*Best for*: Ongoing or institutional projects requiring a permanent home and clean URL.
+For institutional or long-term projects, it may be most effective to **transfer ownership and administrative privileges** of the repository to the GitHub organization. This simplifies management and ensures continuity, especially during researcher transitions, by centralizing control in the organization rather than with an individual. Researchers can **retain collaborator-level permissions**, allowing them to push code, create branches, and submit pull requests.
 
-* The repository is moved under the RFF GitHub organization.
-* All existing collaborators retain their permissions.
+* The repository is permanently transferred to the RFF GitHub organization.
+* All existing collaborators retain their roles.
 * The repository URL will change, but redirects will be preserved by GitHub.
 * Organization owners (e.g., staff managing RFF's GitHub) gain administrative control.
 
@@ -110,22 +110,22 @@ You can link your GitHub repository to the RFF GitHub organization in one of two
 
 If your repository is already in the RFF GitHub organization:
 
-1. Make the repository public once you're ready to publish.
+1. Make the repository public once you're ready to publish if it isn't already.
 
-2. Tag the version associated with the publication (e.g., v1.0-publication-name) ([how to create GitHub tags](https://git-scm.com/book/en/v2/Git-Basics-Tagging)).
+2. Tag the publication version (e.g., v1.0-publication-name) as described [here](https://git-scm.com/book/en/v2/Git-Basics-Tagging).
 
-3. Archive it on Zenodo if a DOI is needed.
+3. Archive the release on Zenodo if you need a DOI.
 
 If your repository is under a personal GitHub account:
 
-1. Decide whether you plan to continue developing the code:
+1. Decide whether you will continue development:
 
-* For **ongoing or reusable projects**, consider transferring the repository to the RFF organizational GitHub.
-* For **static, published versions**, request that the RFF GitHub account fork your repository.
+* If you are finished working on the project and no longer want administrative duties, consider transferring the repository to the RFF organizational GitHub.
+* If you intend to continue developing the code for purposes unrelated to RFF, request that the RFF GitHub account fork your repository to retain a version tied to the publication.
 
-2. Contact the RFF GitHub organization admins via [DGWG@rff.org](mailto:dgwg@rff.org) so that they can fork or migrate the repository and add a tag associated with the publication (tags do not automatically transfer with the fork).
+2. Contact the RFF GitHub organization admins at [DGWG@rff.org](mailto:dgwg@rff.org) to initiate the fork or transfer and add a tag associated with the publication (*note: tags do not transfer automatically when a repo is forked*).
 
-3. Optionally, deposit the tagged version to Zenodo and link the DOI in your README.
+3. (**Optional**) Archive the tagged version on Zenodo and link the DOI in your README.
 
 ### Data
 

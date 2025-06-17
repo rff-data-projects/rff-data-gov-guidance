@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.31">
+<meta name="generator" content="quarto-1.7.32">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -59,10 +59,10 @@ div.csl-indent {
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-e1a5c8363afafaef2c763b6775fbf3ca.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-ccf3fe9a8ac998910cd04068443da790.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-1dd19f5d8aa827be63dfedc021fd998f.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -176,7 +176,7 @@ div.csl-indent {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../docs/data-management/file-formats.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">File &amp; Data Types</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Data &amp; File Types</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -259,7 +259,9 @@ div.csl-indent {
   <ul class="collapse">
   <li><a href="#project-readme" id="toc-project-readme" class="nav-link" data-scroll-target="#project-readme"><span class="header-section-number">4.3.1</span> The project-level README file</a></li>
   <li><a href="#raw-data" id="toc-raw-data" class="nav-link" data-scroll-target="#raw-data"><span class="header-section-number">4.3.2</span> Raw data</a></li>
+  <li><a href="#methods" id="toc-methods" class="nav-link" data-scroll-target="#methods"><span class="header-section-number">4.3.3</span> Methods</a></li>
   </ul></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references"><span class="header-section-number">4.4</span> References</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/alexandra-thompson-dc/rff-data-gov-guidance/edit/main/docs/data-management/documentation.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/alexandra-thompson-dc/rff-data-gov-guidance/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -348,7 +350,9 @@ div.csl-indent {
 <p>Filename: <code>README_PRISM_Daily_Temperature.txt</code></p>
 <pre><code>Dataset name &amp; format: PRISM_Daily_Temperature_2024.csv
 
-Data source: Downloaded from the PRISM Climate Group website: https://prism.oregonstate.edu/ on 2024-02-28.
+Data source: Downloaded from the PRISM Climate Group website: https://prism.oregonstate.edu/ 
+
+Date acquired: 2024-02-28.
 
 Acquired by: [Name of researcher who downloaded the data]
 
@@ -370,6 +374,18 @@ Note
 <p>As described in the <a href="../../docs/data-management/organization.html">Organization</a> section, <strong>all raw data should be retained in their raw form and not directly modified</strong>.</p>
 </div>
 </div>
+</section>
+<section id="methods" class="level3" data-number="4.3.3">
+<h3 data-number="4.3.3" class="anchored" data-anchor-id="methods"><span class="header-section-number">4.3.3</span> Methods</h3>
+<p>There are two critical strategies for documenting methods effectively:</p>
+<ul>
+<li><p>Use <a href="../../docs/version-control/index.html">version control</a> to track and explain changes to scripts over time (e.g., through clear and consistent commit messages).</p></li>
+<li><p>Use <a href="../../docs/software/index.html">code comments</a> to document the purpose and logic of scripts and key functions, helping others (and your future self) understand how the code works.</p></li>
+</ul>
+</section>
+</section>
+<section id="references" class="level2" data-number="4.4">
+<h2 data-number="4.4" class="anchored" data-anchor-id="references"><span class="header-section-number">4.4</span> References</h2>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
@@ -380,7 +396,6 @@ Michener, W. K., J. W. Brunt, J. J. Helly, T. B. Kirchner, and S. G. Stafford. 1
 Stoudt, S., V. N. Vásquez, and C. C. Martinez. 2021. <span>“Principles for Data Analysis Workflows.”</span> <a href="https://doi.org/10.1371/e1008770">https://doi.org/10.1371/e1008770</a>.
 </div>
 </div>
-</section>
 </section>
 
 </main> <!-- /main -->
@@ -790,8 +805,8 @@ Stoudt, S., V. N. Vásquez, and C. C. Martinez. 2021. <span>“Principles for Da
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../../docs/data-management/file-formats.html" class="pagination-link" aria-label="File &amp; Data Types">
-        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">File &amp; Data Types</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../../docs/data-management/file-formats.html" class="pagination-link" aria-label="Data &amp; File Types">
+        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Data &amp; File Types</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
