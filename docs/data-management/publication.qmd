@@ -110,7 +110,7 @@ For institutional or long-term projects, it may be most effective to **transfer 
 
 If your repository is already in the RFF GitHub organization:
 
-1. Make the repository public once you're ready to publish.
+1. Make the repository public once you're ready to publish if it isn't already.
 
 2. Tag the publication version (e.g., v1.0-publication-name) as described [here](https://git-scm.com/book/en/v2/Git-Basics-Tagging).
 
