@@ -25,6 +25,7 @@ website:
           - docs/data-management/sensitive-proprietary.qmd
           - docs/data-management/quality-preparation.qmd
           - docs/data-management/archival.qmd
+          - docs/data-management/publication.qmd
       - section: "Software Quality"
         href: docs/software/index.qmd
         contents:
