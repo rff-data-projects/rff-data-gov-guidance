@@ -1,0 +1,63 @@
+project:
+  type: book
+
+book:
+  title: "Data Guidance for Researchers"
+  url: "https://alexandra-thompson-dc.github.io/rff-data-gov-guidance/" # makes site links work on your remote site, update this if we change domain
+  repo-url: "https://github.com/alexandra-thompson-dc/rff-data-gov-guidance"
+  repo-actions: [edit, issue]
+  favicon: images/black-logo.svg
+  sidebar:
+    logo: images/black-logomark-vertical.svg
+    title: "Data Guidance for Researchers"
+    style: "docked"
+    search: true
+    background: "#c3e1f9"
+  page-footer:
+    right: "This page is built with [Quarto](https://quarto.org/)."
+    background: "#04273c"
+  announcement: 
+    icon: info-circle
+    dismissable: true
+    content: "**NOTE** - this site is still under development!"
+    type: primary
+    position: below-navbar
+  chapters:
+    - index.qmd
+    - docs/foundations/index.qmd
+    - part: docs/data-management/index.qmd
+      chapters:
+        - docs/data-management/storage-options.qmd
+        - docs/data-management/organization.qmd
+        - docs/data-management/documentation.qmd
+        - docs/data-management/file-formats.qmd
+        - docs/data-management/sensitive-proprietary.qmd
+        - docs/data-management/quality-preparation.qmd
+        - docs/data-management/archival.qmd
+    - part: docs/software/index.qmd
+      # chapters:
+      #   - docs/software/sq1.qmd
+    - part: docs/version-control/index.qmd
+      chapters:
+        # - docs/version-control/terminology.qmd
+        - docs/version-control/setup.qmd
+        - docs/version-control/tutorial-basics.qmd
+        - docs/version-control/tutorial-branching.qmd
+        - docs/version-control/workflows.qmd
+        - docs/version-control/faq.qmd
+    - part: presentations/index.qmd
+      chapters:
+        - presentations/_learning-lab-vc1.qmd
+format:
+  html:
+    theme: 
+      - journal
+      - styles.scss
+    toc: true
+    toc-expand: 1
+    toc-depth: 3
+    number-sections: true
+    number-depth: 3
+
+
+

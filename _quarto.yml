@@ -1,9 +1,8 @@
 project:
-  type: book
-
-book:
+  type: website
+website:
   title: "Data Guidance for Researchers"
-  url: "https://alexandra-thompson-dc.github.io/rff-data-gov-guidance/" # makes site links work on your remote site, update this if we change domain
+  site-url: "https://alexandra-thompson-dc.github.io/rff-data-gov-guidance/" # makes site links work on your remote site, update this if we change domain
   repo-url: "https://github.com/alexandra-thompson-dc/rff-data-gov-guidance"
   repo-actions: [edit, issue]
   favicon: images/black-logo.svg
@@ -13,38 +12,49 @@ book:
     style: "docked"
     search: true
     background: "#c3e1f9"
+    contents:
+      - index.qmd
+      - docs/foundations/index.qmd
+      - section: "Data Management"
+        href: docs/data-management/index.qmd
+        contents:
+          - docs/data-management/storage-options.qmd
+          - docs/data-management/organization.qmd
+          - docs/data-management/documentation.qmd
+          - docs/data-management/file-formats.qmd
+          - docs/data-management/sensitive-proprietary.qmd
+          - docs/data-management/quality-preparation.qmd
+          - docs/data-management/archival.qmd
+          - docs/data-management/publication.qmd
+      - section: "Version Control"
+        href: docs/version-control/index.qmd
+        contents:
+          - docs/version-control/setup.qmd
+          - docs/version-control/tutorial-basics.qmd
+          - docs/version-control/tutorial-branching.qmd
+          - docs/version-control/workflows.qmd
+          - docs/version-control/faq.qmd
+      - section: "Software Quality"
+        href: docs/software/index.qmd
+        contents:
+          # - docs/software/setup.qmd
+      - presentations/index.qmd
+    tools:
+      - icon: github
+        menu:
+          - text: Source Code
+            href: https://github.com/alexandra-thompson-dc/rff-data-gov-guidance
+          - text: Report a Bug
+            href: https://github.com/alexandra-thompson-dc/rff-data-gov-guidance/issues
   page-footer:
     right: "This page is built with [Quarto](https://quarto.org/)."
-    background: "#04273c"
+    background: "#c3e1f9"
   announcement: 
     icon: info-circle
     dismissable: true
     content: "**NOTE** - this site is still under development!"
     type: primary
     position: below-navbar
-  chapters:
-    - index.qmd
-    - docs/foundations/index.qmd
-    - part: docs/data-management/index.qmd
-      chapters:
-        - docs/data-management/storage-options.qmd
-        - docs/data-management/organization.qmd
-        - docs/data-management/documentation.qmd
-        - docs/data-management/file-formats.qmd
-        - docs/data-management/sensitive-proprietary.qmd
-        - docs/data-management/quality-preparation.qmd
-        - docs/data-management/archival.qmd
-    - part: docs/software/index.qmd
-      # chapters:
-      #   - docs/software/sq1.qmd
-    - part: docs/version-control/index.qmd
-      chapters:
-        # - docs/version-control/terminology.qmd
-        - docs/version-control/setup.qmd
-        - docs/version-control/tutorial-basics.qmd
-        - docs/version-control/tutorial-branching.qmd
-        - docs/version-control/workflows.qmd
-        - docs/version-control/faq.qmd
 format:
   html:
     theme: 
@@ -55,6 +65,3 @@ format:
     toc-depth: 3
     number-sections: true
     number-depth: 3
-
-
-

@@ -33,7 +33,7 @@ See [instructions for setting up a project `L:/` drive folder](#L-drive-storage-
 
 ### Code: `L:/` drive and GitHub
 
-Project code should be stored in the project's `L:/` drive folder alongside data. To support collaboration and reproducibility, also enable version control for directories containing scripts (e.g., `.R`, `.py`, `.do` files) and create a remote GitHub repository.
+Project code (e.g., `.R`, `.py`, `.do` files) should be stored in the project's `L:/` drive folder alongside data, and should be version controlled within a Git repository synced to GitHub.
 
 GitHub’s distributed version control system allows team members to:
 
@@ -43,96 +43,79 @@ GitHub’s distributed version control system allows team members to:
 
 For example, you can revise a script locally and commit changes, with documentation, when they’re ready—without interfering with your colleague's workflow.
 
-Instructions for setting up the version control system are forthcoming. In the meantime, see [available external  resources](../version-control/index.qmd).
+To prevent users from simultaneously editing scripts stored within a shared folder, and to support use of version control, **each team member who will be viewing, running, or editing code should have their own personal folder containing a clone of the project's GitHub repository **. Specific suggestions for how to organize your project folder are in the [Organization](../data-management/organization.qmd#sec-directory-structure) section.
 
-In order for your project to be enabled for version control in the future, **each team member who will be viewing, running, or editing code should have their own script folder**. Specific instructions are in the [Organization](../data-management/organization.qmd/#Directory-Structure) section.
+See [Version Control](../version-control/index.qmd) for setup instructions.
 
 ## Solutions for collaborative projects {#collab}
 
 ### Sharing code
 
-The GitHub repository method for storing and sharing scripts is ideal for collaborating with people who do not have access to the RFF network and `L:/` drive. If they are made collaborators on the GitHub repository, they're able to **clone** a copy of the repository codebase to their local folder directly from the web browser. (See [external resources provided](../version-control/index.qmd).)
+The GitHub repository method (see [Organization section](../data-management/organization.qmd#repos-folder)) for storing and sharing scripts is ideal for collaborating with people who do not have access to the RFF network and `L:/` drive. If they are made collaborators on the GitHub repository, they're able to **clone** a copy of the repository codebase to their local folder directly from the web browser.
 
-### Sharing data
+### Sharing and accessing data
 
-In addition to storing data and code on the `L:/` drive project folder, it may be necessary to store and share files in other ways when collaborating with team members without RFF network access. In that case, there are a few options.
+In addition to storing data and code on the `L:/` drive project folder, it may be necessary to store, access, and share files in other ways when collaborating with team members without RFF network access. In that case, there are a few options.
+
+#### Accessing raw data via Application Program Interfaces (APIs){#apis}
+
+APIs (Application Programming Interfaces) allow programs to access data directly from remote servers. Many public datasets — such as the [US Census](https://www.census.gov/data/developers/data-sets.html) or [USDA NASS](https://www.nass.usda.gov/developer/index.php) — can be queried through APIs, enabling efficient workflows without needing to download and store large raw files. If APIs are not available, similar workflows can often be built by downloading data directly from URLs using tools like `curl.`
+
+Benefits of Using APIs
+
+- **Reduced storage**: APIs allow you to retrieve only the data you need, rather than storing large or comprehensive datasets locally.
+- **Up-to-date data**: API calls can return the most recent available data each time code is run.
+- **Reproducibility**: API-based workflows can support reproducible research when combined with version control and well-documented queries.
+
+Considerations and Caveats
+
+- **Stability and longevity**: APIs can change or become deprecated. Keep this in mind when building workflows that rely on long-term access.
+- **Accessibility**: Not all APIs have well-documented libraries in your programming language of choice. Some require constructing URLs manually or navigating limited documentation.
+- **Reproducibility and archiving API-sourced data**: To support reproducibility, consider the following approaches when publishing or archiving projects that rely on API-sourced data. Choose the strategy that best balances reproducibility, storage constraints, and project scope.
+  - *Download and archive locally*: Save a copy of the queried dataset in your project directory at the time of analysis or publication.
+  - *Deposit in a repository*: Archive the data on platforms like Zenodo using tools such as [zen4R (R)](https://cran.r-project.org/web/packages/zen4R/zen4R.pdf) or zenodo-client ([python](https://pypi.org/project/zenodo-client/)).
+  - *Document query details*: If data is too large and/or static, document the API source, parameters, and access date to support partial reproducibility.
 
 #### OneDrive
 
-OneDrive can be used to share data with external collaborators. However, the `L:/` drive should remain the primary storage location for project data, due to its advantages in access from RFF lab computers, computing capacity, storage space, and data security.
+OneDrive can be used to share data with external collaborators, but **the `L:/` drive should remain the primary storage location** due to better access from RFF lab computers, greater computing capacity, more storage, fewer sync issues, and improved data security. 
 
-Storage considerations
+Storage considerations for OneDrive:
 
-* Folders created on RFF’s institutional OneDrive accounts have an **initial capacity of 5 TB** and can be shared with non-RFF staff. If needed, storage capacity can be increased for RFF project folders (but not for individual external users’ accounts).
-* If external collaborators are "guests" in the OneDrive folder, they are also limited to your account's storage limits.
-* OneDrive is not suitable to support large data. There are synchronizations issues when working with single files bigger than 10GB.
-* While it's possible to load data from a OneDrive folder into a script, it is not recommended because a) the `L:/` drive should be used as the primary storage location for authoritative datasets and b) loading from OneDrive can automatically trigger the OneDrive program to download/sync the data, causing hangups. Instead, copy new data from the OneDrive folder to the project `L:/` drive folder.
-* OneDrive files are only accessible from the web browser on RFF lab computers. The ability to sync OneDrive folders to the local drive on lab computers is unavailable at this time. The `L:/` drive should be used to accessed data from lab computers.
+* Project folders start with 5 TB of storage (expandable). 
+* Files over 10 GB may fail to sync — OneDrive is not ideal for large files.
+* Share only essential files (e.g., inputs/outputs — not intermediate files).
+* Mirror (replicate) the folder structure between `L:/` and OneDrive to ensure clarity and consistency.
+* **Sensitive data** should be handled carefully; set access permissions appropriately. 
 
-When using OneDrive for sharing:
+[How to set up collaboration in OneDrive.](https://support.microsoft.com/en-us/office/collaborate-in-onedrive-d8a2a19a-e306-4ca5-9b00-19b0e96890d6)
 
-* Consider the **security implications** of storing sensitive data on the cloud and specify access accordingly.
-* **Copy only necessary data files** to the OneDrive folder (e.g., inputs and outputs, not intermediate processing files).
-* External collaborators can either work directly from the shared OneDrive folder or download files to their own preferred storage.
-* External collaborators can be given OneDrive folder access as **Editors** (ability to create, edit, and delete files) or **Viewers** (read-only access). [How to set up collaboration in OneDrive.](https://support.microsoft.com/en-us/office/collaborate-in-onedrive-d8a2a19a-e306-4ca5-9b00-19b0e96890d6)
-* **Mirror** (replicate) the directory structure between the `L:/` and OneDrive folders to maintain clarity and consistency. This helps collaborators understand where each file fits within the overall project structure. For example:
-If a file is stored at `raw_data/fires/data.shp` on the `L:/` drive, it should appear in the OneDrive folder under the same path:
-`OneDrive/.../raw_data/fires/data.shp`.
-* Be mindful of who is making changes and consider using version control or clear file-naming conventions to track edits to data files. When files exist in both locations (`L:/` drive and OneDrive), edits made separately on the `L:/` drive and OneDrive can lead to **version conflicts**. 
+#### GitHub
 
-### GitHub
-
-While we recommend only using GitHub to version control script files, experienced users can also use it to share and version control small data files (well below 100 MB). This is also discussed in the [Organization](../data-management/organization.qmd/#Directory-Structure) section.
+While we recommend only using GitHub to version control scripts, figures and tables intended for publication, and code documentation, experienced users can also use it to share and version control other small data files (well below 100 MB). This is also discussed in the [Organization](../data-management/organization.qmd#sec-directory-structure) section.
 
 Consider security, sensitivity, and license restrictions when hosting data on GitHub.
 
 Files larger than 100 MB should be shared using other tools.
 
-### Accessing raw data via Application Program Interfaces (APIs)
-
-Some data sources allow access to data via APIs, such as the [US Census](https://www.census.gov/data/developers/data-sets.html) and the [USDA National Agricultural Statistics Service](https://www.nass.usda.gov/developer/index.php). APIs enable users or programs to download relevant subsets of data directly into memory, eliminating the need to download and store entire datasets on disk. This approach not only reduces storage requirements but also improves efficiency by allowing applications to process relevant data immediately without managing large raw files.
-
-Writing code that uses an API is especially advantageous for working with large datasets, because it often allows for subsets of the data to be loaded (e.g., part of a state map covering one city), which can reduce the need for local disk space.
-If an API is not available, having code download data from remote servers via other methods (e.g., `curl`) can also be a good option.
-
-Using APIs is ideal for a variety of reasons:
-
-* __Storage size__: An API allows the user/program to access specific data of relevance without needing to find room to store an entire, broader dataset (which is instead hosted on the data provider's server)
-* __Reproducibility advantage__: Using public APIs or other ways of accessing public data on the internet allows for code produced using other best practices to run "out of the box" on any computer/VM with internet access
-* __Fresh data__: Code that queries an API can automatically retrieve the most current data each time it runs, eliminating the need to manually update local files.
-
-APIs do require some special considerations:
-
-* __Reproducibility risk__: Because API data can change over time, it’s important to save a local copy of the queried data at key stages (e.g., before analysis or publication). This helps ensure results can be reproduced later, even if the live API data has changed.
-* __Longevity__: APIs may stop being accessible/maintained. It is not always a safe assumption that data stored remotely will continue to be accessible via an API. API packages and query formats may also change, so project code may need to be debugged occasionally to maintain compatibility with an API.
-* __Accessibility__: Not all online data sources have convenient API functions in a programmer's language of choice. Some have URL formats that allow data to be accessed regardless. The amount of documentation and the level of technical skill required to understand and use an API can vary.
-
-#### Publishing/Archiving data sourced from APIs {#publish-archive-apis}
-
-If you use an API to access source data, the best course for publishing or archiving source data will vary based on project needs, dataset size, and nature of the data. Some options are:
-
-* __Download to folder__: During the archival phase, download the source data in its current state and save it to the project folder to be archived.
-* __Document__: Document the dataset version and access date in lieu of providing source data. While not ideal for reproducibility, this is suitable in cases where the source data is large, reliable, and not likely to be modified. 
-* __Download to cloud__: Use a repository service, such as Zenodo, to store source data as it existed when archiving the project. Source data accessed through an API can be [downloaded directly to a Zenodo repository](https://developers.zenodo.org/), without having to save files locally. This can be done through R ([zen4R](https://cran.r-project.org/web/packages/zen4R/zen4R.pdf)) or [python](https://pypi.org/project/zenodo-client/).
-
-### Other cloud storage options for large data
+#### Other cloud storage options for large data
 
 Alternatives to OneDrive, such as Azure, Google Bucket, AWS S3, or Dropbox may be well suited to your project, especially for short-term storage and file transfer. However, note that these storage options may incur additional costs, depending on data size (even the "free tiers" of these services may incur pay-as-you-go costs).
 For Azure setups, contact IT at [IThelp@rff.org](mailto:ithelp@rff.org). 
 
-### ArcGIS Online for sharing and exploring spatial data
+#### ArcGIS Online for sharing and exploring spatial data
 
 ArcGIS Online is a cloud-based browser platform that allows users to upload, host, and share datasets (both geospatial and tabular).
 In order to access the data and exploratory mapping interface, users need an ArcGIS Online account.
 Online accounts cost $100 per user and data storage costs vary by data size.
 Contact RFF's GIS Coordinator at [Thompson@rff.org](mailto:thompson@rff.org) for more information.
 
-### Enabling external collaborator access to the `L:/` drive
+#### Enabling external collaborator access to the `L:/` drive
 
-While not recommended, it is possible to enable access to the `L:/` drive for non-RFF staff.
-Temporary accounts can be requested by contacting IT at [IThelp@rff.org](mailto:ithelp@rff.org).
+While not recommended, it is possible to enable access to the `L:/` drive for non-RFF staff. See [Server Access for Non-Employees](https://my.rff.org/it/server-access-for-non-employees/).
+Temporary accounts can be requested by contacting IT at [IThelp@rff.org](mailto:ithelp@rff.org). 
 
-# `L:/` drive storage request {#L-drive-storage-request}
+## `L:/` drive storage request {#L-drive-storage-request}
 At the start of a project (or upon major changes to specifications, such as timeline or disk space), email [IThelp@rff.org](mailto:ithelp@rff.org) with the following information. Example answers are provided.
 
 | Field | Response |

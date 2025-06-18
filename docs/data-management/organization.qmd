@@ -5,7 +5,19 @@ Standardized practices for file organization and storage save time and ensure co
 A simple and flexible folder structure not only promotes long-term data stability but also supports seamless project growth, adaptability, and researcher transitions.
 Such an approach reduces the complexity of project management and aligns effectively with version control systems, enhancing collaborative efforts and preserving institutional knowledge.
 
-## Directory structure
+## Summary
+
+* Keep raw data in a dedicated folder (`raw/`) and never modify it directly.
+
+* Use a simple, descriptive folder structure that reflects project logic and is easy for new users to understand.
+
+* Support version control by organizing code and outputs in a way that works with Git, i.e. by creating separate repository folders for each user.
+
+* Design for flexibility, allowing new data, methods, or collaborators without major reorganization.
+
+* Name files/folders to be human- and machine-readable: use clear names, avoid spaces and special characters, and include numeric prefixes for order.
+
+## Directory structure {#sec-directory-structure}
 
 Regardless of the specific method deployed, your data project organization should have the following qualities:
 
@@ -90,7 +102,13 @@ Examples of logical groupings for subfolder names are by
 * data source (e.g., `usda`), 
 * variable (`precipitation`), 
 * processing step (`merge`), or
-* results category (`figures` or `model_results`).
+* results category (e.g., `regressions` or `projections`).
+
+Ideally, project folders should be organized so that each file's complete path is informative about the role of the folder's contents in the project. Some examples are:
+
+* A script for cleaning Corelogic transactions data: `scripts/corelogic/01_cleaning/01_clean_trans_data.R`
+* Raw Corelogic transactions data from Los Angeles County (FIPS code 06037): `raw_data/corelogic/transactions/06037.dta`
+* A regression table for the outcome variable property values, with heterogeneity results by region: `results/regressions/property_value/table_region.tex`
 
 ## Naming folders, files and scripts
 

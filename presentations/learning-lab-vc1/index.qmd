@@ -1,0 +1,61 @@
+---
+title: "Version Control Tutorial: Basics"
+subtitle: "Working with Git Bash, GitHub, and making file changes"
+format:
+#   html: default
+  revealjs:
+    code-line-numbers: false
+    # output-file: slides-index.html
+---
+## Introduce Yourself to Git
+
+First, open Git Bash.  (Hit the windows key and type "bash")
+
+
+## Introduce Yourself to Git {auto-animate="true"}
+
+First, open Git Bash.  (Hit the windows key and type "bash")
+
+```bash
+RFF@Theophilus MINGW64 ~
+$ 
+```
+
+## Introduce Yourself to Git {auto-animate=true}
+
+Now, let's ask Git what version we are running:
+
+```bash
+RFF@Theophilus MINGW64 ~
+$ git --version
+```
+
+## Introduce Yourself to Git {auto-animate=true}
+
+Now, let's ask Git what version we are running:
+
+```bash
+RFF@Theophilus MINGW64 ~
+$ git --version
+git version 2.47.0.windows.2
+```
+
+## new page
+
+In the Git Bash window, you can type all kinds of commands, including Git commands, which are always prependended with "git", or bash commands that are commonly run in terminals.
+
+Let's start with:
+
+```bash
+git --version
+```
+
+It should have printed out what version you are running, something like `git version 1.47.0.windows.2`.  Now, let's introduce ourselves to Git:
+
+```bash
+git config --global user.name 'Your Name Here'
+git config --global user.email 'your-name-here@rff.org'
+git config --global --list
+```
+
+Now, Git will include your name and email when you publish changes.

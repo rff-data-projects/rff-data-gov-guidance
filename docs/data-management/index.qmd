@@ -1,4 +1,4 @@
 ---
 title: Data Management
 ---
-Data management encompasses the methods used to collect, store, organize, and use data. 
+Data management encompasses the methods used to collect, store, organize, and use data. Please review [Foundations](../foundations/index.qmd) for an overview of the role of data management in the research process.
