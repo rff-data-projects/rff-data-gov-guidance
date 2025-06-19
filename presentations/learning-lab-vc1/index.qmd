@@ -7,55 +7,81 @@ format:
     code-line-numbers: false
     # output-file: slides-index.html
 ---
-## Introduce Yourself to Git
+
+## What is Version Control?
+
+Version control is a system that records changes to a file or set of files over time so that you can recall specific versions later.
+
+Sort of like how Microsoft Word will periodically save versions that you can return to.
+
+Most common VC systems:
+
+* ::: {.fragment .highlight-green}
+Git 
+:::
+* Mercurial
+* Subversion (SVN)
+
+## Why should I use Git?
+
+::: {.incremental}
+* _Peace of Mind_ - work is stored safely and can be easily recalled
+* _Collaboration_ - multiple versions can be developed in tandem, allowing parallel feature development
+* _Review and Discussion_ - GitHub allows for easy review of code changes before incorporating into the main branch of the repository
+* _Documentation_ - shows when, why, and by whom specific changes were made
+* _Consolidation_ - Project code and documentation can be stored in the same location.
+* _Preservation and Access_ - Easy web browser access to all code versions, can control whether public or private.
+:::
+
+## Git Bash {auto-animate="true"}
 
 First, open Git Bash.  (Hit the windows key and type "bash")
 
+::: {.callout-note}
+Git bash is a terminal where you can type all kinds of different commands, including Git commands, which will be prepended with `git`.
+:::
 
-## Introduce Yourself to Git {auto-animate="true"}
-
-First, open Git Bash.  (Hit the windows key and type "bash")
-
-```bash
-RFF@Theophilus MINGW64 ~
-$ 
-```
-
-## Introduce Yourself to Git {auto-animate=true}
-
-Now, let's ask Git what version we are running:
+Let's start by asking Git what version we are running:
 
 ```bash
-RFF@Theophilus MINGW64 ~
 $ git --version
 ```
 
-## Introduce Yourself to Git {auto-animate=true}
+## Git Bash {auto-animate="true"}
 
-Now, let's ask Git what version we are running:
+::: {.notes}
+Git Bash is __one__ way to access Git.
+It is not the only way, nor necessarily the way you will always use.
+Many common code editors like RStudio and Visual Studio Code have some form of Git interface built in, and you may consider using those.
+For the tutorial, however, we will focus on Git Bash because it comes with Git and it is good for teaching the fundamentals of Git.
+:::
+
+First, open Git Bash.  (Hit the windows key and type "bash")
+
+::: {.callout-note}
+Git bash is a terminal where you can type all kinds of different commands, including Git commands, which will be prepended with `git`.
+:::
+
+Let's start by asking Git what version we are running:
 
 ```bash
-RFF@Theophilus MINGW64 ~
 $ git --version
 git version 2.47.0.windows.2
 ```
 
-## new page
+## Introduce Yourself to Git
 
-In the Git Bash window, you can type all kinds of commands, including Git commands, which are always prependended with "git", or bash commands that are commonly run in terminals.
-
-Let's start with:
+Now, let's enter the following commands
 
 ```bash
-git --version
+$ git config --global user.name 'Your Name Here'
+$ git config --global user.email 'your-name-here@rff.org'
 ```
 
-It should have printed out what version you are running, something like `git version 1.47.0.windows.2`.  Now, let's introduce ourselves to Git:
+Now, Git will include your name and email when you publish changes!  Let's take a look at what configuration options Git has set. 
 
 ```bash
-git config --global user.name 'Your Name Here'
-git config --global user.email 'your-name-here@rff.org'
-git config --global --list
+$ git config --global --list
+user.name=Ethan Russell
+user.email=erussell@rff.org
 ```
-
-Now, Git will include your name and email when you publish changes.
