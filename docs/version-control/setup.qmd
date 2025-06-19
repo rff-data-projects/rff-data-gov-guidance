@@ -10,10 +10,27 @@ As part of the process you will need to verify your email address.
 Note that GitHub accounts are associated with people, along the lines of a LinkedIn account, and it may be helpful to have a single personal GitHub account even if you plan to use it outside of your work at RFF.
 It is simple to associate multiple email addresses with your account later on, so it is unimportant which email address you create the account with.
 
-## Git Installation
+## Git Installation (5-10 minutes)
 
 It is necessary to install Git onto any computer from which you wish to interact with local repositories.
-Normally, IT has installed Git on RFF computers. If not, please send a request to [IThelp@rff.org](mailto:ithelp@rff.org) to request a git install on an RFF machine.  For personal computers, you may install manually following [these instructions](https://git-scm.com/downloads/win).
+Often, IT has installed Git on RFF computers.
+You can check to see if you have Git installed by pressing the Windows key and typing "Git", and see if applications like "Git Bash", "Git Gui", and "Git CMD" pop up.
+
+If Git is not yet installed, it is very simple to install!
+
+1. Navigate to [this website](https://git-scm.com/downloads/win) and download the latest version of Git.
+
+2. Double click the downloaded installer to launch the install menu.
+
+3. Accept all the defaults except the following:
+  * __Default Editor__:  By default, Git uses the "Vim" editor, which a powerful, but very old-school and difficult to use.  It is recommended to select "notepad" or some other editor that you are familiar with.
+  ![Git Default Editor](../../images/git-default-editor.png)\
+
+  * __Default Initial Branch__: By default, Git uses an initial branch name of "master".  The industry has been moving towards more inclusive branch naming, and we recommend changing the default to "main".
+  ![Git Default Branch](../../images/git-default-branch.png)\
+  
+4. Upon completing the install, you will be prompted to restart your computer.
+
 
 ## Choose a User Interface
 When you install Git, it generally will already install a couple of applications you can use to interface with git.
