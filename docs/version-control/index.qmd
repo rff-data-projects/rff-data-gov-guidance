@@ -20,11 +20,9 @@ Here are some of the benefits of using Git with GitHub for version control:
 
 * __Documents__ when, why, and by whom specific changes were made, which helps with debugging and troubleshooting
 
-* __Consolidates__ project code and documentation in the same, easily-accessible, backed-up location.
+* __Consolidates__  and __Organizes__ project code and documentation in the same, easily-accessible, backed-up location.
 
 * __Preserves__ easy web browser access to all versions of code.
-
-* __Organizes__ documentation so it can be kept alongside the code itself
 
 * __Provides public access__ to datasets and code under the auspices of a software license
 
