@@ -189,7 +189,7 @@ For guidance on choosing which files to publish and how to handle API-accessed d
 * Zenodo will generate a DOI — use this when citing the dataset in publications.
 
 ##### Versioning & Updates
-If the dataset needs to be udpated:
+If the dataset needs to be updated:
 
 * Use the "New Version" option in Zenodo instead of creating a separate upload.
 * Zenodo will link versions together and maintain persistent DOIs.
