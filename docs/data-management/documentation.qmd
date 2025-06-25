@@ -71,7 +71,9 @@ __Product__ documentation provides information to accompany code and data of com
 
 ### The project-level README file {#project-readme}
 
-At a minimum, the project should have a README file in text or markdown format with the information listed below. This can be an evolving, living document. While it's technically __product documentation__, it's easiest to start it early in the project's development.
+At a minimum, the project should have a README file in text or markdown format with the information listed below. This can be an evolving, living document. While it's technically __product documentation__, it's easiest to start it early in the project's development. 
+
+Include the following in the README file:
 
 * Project name and description
 * Project PI and contact information
@@ -123,5 +125,9 @@ There are two critical strategies for documenting methods effectively:
 * Use [version control](../version-control/index.qmd) to track and explain changes to scripts over time (e.g., through clear and consistent commit messages).
 
 * Use [code comments](../software/index.qmd) to document the purpose and logic of scripts and key functions, helping others (and your future self) understand how the code works.
+
+### Data products
+
+Metadata documentation should be included with final data products, and is described in the [Publication](../data-management/publication.qmd#metadata) section.
 
 ## References
