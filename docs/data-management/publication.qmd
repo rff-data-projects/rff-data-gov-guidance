@@ -26,7 +26,7 @@ In some cases the research team may have joint IP ownership with partners or fun
 
 #### Common Licenses
 
-For software and data, there are three main license suites common in the academic space: *MIT*, *GNU GPU*, and *ODC*. *MIT* and *GNU GPU* are separate software licenses, while *ODC* has two commonly-used data licenses. All four are described below.
+For software and data, there are three main license suites common in the academic space: *MIT*, *GNU GPL*, and *ODC*. *MIT* and *GNU GPL* are separate software licenses, while *ODC* has two commonly-used data licenses. All four are described below.
 
 ##### Software licenses
 
@@ -36,7 +36,7 @@ For software and data, there are three main license suites common in the academi
 
 (_**Attribution** refers to crediting to the original creator, author, or source as specified in the licensing terms. Attribution ensures recognition of the intellectual property and efforts of the creators while allowing others to use, modify, or distribute the licensed material._)
 
-* [GNU General Public Use (GPU)](https://choosealicense.com/licenses/gpl-3.0/): Users, including commercial entities, can view, use, modify, and distribute the work freely. However, it carries **copyleft**, so all distributions must be released under the same GNU GPU license, ensuring open access (**viral**). **Attribution** is required.
+* [GNU General Public License (GPL)](https://choosealicense.com/licenses/gpl-3.0/): Users, including commercial entities, can view, use, modify, and distribute the work freely. However, it carries **copyleft**, so all distributions must be released under the same GNU GPL license, ensuring open access (**viral**). **Attribution** is required.
 
 (_**Copyleft** is a concept in software (code/script) licensing that ensures any derivative works (modifications or adaptations) of a particular work remain subject to the same licensing terms as the original work. For example, if a developer modifies a program released under the GNU General Public License (GPL), they are required to distribute their modified version under the same GPL license. This means they must also make the source code available and allow others to freely use, modify, and redistribute it under the same terms. Copyleft aims to preserve software freedom by preventing proprietary restrictions from being reintroduced into derivative works._)
 
