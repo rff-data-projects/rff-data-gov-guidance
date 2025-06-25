@@ -12,6 +12,18 @@ title: Storage Options
   * Use OneDrive to share select data. Only store data in OneDrive that is necessary for collaboration.
   * Use GitHub to share and review code.
   * For small datasets, GitHub may be used for both data and code storage.
+  
+### Quick reference
+
+| Component | Primary use | Notes |
+|----------------|---------------|-----------|
+|*Core tools* ||
+`L:/` drive | Data and script storage | - **Use for all projects**<br />- Regular backups<br />- Secure (RFF-only access)<br />- See guidance for setup instructions |
+GitHub | Script version control, script sharing | - **Use for all projects**<br />- Supports collaboration, history tracking, and (optionally) project management<br />- Can store and track small datasets |
+|*Additional tools for projects with external collaborators*||
+OneDrive | Sharing essential data with external partners | - Good for smaller files<br />- Shared access with external collaborators |
+Other cloud options | Sharing large datasets externally | - Azure, Google Bucket, AWS S3, Dropbox<br />- Contact [ITHelp@rff.org](mailto:ITHelp@rff.org) for Azure setup |
+ArcGIS Online | Sharing spatial data | - Share and visualize spatial data over web browser<br />- Contact [Thompson@rff.org](mailto:Thompson@rff.org) for setup |
 
 ## Internal RFF Projects
 
