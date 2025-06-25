@@ -69,6 +69,17 @@ __Product__ documentation provides information to accompany code and data of com
 
 ## Core documentation 
 
+```
+project_name/
+├── readme.txt <<<<<<<
+├── data/
+│   ├── raw/
+│   │   ├── readme_raw_dataset.txt <<<<<<<
+│   ├── intermediate/
+│   ├── clean/
+│   │   ├── metadata.txt <<<<<<<
+```
+
 ### The project-level README file {#project-readme}
 
 At a minimum, the project should have a README file in text or markdown format with the information listed below. This can be an evolving, living document. While it's technically __product documentation__, it's easiest to start it early in the project's development. 
