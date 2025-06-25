@@ -37,14 +37,14 @@ project_name/
 │   ├── clean/ (optional)
 ├── results*/
 ├── repos/
-│   ├── edgar/
+│   ├── baker/
 │   │   ├── scripts/
 │   │   │   ├── processing/
 │   │   │   ├── analysis/
 │   │   │   ├── tools/
 │   │   ├── results**/
 │   │   ├── docs/
-│   ├── caudle/
+│   ├── johnson/
 │   │   ├── scripts/
 │   │   │   ├── processing/
 │   │   │   ├── analysis/
