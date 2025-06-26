@@ -1,7 +1,7 @@
 # rff-data-gov-guidance
 
 Repo for Resources for the Future's Data Governance Working Group's guidance on data science practices for RFF researchers.  
-Link to [guidance website](https://alexandra-thompson-dc.github.io/rff-data-gov-guidance/)
+Link to [guidance website](https://rff-data-projects.github.io/rff-data-gov-guidance/)
 
 # Contribution Guidelines
 
