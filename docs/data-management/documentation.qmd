@@ -69,7 +69,7 @@ __Product__ documentation provides information to accompany code and data of com
 
 ## Core documentation 
 
-```
+``` 
 project_name/
 ├── readme.txt <<<<<<<
 ├── data/
