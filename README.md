@@ -5,7 +5,7 @@ Link to [guidance website](https://rff-data-projects.github.io/rff-data-gov-guid
 
 # Contribution Guidelines
 
-***Only members of the Data Governance Working Group may make changes to the content. To submit questions or suggestions, please submit submit an issue by clicking the `Issues` tab and `New issue`.
+***Only members of the Data Governance Working Group may make changes to the content. To submit questions or suggestions, please submit an issue by clicking the `Issues` tab and `New issue`.
 
 ## Local editing (on your computer)
 
