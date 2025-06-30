@@ -92,7 +92,7 @@ cd 'C:/Users/<my-user-name>/OneDrive - rff/repos'
 ```
 
 ::: {.callout-note}
-It is only necessary to use quotes for filenames in bash if there is a space in the path, as in the example above.
+It is only necessary to use quotes for filenames in Git Bash if there is a space in the path, as in the example above.
 :::
 
 Now, in an internet browser, navigate to the home page of the repository you wish to clone.  
