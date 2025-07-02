@@ -24,33 +24,44 @@ In some cases the research team may have joint IP ownership with partners or fun
 
 ### Choose appropriate licenses 
 
-For software and data, there are three common license suites common in the academic space: *MIT*, *GNU GPU*, and *ODC*. *MIT* and *GNU GPU* are separate software licenses, while *ODC* has two commonly-used data licenses. All four are described below.
+For software and data, there are three license suites common in the academic space: *MIT*, *GNU General Public License (GPL)*, and *Open Data Commons (ODC)*. *MIT* and *GNU GPL* are separate software licenses, while *ODC* has two commonly-used data licenses. All four are described below.
 
 #### Software licenses
 
-*	[MIT](https://choosealicense.com/licenses/mit/): The more permissive and flexible. Users, including commercial entities, can view, use, modify, and distribute the work freely. Allows for commercial use and **enclosure**. **Attribution** is required.
+| Attribute | MIT | GNU General Public Use (GPL) |
+|----------------|---------------|-----------|
+Link to license text |  [MIT](https://choosealicense.com/licenses/mit/) | [GNU GPL](https://choosealicense.com/licenses/gpl-3.0/) |
+Description | The more permissive and flexible. Users, including commercial entities, can view, use, modify, and distribute the work freely. | Users, including commercial entities, can view, use, modify, and distribute the work freely, but are subject to copyleft restrictions. |
+**Attribution** required | ✅ Yes | ✅ Yes |
+**Enclosure** allowed | ✅ Yes | ❌ No
+**Copyleft** required (**viral**) | ❌ No | ✅ Yes
+Best uses | Libraries and tools where broad reuse is encouraged, including in proprietary or closed-source contexts.| Models, scripts, and workflows where preserving long-term openness and share-alike reuse is a priority.
 
-This license is well suited for libraries and tools where broad reuse is encouraged, including in proprietary or closed-source contexts.
 
-(_**Enclosure** is the process of restricting access, usage, or modification of software or its source code through the imposition of licensing terms. It involves the application of intellectual property rights (such as copyright, patents, or trade secrets) to create boundaries around software, typically to protect the developer's or organization's control over its distribution and use._)
+**Terms**:
 
-(_**Attribution** refers to crediting to the original creator, author, or source as specified in the licensing terms. Attribution ensures recognition of the intellectual property and efforts of the creators while allowing others to use, modify, or distribute the licensed material._)
+* _**Enclosure**: The act of applying legal or technical restrictions—like proprietary licensing or copyright—to limit access, reuse, or modification of software or data that was previously open._
 
-* [GNU General Public Use (GPU)](https://choosealicense.com/licenses/gpl-3.0/): Users, including commercial entities, can view, use, modify, and distribute the work freely. However, it carries **copyleft**, so all distributions must be released under the same GNU GPU license, ensuring open access (**viral**). **Attribution** is required.
+* _**Attribution**: The requirement to credit the original creator or source as specified in the license. It ensures recognition while allowing reuse and modification._
 
-This license is well suited for models, scripts, and workflows where preserving long-term openness and share-alike reuse is a priority.
+* _**Copyleft**: A license condition that requires derivative works to be distributed under the same terms as the original. It ensures continued openness by mandating that source code remains available and free to reuse._
 
-(_**Copyleft** is a concept in software (code/script) licensing that ensures any derivative works (modifications or adaptations) of a particular work remain subject to the same licensing terms as the original work. For example, if a developer modifies a program released under the GNU General Public License (GPL), they are required to distribute their modified version under the same GPL license. This means they must also make the source code available and allow others to freely use, modify, and redistribute it under the same terms. Copyleft aims to preserve software freedom by preventing proprietary restrictions from being reintroduced into derivative works._)
+* _**Viral**: Describes licenses (like GPL or ODbL) that require any derivatives to adopt the same license. This spreads the original license’s terms to all adaptations, preserving openness but limiting reuse._
 
-(_**Viral**: Licenses like the GNU General Public License (GPL) and the Open Database License (ODbL) are often described as "viral" because they require derivative works to comply with the same licensing terms as the original work. This characteristic ensures that the freedoms granted by the license (such as the ability to use, modify, and share) are preserved in all subsequent versions or derivatives, but it also imposes specific obligations on those who modify or build upon the original._)
+#### Data licenses
 
-#### Data licenses by Open Data Commons (ODC)
+| Attribute | ODC-By | ODCbL |
+|----------------|---------------|-----------|
+Link to license text | [ODC-By](https://opendatacommons.org/licenses/by/1-0/) | [ODCbL](https://opendatacommons.org/licenses/odbl/) |
+Description | A permissive license for databases. Users, including commercial entities, may use, modify, redistribute, and build upon the data. | A copyleft license for databases. Users may use, modify, redistribute, but derivative databases must be shared under the same license. Ensures openness through a share-alike (viral) requirement. |
+**Attribution** required | ✅ Yes | ✅ Yes |
+**Enclosure** allowed | ✅ Yes | ❌ No |
+**Share-alike** required (**viral**) | ❌ No | ✅ Yes |
+Best uses | When the goal is to encourage broad academic and public reuse of a dataset, including by commercial entities, without requiring openness in derived products | Collaborative academic projects where ensuring that all derivative datasets remain openly accessible under the same terms is critical.
 
-* [ODC-By](https://opendatacommons.org/licenses/by/1-0/): The more permissive and flexible. Users, including commercial entities, can view, use, modify, and distribute the work freely. Allows for commercial use and **enclosure**. **Attribution** is required.
 
-* [ODCbL](https://opendatacommons.org/licenses/odbl/): Users, including commercial entities, can view, use, modify, and distribute the work freely. However, it carries **share-alike**, so all distributions must be released under the same ODCbL license, ensuring open access (**viral**). **Attribution** is required.
 
-(_**Share-alike**, similar to **copyleft** but applied to datasets, requires that any derivative works of content (adaptations or modifications) are licensed under the same or a compatible license. This ensures that future users of the adapted work can use it under similar terms._)
+* _**Share-alike**: A condition applied mainly to data and content (e.g., under CC BY-SA or ODbL), requiring that any adapted works use the same or a compatible open license (analogous to **copyleft**)._
 
 #### Other licenses
 
@@ -70,7 +81,7 @@ If there are other requirements or the team would like to review a broader range
 
 ### Code
 
-When your project is ready to publish code—whether alongside a journal article, report, or other research output—there are a few options for how to share it, especially if your code is hosted on GitHub.
+When your project is ready to publish code (whether alongside a journal article, report, or other research output), there are a few options for how to share it, especially if your code is hosted on GitHub.
 
 #### Note on journal requirements
 
@@ -175,9 +186,9 @@ For guidance on choosing which files to publish and how to handle API-accessed d
 * Enter metadata information in applicable fields (contributors, associated journal article or conference presentation, etc.)
 * Include a link to the GitHub code repository.
 * Choose an Access Level
-*	Open Access: Publicly available for anyone.
-* Embargoed: Set a release date if the data must remain private for a certain period.
-* Restricted Access: Requires users to request access.
+  *	Open Access: Publicly available for anyone.
+  * Embargoed: Set a release date if the data must remain private for a certain period.
+  * Restricted Access: Requires users to request access.
 
 ##### Step 4: Publish & Get a DOI
 * Review all details and make any necessary edits.
