@@ -87,11 +87,11 @@ At a minimum, the project should have a README file in text or markdown format w
 Include the following in the README file:
 
 * Project name and description
-* Project PI and contact information
+* Project PI(s) and contact information
 * List of staff responsible for data management and code development
 * Associated final product(s), date of release, and DOI (if applicable)
 * Link to published data/code (if applicable)
-* License associated with final product(s)
+* License(s) associated with final product(s)
 * Nature of sensitive or proprietary data (if applicable)
 * Any other important notes for navigating folder or using data/code
 
