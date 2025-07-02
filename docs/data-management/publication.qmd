@@ -16,21 +16,21 @@ A well-chosen license clarifies permissions, prevents misunderstandings, and enc
 Data and code products are licensed separately from RFF publication products. All work on the RFF.org and Resources.org websites (working papers, reports, issue briefs, explainers, Common Resources blog posts, Resources magazine articles, Resources Radio podcast episodes, graphs, charts, photographs, audio, and video) are listed under the Deed - Attribution-NonCommercial-NoDerivatives 4.0 International - Creative Commons license. This Creative Commons license is **not** suitable for either software or data.
 :::
 
-### Verify Data and Code Rights and Ownership
+### Verify data and code rights and ownership
 
 Before proceeding with choosing licenses, confirm that your team owns IP rights to the work produced and has full discretion over licensing the project’s data and code—without restrictions from funders, institutional policies, or legal/data agreements.
 
 In some cases the research team may have joint IP ownership with partners or funders. In this case, licensing options must be agreed upon by both parties.
 
-### Choose Appropriate Licenses 
+### Choose appropriate licenses 
 
-#### Common Licenses
+For software and data, there are three common license suites common in the academic space: *MIT*, *GNU GPU*, and *ODC*. *MIT* and *GNU GPU* are separate software licenses, while *ODC* has two commonly-used data licenses. All four are described below.
 
-For software and data, there are three main license suites common in the academic space: *MIT*, *GNU GPU*, and *ODC*. *MIT* and *GNU GPU* are separate software licenses, while *ODC* has two commonly-used data licenses. All four are described below.
-
-##### Software licenses
+#### Software licenses
 
 *	[MIT](https://choosealicense.com/licenses/mit/): The more permissive and flexible. Users, including commercial entities, can view, use, modify, and distribute the work freely. Allows for commercial use and **enclosure**. **Attribution** is required.
+
+This license is well suited for libraries and tools where broad reuse is encouraged, including in proprietary or closed-source contexts.
 
 (_**Enclosure** is the process of restricting access, usage, or modification of software or its source code through the imposition of licensing terms. It involves the application of intellectual property rights (such as copyright, patents, or trade secrets) to create boundaries around software, typically to protect the developer's or organization's control over its distribution and use._)
 
@@ -38,27 +38,23 @@ For software and data, there are three main license suites common in the academi
 
 * [GNU General Public Use (GPU)](https://choosealicense.com/licenses/gpl-3.0/): Users, including commercial entities, can view, use, modify, and distribute the work freely. However, it carries **copyleft**, so all distributions must be released under the same GNU GPU license, ensuring open access (**viral**). **Attribution** is required.
 
+This license is well suited for models, scripts, and workflows where preserving long-term openness and share-alike reuse is a priority.
+
 (_**Copyleft** is a concept in software (code/script) licensing that ensures any derivative works (modifications or adaptations) of a particular work remain subject to the same licensing terms as the original work. For example, if a developer modifies a program released under the GNU General Public License (GPL), they are required to distribute their modified version under the same GPL license. This means they must also make the source code available and allow others to freely use, modify, and redistribute it under the same terms. Copyleft aims to preserve software freedom by preventing proprietary restrictions from being reintroduced into derivative works._)
 
 (_**Viral**: Licenses like the GNU General Public License (GPL) and the Open Database License (ODbL) are often described as "viral" because they require derivative works to comply with the same licensing terms as the original work. This characteristic ensures that the freedoms granted by the license (such as the ability to use, modify, and share) are preserved in all subsequent versions or derivatives, but it also imposes specific obligations on those who modify or build upon the original._)
 
+#### Data licenses by Open Data Commons (ODC)
 
-##### Data licenses by Open Data Commons (ODC)
 * [ODC-By](https://opendatacommons.org/licenses/by/1-0/): The more permissive and flexible. Users, including commercial entities, can view, use, modify, and distribute the work freely. Allows for commercial use and **enclosure**. **Attribution** is required.
 
 * [ODCbL](https://opendatacommons.org/licenses/odbl/): Users, including commercial entities, can view, use, modify, and distribute the work freely. However, it carries **share-alike**, so all distributions must be released under the same ODCbL license, ensuring open access (**viral**). **Attribution** is required.
 
 (_**Share-alike**, similar to **copyleft** but applied to datasets, requires that any derivative works of content (adaptations or modifications) are licensed under the same or a compatible license. This ensures that future users of the adapted work can use it under similar terms._)
 
-#### Recommendations for selecting licenses
+#### Other licenses
 
-1.	Adhere to any product licensing requirements from the funding agreement and the source data/software.
-
-2.	Consider whether the common academic licenses that are more permissive and flexible (MIT for software, ODC-By for data) are appropriate. If so, use those. These licenses are suitable for most applications.
-
-3.	If project authors/partners and RFF would prefer that all derivative works remain open source and accessible, use GNU GPLv3 plus citation request for software and ODbL for data. Caution that these licenses, because they are more restrictive, are more complex, so review license terms carefully.
-
-4. If there are other requirements or the team would like to review a broader range of software licenses and their specifications, visit [ChooseALicense](https://choosealicense.com/).
+If there are other requirements or the team would like to review a broader range of software licenses and their specifications, visit [ChooseALicense](https://choosealicense.com/).
 
 ### Create and customize license files
 
