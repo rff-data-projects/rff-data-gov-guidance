@@ -81,58 +81,67 @@ If there are other requirements or the team would like to review a broader range
 
 ### Code
 
-When your project is ready to publish code (whether alongside a journal article, report, or other research output), there are a few options for how to share it, especially if your code is hosted on GitHub.
+When your project is ready to publish code stored in a GitHub repository (whether alongside a journal article, report, or other research output), it can be tagged to associate it with a publication and linked to the RFF GitHub organization.
 
-#### Note on journal requirements
-
-Some journals require authors to:
+Note that some journals require authors to:
 
 * Make the codebase publicly accessible
 * Include a link to the GitHub code repository in the manuscript
 * Reference the codebase DOI in the manuscript
 
-#### Sharing code via the RFF GitHub Organization
+#### Options to share repositories via the RFF GitHub Organization
 
-You can link your GitHub repository to the RFF GitHub organization in one of two ways:
+You can link your GitHub repository to the RFF GitHub organization in one of two ways: by forking it into the organization or by transferring ownership.
 
-##### Option 1: Forking into the RFF GitHub Organization
+##### Option 1: Fork into the RFF GitHub Organization
 
-* This approach is suitable for most situations and provides significant flexibility.
-* A fork creates a copy of your repository under the RFF organization account.
-* This snapshot can be tagged to align with a publication version (e.g., v1.0-paper-release).
-* The fork can be updated to stay in sync with the original repo, or kept as a fixed version.
-* Include a note in the README linking the snapshot to the relevant publication.
-* Note that while the RFF GitHub organization takes control of the new fork, the original repository owner retains administrative control of the upstream repository.
+Forking creates a new copy under the RFF GitHub organization's namespace. It can be kept in sync with the original or left unchanged.
 
-##### Option 2: Transferring Ownership to the RFF Organization
+This is the most flexible option and is well-suited when:
 
-For institutional or long-term projects, it may be most effective to **transfer ownership and administrative privileges** of the repository to the GitHub organization. This simplifies management and ensures continuity, especially during researcher transitions, by centralizing control in the organization rather than with an individual. Researchers can **retain collaborator-level permissions**, allowing them to push code, create branches, and submit pull requests.
+* You want to retain full ownership and admin control of the original repository.
+* The original repo belongs to an external collaborator or other GitHub organization.
+* You want to create a static snapshot of a repo to archive a version associated with a publication (e.g., `v1.0-paper-release`).
+* You intend to continue developing the code for purposes unrelated to RFF.
 
-* The repository is permanently transferred to the RFF GitHub organization.
-* All existing collaborators retain their roles.
-* The repository URL will change, but redirects will be preserved by GitHub.
-* Organization owners (e.g., staff managing RFF's GitHub) gain administrative control.
+To connect it to a research output:
+
+* Tag a release (e.g., `v1.0`).
+* Add a note in the README describing its relationship to the publication and original source (preferably, including a DOI).
+
+While the fork is housed in the organization, you retain full control of the upstream repo.
+
+##### Option 2: Transfer Ownership to the RFF Organization
+
+This option is best for long-term institutional or collaborative projects where:
+
+* The repository should be owned and managed by the organization rather than an individual.
+* Continuity is important (e.g., when researchers move institutions).
+* You're finished working on the project and no longer want to manage the repository.
+
+Key characteristics:
+
+* The original repo is moved to the GitHub organization, including its issues, branches, and history.
+* Collaborators retain their roles. Former repository owners can request to be made co-administrators (along with the organization), granting control over collaborator roles.
+* The URL changes but GitHub automatically redirects old links.
 
 #### Recommended Publishing Workflow
 
+1. If you are not already a member of the [RFF GitHub organization](https://github.com/rff-data-projects), request  membership by [emailing DGWG](mailto:dgwg@rff.org).
+
 If your repository is already in the RFF GitHub organization:
 
-1. Make the repository public once you're ready to publish if it isn't already.
+2. Make the repository public once you're ready to publish if it isn't already.
 
-2. Tag the publication version (e.g., v1.0-publication-name) as described [here](https://git-scm.com/book/en/v2/Git-Basics-Tagging).
-
-3. Archive the release on Zenodo if you need a DOI.
+3. Tag the publication version (e.g., v1.0-publication-name) as described [here](https://git-scm.com/book/en/v2/Git-Basics-Tagging). (Note: only admins can do this, request admin privileges if needed.)
 
 If your repository is under a personal GitHub account:
 
-1. Decide whether you will continue development:
+2. Decide between **forking** or **transferring** the repo to the RFF GitHub organization (see explanation of these options above).
 
-* If you are finished working on the project and no longer want administrative duties, consider transferring the repository to the RFF organizational GitHub.
-* If you intend to continue developing the code for purposes unrelated to RFF, request that the RFF GitHub account fork your repository to retain a version tied to the publication.
+3. Contact the RFF GitHub organization admins at [DGWG@rff.org](mailto:dgwg@rff.org) to initiate the fork or transfer and to add a tag (*note: tags do not transfer automatically when a repo is forked*).
 
-2. Contact the RFF GitHub organization admins at [DGWG@rff.org](mailto:dgwg@rff.org) to initiate the fork or transfer and add a tag associated with the publication (*note: tags do not transfer automatically when a repo is forked*).
-
-3. (**Optional**) Archive the tagged version on Zenodo and link the DOI in your README.
+(Optional step) Archive the tagged version on Zenodo and link the DOI in your README. This enables persistent citation, version-specific reference, and supports scholarly credit.
 
 ### Data
 
@@ -151,7 +160,7 @@ Below are the key components of metadata. They can be stored in a simple text or
 * Data Source(s): Origin of the data
 * Accuracy and Precision: Information about data quality
 * Access Constraints: Restrictions on data use
-* Attribute / field definitions: Define all abbreviations and coded entries 
+* Attribute / field definitions: Define all abbreviations and coded entries
 * Additional geospatial metadata components, if applicable
 *	Spatial Extent: Geographic coverage (bounding coordinates)
 *	Projection Information: Coordinate system details
