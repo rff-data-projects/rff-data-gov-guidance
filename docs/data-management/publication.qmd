@@ -129,19 +129,21 @@ Key characteristics:
 
 1. If you are not already a member of the [RFF GitHub organization](https://github.com/rff-data-projects), request  membership by [emailing DGWG](mailto:dgwg@rff.org).
 
+2. Attach the appropriate license to the repository, if you have not done so already.
+
 If your repository is already in the RFF GitHub organization:
 
-2. Make the repository public once you're ready to publish if it isn't already.
+3. Make the repository public once you're ready to publish if it isn't already.
 
-3. Tag the publication version (e.g., v1.0-publication-name) as described [here](https://git-scm.com/book/en/v2/Git-Basics-Tagging). (Note: only admins can do this, request admin privileges if needed.)
+4. Tag the publication version (e.g., v1.0-publication-name) as described [here](https://git-scm.com/book/en/v2/Git-Basics-Tagging). (Note: only admins can do this, request admin privileges if needed.)
 
 If your repository is under a personal GitHub account:
 
-2. Decide between **forking** or **transferring** the repo to the RFF GitHub organization (see explanation of these options above).
+3. Decide between **forking** or **transferring** the repo to the RFF GitHub organization (see explanation of these options above).
 
-3. Contact the RFF GitHub organization admins at [DGWG@rff.org](mailto:dgwg@rff.org) to initiate the fork or transfer and to add a tag (*note: tags do not transfer automatically when a repo is forked*).
+4. Contact the RFF GitHub organization admins at [DGWG@rff.org](mailto:dgwg@rff.org) to initiate the fork or transfer and to add a tag (*note: tags do not transfer automatically when a repo is forked*).
 
-(Optional step) Archive the tagged version on Zenodo and link the DOI in your README. This enables persistent citation, version-specific reference, and supports scholarly credit.
+5. (Optional step) Archive the tagged version on Zenodo and link the DOI in your README. This enables persistent citation, version-specific reference, and supports scholarly credit.
 
 ### Data
 
@@ -176,7 +178,7 @@ In some contexts, generating machine-readable metadata that adheres to certain d
 Before uploading, ensure that:
 
 * The data is well-organized (e.g., structured folders, clear file names).
-* Metadata file are prepared for each data file or sets of data files, including dataset title, description, author names, and relevant keywords.
+* Metadata files are prepared for each data file or sets of data files.
 * A license is attached. 
 * Any [sensitive or restricted data](../data-management/sensitive-proprietary.qmd) is removed or anonymized (if applicable).
 * The project-level README is up to date.
