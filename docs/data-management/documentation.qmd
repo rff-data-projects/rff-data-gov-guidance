@@ -104,7 +104,7 @@ Best practices:
 * Create a README file associated with each raw data file, or each logical "cluster" of related raw data files, in the same folder as the data.
 * If there are multiple data files in a folder, name the README so that it is easily associated with the data file(s) it describes (e.g., `README_PRISM_Daily_Temperature.txt`).
 * Format README files consistently.
-* Write the README document in an plain text and open source file format, such as .txt or .md.
+* Write the README document in an plain text and open source file format, such as `.txt` or `.md`.
 
 Below is a README template and example. Include in the README file the information shown in the example.
 

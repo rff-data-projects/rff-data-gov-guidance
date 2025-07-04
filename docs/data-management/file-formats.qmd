@@ -7,10 +7,10 @@ In coding environments and other software, data are classified into specific "ty
 
 ### General data types
 
-| Data type | Definition | Typical memory | Precision | Common Operations | Examples |
+| Data type | Definition | Typical memory | Precision | Common operations | Examples |
 |--------|--------------|------------|-------------|------------|------------|
 | Character (string/text) | text or string values | ~1 byte per character | Not applicable (stores characters, not numeric values) | Concatenation, substring, pattern matching | `"Hello, world!"`,<br />`'#23'`,<br />`"'Why?', they asked."` |
-| Integer | Whole numbers (no decimal point) | 4 bytes (32-bit) | Exact for values within allowed range | Arithemtic, comparisons, indexing | `0`, `42`, `-6`,<br />`2e+30` (scientific notation) |
+| Integer | Whole numbers (no decimal point) | 4 bytes (32-bit) | Exact for values within allowed range | Arithemtic, comparisons, indexing | `0`, `42`, `-6`,<br />`2e+30` |
 | Floating point | Numbers with decimals (real numbers, including fractions) | 4 bytes (*float*), 8 bytes (*double*) | Approximate - may introduce small rounding errors | Arithmetic, scientific calculations | `-54.3`,<br />`3.14159` |
 | Boolean / Logical | Binary values | Typically 1 byte | Exact | Logical operations (e.g., `AND`, `OR`, `NOT`) | `TRUE`, `FALSE`,<br />`0`, `1` |
 | Date/time | Calendar dates and/or clock times | Varies by system (~8+ bytes) | High precision in supported range | Often require specialized functions; format inconsistencies can cause import errors | `2025-05-29`, <br />`1990-01-24 14:30:00` |
@@ -42,7 +42,7 @@ In general, data should be stored and/or archived in open formats. __Open format
 
 - **Tabular vs. hierarchical**: Tabular data is organized into rows and columns, resembling a table, while hierarchical data is organized in a tree-like structure, with elements nested within others.
 
-- **Structured vs. unstructured**: Structured data refers to data that is organized in a predefined format, typically in rows and columns, like databases or spreadsheets, which allows for easy search, analysis, and processing. Unstructured data, on the other hand, lacks a predefined format and is often textual or multimedia in nature, such as emails, social media posts, or video files.
+- **Structured vs. unstructured**: Structured data refers to data that is organized in a predefined format, typically in rows and columns, like databases or spreadsheets, which allows for easy search, analysis, and processing. Unstructured data, on the other hand, lacks a predefined format and is often textual or multimedia in nature, such as emails, social media posts, or video files. Semi-structured data has tags or markers but not a rigid structure.
 
 - **Retention of data types**: Some file formats retain metadata about data types (e.g., whether a column is an integer or string), while others lose this information upon saving.
 
@@ -58,10 +58,9 @@ In cases where the native format of source data is in a proprietary software for
 
 #### Characteristics of tabular formats
 
-| Format | Extension | Open-source or Proprietary | Retains Individual Data Types? | Level of Structure |
+| Format | Extensions | Open-source or proprietary | Retains data types | Level of structure |
 |-------------|-----------|---------------|---------------|-------------------|
-| ***Recommended:*** **comma-separated values** | .csv | <span style="color:green;">Open-source</span> | No | Structured |
-| Tab-separated values | .tsv | <span style="color:green;">Open-source</span> | No | Structured |
+| Comma or tab-separated values | .csv, .tsv | <span style="color:green;">Open-source</span> | No | Structured |
 | Plain text | .txt | <span style="color:green;">Open-source</span> | No | Semi-structured |
 | Microsoft Excel spreadsheet/workbook | .xls or .xlsx | <span style="color:red;">Proprietary</span> | Yes | Structured |
 | Feather | .feather | <span style="color:green;">Open-source</span> | Yes | Structured |
@@ -83,7 +82,7 @@ In cases where the native format of source data is in a proprietary software for
 
   - **Plain text (.txt)** files which can contain unformatted or formatted (schema) text. Not recommended for storing complex datasets.
 
-- **Excel spreadsheets/workbooks (.xls, .xlsx)** files designed for use with `Microsoft Excel software.` XLS is a binary file format compatible only with Excel, both older and newer versions. XLSX was developed more recently. It is XML-based, making it compatible with open-source software such Google Sheets as well as versions of Excel released since 2007. Generally <span style="color:green;">avoid</span> relying on these files for data storage due to complex formatting, data formats, formulas, etc. They also complicate quality assurance. XLS is not version-control friendly and XLSX requires special version-control techniques because it is stored in a compressed state. Excel spreadsheets can easily be exported to CSV files.
+- **Excel spreadsheets/workbooks (.xls, .xlsx)** files designed for use with `Microsoft Excel software.` XLS is a binary file format compatible only with Excel, both older and newer versions. XLSX was developed more recently. It is XML-based, making it compatible with open-source software such Google Sheets as well as versions of Excel released since 2007. Generally <span style="color:red;">avoid</span> relying on these files for data storage due to complex formatting, data formats, formulas, etc. They also complicate quality assurance. XLS is not version-control friendly and XLSX requires special version-control techniques because it is stored in a compressed state. Excel spreadsheets can easily be exported to CSV files.
 
 - **Common data science formats** These formats are well suited for working with data during analysis and collaboration (e.g., intermediate data), because they retain metadata (e.g., data types) and are optimized for reading and writing. They are **more computationally efficient** in terms of input/output speed and file size, but often less suited to version control than text-based formats.
 
@@ -91,7 +90,7 @@ In cases where the native format of source data is in a proprietary software for
 
   - **Parquet (.parquet)** a binary columnar data format designed for efficient storage and processing of large datasets. Supports compression and is optimized for performance across data tools like `R`, `Python`, and `SQL` engines. Better file size efficiency than Feather.
 
-  - **RData (.rds, .rdata)** files used to store one `R` object (.rds) or an R environment with several objects (.rdata). Useful if working within an R project for efficiency and organization features, but providing limited interoperability.
+  - **RData (.rds, .rdata)** files used to store one `R` object (`.rds`) or an R environment with several objects (`.rdata`). Useful if working within an R project for efficiency and organization features, but providing limited interoperability.
 
   - **Lightning Fast Serialization of Data Frames (.fst)** a fast, compressed, columnar binary format designed specifically for `R`, optimized for high-speed reading and writing of large data frames. Ideal for efficient storage and selective column access in R workflows, but not designed for cross-language interoperability.
 
@@ -150,7 +149,7 @@ Hierarchical data formats are best suited for storing and exchanging complex, ne
 
 #### Characteristics of hierarchical formats
 
-| Format | Extension | Open-source or Proprietary | Retains Individual Data Types? | Level of Structure |
+| Format | Extensions | Open-source or proprietary | Retains data types | Level of structure |
 |------------|-----------|---------------|------------|-------------|
 | Hierarchical Data Format version 5 (HDF5) | .h5, .hdf5 | <span style="color:green;">Open-source</span> | Yes | Structured |
 | Network Common Data Form (NetCDF) | .nc | <span style="color:green;">Open-source</span> | Yes | Structured |
@@ -183,9 +182,9 @@ Vector data is stored as pairs of coordinates. Points, lines, and polygons are a
 ***Recommended*** <span style="color:green;">open-source</span> vector file formats:
 
 - [Geopackage](https://www.geopackage.org/) (.gpkg, **recommended** for its [advantages](http://switchfromshapefile.org/) over the shapefile format)
-- Keyhole markup language (.kml, .kmz)
-- GeoJSON (.json, .geojson)
-- Tables with coordinates (e.g., a CSV file)
+- Keyhole markup language (e.g., `.kml`, `.kmz`)
+- GeoJSON (e.g., `.json`, `.geojson`)
+- Tables with coordinates (e.g., `csv`)
 
 Common <span style="color:red;">proprietary</span> vector file formats:
 
@@ -193,7 +192,7 @@ Common <span style="color:red;">proprietary</span> vector file formats:
 - Feature classes in geodatabases (.gdb)
 
 ::: {.callout-note}
-A shapefile is actually a collection of several files, including geometry (.shp), projection information (.prj), tabular data (.dbf), and more. Make sure to store all component files together within the same folder.
+A shapefile is actually a collection of several files, including geometry (`.shp`), projection information (`.prj`), tabular data (`.dbf`), and more. Make sure to store all component files together within the same folder.
 :::
 
 All vector data files should have three critical metadata components:
@@ -226,13 +225,11 @@ All raster files should have five critical metadata components:
 - Resolution: cell size
 - No data value: the value that represents when a cell’s data value is missing
 
-For a more in-depth introduction to spatial data types, see [Introduction to Geospatial Concepts: Summary and Setup (datacarpentry.org)](https://datacarpentry.org/organization-geospatial/index.html) and [GIS Training (RFF intranet)](https://my.rff.org/it/computer-lab/).
-
 ## Figure file formats
 
 It is helpful to think ahead when generating and saving data visualizations and plots. Academic journals often accept `TIFF` and `PNG` formats, but they frequently have resolution and dimension requirements. Export figures with a minimum resolution of 300 dots per inch (DPI). 
 
-For RFF communications, however, vector formats are best. because it can be easily modified as needed. These include:
+For RFF communications, however, vector formats are best because they can be easily modified as needed. These include:
 
 - Scalable Vector Graphics (`.svg`)
 - Encapsulated PostScript (`.eps`) 
@@ -245,9 +242,7 @@ For more information on figure (and table) style guidelines, refer to [the RFF S
 > 
 > – <cite>Elizabeth Wason (Editorial Director, RFF)</cite>
 
-### Other resources
-
-See these websites for additional information about data types:
+## Resources
 
 - R-focused: 
   - [R for Data Science: Data import](https://r4ds.hadley.nz/data-import.html)
@@ -255,4 +250,7 @@ See these websites for additional information about data types:
 - Python-focused: 
   - [Software Carpentry: Data types and type conversion](https://swcarpentry.github.io/python-novice-gapminder/03-types-conversion.html)
   - [pandas.pydata.org: Data file formats and input/output tools](https://pandas.pydata.org/docs/user_guide/io.html)
+- Spatial data types
+  - [Introduction to Geospatial Concepts: Summary and Setup (datacarpentry.org)](https://datacarpentry.org/organization-geospatial/index.html)
+  - [RFF GIS Training](https://my.rff.org/it/computer-lab/).
   
