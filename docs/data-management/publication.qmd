@@ -12,15 +12,19 @@ Increasingly, journals require code and data to be submitted along with the arti
 
 A well-chosen license clarifies permissions, prevents misunderstandings, and encourages responsible use. The next section provides guidance on selecting and attaching appropriate licenses to ensure your data and code remain accessible and properly credited.
 
-::: {.callout-note}
-Data and code products are licensed separately from RFF publication products. All work on the RFF.org and Resources.org websites (working papers, reports, issue briefs, explainers, Common Resources blog posts, Resources magazine articles, Resources Radio podcast episodes, graphs, charts, photographs, audio, and video) are listed under the Deed - Attribution-NonCommercial-NoDerivatives 4.0 International - Creative Commons license. This Creative Commons license is **not** suitable for either software or data.
-:::
+### Rights and ownership at RFF
 
-### Verify data and code rights and ownership
+**All agreements that involve the creation of RFF research or a similar work product must have terms that define intellectual property (IP) rights.** 
 
-Before proceeding with choosing licenses, confirm that your team owns IP rights to the work produced and has full discretion over licensing the project’s data and code—without restrictions from funders, institutional policies, or legal/data agreements.
+Before proceeding with choosing licenses, confirm that your team owns IP rights to the work produced and has full discretion over licensing the project’s data and code without restrictions from funders, institutional policies, or legal/data agreements.
 
 In some cases the research team may have joint IP ownership with partners or funders. In this case, licensing options must be agreed upon by both parties.
+
+In other cases, the research team may have licensing rights to software/code developed, but not data products. Data license restrictions generally do not restrict code licensing / publication.
+
+::: {.callout-note}
+Data and code products are licensed separately from **RFF publication products**. All work on the **RFF.org** and **Resources.org** websites (working papers, reports, issue briefs, explainers, Common Resources blog posts, Resources magazine articles, Resources Radio podcast episodes, graphs, charts, photographs, audio, and video) are listed under the Deed - Attribution-NonCommercial-NoDerivatives 4.0 International - Creative Commons license. This Creative Commons license is **not** suitable for either software or data.
+:::
 
 ### Choose appropriate licenses 
 
