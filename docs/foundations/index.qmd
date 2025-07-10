@@ -60,7 +60,7 @@ E --> A
 The data life cycle is often iterative and nonlinear, and does not always follow the order shown. Your actual analysis workflow may include dead ends or repeated steps. Regardless, it is helpful to plan and discuss your data-oriented research using these common components of the data life cycle:
 
 * **Step 1: Plan** Identify data that will be collected and how it will be managed.
-Create a [data management plan](@sec-dmp).
+Create a [data management plan](#sec-dmp).
 * **Step 2: Collect** Acquire and store raw data.
   * *a. Acquire* Retrieve data from the appropriate source.
   * *b. Describe* Document the raw data source, format, variables, measurement units, coded values, and known problems. 

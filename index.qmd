@@ -1,4 +1,7 @@
-# Home {.unnumbered}
+---
+title: Home
+number-sections: false
+---
 
 ## About this resource
 
