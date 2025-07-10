@@ -34,7 +34,7 @@ In coding environments and other software, data are classified into specific "ty
 
 ## Data file formats
 
-In general, data should be stored and/or archived in open formats. __Open formats are non-proprietary__, and therefore maximize accessibility because they have freely available specifications and generally do not require proprietary software to open them ([UC Santa Barbara's Standard Operating Procedures section on Data Formats](https://emlab-ucsb.github.io/SOP/2.5-data-formats.html)). The best file format to use will depend on the type and structure of data. 
+In general, data should be stored and/or archived in open formats. __Open formats are non-proprietary__, and therefore maximize accessibility because they have freely available specifications and generally do not require proprietary software to open them. The best file format to use will depend on the type and structure of data. [The section on data formats](https://emlab-ucsb.github.io/SOP/2.5-data-formats.html) from the Standard Operating Procedures of emLab (at UC Santa Barbara) gives a few examples. 
 
 ### Key characteristics of data file formats
 
