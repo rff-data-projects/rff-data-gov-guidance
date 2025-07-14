@@ -31,10 +31,10 @@ Below is an example of a directory structure that would be compatible with versi
 
 ```
 project_name/
-├── readme.txt
+├── README.txt
 ├── data/
 │   ├── raw/
-│   │   ├── readme_raw_dataset.txt
+│   │   ├── README_raw_dataset.txt
 │   ├── intermediate/
 │   ├── clean/ (optional)
 │   │   ├── metadata.txt
