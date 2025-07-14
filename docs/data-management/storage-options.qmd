@@ -13,7 +13,7 @@ title: Storage Options
   * Use GitHub to share and review code.
   * For small datasets, GitHub may be used for both data and code storage.
   
-##### Quick reference
+#### Quick reference
 
 | Component | Primary use | Notes |
 |----------------|---------------|-----------|
