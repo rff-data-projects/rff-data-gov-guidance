@@ -40,7 +40,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-2dc0d44304feaae4e2f6994ab6f0c28a.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-1896e83911af34675497f549448d848d.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -323,20 +323,23 @@ ul.task-list li input[type="checkbox"] {
 <p>These qualities also facilitate version control practices. There is additional guidance on organization for version control <a href="../../docs/version-control/index.html">here</a>.</p>
 <p>Below is an example of a directory structure that would be compatible with version control implementation on RFF’s <code>L:/</code> drive. This version illustrates a <a href="#repos-folder">personal repository</a> folder model of code version control, which operates best on the <code>L:/</code> drive.</p>
 <pre><code>project_name/
+├── README.txt
 ├── data/
 │   ├── raw/
+│   │   ├── README_raw_dataset.txt
 │   ├── intermediate/
 │   ├── clean/ (optional)
+│   │   ├── metadata.txt
 ├── results*/
 ├── repos/
-│   ├── edgar/
+│   ├── baker/
 │   │   ├── scripts/
 │   │   │   ├── processing/
 │   │   │   ├── analysis/
 │   │   │   ├── tools/
 │   │   ├── results**/
 │   │   ├── docs/
-│   ├── caudle/
+│   ├── johnson/
 │   │   ├── scripts/
 │   │   │   ├── processing/
 │   │   │   ├── analysis/
@@ -347,9 +350,9 @@ ul.task-list li input[type="checkbox"] {
 <h3 data-number="2.1" class="anchored" data-anchor-id="data-folder"><span class="header-section-number">2.1</span> <code>Data</code> folder</h3>
 <ul>
 <li>The <code>data</code> folder contains all project data sets.</li>
-<li><strong>Raw data is preserved in its own subfolder.</strong></li>
+<li><strong>Raw data is preserved in its own subfolder.</strong> This folder also contains <a href="../../docs/data-management/documentation.html#rawdatadoc">raw data documentation README files</a>.</li>
 <li>The <code>intermediate</code> folder contains datasets created during data cleaning and processing.</li>
-<li>If practical, a <code>clean</code> folder can contain cleaned output datasets, but note that it’s often unclear when datasets are truly “clean” until late project stages.</li>
+<li>If practical, a <code>clean</code> folder can contain cleaned output datasets, but note that it’s often unclear when datasets are truly “clean” until late project stages. If this folder contains final data products to be shared, be sure to include <a href="../../docs/data-management/publication.html#metadata">metadata documentation</a>.</li>
 </ul>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">

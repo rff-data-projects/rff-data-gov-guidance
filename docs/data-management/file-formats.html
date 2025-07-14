@@ -40,7 +40,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-2dc0d44304feaae4e2f6994ab6f0c28a.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-1896e83911af34675497f549448d848d.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -273,10 +273,8 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#sec-hierarchical" id="toc-sec-hierarchical" class="nav-link" data-scroll-target="#sec-hierarchical"><span class="header-section-number">2.3</span> Hierarchical formats</a></li>
   <li><a href="#geospatial-file-formats" id="toc-geospatial-file-formats" class="nav-link" data-scroll-target="#geospatial-file-formats"><span class="header-section-number">2.4</span> Geospatial file formats</a></li>
   </ul></li>
-  <li><a href="#figure-file-formats" id="toc-figure-file-formats" class="nav-link" data-scroll-target="#figure-file-formats"><span class="header-section-number">3</span> Figure file formats</a>
-  <ul class="collapse">
-  <li><a href="#other-resources" id="toc-other-resources" class="nav-link" data-scroll-target="#other-resources"><span class="header-section-number">3.1</span> Other resources</a></li>
-  </ul></li>
+  <li><a href="#figure-file-formats" id="toc-figure-file-formats" class="nav-link" data-scroll-target="#figure-file-formats"><span class="header-section-number">3</span> Figure file formats</a></li>
+  <li><a href="#resources" id="toc-resources" class="nav-link" data-scroll-target="#resources"><span class="header-section-number">4</span> Resources</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/alexandra-thompson-dc/rff-data-gov-guidance/edit/main/docs/data-management/file-formats.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/alexandra-thompson-dc/rff-data-gov-guidance/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -322,7 +320,7 @@ ul.task-list li input[type="checkbox"] {
 <th>Definition</th>
 <th>Typical memory</th>
 <th>Precision</th>
-<th>Common Operations</th>
+<th>Common operations</th>
 <th>Examples</th>
 </tr>
 </thead>
@@ -341,7 +339,7 @@ ul.task-list li input[type="checkbox"] {
 <td>4 bytes (32-bit)</td>
 <td>Exact for values within allowed range</td>
 <td>Arithemtic, comparisons, indexing</td>
-<td><code>0</code>, <code>42</code>, <code>-6</code>,<br><code>2e+30</code> (scientific notation)</td>
+<td><code>0</code>, <code>42</code>, <code>-6</code>,<br><code>2e+30</code></td>
 </tr>
 <tr class="odd">
 <td>Floating point</td>
@@ -388,13 +386,13 @@ int_value = int(float_value)  # Becomes 3</code></pre></li>
 </section>
 <section id="data-file-formats" class="level2" data-number="2">
 <h2 data-number="2" class="anchored" data-anchor-id="data-file-formats"><span class="header-section-number">2</span> Data file formats</h2>
-<p>In general, data should be stored and/or archived in open formats. <strong>Open formats are non-proprietary</strong>, and therefore maximize accessibility because they have freely available specifications and generally do not require proprietary software to open them (<a href="https://emlab-ucsb.github.io/SOP/2.5-data-formats.html">UC Santa Barbara’s Standard Operating Procedures section on Data Formats</a>). The best file format to use will depend on the type and structure of data.</p>
+<p>In general, data should be stored and/or archived in open formats. <strong>Open formats are non-proprietary</strong>, and therefore maximize accessibility because they have freely available specifications and generally do not require proprietary software to open them. The best file format to use will depend on the type and structure of data. <a href="https://emlab-ucsb.github.io/SOP/2.5-data-formats.html">The section on data formats</a> from the Standard Operating Procedures of emLab (at UC Santa Barbara) gives a few examples.</p>
 <section id="key-characteristics-of-data-file-formats" class="level3" data-number="2.1">
 <h3 data-number="2.1" class="anchored" data-anchor-id="key-characteristics-of-data-file-formats"><span class="header-section-number">2.1</span> Key characteristics of data file formats</h3>
 <ul>
 <li><p><strong>Proprietary vs.&nbsp;non-proprietary</strong>: Non-proprietary software formats can be easily imported and accessed using open-source software. This enhances their <strong>interoperability</strong>, or how easily a file format can be used across different software platforms and systems. Formats that are widely supported and compatible with various tools are generally more versatile.</p></li>
 <li><p><strong>Tabular vs.&nbsp;hierarchical</strong>: Tabular data is organized into rows and columns, resembling a table, while hierarchical data is organized in a tree-like structure, with elements nested within others.</p></li>
-<li><p><strong>Structured vs.&nbsp;unstructured</strong>: Structured data refers to data that is organized in a predefined format, typically in rows and columns, like databases or spreadsheets, which allows for easy search, analysis, and processing. Unstructured data, on the other hand, lacks a predefined format and is often textual or multimedia in nature, such as emails, social media posts, or video files.</p></li>
+<li><p><strong>Structured vs.&nbsp;unstructured</strong>: Structured data refers to data that is organized in a predefined format, typically in rows and columns, like databases or spreadsheets, which allows for easy search, analysis, and processing. Unstructured data, on the other hand, lacks a predefined format and is often textual or multimedia in nature, such as emails, social media posts, or video files. Semi-structured data has tags or markers but not a rigid structure.</p></li>
 <li><p><strong>Retention of data types</strong>: Some file formats retain metadata about data types (e.g., whether a column is an integer or string), while others lose this information upon saving.</p></li>
 </ul>
 </section>
@@ -428,91 +426,84 @@ Note
 <thead>
 <tr class="header">
 <th>Format</th>
-<th>Extension</th>
-<th>Open-source or Proprietary</th>
-<th>Retains Individual Data Types?</th>
-<th>Level of Structure</th>
+<th>Extensions</th>
+<th>Open-source or proprietary</th>
+<th>Retains data types</th>
+<th>Level of structure</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td><strong><em>Recommended:</em></strong> <strong>comma-separated values</strong></td>
-<td>.csv</td>
+<td>Comma or tab-separated values</td>
+<td>.csv, .tsv</td>
 <td><span style="color:green;">Open-source</span></td>
 <td>No</td>
 <td>Structured</td>
 </tr>
 <tr class="even">
-<td>Tab-separated values</td>
-<td>.tsv</td>
-<td><span style="color:green;">Open-source</span></td>
-<td>No</td>
-<td>Structured</td>
-</tr>
-<tr class="odd">
 <td>Plain text</td>
 <td>.txt</td>
 <td><span style="color:green;">Open-source</span></td>
 <td>No</td>
 <td>Semi-structured</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Microsoft Excel spreadsheet/workbook</td>
 <td>.xls or .xlsx</td>
 <td><span style="color:red;">Proprietary</span></td>
 <td>Yes</td>
 <td>Structured</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Feather</td>
 <td>.feather</td>
 <td><span style="color:green;">Open-source</span></td>
 <td>Yes</td>
 <td>Structured</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Parquet</td>
 <td>.parquet</td>
 <td><span style="color:green;">Open-source</span></td>
 <td>Yes</td>
 <td>Structured</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>RData</td>
 <td>.rdata or .rds</td>
 <td><span style="color:green;">Open-source</span></td>
 <td>Yes</td>
 <td>Structured</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Lightning Fast Serialization of Data Frames</td>
 <td>.fst</td>
 <td><span style="color:green;">Open-source</span></td>
 <td>Yes</td>
 <td>Structured</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>SQLite</td>
 <td>.sqlite, .db</td>
 <td><span style="color:green;">Open-source</span></td>
 <td>Yes</td>
 <td>Structured</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Stata data file</td>
 <td>.dta</td>
 <td><span style="color:red;">Proprietary</span></td>
 <td>Yes</td>
 <td>Structured</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>SAS dataset</td>
 <td>.sas7bdat</td>
 <td><span style="color:red;">Proprietary</span></td>
 <td>Yes</td>
 <td>Structured</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Database File</td>
 <td>.dbf</td>
 <td><span style="color:green;">Open-source</span></td>
@@ -531,17 +522,17 @@ Note
 <li><p><strong>Tab-separated values (.tsv)</strong> files similar to CSV files but with values separated by tabs.</p></li>
 <li><p><strong>Plain text (.txt)</strong> files which can contain unformatted or formatted (schema) text. Not recommended for storing complex datasets.</p></li>
 </ul></li>
-<li><p><strong>Excel spreadsheets/workbooks (.xls, .xlsx)</strong> files designed for use with <code>Microsoft Excel software.</code> XLS is a binary file format compatible only with Excel, both older and newer versions. XLSX was developed more recently. It is XML-based, making it compatible with open-source software such Google Sheets as well as versions of Excel released since 2007. Generally <span style="color:green;">avoid</span> relying on these files for data storage due to complex formatting, data formats, formulas, etc. They also complicate quality assurance. XLS is not version-control friendly and XLSX requires special version-control techniques because it is stored in a compressed state. Excel spreadsheets can easily be exported to CSV files.</p></li>
+<li><p><strong>Excel spreadsheets/workbooks (.xls, .xlsx)</strong> are files designed for use with Microsoft Excel software. XLS is a binary file format compatible only with Excel, both older and newer versions. XLSX was developed more recently. It is XML-based, making it compatible with open-source software such Google Sheets as well as versions of Excel released since 2007. Generally <span style="color:red;">avoid</span> relying on these files for data storage due to complex formatting, data formats, formulas, etc. They also complicate quality assurance. XLS is not version-control friendly and XLSX requires special version-control techniques because it is stored in a compressed state. Excel spreadsheets can easily be exported to CSV files.</p></li>
 <li><p><strong>Common data science formats</strong> These formats are well suited for working with data during analysis and collaboration (e.g., intermediate data), because they retain metadata (e.g., data types) and are optimized for reading and writing. They are <strong>more computationally efficient</strong> in terms of input/output speed and file size, but often less suited to version control than text-based formats.</p>
 <ul>
-<li><p><strong>Feather (.feather)</strong> a fast, lightweight binary columnar data format used for data exchange between data analysis languages like <code>R</code> and <code>Python.</code> Optimized for performance and efficiency, especially when working with large tables of data. Faster than Parquet at in-memory work, reading, and writing.</p></li>
-<li><p><strong>Parquet (.parquet)</strong> a binary columnar data format designed for efficient storage and processing of large datasets. Supports compression and is optimized for performance across data tools like <code>R</code>, <code>Python</code>, and <code>SQL</code> engines. Better file size efficiency than Feather.</p></li>
-<li><p><strong>RData (.rds, .rdata)</strong> files used to store one <code>R</code> object (.rds) or an R environment with several objects (.rdata). Useful if working within an R project for efficiency and organization features, but providing limited interoperability.</p></li>
-<li><p><strong>Lightning Fast Serialization of Data Frames (.fst)</strong> a fast, compressed, columnar binary format designed specifically for <code>R</code>, optimized for high-speed reading and writing of large data frames. Ideal for efficient storage and selective column access in R workflows, but not designed for cross-language interoperability.</p></li>
-<li><p><strong>SQLite (.sqlite, .db)</strong> files used by the <code>SQLite</code> relational database engine, which supports SQL queries and transactions and is used for lightweight, portable databases.</p></li>
-<li><p><strong>Stata data file (.dta)</strong> binary files created by the statistical analysis software <code>Stata.</code> Note that they sometimes include metadata (e.g., variable labels) that isn’t automatically loaded when importing into other software (e.g.&nbsp;R using the haven package).</p></li>
-<li><p><strong>SAS Dataset (.sas7bdat)</strong> the proprietary file format used by <code>SAS</code> for storing datasets. It supports metadata and variable attributes. Datasets should be converted to open-source formats after processing.</p></li>
-<li><p><strong>Database File (.dbf)</strong> files used by <code>dBASE</code> and other database systems to store tabular data. They support a fixed schema and metadata. DBF files cannot store full precision. Avoid creating this type of file.</p></li>
+<li><p><strong>Feather (.feather)</strong> a fast, lightweight binary columnar data format used for data exchange between data analysis languages like R and Python. Optimized for performance and efficiency, especially when working with large tables of data. Faster than Parquet at in-memory work, reading, and writing.</p></li>
+<li><p><strong>Parquet (.parquet)</strong> a binary columnar data format designed for efficient storage and processing of large datasets. Supports compression and is optimized for performance across data tools like R, Python, and SQL engines. Better file size efficiency than Feather.</p></li>
+<li><p><strong>RData (.rds, .rdata)</strong> files used to store one R object (<code>.rds</code>) or an R environment with several objects (<code>.rdata</code>). Useful if working within an R project for efficiency and organization features, but providing limited interoperability.</p></li>
+<li><p><strong>Lightning Fast Serialization of Data Frames (.fst)</strong> a fast, compressed, columnar binary format designed specifically for R, optimized for high-speed reading and writing of large data frames. Ideal for efficient storage and selective column access in R workflows, but not designed for cross-language interoperability.</p></li>
+<li><p><strong>SQLite (.sqlite, .db)</strong> files used by the SQLite relational database engine, which supports SQL queries and transactions and is used for lightweight, portable databases.</p></li>
+<li><p><strong>Stata data file (.dta)</strong> binary files created by the statistical analysis software Stata. Note that they sometimes include metadata (e.g., variable labels) that isn’t automatically loaded when importing into other software (e.g.&nbsp;R using the haven package).</p></li>
+<li><p><strong>SAS Dataset (.sas7bdat)</strong> the proprietary file format used by SAS for storing datasets. It supports metadata and variable attributes. Datasets should be converted to open-source formats after processing.</p></li>
+<li><p><strong>Database File (.dbf)</strong> files used by dBASE and other database systems to store tabular data. They support a fixed schema and metadata. DBF files cannot store full precision. Avoid creating this type of file.</p></li>
 </ul></li>
 </ul>
 </section>
@@ -606,10 +597,10 @@ Note
 <thead>
 <tr class="header">
 <th>Format</th>
-<th>Extension</th>
-<th>Open-source or Proprietary</th>
-<th>Retains Individual Data Types?</th>
-<th>Level of Structure</th>
+<th>Extensions</th>
+<th>Open-source or proprietary</th>
+<th>Retains data types</th>
+<th>Level of structure</th>
 </tr>
 </thead>
 <tbody>
@@ -672,9 +663,9 @@ Note
 <p><strong><em>Recommended</em></strong> <span style="color:green;">open-source</span> vector file formats:</p>
 <ul>
 <li><a href="https://www.geopackage.org/">Geopackage</a> (.gpkg, <strong>recommended</strong> for its <a href="http://switchfromshapefile.org/">advantages</a> over the shapefile format)</li>
-<li>Keyhole markup language (.kml, .kmz)</li>
-<li>GeoJSON (.json, .geojson)</li>
-<li>Tables with coordinates (e.g., a CSV file)</li>
+<li>Keyhole markup language (e.g., <code>.kml</code>, <code>.kmz</code>)</li>
+<li>GeoJSON (e.g., <code>.json</code>, <code>.geojson</code>)</li>
+<li>Tables with coordinates (e.g., <code>.csv</code>)</li>
 </ul>
 <p>Common <span style="color:red;">proprietary</span> vector file formats:</p>
 <ul>
@@ -691,7 +682,7 @@ Note
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>A shapefile is actually a collection of several files, including geometry (.shp), projection information (.prj), tabular data (.dbf), and more. Make sure to store all component files together within the same folder.</p>
+<p>A shapefile is actually a collection of several files, including geometry (<code>.shp</code>), projection information (<code>.prj</code>), tabular data (<code>.dbf</code>), and more. Make sure to store all component files together within the same folder.</p>
 </div>
 </div>
 <p>All vector data files should have three critical metadata components:</p>
@@ -720,14 +711,13 @@ Note
 <li>Resolution: cell size</li>
 <li>No data value: the value that represents when a cell’s data value is missing</li>
 </ul>
-<p>For a more in-depth introduction to spatial data types, see <a href="https://datacarpentry.org/organization-geospatial/index.html">Introduction to Geospatial Concepts: Summary and Setup (datacarpentry.org)</a> and <a href="https://my.rff.org/it/computer-lab/">GIS Training (RFF intranet)</a>.</p>
 </section>
 </section>
 </section>
 <section id="figure-file-formats" class="level2" data-number="3">
 <h2 data-number="3" class="anchored" data-anchor-id="figure-file-formats"><span class="header-section-number">3</span> Figure file formats</h2>
 <p>It is helpful to think ahead when generating and saving data visualizations and plots. Academic journals often accept <code>TIFF</code> and <code>PNG</code> formats, but they frequently have resolution and dimension requirements. Export figures with a minimum resolution of 300 dots per inch (DPI).</p>
-<p>For RFF communications, however, vector formats are best. because it can be easily modified as needed. These include:</p>
+<p>For RFF communications, however, vector formats are best because they can be easily modified as needed. These include:</p>
 <ul>
 <li>Scalable Vector Graphics (<code>.svg</code>)</li>
 <li>Encapsulated PostScript (<code>.eps</code>)</li>
@@ -738,9 +728,9 @@ Note
 <p>“Sharing the underlying data of any maps and figures is always helpful for the Communications Team!”</p>
 <p>– <cite>Elizabeth Wason (Editorial Director, RFF)</cite></p>
 </blockquote>
-<section id="other-resources" class="level3" data-number="3.1">
-<h3 data-number="3.1" class="anchored" data-anchor-id="other-resources"><span class="header-section-number">3.1</span> Other resources</h3>
-<p>See these websites for additional information about data types:</p>
+</section>
+<section id="resources" class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="resources"><span class="header-section-number">4</span> Resources</h2>
 <ul>
 <li>R-focused:
 <ul>
@@ -752,10 +742,14 @@ Note
 <li><a href="https://swcarpentry.github.io/python-novice-gapminder/03-types-conversion.html">Software Carpentry: Data types and type conversion</a></li>
 <li><a href="https://pandas.pydata.org/docs/user_guide/io.html">pandas.pydata.org: Data file formats and input/output tools</a></li>
 </ul></li>
+<li>Spatial data types
+<ul>
+<li><a href="https://datacarpentry.org/organization-geospatial/index.html">Introduction to Geospatial Concepts: Summary and Setup (datacarpentry.org)</a></li>
+<li><a href="https://my.rff.org/it/computer-lab/">RFF GIS Training</a>.</li>
+</ul></li>
 </ul>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->

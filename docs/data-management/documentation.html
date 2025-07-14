@@ -60,7 +60,7 @@ div.csl-indent {
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-2dc0d44304feaae4e2f6994ab6f0c28a.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-1896e83911af34675497f549448d848d.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -291,8 +291,9 @@ div.csl-indent {
   <li><a href="#core-documentation" id="toc-core-documentation" class="nav-link" data-scroll-target="#core-documentation"><span class="header-section-number">3</span> Core documentation</a>
   <ul class="collapse">
   <li><a href="#project-readme" id="toc-project-readme" class="nav-link" data-scroll-target="#project-readme"><span class="header-section-number">3.1</span> The project-level README file</a></li>
-  <li><a href="#raw-data" id="toc-raw-data" class="nav-link" data-scroll-target="#raw-data"><span class="header-section-number">3.2</span> Raw data</a></li>
+  <li><a href="#rawdatadoc" id="toc-rawdatadoc" class="nav-link" data-scroll-target="#rawdatadoc"><span class="header-section-number">3.2</span> Raw data</a></li>
   <li><a href="#methods" id="toc-methods" class="nav-link" data-scroll-target="#methods"><span class="header-section-number">3.3</span> Methods</a></li>
+  <li><a href="#data-products" id="toc-data-products" class="nav-link" data-scroll-target="#data-products"><span class="header-section-number">3.4</span> Data products</a></li>
   </ul></li>
   <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references"><span class="header-section-number">4</span> References</a></li>
   </ul>
@@ -355,29 +356,38 @@ div.csl-indent {
 </section>
 <section id="core-documentation" class="level2" data-number="3">
 <h2 data-number="3" class="anchored" data-anchor-id="core-documentation"><span class="header-section-number">3</span> Core documentation</h2>
+<pre><code>project_name/
+├── README.txt &lt;&lt;&lt;&lt;&lt;&lt;&lt;
+├── data/
+│   ├── raw/
+│   │   ├── README_raw_dataset.txt &lt;&lt;&lt;&lt;&lt;&lt;&lt;
+│   ├── intermediate/
+│   ├── clean/
+│   │   ├── metadata.txt &lt;&lt;&lt;&lt;&lt;&lt;&lt;</code></pre>
 <section id="project-readme" class="level3" data-number="3.1">
 <h3 data-number="3.1" class="anchored" data-anchor-id="project-readme"><span class="header-section-number">3.1</span> The project-level README file</h3>
 <p>At a minimum, the project should have a README file in text or markdown format with the information listed below. This can be an evolving, living document. While it’s technically <strong>product documentation</strong>, it’s easiest to start it early in the project’s development.</p>
+<p>Include the following in the README file:</p>
 <ul>
 <li>Project name and description</li>
-<li>Project PI and contact information</li>
+<li>Project PI(s) and contact information</li>
 <li>List of staff responsible for data management and code development</li>
 <li>Associated final product(s), date of release, and DOI (if applicable)</li>
 <li>Link to published data/code (if applicable)</li>
-<li>License associated with final product(s)</li>
+<li>License(s) associated with final product(s)</li>
 <li>Nature of sensitive or proprietary data (if applicable)</li>
 <li>Any other important notes for navigating folder or using data/code</li>
 </ul>
 </section>
-<section id="raw-data" class="level3" data-number="3.2">
-<h3 data-number="3.2" class="anchored" data-anchor-id="raw-data"><span class="header-section-number">3.2</span> Raw data</h3>
+<section id="rawdatadoc" class="level3" data-number="3.2">
+<h3 data-number="3.2" class="anchored" data-anchor-id="rawdatadoc"><span class="header-section-number">3.2</span> Raw data</h3>
 <p>Best practices:</p>
 <ul>
 <li>The source of all downloaded raw datasets should be documented in a README file.</li>
 <li>Create a README file associated with each raw data file, or each logical “cluster” of related raw data files, in the same folder as the data.</li>
 <li>If there are multiple data files in a folder, name the README so that it is easily associated with the data file(s) it describes (e.g., <code>README_PRISM_Daily_Temperature.txt</code>).</li>
 <li>Format README files consistently.</li>
-<li>Write the README document in an plain text and open source file format, such as .txt or .md.</li>
+<li>Write the README document in an plain text and open source file format, such as <code>.txt</code> or <code>.md</code>.</li>
 </ul>
 <p>Below is a README template and example. Include in the README file the information shown in the example.</p>
 <p>Filename: <code>README_PRISM_Daily_Temperature.txt</code></p>
@@ -416,6 +426,10 @@ Note
 <li><p>Use <a href="../../docs/software/index.html">code comments</a> to document the purpose and logic of scripts and key functions, helping others (and your future self) understand how the code works.</p></li>
 </ul>
 </section>
+<section id="data-products" class="level3" data-number="3.4">
+<h3 data-number="3.4" class="anchored" data-anchor-id="data-products"><span class="header-section-number">3.4</span> Data products</h3>
+<p>Metadata documentation should be included with final data products, and is described in the <a href="../../docs/data-management/publication.html#metadata">Publication</a> section.</p>
+</section>
 </section>
 <section id="references" class="level2" data-number="4">
 
@@ -426,10 +440,10 @@ Note
 
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">4 References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
 <div id="ref-Michener" class="csl-entry" role="listitem">
-Michener, W. K., J. W. Brunt, J. J. Helly, T. B. Kirchner, and S. G. Stafford. 1997. <span>“Nongeospatial Metadata for the Ecological Sciences.”</span> <a href="https://doi.org/10.1890/1051-0761">https://doi.org/10.1890/1051-0761</a>.
+Michener, W. K., J. W. Brunt, J. J. Helly, T. B. Kirchner, and S. G. Stafford. 1997. <span>“Nongeospatial Metadata for the Ecological Sciences.”</span> <a href="https://doi.org/10.1890/1051-0761(1997)007%5b0330:NMFTES%5d2.0.CO;2">https://doi.org/10.1890/1051-0761(1997)007%5b0330:NMFTES%5d2.0.CO;2</a>.
 </div>
 <div id="ref-Stoudt" class="csl-entry" role="listitem">
-Stoudt, S., V. N. Vásquez, and C. C. Martinez. 2021. <span>“Principles for Data Analysis Workflows.”</span> <a href="https://doi.org/10.1371/e1008770">https://doi.org/10.1371/e1008770</a>.
+Stoudt, S., V. N. Vásquez, and C. C. Martinez. 2021. <span>“Principles for Data Analysis Workflows.”</span> <a href="https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1008770">https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1008770</a>.
 </div>
 </div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

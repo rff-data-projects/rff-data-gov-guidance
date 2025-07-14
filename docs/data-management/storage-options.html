@@ -40,7 +40,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-2dc0d44304feaae4e2f6994ab6f0c28a.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-1896e83911af34675497f549448d848d.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -261,10 +261,7 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary"><span class="header-section-number">1</span> Summary</a>
-  <ul class="collapse">
-  <li><a href="#quick-reference" id="toc-quick-reference" class="nav-link" data-scroll-target="#quick-reference"><span class="header-section-number">1.1</span> Quick reference</a></li>
-  </ul></li>
+  <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary"><span class="header-section-number">1</span> Summary</a></li>
   <li><a href="#internal-rff-projects" id="toc-internal-rff-projects" class="nav-link" data-scroll-target="#internal-rff-projects"><span class="header-section-number">2</span> Internal RFF Projects</a>
   <ul class="collapse">
   <li><a href="#data-l-drive" id="toc-data-l-drive" class="nav-link" data-scroll-target="#data-l-drive"><span class="header-section-number">2.1</span> Data: <code>L:/</code> drive</a></li>
@@ -317,8 +314,8 @@ ul.task-list li input[type="checkbox"] {
 <li>For small datasets, GitHub may be used for both data and code storage.</li>
 </ul></li>
 </ul>
-<section id="quick-reference" class="level3" data-number="1.1">
-<h3 data-number="1.1" class="anchored" data-anchor-id="quick-reference"><span class="header-section-number">1.1</span> Quick reference</h3>
+<section id="quick-reference" class="level4">
+<h4 class="anchored" data-anchor-id="quick-reference">Quick reference</h4>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -391,8 +388,21 @@ ul.task-list li input[type="checkbox"] {
 <li>Reconcile and sync updates across folders</li>
 </ul>
 <p>For example, you can revise a script locally and commit changes, with documentation, when they’re ready—without interfering with your colleague’s workflow.</p>
-<p>To prevent users from simultaneously editing scripts stored within a shared folder, and to support use of version control, <strong>each team member who will be viewing, running, or editing code should have their own personal folder containing a clone of the project’s GitHub repository </strong>. Specific suggestions for how to organize your project folder are in the <a href="../../docs/data-management/organization.html#sec-directory-structure">Organization</a> section.</p>
+<p>To prevent users from simultaneously editing scripts stored within a shared folder, and to support use of version control, <strong>each team member who will be viewing, running, or editing code should have their own personal folder containing a clone of the project’s GitHub repository</strong>. Specific suggestions for how to organize your project folder are in the <a href="../../docs/data-management/organization.html#sec-directory-structure">Organization</a> section.</p>
 <p>See <a href="../../docs/version-control/index.html">Version Control</a> for setup instructions.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>For <code>renv</code> R package users: Accessing libraries and packages stored on the <code>L:/</code> drive can slow down R performance, especially when working remotely. Consider storing the <code>renv/library</code> on a local drive (e.g., <code>C:/</code>). You can redirect the project’s library path by setting it in a <code>.Renviron</code> file.</p>
+</div>
+</div>
 </section>
 </section>
 <section id="collab" class="level2" data-number="3">
