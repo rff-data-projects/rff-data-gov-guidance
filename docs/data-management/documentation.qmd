@@ -14,7 +14,7 @@ references:
     date-parts:
     - - 2021
   title: 'Principles for Data Analysis Workflows.'
-  DOI: 10.1371/e1008770
+  DOI: 
   URL: https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1008770
 - type: article
   id: Michener
@@ -33,7 +33,7 @@ references:
     date-parts:
     - - 1997
   title: 'Nongeospatial Metadata for the Ecological Sciences.'
-  DOI: 10.1890/1051-0761
+  DOI: 
   URL: https://doi.org/10.1890/1051-0761(1997)007%5b0330:NMFTES%5d2.0.CO;2
 ---
 
@@ -69,20 +69,33 @@ __Product__ documentation provides information to accompany code and data of com
 
 ## Core documentation 
 
+``` 
+project_name/
+├── README.txt <<<<<<<
+├── data/
+│   ├── raw/
+│   │   ├── README_raw_dataset.txt <<<<<<<
+│   ├── intermediate/
+│   ├── clean/
+│   │   ├── metadata.txt <<<<<<<
+```
+
 ### The project-level README file {#project-readme}
 
-At a minimum, the project should have a README file in text or markdown format with the information listed below. This can be an evolving, living document. While it's technically __product documentation__, it's easiest to start it early in the project's development.
+At a minimum, the project should have a README file in text or markdown format with the information listed below. This can be an evolving, living document. While it's technically __product documentation__, it's easiest to start it early in the project's development. 
+
+Include the following in the README file:
 
 * Project name and description
-* Project PI and contact information
+* Project PI(s) and contact information
 * List of staff responsible for data management and code development
 * Associated final product(s), date of release, and DOI (if applicable)
 * Link to published data/code (if applicable)
-* License associated with final product(s)
+* License(s) associated with final product(s)
 * Nature of sensitive or proprietary data (if applicable)
 * Any other important notes for navigating folder or using data/code
 
-### Raw data
+### Raw data{#rawdatadoc}
 
 
 Best practices:
@@ -91,7 +104,7 @@ Best practices:
 * Create a README file associated with each raw data file, or each logical "cluster" of related raw data files, in the same folder as the data.
 * If there are multiple data files in a folder, name the README so that it is easily associated with the data file(s) it describes (e.g., `README_PRISM_Daily_Temperature.txt`).
 * Format README files consistently.
-* Write the README document in an plain text and open source file format, such as .txt or .md.
+* Write the README document in an plain text and open source file format, such as `.txt` or `.md`.
 
 Below is a README template and example. Include in the README file the information shown in the example.
 
@@ -123,5 +136,9 @@ There are two critical strategies for documenting methods effectively:
 * Use [version control](../version-control/index.qmd) to track and explain changes to scripts over time (e.g., through clear and consistent commit messages).
 
 * Use [code comments](../software/index.qmd) to document the purpose and logic of scripts and key functions, helping others (and your future self) understand how the code works.
+
+### Data products
+
+Metadata documentation should be included with final data products, and is described in the [Publication](../data-management/publication.qmd#metadata) section.
 
 ## References
