@@ -31,20 +31,23 @@ Below is an example of a directory structure that would be compatible with versi
 
 ```
 project_name/
+├── README.txt
 ├── data/
 │   ├── raw/
+│   │   ├── README_raw_dataset.txt
 │   ├── intermediate/
 │   ├── clean/ (optional)
+│   │   ├── metadata.txt
 ├── results*/
 ├── repos/
-│   ├── edgar/
+│   ├── baker/
 │   │   ├── scripts/
 │   │   │   ├── processing/
 │   │   │   ├── analysis/
 │   │   │   ├── tools/
 │   │   ├── results**/
 │   │   ├── docs/
-│   ├── caudle/
+│   ├── johnson/
 │   │   ├── scripts/
 │   │   │   ├── processing/
 │   │   │   ├── analysis/
@@ -56,9 +59,9 @@ project_name/
 ### `Data` folder
 
 * The `data` folder contains all project data sets. 
-* __Raw data is preserved in its own subfolder.__
+* __Raw data is preserved in its own subfolder.__ This folder also contains [raw data documentation README files](../data-management/documentation.qmd#rawdatadoc).
 * The `intermediate` folder contains datasets created during data cleaning and processing. 
-* If practical, a `clean` folder can contain cleaned output datasets, but note that it's often unclear when datasets are truly "clean" until late project stages.
+* If practical, a `clean` folder can contain cleaned output datasets, but note that it's often unclear when datasets are truly "clean" until late project stages. If this folder contains final data products to be shared, be sure to include [metadata documentation](../data-management/publication.qmd#metadata).
 
 ::: {.callout-note}
 For projects with small datasets, this folder can be version controlled, with larger files ignored using the `.gitignore` file. In this case, this folder would be a subfolder of individuals' repository folders.

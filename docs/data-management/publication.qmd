@@ -12,53 +12,64 @@ Increasingly, journals require code and data to be submitted along with the arti
 
 A well-chosen license clarifies permissions, prevents misunderstandings, and encourages responsible use. The next section provides guidance on selecting and attaching appropriate licenses to ensure your data and code remain accessible and properly credited.
 
-::: {.callout-note}
-Data and code products are licensed separately from RFF publication products. All work on the RFF.org and Resources.org websites (working papers, reports, issue briefs, explainers, Common Resources blog posts, Resources magazine articles, Resources Radio podcast episodes, graphs, charts, photographs, audio, and video) are listed under the Deed - Attribution-NonCommercial-NoDerivatives 4.0 International - Creative Commons license. This Creative Commons license is **not** suitable for either software or data.
-:::
+### Rights and ownership at RFF
 
-### Verify Data and Code Rights and Ownership
+**All agreements that involve the creation of RFF research or a similar work product must have terms that define intellectual property (IP) rights.** 
 
-Before proceeding with choosing licenses, confirm that your team owns IP rights to the work produced and has full discretion over licensing the project’s data and code—without restrictions from funders, institutional policies, or legal/data agreements.
+Before proceeding with choosing licenses, confirm that your team owns IP rights to the work produced and has full discretion over licensing the project’s data and code without restrictions from funders, institutional policies, or legal/data agreements.
 
 In some cases the research team may have joint IP ownership with partners or funders. In this case, licensing options must be agreed upon by both parties.
 
-### Choose Appropriate Licenses 
+In other cases, the research team may have licensing rights to software/code developed, but not data products. Data license restrictions generally do not restrict code licensing / publication.
 
-#### Common Licenses
+::: {.callout-note}
+Data and code products are licensed separately from **RFF publication products**. All work on the **RFF.org** and **Resources.org** websites (working papers, reports, issue briefs, explainers, Common Resources blog posts, Resources magazine articles, Resources Radio podcast episodes, graphs, charts, photographs, audio, and video) are listed under the Deed - Attribution-NonCommercial-NoDerivatives 4.0 International - Creative Commons license. This Creative Commons license is **not** suitable for either software or data.
+:::
 
-For software and data, there are three main license suites common in the academic space: *MIT*, *GNU GPL*, and *ODC*. *MIT* and *GNU GPL* are separate software licenses, while *ODC* has two commonly-used data licenses. All four are described below.
+### Choose appropriate licenses 
 
-##### Software licenses
+For software and data, there are three license suites common in the academic space: *MIT*, *GNU General Public License (GPL)*, and *Open Data Commons (ODC)*. *MIT* and *GNU GPL* are separate software licenses, while *ODC* has two commonly-used data licenses. All four are described below.
 
-*	[MIT](https://choosealicense.com/licenses/mit/): The more permissive and flexible. Users, including commercial entities, can view, use, modify, and distribute the work freely. Allows for commercial use and **enclosure**. **Attribution** is required.
+#### Software licenses
 
-(_**Enclosure** is the process of restricting access, usage, or modification of software or its source code through the imposition of licensing terms. It involves the application of intellectual property rights (such as copyright, patents, or trade secrets) to create boundaries around software, typically to protect the developer's or organization's control over its distribution and use._)
+| Attribute | MIT | GNU General Public Use (GPL) |
+|----------------|---------------|-----------|
+Link to license text |  [MIT](https://choosealicense.com/licenses/mit/) | [GNU GPL](https://choosealicense.com/licenses/gpl-3.0/) |
+Description | The more permissive and flexible. Users, including commercial entities, can view, use, modify, and distribute the work freely. | Users, including commercial entities, can view, use, modify, and distribute the work freely, but are subject to copyleft restrictions. |
+**Attribution** required | ✅ Yes | ✅ Yes |
+**Enclosure** allowed | ✅ Yes | ❌ No
+**Copyleft** required (**viral**) | ❌ No | ✅ Yes
+Best uses | Libraries and tools where broad reuse is encouraged, including in proprietary or closed-source contexts.| Models, scripts, and workflows where preserving long-term openness and share-alike reuse is a priority.
 
-(_**Attribution** refers to crediting to the original creator, author, or source as specified in the licensing terms. Attribution ensures recognition of the intellectual property and efforts of the creators while allowing others to use, modify, or distribute the licensed material._)
 
-* [GNU General Public License (GPL)](https://choosealicense.com/licenses/gpl-3.0/): Users, including commercial entities, can view, use, modify, and distribute the work freely. However, it carries **copyleft**, so all distributions must be released under the same GNU GPL license, ensuring open access (**viral**). **Attribution** is required.
+**Terms**:
 
-(_**Copyleft** is a concept in software (code/script) licensing that ensures any derivative works (modifications or adaptations) of a particular work remain subject to the same licensing terms as the original work. For example, if a developer modifies a program released under the GNU General Public License (GPL), they are required to distribute their modified version under the same GPL license. This means they must also make the source code available and allow others to freely use, modify, and redistribute it under the same terms. Copyleft aims to preserve software freedom by preventing proprietary restrictions from being reintroduced into derivative works._)
+* _**Enclosure**: The act of applying legal or technical restrictions—like proprietary licensing or copyright—to limit access, reuse, or modification of software or data that was previously open._
 
-(_**Viral**: Licenses like the GNU General Public License (GPL) and the Open Database License (ODbL) are often described as "viral" because they require derivative works to comply with the same licensing terms as the original work. This characteristic ensures that the freedoms granted by the license (such as the ability to use, modify, and share) are preserved in all subsequent versions or derivatives, but it also imposes specific obligations on those who modify or build upon the original._)
+* _**Attribution**: The requirement to credit the original creator or source as specified in the license. It ensures recognition while allowing reuse and modification._
+
+* _**Copyleft**: A license condition that requires derivative works to be distributed under the same terms as the original. It ensures continued openness by mandating that source code remains available and free to reuse._
+
+* _**Viral**: Describes licenses (like GPL or ODbL) that require any derivatives to adopt the same license. This spreads the original license’s terms to all adaptations, preserving openness but limiting reuse._
+
+#### Data licenses
+
+| Attribute | ODC-By | ODCbL |
+|----------------|---------------|-----------|
+Link to license text | [ODC-By](https://opendatacommons.org/licenses/by/1-0/) | [ODCbL](https://opendatacommons.org/licenses/odbl/) |
+Description | A permissive license for databases. Users, including commercial entities, may use, modify, redistribute, and build upon the data. | A copyleft license for databases. Users may use, modify, redistribute, but derivative databases must be shared under the same license. Ensures openness through a share-alike (viral) requirement. |
+**Attribution** required | ✅ Yes | ✅ Yes |
+**Enclosure** allowed | ✅ Yes | ❌ No |
+**Share-alike** required (**viral**) | ❌ No | ✅ Yes |
+Best uses | When the goal is to encourage broad academic and public reuse of a dataset, including by commercial entities, without requiring openness in derived products | Collaborative academic projects where ensuring that all derivative datasets remain openly accessible under the same terms is critical.
 
 
-##### Data licenses by Open Data Commons (ODC)
-* [ODC-By](https://opendatacommons.org/licenses/by/1-0/): The more permissive and flexible. Users, including commercial entities, can view, use, modify, and distribute the work freely. Allows for commercial use and **enclosure**. **Attribution** is required.
 
-* [ODCbL](https://opendatacommons.org/licenses/odbl/): Users, including commercial entities, can view, use, modify, and distribute the work freely. However, it carries **share-alike**, so all distributions must be released under the same ODCbL license, ensuring open access (**viral**). **Attribution** is required.
+* _**Share-alike**: A condition applied mainly to data and content (e.g., under CC BY-SA or ODbL), requiring that any adapted works use the same or a compatible open license (analogous to **copyleft**)._
 
-(_**Share-alike**, similar to **copyleft** but applied to datasets, requires that any derivative works of content (adaptations or modifications) are licensed under the same or a compatible license. This ensures that future users of the adapted work can use it under similar terms._)
+#### Other licenses
 
-#### Recommendations for selecting licenses
-
-1.	Adhere to any product licensing requirements from the funding agreement and the source data/software.
-
-2.	Consider whether the common academic licenses that are more permissive and flexible (MIT for software, ODC-By for data) are appropriate. If so, use those. These licenses are suitable for most applications.
-
-3.	If project authors/partners and RFF would prefer that all derivative works remain open source and accessible, use GNU GPLv3 plus citation request for software and ODbL for data. Caution that these licenses, because they are more restrictive, are more complex, so review license terms carefully.
-
-4. If there are other requirements or the team would like to review a broader range of software licenses and their specifications, visit [ChooseALicense](https://choosealicense.com/).
+If there are other requirements or the team would like to review a broader range of software licenses and their specifications, visit [ChooseALicense](https://choosealicense.com/).
 
 ### Create and customize license files
 
@@ -74,58 +85,69 @@ For software and data, there are three main license suites common in the academi
 
 ### Code
 
-When your project is ready to publish code—whether alongside a journal article, report, or other research output—there are a few options for how to share it, especially if your code is hosted on GitHub.
+When your project is ready to publish code stored in a GitHub repository (whether alongside a journal article, report, or other research output), it can be tagged to associate it with a publication and linked to the RFF GitHub organization.
 
-#### Note on journal requirements
-
-Some journals require authors to:
+Note that some journals require authors to:
 
 * Make the codebase publicly accessible
 * Include a link to the GitHub code repository in the manuscript
 * Reference the codebase DOI in the manuscript
 
-#### Sharing code via the RFF GitHub Organization
+#### Options to share repositories via the RFF GitHub Organization
 
-You can link your GitHub repository to the RFF GitHub organization in one of two ways:
+You can link your GitHub repository to the RFF GitHub organization in one of two ways: by forking it into the organization or by transferring ownership.
 
-##### Option 1: Forking into the RFF GitHub Organization
+##### Option 1: Fork into the RFF GitHub Organization
 
-* This approach is suitable for most situations and provides significant flexibility.
-* A fork creates a copy of your repository under the RFF organization account.
-* This snapshot can be tagged to align with a publication version (e.g., v1.0-paper-release).
-* The fork can be updated to stay in sync with the original repo, or kept as a fixed version.
-* Include a note in the README linking the snapshot to the relevant publication.
-* Note that while the RFF GitHub organization takes control of the new fork, the original repository owner retains administrative control of the upstream repository.
+Forking creates a new copy under the RFF GitHub organization's namespace. It can be kept in sync with the original or left unchanged.
 
-##### Option 2: Transferring Ownership to the RFF Organization
+This is the most flexible option and is well-suited when:
 
-For institutional or long-term projects, it may be most effective to **transfer ownership and administrative privileges** of the repository to the GitHub organization. This simplifies management and ensures continuity, especially during researcher transitions, by centralizing control in the organization rather than with an individual. Researchers can **retain collaborator-level permissions**, allowing them to push code, create branches, and submit pull requests.
+* You want to retain full ownership and admin control of the original repository.
+* The original repo belongs to an external collaborator or other GitHub organization.
+* You want to create a static snapshot of a repo to archive a version associated with a publication (e.g., `v1.0-paper-release`).
+* You intend to continue developing the code for purposes unrelated to RFF.
 
-* The repository is permanently transferred to the RFF GitHub organization.
-* All existing collaborators retain their roles.
-* The repository URL will change, but redirects will be preserved by GitHub.
-* Organization owners (e.g., staff managing RFF's GitHub) gain administrative control.
+To connect it to a research output:
+
+* Tag a release (e.g., `v1.0`).
+* Add a note in the README describing its relationship to the publication and original source (preferably, including a DOI).
+
+While the fork is housed in the organization, you retain full control of the upstream repo.
+
+##### Option 2: Transfer Ownership to the RFF Organization
+
+This option is best for long-term institutional or collaborative projects where:
+
+* The repository should be owned and managed by the organization rather than an individual.
+* Continuity is important (e.g., when researchers move institutions).
+* You're finished working on the project and no longer want to manage the repository.
+
+Key characteristics:
+
+* The original repo is moved to the GitHub organization, including its issues, branches, and history.
+* Collaborators retain their roles. Former repository owners can request to be made co-administrators (along with the organization), granting control over collaborator roles.
+* The URL changes but GitHub automatically redirects old links.
 
 #### Recommended Publishing Workflow
 
+1. If you are not already a member of the [RFF GitHub organization](https://github.com/rff-data-projects), request  membership by [emailing DGWG](mailto:dgwg@rff.org).
+
+2. Attach the appropriate license to the repository, if you have not done so already.
+
 If your repository is already in the RFF GitHub organization:
 
-1. Make the repository public once you're ready to publish if it isn't already.
+3. Make the repository public once you're ready to publish if it isn't already.
 
-2. Tag the publication version (e.g., v1.0-publication-name) as described [here](https://git-scm.com/book/en/v2/Git-Basics-Tagging).
-
-3. Archive the release on Zenodo if you need a DOI.
+4. Tag the publication version (e.g., v1.0-publication-name) as described [here](https://git-scm.com/book/en/v2/Git-Basics-Tagging). (Note: only admins can do this, request admin privileges if needed.)
 
 If your repository is under a personal GitHub account:
 
-1. Decide whether you will continue development:
+3. Decide between **forking** or **transferring** the repo to the RFF GitHub organization (see explanation of these options above).
 
-* If you are finished working on the project and no longer want administrative duties, consider transferring the repository to the RFF organizational GitHub.
-* If you intend to continue developing the code for purposes unrelated to RFF, request that the RFF GitHub account fork your repository to retain a version tied to the publication.
+4. Contact the RFF GitHub organization admins at [DGWG@rff.org](mailto:dgwg@rff.org) to initiate the fork or transfer and to add a tag (*note: tags do not transfer automatically when a repo is forked*).
 
-2. Contact the RFF GitHub organization admins at [DGWG@rff.org](mailto:dgwg@rff.org) to initiate the fork or transfer and add a tag associated with the publication (*note: tags do not transfer automatically when a repo is forked*).
-
-3. (**Optional**) Archive the tagged version on Zenodo and link the DOI in your README.
+5. (Optional step) Archive the tagged version on Zenodo and link the DOI in your README. This enables persistent citation, version-specific reference, and supports scholarly credit.
 
 ### Data
 
@@ -144,7 +166,7 @@ Below are the key components of metadata. They can be stored in a simple text or
 * Data Source(s): Origin of the data
 * Accuracy and Precision: Information about data quality
 * Access Constraints: Restrictions on data use
-* Attribute / field definitions: Define all abbreviations and coded entries 
+* Attribute / field definitions: Define all abbreviations and coded entries
 * Additional geospatial metadata components, if applicable
 *	Spatial Extent: Geographic coverage (bounding coordinates)
 *	Projection Information: Coordinate system details
@@ -160,7 +182,7 @@ In some contexts, generating machine-readable metadata that adheres to certain d
 Before uploading, ensure that:
 
 * The data is well-organized (e.g., structured folders, clear file names).
-* Metadata file are prepared for each data file or sets of data files, including dataset title, description, author names, and relevant keywords.
+* Metadata files are prepared for each data file or sets of data files.
 * A license is attached. 
 * Any [sensitive or restricted data](../data-management/sensitive-proprietary.qmd) is removed or anonymized (if applicable).
 * The project-level README is up to date.
@@ -179,9 +201,9 @@ For guidance on choosing which files to publish and how to handle API-accessed d
 * Enter metadata information in applicable fields (contributors, associated journal article or conference presentation, etc.)
 * Include a link to the GitHub code repository.
 * Choose an Access Level
-*	Open Access: Publicly available for anyone.
-* Embargoed: Set a release date if the data must remain private for a certain period.
-* Restricted Access: Requires users to request access.
+  *	Open Access: Publicly available for anyone.
+  * Embargoed: Set a release date if the data must remain private for a certain period.
+  * Restricted Access: Requires users to request access.
 
 ##### Step 4: Publish & Get a DOI
 * Review all details and make any necessary edits.

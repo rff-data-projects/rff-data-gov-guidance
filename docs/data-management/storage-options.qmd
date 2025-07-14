@@ -13,7 +13,7 @@ title: Storage Options
   * Use GitHub to share and review code.
   * For small datasets, GitHub may be used for both data and code storage.
   
-### Quick reference
+#### Quick reference
 
 | Component | Primary use | Notes |
 |----------------|---------------|-----------|
@@ -55,9 +55,13 @@ GitHub’s distributed version control system allows team members to:
 
 For example, you can revise a script locally and commit changes, with documentation, when they’re ready—without interfering with your colleague's workflow.
 
-To prevent users from simultaneously editing scripts stored within a shared folder, and to support use of version control, **each team member who will be viewing, running, or editing code should have their own personal folder containing a clone of the project's GitHub repository **. Specific suggestions for how to organize your project folder are in the [Organization](../data-management/organization.qmd#sec-directory-structure) section.
+To prevent users from simultaneously editing scripts stored within a shared folder, and to support use of version control, **each team member who will be viewing, running, or editing code should have their own personal folder containing a clone of the project's GitHub repository**. Specific suggestions for how to organize your project folder are in the [Organization](../data-management/organization.qmd#sec-directory-structure) section.
 
 See [Version Control](../version-control/index.qmd) for setup instructions.
+
+::: {.callout-note}
+For `renv` R package users: Accessing libraries and packages stored on the `L:/` drive can slow down R performance, especially when working remotely. Consider storing the `renv/library` on a local drive (e.g., `C:/`). You can redirect the project's library path by setting it in a `.Renviron` file.
+:::
 
 ## Solutions for collaborative projects {#collab}
 
