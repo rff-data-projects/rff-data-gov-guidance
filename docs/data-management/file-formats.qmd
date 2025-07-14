@@ -90,7 +90,7 @@ In cases where the native format of source data is in a proprietary software for
 
   - **Parquet (.parquet)** a binary columnar data format designed for efficient storage and processing of large datasets. Supports compression and is optimized for performance across data tools like `R`, `Python`, and `SQL` engines. Better file size efficiency than Feather.
 
-  - **RData (.rds, .rdata)** files used to store one `R` object (`.rds`) or an R environment with several objects (`.rdata`). Useful if working within an R project for efficiency and organization features, but providing limited interoperability.
+  - **RData (.rds, .rdata)** files used to store one R object (`.rds`) or an R environment with several objects (`.rdata`). Useful if working within an R project for efficiency and organization features, but providing limited interoperability.
 
   - **Lightning Fast Serialization of Data Frames (.fst)** a fast, compressed, columnar binary format designed specifically for `R`, optimized for high-speed reading and writing of large data frames. Ideal for efficient storage and selective column access in R workflows, but not designed for cross-language interoperability.
 
