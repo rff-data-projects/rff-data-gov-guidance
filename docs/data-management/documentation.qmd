@@ -71,10 +71,10 @@ __Product__ documentation provides information to accompany code and data of com
 
 ``` 
 project_name/
-├── readme.txt <<<<<<<
+├── README.txt <<<<<<<
 ├── data/
 │   ├── raw/
-│   │   ├── readme_raw_dataset.txt <<<<<<<
+│   │   ├── README_raw_dataset.txt <<<<<<<
 │   ├── intermediate/
 │   ├── clean/
 │   │   ├── metadata.txt <<<<<<<
