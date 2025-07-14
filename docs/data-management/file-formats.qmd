@@ -184,7 +184,7 @@ Vector data is stored as pairs of coordinates. Points, lines, and polygons are a
 - [Geopackage](https://www.geopackage.org/) (.gpkg, **recommended** for its [advantages](http://switchfromshapefile.org/) over the shapefile format)
 - Keyhole markup language (e.g., `.kml`, `.kmz`)
 - GeoJSON (e.g., `.json`, `.geojson`)
-- Tables with coordinates (e.g., `csv`)
+- Tables with coordinates (e.g., `.csv`)
 
 Common <span style="color:red;">proprietary</span> vector file formats:
 
