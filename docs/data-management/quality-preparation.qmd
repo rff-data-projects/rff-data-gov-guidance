@@ -32,7 +32,7 @@ If it is impossible to write code for processing steps, create a detailed record
 Quality assurance (QA) is ensuring the accuracy, consistency, and reliability of data.
 Quality assurance measures should be implemented on both raw data from external sources and your project's subsequent datasets; for example, after a major processing step such as data merging.
 
-Eight basic quality assurance measures are listed below, some of which were adapted from [@DMTraining].
+Basic quality assurance measures are listed below, some of which were adapted from [@DMTraining].
 
 1. **Read documentation / metadata** that accompanies source datasets.
 It often comes in separate files (text, pdf, word, xml, etc.).
