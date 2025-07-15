@@ -163,7 +163,7 @@ Hierarchical data formats are best suited for storing and exchanging complex, ne
 
 - **Network Common Data Form (.nc)**, commonly called **NetCDF**, files designed for array-oriented scientific data. They work especially well for multi-dimensional data like time-series and spatial data. 
 
-- **JavaScript Object Notation (.json)**, text-based files used for storing structured data. Often used to transfer data between a server and a web application, as well as when sending and receiving data via an API.
+- **JavaScript Object Notation (.json)**, text-based files used for storing structured data. Often used to transfer data between a server and a web application, as well as when sending and receiving data via an API. (See tips for working with JSON in [R](https://datacarpentry.github.io/r-socialsci/07-json.html) and [Python](https://towardsdatascience.com/working-with-json-data-in-python-45e25ff958ce/).)
 
 - **e*****X*****tensible Markup Language (.xml)**, files organizing data hierarchically with customizable tags, making them both machine-readable and human-readable. XML is widely used in web services, data exchange, and configuration files.
 

@@ -158,6 +158,7 @@ The following resources go into greater detail, with examples:
   * [Transform – R for Data Science (2e) (hadley.nz)](https://r4ds.hadley.nz/transform)
   * [R for Reproducible Scientific Analysis: Subsetting Data (swcarpentry.github.io)](https://swcarpentry.github.io/r-novice-gapminder/06-data-subsetting.html)
   * [R for Reproducible Scientific Analysis: Data Frame Manipulation with dplyr (swcarpentry.github.io)](https://swcarpentry.github.io/r-novice-gapminder/12-dplyr.html)
+  * [Data Carpentry: R for Social Scientists](https://datacarpentry.github.io/r-socialsci/index.html)
 * Python
   * [Data Analysis and Visualization in Python for Ecologists: Indexing, Slicing and Subsetting DataFrames in Python (datacarpentry.org)](https://datacarpentry.org/python-ecology-lesson/03-index-slice-subset.html)
   * [Data Analysis and Visualization in Python for Ecologists: Combining DataFrames with Pandas (datacarpentry.org)](https://datacarpentry.org/python-ecology-lesson/05-merging-data.html)
