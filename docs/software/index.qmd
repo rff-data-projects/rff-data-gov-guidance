@@ -3,7 +3,7 @@ title: Software Quality
 ---
 __Content coming soon.__ 
 
-Existing style guide resources:
+Style guide resources:
 
 * *R*: [Tidyverse Style Guide by Hadley Wickham](https://style.tidyverse.org/)
 * *Python*: [Google Python Style Guide](https://google.github.io/styleguide/pyguide.html)
