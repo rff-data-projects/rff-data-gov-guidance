@@ -37,6 +37,7 @@ website:
       - section: "Software Quality"
         href: docs/software/index.qmd
         contents:
+            - docs/software/index.qmd
           # - docs/software/setup.qmd
       - presentations/index.qmd
     tools:
