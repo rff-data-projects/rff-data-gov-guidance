@@ -1,0 +1,31 @@
+---
+title: Reproducibility
+---
+
+Introduction text
+
+## Readable code
+
+_**“Good coding style is like correct punctuation: you can manage without it, butitsuremakesthingseasiertoread”**- - [Tidyverse style guide](https://style.tidyverse.org/)
+
+Text
+
+```
+code example
+```
+
+
+## Project workflow documentation
+
+Text
+
+```
+code example
+```
+
+Text
+
+
+## Package management
+
+Text

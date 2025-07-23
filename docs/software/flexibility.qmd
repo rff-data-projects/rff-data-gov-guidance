@@ -1,0 +1,12 @@
+---
+title: Flexibility
+---
+
+Text
+
+* bullets
+* bullets
+
+```
+example of a function with parameterization and flexibility
+```

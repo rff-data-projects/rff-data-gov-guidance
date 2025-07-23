@@ -1,0 +1,29 @@
+---
+title: Accuracy
+---
+
+Introduction text
+
+## Pseudocoding
+
+Text
+
+```
+Example: pseudocode and code
+```
+
+## Testing and debugging during code development
+
+Text
+
+* bullets
+
+## Code review
+
+Text
+
+![](../../images/code_review.png)
+
+Text
+
+* bullets

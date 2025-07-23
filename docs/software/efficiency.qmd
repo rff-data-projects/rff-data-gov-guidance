@@ -1,0 +1,11 @@
+---
+title: Computational efficiency
+---
+
+Text
+
+* bullets
+
+
+![Insert 'flow chart for managing computational efficiency' here](pathtoimage)
+

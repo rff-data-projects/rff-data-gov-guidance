@@ -1,0 +1,47 @@
+---
+title: Resources
+---
+
+Intro text
+
+## General practices
+
+* Wilson et al. 2017
+* Daniel Sullivan's website
+
+## Common packages
+
+Text
+
+| col1 | col2 | col3 |
+|----------------|---------------|-----------|
+R | - base R<br />- tidyverse | etc. |
+
+## Learning guides by language
+
+### R
+
+#### General
+
+* bullet
+
+#### Beginner
+
+* bullet
+
+### GIS
+
+* bullet
+
+### Python
+
+### MATLAB
+
+### Stata
+
+### Julia
+
+
+
+
+
