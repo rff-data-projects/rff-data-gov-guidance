@@ -2,10 +2,9 @@
 title: "Version Control Tutorial: Basics"
 subtitle: "Working with Git Bash, GitHub, and making file changes"
 format:
-#   html: default
   revealjs:
-    code-line-numbers: false
-    # output-file: slides-index.html
+    theme: simple # Or another theme that supports custom CSS
+    self-contained: true # Makes the HTML self-contained
 ---
 ## Introduce Yourself to Git
 
