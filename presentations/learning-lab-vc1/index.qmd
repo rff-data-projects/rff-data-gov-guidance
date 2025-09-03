@@ -2,10 +2,9 @@
 title: "Version Control Tutorial: Basics"
 subtitle: "Working with Git Bash, GitHub, and making file changes"
 format:
-#   html: default
   revealjs:
-    code-line-numbers: false
-    # output-file: slides-index.html
+    theme: simple # Or another theme that supports custom CSS
+    self-contained: true # Makes the HTML self-contained
 ---
 
 ## What is Version Control?
@@ -152,22 +151,6 @@ The only exception is when a programming language’s best practices prescribe a
 
 We recommend choosing something concise and descriptive, all lowercase, with dashes separating words, like `my-repo-name`.
 
-## __Creating__ a Repository in GitHub {auto-animate="true"}
-
-::: {.notes}
-We recommend all lowercase names with dashes separating words, like `my-repo-name`.
-The only exception is when a programming language’s best practices prescribe a specific repository naming convention.
-(i.e. julia package repositories are supposed to be camelcase as in `MyRepoName.jl`)
-:::
-
-1. [Navigate to `github.com`, log in, and click the plus button in the top right corner]{.semi-transparent}
-
-2. [Select the repository owner, yourself!]{.semi-transparent}
-
-3. Choose a repository name.
-
-We recommend choosing something concise and descriptive, all lowercase, with dashes separating words, like `my-repo-name`.
-
 
 ## __Creating__ a Repository in GitHub {auto-animate="true"}
 
@@ -268,7 +251,7 @@ Git Bash has a _working directory_, which is the location that it is operating i
 
 1. Choose where to store the git repository and navigate there.
 
-This could be in a dedicated "repositories" folder on your C drive, or it could be within a team's project folder.
+This could be in a dedicated "repositories" folder on your C:/ drive, or it could be within a team's project folder.
 
 To navigate there, use the `cd` command in Git Bash:
 
@@ -288,8 +271,11 @@ It is necessary to use single quotes for filenames in Git Bash if there is a spa
 
 2. Copy the repository URL to the clipboard
 
-From the repository home page, click the button labeled `< > Code`, then copy the URL to clipboard by clicking the logo with intersecting squares.
+From the repository home page, click the green button, then copy the URL to clipboard by clicking the logo with intersecting squares.
 
+![](../../images/git-clone-2.png)
+
+![](../../images/git-clone-3.png)
 
 ## __Cloning__ Your First Repository With Git
 
