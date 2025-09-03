@@ -4,6 +4,7 @@ subtitle: "Working with Git Bash, GitHub, and making file changes"
 format:
   revealjs:
     theme: simple # Or another theme that supports custom CSS
+    code-line-numbers: false
     self-contained: true # Makes the HTML self-contained
 ---
 
@@ -273,7 +274,18 @@ It is necessary to use single quotes for filenames in Git Bash if there is a spa
 
 From the repository home page, click the green button, then copy the URL to clipboard by clicking the logo with intersecting squares.
 
-![](../../images/git-clone-2.png)
+![](../../images/git-clone-2.png){width=184 height=64}
+
+## __Cloning__ Your First Repository With Git
+
+::: {.notes}
+:::
+
+1. [Choose where to store the git repository and navigate there.]{.semi-transparent}
+
+2. Copy the repository URL to the clipboard
+
+From the repository home page, click the green button, then copy the URL to clipboard by clicking the logo with intersecting squares.
 
 ![](../../images/git-clone-3.png)
 
@@ -294,5 +306,5 @@ In the Git bash window, type `git clone ` then paste in the repository URL from 
 git clone https://github.com/<owner-name>/<repository-name>
 ```
 
-You will need to enter your GitHub credentials if it is private repository.
+You will need to enter your GitHub credentials if it is a private repository.
 
