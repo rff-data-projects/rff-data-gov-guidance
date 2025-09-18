@@ -465,6 +465,8 @@ To https://github.com/<owner-name>/<repository-name>
    def456g..a1b2c3d  main -> main
 ```
 
+## Sharing Changes with `git push`
+
 Now let's check our status one final time:
 
 ```bash
@@ -475,5 +477,31 @@ Your branch is up to date with 'origin/main'.
 nothing to commit, working tree clean
 ```
 
-Perfect! Our changes are now saved both locally and on GitHub.
+::: {.fragment}
+Perfect! Our changes are now saved both locally and on GitHub. Go ahead and open the repo on GitHub in your web browser to see the changes.
+:::
+
+## Recap
+
+::: {.notes}
+You've learned the fundamental Git workflow that you'll use daily. Remember that Git is a powerful tool that becomes easier with practice. The key is to commit early and often with clear, descriptive messages.
+:::
+
+At this point you should have:
+
+::: {.incremental style="list-style: none;"}
+* ✓ Created a repository on GitHub
+* ✓ Cloned it to your local machine
+* ✓ Made changes to files
+* ✓ Staged changes with `git add`
+* ✓ Committed changes with `git commit`
+* ✓ Pushed changes to GitHub with `git push`
+* ✓ Given yourself a pat on the back! 🎉
+:::
+
+## Next Steps:
+
+At the next workshop, we will focus on creating and managing branches and pull requests, which are key to collaborating with other team members on GitHub. 
+
+## Questions?
 
