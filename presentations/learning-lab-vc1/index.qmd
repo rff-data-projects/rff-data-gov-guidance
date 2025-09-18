@@ -47,7 +47,7 @@ Git
 
 :::
 
-## Git vs GitHub
+## Git versus GitHub
 
 ::: {.notes}
 Git works by monitoring the changes of the contents of an otherwise ordinary file folder, called a repository.
@@ -70,7 +70,9 @@ GitHub is a website that __hosts Git repositories__, and provides convenient way
 Git works by creating snapshots of your project at different points in time. Each commit represents a complete snapshot of your files. The branching system allows multiple versions to coexist and later be merged together.
 :::
 
-![Git Branching Structure](../../images/git-branching-diagram.png){height=4in}
+::: {style="overflow: hidden; height: 400px;"}
+![Git Branching Structure](../../images/git-branching-diagram.png){style="margin-top: -550px; height: 800px;"}
+:::
 
 Git tracks changes by creating __commits__ - snapshots of your project that form a branching tree structure over time.
 
@@ -99,16 +101,7 @@ The basic Git workflow follows these steps:
 The website contains comprehensive guides covering all these topics in detail, plus advanced workflows, best practices, and troubleshooting.
 :::
 
-For detailed guidance on all Git concepts and workflows covered today, visit our comprehensive tutorial:
-
-**[Git Tutorial](https://rff-data-projects.github.io/rff-data-gov-guidance/docs/version-control/tutorial-basics.html)**
-
-::: {.incremental}
-- Step-by-step Git and GitHub tutorials
-- Best practices for data management
-- Software quality guidelines
-- Advanced workflow examples
-:::
+**[The tutorial](https://rff-data-projects.github.io/rff-data-gov-guidance/docs/version-control/tutorial-basics.html)** available on the RFF data guidance website covers topics from this presentation in greater depth.
 
 ## Git Bash {auto-animate="true"}
 
@@ -216,7 +209,7 @@ For public repositories, you would also need to select which software license to
 
 4. Choose whether the repository is to be public or private.
 
-Generally, choose private for repositories that will contain sensitive information, and public if the project requires it to be public.  When in doubt, choose private!
+Generally, choose private for repositories that will contain sensitive information, and public if the project requires it to be public.  For today, choose private!
 
 ## __Creating__ a Repository in GitHub {auto-animate="true"}
 
