@@ -64,6 +64,53 @@ Git is a popular __version control system__, which is software we can download a
 GitHub is a website that __hosts Git repositories__, and provides convenient ways to host documentation, discuss code changes, and report bugs.
 :::
 
+## How Git Works: The Big Picture
+
+::: {.notes}
+Git works by creating snapshots of your project at different points in time. Each commit represents a complete snapshot of your files. The branching system allows multiple versions to coexist and later be merged together.
+:::
+
+![Git Branching Structure](https://user-images.githubusercontent.com/1256329/117236177-33599100-adf6-11eb-967c-5ef7898b55dc.png){height=4in}
+
+Git tracks changes by creating __commits__ - snapshots of your project that form a branching tree structure over time.
+
+## The Git Workflow: Theory
+
+::: {.notes}
+This is the fundamental workflow you'll use repeatedly: make changes locally, stage them, commit them with a message, then push to share with others.
+:::
+
+::: {style="font-size: 0.9em"}
+
+The basic Git workflow follows these steps:
+
+::: {.incremental}
+1. __Working Directory__ - Make changes to your files
+2. __Staging Area__ - Select which changes to include (`git add`)
+3. __Local Repository__ - Save a snapshot with a message (`git commit`)
+4. __Remote Repository__ - Share your changes (`git push`)
+:::
+
+Each step serves a purpose in maintaining clean, documented project history.
+
+:::
+
+## Additional Resources
+
+::: {.notes}
+The website contains comprehensive guides covering all these topics in detail, plus advanced workflows, best practices, and troubleshooting.
+:::
+
+For detailed guidance on all Git concepts and workflows covered today, visit our comprehensive documentation website:
+
+**[RFF Data Governance Guidance](https://rff-data-projects.github.io/rff-data-gov-guidance/)**
+
+The site includes:
+- Step-by-step Git tutorials
+- Best practices for data management
+- Software quality guidelines
+- Advanced workflow examples
+
 ## Git Bash {auto-animate="true"}
 
 There are many ways of using the Git software, but we will focus on __Git Bash__, a command line Git interface that comes with Git.
@@ -307,4 +354,134 @@ git clone https://github.com/<owner-name>/<repository-name>
 ```
 
 You will need to enter your GitHub credentials if it is a private repository.
+
+## Exploring Your Cloned Repository
+
+::: {.notes}
+Now that we have cloned the repository, let's explore what Git sees. The git status command is one of the most useful commands - it tells you the current state of your repository.
+:::
+
+After cloning, navigate into your repository folder:
+
+```bash
+cd <repository-name>
+```
+
+Now let's check the status of our repository:
+
+```bash
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+```
+
+This tells us we're on the main branch and everything is up to date!
+
+## Making Changes and Committing
+
+::: {.notes}
+Now let's make a change to our repository and learn how to commit it. We'll edit the README file to add some content.
+:::
+
+Let's make a change to the README.md file. Open it in a text editor and add some content:
+
+```markdown
+# My First Repository
+
+This is my first Git repository for learning version control!
+```
+
+Now let's see what Git thinks about our changes:
+
+```bash
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to include in what will be committed)
+        modified:   README.md
+```
+
+## Staging Changes with `git add`
+
+::: {.notes}
+Before we can commit changes, we need to stage them. This tells Git which changes we want to include in our next commit.
+:::
+
+Git detected our changes! Now we need to __stage__ them before committing:
+
+```bash
+$ git add README.md
+```
+
+Let's check the status again:
+
+```bash
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   README.md
+```
+
+Our changes are now staged and ready to commit!
+
+## Creating a Commit with `git commit`
+
+::: {.notes}
+A commit creates a permanent snapshot of the staged changes along with a descriptive message explaining what was changed and why.
+:::
+
+Now let's create a commit with a descriptive message:
+
+```bash
+$ git commit -m "Add description to README file"
+[main a1b2c3d] Add description to README file
+ 1 file changed, 3 insertions(+)
+```
+
+Let's check our status again:
+
+```bash
+$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+```
+
+## Sharing Changes with `git push`
+
+::: {.notes}
+Our commit exists locally, but we need to push it to GitHub so others can see our changes and so they're backed up remotely.
+:::
+
+Our local repository now has changes that aren't on GitHub yet. Let's __push__ them:
+
+```bash
+$ git push
+Counting objects: 3, done.
+Writing objects: 100% (3/3), 285 bytes | 285.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/<owner-name>/<repository-name>
+   def456g..a1b2c3d  main -> main
+```
+
+Now let's check our status one final time:
+
+```bash
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+```
+
+Perfect! Our changes are now saved both locally and on GitHub.
 
