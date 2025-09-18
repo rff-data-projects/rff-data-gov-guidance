@@ -15,6 +15,22 @@ format:
 .semi-transparent {
   opacity: 0.4;
 }
+.no-bullets {
+  list-style: none !important;
+  list-style-type: none !important;
+}
+.no-bullets li {
+  list-style: none !important;
+  list-style-type: none !important;
+  margin-left: 0 !important;
+  padding-left: 0 !important;
+}
+.no-bullets li::before {
+  content: none !important;
+}
+.no-bullets li::marker {
+  content: none !important;
+}
 </style>
 ```
 
@@ -249,7 +265,7 @@ Generally it is a good idea to select the .gitignore template for the programmin
 
 6. Choose a `.gitignore` template from the dropdown menu.
 
-Select the .gitignore template for the programming language you will be using.
+Select the .gitignore template for the programming language you will be using. Any language works for today.
 
 ## __Creating__ a Repository in GitHub {auto-animate="true"}
 
@@ -489,7 +505,7 @@ You've learned the fundamental Git workflow that you'll use daily. Remember that
 
 At this point you should have:
 
-::: {.incremental style="list-style: none;"}
+::: {.incremental .no-bullets}
 * ✓ Created a repository on GitHub
 * ✓ Cloned it to your local machine
 * ✓ Made changes to files
@@ -499,7 +515,7 @@ At this point you should have:
 * ✓ Given yourself a pat on the back! 🎉
 :::
 
-## Next Steps:
+## Next Steps
 
 At the next workshop, we will focus on creating and managing branches and pull requests, which are key to collaborating with other team members on GitHub. 
 
