@@ -12,6 +12,18 @@ title: Storage Options
   * Use OneDrive to share select data. Only store data in OneDrive that is necessary for collaboration.
   * Use GitHub to share and review code.
   * For small datasets, GitHub may be used for both data and code storage.
+  
+#### Quick reference
+
+| Component | Primary use | Notes |
+|----------------|---------------|-----------|
+|*Core tools* ||
+`L:/` drive | Data and script storage | - **Use for all projects**<br />- Regular backups<br />- Secure (RFF-only access)<br />- See guidance for setup instructions |
+GitHub | Script version control, script sharing | - **Use for all projects**<br />- Supports collaboration, history tracking, and (optionally) project management<br />- Can store and track small datasets |
+|*Additional tools for projects with external collaborators*||
+OneDrive | Sharing essential data with external partners | - Good for smaller files<br />- Shared access with external collaborators |
+Other cloud options | Sharing large datasets externally | - Azure, Google Bucket, AWS S3, Dropbox<br />- Contact [ITHelp@rff.org](mailto:ITHelp@rff.org) for Azure setup |
+ArcGIS Online | Sharing spatial data | - Share and visualize spatial data over web browser<br />- Contact [Thompson@rff.org](mailto:Thompson@rff.org) for setup |
 
 ## Internal RFF Projects
 
@@ -43,9 +55,13 @@ GitHub’s distributed version control system allows team members to:
 
 For example, you can revise a script locally and commit changes, with documentation, when they’re ready—without interfering with your colleague's workflow.
 
-To prevent users from simultaneously editing scripts stored within a shared folder, and to support use of version control, **each team member who will be viewing, running, or editing code should have their own personal folder containing a clone of the project's GitHub repository **. Specific suggestions for how to organize your project folder are in the [Organization](../data-management/organization.qmd#sec-directory-structure) section.
+To prevent users from simultaneously editing scripts stored within a shared folder, and to support use of version control, **each team member who will be viewing, running, or editing code should have their own personal folder containing a clone of the project's GitHub repository**. Specific suggestions for how to organize your project folder are in the [Organization](../data-management/organization.qmd#sec-directory-structure) section.
 
 See [Version Control](../version-control/index.qmd) for setup instructions.
+
+::: {.callout-note}
+For `renv` R package users: Accessing libraries and packages stored on the `L:/` drive can slow down R performance, especially when working remotely. Consider storing the `renv/library` on a local drive (e.g., `C:/`). You can redirect the project's library path by setting it in a `.Renviron` file.
+:::
 
 ## Solutions for collaborative projects {#collab}
 

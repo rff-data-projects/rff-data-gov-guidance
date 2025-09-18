@@ -26,7 +26,7 @@ website:
           - docs/data-management/quality-preparation.qmd
           - docs/data-management/archival.qmd
           - docs/data-management/publication.qmd
-      - section: "Version Control"
+      - section: "Version Control (Beta)"
         href: docs/version-control/index.qmd
         contents:
           - docs/version-control/setup.qmd
@@ -34,9 +34,10 @@ website:
           - docs/version-control/tutorial-branching.qmd
           - docs/version-control/workflows.qmd
           - docs/version-control/faq.qmd
-      - section: "Software Quality"
+      - section: "Software Quality (Coming Soon)"
         href: docs/software/index.qmd
         contents:
+            - docs/software/index.qmd
           # - docs/software/setup.qmd
       - presentations/index.qmd
     tools:

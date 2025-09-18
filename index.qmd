@@ -22,8 +22,8 @@ It includes practical support to:
 ## Site Outline
 * [Foundations](./docs/foundations/index.qmd)
 * [Data Management](./docs/data-management/index.qmd)
-* [Software Quality](./docs/software/index.qmd)
 * [Version Control](./docs/version-control/index.qmd)
+* [Software Quality](./docs/software/index.qmd)
 
 ## Questions and feedback
 
@@ -44,3 +44,8 @@ Members of the RFF Data Governance Working Group
 * Matthew Wibbenmeyer
 * Jordan Wingenroth
 * Alexandra Thompson
+
+## See also
+
+* [RFF Research Integrity Guidance](https://my.rff.org/research/rffs-research-integrity-guidance/)
+* [RFF Communication Norms and Guidelines](https://my.rff.org/human-resources/rff-communication-norms-and-guidelines/)
