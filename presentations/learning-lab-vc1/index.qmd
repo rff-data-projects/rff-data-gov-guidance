@@ -64,18 +64,6 @@ Git is a popular __version control system__, which is software we can download a
 GitHub is a website that __hosts Git repositories__, and provides convenient ways to host documentation, discuss code changes, and report bugs.
 :::
 
-## How Git Works: The Big Picture
-
-::: {.notes}
-Git works by creating snapshots of your project at different points in time. Each commit represents a complete snapshot of your files. The branching system allows multiple versions to coexist and later be merged together.
-:::
-
-::: {style="overflow: hidden; height: 400px;"}
-![Git Branching Structure](../../images/git-branching-diagram.png){style="margin-top: -550px; height: 800px;"}
-:::
-
-Git tracks changes by creating __commits__ - snapshots of your project that form a branching tree structure over time.
-
 ## The Git Workflow: Theory
 
 ::: {.notes}
@@ -94,6 +82,18 @@ The basic Git workflow follows these steps:
 :::
 
 :::
+
+## How Git Works: The Big Picture
+
+::: {.notes}
+Git works by creating snapshots of your project at different points in time. Each commit represents a complete snapshot of your files. The branching system allows multiple versions to coexist and later be merged together.
+:::
+
+::: {style="overflow: hidden; height: 400px;"}
+![Git Branching Structure](../../images/git-branching-diagram.png){style="margin-top: -550px; height: 800px;"}
+:::
+
+Git tracks changes by creating __commits__ - snapshots of your project that form a branching tree structure over time.
 
 ## Additional Resources
 
