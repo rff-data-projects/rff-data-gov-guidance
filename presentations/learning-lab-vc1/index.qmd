@@ -232,7 +232,7 @@ This should take you to the home page of your new repository
 
 7. Click the "Create Repository" button!!
 
-## __Cloning__ Your First Repository With Git
+## __Cloning__ Your First Repository With Git {auto-animate="true"}
 
 ::: {.notes}
 Now that we've made a remote repository, let's get it copied onto our computer.
@@ -242,7 +242,7 @@ This process will work the same way for any existing repository, including the o
 
 __Cloning__ = making a copy of a repository onto a computer.
 
-## __Cloning__ Your First Repository With Git
+## __Cloning__ Your First Repository With Git {auto-animate="true"}
 
 ::: {.notes}
 First, it's important to choose a good file location to store the git repository.  While it's not required, many people like to have a single folder to store all of their Git repositories.  An alternative would be to store the Git repository in an associated project folder.
@@ -263,7 +263,7 @@ cd `C:/Users/<my-user-name>/repos`
 It is necessary to use single quotes for filenames in Git Bash if there is a space in the path.
 :::
 
-## __Cloning__ Your First Repository With Git
+## __Cloning__ Your First Repository With Git {auto-animate="true"}
 
 ::: {.notes}
 :::
@@ -276,7 +276,7 @@ From the repository home page, click the green button, then copy the URL to clip
 
 ![](../../images/git-clone-2.png){width=184 height=64}
 
-## __Cloning__ Your First Repository With Git
+## __Cloning__ Your First Repository With Git {auto-animate="true"}
 
 ::: {.notes}
 :::
@@ -289,7 +289,7 @@ From the repository home page, click the green button, then copy the URL to clip
 
 ![](../../images/git-clone-3.png)
 
-## __Cloning__ Your First Repository With Git
+## __Cloning__ Your First Repository With Git {auto-animate="true"}
 
 ::: {.notes}
 :::
@@ -301,7 +301,7 @@ From the repository home page, click the green button, then copy the URL to clip
 3. Enter the `git clone <repo-url>` command in Git Bash.
 
 In the Git bash window, type `git clone ` then paste in the repository URL from your clipboard by right-clicking.  Altogether this would look like:
-  
+
 ```bash
 git clone https://github.com/<owner-name>/<repository-name>
 ```
