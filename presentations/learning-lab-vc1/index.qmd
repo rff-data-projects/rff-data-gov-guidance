@@ -70,7 +70,7 @@ GitHub is a website that __hosts Git repositories__, and provides convenient way
 Git works by creating snapshots of your project at different points in time. Each commit represents a complete snapshot of your files. The branching system allows multiple versions to coexist and later be merged together.
 :::
 
-![Git Branching Structure](https://user-images.githubusercontent.com/1256329/117236177-33599100-adf6-11eb-967c-5ef7898b55dc.png){height=4in}
+![Git Branching Structure](../../images/git-branching-diagram.png){height=4in}
 
 Git tracks changes by creating __commits__ - snapshots of your project that form a branching tree structure over time.
 
@@ -101,15 +101,16 @@ Each step serves a purpose in maintaining clean, documented project history.
 The website contains comprehensive guides covering all these topics in detail, plus advanced workflows, best practices, and troubleshooting.
 :::
 
-For detailed guidance on all Git concepts and workflows covered today, visit our comprehensive documentation website:
+For detailed guidance on all Git concepts and workflows covered today, visit our comprehensive tutorial:
 
-**[RFF Data Governance Guidance](https://rff-data-projects.github.io/rff-data-gov-guidance/)**
+**[Git Tutorial](https://rff-data-projects.github.io/rff-data-gov-guidance/docs/version-control/tutorial-basics.html)**
 
-The site includes:
-- Step-by-step Git tutorials
+::: {.incremental}
+- Step-by-step Git and GitHub tutorials
 - Best practices for data management
 - Software quality guidelines
 - Advanced workflow examples
+:::
 
 ## Git Bash {auto-animate="true"}
 
