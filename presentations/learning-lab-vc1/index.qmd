@@ -371,7 +371,7 @@ nothing to commit, working tree clean
 
 This tells us we're on the main branch and everything is up to date!
 
-## Making Changes and Committing
+## Making Changes
 
 ::: {.notes}
 Now let's make a change to our repository and learn how to commit it. We'll edit the README file to add some content.
