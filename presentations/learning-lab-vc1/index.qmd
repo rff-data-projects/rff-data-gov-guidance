@@ -125,6 +125,14 @@ There are many ways of using the Git software, but we will focus on __Git Bash__
 
 First, open Git Bash.  (Hit the windows key and type "bash")
 
+![](../../images/git-bash-cropped.png)
+
+## Git Bash {auto-animate="true"}
+
+There are many ways of using the Git software, but we will focus on __Git Bash__, a command line Git interface that comes with Git.
+
+First, open Git Bash.  (Hit the windows key and type "bash")
+
 Let's start by asking Git what version we are running:
 
 ```bash
@@ -151,22 +159,46 @@ $ git --version
 git version 2.47.0.windows.2
 ```
 
-## Introduce Yourself to Git
+## Introduce Yourself to Git {auto-animate="true"}
 
-Now, let's enter the following commands
-
-```bash
-$ git config --global user.name 'Your Name Here'
-$ git config --global user.email 'your-name-here@rff.org'
-```
-
-Now, Git will include your name and email when you publish changes!  Let's take a look at what configuration options Git has set. 
+1. First, check if Git is already configured:
 
 ```bash
 $ git config --global --list
-user.name=Ethan Russell
-user.email=erussell@rff.org
 ```
+
+If you see existing username and email settings, you can skip the next step.
+
+## Introduce Yourself to Git {auto-animate="true"}
+
+1. [First, check if Git is already configured:]{.semi-transparent}
+
+2. Configure using your username and email (if needed):
+
+```bash
+$ git config --global user.name 'you'
+$ git config --global user.email 'your_email@rff.org'
+```
+
+::: aside
+Your Git username and GitHub username don't necessarily have to match but it is simplest to keep them consistent.
+:::
+
+## Introduce Yourself to Git {auto-animate="true"}
+
+1. [First, check if Git is already configured:]{.semi-transparent}
+
+2. [Configure your username and email (if needed):]{.semi-transparent}
+
+3. Verify your configuration:
+
+```bash
+$ git config --global --list
+user.name=you
+user.email=your_email@rff.org
+```
+
+Now, Git will include your name and email when you publish changes!
 
 ## __Creating__ a Repository in GitHub {auto-animate="true"}
 
@@ -225,7 +257,7 @@ For public repositories, you would also need to select which software license to
 
 4. Choose whether the repository is to be public or private.
 
-Generally, choose private for repositories that will contain sensitive information, and public if the project requires it to be public.  For today, choose private!
+Generally, choose private for repositories that will contain sensitive information, and public if the project requires it to be public.  For today, choose private.
 
 ## __Creating__ a Repository in GitHub {auto-animate="true"}
 
@@ -295,7 +327,7 @@ Copying a remote Git repository is called _cloning_.
 This process will work the same way for any existing repository, including the one that we just made.
 :::
 
-__Cloning__ = making a copy of a repository onto a computer.
+__Cloning__ = making a copy of a repository on your computer
 
 ## __Cloning__ Your First Repository With Git {auto-animate="true"}
 
@@ -305,27 +337,7 @@ First, it's important to choose a good file location to store the git repository
 Git Bash has a _working directory_, which is the location that it is operating in.  To see what the current working directory is, we can enter the `pwd` command, which stands for **p**rimary **w**orking **d**irectory.
 :::
 
-1. Choose where to store the git repository and navigate there.
-
-This could be in a dedicated "repositories" folder on your C:/ drive, or it could be within a team's project folder.
-
-To navigate there, use the `cd` command in Git Bash:
-
-```bash
-cd `C:/Users/<my-user-name>/repos`
-```
-::: {.callout-note}
-It is necessary to use single quotes for filenames in Git Bash if there is a space in the path.
-:::
-
-## __Cloning__ Your First Repository With Git {auto-animate="true"}
-
-::: {.notes}
-:::
-
-1. [Choose where to store the git repository and navigate there.]{.semi-transparent}
-
-2. Copy the repository URL to the clipboard
+1. Copy the repository URL to the clipboard.
 
 From the repository home page, click the green button, then copy the URL to clipboard by clicking the logo with intersecting squares.
 
@@ -333,12 +345,7 @@ From the repository home page, click the green button, then copy the URL to clip
 
 ## __Cloning__ Your First Repository With Git {auto-animate="true"}
 
-::: {.notes}
-:::
-
-1. [Choose where to store the git repository and navigate there.]{.semi-transparent}
-
-2. Copy the repository URL to the clipboard
+1. Copy the repository URL to the clipboard.
 
 From the repository home page, click the green button, then copy the URL to clipboard by clicking the logo with intersecting squares.
 
@@ -346,12 +353,28 @@ From the repository home page, click the green button, then copy the URL to clip
 
 ## __Cloning__ Your First Repository With Git {auto-animate="true"}
 
+1. [Copy the repository URL to the clipboard.]{.semi-transparent} 
+
+2. Choose where to store the git repository and navigate there.
+
+To navigate there, use the `cd` command in Git Bash:
+
+```bash
+cd `C:/Users/<my-user-name>/repos`
+```
+::: aside
+For today, put this somewhere on your local hard drive. However, the data governance website provides guidelines for an [L:/ drive team project folder hierarchy](https://rff-data-projects.github.io/rff-data-gov-guidance/docs/data-management/organization.html#sec-directory-structure).
+
+:::
+
+## __Cloning__ Your First Repository With Git {auto-animate="true"}
+
 ::: {.notes}
 :::
 
-1. [Choose where to store the git repository and navigate there.]{.semi-transparent}
+1. [Copy the repository URL to the clipboard.]{.semi-transparent} 
 
-2. [Copy the repository URL to the clipboard]{.semi-transparent}
+2. [Choose where to store the git repository and navigate there.]{.semi-transparent} 
 
 3. Enter the `git clone <repo-url>` command in Git Bash.
 
@@ -360,8 +383,9 @@ In the Git bash window, type `git clone ` then paste in the repository URL from 
 ```bash
 git clone https://github.com/<owner-name>/<repository-name>
 ```
-
+::: aside
 You will need to enter your GitHub credentials if it is a private repository.
+:::
 
 ## Exploring Your Cloned Repository
 
