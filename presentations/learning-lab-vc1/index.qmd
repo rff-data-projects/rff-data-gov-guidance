@@ -41,7 +41,7 @@ Sort of like how Microsoft Word will periodically save versions that you can ret
 
 __Version control__ is a way of recording changes to a file or set of files over time so that you can recall specific versions later.
 
-Most common VC systems:
+The most common VC systems are:
 
 * ::: {.fragment .highlight-green}
 Git 
@@ -49,7 +49,7 @@ Git
 * Mercurial
 * Subversion (SVN)
 
-## Why should I use Git?
+## Why should I use Git and GitHub?
 ::: {style="font-size: 0.85em"}
 
 ::: {.incremental}
@@ -80,44 +80,80 @@ Git is a popular __version control system__, which is software we can download a
 GitHub is a website that __hosts Git repositories__, and provides convenient ways to host documentation, discuss code changes, and report bugs.
 :::
 
-## The Git Workflow: Theory
+## The basic Git workflow
 
 ::: {.notes}
 This is the fundamental workflow you'll use repeatedly: make changes locally, stage them, commit them with a message, then push to share with others.
 :::
 
-::: {style="font-size: 0.9em"}
-
-The basic Git workflow follows these steps:
+Minimalistic Git use in your coding workflow involves only a few concepts, all of which we'll cover today:
 
 ::: {.incremental}
-1. __Working Directory__ - Make changes to your files
-2. __Staging Area__ - Select which changes to include (`git add`)
-3. __Local Repository__ - Save a snapshot with a message (`git commit`)
-4. __Remote Repository__ - Share your changes (`git push`)
+1. __Repository__ - A folder for storing code, with a special subdirectory containing the Git magic
+2. __Staging__ - Reviewing your changes and selecting which ones to "`add`"
+3. __Local Branch__ - Where you "`commit`" your changes, including a descriptive message
+4. __Remote Branch__ - Where you "`push`" your changes to share them with others
 :::
 
+## The bigger picture {auto-animate="true"}
+
+::: {.notes}
+Git works by creating snapshots of your project at different points in time. The branching system allows multiple versions to coexist and later be merged together.
 :::
 
-## How Git Works: The Big Picture
+::: {style="overflow: hidden; height: 400px;"}
+![](../../images/git-branching-diagram.png){style="margin-top: -550px; height: 800px;"}
+:::
+
+The repository accumulates changes incrementally as you build upon the project.
+
+## The bigger picture {auto-animate="true"}
+
+::: {.notes}
+Git works by creating snapshots of your project at different points in time. The branching system allows multiple versions to coexist and later be merged together.
+:::
+
+::: {style="overflow: hidden; height: 400px;"}
+![](../../images/git-branching-diagram.png){style="margin-top: -550px; height: 800px;"}
+:::
+
+Unlike a system that archives versions of entire files or folders, Git is space-efficient. 
+
+## The bigger picture {auto-animate="true"}
+
+::: {.notes}
+Git works by creating snapshots of your project at different points in time. The branching system allows multiple versions to coexist and later be merged together.
+:::
+
+::: {style="overflow: hidden; height: 400px;"}
+![](../../images/git-branching-diagram.png){style="margin-top: -550px; height: 800px;"}
+:::
+
+Each time you `commit` changes, only insertions and deletions are tracked by Git, along with information about their location within the repository.
+
+## The bigger picture {auto-animate="true"}
 
 ::: {.notes}
 Git works by creating snapshots of your project at different points in time. Each commit represents a complete snapshot of your files. The branching system allows multiple versions to coexist and later be merged together.
 :::
 
 ::: {style="overflow: hidden; height: 400px;"}
-![Git Branching Structure](../../images/git-branching-diagram.png){style="margin-top: -550px; height: 800px;"}
+![](../../images/git-branching-diagram.png){style="margin-top: -550px; height: 800px;"}
 :::
 
-Git tracks changes by creating __commits__ - snapshots of your project that form a branching tree structure over time.
+Git makes it easy to `checkout` past versions of code, which can be helpful when you need to undo changes or figure out why your current code doesn't work.
 
-## Additional Resources
+## The bigger picture {auto-animate="true"}
 
 ::: {.notes}
-The website contains comprehensive guides covering all these topics in detail, plus advanced workflows, best practices, and troubleshooting.
+Git works by creating snapshots of your project at different points in time. Each commit represents a complete snapshot of your files. The branching system allows multiple versions to coexist and later be merged together.
 :::
 
-**[The tutorial](https://rff-data-projects.github.io/rff-data-gov-guidance/docs/version-control/tutorial-basics.html)** available on the RFF data guidance website covers topics from this presentation in greater depth.
+::: {style="overflow: hidden; height: 400px;"}
+![](../../images/git-branching-diagram.png){style="margin-top: -550px; height: 800px;"}
+:::
+
+Branching (the image above being a preview) will be covered in the next workshop. **[The tutorial](https://rff-data-projects.github.io/rff-data-gov-guidance/docs/version-control/tutorial-basics.html)** available on the RFF data guidance website provides more detail on all different aspects of version control.
 
 ## Git Bash {auto-animate="true"}
 
@@ -181,14 +217,14 @@ $ git config --global user.email 'your_email@rff.org'
 ```
 
 ::: aside
-Your Git username and GitHub username don't necessarily have to match but it is simplest to keep them consistent.
+Your Git username and GitHub username don't necessarily have to match, but it is simplest to keep them consistent.
 :::
 
 ## Introduce Yourself to Git {auto-animate="true"}
 
 1. [First, check if Git is already configured:]{.semi-transparent}
 
-2. [Configure your username and email (if needed):]{.semi-transparent}
+2. [Configure using your username and email (if needed):]{.semi-transparent}
 
 3. Verify your configuration:
 
@@ -198,7 +234,7 @@ user.name=you
 user.email=your_email@rff.org
 ```
 
-Now, Git will include your name and email when you publish changes!
+Git will now include your name and email when you publish changes!
 
 ## __Creating__ a Repository in GitHub {auto-animate="true"}
 
@@ -363,7 +399,7 @@ To navigate there, use the `cd` command in Git Bash:
 cd `C:/Users/<my-user-name>/repos`
 ```
 ::: aside
-For today, put this somewhere on your local hard drive. However, the data governance website provides guidelines for an [L:/ drive team project folder hierarchy](https://rff-data-projects.github.io/rff-data-gov-guidance/docs/data-management/organization.html#sec-directory-structure).
+For today, put this somewhere on your local hard drive. However, the data governance website provides guidelines for an [L:/ drive team project folder hierarchy](https://rff-data-projects.github.io/rff-data-gov-guidance/docs/data-management/organization.html#sec-directory-structure) that is worth considering for actual Git implementations.
 
 :::
 
