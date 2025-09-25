@@ -86,7 +86,7 @@ GitHub is a website that __hosts Git repositories__, and provides convenient way
 This is the fundamental workflow you'll use repeatedly: make changes locally, stage them, commit them with a message, then push to share with others.
 :::
 
-Minimalistic Git use in your coding workflow involves only a few concepts, all of which we'll cover today:
+Minimalist Git use in your coding workflow involves only a few concepts, all of which we'll cover today:
 
 ::: {.incremental}
 1. __Repository__ - A folder for storing code, with a special subdirectory containing the Git magic
@@ -101,9 +101,7 @@ Minimalistic Git use in your coding workflow involves only a few concepts, all o
 Git works by creating snapshots of your project at different points in time. The branching system allows multiple versions to coexist and later be merged together.
 :::
 
-::: {style="overflow: hidden; height: 400px;"}
-![](../../images/git-branching-diagram.png){style="margin-top: -550px; height: 800px;"}
-:::
+![](../../images/git-branching-diagram-cropped.png)
 
 The repository accumulates changes incrementally as you build upon the project.
 
@@ -113,23 +111,13 @@ The repository accumulates changes incrementally as you build upon the project.
 Git works by creating snapshots of your project at different points in time. The branching system allows multiple versions to coexist and later be merged together.
 :::
 
-::: {style="overflow: hidden; height: 400px;"}
-![](../../images/git-branching-diagram.png){style="margin-top: -550px; height: 800px;"}
-:::
+![](../../images/git-branching-diagram-cropped.png)
 
 Unlike a system that archives versions of entire files or folders, Git is space-efficient. 
 
-## The bigger picture {auto-animate="true"}
-
-::: {.notes}
-Git works by creating snapshots of your project at different points in time. The branching system allows multiple versions to coexist and later be merged together.
-:::
-
-::: {style="overflow: hidden; height: 400px;"}
-![](../../images/git-branching-diagram.png){style="margin-top: -550px; height: 800px;"}
-:::
-
+::: {.fragment}
 Each time you `commit` changes, only insertions and deletions are tracked by Git, along with information about their location within the repository.
+:::
 
 ## The bigger picture {auto-animate="true"}
 
@@ -137,23 +125,13 @@ Each time you `commit` changes, only insertions and deletions are tracked by Git
 Git works by creating snapshots of your project at different points in time. Each commit represents a complete snapshot of your files. The branching system allows multiple versions to coexist and later be merged together.
 :::
 
-::: {style="overflow: hidden; height: 400px;"}
-![](../../images/git-branching-diagram.png){style="margin-top: -550px; height: 800px;"}
-:::
+![](../../images/git-branching-diagram-cropped.png)
 
 Git makes it easy to `checkout` past versions of code, which can be helpful when you need to undo changes or figure out why your current code doesn't work.
 
-## The bigger picture {auto-animate="true"}
-
-::: {.notes}
-Git works by creating snapshots of your project at different points in time. Each commit represents a complete snapshot of your files. The branching system allows multiple versions to coexist and later be merged together.
-:::
-
-::: {style="overflow: hidden; height: 400px;"}
-![](../../images/git-branching-diagram.png){style="margin-top: -550px; height: 800px;"}
-:::
-
+::: aside
 Branching (the image above being a preview) will be covered in the next workshop. **[The tutorial](https://rff-data-projects.github.io/rff-data-gov-guidance/docs/version-control/tutorial-basics.html)** available on the RFF data guidance website provides more detail on all different aspects of version control.
+:::
 
 ## Git Bash {auto-animate="true"}
 
