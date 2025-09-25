@@ -447,7 +447,8 @@ On branch main
 Your branch is up to date with 'origin/main'.
 
 Changes not staged for commit:
-  (use "git add <file>..." to include in what will be committed)
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
         modified:   README.md
 ```
 
@@ -502,7 +503,7 @@ Your branch is ahead of 'origin/main' by 1 commit.
 nothing to commit, working tree clean
 ```
 
-## Sharing Changes with `git push`
+## Sharing Changes with `git push` {auto-animate="true"}
 
 ::: {.notes}
 Our commit exists locally, but we need to push it to GitHub so others can see our changes and so they're backed up remotely.
@@ -512,12 +513,31 @@ Our local repository now has changes that aren't on GitHub yet. Let's __push__ t
 
 ```bash
 $ git push
-Counting objects: 3, done.
-Writing objects: 100% (3/3), 285 bytes | 285.00 KiB/s, done.
-Total 3 (delta 0), reused 0 (delta 0)
-To https://github.com/<owner-name>/<repository-name>
-   def456g..a1b2c3d  main -> main
 ```
+
+## Sharing Changes with `git push` {auto-animate="true"}
+
+::: {.notes}
+Our commit exists locally, but we need to push it to GitHub so others can see our changes and so they're backed up remotely.
+:::
+
+Our local repository now has changes that aren't on GitHub yet. Let's __push__ them:
+
+```bash
+$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 10 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 314 bytes | 314.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/<owner-name>/<repository-name>.git
+   9c99bfd..aa653de  main -> main
+```
+
+::: aside
+The text response may vary slightly depending on your Git version. So long as there are no obvious errors, you are fine for today.
+:::
 
 ## Sharing Changes with `git push`
 
