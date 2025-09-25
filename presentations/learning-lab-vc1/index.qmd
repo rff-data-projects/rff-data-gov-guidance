@@ -130,7 +130,7 @@ Git works by creating snapshots of your project at different points in time. Eac
 Git makes it easy to `checkout` past versions of code, which can be helpful when you need to undo changes or figure out why your current code doesn't work.
 
 ::: aside
-Branching (the image above being a preview) will be covered in the next workshop. **[The tutorial](https://rff-data-projects.github.io/rff-data-gov-guidance/docs/version-control/tutorial-basics.html)** available on the RFF data guidance website provides more detail on all different aspects of version control.
+Branching (the image above being a preview) will be covered in the next workshop. See **[the RFF data guidance tutorial](https://rff-data-projects.github.io/rff-data-gov-guidance/docs/version-control/tutorial-branching.html)** if you want to learn more in the meantime.
 :::
 
 ## Git Bash {auto-animate="true"}
