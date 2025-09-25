@@ -398,7 +398,7 @@ In the Git bash window, type `git clone ` then paste in the repository URL from 
 git clone https://github.com/<owner-name>/<repository-name>
 ```
 ::: aside
-You will need to enter your GitHub credentials if it is a private repository.
+You may need to enter your GitHub credentials if it is a private repository.
 :::
 
 ## Exploring Your Cloned Repository
