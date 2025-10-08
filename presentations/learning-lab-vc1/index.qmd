@@ -91,46 +91,40 @@ Minimalist Git use in your coding workflow involves only a few concepts, all of 
 ::: {.incremental}
 1. __Repository__ - A folder for storing code, with a special subdirectory containing the Git magic
 2. __Staging__ - Reviewing your changes and selecting which ones to "`add`"
-3. __Local Branch__ - Where you "`commit`" your changes, including a descriptive message
-4. __Remote Branch__ - Where you "`push`" your changes to share them with others
+3. __Local Copy__ - A copy (clone) of the repository on your computer where you "`commit`" your changes
+4. __Remote Copy__ - The copy of the repo on a server (GitHub) where you "`push`" your changes to share them with others
 :::
 
-## The bigger picture {auto-animate="true"}
+## In practice {auto-animate="true"}
 
 ::: {.notes}
 Git works by creating snapshots of your project at different points in time. The branching system allows multiple versions to coexist and later be merged together.
 :::
-
-![](../../images/git-branching-diagram-cropped.png)
 
 The repository accumulates changes incrementally as you build upon the project.
 
-## The bigger picture {auto-animate="true"}
+## In practice {auto-animate="true"}
 
 ::: {.notes}
 Git works by creating snapshots of your project at different points in time. The branching system allows multiple versions to coexist and later be merged together.
 :::
 
-![](../../images/git-branching-diagram-cropped.png)
-
-Unlike a system that archives versions of entire files or folders, Git is space-efficient. 
+Unlike a system that archives versions of entire files or folders, Git is space-efficient.
 
 ::: {.fragment}
 Each time you `commit` changes, only insertions and deletions are tracked by Git, along with information about their location within the repository.
 :::
 
-## The bigger picture {auto-animate="true"}
+## In practice {auto-animate="true"}
 
 ::: {.notes}
 Git works by creating snapshots of your project at different points in time. Each commit represents a complete snapshot of your files. The branching system allows multiple versions to coexist and later be merged together.
 :::
 
-![](../../images/git-branching-diagram-cropped.png)
-
 Git makes it easy to `checkout` past versions of code, which can be helpful when you need to undo changes or figure out why your current code doesn't work.
 
 ::: aside
-Branching (the image above being a preview) will be covered in the next workshop. See **[the RFF data guidance tutorial](https://rff-data-projects.github.io/rff-data-gov-guidance/docs/version-control/tutorial-branching.html)** if you want to learn more in the meantime.
+Branching will be covered in the next workshop. See **[the RFF data guidance tutorial](https://rff-data-projects.github.io/rff-data-gov-guidance/docs/version-control/tutorial-branching.html)** if you want to learn more in the meantime.
 :::
 
 ## Git Bash {auto-animate="true"}
@@ -185,20 +179,28 @@ If you see existing username and email settings, you can skip the next step.
 
 ## Introduce Yourself to Git {auto-animate="true"}
 
+::: {.notes}
+Replace the example username and email with your own GitHub username and email address.
+:::
+
 1. [First, check if Git is already configured:]{.semi-transparent}
 
 2. Configure using your username and email (if needed):
 
 ```bash
-$ git config --global user.name 'you'
-$ git config --global user.email 'your_email@rff.org'
+$ git config --global user.name 'jmwingenroth'
+$ git config --global user.email 'my_github_account_email@aol.com'
 ```
 
 ::: aside
-Your Git username and GitHub username don't necessarily have to match, but it is simplest to keep them consistent.
+It is best to use the same username and email as your GitHub account to keep them consistent.
 :::
 
 ## Introduce Yourself to Git {auto-animate="true"}
+
+::: {.notes}
+Replace the example username and email with your own GitHub username and email address.
+:::
 
 1. [First, check if Git is already configured:]{.semi-transparent}
 
@@ -208,11 +210,15 @@ Your Git username and GitHub username don't necessarily have to match, but it is
 
 ```bash
 $ git config --global --list
-user.name=you
-user.email=your_email@rff.org
+user.name=jmwingenroth
+user.email=my_github_account_email@aol.com
 ```
 
 Git will now include your name and email when you publish changes!
+
+::: aside
+It is best to use the same username and email as your GitHub account to keep them consistent.
+:::
 
 ## __Creating__ a Repository in GitHub {auto-animate="true"}
 
@@ -235,7 +241,7 @@ The repository owner will show up in the URL of the repository
 
 The owner's name will appear in the URL of the repository:
 
-`github.com/<owner-name>/<repository-name>`
+`github.com/jmwingenroth/repository-name`
 
 ## __Creating__ a Repository in GitHub {auto-animate="true"}
 
@@ -271,7 +277,7 @@ For public repositories, you would also need to select which software license to
 
 4. Choose whether the repository is to be public or private.
 
-Generally, choose private for repositories that will contain sensitive information, and public if the project requires it to be public.  For today, choose private.
+Generally, choose private for repositories that will contain sensitive information, and public if the project requires it to be public. __For today, choose private.__
 
 ## __Creating__ a Repository in GitHub {auto-animate="true"}
 
@@ -367,17 +373,20 @@ From the repository home page, click the green button, then copy the URL to clip
 
 ## __Cloning__ Your First Repository With Git {auto-animate="true"}
 
-1. [Copy the repository URL to the clipboard.]{.semi-transparent} 
+1. [Copy the repository URL to the clipboard.]{.semi-transparent}
 
-2. Choose where to store the git repository and navigate there.
+2. Create a folder called "repos"
 
-To navigate there, use the `cd` command in Git Bash:
+Open File Explorer, navigate to the folder where you'd like to store your code, create a folder named `repos`, and copy the file path using the right-click menu.
+
+Then, navigate there using the `cd` command in Git Bash:
 
 ```bash
-cd `C:/Users/<my-user-name>/repos`
+cd C:/Users/Jordan/repos
 ```
+
 ::: aside
-For today, put this somewhere on your local hard drive. However, the data governance website provides guidelines for an [L:/ drive team project folder hierarchy](https://rff-data-projects.github.io/rff-data-gov-guidance/docs/data-management/organization.html#sec-directory-structure) that is worth considering for actual Git implementations.
+For today, put this somewhere on your local hard drive. However, the data governance website provides guidelines for an [L:/ drive team project folder hierarchy](https://rff-data-projects.github.io/rff-data-gov-guidance/docs/data-management/organization.html#sec-directory-structure) that is recommended for actual Git implementations.
 
 :::
 
@@ -392,13 +401,17 @@ For today, put this somewhere on your local hard drive. However, the data govern
 
 3. Enter the `git clone <repo-url>` command in Git Bash.
 
-In the Git bash window, type `git clone ` then paste in the repository URL from your clipboard by right-clicking.  Altogether this would look like:
+::: {.notes}
+Replace the example URL with your actual repository URL from your clipboard.
+:::
+
+In the Git bash window, type `git clone ` then paste in the repository URL from your clipboard by right-clicking:
 
 ```bash
-git clone https://github.com/<owner-name>/<repository-name>
+git clone https://github.com/jmwingenroth/my-first-repo
 ```
 ::: aside
-You may need to enter your GitHub credentials if it is a private repository.
+Since we set the repository to "private", you may be prompted to enter your GitHub credentials.
 :::
 
 ## Exploring Your Cloned Repository
@@ -452,6 +465,28 @@ Changes not staged for commit:
         modified:   README.md
 ```
 
+## Viewing Changes with `git diff`
+
+::: {.notes}
+Before staging changes, it's often helpful to review exactly what has changed in your files. The git diff command shows you the specific lines that were added, removed, or modified.
+:::
+
+To see the specific changes you made, use `git diff`:
+
+```bash
+$ git diff
+diff --git a/README.md b/README.md
+index e69de29..9f4d96d 100644
+--- a/README.md
++++ b/README.md
+@@ -0,0 +1,2 @@
+ # My First Repository
++
++This is my first Git repository for learning version control!
+```
+
+The output shows lines added (in green with `+`) and lines removed (in red with `-`), as well as the unchanged title line that GitHub added automatically.
+
 ## Staging Changes with `git add`
 
 ::: {.notes}
@@ -489,7 +524,7 @@ Now let's create a commit with a descriptive message:
 ```bash
 $ git commit -m "Add description to README file"
 [main a1b2c3d] Add description to README file
- 1 file changed, 3 insertions(+)
+ 1 file changed, 2 insertions(+)
 ```
 
 Let's check our status again:
@@ -509,7 +544,7 @@ nothing to commit, working tree clean
 Our commit exists locally, but we need to push it to GitHub so others can see our changes and so they're backed up remotely.
 :::
 
-Our local repository now has changes that aren't on GitHub yet. Let's __push__ them:
+Our local repository now has changes that aren't on GitHub yet. Let's `push` them:
 
 ```bash
 $ git push
@@ -521,7 +556,7 @@ $ git push
 Our commit exists locally, but we need to push it to GitHub so others can see our changes and so they're backed up remotely.
 :::
 
-Our local repository now has changes that aren't on GitHub yet. Let's __push__ them:
+Our local repository now has changes that aren't on GitHub yet. Let's `push` them:
 
 ```bash
 $ git push
@@ -531,7 +566,7 @@ Delta compression using up to 10 threads
 Compressing objects: 100% (2/2), done.
 Writing objects: 100% (3/3), 314 bytes | 314.00 KiB/s, done.
 Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
-To https://github.com/<owner-name>/<repository-name>.git
+To https://github.com/jmwingenroth/my-first-repo.git
    9c99bfd..aa653de  main -> main
 ```
 
@@ -552,7 +587,7 @@ nothing to commit, working tree clean
 ```
 
 ::: {.fragment}
-Perfect! Our changes are now saved both locally and on GitHub. Go ahead and open the repo on GitHub in your web browser to see the changes.
+Perfect! Our changes are now saved both locally and on GitHub. Open or refresh the repo page in your web browser to see the changes.
 :::
 
 ## Recap
