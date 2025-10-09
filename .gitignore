@@ -6,3 +6,4 @@
 *.Rhistory
 CLAUDE.md
 .claude/
+.DS_Store
