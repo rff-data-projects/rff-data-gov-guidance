@@ -2,60 +2,621 @@
 title: "Version Control Tutorial: Basics"
 subtitle: "Working with Git Bash, GitHub, and making file changes"
 format:
-#   html: default
   revealjs:
+    theme: simple # Or another theme that supports custom CSS
     code-line-numbers: false
-    # output-file: slides-index.html
+    self-contained: true # Makes the HTML self-contained
 ---
-## Introduce Yourself to Git
 
-First, open Git Bash.  (Hit the windows key and type "bash")
+## What is Version Control?
 
-
-## Introduce Yourself to Git {auto-animate="true"}
-
-First, open Git Bash.  (Hit the windows key and type "bash")
-
-```bash
-RFF@Theophilus MINGW64 ~
-$ 
+```{=html}
+<style>
+.semi-transparent {
+  opacity: 0.4;
+}
+.no-bullets {
+  list-style: none !important;
+  list-style-type: none !important;
+}
+.no-bullets li {
+  list-style: none !important;
+  list-style-type: none !important;
+  margin-left: 0 !important;
+  padding-left: 0 !important;
+}
+.no-bullets li::before {
+  content: none !important;
+}
+.no-bullets li::marker {
+  content: none !important;
+}
+</style>
 ```
 
-## Introduce Yourself to Git {auto-animate=true}
 
-Now, let's ask Git what version we are running:
+::: {.notes}
+Sort of like how Microsoft Word will periodically save versions that you can return to.
+:::
+
+__Version control__ is a way of recording changes to a file or set of files over time so that you can recall specific versions later.
+
+The most common VC systems are:
+
+* ::: {.fragment .highlight-green}
+Git 
+:::
+* Mercurial
+* Subversion (SVN)
+
+## Why should I use Git and GitHub?
+::: {style="font-size: 0.85em"}
+
+::: {.incremental}
+* _Peace of Mind_ - work is stored safely and can be easily recalled
+* _Collaboration_ - multiple versions can be developed in tandem, allowing parallel feature development
+* _Review and Discussion_ - GitHub allows for easy review of code changes before incorporating into the main branch of the repository
+* _Documentation_ - shows when, why, and by whom specific changes were made
+* _Consolidation_ - Project code and documentation can be stored in the same location.
+* _Preservation and Access_ - Easy web browser access to all code versions, can control whether public or private.
+:::
+
+:::
+
+## Git versus GitHub
+
+::: {.notes}
+Git works by monitoring the changes of the contents of an otherwise ordinary file folder, called a repository.
+In a Git repository, a user can tell Git which file changes to keep, which to discard, and can label those changes, go back to previous file versions, and much more!
+:::
+
+![Git Logo](../../images/git-logo.png){height=0.7in}\
+
+Git is a popular __version control system__, which is software we can download and use on our computer.
+
+::: {.fragment}
+![GitHub Logo](../../images/github-logo.png){height=0.7in}\
+
+GitHub is a website that __hosts Git repositories__, and provides convenient ways to host documentation, discuss code changes, and report bugs.
+:::
+
+## The basic Git workflow
+
+::: {.notes}
+This is the fundamental workflow you'll use repeatedly: make changes locally, stage them, commit them with a message, then push to share with others.
+:::
+
+Minimalist Git use in your coding workflow involves only a few concepts, all of which we'll cover today:
+
+::: {.incremental}
+1. __Repository__ - A folder for storing code, with a special subdirectory containing the Git magic
+2. __Staging__ - Reviewing your changes and selecting which ones to "`add`"
+3. __Local Copy__ - A copy (clone) of the repository on your computer where you "`commit`" your changes
+4. __Remote Copy__ - The copy of the repo on a server (GitHub) where you "`push`" your changes to share them with others
+:::
+
+## The basic Git workflow
+
+![](../../images/git_flowchart.jpg)
+
+## In practice
+
+::: {.notes}
+Git works by creating snapshots of your project at different points in time. Each commit represents a complete snapshot of your files. The branching system allows multiple versions to coexist and later be merged together.
+:::
+
+::: {.incremental}
+* The repository accumulates changes incrementally as you build upon the project.
+* When you `commit` changes, Git tracks insertions and deletions instead of saving multiple copies, minimizing memory use.
+* Git also makes it easy to `checkout` past versions of code to diagnose issues or to `branch` multiple versions to develop in parallel.
+:::
+
+## In practice
+
+* The repository accumulates changes incrementally as you build upon the project.
+* When you `commit` changes, Git tracks insertions and deletions instead of saving multiple copies, minimizing memory use.
+* Git also makes it easy to `checkout` past versions of code to diagnose issues or to `branch` multiple versions to develop in parallel.
+
+::: aside
+Branching will be covered in the next workshop. See **[the RFF data guidance tutorial](https://rff-data-projects.github.io/rff-data-gov-guidance/docs/version-control/tutorial-branching.html)** if you want to learn more in the meantime.
+:::
+
+## Git Bash {auto-animate="true"}
+
+There are many ways of using the Git software, but we will focus on __Git Bash__, a command line Git interface that comes with Git.
+
+First, open Git Bash.  (Hit the Windows key and type "bash")
+
+![](../../images/git-bash-cropped.png)
+
+## Git Bash {auto-animate="true"}
+
+There are many ways of using the Git software, but we will focus on __Git Bash__, a command line Git interface that comes with Git.
+
+First, open Git Bash.  (Hit the windows key and type "bash")
+
+Let's start by asking Git what version we are running:
 
 ```bash
-RFF@Theophilus MINGW64 ~
 $ git --version
 ```
 
-## Introduce Yourself to Git {auto-animate=true}
+## Git Bash {auto-animate="true"}
 
-Now, let's ask Git what version we are running:
+::: {.notes}
+Git Bash is __one__ way to access Git.
+It is not the only way, nor necessarily the way you will always use.
+Many common code editors like RStudio and Visual Studio Code have some form of Git interface built in, and you may consider using those.
+For the tutorial, however, we will focus on Git Bash because it comes with Git and it is good for teaching the fundamentals of Git.
+:::
+
+There are many ways of using the Git software, but we will focus on __Git Bash__, a command line Git interface that comes with Git.
+
+First, open Git Bash.  (Hit the windows key and type "bash")
+
+Let's start by asking Git what version we are running:
 
 ```bash
-RFF@Theophilus MINGW64 ~
 $ git --version
 git version 2.47.0.windows.2
 ```
 
-## new page
+## Introduce Yourself to Git {auto-animate="true"}
 
-In the Git Bash window, you can type all kinds of commands, including Git commands, which are always prependended with "git", or bash commands that are commonly run in terminals.
-
-Let's start with:
+1. First, check if Git is already configured:
 
 ```bash
-git --version
+$ git config --global --list
 ```
 
-It should have printed out what version you are running, something like `git version 1.47.0.windows.2`.  Now, let's introduce ourselves to Git:
+If you see existing username and email settings, you can skip the next step.
+
+## Introduce Yourself to Git {auto-animate="true"}
+
+::: {.notes}
+Replace the example username and email with your own GitHub username and email address.
+:::
+
+1. [First, check if Git is already configured:]{.semi-transparent}
+
+2. Configure using your username and email (if needed):
 
 ```bash
-git config --global user.name 'Your Name Here'
-git config --global user.email 'your-name-here@rff.org'
-git config --global --list
+$ git config --global user.name 'jmwingenroth'
+$ git config --global user.email 'my_github_account_email@aol.com'
 ```
 
-Now, Git will include your name and email when you publish changes.
+::: aside
+It is best to use the same username and email as your GitHub account to keep them consistent.
+:::
+
+## Introduce Yourself to Git {auto-animate="true"}
+
+::: {.notes}
+Replace the example username and email with your own GitHub username and email address.
+:::
+
+1. [First, check if Git is already configured:]{.semi-transparent}
+
+2. [Configure using your username and email (if needed):]{.semi-transparent}
+
+3. Verify your configuration:
+
+```bash
+$ git config --global --list
+user.name=jmwingenroth
+user.email=my_github_account_email@aol.com
+```
+
+Git will now include your name and email when you publish changes!
+
+::: aside
+It is best to use the same username and email as your GitHub account to keep them consistent.
+:::
+
+## __Creating__ a Repository in GitHub {auto-animate="true"}
+
+1. Navigate to `github.com`, log in, and click the plus button in the top right corner
+
+![Creating a Repository](../../images/git-create-repo.png)\
+
+## __Creating__ a Repository in GitHub {auto-animate="true"}
+
+::: {.notes}
+GitHub provides a structure called "Organizations", which can have multiple users with different roles, and can even own repositories.  Your project teams can discuss whether or not it makes sense to have a GitHub organization.
+
+So, for the owner, you could either select your user account, or an organization you are a member of.
+The repository owner will show up in the URL of the repository
+:::
+
+1. [Navigate to `github.com`, log in, and click the plus button in the top right corner]{.semi-transparent}
+
+2. Select the repository owner, yourself!
+
+The owner's name will appear in the URL of the repository:
+
+`github.com/jmwingenroth/repository-name`
+
+## __Creating__ a Repository in GitHub {auto-animate="true"}
+
+::: {.notes}
+We recommend all lowercase names with dashes separating words, like `my-repo-name`.
+The only exception is when a programming language’s best practices prescribe a specific repository naming convention.
+(i.e. julia package repositories are supposed to be camelcase as in `MyRepoName.jl`)
+:::
+
+1. [Navigate to `github.com`, log in, and click the plus button in the top right corner]{.semi-transparent}
+
+2. [Select the repository owner, yourself!]{.semi-transparent}
+
+3. Choose a repository name.
+
+We recommend choosing something concise and descriptive, all lowercase, with dashes separating words, like `my-repo-name`.
+
+
+## __Creating__ a Repository in GitHub {auto-animate="true"}
+
+::: {.notes}
+Generally, choose private for repositories that will contain sensitive information, and public if the project requires it to be public.
+It is easy to change from private to public later on, so when in doubt choose private.
+
+For public repositories, you would also need to select which software license to use, and you can find more information about that on the website.
+:::
+
+1. [Navigate to `github.com`, log in, and click the plus button in the top right corner]{.semi-transparent}
+
+2. [Select the repository owner, yourself!]{.semi-transparent}
+
+3. [Choose a repository name.]{.semi-transparent}
+
+4. Choose whether the repository is to be public or private.
+
+Generally, choose private for repositories that will contain sensitive information, and public if the project requires it to be public. __For today, choose private.__
+
+## __Creating__ a Repository in GitHub {auto-animate="true"}
+
+::: {.notes}
+This will create a file called `README.md` located in the repository's root folder, where you can later add basic documentation for the repository.
+:::
+
+1. [Navigate to `github.com`, log in, and click the plus button in the top right corner]{.semi-transparent}
+
+2. [Select the repository owner, yourself!]{.semi-transparent}
+
+3. [Choose a repository name.]{.semi-transparent}
+
+4. [Choose whether the repository is to be public or private.]{.semi-transparent}
+
+5. Check the box to add a README file.
+
+We will use this to store documentation for the repository.
+
+## __Creating__ a Repository in GitHub {auto-animate="true"}
+
+::: {.notes}
+A `.gitignore` file specifies certain file types that Git will not track the changes of, by default.
+For example, it is best to ignore an auto-created config file made by R studio that is user-specific.
+Generally it is a good idea to select the .gitignore template for the programming language you will be using.
+:::
+
+1. [Navigate to `github.com`, log in, and click the plus button in the top right corner]{.semi-transparent}
+
+2. [Select the repository owner, yourself!]{.semi-transparent}
+
+3. [Choose a repository name.]{.semi-transparent}
+
+4. [Choose whether the repository is to be public or private.]{.semi-transparent}
+
+5. [Check the box to add a README file.]{.semi-transparent}
+
+6. Choose a `.gitignore` template from the dropdown menu.
+
+Select the .gitignore template for the programming language you will be using. Any language works for today.
+
+## __Creating__ a Repository in GitHub {auto-animate="true"}
+
+::: {.notes}
+This should take you to the home page of your new repository
+:::
+
+1. [Navigate to `github.com`, log in, and click the plus button in the top right corner]{.semi-transparent}
+
+2. [Select the repository owner, yourself!]{.semi-transparent}
+
+3. [Choose a repository name.]{.semi-transparent}
+
+4. [Choose whether the repository is to be public or private.]{.semi-transparent}
+
+5. [Check the box to add a README file.]{.semi-transparent}
+
+6. [Choose a `.gitignore` template from the dropdown menu.]{.semi-transparent}
+
+7. Click the "Create Repository" button!!
+
+## __Cloning__ Your First Repository With Git {auto-animate="true"}
+
+::: {.notes}
+Now that we've made a remote repository, let's get it copied onto our computer.
+Copying a remote Git repository is called _cloning_.
+This process will work the same way for any existing repository, including the one that we just made.
+:::
+
+__Cloning__ = making a copy of a repository on your computer
+
+## __Cloning__ Your First Repository With Git {auto-animate="true"}
+
+::: {.notes}
+First, it's important to choose a good file location to store the git repository.  While it's not required, many people like to have a single folder to store all of their Git repositories.  An alternative would be to store the Git repository in an associated project folder.
+
+Git Bash has a _working directory_, which is the location that it is operating in.  To see what the current working directory is, we can enter the `pwd` command, which stands for **p**rimary **w**orking **d**irectory.
+:::
+
+1. Copy the repository URL to the clipboard.
+
+From the repository home page, click the green button, then copy the URL to clipboard by clicking the logo with intersecting squares.
+
+![](../../images/git-clone-2.png){width=184 height=64}
+
+## __Cloning__ Your First Repository With Git {auto-animate="true"}
+
+1. Copy the repository URL to the clipboard.
+
+From the repository home page, click the green button, then copy the URL to clipboard by clicking the logo with intersecting squares.
+
+![](../../images/git-clone-3.png)
+
+## __Cloning__ Your First Repository With Git {auto-animate="true"}
+
+1. [Copy the repository URL to the clipboard.]{.semi-transparent}
+
+2. Create a folder called "repos"
+
+Open File Explorer, navigate to the folder where you'd like to store your code, create a folder named `repos`, and copy the file path using the right-click menu.
+
+Then, navigate there using the `cd` command in Git Bash:
+
+```bash
+cd C:/Users/Jordan/repos
+```
+
+::: aside
+For today, put this somewhere on your local hard drive. However, the data governance website provides guidelines for an [L:/ drive team project folder hierarchy](https://rff-data-projects.github.io/rff-data-gov-guidance/docs/data-management/organization.html#sec-directory-structure) that is recommended for actual Git implementations.
+
+:::
+
+## __Cloning__ Your First Repository With Git {auto-animate="true"}
+
+::: {.notes}
+:::
+
+1. [Copy the repository URL to the clipboard.]{.semi-transparent} 
+
+2. [Choose where to store the git repository and navigate there.]{.semi-transparent} 
+
+3. Enter the `git clone <repo-url>` command in Git Bash.
+
+::: {.notes}
+Replace the example URL with your actual repository URL from your clipboard.
+:::
+
+In the Git bash window, type `git clone ` then paste in the repository URL from your clipboard by right-clicking:
+
+```bash
+git clone https://github.com/jmwingenroth/my-first-repo
+```
+::: aside
+Since we set the repository to "private", you may be prompted to enter your GitHub credentials.
+:::
+
+## Exploring Your Cloned Repository
+
+::: {.notes}
+Now that we have cloned the repository, let's explore what Git sees. The git status command is one of the most useful commands - it tells you the current state of your repository.
+:::
+
+After cloning, navigate into your repository folder:
+
+```bash
+cd <repository-name>
+```
+
+Now let's check the status of our repository:
+
+```bash
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+```
+
+This tells us we're on the main branch and everything is up to date!
+
+## Making Changes
+
+::: {.notes}
+Now let's make a change to our repository and learn how to commit it. We'll edit the README file to add some content.
+:::
+
+Let's make a change to the README.md file. Open it in a text editor and add some content:
+
+```markdown
+# My First Repository
+
+This is my first Git repository for learning version control!
+```
+
+Now let's see what Git thinks about our changes:
+
+```bash
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+```
+
+## Viewing Changes with `git diff`
+
+::: {.notes}
+Before staging changes, it's often helpful to review exactly what has changed in your files. The git diff command shows you the specific lines that were added, removed, or modified.
+:::
+
+To see the specific changes you made, use `git diff`:
+
+```bash
+$ git diff
+diff --git a/README.md b/README.md
+index e69de29..9f4d96d 100644
+--- a/README.md
++++ b/README.md
+@@ -0,0 +1,2 @@
+ # My First Repository
++
++This is my first Git repository for learning version control!
+```
+
+The output shows lines added (in green with `+`) and lines removed (in red with `-`), as well as the unchanged title line that GitHub added automatically.
+
+## Staging Changes with `git add`
+
+::: {.notes}
+Before we can commit changes, we need to stage them. This tells Git which changes we want to include in our next commit.
+:::
+
+Git detected our changes! Now we need to __stage__ them before committing:
+
+```bash
+$ git add README.md
+```
+
+Let's check the status again:
+
+```bash
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   README.md
+```
+
+Our changes are now staged and ready to commit!
+
+## Creating a Commit with `git commit`
+
+::: {.notes}
+A commit creates a permanent snapshot of the staged changes along with a descriptive message explaining what was changed and why.
+:::
+
+Now let's create a commit with a descriptive message:
+
+```bash
+$ git commit -m "Add description to README file"
+[main a1b2c3d] Add description to README file
+ 1 file changed, 2 insertions(+)
+```
+
+Let's check our status again:
+
+```bash
+$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+```
+
+## Creating a Commit with `git commit`
+
+::: {.notes}
+A commit creates a permanent snapshot of the staged changes along with a descriptive message explaining what was changed and why.
+:::
+
+![](../../images/git_commit_2x.png){width=800 fig-align="center"}
+
+::: aside
+For some advice on writing reader-friendly commit messages, see [this guide](https://cbea.ms/git-commit/).
+:::
+
+## Sharing Changes with `git push` {auto-animate="true"}
+
+::: {.notes}
+Our commit exists locally, but we need to push it to GitHub so others can see our changes and so they're backed up remotely.
+:::
+
+Our local repository now has changes that aren't on GitHub yet. Let's `push` them:
+
+```bash
+$ git push
+```
+
+## Sharing Changes with `git push` {auto-animate="true"}
+
+::: {.notes}
+Our commit exists locally, but we need to push it to GitHub so others can see our changes and so they're backed up remotely.
+:::
+
+Our local repository now has changes that aren't on GitHub yet. Let's `push` them:
+
+```bash
+$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 10 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 314 bytes | 314.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/jmwingenroth/my-first-repo.git
+   9c99bfd..aa653de  main -> main
+```
+
+::: aside
+The text response may vary slightly depending on your Git version. So long as there are no obvious errors, you are fine for today.
+:::
+
+## Sharing Changes with `git push`
+
+Now let's check our status one final time:
+
+```bash
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+```
+
+::: {.fragment}
+Perfect! Our changes are now saved both locally and on GitHub. Open or refresh the repo page in your web browser to see the changes.
+:::
+
+## Recap
+
+::: {.notes}
+You've learned the fundamental Git workflow that you'll use daily. Remember that Git is a powerful tool that becomes easier with practice. The key is to commit early and often with clear, descriptive messages.
+:::
+
+At this point you should have:
+
+::: {.incremental .no-bullets}
+* ✓ Created a repository on GitHub
+* ✓ Cloned it to your local machine
+* ✓ Made changes to files
+* ✓ Staged changes with `git add`
+* ✓ Committed changes with `git commit`
+* ✓ Pushed changes to GitHub with `git push`
+* ✓ Given yourself a pat on the back! 🎉
+:::
+
+## Next Steps
+
+At the next workshop, we will focus on creating and managing branches and pull requests, which are key to collaborating with other team members on GitHub. 
+
+## Questions?
+

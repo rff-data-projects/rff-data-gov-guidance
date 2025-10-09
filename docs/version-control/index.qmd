@@ -7,7 +7,7 @@ title: Version Control (Beta)
 Version control is a system that records changes to a file or set of files over time so that you can recall specific versions later.
 You know how Microsoft Word will periodically save your file, and you can recover previous versions if you really mess up?  That is a simple form of version control. Other forms offer far more functionality, including the ability to save and recover versions of an entire project, tools for collaboration, and more. 
 
-Some commonly used version control systems are Git, Mercurial, and SVN.
+Some commonly used version control systems are Git, Mercurial, and Subversion (SVN).
 Here at RFF, we strongly advise using Git, which we will discuss for the remainder of the section.
 We also recommend using GitHub to host Git repositories online.
 Here are some of the benefits of using Git with GitHub for version control:
@@ -20,11 +20,9 @@ Here are some of the benefits of using Git with GitHub for version control:
 
 * __Documents__ when, why, and by whom specific changes were made, which helps with debugging and troubleshooting
 
-* __Consolidates__ project code and documentation in the same, easily-accessible, backed-up location.
+* __Consolidates__  and __Organizes__ project code and documentation in the same, easily-accessible, backed-up location.
 
 * __Preserves__ easy web browser access to all versions of code.
-
-* __Organizes__ documentation so it can be kept alongside the code itself
 
 * __Provides public access__ to datasets and code under the auspices of a software license
 
@@ -41,4 +39,4 @@ In a Git repository, a user can tell Git which file changes to keep, which to di
 
 While it is possible to use Git only on your computer without posting it online, it is often advisable to host repositories online so that they are synced in the cloud, making it easy to share them and back them up.
 There are many websites that can host Git repositories, but the most popular is called **GitHub**, which is what we recommend using at RFF. (Some others you may come across GitLab and BitBucket)
-Not only does GitHub host these repositories, but it also provides convenient ways to host documentations, discuss code changes, and report bugs.
+Not only does GitHub host these repositories, but it also provides convenient ways to host documentation, discuss code changes, and report bugs.
