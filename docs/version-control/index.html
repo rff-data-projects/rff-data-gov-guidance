@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.32">
+<meta name="generator" content="quarto-1.8.25">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -33,14 +33,15 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../images/black-logo.svg" rel="icon" type="image/svg+xml">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-1896e83911af34675497f549448d848d.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-9f88139499ab34d0be280f8e93ff1602.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -99,7 +100,8 @@ ul.task-list li input[type="checkbox"] {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
       <a href="../../index.html" class="sidebar-logo-link">
-      <img src="../../images/black-logomark-vertical.svg" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      <img src="../../images/black-logomark-vertical.svg" alt="" class="sidebar-logo light-content py-0 d-lg-inline d-none">
+      <img src="../../images/black-logomark-vertical.svg" alt="" class="sidebar-logo dark-content py-0 d-lg-inline d-none">
       </a>
     <div class="sidebar-title mb-0 py-0">
       <a href="../../">Data Guidance for Researchers</a> 
@@ -304,15 +306,14 @@ ul.task-list li input[type="checkbox"] {
 <section id="what-is-version-control-and-what-can-it-do-for-you" class="level2" data-number="1">
 <h2 data-number="1" class="anchored" data-anchor-id="what-is-version-control-and-what-can-it-do-for-you"><span class="header-section-number">1</span> What is version control and what can it do for you?</h2>
 <p>Version control is a system that records changes to a file or set of files over time so that you can recall specific versions later. You know how Microsoft Word will periodically save your file, and you can recover previous versions if you really mess up? That is a simple form of version control. Other forms offer far more functionality, including the ability to save and recover versions of an entire project, tools for collaboration, and more.</p>
-<p>Some commonly used version control systems are Git, Mercurial, and SVN. Here at RFF, we strongly advise using Git, which we will discuss for the remainder of the section. We also recommend using GitHub to host Git repositories online. Here are some of the benefits of using Git with GitHub for version control:</p>
+<p>Some commonly used version control systems are Git, Mercurial, and Subversion (SVN). Here at RFF, we strongly advise using Git, which we will discuss for the remainder of the section. We also recommend using GitHub to host Git repositories online. Here are some of the benefits of using Git with GitHub for version control:</p>
 <ul>
 <li><p>Grants <strong>peace of mind</strong> knowing work is stored safely and can be recalled with minimal effort, which gives greater <strong>liberty</strong> to test out new ideas (even when a computer breaks!)</p></li>
 <li><p>Facilitates <strong>collaboration</strong> by allowing multiple versions to coexist and efficiently borrow code from one another</p></li>
 <li><p>Enables efficient <strong>review and discussion</strong> of code changes before incorporating them into the main branch of the repository</p></li>
 <li><p><strong>Documents</strong> when, why, and by whom specific changes were made, which helps with debugging and troubleshooting</p></li>
-<li><p><strong>Consolidates</strong> project code and documentation in the same, easily-accessible, backed-up location.</p></li>
+<li><p><strong>Consolidates</strong> and <strong>Organizes</strong> project code and documentation in the same, easily-accessible, backed-up location.</p></li>
 <li><p><strong>Preserves</strong> easy web browser access to all versions of code.</p></li>
-<li><p><strong>Organizes</strong> documentation so it can be kept alongside the code itself</p></li>
 <li><p><strong>Provides public access</strong> to datasets and code under the auspices of a software license</p></li>
 <li><p><strong>Empowers audiences</strong> to answer their own questions about the data and methods used in publications, reducing overhead for researchers who would otherwise be given that task</p></li>
 </ul>
@@ -321,7 +322,7 @@ ul.task-list li input[type="checkbox"] {
 <section id="version-control-basics" class="level2" data-number="2">
 <h2 data-number="2" class="anchored" data-anchor-id="version-control-basics"><span class="header-section-number">2</span> Version Control Basics</h2>
 <p>Before we get started in using Git for version control, let’s cover a few basic principles. <strong>Git</strong> is a popular version control system, which is software that we can download and use on our computer. Git works by monitoring the changes of the contents of an otherwise ordinary file folder, called a repository. In a Git repository, a user can tell Git which file changes to keep, which to discard, and can label those changes, go back to previous file versions, and much more!</p>
-<p>While it is possible to use Git only on your computer without posting it online, it is often advisable to host repositories online so that they are synced in the cloud, making it easy to share them and back them up. There are many websites that can host Git repositories, but the most popular is called <strong>GitHub</strong>, which is what we recommend using at RFF. (Some others you may come across GitLab and BitBucket) Not only does GitHub host these repositories, but it also provides convenient ways to host documentations, discuss code changes, and report bugs.</p>
+<p>While it is possible to use Git only on your computer without posting it online, it is often advisable to host repositories online so that they are synced in the cloud, making it easy to share them and back them up. There are many websites that can host Git repositories, but the most popular is called <strong>GitHub</strong>, which is what we recommend using at RFF. (Some others you may come across GitLab and BitBucket) Not only does GitHub host these repositories, but it also provides convenient ways to host documentation, discuss code changes, and report bugs.</p>
 
 
 </section>
@@ -378,13 +379,14 @@ ul.task-list li input[type="checkbox"] {
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy

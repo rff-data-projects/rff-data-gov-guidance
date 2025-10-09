@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.32">
+<meta name="generator" content="quarto-1.8.25">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -68,14 +68,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../../images/black-logo.svg" rel="icon" type="image/svg+xml">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-1896e83911af34675497f549448d848d.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-9f88139499ab34d0be280f8e93ff1602.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -134,7 +135,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
       <a href="../../index.html" class="sidebar-logo-link">
-      <img src="../../images/black-logomark-vertical.svg" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      <img src="../../images/black-logomark-vertical.svg" alt="" class="sidebar-logo light-content py-0 d-lg-inline d-none">
+      <img src="../../images/black-logomark-vertical.svg" alt="" class="sidebar-logo dark-content py-0 d-lg-inline d-none">
       </a>
     <div class="sidebar-title mb-0 py-0">
       <a href="../../">Data Guidance for Researchers</a> 
@@ -349,11 +351,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>First, open Git Bash. You can hit the windows key and type “bash” and it should pop up for you to open.</p>
 <p>In the Git Bash window, you can type all kinds of commands, including Git commands, which are always prependended with “git”, or bash commands that are commonly run in terminals.</p>
 <p>Let’s start with:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> <span class="at">--version</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> <span class="at">--version</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>It should have printed out what version you are running, something like <code>git version 1.47.0.windows.2</code>. Now, let’s introduce ourselves to Git:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> user.name <span class="st">'Your Name Here'</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> user.name <span class="st">'Your Name Here'</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> user.email <span class="st">'your-name-here@rff.org'</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> <span class="at">--list</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> <span class="at">--list</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Now, Git will include your name and email when you publish changes.</p>
 </section>
 <section id="creating-a-repository-in-github" class="level2" data-number="2">
@@ -382,9 +384,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Now that we’ve made a remote repository, let’s get it copied onto our computer. Copying a remote Git repository is called <em>cloning</em>. This process will work the same way for any existing repository, including the one that we made in the steps above.</p>
 <p>First, it’s important to choose a good file location to store the git repository. While it’s not required, many people like to have a single folder to store all of their Git repositories. An alternative would be to store the Git repository in an associated project folder.</p>
 <p>Git Bash has a <em>working directory</em>, which is the location that it is operating in. To see what the current working directory is, we can enter the <code>pwd</code> command, which stands for <strong>p</strong>rimary <strong>w</strong>orking <strong>d</strong>irectory.</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="bu">pwd</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="bu">pwd</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Now lets try <strong>c</strong>hanging the working <strong>d</strong>irectory with the <code>cd</code> command, to whatever directory you would like to store your Git repository in. For example:</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> <span class="st">'C:/Users/&lt;my-user-name&gt;/OneDrive - rff/repos'</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> <span class="st">'C:/Users/&lt;my-user-name&gt;/OneDrive - rff/repos'</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -395,13 +397,13 @@ Note
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>It is only necessary to use quotes for filenames in bash if there is a space in the path, as in the example above.</p>
+<p>It is only necessary to use quotes for filenames in Git Bash if there is a space in the path, as in the example above.</p>
 </div>
 </div>
 <p>Now, in an internet browser, navigate to the home page of the repository you wish to clone.<br>
 Click the button labeled <code>&lt; &gt; Code</code>, then copy the URL to clipboard by clicking the logo with intersecting squares.</p>
 <p>In the Git bash window, type <code>git clone</code> then paste in the repository URL from your clipboard by right-clicking. Altogether this would look like:</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone https://github.com/<span class="op">&lt;</span>owner-name<span class="op">&gt;</span>/<span class="op">&lt;</span>repository-name<span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone https://github.com/<span class="op">&lt;</span>owner-name<span class="op">&gt;</span>/<span class="op">&lt;</span>repository-name<span class="op">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>If the repository is private, Git Bash may prompt you for your GitHub credentials. After entering them, you should be left with the cloned repository located in the working directory!</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -417,7 +419,7 @@ Note
 </div>
 </div>
 <p>Finally, you can navigate into that newly created repo using the <code>cd</code> command:</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> <span class="op">&lt;</span>repository-name<span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> <span class="op">&lt;</span>repository-name<span class="op">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="making-and-publishing-file-changes" class="level2" data-number="4">
 <h2 data-number="4" class="anchored" data-anchor-id="making-and-publishing-file-changes"><span class="header-section-number">4</span> Making and Publishing File Changes</h2>
@@ -430,14 +432,14 @@ Note
 <li><strong>Push</strong> commit(s) to the remote/online repository. <code>git push</code></li>
 </ol>
 <p>Let’s walk through that process together. In Git Bash, type <code>git status</code> to show the status of the repository. It should give you a short report about which <strong>branch</strong> you are on (more about branches later), whether your local copy is up to date with the remote copy, and any file changes you’ve made.</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ex">On</span> branch main                                 <span class="co"># this is the default branch</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ex">On</span> branch main                                 <span class="co"># this is the default branch</span></span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="ex">Your</span> branch is up to date with <span class="st">'origin/main'</span>.  <span class="co"># the local version matches the version in GitHub</span></span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="ex">nothing</span> to commit, working tree clean          <span class="co"># we haven't made file changes</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="ex">nothing</span> to commit, working tree clean          <span class="co"># we haven't made file changes</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>At this point, it is <strong>ALWAYS</strong> a good idea to run the <code>git pull</code> command to make sure we are up to date with the latest version. This command first checks to see if the remote repository version (the version stored in GitHub) has had any commits since the last time we pushed or pulled. If there are any, it will download them incorporating those changes into your working version.</p>
 <p>Now, let’s open up the README file and make some changes.<br>
 You can either navigate to the file in Windows File Explorer or type <code>notepad README.md</code> to open the README file in the notepad text editor. Add a few lines to your README, then save and close the file. In the future, you can use whatever editor you prefer, such as RStudio, MATLAB, Visual Studio Code, etc. After making that change, let’s type our <code>git status</code> command into Git Bash again.</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="ex">On</span> branch main</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="ex">On</span> branch main</span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="ex">Your</span> branch is up to date with <span class="st">'origin/main'</span>.</span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="ex">Changes</span> not staged for commit:</span>
@@ -445,7 +447,7 @@ You can either navigate to the file in Windows File Explorer or type <code>notep
 <span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>  <span class="kw">(</span><span class="ex">use</span> <span class="st">"git restore &lt;file&gt;..."</span> to discard changes in working directory<span class="kw">)</span></span>
 <span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>        <span class="ex">modified:</span>   README.md</span>
 <span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a><span class="ex">no</span> changes added to commit <span class="er">(</span><span class="ex">use</span> <span class="st">"git add"</span> and/or <span class="st">"git commit -a"</span><span class="kw">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a><span class="ex">no</span> changes added to commit <span class="er">(</span><span class="ex">use</span> <span class="st">"git add"</span> and/or <span class="st">"git commit -a"</span><span class="kw">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>This message is telling us that there are some file changes that have not yet been staged for commit. Let’s stage the changes from the README file with the command <code>git add README.md</code>.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -461,16 +463,16 @@ Note
 </div>
 </div>
 <p>Now let’s check the status once more:</p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="ex">On</span> branch main</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="ex">On</span> branch main</span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="ex">Your</span> branch is up to date with <span class="st">'origin/main'</span>.</span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="ex">Changes</span> to be committed:</span>
 <span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>  <span class="kw">(</span><span class="ex">use</span> <span class="st">"git restore --staged &lt;file&gt;..."</span> to unstage<span class="kw">)</span></span>
-<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>        <span class="ex">modified:</span>   README.md</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>        <span class="ex">modified:</span>   README.md</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Now, our <code>README.md</code> file is under the heading <code>Changes to be committed</code>, so it is ready to be published. Let’s publish with the command <code>git commit</code>. It should open up notepad and prompt you to enter a commit message. In the first line, enter a concise commit message describing the changes that you are publishing, more info on that <a href="../../docs/version-control/faq.html#commit-messages">here</a>. Save and close the file, and you have successfully authored your first commit!</p>
 <div class="{callout.note}">
 <p>If you find typing your commit message in notepad arduous, we have the command for you!</p>
-<div class="sourceCode" id="cb10"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"Simply type your messsage here"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"Simply type your messsage here"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p><strong>OR</strong> if you want to be even more lazy, see the <a href="../../docs/version-control/faq.html#commit-message-alias">section for the commit alias</a></p>
 </div>
 <p>The last step is to <strong>push</strong> commits to the online repository. At this point, <code>git status</code> indicates that the local version of the repository is 1 commit ahead of the online version. To send the commits to the online repository, we will simply enter the command <code>git push</code>! Now, if you navigate to the online version of the repository in GitHub, you should be able to see the changes you made. Congratulations!!</p>
@@ -479,7 +481,7 @@ Note
 <h2 data-number="5" class="anchored" data-anchor-id="handling-conflicts"><span class="header-section-number">5</span> Handling Conflicts</h2>
 <p>Have you ever been working on a Word document with another person, and maybe your computer gets disconnected, and you accidentally both edit the same paragraph? Usually Word will get smart and show both sets of changes and allow you to choose which one you would like. Sometimes, the same thing happens in Git/GitHub.</p>
 <p>Say, for example, my collaborator pushes a commit to our project repository without me realizing. In an ideal world, I would run the <code>git pull</code> command to make sure I have that commit incorporated into my local copy. However, maybe I forgot to pull, or my collaborator pushed that commit as I was already making file changes. Then, I commit my changes and push them and am greeted with the following ugly message:</p>
-<div class="sourceCode" id="cb11"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git push</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git push</span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="ex">To</span> github.com:Ethan-Russell/MyTestRepo.jl.git</span>
 <span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a> <span class="ot">! </span><span class="ex">[rejected]</span>        main <span class="at">-</span><span class="op">&gt;</span> main <span class="er">(</span><span class="ex">fetch</span> first<span class="kw">)</span></span>
 <span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="ex">error:</span> failed to push some refs to <span class="st">'github.com:Ethan-Russell/MyTestRepo.jl.git'</span></span>
@@ -487,9 +489,9 @@ Note
 <span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a><span class="ex">hint:</span> have locally. This is usually caused by another repository pushing to</span>
 <span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a><span class="ex">hint:</span> the same ref. If you want to integrate the remote changes, use</span>
 <span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a><span class="ex">hint:</span> <span class="st">'git pull'</span> before pushing again.</span>
-<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a><span class="ex">hint:</span> See the <span class="st">'Note about fast-forwards'</span> in <span class="st">'git push --help'</span> for details.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a><span class="ex">hint:</span> See the <span class="st">'Note about fast-forwards'</span> in <span class="st">'git push --help'</span> for details.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Don’t panic! Git is built for this. This message is Git telling us that we can’t push because of the other commit, and it also tells us that the solution is to <code>git pull</code> before pushing again. When we run <code>git pull</code>, Git will try to automatically merge the changes for us. Ideally, if changes are made in separate sections of the file (or different files altogether), Git will be able to merge everything, and you can simply <code>git push</code> again to push your commit(s). However, if both versions have changed the same file, Git will flag it as a conflict and it will enter “MERGING” mode (denoted in git bash to the right of the prompt). This is the type of message Git will print if there is a conflict:</p>
-<div class="sourceCode" id="cb12"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git pull</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git pull</span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="ex">remote:</span> Enumerating objects: 5, done.</span>
 <span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="ex">remote:</span> Counting objects: 100% <span class="er">(</span><span class="ex">5/5</span><span class="kw">)</span><span class="ex">,</span> done.</span>
 <span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a><span class="ex">remote:</span> Compressing objects: 100% <span class="er">(</span><span class="ex">2/2</span><span class="kw">)</span><span class="ex">,</span> done.</span>
@@ -499,13 +501,13 @@ Note
 <span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>   <span class="ex">6449e68..a3b9c32</span>  main       <span class="at">-</span><span class="op">&gt;</span> origin/main</span>
 <span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a><span class="ex">Auto-merging</span> README.md</span>
 <span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a><span class="ex">CONFLICT</span> <span class="er">(</span><span class="ex">content</span><span class="kw">)</span><span class="bu">:</span> Merge conflict in README.md</span>
-<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a><span class="ex">Automatic</span> merge failed<span class="kw">;</span> <span class="ex">fix</span> conflicts and then commit the result.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a><span class="ex">Automatic</span> merge failed<span class="kw">;</span> <span class="ex">fix</span> conflicts and then commit the result.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Fortunately, Git has identified which file(s) have conflicts: in this case, only the README.md file has a conflict. So let’s open the file where there is a conflict. Git identifies which lines have conflicts by adding some helpful syntax, which we can search for to find the conflict. You can do a search for “====” and that will take you to the conflict:</p>
-<div class="sourceCode" id="cb13"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="fu"># My Test Repo</span></span>
 <span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="fu">=======</span></span>
 <span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="fu"># MyTestRepo</span></span>
-<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a><span class="at">&gt;&gt;&gt;&gt;&gt;&gt;&gt; a3b9c323e36238db4a26a91addc5c699add04b6a</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a><span class="at">&gt;&gt;&gt;&gt;&gt;&gt;&gt; a3b9c323e36238db4a26a91addc5c699add04b6a</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Git will list the local version first, right after printing <code>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</code>, followed by a line of <code>=======</code>, then the version that was pulled in from the remote repository, then <code>&gt;&gt;&gt;&gt;&gt;&gt;&gt;</code> and a unique identifier for the commit in the remote repository. Translating the above chunk of text, it looks like someone else had added the title <code>MyTestRepo</code> to the README.md file, and I added the title <code>My Test Repo</code>. All we need to do here is:</p>
 <ol type="1">
 <li>Select which version of the changes we want (or we could edit it to be a combination of the two!)</li>
@@ -513,7 +515,7 @@ Note
 <li>Save and commit the resulting file.</li>
 </ol>
 <p>In the example above, I would change that portion of the file to be:</p>
-<div class="sourceCode" id="cb14"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># MyTestRepoFinalName</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># MyTestRepoFinalName</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>After adding and committing that change, we can then safely run <code>git push</code>.</p>
 
 
@@ -571,13 +573,14 @@ Note
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy
