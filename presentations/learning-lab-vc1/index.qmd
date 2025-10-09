@@ -95,6 +95,10 @@ Minimalist Git use in your coding workflow involves only a few concepts, all of 
 4. __Remote Copy__ - The copy of the repo on a server (GitHub) where you "`push`" your changes to share them with others
 :::
 
+## The basic Git workflow
+
+![](../../images/git_flowchart.jpg)
+
 ## In practice {auto-animate="true"}
 
 ::: {.notes}
