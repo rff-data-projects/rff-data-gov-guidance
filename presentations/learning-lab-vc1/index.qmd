@@ -99,33 +99,23 @@ Minimalist Git use in your coding workflow involves only a few concepts, all of 
 
 ![](../../images/git_flowchart.jpg)
 
-## In practice {auto-animate="true"}
-
-::: {.notes}
-Git works by creating snapshots of your project at different points in time. The branching system allows multiple versions to coexist and later be merged together.
-:::
-
-The repository accumulates changes incrementally as you build upon the project.
-
-## In practice {auto-animate="true"}
-
-::: {.notes}
-Git works by creating snapshots of your project at different points in time. The branching system allows multiple versions to coexist and later be merged together.
-:::
-
-Unlike a system that archives versions of entire files or folders, Git is space-efficient.
-
-::: {.fragment}
-Each time you `commit` changes, only insertions and deletions are tracked by Git, along with information about their location within the repository.
-:::
-
-## In practice {auto-animate="true"}
+## In practice
 
 ::: {.notes}
 Git works by creating snapshots of your project at different points in time. Each commit represents a complete snapshot of your files. The branching system allows multiple versions to coexist and later be merged together.
 :::
 
-Git makes it easy to `checkout` past versions of code, which can be helpful when you need to undo changes or figure out why your current code doesn't work.
+::: {.incremental}
+* The repository accumulates changes incrementally as you build upon the project.
+* When you `commit` changes, Git tracks insertions and deletions instead of saving multiple copies, minimizing memory use.
+* Git also makes it easy to `checkout` past versions of code to diagnose issues or to `branch` multiple versions to develop in parallel.
+:::
+
+## In practice
+
+* The repository accumulates changes incrementally as you build upon the project.
+* When you `commit` changes, Git tracks insertions and deletions instead of saving multiple copies, minimizing memory use.
+* Git also makes it easy to `checkout` past versions of code to diagnose issues or to `branch` multiple versions to develop in parallel.
 
 ::: aside
 Branching will be covered in the next workshop. See **[the RFF data guidance tutorial](https://rff-data-projects.github.io/rff-data-gov-guidance/docs/version-control/tutorial-branching.html)** if you want to learn more in the meantime.
@@ -135,7 +125,7 @@ Branching will be covered in the next workshop. See **[the RFF data guidance tut
 
 There are many ways of using the Git software, but we will focus on __Git Bash__, a command line Git interface that comes with Git.
 
-First, open Git Bash.  (Hit the windows key and type "bash")
+First, open Git Bash.  (Hit the Windows key and type "bash")
 
 ![](../../images/git-bash-cropped.png)
 
