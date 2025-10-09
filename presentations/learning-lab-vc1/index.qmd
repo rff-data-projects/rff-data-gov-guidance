@@ -538,6 +538,18 @@ Your branch is ahead of 'origin/main' by 1 commit.
 nothing to commit, working tree clean
 ```
 
+## Creating a Commit with `git commit`
+
+::: {.notes}
+A commit creates a permanent snapshot of the staged changes along with a descriptive message explaining what was changed and why.
+:::
+
+![](../../images/git_commit_2x.png){width=800 fig-align="center"}
+
+::: aside
+For some advice on writing reader-friendly commit messages, see [this guide](https://cbea.ms/git-commit/).
+:::
+
 ## Sharing Changes with `git push` {auto-animate="true"}
 
 ::: {.notes}
