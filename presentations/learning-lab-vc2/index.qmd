@@ -8,7 +8,7 @@ format:
     self-contained: true # Makes the HTML self-contained
 ---
 
-## What is Branching?
+## Why Branch?
 
 ```{=html}
 <style>
@@ -35,6 +35,22 @@ format:
 ```
 
 ::: {.notes}
+Branching enables safe experimentation and effective collaboration. It's the foundation of modern software development workflows. Start with a real-world scenario.
+:::
+
+Imagine: You're working on a new analysis when you discover a bug in your model. How do you fix the bug without losing your in-progress work?
+
+::: {.fragment}
+__Answer: Branching!__
+:::
+
+::: {.fragment}
+Branches let you work on multiple versions of your code simultaneously - fix the bug on one branch while keeping your new analysis safely on another.
+:::
+
+## What is Branching?
+
+::: {.notes}
 Branching is one of Git's most powerful features. It allows you to create parallel versions of your code without affecting the main branch.
 :::
 
@@ -42,19 +58,9 @@ Git allows us to create different working versions, or __branches__, of our repo
 
 This lets you take a snapshot of the repository and try out a new idea _without affecting your main branch_.
 
-## Why Branch?
+If you are collaborating with others, they can keep using (and editing) the main branch while you work in parallel.
 
-::: {.notes}
-Branching enables safe experimentation and effective collaboration. It's the foundation of modern software development workflows.
-:::
-
-::: {.incremental}
-* __Safe Experimentation__ - Try new ideas without breaking working code
-* __Parallel Development__ - Multiple features can be developed simultaneously
-* __Code Review__ - Changes can be reviewed before merging into main
-* __Confidence__ - Know that your main branch stays stable
-* __Modern Workflow__ - How the majority of software is developed today
-:::
+Once satisfied with your changes, you can __merge__ them back into main using a Pull Request.
 
 ## Example Git Branching
 
@@ -119,90 +125,46 @@ Git Bash shows the active branch name to the right of the prompt.
 ## Creating Branches {auto-animate="true"}
 
 ::: {.notes}
-Creating a branch is simple, but you need to remember to check it out before making changes.
+Creating a branch is simple. Most people use the shortcut command to create and check out in one step.
 :::
 
-To create a new branch, use the command:
-
-```bash
-git branch <my-branch-name>
-```
-
-## Creating Branches {auto-animate="true"}
-
-To create a new branch, use the command:
-
-```bash
-git branch <my-branch-name>
-```
-
-After creating the branch, you need to __check it out__ (switch to it):
-
-```bash
-git checkout <my-branch-name>
-```
-
-## Creating Branches {auto-animate="true"}
-
-To create a new branch, use the command:
-
-```bash
-git branch <my-branch-name>
-```
-
-After creating the branch, you need to __check it out__ (switch to it):
-
-```bash
-git checkout <my-branch-name>
-```
-
-__Or do both in one step:__
+Create and check out a new branch in one step:
 
 ```bash
 git checkout -b <my-branch-name>
 ```
 
-::: aside
-The `-b` flag creates the branch and checks it out in a single command.
+## Creating Branches {auto-animate="true"}
+
+Create and check out a new branch in one step:
+
+```bash
+git checkout -b <my-branch-name>
+```
+
+::: {.fragment}
+Or do it in two steps:
+
+```bash
+git branch <my-branch-name>
+git checkout <my-branch-name>
+```
 :::
 
-## Branch Naming Best Practices
-
-::: {.notes}
-Good branch names help you and your collaborators understand what work is being done in each branch.
+::: {.fragment}
+![Git Feature Branch](../../images/git-feat-branch.png){width=900}
 :::
 
-Generally, branch names should be:
 
-::: {.incremental}
-* __Concise yet descriptive__ - `plot-results` > `plot-all-results-with-numpy`
-* __Lowercase and hyphen-separated__ - `plot-results` not `PlotResults` or `plot_results`
-* __No special characters__ - Numbers, letters, and hyphens only
-:::
-
-::: aside
-See more info in the [branch naming tip](https://rff-data-projects.github.io/rff-data-gov-guidance/docs/version-control/faq.html#branch-naming)
-:::
-
-## Your New Branch is Active
-
-![Git Feature Branch](../../images/git-feat-branch.png)
-
-Now you can safely make changes and commits without worrying about modifying the main branch!
-
-## Pushing Your Branch {auto-animate="true"}
+## Pushing Your Branch
 
 ::: {.notes}
 The first time you push a new branch, Git needs to know where to send it on the remote server.
 :::
 
-When you first push a new branch, Git will give you an error about no "upstream" branch.
+After making commits on your branch, push them to GitHub.
 
-## Pushing Your Branch {auto-animate="true"}
-
-When you first push a new branch, Git will give you an error about no "upstream" branch.
-
-Simply run the command Git suggests:
+The first time you push a new branch, Git will give you an error about no "upstream" branch. Simply run the command Git suggests:
 
 ```bash
 git push --set-upstream origin <new-branch-name>
@@ -286,15 +248,16 @@ GitHub makes this process easy by:
 * Providing a structured review workflow
 :::
 
-## Reviewing Pull Requests
+## How to Review Code
 
 To review a pull request:
 
 ::: {.incremental .no-bullets}
-* 1. Navigate to the Pull Request
-* 2. Click on the "Files changed" tab
-* 3. Review each change and add comments as needed
-* 4. Complete your review and approve (or request changes)
+* 1. Navigate to the Pull Request and click "Files changed"
+* 2. Look for: logic errors, code clarity, edge cases, style consistency
+* 3. Add comments by clicking the `+` next to line numbers
+* 4. Be specific and constructive: "Consider adding a check for empty data here"
+* 5. Complete your review: approve, request changes, or just comment
 :::
 
 ::: aside
@@ -359,6 +322,28 @@ git pull
 
 Now your local `main` branch has all the changes from your merged branch!
 
+## Cleaning Up Branches
+
+::: {.notes}
+After merging, you can delete the branch to keep your repository tidy.
+:::
+
+Once a branch is merged, you can delete it to keep things tidy.
+
+__Delete the remote branch on GitHub:__
+
+After merging, GitHub shows a "Delete branch" button in the Pull Request.
+
+__Delete your local branch:__
+
+```bash
+git branch -d <branch-name>
+```
+
+::: aside
+Use `-D` instead of `-d` to force delete an unmerged branch (be careful!).
+:::
+
 ## Handling Conflicts
 
 ::: {.notes}
@@ -384,29 +369,6 @@ git merge main
 Git will mark the conflicting sections in your files. Edit them to resolve the conflicts, then commit the resolution.
 :::
 
-## Alternative: Merging Without Pull Requests
-
-::: {.notes}
-While Pull Requests are recommended, you can merge directly if working alone or in a hurry. Use with caution.
-:::
-
-You __can__ merge without a Pull Request:
-
-```bash
-git checkout main
-git pull
-git merge <new-branch-name>
-```
-
-::: {.fragment}
-__But we don't recommend it!__ Pull Requests facilitate:
-
-* Code review
-* Discussion
-* Quality control
-* Documentation of changes
-:::
-
 ## Recap
 
 ::: {.notes}
@@ -416,11 +378,11 @@ You've learned the branching workflow that enables safe, collaborative developme
 At this point you should understand:
 
 ::: {.incremental .no-bullets}
-* ✓ What branches are and why they're useful
+* ✓ Why branching is essential for collaboration
 * ✓ How to create and check out branches
-* ✓ Branch naming best practices
-* ✓ How to create Pull Requests
-* ✓ How to review and merge Pull Requests
+* ✓ How to create and review Pull Requests
+* ✓ What to look for when reviewing code
+* ✓ How to merge PRs and clean up branches
 * ✓ How to handle merge conflicts
 :::
 
