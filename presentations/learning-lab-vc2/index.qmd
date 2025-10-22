@@ -367,7 +367,7 @@ Now your local `main` branch has all the changes from your merged branch!
 After merging, you can delete the branch to keep your repository tidy.
 :::
 
-Once a branch is merged, you can delete it to keep things tidy.
+Ideally, branches are deleted after merging to keep things tidy.
 
 __Delete the remote branch on GitHub:__
 
