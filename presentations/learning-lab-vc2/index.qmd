@@ -92,7 +92,7 @@ This workflow ensures that changes are properly reviewed and tested before being
 * 0. Pull any code updates! `git pull`
 * 1. Create and check out a new branch. `git branch` and `git checkout`
 * 2. Make and push commits to the new branch. `git add`, `git commit`, and `git push`
-* 3. When ready to merge, create a __Pull Request__ from GitHub
+* 3. When ready to merge, create a __Pull Request__ in GitHub
 * 4. Review the Pull Request
 * 5. Merge the Pull Request
 * 6. Check out and pull main branch. `git checkout` and `git pull`
@@ -118,7 +118,7 @@ Git creates a default branch called __main__.
 
 You could think of the `main` branch as the trunk of a tree.
 
-![Git Main Branch](../../images/git-main-branch.png)
+![](../../images/git-main-branch.png)
 
 Git Bash shows the active branch name to the right of the prompt.
 
@@ -128,33 +128,32 @@ Git Bash shows the active branch name to the right of the prompt.
 Creating a branch is simple. Most people use the shortcut command to create and check out in one step.
 :::
 
-Create and check out a new branch in one step:
+Create and check out a new branch in Git Bash in one step:
 
 ```bash
-git checkout -b <my-branch-name>
+git checkout -b your-name-here
 ```
-
-## Creating Branches {auto-animate="true"}
-
-Create and check out a new branch in one step:
-
-```bash
-git checkout -b <my-branch-name>
-```
-
 ::: {.fragment}
-Or do it in two steps:
-
 ```bash
-git branch <my-branch-name>
-git checkout <my-branch-name>
+Switched to a new branch 'your-name-here'
 ```
 :::
 
 ::: {.fragment}
-![Git Feature Branch](../../images/git-feat-branch.png){width=900}
+After checking out your branch, the branch name should show up next to the command line if you are using Git Bash.
+![](../../images/git-feat-branch.png){width=900}
 :::
 
+## For Our Exercise{auto-animate="true"}
+
+::: {.incremental}
+1. Create a blank file called `your-name.txt` in the `poems/` subfolder.
+2. Find a poem on the internet. If you need inspiration, check out [poets.org/poems](https://poets.org/poems)
+3. Copy-paste the text into `your-name.txt`
+4. Inject the text "TYPO" somewhere in the poem
+5. Save the file
+6. Stage and commit your changes
+:::
 
 ## Pushing Your Branch
 
@@ -167,7 +166,7 @@ After making commits on your branch, push them to GitHub.
 The first time you push a new branch, Git will give you an error about no "upstream" branch. Simply run the command Git suggests:
 
 ```bash
-git push --set-upstream origin <new-branch-name>
+git push --set-upstream origin your-name-here
 ```
 
 ::: aside
@@ -180,35 +179,47 @@ After the first push, you can use `git push` normally for subsequent pushes to t
 Once you've made commits and are ready to merge back into main, you'll create a Pull Request on GitHub.
 :::
 
-Once your changes are ready, create a __Pull Request__ in GitHub.
+Once your changes are ready, create a __Pull Request__ in GitHub:
 
 1. Navigate to the repository GitHub page
-2. Click the "Pull requests" tab
-
-![Git Pull Request](../../images/git-pull-request.png)
 
 ## Creating a Pull Request {auto-animate="true"}
 
-Once your changes are ready, create a __Pull Request__ in GitHub.
+::: {.notes}
+Once you've made commits and are ready to merge back into main, you'll create a Pull Request on GitHub.
+:::
+
+Once your changes are ready, create a __Pull Request__ in GitHub:
+
+1. [Navigate to the repository GitHub page]{.semi-transparent}
+2. Click the "Pull requests" tab
+
+![](../../images/git-pull-request.png)
+
+## Creating a Pull Request {auto-animate="true"}
+
+Once your changes are ready, create a __Pull Request__ in GitHub:
 
 1. [Navigate to the repository GitHub page]{.semi-transparent}
 2. [Click the "Pull requests" tab]{.semi-transparent}
 3. Click "New pull request" button
 
+![](../../images/git-new-pull-request.png)
+
 ## Creating a Pull Request {auto-animate="true"}
 
-Once your changes are ready, create a __Pull Request__ in GitHub.
+Once your changes are ready, create a __Pull Request__ in GitHub:
 
 1. [Navigate to the repository GitHub page]{.semi-transparent}
 2. [Click the "Pull requests" tab]{.semi-transparent}
 3. [Click "New pull request" button]{.semi-transparent}
 4. Select `main` as the "base" branch and your new branch as the "compare" branch
 
-![Git Pull Request Setup](../../images/git-pull-request-setup.png)
+![](../../images/git-pull-request-setup.png)
 
 ## Creating a Pull Request {auto-animate="true"}
 
-Once your changes are ready, create a __Pull Request__ in GitHub.
+Once your changes are ready, create a __Pull Request__ in GitHub:
 
 1. [Navigate to the repository GitHub page]{.semi-transparent}
 2. [Click the "Pull requests" tab]{.semi-transparent}
@@ -216,13 +227,9 @@ Once your changes are ready, create a __Pull Request__ in GitHub.
 4. [Select `main` as the "base" branch and your new branch as the "compare" branch]{.semi-transparent}
 5. Add a title and description for the Pull Request
 
-::: aside
-Include helpful information about what changed and any instructions for reviewers.
-:::
-
 ## Creating a Pull Request {auto-animate="true"}
 
-Once your changes are ready, create a __Pull Request__ in GitHub.
+Once your changes are ready, create a __Pull Request__ in GitHub:
 
 1. [Navigate to the repository GitHub page]{.semi-transparent}
 2. [Click the "Pull requests" tab]{.semi-transparent}
@@ -248,17 +255,48 @@ GitHub makes this process easy by:
 * Providing a structured review workflow
 :::
 
-## How to Review Code
+## How to Review Code {auto-animate="true"}
+
+::: {.notes}
+Walk through the code review process step by step, showing how to comment and suggest changes.
+:::
 
 To review a pull request:
 
-::: {.incremental .no-bullets}
-* 1. Navigate to the Pull Request and click "Files changed"
-* 2. Look for: logic errors, code clarity, edge cases, style consistency
-* 3. Add comments by clicking the `+` next to line numbers
-* 4. Be specific and constructive: "Consider adding a check for empty data here"
-* 5. Complete your review: approve, request changes, or just comment
-:::
+1. Navigate to the Pull Request and click "Files changed"
+
+## How to Review Code {auto-animate="true"}
+
+To review a pull request:
+
+1. [Navigate to the Pull Request and click "Files changed"]{.semi-transparent}
+2. Comment on your favorite line by clicking the `+` next to the line number
+
+## How to Review Code {auto-animate="true"}
+
+To review a pull request:
+
+1. [Navigate to the Pull Request and click "Files changed"]{.semi-transparent}
+2. [Comment on your favorite line by clicking the `+` next to the line number]{.semi-transparent}
+3. Find the line with "TYPO" injected
+
+## How to Review Code {auto-animate="true"}
+
+To review a pull request:
+
+2. [Comment on your favorite line by clicking the `+` next to the line number]{.semi-transparent}
+3. [Find the line with "TYPO" injected]{.semi-transparent}
+4. Suggest a code change to remove the typo using GitHub's suggestion feature
+
+![](../../images/git-pull-request-code-suggestion.png)
+
+## How to Review Code {auto-animate="true"}
+
+To review a pull request:
+
+3. [Find the line with "TYPO" injected]{.semi-transparent}
+4. [Suggest a code change to remove the typo using GitHub's suggestion feature]{.semi-transparent}
+5. Complete your review: approve, request changes, or just comment. For today, approve.
 
 ::: aside
 Learn more in the [GitHub documentation](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/reviewing-proposed-changes-in-a-pull-request)
@@ -288,7 +326,19 @@ Once the Pull Request has been reviewed and approved, you can merge it back into
 Once approved, merge your changes:
 
 1. Go to the "Conversation" tab of the Pull Request
+
+## Merging Pull Requests {auto-animate="true"}
+
+::: {.notes}
+Once the Pull Request has been reviewed and approved, you can merge it back into main.
+:::
+
+Once approved, merge your changes:
+
+1. [Go to the "Conversation" tab of the Pull Request]{.semi-transparent}
 2. Click the "Merge pull request" button at the bottom
+
+The button should be green because your reviewer approved your changes.
 
 ## Merging Pull Requests {auto-animate="true"}
 
