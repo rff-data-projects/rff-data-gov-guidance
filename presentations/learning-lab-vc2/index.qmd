@@ -48,7 +48,7 @@ __Answer: Branching!__
 Branches let multiple people work on the same project simultaneously - you develop your feature on one branch while your teammates continue using the stable main branch.
 :::
 
-## What is Branching?
+## What is Branching? {auto-animate="true"}
 
 ::: {.notes}
 Branching is one of Git's most powerful features. It allows you to create parallel versions of your code without affecting the main branch.
@@ -71,20 +71,20 @@ Branching is one of Git's most powerful features. It allows you to create parall
 ![](../../images/git-branching-simpler.png)
 :::
 
-## The Branching Workflow
+## The Branching Workflow {auto-animate="true"}
 
 ::: {.notes}
 This workflow ensures that changes are properly reviewed and tested before being merged into the main branch.
 :::
 
-::: {.incremental .no-bullets}
-* 0. Pull any code updates! `git pull`
-* 1. Create and check out a new branch. `git branch` and `git checkout`
-* 2. Make and push commits to the new branch. `git add`, `git commit`, and `git push`
-* 3. When ready to merge, create a __Pull Request__ in GitHub
-* 4. Review the Pull Request
-* 5. Merge the Pull Request
-* 6. Check out and pull main branch. `git checkout` and `git pull`
+::: {.incremental}
+1. Pull any code updates! `git pull`
+2. Create and check out a new branch. `git branch` and `git checkout`
+3. Make and push commits to the new branch. `git add`, `git commit`, and `git push`
+4. When ready to merge, create a __Pull Request__ in GitHub
+5. Review the Pull Request
+6. Merge the Pull Request
+7. Check out and pull main branch. `git checkout` and `git pull`
 :::
 
 ## Understanding the Main Branch {auto-animate="true"}
