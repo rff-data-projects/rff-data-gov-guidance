@@ -6,4 +6,6 @@ number-sections: false
 
 * [Learning Lab: Data Management](data_management_learning_lab_2025_noaddendum.pdf)
 
-* [Learning Lab: Version Control Part 1](learning-lab-vc1/index.qmd){target="_blank"}
+* [Learning Lab: Version Control Part 1, Using Git](learning-lab-vc1/index.qmd){target="_blank"}
+
+* [Learning Lab: Version Control Part 2, Branching and Pull Requests](learning-lab-vc2/index.qmd){target="_blank"}
