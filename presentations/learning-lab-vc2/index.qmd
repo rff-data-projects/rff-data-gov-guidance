@@ -162,6 +162,20 @@ git push --set-upstream origin your-name-here
 After the first push, you can use `git push` normally for subsequent pushes to this branch.
 :::
 
+## What is a Pull Request?
+
+::: {.notes}
+It's important to clarify what a Pull Request is, since the name can be confusing and is different from git pull.
+:::
+
+A __Pull Request__ (or "PR") is a GitHub feature that lets you propose merging your branch into another branch (usually `main`).
+
+::: {.incremental}
+* It's a request for your code changes to be reviewed and merged.
+* It provides a space for discussion, code review, and approval.
+* Some might say it is a bit of a misnomer. It isn't related to using `git pull` to bring changes from GitHub to your local machine.
+:::
+
 ## Creating a Pull Request {auto-animate="true"}
 
 ::: {.notes}
