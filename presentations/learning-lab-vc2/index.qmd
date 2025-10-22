@@ -38,14 +38,14 @@ format:
 Branching enables safe experimentation and effective collaboration. It's the foundation of modern software development workflows. Start with a real-world scenario.
 :::
 
-Imagine: You're working on a new analysis when you discover a bug in your model. How do you fix the bug without losing your in-progress work?
+Imagine: You're collaborating on a shared project. You want to add a new feature, but your teammate needs the current code to keep working. How do you add your feature without disrupting their work?
 
 ::: {.fragment}
 __Answer: Branching!__
 :::
 
 ::: {.fragment}
-Branches let you work on multiple versions of your code simultaneously - fix the bug on one branch while keeping your new analysis safely on another.
+Branches let multiple people work on the same project simultaneously - you develop your feature on one branch while your teammates continue using the stable main branch.
 :::
 
 ## What is Branching?
@@ -54,33 +54,22 @@ Branches let you work on multiple versions of your code simultaneously - fix the
 Branching is one of Git's most powerful features. It allows you to create parallel versions of your code without affecting the main branch.
 :::
 
-Git allows us to create different working versions, or __branches__, of our repository.
+::: {.incremental}
+- Git allows us to create different working versions, or __branches__, of our repository.
 
-This lets you take a snapshot of the repository and try out a new idea _without affecting your main branch_.
+- This lets you take a snapshot of the repository and try out a new idea _without affecting your main branch_.
 
-If you are collaborating with others, they can keep using (and editing) the main branch while you work in parallel.
+- If you are collaborating with others, they can keep using (and editing) the main branch while you work in parallel.
 
-Once satisfied with your changes, you can __merge__ them back into main using a Pull Request.
+- Once satisfied with your changes, you can __merge__ them back into main using a Pull Request.
+
+:::
 
 ## Example Git Branching
 
-```{mermaid}
----
-title: Example Git Branching
----
-gitGraph
-   commit id: "initial commit"
-   commit id: "starting point for the new feature"
-   branch my-feature
-   checkout main
-   commit id: "ongoing development of main"
-   checkout my-feature
-   commit id: "trying new feature"
-   commit id: "perfecting new feature"
-   checkout main
-   merge my-feature id: "now it is merged!"
-   commit id: "continued development"
-```
+::: {.r-stretch}
+![](../../images/git-branching-simpler.png)
+:::
 
 ## The Branching Workflow
 
