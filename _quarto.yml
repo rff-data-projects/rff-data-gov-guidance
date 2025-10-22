@@ -26,7 +26,7 @@ website:
           - docs/data-management/quality-preparation.qmd
           - docs/data-management/archival.qmd
           - docs/data-management/publication.qmd
-      - section: "Version Control (Beta)"
+      - section: "Version Control"
         href: docs/version-control/index.qmd
         contents:
           - docs/version-control/setup.qmd
