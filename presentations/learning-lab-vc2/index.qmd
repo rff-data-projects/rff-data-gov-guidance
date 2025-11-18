@@ -1,0 +1,449 @@
+---
+title: "Version Control Tutorial: Branching"
+subtitle: "Working with branches, pull requests, and collaboration"
+format:
+  revealjs:
+    theme: simple # Or another theme that supports custom CSS
+    code-line-numbers: false
+    self-contained: true # Makes the HTML self-contained
+---
+
+## Why Branch?
+
+```{=html}
+<style>
+.semi-transparent {
+  opacity: 0.4;
+}
+.no-bullets {
+  list-style: none !important;
+  list-style-type: none !important;
+}
+.no-bullets li {
+  list-style: none !important;
+  list-style-type: none !important;
+  margin-left: 0 !important;
+  padding-left: 0 !important;
+}
+.no-bullets li::before {
+  content: none !important;
+}
+.no-bullets li::marker {
+  content: none !important;
+}
+</style>
+```
+
+::: {.notes}
+Branching enables safe experimentation and effective collaboration. It's the foundation of modern software development workflows. Start with a real-world scenario.
+:::
+
+Imagine: You're collaborating on a shared project. You want to add a new feature, but your teammate needs the current code to keep working. How do you add your feature without disrupting their work?
+
+::: {.fragment}
+__Answer: Branching!__
+:::
+
+::: {.fragment}
+Branches let multiple people work on the same project simultaneously - you develop your feature on one branch while your teammates continue using the stable main branch.
+:::
+
+## What is Branching? {auto-animate="true"}
+
+::: {.notes}
+Branching is one of Git's most powerful features. It allows you to create parallel versions of your code without affecting the main branch.
+:::
+
+::: {.incremental}
+- Git allows us to create different working versions, or __branches__, of our repository.
+
+- This lets you take a snapshot of the repository and try out a new idea _without affecting your main branch_.
+
+- If you are collaborating with others, they can keep using (and editing) the main branch while you work in parallel.
+
+- Once satisfied with your changes, you can __merge__ them back into main using a Pull Request.
+
+:::
+
+## Example Git Branching
+
+::: {.r-stretch}
+![](../../images/git-branching-simpler.png)
+:::
+
+## The Branching Workflow {auto-animate="true"}
+
+::: {.notes}
+This workflow ensures that changes are properly reviewed and tested before being merged into the main branch.
+:::
+
+::: {.incremental}
+1. Pull any code updates! `git pull`
+2. Create and check out a new branch. `git branch` and `git checkout`
+3. Make and push commits to the new branch. `git add`, `git commit`, and `git push`
+4. When ready to merge, create a __Pull Request__ in GitHub
+5. Review the Pull Request
+6. Merge the Pull Request
+7. Check out and pull main branch. `git checkout` and `git pull`
+:::
+
+## Understanding the Main Branch {auto-animate="true"}
+
+::: {.notes}
+You may have realized that Git creates a branch by default, called main. Think of it as the trunk of a tree.
+:::
+
+Git creates a default branch called __main__.
+
+You could think of the `main` branch as the trunk of a tree.
+
+::: aside
+Older repositories may use `master` as the default branch name. GitHub changed the default to `main` in mid-2020.
+:::
+
+## Understanding the Main Branch {auto-animate="true"}
+
+Git creates a default branch called __main__.
+
+You could think of the `main` branch as the trunk of a tree.
+
+![](../../images/git-main-branch.png)
+
+Git Bash shows the active branch name to the right of the prompt.
+
+## Creating Branches {auto-animate="true"}
+
+::: {.notes}
+Creating a branch is simple. Most people use the shortcut command to create and check out in one step.
+:::
+
+Create and check out a new branch in Git Bash in one step:
+
+```bash
+git checkout -b your-name-here
+```
+::: {.fragment}
+```bash
+Switched to a new branch 'your-name-here'
+```
+:::
+
+::: {.fragment}
+After checking out your branch, the branch name should show up next to the command line if you are using Git Bash.
+![](../../images/git-feat-branch.png){width=900}
+:::
+
+## For Our Exercise{auto-animate="true"}
+
+::: {.incremental}
+1. Create a blank file called `your-name.txt` in the `poems/` subfolder.
+2. Find a poem on the internet. If you need inspiration, check out [poets.org/poems](https://poets.org/poems)
+3. Copy-paste the text into `your-name.txt`
+4. Inject the text "TYPO" somewhere in the poem
+5. Save the file
+6. Stage and commit your changes
+:::
+
+## Pushing Your Branch
+
+::: {.notes}
+The first time you push a new branch, Git needs to know where to send it on the remote server.
+:::
+
+After making commits on your branch, push them to GitHub.
+
+The first time you push a new branch, Git will give you an error about no "upstream" branch. Simply run the command Git suggests:
+
+```bash
+git push --set-upstream origin your-name-here
+```
+
+::: aside
+After the first push, you can use `git push` normally for subsequent pushes to this branch.
+:::
+
+## What is a Pull Request?
+
+::: {.notes}
+It's important to clarify what a Pull Request is, since the name can be confusing and is different from git pull.
+:::
+
+A __Pull Request__ (or "PR") is a GitHub feature that lets you propose merging your branch into another branch (usually `main`).
+
+::: {.incremental}
+* It's a request for your code changes to be reviewed and merged.
+* It provides a space for discussion, code review, and approval.
+* Some might say it is a bit of a misnomer. It isn't related to using `git pull` to bring changes from GitHub to your local machine.
+:::
+
+## Creating a Pull Request {auto-animate="true"}
+
+::: {.notes}
+Once you've made commits and are ready to merge back into main, you'll create a Pull Request on GitHub.
+:::
+
+Once your changes are ready, create a __Pull Request__ in GitHub:
+
+1. Navigate to the repository GitHub page
+
+## Creating a Pull Request {auto-animate="true"}
+
+::: {.notes}
+Once you've made commits and are ready to merge back into main, you'll create a Pull Request on GitHub.
+:::
+
+Once your changes are ready, create a __Pull Request__ in GitHub:
+
+1. [Navigate to the repository GitHub page]{.semi-transparent}
+2. Click the "Pull requests" tab
+
+![](../../images/git-pull-request.png)
+
+## Creating a Pull Request {auto-animate="true"}
+
+Once your changes are ready, create a __Pull Request__ in GitHub:
+
+1. [Navigate to the repository GitHub page]{.semi-transparent}
+2. [Click the "Pull requests" tab]{.semi-transparent}
+3. Click "New pull request" button
+
+![](../../images/git-new-pull-request.png)
+
+## Creating a Pull Request {auto-animate="true"}
+
+Once your changes are ready, create a __Pull Request__ in GitHub:
+
+1. [Navigate to the repository GitHub page]{.semi-transparent}
+2. [Click the "Pull requests" tab]{.semi-transparent}
+3. [Click "New pull request" button]{.semi-transparent}
+4. Select `main` as the "base" branch and your new branch as the "compare" branch
+
+![](../../images/git-pull-request-setup.png)
+
+## Creating a Pull Request {auto-animate="true"}
+
+Once your changes are ready, create a __Pull Request__ in GitHub:
+
+1. [Navigate to the repository GitHub page]{.semi-transparent}
+2. [Click the "Pull requests" tab]{.semi-transparent}
+3. [Click "New pull request" button]{.semi-transparent}
+4. [Select `main` as the "base" branch and your new branch as the "compare" branch]{.semi-transparent}
+5. Add a title and description for the Pull Request
+
+## Creating a Pull Request {auto-animate="true"}
+
+Once your changes are ready, create a __Pull Request__ in GitHub:
+
+1. [Navigate to the repository GitHub page]{.semi-transparent}
+2. [Click the "Pull requests" tab]{.semi-transparent}
+3. [Click "New pull request" button]{.semi-transparent}
+4. [Select `main` as the "base" branch and your new branch as the "compare" branch]{.semi-transparent}
+5. [Add a title and description for the Pull Request]{.semi-transparent}
+6. Click "Create pull request"
+
+## Reviewing Pull Requests
+
+::: {.notes}
+Code review can be daunting, but GitHub makes it easy by highlighting exactly what changed.
+:::
+
+Pull requests provide a great opportunity for collaborators to review code and ensure accuracy.
+
+GitHub makes this process easy by:
+
+::: {.incremental}
+* Identifying lines of code that have changed
+* Allowing collaborators to comment on specific lines
+* Showing additions, deletions, and modifications clearly
+* Providing a structured review workflow
+:::
+
+## How to Review Code {auto-animate="true"}
+
+::: {.notes}
+Walk through the code review process step by step, showing how to comment and suggest changes.
+:::
+
+To review a pull request:
+
+1. Navigate to the Pull Request and click "Files changed"
+
+## How to Review Code {auto-animate="true"}
+
+To review a pull request:
+
+1. [Navigate to the Pull Request and click "Files changed"]{.semi-transparent}
+2. Comment on your favorite line by clicking the `+` next to the line number
+
+## How to Review Code {auto-animate="true"}
+
+To review a pull request:
+
+1. [Navigate to the Pull Request and click "Files changed"]{.semi-transparent}
+2. [Comment on your favorite line by clicking the `+` next to the line number]{.semi-transparent}
+3. Find the line with "TYPO" injected
+
+## How to Review Code {auto-animate="true"}
+
+To review a pull request:
+
+2. [Comment on your favorite line by clicking the `+` next to the line number]{.semi-transparent}
+3. [Find the line with "TYPO" injected]{.semi-transparent}
+4. Suggest a code change to remove the typo using GitHub's suggestion feature
+
+![](../../images/git-pull-request-code-suggestion.png)
+
+## How to Review Code {auto-animate="true"}
+
+To review a pull request:
+
+3. [Find the line with "TYPO" injected]{.semi-transparent}
+4. [Suggest a code change to remove the typo using GitHub's suggestion feature]{.semi-transparent}
+5. Complete your review: approve, request changes, or just comment. For today, approve.
+
+::: aside
+Learn more in the [GitHub documentation](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/reviewing-proposed-changes-in-a-pull-request)
+:::
+
+## Addressing Review Feedback
+
+::: {.notes}
+If a reviewer requests changes, you can simply make more commits to the same branch.
+:::
+
+If the reviewer requests changes:
+
+::: {.incremental}
+* Make the requested changes in your branch
+* Commit and push to the same branch
+* The Pull Request will automatically update with your new commits
+* Once approved, you can merge!
+:::
+
+## Merging Pull Requests {auto-animate="true"}
+
+::: {.notes}
+Once the Pull Request has been reviewed and approved, you can merge it back into main.
+:::
+
+Once approved, merge your changes:
+
+1. Go to the "Conversation" tab of the Pull Request
+
+## Merging Pull Requests {auto-animate="true"}
+
+::: {.notes}
+Once the Pull Request has been reviewed and approved, you can merge it back into main.
+:::
+
+Once approved, merge your changes:
+
+1. [Go to the "Conversation" tab of the Pull Request]{.semi-transparent}
+2. Click the "Merge pull request" button at the bottom
+
+The button should be green because your reviewer approved your changes.
+
+## Merging Pull Requests {auto-animate="true"}
+
+Once approved, merge your changes:
+
+1. [Go to the "Conversation" tab of the Pull Request]{.semi-transparent}
+2. [Click the "Merge pull request" button at the bottom]{.semi-transparent}
+3. Your branch's changes are now in the `main` branch!
+
+## After Merging {auto-animate="true"}
+
+::: {.notes}
+After merging on GitHub, update your local repository to reflect the changes.
+:::
+
+After merging on GitHub, update your local repository:
+
+```bash
+git checkout main
+git pull
+```
+
+## After Merging {auto-animate="true"}
+
+After merging on GitHub, update your local repository:
+
+```bash
+git checkout main
+git pull
+```
+
+Now your local `main` branch has all the changes from your merged branch!
+
+## Cleaning Up Branches
+
+::: {.notes}
+After merging, you can delete the branch to keep your repository tidy.
+:::
+
+Ideally, branches are deleted after merging to keep things tidy.
+
+__Delete the remote branch on GitHub:__
+
+After merging, GitHub shows a "Delete branch" button in the Pull Request.
+
+__Delete your local branch:__
+
+```bash
+git branch -d <branch-name>
+```
+
+::: aside
+Use `-D` instead of `-d` to force delete an unmerged branch (be careful!).
+:::
+
+## Handling Conflicts
+
+::: {.notes}
+Sometimes changes in your branch conflict with changes that were made to main. This requires manual resolution.
+:::
+
+Sometimes the `main` branch has changes that conflict with your branch.
+
+GitHub will indicate when there are conflicts that prevent automatic merging.
+
+## Handling Conflicts
+
+When conflicts occur:
+
+```bash
+git checkout main
+git pull
+git checkout <new-branch-name>
+git merge main
+```
+
+::: aside
+Git will mark the conflicting sections in your files. Edit them to resolve the conflicts, then commit the resolution.
+:::
+
+## Recap
+
+::: {.notes}
+You've learned the branching workflow that enables safe, collaborative development with Git.
+:::
+
+At this point you should understand:
+
+::: {.incremental .no-bullets}
+* ✓ Why branching is essential for collaboration
+* ✓ How to create and check out branches
+* ✓ How to create and review Pull Requests
+* ✓ What to look for when reviewing code
+* ✓ How to merge PRs and clean up branches
+* ✓ How to handle merge conflicts
+:::
+
+## Next Steps
+
+Continue practicing the branching workflow in your projects!
+
+For more guidance, visit the [RFF Data Governance website](https://rff-data-projects.github.io/rff-data-gov-guidance/).
+
+## Questions?
+
