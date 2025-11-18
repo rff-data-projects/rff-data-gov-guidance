@@ -35,15 +35,21 @@ To submit a question or comment over email, reach out to the [Data Governance Wo
 
 ## Site authors
 
-Members of the RFF Data Governance Working Group
+Current members of the RFF Data Governance Working Group
 
 * Aris Awang
 * Penny Liao
-* Ethan Russell
-* John Valdez
+* McKenna Peplinski
 * Matthew Wibbenmeyer
-* Jordan Wingenroth
 * Alexandra Thompson
+
+Past members
+
+* Caroline Hamilton
+* Ethan Russell
+* Mike Toman
+* John Valdez
+* Jordan Wingenroth
 
 ## See also
 
