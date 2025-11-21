@@ -1,11 +1,12 @@
 ---
 title: Software Quality
 ---
-__Content coming soon.__ 
 
-Style guide resources:
+Due to the computational nature of our research, software development (writing code and scripts) is a primary component of everyday work at RFF. Best practices in scientific coding are designed to:
 
-* *R*: [Tidyverse Style Guide by Hadley Wickham](https://style.tidyverse.org/)
-* *Python*: [Google Python Style Guide](https://google.github.io/styleguide/pyguide.html)
-* *Stata*: [Suggestions on Stata programming style by Nicholas Fox](https://www.stata-journal.com/sjpdf.html?articlenum=pr0018)
-* *Other languages*: [Google style guides for other languages](https://google.github.io/styleguide/)
+- ensure **accuracy** and minimize errors,
+- enhance code **readability** and **flexibility**,
+- improve **reproducibility**, and
+- improve **efficiency** in computation.
+
+The other components of this guidance ([Data Management](../data-management/index.qmd) and [Version Control](../version-control/index.qmd)) are all part of practices for high-quality software. This section focuses specifically on the code-writing process, providing general principles to promote robust coding practices while recognizing that best practices vary by discipline and by software/language.
