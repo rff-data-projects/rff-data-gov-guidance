@@ -11,6 +11,7 @@ We recommend three practices to enhance program flexibility:
 2. **Use parameters instead of hard coding**  
 3. **Use relative file paths**
 
+
 ---
 
 ## Use functions
@@ -32,7 +33,7 @@ To use functions effectively:
   Instead of repeating similar operations for each dataset or variable, store them in a list and write a single function to handle the task. Then, use a loop to apply that function to each element of the list automatically. 
 
 
-### Example of functional programming in R {-}
+### Example: functional programming in R {-}
 
 ```r
 library(tidyverse)
@@ -92,7 +93,7 @@ print(mean_sales_without_zero)
 
 Instead of hard coding values or constants, parameterization involves using variables, configuration files, or external resources to store data that can be adjusted without changing the code structure. This approach enhances the adaptability of the code to varying conditions, and is particularly useful when the parameters are referenced multiple times in the code. 
 
-### Example of parameterization {-}
+### Example: parameterization {-}
 
 ```r
 # Parameters
@@ -123,7 +124,7 @@ cat(
 
 Instead of using absolute file paths, **relative file paths refer to files or directories in relation to the current working directory**. This approach allows code to work on different user machines, accommodates changes in the project folder path, and makes the code easier to archive and share when the project is completed.
 
-### Example: Reading and Writing Files Using Relative Paths {-}
+### Example: reading and writing files using relative paths {-}
 
 **Directory structure**
 

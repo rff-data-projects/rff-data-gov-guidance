@@ -46,7 +46,7 @@ In particular, we recommend using **consistent, distinctive, and meaningful name
 
 - **Variable or object** names should be descriptive of their content, avoiding overly vague or generic terms (e.g., `discount_rate` instead of `val`)
 - **Function** names should describe their action or output (e.g., `calculate_average_price()`). 
-- **Datasets and files** should follow a systematic naming pattern that includes relevant identifiers (e.g., `county_population_2022.csv` instead of `data_final.csv`). *(See the [Naming folders, files, and scripts](docs/data-management/organization.html#naming-folders-files-and-scripts) subsection under Data Management.)*
+- **Datasets and files** should follow a systematic naming pattern that includes relevant identifiers (e.g., `county_population_2022.csv` instead of `data_final.csv`). See also the [Naming folders, files, and scripts](../data-management/organization.qmd#naming-folders-files-and-scripts) subsection under Data Management.
 
 
 ---

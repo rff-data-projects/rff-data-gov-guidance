@@ -39,6 +39,10 @@ website:
         contents:
             - docs/software/readability.qmd
             - docs/software/flexibility.qmd
+            - docs/software/reproducibility.qmd
+            - docs/software/accuracy.qmd
+            - docs/software/computational-efficiency.qmd
+            - docs/software/additional-resources.qmd
       - presentations/index.qmd
     tools:
       - icon: github

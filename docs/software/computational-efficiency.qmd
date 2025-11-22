@@ -1,0 +1,28 @@
+---
+title: "Computational Efficiency"
+format: html
+---
+
+Projects at RFF increasingly require the use of big datasets and large-scale models, making the analysis computationally intensive. This can lead to significant resource usage, primarily time and memory, and can even cause the code to fail. The key to achieving high computational efficiency lies in optimizing the algorithm's design to minimize execution time and memory consumption. The following practices are recommended:
+
+- **Assess computational need against capacity.**  
+  Many analyses can be anticipated to stretch available computational resources. In such cases, pay special attention to managing computational efficiency from the start.
+
+- **Choose a server computer based on capacity needs.**  
+  RFF’s server computers differ in CPU and memory capacity. Choose a machine appropriate to the expected workload. Before running any analysis, check Task Manager to ensure that active sessions from other users leave sufficient capacity for your tasks.
+
+- **Test the code for correctness and efficiency.**  
+  Before running the full analysis, test the code on a small subset of the data. This helps estimate expected runtime and identify potential errors early, preventing wasted time on long re-runs.
+
+- **Monitor the computational process.**  
+  Monitor resource usage during execution to determine whether revisions are needed to improve efficiency or avoid exceeding the machine’s capacity.
+
+- **Revise code to improve efficiency.**  
+  Strategies may include using functions and loops to reduce memory usage, or implementing parallel processing when tasks involve many identical subtasks. The specific revisions will depend on the programming language and packages used. For R, see [Efficient R Programming](https://csgillespie.github.io/efficientR/index.html) by Colin Gillespie
+
+- **Coordinate with the IT team if needed.**  
+  If none of the above solutions suffice, the IT team can assist in configuring computational resources to meet the analysis needs.
+
+The need to manage computational efficiency differs by project and should be approached on a case-by-case basis. Not all projects require fully optimizing the computational efficiency of the code. The figure below organizes the above procedures in a flow chart to help researchers decide on next steps.
+
+![Flow chart for managing computational efficiency](../../images/efficiency.jpg)
