@@ -32,9 +32,9 @@ format: html
 
 ### GIS
 -	[Geocomputation with R](https://r.geocompx.org/) by Robin Lovelace et al. 
--	[Geographic Data Science with R: Visualizing and Analyzing Environmental Change](https://bookdown.org/mcwimberly/gdswr-book/) by Michael Wimberly. 
--	[Spatial Data Science](https://r-spatial.org/book/) by Edzer Pebesma and Roger Bivand.
-
+-	[Geographic Data Science with R: Visualizing and Analyzing Environmental Change](https://bookdown.org/mcwimberly/gdswr-book/) by Michael Wimberly 
+-	[Spatial Data Science](https://r-spatial.org/book/) by Edzer Pebesma and Roger Bivand
+- [RFF GIS Learning Lab](https://my.rff.org/it/computer-lab/)
 
 ---
 
