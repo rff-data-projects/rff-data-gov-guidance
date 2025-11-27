@@ -9,7 +9,7 @@ Projects at RFF increasingly require the use of big datasets and large-scale mod
   Many analyses can be anticipated to stretch available computational resources. In such cases, pay special attention to managing computational efficiency from the start.
 
 - **Choose a server computer based on capacity needs.**  
-  RFF’s server computers differ in CPU and memory capacity. Choose a machine appropriate to the expected workload. Before running any analysis, check Task Manager to ensure that active sessions from other users leave sufficient capacity for your tasks.
+  RFF’s server computers differ in CPU and memory capacity (see [here](https://teams.microsoft.com/l/channel/19%3AOK8J2CbP_g2aFAI2BWbNZ4Hq4VgDeYw6l7KbKDb4Khw1%40thread.tacv2/tab%3A%3A0a465e60-3995-47e4-9139-4c0f7345e26f?context=%7B%22channelId%22%3A%2219%3AOK8J2CbP_g2aFAI2BWbNZ4Hq4VgDeYw6l7KbKDb4Khw1%40thread.tacv2%22%7D&tenantId=b29f848d-b914-4be4-ad1f-89bdbdb8030a) for a list of server computers). Choose a machine appropriate to the expected workload. Before running any analysis, check Task Manager to ensure that active sessions from other users leave sufficient capacity for your tasks.
 
 - **Test the code for correctness and efficiency.**  
   Before running the full analysis, test the code on a small subset of the data. This helps estimate expected runtime and identify potential errors early, preventing wasted time on long re-runs.
