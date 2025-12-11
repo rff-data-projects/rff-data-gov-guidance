@@ -17,8 +17,8 @@ In a research team, pseudocode also facilitates consensus among collaborators. T
 
 ### Example: psuedocode and code {-}
 
-**Psuedocode**
 
+**Psuedocode**
 ```
 # Goal: Download migration data for years 2011-2021 from IRS website and save to disk
 
@@ -42,9 +42,7 @@ for year in 2011-2021 {
 ```
 
 **Code**
-
 ```r
-
 # Load necessary libraries
 library(dplyr)
 library(tidyr)
