@@ -113,7 +113,7 @@ cat(
 )
 
 ```
-**Notes:** This example uses variables min_hp and selected_cyl to store filter criteria, allowing the behavior of the code to be easily changed without modifying the filtering logic. These parameters control which rows of mtcars are selected, making the code adaptable to different analysis needs. Because the parameters are referenced multiple times, updating their values at the top automatically applies the changes everywhere they are used.
+**Notes:** This example uses variables `min_hp` and `selected_cyl` to store filter criteria, allowing the behavior of the code to be easily changed without modifying the filtering logic. These parameters control which rows of `mtcars` are selected, making the code adaptable to different analysis needs. Because the parameters are referenced multiple times, updating their values at the top automatically applies the changes everywhere they are used.
 
 ---
 
