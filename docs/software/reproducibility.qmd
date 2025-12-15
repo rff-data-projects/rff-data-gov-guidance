@@ -25,7 +25,7 @@ Breaking a project into a series of scripts makes it easier to test, maintain, a
   Each script should perform a clearly defined task, such as pre-processing a large dataset, creating geographical overlays, merging supplementary datasets, generating descriptive statistics, or running a specific analysis.
 
 - **Separate time-consuming steps.**  
-  If a procedure is computationally expensive, place it in its own script and save the output as an intermediate dataset for later steps. This avoids re-running lengthy processes, such as complex geospatial calculations or aggregating large datasets.
+  If a procedure is computationally expensive, place it in its own script and save the output as an intermediate dataset for later steps. This avoids unnecessarily re-running lengthy processes, such as complex geospatial calculations or aggregating large datasets.
 
 - **Isolate key intermediate outputs.**  
   If a block of code produces an output that will be used in multiple subsequent steps, place it in a dedicated script and save the output for reuse.
