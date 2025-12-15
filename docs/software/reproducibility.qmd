@@ -169,7 +169,6 @@ RENV_PATHS_LIBRARY=C:/Users/<username>/renv_libs
 
 #### 4. Install required packages
 
-renv::install("tidyverse")
 
 ```r 
 renv::install("tidyverse") 
