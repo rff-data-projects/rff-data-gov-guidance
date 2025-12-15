@@ -100,6 +100,8 @@ source("scripts/02_analysis/03_robustness_checks.R")
 
 An analysis using the same code and data may not run identically across different machines if the machines have different operating systems, application versions, or package versions installed. Therefore, package management is a critical component of reproducibility.
 
+Virtual environments provide a way to isolate the software dependencies of a project, such as package versions and system libraries, so that they are consistent over time and independent of other projects on the same machine. Maintaining separate environments for different projects prevents conflicts between dependencies, allows older analyses to remain reproducible even as packages evolve, and supports collaborative work by ensuring that all contributors run the code under the same computational conditions.
+
 Three powerful tools for managing computational environments are **renv**, **conda** and **Docker**.
 
 - **renv** (for R) creates project-specific environments that record and restore the exact package versions used in an analysis. This ensures that results can be reproduced even if packages have been updated globally.
