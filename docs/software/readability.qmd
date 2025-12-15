@@ -4,7 +4,7 @@ format: html
 ---
 
 > “Good coding style is like correct punctuation: you can manage without it,  
-> but it sure makes things easier to read.”  
+> butitsuremakesthingseasiertoread.”  
 > — [Tidyverse Style Guide](https://style.tidyverse.org/)
 
 Readable code reduces the time collaborators and future developers spend deciphering complex code and ensures continuity even if the original author is unavailable. To accomplish this, we recommend:
