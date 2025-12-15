@@ -155,7 +155,7 @@ Initialization creates the following folders and files in the project directory:
 
 Project folders containing data and code should be stored on the `L:/` drive. By default, renv creates a project-level package library within the project folder. However, accessing packages on a network drive can slow down R performance, especially when working remotely. To improve performance, we recommend that all project users configure **renv** to store the package library on their local or lab machine: 
 
-- Redirect the project’s library to a local drive by adding a `.Renviron` file (no extension) to the project folder containing the following text. This may need to be repeated on individual lab machines.
+- Redirect the project’s library to a local drive by creating a new text file in the project folder called `.Renviron` (no .txt extension). Insert the text below into the text file. This may need to be repeated on individual lab machines.
 
 ```r
 RENV_PATHS_LIBRARY=C:/Users/<username>/renv_libs
