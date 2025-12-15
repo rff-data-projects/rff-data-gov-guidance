@@ -91,7 +91,7 @@ print(mean_sales_without_zero)
 
 ## Use parameters
 
-Instead of hard coding values or constants, parameterization involves using variables, configuration files, or external resources to store data that can be adjusted without changing the code structure. This approach enhances the adaptability of the code to varying conditions, and is particularly useful when the parameters are referenced multiple times in the code. 
+Instead of hard-coding values or constants, parameterization involves using variables, configuration files, or external resources to store data that can be adjusted without changing the code structure. This approach enhances the adaptability of the code to varying conditions, and is particularly useful when the parameters are referenced multiple times in the code. 
 
 ### Example: parameterization {-}
 
