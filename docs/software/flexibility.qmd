@@ -131,11 +131,11 @@ Instead of using absolute file paths, **relative file paths refer to files or di
 ```
 my_project/
 ├── data/
-│ ├── input_data.csv
-│ └── output_data.csv
+│   ├── input_data.csv
+│   └── output_data.csv
 └── scripts/
-└── wilson/
-└── analysis.R
+    └── wilson/
+        └── analysis.R
 ```
 
 **Code (`analysis.R` in `scripts/wilson/`):**
