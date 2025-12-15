@@ -144,7 +144,7 @@ install.packages("renv")
 renv::init()
 ```
 
-Initialization creates the following:
+Initialization creates the following folders and files in the project directory:
 
 - `renv/library/` — project-specific package library  
 - `renv.lock` — records exact package versions  
