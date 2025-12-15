@@ -18,7 +18,7 @@ Projects at RFF increasingly require the use of big datasets and large-scale mod
   Monitor resource usage during execution to determine whether revisions are needed to improve efficiency or avoid exceeding the machine’s capacity.
 
 - **Revise code to improve efficiency.**  
-  Strategies may include using functions and loops to reduce memory usage, or implementing parallel processing when tasks involve many identical subtasks. The specific revisions will depend on the programming language and packages used. For R, see [Efficient R Programming](https://csgillespie.github.io/efficientR/index.html) by Colin Gillespie
+  Strategies may include using functions and loops to reduce memory usage, or implementing parallel processing when tasks involve many identical subtasks. The specific revisions will depend on the programming language and packages used. For R, see [Efficient R Programming](https://csgillespie.github.io/efficientR/index.html) by Colin Gillespie.
 
 - **Coordinate with the IT team if needed.**  
   If none of the above solutions suffice, the IT team can assist in configuring computational resources to meet the analysis needs.
