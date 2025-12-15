@@ -4,9 +4,9 @@ format: html
 ---
 
 ## General
-- Wilson, Greg, Jennifer Bryan, Karen Cranston, Justin Kitzes, Lex Nederbragt, and Tracy K. Teal. 2017. “[Good Enough Practices in Scientific Computing](https://journals.plos.org/ploscompbiol/article/file?id=10.1371/journal.pcbi.1005510&type=printable).” PLOS Computational Biology 13 (6): e1005510. https://doi.org/10.1371/journal.pcbi.1005510
-- [Best Practices when Writing Code](https://www.danielmsullivan.com/pages/tutorial_workflow_3bestpractice.html) by Daniel M. Sullivan
-- [Data science for economists](https://github.com/uo-ec607/lectures) by Grant McDermott
+- Wilson, Greg, Jennifer Bryan, Karen Cranston, Justin Kitzes, Lex Nederbragt, and Tracy K. Teal. 2017. “[Good Enough Practices in Scientific Computing](https://journals.plos.org/ploscompbiol/article/file?id=10.1371/journal.pcbi.1005510&type=printable){target="_blank" rel="noopener"}.” PLOS Computational Biology 13 (6): e1005510. https://doi.org/10.1371/journal.pcbi.1005510
+- [Best Practices when Writing Code](https://www.danielmsullivan.com/pages/tutorial_workflow_3bestpractice.html){target="_blank" rel="noopener"} by Daniel M. Sullivan
+- [Data science for economists](https://github.com/uo-ec607/lectures){target="_blank" rel="noopener"} by Grant McDermott
 
 ---
 
@@ -14,63 +14,63 @@ format: html
 
 ### General
 
--	[R for Reproducible Scientific Analysis](https://swcarpentry.github.io/r-novice-gapminder/) by Software Carpentry
--	[R for Data Science (2e)](https://r4ds.hadley.nz/) by Hadley Wickham et al.
+-	[R for Reproducible Scientific Analysis](https://swcarpentry.github.io/r-novice-gapminder/){target="_blank" rel="noopener"} by Software Carpentry
+-	[R for Data Science (2e)](https://r4ds.hadley.nz/){target="_blank" rel="noopener"} by Hadley Wickham et al.
 
 ### Beginner
--	[Learn R](https://www.codecademy.com/learn/learn-r) by Codecademy
--	[Hands-On Programming with R](https://rstudio-education.github.io/hopr/index.html) by Garrett Grolemund
+-	[Learn R](https://www.codecademy.com/learn/learn-r){target="_blank" rel="noopener"} by Codecademy
+-	[Hands-On Programming with R](https://rstudio-education.github.io/hopr/index.html){target="_blank" rel="noopener"} by Garrett Grolemund
 
 ### Intermediate/Advanced
--	[NCEAS Learning Hub’s coreR Course](https://learning.nceas.ucsb.edu/2023-04-coreR/)
--	[Advanced R](https://adv-r.hadley.nz/) by Hadley Wickham
--	[Efficient R programming](https://csgillespie.github.io/efficientR/index.html) by Colin Gillespie
+-	[NCEAS Learning Hub’s coreR Course](https://learning.nceas.ucsb.edu/2023-04-coreR/){target="_blank" rel="noopener"}
+-	[Advanced R](https://adv-r.hadley.nz/){target="_blank" rel="noopener"} by Hadley Wickham
+-	[Efficient R programming](https://csgillespie.github.io/efficientR/index.html){target="_blank" rel="noopener"} by Colin Gillespie
 
 ### Visualization
--	[Data Visualization: A Practical Introduction](https://socviz.co/) by Kieran Healy
-- [ggplot2: Elegant Graphics for Data Analysis (3e)](https://ggplot2-book.org/) by Hadley Wickham et al.
+-	[Data Visualization: A Practical Introduction](https://socviz.co/){target="_blank" rel="noopener"} by Kieran Healy
+- [ggplot2: Elegant Graphics for Data Analysis (3e)](https://ggplot2-book.org/){target="_blank" rel="noopener"} by Hadley Wickham et al.
 
 ### GIS
--	[Geocomputation with R](https://r.geocompx.org/) by Robin Lovelace et al. 
--	[Geographic Data Science with R: Visualizing and Analyzing Environmental Change](https://bookdown.org/mcwimberly/gdswr-book/) by Michael Wimberly 
--	[Spatial Data Science](https://r-spatial.org/book/) by Edzer Pebesma and Roger Bivand
-- [RFF GIS Learning Lab](https://my.rff.org/it/computer-lab/)
+-	[Geocomputation with R](https://r.geocompx.org/){target="_blank" rel="noopener"} by Robin Lovelace et al. 
+-	[Geographic Data Science with R: Visualizing and Analyzing Environmental Change](https://bookdown.org/mcwimberly/gdswr-book/){target="_blank" rel="noopener"} by Michael Wimberly 
+-	[Spatial Data Science](https://r-spatial.org/book/){target="_blank" rel="noopener"} by Edzer Pebesma and Roger Bivand
+- [RFF GIS Learning Lab](https://my.rff.org/it/computer-lab/){target="_blank" rel="noopener"}
 
 ---
 
 ## Python
-- [The Python Tutorial](https://docs.python.org/3/tutorial/index.html)
-- [Python Datascience Handbook](https://jakevdp.github.io/PythonDataScienceHandbook/) by Jake VanderPlas
-- [Data Science from Scratch](https://jcer.in/jcer-docs/E-Learning/Digital%20Library%20/E-Books/Data%20Science%20from%20Scratch%20by%20Joel%20Grus.pdf) by Joel Grus
-- [Automate the Boring Stuff with Python](https://automatetheboringstuff.com/) by Al Sweigart
--	[Plotting and Programming in Python](https://swcarpentry.github.io/python-novice-gapminder/index.html) by Software Carpentry
-- [Python Web Scraping: Full Tutorial With Examples (2025)](https://www.scrapingbee.com/blog/web-scraping-101-with-python/) by Kevin Sahin
-- [Fluent Python](https://elmoukrie.com/wp-content/uploads/2022/05/luciano-ramalho-fluent-python_-clear-concise-and-effective-programming-oreilly-media-2022.pdf) by Luciano Ramalho
+- [The Python Tutorial](https://docs.python.org/3/tutorial/index.html){target="_blank" rel="noopener"}
+- [Python Datascience Handbook](https://jakevdp.github.io/PythonDataScienceHandbook/){target="_blank" rel="noopener"} by Jake VanderPlas
+- [Data Science from Scratch](https://jcer.in/jcer-docs/E-Learning/Digital%20Library%20/E-Books/Data%20Science%20from%20Scratch%20by%20Joel%20Grus.pdf){target="_blank" rel="noopener"} by Joel Grus
+- [Automate the Boring Stuff with Python](https://automatetheboringstuff.com/){target="_blank" rel="noopener"} by Al Sweigart
+-	[Plotting and Programming in Python](https://swcarpentry.github.io/python-novice-gapminder/index.html){target="_blank" rel="noopener"} by Software Carpentry
+- [Python Web Scraping: Full Tutorial With Examples (2025)](https://www.scrapingbee.com/blog/web-scraping-101-with-python/){target="_blank" rel="noopener"} by Kevin Sahin
+- [Fluent Python](https://elmoukrie.com/wp-content/uploads/2022/05/luciano-ramalho-fluent-python_-clear-concise-and-effective-programming-oreilly-media-2022.pdf){target="_blank" rel="noopener"} by Luciano Ramalho
 
 
 ---
 
 ## Julia
-- [Julia Manual](https://docs.julialang.org/en/v1/)
-- [Julia Academy](https://juliaacademy.com/)
-- [Julia Data Science](https://juliadatascience.io/) by Jose Storopoli et al
--	[Getting Started · DataFrames.jl](https://dataframes.juliadata.org/stable/man/getting_started/)
--	[Tutorial · Plots](https://docs.juliaplots.org/dev/tutorial/)
-- [Julia Performance Tips](https://docs.julialang.org/en/v1/manual/performance-tips/)
+- [Julia Manual](https://docs.julialang.org/en/v1/){target="_blank" rel="noopener"}
+- [Julia Academy](https://juliaacademy.com/){target="_blank" rel="noopener"}
+- [Julia Data Science](https://juliadatascience.io/){target="_blank" rel="noopener"} by Jose Storopoli et al
+-	[Getting Started · DataFrames.jl](https://dataframes.juliadata.org/stable/man/getting_started/){target="_blank" rel="noopener"}
+-	[Tutorial · Plots](https://docs.juliaplots.org/dev/tutorial/){target="_blank" rel="noopener"}
+- [Julia Performance Tips](https://docs.julialang.org/en/v1/manual/performance-tips/){target="_blank" rel="noopener"}
 
 
 ---
 
 ## Stata
-- [Stata Users Guide](https://www.stata.com/bookstore/users-guide/)
-- [UCLA Stata Learning Modules](https://stats.oarc.ucla.edu/stata/modules/)
+- [Stata Users Guide](https://www.stata.com/bookstore/users-guide/){target="_blank" rel="noopener"}
+- [UCLA Stata Learning Modules](https://stats.oarc.ucla.edu/stata/modules/){target="_blank" rel="noopener"}
 
 ---
 
 ## MATLAB
-- [MATLAB Onramp Course](https://matlabacademy.mathworks.com/en/details/matlab-onramp/gettingstarted)
-- [MATLAB: A Practical Approach](https://dl.icdst.org/pdfs/files3/375826d75004252629466f2157b47197.pdf) by Stormy Attaway
-- [Numerical Methods using MATLAB](https://mrce.in/ebooks/Numerical%20Methods%20Using%20MATLAB%204th%20Ed.pdf) by George Lindfield and John Penny
+- [MATLAB Onramp Course](https://matlabacademy.mathworks.com/en/details/matlab-onramp/gettingstarted){target="_blank" rel="noopener"}
+- [MATLAB: A Practical Approach](https://dl.icdst.org/pdfs/files3/375826d75004252629466f2157b47197.pdf){target="_blank" rel="noopener"} by Stormy Attaway
+- [Numerical Methods using MATLAB](https://mrce.in/ebooks/Numerical%20Methods%20Using%20MATLAB%204th%20Ed.pdf){target="_blank" rel="noopener"} by George Lindfield and John Penny
 
 
 

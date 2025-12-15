@@ -100,14 +100,18 @@ source("scripts/02_analysis/03_robustness_checks.R")
 
 An analysis using the same code and data may not run identically across different machines if the machines have different operating systems, application versions, or package versions installed. Therefore, package management is a critical component of reproducibility.
 
-Two powerful tools for managing computational environments are **renv** and **Docker**.
+Three powerful tools for managing computational environments are **renv**, **conda** and **Docker**.
 
-- **renv** (for R) creates project-specific environments that record and restore the exact package versions used in an analysis. This ensures that results can be reproduced even if packages have been updated globally.  
+- **renv** (for R) creates project-specific environments that record and restore the exact package versions used in an analysis. This ensures that results can be reproduced even if packages have been updated globally.
 
-- **Docker** goes further by packaging the entire computational environment—including the operating system and versions of R, Python, Julia, and all associated packages—into a self-contained container that can be run on any machine. This guarantees that an analysis produces identical results across machines.
+- **conda** (for Python, R, and other languages) manages project-specific environments by explicitly specifying package versions and system dependencies. conda helps ensure that analyses run consistently across machines and over time, particularly for workflows that rely on compiled libraries or mixed-language dependencies.
 
+- **Docker** goes further by packaging the entire computational environment (including the operating system and versions of R, Python, Julia, and all associated packages) into a self-contained container that can be run on any machine. 
+
+
+<!--
 While both tools enhance reproducibility, **we recommend renv for projects that primarily use R**. Below is a quick guide for **renv**.
-
+-->
 
 ### renv overview
 
@@ -290,16 +294,16 @@ Record which scripts depend on which versions. Commit updated `renv.lock` (if ke
 ### Additional resources
 
 #### Basics
-- [Introduction to renv](https://rstudio.github.io/renv/articles/renv.html)
--	Video walkthrough: [Using renv to track the version of your packages in R](https://www.youtube.com/watch?v=yc7ZB4F_dc0)
--	[RStudio user guide: renv](https://docs.posit.co/ide/user/ide/guide/environments/r/renv.html)
--	[Frequently asked questions](https://rstudio.github.io/renv/articles/faq.html)
+- [Introduction to renv](https://rstudio.github.io/renv/articles/renv.html){target="_blank" rel="noopener"}
+-	Video walkthrough: [Using renv to track the version of your packages in R](https://www.youtube.com/watch?v=yc7ZB4F_dc0){target="_blank" rel="noopener"}
+-	[RStudio user guide: renv](https://docs.posit.co/ide/user/ide/guide/environments/r/renv.html){target="_blank" rel="noopener"}
+-	[Frequently asked questions](https://rstudio.github.io/renv/articles/faq.html){target="_blank" rel="noopener"}
 
 ####	Handling conflicts
--	[View and revert to a historical lockfile](https://rstudio.github.io/renv/reference/history.html)
--	[Report inconsistencies between lockfile, library, and dependencies](https://rstudio.github.io/renv/reference/status)
+-	[View and revert to a historical lockfile](https://rstudio.github.io/renv/reference/history.html){target="_blank" rel="noopener"}
+-	[Report inconsistencies between lockfile, library, and dependencies](https://rstudio.github.io/renv/reference/status){target="_blank" rel="noopener"}
 
 #### Uninstall renv
-- [How to uninstall renv from your project](https://rstudio.github.io/renv/articles/renv.html#uninstalling-renv)
+- [How to uninstall renv from your project](https://rstudio.github.io/renv/articles/renv.html#uninstalling-renv){target="_blank" rel="noopener"}
 
 

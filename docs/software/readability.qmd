@@ -5,7 +5,7 @@ format: html
 
 > “Good coding style is like correct punctuation: you can manage without it,  
 > butitsuremakesthingseasiertoread.”  
-> — [Tidyverse Style Guide](https://style.tidyverse.org/)
+> — [Tidyverse Style Guide](https://style.tidyverse.org/){target="_blank" rel="noopener"}
 
 Readable code reduces the time collaborators and future developers spend deciphering complex code and ensures continuity even if the original author is unavailable. To accomplish this, we recommend:
 
@@ -18,9 +18,9 @@ Readable code reduces the time collaborators and future developers spend deciphe
 
 ## Modularizing code
 
-Modularizing code refers to breaking the script into small, self-contained, and logically organized blocks, each with a clear and focused purpose. This approach makes the structure of the code more transparent to readers.  
+Modularizing code is the practice of organizing an entire research project into small, self-contained, and logically structured components, each with a clear and focused purpose. This applies at multiple levels: separating the overall codebase into well-defined scripts (e.g., raw data acquisition and import, cleaning, analysis, visualization), breaking scripts into coherent code blocks, and further decomposing repeated or complex operations into functions with clearly defined inputs and outputs. Together, these layers of modularization make the structure of the project transparent and easier for others to understand, review, and reuse.
 
-Each code block should be accompanied by descriptive in-line comments explaining its role and expected behavior. Modularization also helps with debugging: when something goes wrong, you can isolate and fix the issue in a single location rather than combing through the entire codebase.
+Each script, code block, or function should be accompanied by descriptive in-line comments or documentation explaining its role, assumptions, and expected behavior. Modularization also improves debugging and maintenance: when something goes wrong, issues can be isolated to a specific component rather than requiring developers to trace through the entire codebase. Over time, this structure supports collaborative development, facilitates testing, and allows individual pieces of the workflow to evolve without disrupting the rest of the project.
 
 
 ---
@@ -37,10 +37,10 @@ While personal preferences vary, **the key to readability is consistency**.
 
 Below are established style guides relevant to programming languages commonly used at RFF:
 
-- R: [*Tidyverse Style Guide*](https://style.tidyverse.org/) by Hadley Wickham  
-- Python: [*Google Python Style Guide*](https://github.com/google/styleguide/blob/gh-pages/pyguide.md)  
-- Stata: [*Suggestions on Stata programming style*](https://www.stata-journal.com/sjpdf.html?articlenum=pr0018) by Nicholas Fox  
-- Other languages: [*Google style guides for other languages*](https://google.github.io/styleguide/)
+- R: [*Tidyverse Style Guide*](https://style.tidyverse.org/){target="_blank" rel="noopener"} by Hadley Wickham  
+- Python: [*Google Python Style Guide*](https://github.com/google/styleguide/blob/gh-pages/pyguide.md){target="_blank" rel="noopener"}  
+- Stata: [*Suggestions on Stata programming style*](https://www.stata-journal.com/sjpdf.html?articlenum=pr0018){target="_blank" rel="noopener"} by Nicholas Fox  
+- Other languages: [*Google style guides for other languages*](https://google.github.io/styleguide/){target="_blank" rel="noopener"}
 
 In particular, we recommend using **consistent, distinctive, and meaningful names** for variables, functions, datasets, and files:
 
