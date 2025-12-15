@@ -3,7 +3,7 @@ title: "Accuracy"
 format: html
 ---
 
-Accuracy refers to the correctness and precision of written code in executing its intended functions without errors or unintended consequences. Below we discuss **three practices** that promote accuracy, particularly in collaborative environments such as typical RFF projects: 
+Accuracy refers to the correctness and precision of written code in executing its intended functions without errors or unintended consequences. Below we discuss **three practices** that promote accuracy, particularly in collaborative environments typical of RFF projects: 
 
 1. **pseudocoding**, 
 2. **testing and debugging** during code development, and
