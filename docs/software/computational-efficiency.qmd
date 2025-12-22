@@ -3,7 +3,9 @@ title: "Computational Efficiency"
 format: html
 ---
 
-Projects at RFF increasingly require the use of big datasets and large-scale models, making the analysis computationally intensive. This can lead to significant resource usage, primarily time and memory, and can even cause the code to fail. The key to achieving high computational efficiency lies in optimizing the algorithm's design to minimize execution time and memory consumption.
+Projects at RFF increasingly rely on large datasets and computationally intensive models. As a result, the performance of analysis code may be constrained by available computing resources. Inefficient workflows can take hours or days to run, consume excessive memory, or fail altogether. In this section, we provide guidance on diagnosing and improving **computational efficiency**, broadly referring to how effectively code uses available resources. These resources primarily include **time** (how long a task takes to run) and **memory** (how much data can be processed at once). 
+
+In this context, memory refers to the computer’s [Random Access Memory (RAM)](https://csgillespie.github.io/efficientR/hardware.html#ram). RAM is a fast workspace where data and program objects are stored while code is executing. This is fundamentally different from disk storage (such as hard drives or SSDs), which is designed for long-term storage. Because RAM allows the CPU to read and write data orders of magnitude faster than disk, most statistical computing environments (including R and Python) load data into memory before performing computations. Therefore, available physical memory plays [an important role](https://rdpeng.github.io/RProgDA/the-role-of-physical-memory.html) in determining the size of datasets and intermediate objects that can be processed efficiently. When memory limits are exceeded, performance may degrade sharply or the session may fail altogether. See 
 
 ## General practices
 
@@ -112,7 +114,7 @@ A **data structure** is a format for organizing, retrieving, and storing data in
 
 ### Profile and benchmark code
 
-Profiling and benchmarking help pinpoint runtime and memory bottlenecks and quantify whether revisions improve performance. Options include:
+Profiling and benchmarking can help pinpoint runtime and memory bottlenecks and quantify whether revisions improve performance. Options include:
 
 -   For quick timing checks, use the built-in base R function `system.time()`.
 
@@ -156,13 +158,35 @@ Input/output (I/O) operations (i.e., reading data from disk and writing results)
 
 -   Save intermediate data to avoid repeated reads of large raw files. Save them in formats such as `.fst`, `.rds`, or `.parquet`, which are typically faster to read and write and more memory-efficient than plain text formats (e.g., `.csv`, `.txt`).
 
--   Read only the data you need. Some read functions (e.g., `data.data::fread()` and `readr::read_csv()`) can scan the data structure and selectively load columns or rows without reading the entire dataset into memory.
+-   Read only the data you need. Some read functions (e.g., `data.table::fread()` and `readr::read_csv()`) can scan the data structure and selectively load columns or rows without reading the entire dataset into memory.
 
 **Example: read only selected columns**
 
 ``` r
 DT <- fread("large_data.csv", select = c("id", "year", "value"))
 ```
+
+### Manage garbage collection
+
+R automatically manages memory through garbage collection (GC), a process that reclaims memory from objects that are no longer referenced. Garbage collection is triggered based on internal thresholds and requires R to pause execution and scan memory for unused objects. While GC typically runs in the background, it can become a performance bottleneck in memory-intensive workflows, particularly when many large temporary objects are created and discarded. GC-related issues often appear as unexpectedly long runtimes, intermittent pauses during execution, or persistently high memory usage rather than explicit error messages.
+
+The most effective way to limit the runtime cost of garbage collection is to reduce unnecessary object creation. Avoiding large intermediate objects and minimizing repeated allocation and copying can substantially lower GC overhead.
+
+R also allows users to trigger garbage collection explicitly via the `gc()` function. In most cases, automatic garbage collection is sufficient. Explicit calls to gc() are best reserved for two situations:
+
+1. After removing very large objects that are no longer needed
+2. Before starting a memory-intensive computation
+
+Because garbage collection itself is computationally expensive, frequent or routine calls can substantially slow execution, especially inside loops. The `gc()` function should therefore be used deliberately and sparingly.
+
+
+**Example: garbage collection after removing large objects**
+
+``` r
+rm(large_object)
+gc()
+```
+
 
 ### Use parallel computation when appropriate
 
