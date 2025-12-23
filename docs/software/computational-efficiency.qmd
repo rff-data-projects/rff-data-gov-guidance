@@ -5,7 +5,7 @@ format: html
 
 Projects at RFF increasingly rely on large datasets and computationally intensive models. As a result, the performance of analysis code may be constrained by available computing resources. Inefficient workflows can take hours or days to run, consume excessive memory, or fail altogether. In this section, we provide guidance on diagnosing and improving **computational efficiency**, broadly referring to how effectively code uses available resources. These resources primarily include **time** (how long a task takes to run) and **memory** (how much data can be processed at once). 
 
-In this context, memory refers to the computer’s [Random Access Memory (RAM)](https://csgillespie.github.io/efficientR/hardware.html#ram). RAM is a fast workspace where data and program objects are stored while code is executing. This is fundamentally different from disk storage (such as hard drives or SSDs), which is designed for long-term storage. Because read and write operations to RAM are orders of magnitude faster than those to disk, most statistical computing environments—including R and Python—load data into memory before performing computations. Therefore, available physical memory plays [an important role](https://rdpeng.github.io/RProgDA/the-role-of-physical-memory.html) in determining the size of datasets and intermediate objects that can be processed efficiently. When memory limits are exceeded, performance may degrade sharply or the session may fail altogether. See 
+In this context, memory refers to the computer’s [Random Access Memory (RAM)](https://csgillespie.github.io/efficientR/hardware.html#ram). RAM is a fast workspace where data and program objects are stored while code is executing. This is fundamentally different from disk storage (such as hard drives or SSDs), which is designed for long-term storage. Because read and write operations to RAM are orders of magnitude faster than those to disk, most statistical computing environments—including R and Python—load data into memory before performing computations. Therefore, available physical memory plays [an important role](https://rdpeng.github.io/RProgDA/the-role-of-physical-memory.html) in determining the size of datasets and intermediate objects that can be processed efficiently. When memory limits are exceeded, performance may degrade sharply or the session may fail altogether. 
 
 ## General practices
 
@@ -143,10 +143,21 @@ toc()
 ``` r
 library(profvis)
 
+times <- 4e5
+cols <- 150
+data <- as.data.frame(x = matrix(rnorm(times * cols, mean = 5), ncol = cols))
+data <- cbind(id = paste0("g", seq_len(times)), data)
+
 profvis({
-  # run the code block you want to diagnose
-  df$x2 <- df$x^2
-  m <- mean(df$x2)
+  data1 <- data   # Store in another variable for this run
+  
+  # Get column means
+  means <- apply(data1[, names(data1) != "id"], 2, mean)
+  
+  # Subtract mean from each column
+  for (i in seq_along(means)) {
+    data1[, names(data1) != "id"][, i] <- data1[, names(data1) != "id"][, i] - means[i]
+  }
 })
 ```
 
