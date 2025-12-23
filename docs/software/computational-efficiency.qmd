@@ -190,7 +190,7 @@ gc()
 
 ### Use parallel computation when appropriate
 
-Parallel computation can substantially reduce runtime by distributing independent tasks across multiple CPU cores. However, it increases coding complexity and resource demands and should therefore be treated as an optimization step rather than a default choice. Parallelization is most effective when the same operation can be applied independently across many units, such as:
+Parallel computation can substantially reduce runtime by distributing independent tasks across multiple CPU cores. However, it increases coding complexity and resource demands and should therefore be treated as an optimization step rather than a default choice. Parallelization is possible when the same operation can be applied independently across many units, such as:
 
 -   Batch processing of many files, for example workflows that read, clean, or transform large numbers of similarly structured files.
 
