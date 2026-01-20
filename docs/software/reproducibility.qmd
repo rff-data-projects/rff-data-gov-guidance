@@ -80,7 +80,7 @@ If the project uses global parameters referenced across multiple scripts, place 
 
 # Prepare analysis data
 source("scripts/01_processing/01_clean.R")                    
-source("scripts/01_processing /02_aggregate.R")       
+source("scripts/01_processing/02_aggregate.R")       
 source("scripts/01_processing/03_merge_external.R")
 
 # Descriptive stats and figures
