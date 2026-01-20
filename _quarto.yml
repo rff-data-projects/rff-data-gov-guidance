@@ -34,11 +34,15 @@ website:
           - docs/version-control/tutorial-branching.qmd
           - docs/version-control/workflows.qmd
           - docs/version-control/faq.qmd
-      - section: "Software Quality (Coming Soon)"
+      - section: "Software Quality"
         href: docs/software/index.qmd
         contents:
-            - docs/software/index.qmd
-          # - docs/software/setup.qmd
+            - docs/software/readability.qmd
+            - docs/software/flexibility.qmd
+            - docs/software/reproducibility.qmd
+            - docs/software/accuracy.qmd
+            - docs/software/computational-efficiency.qmd
+            - docs/software/additional-resources.qmd
       - presentations/index.qmd
     tools:
       - icon: github

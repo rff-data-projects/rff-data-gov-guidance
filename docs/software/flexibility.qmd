@@ -1,0 +1,164 @@
+---
+title: "Flexibility"
+format: html
+---
+
+Flexibility refers to the extent to which code can be easily adapted and modified to accommodate changes in external factors, data, or methodology. Code with **hard-coded values** (i.e. specific values are directly embedded in the source) will be inflexible, because the script must be edited anytime those values change.
+
+We recommend three practices to enhance program flexibility:
+
+1. **Use functions**  
+2. **Use parameters instead of hard coding**  
+3. **Use relative file paths**
+
+
+---
+
+## Use functions
+
+Most operations can be written as functions, which can then be applied to different datasets or variables. Because functions are reusable, they not only provide greater flexibility but also help avoid redundant code. Repeating the same operation by “copy-pasting” it into multiple parts of the code makes it harder to maintain, as any change must be replicated in several places. By contrast, when a repeated operation is written as a function, any change needs to be made only once, making the script more concise, readable, and less error-prone.
+
+To use functions effectively:
+
+- **Define a clear purpose.**  
+  Each function should accomplish a single, well-defined task.
+
+- **Document thoroughly.**  
+  Describe the function’s purpose, inputs, and outputs.
+
+- **Make the function configurable.**  
+  Use arguments to control the behavior of the function. Do not comment and uncomment sections of code to change the function – this practice is prone to mistakes.
+
+- **Generalize operations using loops and lists.**  
+  Instead of repeating similar operations for each dataset or variable, store them in a list and write a single function to handle the task. Then, use a loop to apply that function to each element of the list automatically. 
+
+
+### Example: functional programming in R {-}
+
+```r
+library(tidyverse)
+
+# ----------------------------
+# Function
+# ----------------------------
+
+# Function to calculate the mean of a numeric vector
+# Args:
+#   x: A numeric vector
+#   na_as_zero: Logical; treat NA as zero? Default FALSE.
+#   na.rm: Logical; remove NA values? Default TRUE.
+# Returns:
+#   The mean of the numeric vector.
+
+calculate_mean <- function(x, na_as_zero = FALSE, na.rm = TRUE) {
+  
+  # Replace NAs with 0 if specified
+  if (na_as_zero) {
+    x <- replace_na(x, 0)
+  }
+  
+  # Calculate the mean
+  mean_value <- mean(x, na.rm = na.rm)
+  return(mean_value)
+}
+
+# ----------------------------
+# Example data
+# ----------------------------
+monthly_sales <- list(
+  January   = c(100, 200, 150, NA, 300),
+  February  = c(250, 300, NA, 400),
+  March     = c(200, 180, 220, 210)
+)
+
+# ----------------------------
+# Result
+# ----------------------------
+# Apply with na_as_zero = TRUE
+mean_sales_with_zero <- lapply(monthly_sales, calculate_mean, na_as_zero = TRUE)
+
+# Apply with na_as_zero = FALSE
+mean_sales_without_zero <- lapply(monthly_sales, calculate_mean, na_as_zero = FALSE)
+
+# Print the results
+print(mean_sales_with_zero)
+print(mean_sales_without_zero)
+```
+
+**Notes:** This example defines a well-documented function, `calculate_mean()`, that performs a single task—computing a mean with configurable handling of missing values through the `na_as_zero` and `na.rm` parameters. A named list of monthly sales is processed using `lapply()`, which loops over each element and applies the function without duplicating code.
+
+---
+
+## Use parameters
+
+Instead of hard-coding values or constants, parameterization involves using variables, configuration files, or external resources to store data that can be adjusted without changing the code structure. This approach enhances the adaptability of the code to varying conditions, and is particularly useful when the parameters are referenced multiple times in the code. 
+
+### Example: parameterization {-}
+
+```r
+# Parameters
+min_hp       <- 100   # Minimum horsepower required
+selected_cyl <- 6     # Number of cylinders to filter on
+
+# Filter the data using the parameters
+filtered_data <- subset(mtcars, hp >= min_hp & cyl == selected_cyl)
+
+# Compute the average MPG
+avg_mpg <- mean(filtered_data$mpg)
+
+# Report results using the parameters
+cat(
+  "Average MPG for cars with at least", min_hp, "horsepower",
+  "and", selected_cyl, "cylinders:", avg_mpg, "\n"
+)
+
+```
+**Notes:** This example uses variables `min_hp` and `selected_cyl` to store filter criteria, allowing the behavior of the code to be easily changed without modifying the filtering logic. These parameters control which rows of `mtcars` are selected, making the code adaptable to different analysis needs. Because the parameters are referenced multiple times, updating their values at the top automatically applies the changes everywhere they are used.
+
+---
+
+## Use relative file paths
+
+
+**Absolute file paths specify the complete location of a file or folder, beginning at the root of the file system**. For example, a dataset might be referenced with an absolute path such as `"L:/my_project/data/input_data.csv"`. These paths can create problems for collaborators, since the project may reside in different locations on their machines (for example, on a different drive letter or in another directory).
+
+Instead of using absolute file paths, **relative file paths refer to files or directories in relation to the current working directory**. This approach allows code to work on different user machines, accommodates changes in the project folder path, and makes the code easier to archive and share when the project is completed.
+
+### Example: reading and writing files using relative paths {-}
+
+**Directory structure**
+
+```
+my_project/
+├── data/
+│   ├── input_data.csv
+│   └── output_data.csv
+└── scripts/
+    └── wilson/
+        └── analysis.R
+```
+
+**Code (`analysis.R` in `scripts/wilson/`):**
+
+```r
+# Set the working directory to the script's location (optional, recommended)
+setwd(dirname(rstudioapi::getActiveDocumentContext()$path))  # Temporarily set WD to where the script is stored
+
+# Move up two levels to the project root ('my_project/')
+setwd("../../")
+
+# Define relative paths
+input_path  <- "data/input_data.csv"
+output_path <- "data/output_data.csv"
+
+# Read data using a relative path
+data <- read.csv(input_path)
+
+# Write data using a relative path
+write.csv(data, output_path, row.names = FALSE)
+
+```
+
+**Notes:** This example demonstrates how to organize file access using relative paths rather than absolute paths, making the code portable across different machines and directory structures. In this example, the working directory is derived from the script’s location, but other configurations are possible—for instance, prompting the user once for the location of the project folder and using that as a consistent reference. In all cases, relative paths help ensure that the script remains functional even if the project is moved. 
+
+

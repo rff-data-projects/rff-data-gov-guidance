@@ -1,0 +1,66 @@
+---
+title: "Readability"
+format: html
+---
+
+> “Good coding style is like correct punctuation: you can manage without it,  
+> butitsuremakesthingseasiertoread.”  
+> — [Tidyverse Style Guide](https://style.tidyverse.org/){target="_blank" rel="noopener"}
+
+Readable code reduces the time collaborators and future developers spend deciphering complex code and ensures continuity even if the original author is unavailable. To accomplish this, we recommend:
+
+1. **modularizing code**,  
+2. using **consistent code style**, and  
+3. providing clear **in-code documentation**.  
+
+
+---
+
+## Modularizing code
+
+Modularizing code is the practice of organizing an entire research project into small, self-contained, and logically structured components, each with a clear and focused purpose. This applies at multiple levels: separating the overall codebase into well-defined scripts (e.g., raw data acquisition and import, cleaning, analysis, visualization), breaking scripts into coherent code blocks, and further decomposing repeated or complex operations into functions with clearly defined inputs and outputs. Together, these layers of modularization make the structure of the project transparent and easier for others to understand, review, and reuse.
+
+Each script, code block, or function should be accompanied by descriptive in-line comments or documentation explaining its role, assumptions, and expected behavior. Modularization also improves debugging and maintenance: when something goes wrong, issues can be isolated to a specific component rather than requiring developers to trace through the entire codebase. Over time, this structure supports collaborative development, facilitates testing, and allows individual pieces of the workflow to evolve without disrupting the rest of the project.
+
+
+---
+
+## Consistent code style
+
+Code style refers to the conventions that govern how code is written and formatted. This includes:
+
+- formatting choices (e.g., indentation, spacing, line length),
+- naming conventions (for variables, functions, datasets, etc.), and
+- documentation and commenting practices.
+
+While personal preferences vary, **the key to readability is consistency**.
+
+Below are established style guides relevant to programming languages commonly used at RFF:
+
+- R: [*Tidyverse Style Guide*](https://style.tidyverse.org/){target="_blank" rel="noopener"} by Hadley Wickham  
+- Python: [*Google Python Style Guide*](https://github.com/google/styleguide/blob/gh-pages/pyguide.md){target="_blank" rel="noopener"}  
+- Stata: [*Suggestions on Stata programming style*](https://www.stata-journal.com/sjpdf.html?articlenum=pr0018){target="_blank" rel="noopener"} by Nicholas Fox  
+- Other languages: [*Google style guides for other languages*](https://google.github.io/styleguide/){target="_blank" rel="noopener"}
+
+In particular, we recommend using **consistent, distinctive, and meaningful names** for variables, functions, datasets, and files:
+
+- **Variable or object** names should be descriptive of their content, avoiding overly vague or generic terms (e.g., `discount_rate` instead of `val`)
+- **Function** names should describe their action or output (e.g., `calculate_average_price()`). 
+- **Datasets and files** should follow a systematic naming pattern that includes relevant identifiers (e.g., `county_population_2022.csv` instead of `data_final.csv`). See also the [Naming folders, files, and scripts](../data-management/organization.qmd#naming-folders-files-and-scripts) subsection under Data Management.
+
+
+---
+
+## In-code documentation
+
+In-code documentation refers to comments written directly within the source code to explain its purpose, functionality, and usage. We recommend incorporating three types of documentation:
+
+1. **Script headers**  
+   Include a header at the top of each script outlining key metadata such as the script’s objective, author, and start date.
+
+2. **Block-level comments**  
+   Use comments to describe the intent and logic of each major code block.
+
+3. **Inline comments**  
+   Add comments on individual lines of code, especially when the functionality is not obvious or when there are potential limitations.
+
