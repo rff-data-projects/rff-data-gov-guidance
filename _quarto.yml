@@ -54,12 +54,12 @@ website:
   page-footer:
     right: "This page is built with [Quarto](https://quarto.org/)."
     background: "#c3e1f9"
-  announcement: 
-    icon: info-circle
-    dismissable: true
-    content: "**NOTE** - this site is still under development!"
-    type: primary
-    position: below-navbar
+  # announcement: 
+    # icon: info-circle
+    # dismissable: true
+    # content: "**NOTE** - this site is still under development!"
+    # type: primary
+    # position: below-navbar
 format:
   html:
     theme: 
