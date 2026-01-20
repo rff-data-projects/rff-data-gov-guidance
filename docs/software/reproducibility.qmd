@@ -86,7 +86,7 @@ source("scripts/01_processing/03_merge_external.R")
 # Descriptive stats and figures
 source("scripts/02_analysis/01a_summary_stats.R")                    
 source("scripts/02_analysis/01b_map.R")       
-source("scripts/02_analysis /01c_time_series_figure.R")
+source("scripts/02_analysis/01c_time_series_figure.R")
 
 # Analysis
 source("scripts/02_analysis/02_main_regressions.R")
