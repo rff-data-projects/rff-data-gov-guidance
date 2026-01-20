@@ -167,7 +167,7 @@ Input/output (I/O) operations (i.e., reading data from disk and writing results)
 
 -   Use high-performance read and write functions for large datasets. Functions such as `data.table::fread()` / `fwrite()` or `readr::read_csv()` are generally more efficient than base R functions like `read.csv()`, particularly for large files.
 
--   Save intermediate data to avoid repeated reads of large raw files. Save them in formats such as `.fst`, `.rds`, or `.parquet`, which are typically faster to read and write and more memory-efficient than plain text formats (e.g., `.csv`, `.txt`).
+-   Save intermediate data to avoid repeated reads of large raw files. Save them in formats such as `.fst`, `.rds`, or `.parquet`, which are typically faster to read and write and more memory-efficient than plain text formats (e.g., `.csv`, `.txt`). See [Data & File Types](../data-management/file-formats.qmd) for more details on data formats. 
 
 -   Read only the data you need. Some read functions (e.g., `data.table::fread()` and `readr::read_csv()`) can scan the data structure and selectively load columns or rows without reading the entire dataset into memory.
 

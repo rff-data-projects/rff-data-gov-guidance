@@ -109,7 +109,7 @@ Three common tools for managing computational environments are **renv**, **conda
 
 -   **Docker** goes further by packaging the entire computational environment (including the operating system and versions of R, Python, Julia, and all associated packages) into a self-contained container that can be run on any machine.
 
-At this time, the working group has not fully tested the functionality of these tools. The resources listed below are provided for reference. We would love to hear from users who have implemented any of these tools in RFF’s computing environment. Please get in touch with us to share your experience. 
+At this time, the working group has not fully tested the functionality of these tools. The resources listed below are provided for reference. We would love to hear from users who have implemented any of these tools in RFF’s computing environment. Please [get in touch with us](../../index.qmd#questions-and-feedback) to share your experience. 
 
 #### renv
 
