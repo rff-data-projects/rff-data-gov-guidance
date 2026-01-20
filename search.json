@@ -121,13 +121,134 @@
     ]
   },
   {
+    "objectID": "docs/software/computational-efficiency.html",
+    "href": "docs/software/computational-efficiency.html",
+    "title": "Computational Efficiency",
+    "section": "",
+    "text": "Projects at RFF increasingly rely on large datasets and computationally intensive models. As a result, the performance of analysis code may be constrained by available computing resources. Inefficient workflows can take hours or days to run, consume excessive memory, or fail altogether. In this section, we provide guidance on diagnosing and improving computational efficiency, broadly referring to how effectively code uses available resources. These resources primarily include time (how long a task takes to run) and memory (how much data can be processed at once).\nIn this context, memory refers to the computer’s Random Access Memory (RAM). RAM is a fast workspace where data and program objects are stored while code is executing. This is fundamentally different from disk storage (such as hard drives or SSDs), which is designed for long-term storage. Because read and write operations to RAM are orders of magnitude faster than those to disk, most statistical computing environments—including R and Python—load data into memory before performing computations. Therefore, available physical memory plays an important role in determining the size of datasets and intermediate objects that can be processed efficiently. When memory limits are exceeded, performance may degrade sharply or the session may fail altogether.",
+    "crumbs": [
+      "Software Quality",
+      "Computational Efficiency"
+    ]
+  },
+  {
+    "objectID": "docs/software/computational-efficiency.html#general-practices",
+    "href": "docs/software/computational-efficiency.html#general-practices",
+    "title": "Computational Efficiency",
+    "section": "1 General practices",
+    "text": "1 General practices\nThe need to manage computational efficiency differs by project and should be approached on a case-by-case basis. Not all projects require fully optimizing the computational efficiency of the code. The figure here organizes a set of general practices in a flow chart to help researchers decide on next steps.\n\n\n\nFlow chart for managing computational efficiency\n\n\n\nAssess computational need against capacity.\nMany analyses can be anticipated to stretch available computational resources. In such cases, pay special attention to managing computational efficiency from the start.\nChoose a server computer based on capacity needs.\nRFF’s server computers differ in CPU and memory capacity (see here for a list of server computers). Choose a machine appropriate to the expected workload. Before running any analysis, check Task Manager to ensure that active sessions from other users leave sufficient capacity for your tasks.\nTest the code for correctness and efficiency before full implementation.\nBefore running the full analysis, test the code on a small subset of the data. This helps estimate expected runtime and identify potential errors early, preventing wasted time on long re-runs.\nMonitor the computational process.\nMonitor resource usage during execution to determine whether revisions are needed to improve efficiency or avoid exceeding the machine’s capacity.\nRevise code to improve efficiency.\nStrategies may include using functions and loops to reduce memory usage, or implementing parallel processing when tasks involve many identical subtasks. The specific revisions will depend on the programming language and packages used. We provide more specific suggestions for programming in R below.\nCoordinate with the IT team if needed.\nIf none of the above solutions suffice, the IT team can assist in configuring computational resources to meet the analysis needs.",
+    "crumbs": [
+      "Software Quality",
+      "Computational Efficiency"
+    ]
+  },
+  {
+    "objectID": "docs/software/computational-efficiency.html#r-coding-practices-for-efficiency",
+    "href": "docs/software/computational-efficiency.html#r-coding-practices-for-efficiency",
+    "title": "Computational Efficiency",
+    "section": "2 R coding practices for efficiency",
+    "text": "2 R coding practices for efficiency\nBelow we outline a set of recommended practices for improving R code efficiency. With the exception of parallel computing, these are best treated as default habits during development, rather than techniques reserved for when performance problems emerge.\n\n2.1 Use vectorization over loops\nIn R, vectorization means operating on entire vectors, matrices, or data structures at once rather than iterating element by element in explicit loops. Vectorization is more efficient and should be used instead of for loops whenever possible. Applications include:\n\nMany base R functions are inherently vectorized, including arithmetic operations (e.g., +, -, *) , summary functions (e.g., sum(), mean(), rowSums()), and math functions (e.g., log(), exp(), sqrt()).\nUse vectorized conditions such as ifelse() over a list of instead of looping with if / else.\nUse apply family functions (e.g., apply(), lapply(), or sapply()) over vectors or lists rather than looping.\n\nExample: lapply() vs. a loop to standardize multiple numeric columns\ndf &lt;- data.frame(\n  a = rnorm(1e5),\n  b = rnorm(1e5),\n  c = rnorm(1e5),\n  group = sample(letters[1:3], 1e5, replace = TRUE)\n)\n\nnum_cols &lt;- c(\"a\", \"b\", \"c\")\n\n# Using a loop (inefficient)\nfor (col in num_cols) {\n  df[[col]] &lt;- (df[[col]] - mean(df[[col]])) / sd(df[[col]])\n}\n\n# Using lapply() (efficient)\ndf[num_cols] &lt;- lapply(df[num_cols], function(x) {\n  (x - mean(x)) / sd(x)\n})\n\n\n2.2 Avoid growing objects inside loops\nIn R, repeatedly expanding an object inside a loop (e.g., using c(), rbind(), or append() on each iteration) is slow and memory-intensive because R often needs to allocate new memory and copy the existing object each time it grows. A more efficient approach is to preallocate objects to their final size.\nExample: grow a vector in a loop vs. preallocate\n# Grow the vector each iteration (inefficient)\nvec &lt;- numeric(0)\nfor (i in 1:1000) {\n  vec &lt;- c(vec, i^2)\n}\n\n# Preallocate and fill (efficient)\nvec &lt;- numeric(1000)\nfor (i in 1:1000) {\n  vec[i] &lt;- i^2\n}\nWhen combining many results, store them in a list and use do.call(rbind, ...) or rbindlist() rather than repeatedly appending rows.\nExample: collect results, then combine once\nresult_list &lt;- vector(\"list\", 1000)\n\nfor (i in 1:1000) {\n  result_list[[i]] &lt;- data.frame(id = i, value = i^2)\n}\n\nresult &lt;- do.call(rbind, result_list)\n\n\n2.3 Use efficient data structures\nA data structure is a format for organizing, retrieving, and storing data in a computer. Some common R data structures include vectors, matrices, lists, data.frames, and data.tables. Selecting appropriate data structures can substantially improve runtime and memory efficiency, particularly when working with large datasets. Some R data structures are optimized for specific operations and should be preferred when performance matters. For example:\n\nUse data.table for large tabular data rather than data.frame when speed and memory efficiency are important. data.table is optimized for fast grouping, joins, and in-place updates.\nUse factors for categorical variables instead of character strings when appropriate. Factors store categories as integer codes, reducing memory usage in grouping and modeling operations.\n\n\n\n2.4 Profile and benchmark code\nProfiling and benchmarking can help pinpoint runtime and memory bottlenecks and quantify whether revisions improve performance. Options include:\n\nFor quick timing checks, use the built-in base R function system.time().\n\nsystem.time({\n  out &lt;- df$x^2 + log(df$y)\n})\n\nFor workflows with multiple steps, tictoc can help track the runtime of individual blocks in longer scripts.\n\nlibrary(tictoc)\n\ntic(\"Step 1: transform\")\ndf$x2 &lt;- df$x^2\ntoc()\n\ntic(\"Step 2: summarize\")\nm &lt;- mean(df$x2)\ntoc()\n\nFor complex scripts with multiple potential bottlenecks, profvis provides a visual breakdown of time spent in functions and can also identify memory-intensive operations.\n\nlibrary(profvis)\n\ntimes &lt;- 4e5\ncols &lt;- 150\ndata &lt;- as.data.frame(x = matrix(rnorm(times * cols, mean = 5), ncol = cols))\ndata &lt;- cbind(id = paste0(\"g\", seq_len(times)), data)\n\nprofvis({\n  data1 &lt;- data   # Store in another variable for this run\n  \n  # Get column means\n  means &lt;- apply(data1[, names(data1) != \"id\"], 2, mean)\n  \n  # Subtract mean from each column\n  for (i in seq_along(means)) {\n    data1[, names(data1) != \"id\"][, i] &lt;- data1[, names(data1) != \"id\"][, i] - means[i]\n  }\n})\n\n\n2.5 Use efficient input/output (I/O)\nInput/output (I/O) operations (i.e., reading data from disk and writing results) can be a major source of computational overhead in data-intensive workflows. Inefficient I/O can dominate runtime even when the underlying analysis code is well optimized. The following practices help reduce unnecessary disk access:\n\nUse high-performance read and write functions for large datasets. Functions such as data.table::fread() / fwrite() or readr::read_csv() are generally more efficient than base R functions like read.csv(), particularly for large files.\nSave intermediate data to avoid repeated reads of large raw files. Save them in formats such as .fst, .rds, or .parquet, which are typically faster to read and write and more memory-efficient than plain text formats (e.g., .csv, .txt). See Data & File Types for more details on data formats.\nRead only the data you need. Some read functions (e.g., data.table::fread() and readr::read_csv()) can scan the data structure and selectively load columns or rows without reading the entire dataset into memory.\n\nExample: read only selected columns\nDT &lt;- fread(\"large_data.csv\", select = c(\"id\", \"year\", \"value\"))\n\n\n2.6 Manage garbage collection\nR automatically manages memory through garbage collection (GC), a process that reclaims memory from objects that are no longer referenced. Garbage collection is triggered based on internal thresholds and requires R to pause execution and scan memory for unused objects. While GC typically runs in the background, it can become a performance bottleneck in memory-intensive workflows, particularly when many large temporary objects are created and discarded. GC-related issues often appear as unexpectedly long runtimes, intermittent pauses during execution, or persistently high memory usage rather than explicit error messages.\nThe most effective way to limit the runtime cost of garbage collection is to reduce unnecessary object creation. Avoiding large intermediate objects and minimizing repeated allocation and copying can substantially lower GC overhead.\nR also allows users to trigger garbage collection explicitly via the gc() function. In most cases, automatic garbage collection is sufficient. Explicit calls to gc() are best reserved for two situations:\n\nAfter removing very large objects that are no longer needed\nBefore starting a memory-intensive computation\n\nBecause garbage collection itself is computationally expensive, frequent or routine calls can substantially slow execution, especially inside loops. The gc() function should therefore be used deliberately and sparingly.\nExample: garbage collection after removing large objects\nrm(large_object)\ngc()\n\n\n2.7 Use parallel computation when appropriate\nParallel computation can substantially reduce runtime by distributing independent tasks across multiple CPU cores. However, it increases coding complexity and resource demands and should therefore be treated as an optimization step rather than a default choice. Parallelization is possible when the same operation can be applied independently across many units, such as:\n\nBatch processing of many files, for example workflows that read, clean, or transform large numbers of similarly structured files.\nUnit-level analyses, such as applying the same procedure separately to spatial units (e.g., watersheds) or administrative units (e.g., states, ZIP codes).\nSimulation-based analyses, including Monte Carlo simulations, bootstrap procedures, or permutation tests that involve many repeated runs of the same computation with different random draws.\n\nWhen using parallel computation, pay particular attention to the following considerations:\n\nMemory usage and data transfer. Each parallel worker may require its own copy of data, which can substantially increase memory consumption. Parallelization may therefore be counterproductive when working with very large objects or on machines with limited memory.\nShared computing environments. When working on shared servers, ensure that parallel execution does not monopolize system resources or interfere with other users. Limit the number of cores used when appropriate.\n\nIn R, packages such as future, furrr, or base R’s parallel provide relatively simple interfaces for parallel execution without requiring low-level thread management.\nExample: parallelizing independent tasks with future and furrr\nlibrary(future)\nlibrary(furrr)\n\n# Set up a parallel plan (adjust workers as appropriate)\nplan(multisession, workers = 4)\n\nunits &lt;- unique(df$county_id)\n\n# Apply the same function independently to each unit\nresults &lt;- future_map(units, function(u) {\n  sub &lt;- df[df$county_id == u, ]\n  mean(sub$value, na.rm = TRUE)\n})\nIn this example, each county is processed independently, making the task well suited for parallel execution. The results are equivalent to those from a sequential loop but can be completed substantially faster when the number of units is large and each task is computationally intensive. Note that computing a mean by county is typically a small and fast operation, and parallelization might not be necessary in practice; this example is for demonstration purposes.\n\n\n2.8 Additional resources\n\nImproving performance from Advanced R by Hadley Wickham\n\nEfficient R Programming by Colin Gillespie",
+    "crumbs": [
+      "Software Quality",
+      "Computational Efficiency"
+    ]
+  },
+  {
+    "objectID": "docs/software/readability.html",
+    "href": "docs/software/readability.html",
+    "title": "Readability",
+    "section": "",
+    "text": "“Good coding style is like correct punctuation: you can manage without it,\nbutitsuremakesthingseasiertoread.”\n— Tidyverse Style Guide\nReadable code reduces the time collaborators and future developers spend deciphering complex code and ensures continuity even if the original author is unavailable. To accomplish this, we recommend:",
+    "crumbs": [
+      "Software Quality",
+      "Readability"
+    ]
+  },
+  {
+    "objectID": "docs/software/readability.html#modularizing-code",
+    "href": "docs/software/readability.html#modularizing-code",
+    "title": "Readability",
+    "section": "1 Modularizing code",
+    "text": "1 Modularizing code\nModularizing code is the practice of organizing an entire research project into small, self-contained, and logically structured components, each with a clear and focused purpose. This applies at multiple levels: separating the overall codebase into well-defined scripts (e.g., raw data acquisition and import, cleaning, analysis, visualization), breaking scripts into coherent code blocks, and further decomposing repeated or complex operations into functions with clearly defined inputs and outputs. Together, these layers of modularization make the structure of the project transparent and easier for others to understand, review, and reuse.\nEach script, code block, or function should be accompanied by descriptive in-line comments or documentation explaining its role, assumptions, and expected behavior. Modularization also improves debugging and maintenance: when something goes wrong, issues can be isolated to a specific component rather than requiring developers to trace through the entire codebase. Over time, this structure supports collaborative development, facilitates testing, and allows individual pieces of the workflow to evolve without disrupting the rest of the project.",
+    "crumbs": [
+      "Software Quality",
+      "Readability"
+    ]
+  },
+  {
+    "objectID": "docs/software/readability.html#consistent-code-style",
+    "href": "docs/software/readability.html#consistent-code-style",
+    "title": "Readability",
+    "section": "2 Consistent code style",
+    "text": "2 Consistent code style\nCode style refers to the conventions that govern how code is written and formatted. This includes:\n\nformatting choices (e.g., indentation, spacing, line length),\nnaming conventions (for variables, functions, datasets, etc.), and\ndocumentation and commenting practices.\n\nWhile personal preferences vary, the key to readability is consistency.\nBelow are established style guides relevant to programming languages commonly used at RFF:\n\nR: Tidyverse Style Guide by Hadley Wickham\n\nPython: Google Python Style Guide\n\nStata: Suggestions on Stata programming style by Nicholas Fox\n\nOther languages: Google style guides for other languages\n\nIn particular, we recommend using consistent, distinctive, and meaningful names for variables, functions, datasets, and files:\n\nVariable or object names should be descriptive of their content, avoiding overly vague or generic terms (e.g., discount_rate instead of val)\nFunction names should describe their action or output (e.g., calculate_average_price()).\nDatasets and files should follow a systematic naming pattern that includes relevant identifiers (e.g., county_population_2022.csv instead of data_final.csv). See also the Naming folders, files, and scripts subsection under Data Management.",
+    "crumbs": [
+      "Software Quality",
+      "Readability"
+    ]
+  },
+  {
+    "objectID": "docs/software/readability.html#in-code-documentation",
+    "href": "docs/software/readability.html#in-code-documentation",
+    "title": "Readability",
+    "section": "3 In-code documentation",
+    "text": "3 In-code documentation\nIn-code documentation refers to comments written directly within the source code to explain its purpose, functionality, and usage. We recommend incorporating three types of documentation:\n\nScript headers\nInclude a header at the top of each script outlining key metadata such as the script’s objective, author, and start date.\nBlock-level comments\nUse comments to describe the intent and logic of each major code block.\nInline comments\nAdd comments on individual lines of code, especially when the functionality is not obvious or when there are potential limitations.",
+    "crumbs": [
+      "Software Quality",
+      "Readability"
+    ]
+  },
+  {
+    "objectID": "docs/software/accuracy.html",
+    "href": "docs/software/accuracy.html",
+    "title": "Accuracy",
+    "section": "",
+    "text": "Accuracy refers to the correctness and precision of written code in executing its intended functions without errors or unintended consequences. Below we discuss three practices that promote accuracy, particularly in collaborative environments typical of RFF projects:",
+    "crumbs": [
+      "Software Quality",
+      "Accuracy"
+    ]
+  },
+  {
+    "objectID": "docs/software/accuracy.html#pseudocoding",
+    "href": "docs/software/accuracy.html#pseudocoding",
+    "title": "Accuracy",
+    "section": "1 Pseudocoding",
+    "text": "1 Pseudocoding\nPseudocode is a step-by-step, high-level description of an algorithm written in plain English. It resembles a programming language but is not actual code. Its main purpose is to help researchers clarify and organize the logical structure of a complex algorithm before writing any executable code. In a research team, pseudocode also facilitates consensus among collaborators. The author of the pseudocode does not have to be the person who eventually writes the code, but all collaborators should review and agree on the pseudocode before it is translated into a programming language.\nWe recommend using pseudocoding in situations where shared understanding is the primary goal, such as collaborative learning, planning or reasoning through complex analytical tasks, and jointly establishing methodological choices before implementation.\n\nExample: psuedocode and code\nPsuedocode\n# Goal: Download migration data for years 2011-2021 from IRS website and save to disk\n\nLoad libraries\nSet working directory\n\n# Create function to download to IRS data\ndownload_irs_data &lt;- function(IRS data year, file destination) {\n  url &lt;- Web address to IRS data for IRS data year \n  download file at url and save to file destination\n}\n\n# Execute function for years 2011-2021\ndst &lt;- selected destination\ncreate dst folder if it doesn't already exist \n\nfor year in 2011-2021 { \n  download_irs_data(IRS data year = year, file destination = dst)\n}\n\nCode\n# Load necessary libraries\nlibrary(dplyr)\nlibrary(tidyr)\nlibrary(readr) \n\n# Set the new working directory to path where script is saved\nsetwd(dirname(rstudioapi::getActiveDocumentContext()$path)) \n\n# Function to download IRS inflow migration data\ndownload_irs_data &lt;- function(year1, dst) {\n  year2 &lt;- sprintf(\"%02d\", (year1 + 1) %% 100) year1 &lt;- sprintf(\"%02d\", year1 %% 100)\n  link &lt;- sprintf(\"https://www.irs.gov/pub/irs-soi/countyinflow%s%s.csv\", year1, year2) \n  download.file(link, sprintf(\"%s/countyinflow%s%s.csv\", dst, year1, year2))\n}\n\n# Download inflow data for years 2011-2021\ndst &lt;- \"migration-data\" \ndir.create(dst, showWarnings = FALSE, recursive = TRUE) \nlapply(seq(11, 21), download_irs_data, dst = dst)",
+    "crumbs": [
+      "Software Quality",
+      "Accuracy"
+    ]
+  },
+  {
+    "objectID": "docs/software/accuracy.html#testing-and-debugging-during-code-development",
+    "href": "docs/software/accuracy.html#testing-and-debugging-during-code-development",
+    "title": "Accuracy",
+    "section": "2 Testing and debugging during code development",
+    "text": "2 Testing and debugging during code development\nRobust code development requires systematic attention to both testing and debugging. Debugging is essential not only when execution halts with an error, but also to ensure that the program achieves its intended purpose. Code that runs without syntax errors may still contain flawed logic and produce misleading results. As best practice, each step of the analysis should be tested and verified. While the exact approach depends on the analysis, systematically checking intermediate outputs and validating assumptions at every stage helps identify and resolve errors early, improving the reliability of the final results.\nHere are some general best practices:\n\nPay attention to error and warning messages.\nSoftware systems often provide error and warning messages that indicate where and why a problem occurs. These messages can guide you toward a fix. Even warnings that do not stop execution may flag subtle issues that could lead to incorrect results later.\nUse logs and diagnostic print statements. Temporary print statements or structured logging can help verify assumptions, inspect intermediate results, and identify where errors arise during code development. In long or computationally intensive loops, logging can be useful for tracking progress, diagnosing performance bottlenecks, and pinpointing the specific step or iteration that is failing.\nTest incrementally.\nBuild and run code in small, manageable pieces rather than writing long scripts all at once. This makes it easier to isolate where problems occur. Individual functions should also be validated using test cases with known inputs and expected outputs.\nInspect intermediate and final outputs.\nReview summaries, counts, and simple plots at key steps to confirm that data transformations behave as expected. Unexpected values, incorrect data types, missing data, or extreme outliers often indicate problems in earlier processing steps and should be investigated before proceeding.\nCheck data dimensions.\nKeep track of the number of rows and columns in your data, especially after merges, joins, reshaping, or filtering. Unexpected changes in dimensions often signal data loss, duplication, or unintended filtering.\n\nAlso see Quality and Preparation under Data Management for related discussion.",
+    "crumbs": [
+      "Software Quality",
+      "Accuracy"
+    ]
+  },
+  {
+    "objectID": "docs/software/accuracy.html#code-review",
+    "href": "docs/software/accuracy.html#code-review",
+    "title": "Accuracy",
+    "section": "3 Code review",
+    "text": "3 Code review\nCode review is the practice of having a colleague—someone other than the original author—examine major coding components. This process supports mutual learning, helps catch bugs early, and identifies opportunities for improvement. We recommend setting up a code review system at the start of a project so that review becomes a regular and expected part of the workflow.\n\nCode Review Approaches\nCode review can take different forms depending on the team’s workflow and preferences:\n\nGitHub pull requests.\nPull requests are a GitHub feature that allow programmers to propose changes to the code and request feedback before merging. This is often the most efficient and structured way to conduct review for teams using Git. Reviewers can add comments directly on specific lines of code within a pull request. Also see Pull Requests under Version Control for related discussion.\n\n\n\n\n\nSource: Reviewing proposed changes in a pull request\n\nWritten feedback. For relatively straightforward code or experienced programmers, reviews can be exchanged through email or other written channels.\nIn-person meetings. When code is complex and requires alignment among team members, in-person walkthroughs can cut down on written exchanges.\nPair programming. Two programmers collaborate directly on a single script. This method is especially valuable as a hands-on learning opportunity for less experienced team members.\nReplication. A team member reruns the analysis to verify that results are reproducible. This provides strong assurance of transparency, though full replication may be impractical for code with very long runtimes—in such cases, partial replication can still be useful.\nCheck output. A reviewer inspects key outputs—such as tables, figures, or summary statistics—to confirm they make sense given the intended analysis.\n\nWhichever method is used, it is important to ensure that all team members have access to the code base and that review responsibilities are clearly assigned.\n\n\nCode review checklist\n\n\nWhen reviewing code, consider the following:\n\nCorrectness: Does the code do what it’s supposed to? Are edge cases handled?\nClarity: Are variable and function names clear? Is the logic easy to follow?\nReproducibility: Can someone else run the code with the provided inputs and get the same result?\nEfficiency: Is the code written in a reasonably efficient way (avoiding unnecessary loops or redundancy)?\nConsistency: Does the code follow agreed formatting, naming, and documentation conventions?\nDocumentation: Are inputs, outputs, and assumptions documented? Are comments clear and useful?\n\n\n\nAdditional resources\n\nGoogle’s code review guidelines\nTidyteam code review principles\nGithub - Code Review\nGithub Copilot",
+    "crumbs": [
+      "Software Quality",
+      "Accuracy"
+    ]
+  },
+  {
     "objectID": "docs/software/index.html",
     "href": "docs/software/index.html",
     "title": "Software Quality",
     "section": "",
-    "text": "Content coming soon.\nStyle guide resources:\n\nR: Tidyverse Style Guide by Hadley Wickham\nPython: Google Python Style Guide\nStata: Suggestions on Stata programming style by Nicholas Fox\nOther languages: Google style guides for other languages",
+    "text": "Due to the computational nature of our research, software development (writing code and scripts) is a primary component of everyday work at RFF. Best practices in scientific coding are designed to:\n\nensure accuracy and minimize errors,\nenhance code readability and flexibility,\nimprove reproducibility, and\nimprove efficiency in computation.\n\nThe other components of this guidance (Data Management and Version Control) are all part of practices for high-quality software. This section focuses specifically on the code-writing process, providing general principles to promote robust coding practices while recognizing that best practices vary by discipline and by software/language.",
     "crumbs": [
-      "Software Quality (Coming Soon)"
+      "Software Quality"
     ]
   },
   {
@@ -1141,6 +1262,160 @@
     "text": "The first step: Data management planning for reproducibility\nData management planning, a form of preliminary documentation, is the process of thinking ahead about how your team will access, use, create, modify, store, share, and describe data related to your research project. Data management plans (DMPs) enhance collaboration by establishing baseline expectations, make projects resilient to turnover, and save time in the long run. In addition, many funders require data management plans be submitted with grant proposals, so thinking about these issues early can facilitate the proposal process.\nThis guidance resource provides general instructions for data practices and addresses many of the core questions that are part of the DMP process. At a minimum, the questions below should be reviewed at the start of a project. Associated guidance is linked.\n\nWhere will data/code be stored and how will it be organized?\nHow will the team use Microsoft Teams for file storage and communication? What types of files will be stored in the Teams folder versus the project’s L:/ drive folder? What will be communicated over Teams chat versus email or GitHub?\nWho will be responsible for disposing / archiving data?\nWho will be responsible for publishing data/code and attaching appropriate documentation and use licenses?\nWhat will the version control / git / GitHub workflow be?\nWhat coding software and main libraries will be used?\nHow will code be reviewed for quality?\nWhat are expectations around data quality and code quality?\nHow will data sources, code, and major methodological decisions be documented?\nHas the appropriate budget been allocated to implement this DMP?\n\nCertain projects may require additional considerations. For development of a more thorough DMP, refer to the UCSB NCEAS data management planning section.",
     "crumbs": [
       "Foundations"
+    ]
+  },
+  {
+    "objectID": "docs/software/additional-resources.html",
+    "href": "docs/software/additional-resources.html",
+    "title": "Additional Learning Resources",
+    "section": "",
+    "text": "Wilson, Greg, Jennifer Bryan, Karen Cranston, Justin Kitzes, Lex Nederbragt, and Tracy K. Teal. 2017. “Good Enough Practices in Scientific Computing.” PLOS Computational Biology 13 (6): e1005510. https://doi.org/10.1371/journal.pcbi.1005510\nBest Practices when Writing Code by Daniel M. Sullivan\nData science for economists by Grant McDermott",
+    "crumbs": [
+      "Software Quality",
+      "Additional Learning Resources"
+    ]
+  },
+  {
+    "objectID": "docs/software/additional-resources.html#general",
+    "href": "docs/software/additional-resources.html#general",
+    "title": "Additional Learning Resources",
+    "section": "",
+    "text": "Wilson, Greg, Jennifer Bryan, Karen Cranston, Justin Kitzes, Lex Nederbragt, and Tracy K. Teal. 2017. “Good Enough Practices in Scientific Computing.” PLOS Computational Biology 13 (6): e1005510. https://doi.org/10.1371/journal.pcbi.1005510\nBest Practices when Writing Code by Daniel M. Sullivan\nData science for economists by Grant McDermott",
+    "crumbs": [
+      "Software Quality",
+      "Additional Learning Resources"
+    ]
+  },
+  {
+    "objectID": "docs/software/additional-resources.html#r",
+    "href": "docs/software/additional-resources.html#r",
+    "title": "Additional Learning Resources",
+    "section": "2 R",
+    "text": "2 R\n\n2.1 General\n\nR for Reproducible Scientific Analysis by Software Carpentry\nR for Data Science (2e) by Hadley Wickham et al.\n\n\n\n2.2 Beginner\n\nLearn R by Codecademy\nHands-On Programming with R by Garrett Grolemund\n\n\n\n2.3 Intermediate/Advanced\n\nNCEAS Learning Hub’s coreR Course\nAdvanced R by Hadley Wickham\nEfficient R programming by Colin Gillespie\n\n\n\n2.4 Visualization\n\nData Visualization: A Practical Introduction by Kieran Healy\nggplot2: Elegant Graphics for Data Analysis (3e) by Hadley Wickham et al.\n\n\n\n2.5 GIS\n\nGeocomputation with R by Robin Lovelace et al. \nGeographic Data Science with R: Visualizing and Analyzing Environmental Change by Michael Wimberly\nSpatial Data Science by Edzer Pebesma and Roger Bivand\nRFF GIS Learning Lab",
+    "crumbs": [
+      "Software Quality",
+      "Additional Learning Resources"
+    ]
+  },
+  {
+    "objectID": "docs/software/additional-resources.html#python",
+    "href": "docs/software/additional-resources.html#python",
+    "title": "Additional Learning Resources",
+    "section": "3 Python",
+    "text": "3 Python\n\nThe Python Tutorial\nPython Datascience Handbook by Jake VanderPlas\nData Science from Scratch by Joel Grus\nAutomate the Boring Stuff with Python by Al Sweigart\nPlotting and Programming in Python by Software Carpentry\nPython Web Scraping: Full Tutorial With Examples (2025) by Kevin Sahin\nFluent Python by Luciano Ramalho",
+    "crumbs": [
+      "Software Quality",
+      "Additional Learning Resources"
+    ]
+  },
+  {
+    "objectID": "docs/software/additional-resources.html#julia",
+    "href": "docs/software/additional-resources.html#julia",
+    "title": "Additional Learning Resources",
+    "section": "4 Julia",
+    "text": "4 Julia\n\nJulia Manual\nJulia Academy\nJulia Data Science by Jose Storopoli et al\nGetting Started · DataFrames.jl\nTutorial · Plots\nJulia Performance Tips",
+    "crumbs": [
+      "Software Quality",
+      "Additional Learning Resources"
+    ]
+  },
+  {
+    "objectID": "docs/software/additional-resources.html#stata",
+    "href": "docs/software/additional-resources.html#stata",
+    "title": "Additional Learning Resources",
+    "section": "5 Stata",
+    "text": "5 Stata\n\nStata Users Guide\nUCLA Stata Learning Modules",
+    "crumbs": [
+      "Software Quality",
+      "Additional Learning Resources"
+    ]
+  },
+  {
+    "objectID": "docs/software/additional-resources.html#matlab",
+    "href": "docs/software/additional-resources.html#matlab",
+    "title": "Additional Learning Resources",
+    "section": "6 MATLAB",
+    "text": "6 MATLAB\n\nMATLAB Onramp Course\nMATLAB: A Practical Approach by Stormy Attaway\nNumerical Methods using MATLAB by George Lindfield and John Penny",
+    "crumbs": [
+      "Software Quality",
+      "Additional Learning Resources"
+    ]
+  },
+  {
+    "objectID": "docs/software/reproducibility.html",
+    "href": "docs/software/reproducibility.html",
+    "title": "Reproducibility",
+    "section": "",
+    "text": "Reproducibility refers to the ability to obtain consistent results when using the same data, methods, and analyses. Ensuring that our work is reproducible is essential—not only so that our findings can be verified by ourselves and by external researchers, but also to facilitate transparency and credibility. A reproducible workflow also makes it easier to repurpose parts of the code for other projects, saving time and reducing the likelihood of introducing errors.\nHere we discuss two ways to enhance the reproducibility of the analysis:",
+    "crumbs": [
+      "Software Quality",
+      "Reproducibility"
+    ]
+  },
+  {
+    "objectID": "docs/software/reproducibility.html#project-script-structure",
+    "href": "docs/software/reproducibility.html#project-script-structure",
+    "title": "Reproducibility",
+    "section": "1 Project script structure",
+    "text": "1 Project script structure\nFor reproducibility, it is important to break down the project workflow into a logical sequence of scripts and clearly document the order in which they should be executed. We recommend the following practices:\n\n1.1 Split a code base into multiple scripts\nBreaking a project into a series of scripts makes it easier to test, maintain, and reuse code compared to working in a single monolithic file. While there is no strict rule for how to divide code, the following are good practices:\n\nFocus on one substantial responsibility per script.\nEach script should perform a clearly defined task, such as pre-processing a large dataset, creating geographical overlays, merging supplementary datasets, generating descriptive statistics, or running a specific analysis.\nSeparate time-consuming steps.\nIf a procedure is computationally expensive, place it in its own script and save the output as an intermediate dataset for later steps. This avoids unnecessarily re-running lengthy processes, such as complex geospatial calculations or aggregating large datasets.\nIsolate key intermediate outputs.\nIf a block of code produces an output that will be used in multiple subsequent steps, place it in a dedicated script and save the output for reuse.\nExtract reusable code blocks.\nIf a section of code—such as a function—is repeated across multiple scripts, centralize it (along with the required libraries) in a single location. The code block or function can then be sourced or imported from other scripts. For example:\n\nIn R: source(\"script_name.R\")\n\nIn Python: import module_name\n\nIn Stata: do filename.do\n\n\n\n\n1.2 Number scripts and script folders\nScript names can begin with a two-digit number (e.g., 00_, 01_, 02_) to encode execution order. When a folder is sorted by name, the scripts appear in the intended run sequence. For steps that can run in parallel, append letters (e.g., 01a_, 01b_, 01c_).\nApply the same scheme to folders (e.g., 00_setup, 01_processing, 02_analysis) so dependencies are clear—for example, cleaning steps run before analysis.\nAn example of this structure is provided below.\n\nExample Script Folder\nscripts/\n|--00_tools/                          # Shared helpers, not part of pipeline\n|   |--filters.R                      # Reusable filter functions\n|   |--data_io.R                      # Reusable input/output wrapper functions\n|\n|--01_processing/                     # Data prep and integration\n|   |--01_clean.R                     # Clean raw data\n|   |--02_aggregate.R                 # Aggregate to analysis unit\n|   |--03_merge_external.R            # Merge with supplementary datasets\n|\n|--02_analysis/                       # Analysis and outputs\n|   |--01a_summary_stats.R            # Summary statistics\n|   |--01b_map.R                      # Descriptive spatial visualizations\n|   |--01c_time_series_figure.R       # Descriptive time series plots\n|   |--02_main_regressions.R          # Main statistical analysis\n|   |--03_robustness_checks.R         # Alternative specifications\n\n\n\n1.3 Create a run_all script\nA run_all script executes all other scripts in the project in the correct order. This script documents the full workflow and can be used to reproduce the project’s complete set of outputs, including intermediate data products and final results, starting from the raw data.\nWhen using script numbering together with a run_all script, it is important to keep both up to date whenever new scripts are added or existing scripts are reorganized.\nIf the project uses global parameters referenced across multiple scripts, place them in a dedicated configuration script and load that script at the beginning of the run_all file.\n\nExample run_all.R Script\n# This script runs all the code in my project, from scratch\n\n# Prepare analysis data\nsource(\"scripts/01_processing/01_clean.R\")                    \nsource(\"scripts/01_processing/02_aggregate.R\")       \nsource(\"scripts/01_processing/03_merge_external.R\")\n\n# Descriptive stats and figures\nsource(\"scripts/02_analysis/01a_summary_stats.R\")                    \nsource(\"scripts/02_analysis/01b_map.R\")       \nsource(\"scripts/02_analysis/01c_time_series_figure.R\")\n\n# Analysis\nsource(\"scripts/02_analysis/02_main_regressions.R\")\nsource(\"scripts/02_analysis/03_robustness_checks.R\")",
+    "crumbs": [
+      "Software Quality",
+      "Reproducibility"
+    ]
+  },
+  {
+    "objectID": "docs/software/reproducibility.html#package-management",
+    "href": "docs/software/reproducibility.html#package-management",
+    "title": "Reproducibility",
+    "section": "2 Package management",
+    "text": "2 Package management\nAn analysis using the same code and data may not run identically across different machines if the machines have different operating systems, application versions, or package versions installed. Therefore, package management is a critical component of reproducibility.\nVirtual environments provide a way to isolate the software dependencies of a project, such as package versions and system libraries, so that they are consistent over time and independent of other projects on the same machine. Maintaining separate environments for different projects prevents conflicts between dependencies, allows older analyses to remain reproducible even as packages evolve, and supports collaborative work by ensuring that all contributors run the code under the same computational conditions.\nThree common tools for managing computational environments are renv, conda and Docker.\n\nrenv (for R) creates project-specific environments that record and restore the exact package versions used in an analysis. This ensures that results can be reproduced even if packages have been updated globally.\nconda (for Python, R, and other languages) manages project-specific environments by explicitly specifying package versions and system dependencies. conda helps ensure that analyses run consistently across machines and over time, particularly for workflows that rely on compiled libraries or mixed-language dependencies.\nDocker goes further by packaging the entire computational environment (including the operating system and versions of R, Python, Julia, and all associated packages) into a self-contained container that can be run on any machine.\n\nAt this time, the working group has not fully tested the functionality of these tools. The resources listed below are provided for reference. We would love to hear from users who have implemented any of these tools in RFF’s computing environment. Please get in touch with us to share your experience.\n\nrenv\n\nIntroduction to renv\nVideo walkthrough: Using renv to track the version of your packages in R\nRStudio user guide: renv\n\n\n\nconda\n\nGetting started with conda\nManaging environments\nLesson by the Carpentries Incubator: Introduction to Conda for (Data) Scientists\n\n\n\nDocker\n\nDocker 101 Tutorial\nGet started: Introduction\nUse of Docker for Reproducibility in Economics",
+    "crumbs": [
+      "Software Quality",
+      "Reproducibility"
+    ]
+  },
+  {
+    "objectID": "docs/software/flexibility.html",
+    "href": "docs/software/flexibility.html",
+    "title": "Flexibility",
+    "section": "",
+    "text": "Flexibility refers to the extent to which code can be easily adapted and modified to accommodate changes in external factors, data, or methodology. Code with hard-coded values (i.e. specific values are directly embedded in the source) will be inflexible, because the script must be edited anytime those values change.\nWe recommend three practices to enhance program flexibility:",
+    "crumbs": [
+      "Software Quality",
+      "Flexibility"
+    ]
+  },
+  {
+    "objectID": "docs/software/flexibility.html#use-functions",
+    "href": "docs/software/flexibility.html#use-functions",
+    "title": "Flexibility",
+    "section": "1 Use functions",
+    "text": "1 Use functions\nMost operations can be written as functions, which can then be applied to different datasets or variables. Because functions are reusable, they not only provide greater flexibility but also help avoid redundant code. Repeating the same operation by “copy-pasting” it into multiple parts of the code makes it harder to maintain, as any change must be replicated in several places. By contrast, when a repeated operation is written as a function, any change needs to be made only once, making the script more concise, readable, and less error-prone.\nTo use functions effectively:\n\nDefine a clear purpose.\nEach function should accomplish a single, well-defined task.\nDocument thoroughly.\nDescribe the function’s purpose, inputs, and outputs.\nMake the function configurable.\nUse arguments to control the behavior of the function. Do not comment and uncomment sections of code to change the function – this practice is prone to mistakes.\nGeneralize operations using loops and lists.\nInstead of repeating similar operations for each dataset or variable, store them in a list and write a single function to handle the task. Then, use a loop to apply that function to each element of the list automatically.\n\n\nExample: functional programming in R\nlibrary(tidyverse)\n\n# ----------------------------\n# Function\n# ----------------------------\n\n# Function to calculate the mean of a numeric vector\n# Args:\n#   x: A numeric vector\n#   na_as_zero: Logical; treat NA as zero? Default FALSE.\n#   na.rm: Logical; remove NA values? Default TRUE.\n# Returns:\n#   The mean of the numeric vector.\n\ncalculate_mean &lt;- function(x, na_as_zero = FALSE, na.rm = TRUE) {\n  \n  # Replace NAs with 0 if specified\n  if (na_as_zero) {\n    x &lt;- replace_na(x, 0)\n  }\n  \n  # Calculate the mean\n  mean_value &lt;- mean(x, na.rm = na.rm)\n  return(mean_value)\n}\n\n# ----------------------------\n# Example data\n# ----------------------------\nmonthly_sales &lt;- list(\n  January   = c(100, 200, 150, NA, 300),\n  February  = c(250, 300, NA, 400),\n  March     = c(200, 180, 220, 210)\n)\n\n# ----------------------------\n# Result\n# ----------------------------\n# Apply with na_as_zero = TRUE\nmean_sales_with_zero &lt;- lapply(monthly_sales, calculate_mean, na_as_zero = TRUE)\n\n# Apply with na_as_zero = FALSE\nmean_sales_without_zero &lt;- lapply(monthly_sales, calculate_mean, na_as_zero = FALSE)\n\n# Print the results\nprint(mean_sales_with_zero)\nprint(mean_sales_without_zero)\nNotes: This example defines a well-documented function, calculate_mean(), that performs a single task—computing a mean with configurable handling of missing values through the na_as_zero and na.rm parameters. A named list of monthly sales is processed using lapply(), which loops over each element and applies the function without duplicating code.",
+    "crumbs": [
+      "Software Quality",
+      "Flexibility"
+    ]
+  },
+  {
+    "objectID": "docs/software/flexibility.html#use-parameters",
+    "href": "docs/software/flexibility.html#use-parameters",
+    "title": "Flexibility",
+    "section": "2 Use parameters",
+    "text": "2 Use parameters\nInstead of hard-coding values or constants, parameterization involves using variables, configuration files, or external resources to store data that can be adjusted without changing the code structure. This approach enhances the adaptability of the code to varying conditions, and is particularly useful when the parameters are referenced multiple times in the code.\n\nExample: parameterization\n# Parameters\nmin_hp       &lt;- 100   # Minimum horsepower required\nselected_cyl &lt;- 6     # Number of cylinders to filter on\n\n# Filter the data using the parameters\nfiltered_data &lt;- subset(mtcars, hp &gt;= min_hp & cyl == selected_cyl)\n\n# Compute the average MPG\navg_mpg &lt;- mean(filtered_data$mpg)\n\n# Report results using the parameters\ncat(\n  \"Average MPG for cars with at least\", min_hp, \"horsepower\",\n  \"and\", selected_cyl, \"cylinders:\", avg_mpg, \"\\n\"\n)\nNotes: This example uses variables min_hp and selected_cyl to store filter criteria, allowing the behavior of the code to be easily changed without modifying the filtering logic. These parameters control which rows of mtcars are selected, making the code adaptable to different analysis needs. Because the parameters are referenced multiple times, updating their values at the top automatically applies the changes everywhere they are used.",
+    "crumbs": [
+      "Software Quality",
+      "Flexibility"
+    ]
+  },
+  {
+    "objectID": "docs/software/flexibility.html#use-relative-file-paths",
+    "href": "docs/software/flexibility.html#use-relative-file-paths",
+    "title": "Flexibility",
+    "section": "3 Use relative file paths",
+    "text": "3 Use relative file paths\nAbsolute file paths specify the complete location of a file or folder, beginning at the root of the file system. For example, a dataset might be referenced with an absolute path such as \"L:/my_project/data/input_data.csv\". These paths can create problems for collaborators, since the project may reside in different locations on their machines (for example, on a different drive letter or in another directory).\nInstead of using absolute file paths, relative file paths refer to files or directories in relation to the current working directory. This approach allows code to work on different user machines, accommodates changes in the project folder path, and makes the code easier to archive and share when the project is completed.\n\nExample: reading and writing files using relative paths\nDirectory structure\nmy_project/\n├── data/\n│   ├── input_data.csv\n│   └── output_data.csv\n└── scripts/\n    └── wilson/\n        └── analysis.R\nCode (analysis.R in scripts/wilson/):\n# Set the working directory to the script's location (optional, recommended)\nsetwd(dirname(rstudioapi::getActiveDocumentContext()$path))  # Temporarily set WD to where the script is stored\n\n# Move up two levels to the project root ('my_project/')\nsetwd(\"../../\")\n\n# Define relative paths\ninput_path  &lt;- \"data/input_data.csv\"\noutput_path &lt;- \"data/output_data.csv\"\n\n# Read data using a relative path\ndata &lt;- read.csv(input_path)\n\n# Write data using a relative path\nwrite.csv(data, output_path, row.names = FALSE)\nNotes: This example demonstrates how to organize file access using relative paths rather than absolute paths, making the code portable across different machines and directory structures. In this example, the working directory is derived from the script’s location, but other configurations are possible—for instance, prompting the user once for the location of the project folder and using that as a consistent reference. In all cases, relative paths help ensure that the script remains functional even if the project is moved.",
+    "crumbs": [
+      "Software Quality",
+      "Flexibility"
     ]
   },
   {

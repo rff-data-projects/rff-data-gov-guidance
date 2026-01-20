@@ -2,86 +2,110 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://alexandra-thompson-dc.github.io/rff-data-gov-guidance/docs/version-control/workflows.html</loc>
-    <lastmod>2025-11-19T16:53:13.684Z</lastmod>
+    <lastmod>2026-01-20T18:43:53.144Z</lastmod>
   </url>
   <url>
     <loc>https://alexandra-thompson-dc.github.io/rff-data-gov-guidance/docs/version-control/setup.html</loc>
-    <lastmod>2025-11-19T16:53:13.684Z</lastmod>
+    <lastmod>2026-01-20T18:43:53.144Z</lastmod>
   </url>
   <url>
     <loc>https://alexandra-thompson-dc.github.io/rff-data-gov-guidance/docs/version-control/faq.html</loc>
-    <lastmod>2025-11-19T16:53:13.684Z</lastmod>
+    <lastmod>2026-01-20T18:43:53.144Z</lastmod>
+  </url>
+  <url>
+    <loc>https://alexandra-thompson-dc.github.io/rff-data-gov-guidance/docs/software/computational-efficiency.html</loc>
+    <lastmod>2026-01-20T18:43:53.143Z</lastmod>
+  </url>
+  <url>
+    <loc>https://alexandra-thompson-dc.github.io/rff-data-gov-guidance/docs/software/readability.html</loc>
+    <lastmod>2026-01-20T18:43:53.143Z</lastmod>
+  </url>
+  <url>
+    <loc>https://alexandra-thompson-dc.github.io/rff-data-gov-guidance/docs/software/accuracy.html</loc>
+    <lastmod>2026-01-20T18:43:53.143Z</lastmod>
   </url>
   <url>
     <loc>https://alexandra-thompson-dc.github.io/rff-data-gov-guidance/docs/software/index.html</loc>
-    <lastmod>2025-11-19T16:53:13.684Z</lastmod>
+    <lastmod>2026-01-20T18:43:53.143Z</lastmod>
   </url>
   <url>
     <loc>https://alexandra-thompson-dc.github.io/rff-data-gov-guidance/docs/data-management/publication.html</loc>
-    <lastmod>2025-11-19T16:53:13.683Z</lastmod>
+    <lastmod>2026-01-20T18:43:53.143Z</lastmod>
   </url>
   <url>
     <loc>https://alexandra-thompson-dc.github.io/rff-data-gov-guidance/docs/data-management/storage-options.html</loc>
-    <lastmod>2025-11-19T16:53:13.683Z</lastmod>
+    <lastmod>2026-01-20T18:43:53.143Z</lastmod>
   </url>
   <url>
     <loc>https://alexandra-thompson-dc.github.io/rff-data-gov-guidance/docs/data-management/quality-preparation.html</loc>
-    <lastmod>2025-11-19T16:53:13.683Z</lastmod>
+    <lastmod>2026-01-20T18:43:53.143Z</lastmod>
   </url>
   <url>
     <loc>https://alexandra-thompson-dc.github.io/rff-data-gov-guidance/docs/data-management/documentation.html</loc>
-    <lastmod>2025-11-19T16:53:13.683Z</lastmod>
+    <lastmod>2026-01-20T18:43:53.142Z</lastmod>
   </url>
   <url>
     <loc>https://alexandra-thompson-dc.github.io/rff-data-gov-guidance/docs/data-management/file-formats.html</loc>
-    <lastmod>2025-11-19T16:53:13.683Z</lastmod>
+    <lastmod>2026-01-20T18:43:53.142Z</lastmod>
   </url>
   <url>
     <loc>https://alexandra-thompson-dc.github.io/rff-data-gov-guidance/presentations/learning-lab-vc1/index.html</loc>
-    <lastmod>2025-11-19T16:53:13.699Z</lastmod>
+    <lastmod>2026-01-20T18:43:53.160Z</lastmod>
   </url>
   <url>
     <loc>https://alexandra-thompson-dc.github.io/rff-data-gov-guidance/presentations/learning-lab-vc2/index.html</loc>
-    <lastmod>2025-11-19T16:53:13.699Z</lastmod>
+    <lastmod>2026-01-20T18:43:53.160Z</lastmod>
   </url>
   <url>
     <loc>https://alexandra-thompson-dc.github.io/rff-data-gov-guidance/presentations/index.html</loc>
-    <lastmod>2025-11-19T16:53:13.699Z</lastmod>
+    <lastmod>2026-01-20T18:43:53.159Z</lastmod>
   </url>
   <url>
     <loc>https://alexandra-thompson-dc.github.io/rff-data-gov-guidance/index.html</loc>
-    <lastmod>2025-11-19T16:53:13.692Z</lastmod>
+    <lastmod>2026-01-20T18:43:53.153Z</lastmod>
   </url>
   <url>
     <loc>https://alexandra-thompson-dc.github.io/rff-data-gov-guidance/docs/data-management/index.html</loc>
-    <lastmod>2025-11-19T16:53:13.683Z</lastmod>
+    <lastmod>2026-01-20T18:43:53.143Z</lastmod>
   </url>
   <url>
     <loc>https://alexandra-thompson-dc.github.io/rff-data-gov-guidance/docs/data-management/organization.html</loc>
-    <lastmod>2025-11-19T16:53:13.683Z</lastmod>
+    <lastmod>2026-01-20T18:43:53.143Z</lastmod>
   </url>
   <url>
     <loc>https://alexandra-thompson-dc.github.io/rff-data-gov-guidance/docs/data-management/sensitive-proprietary.html</loc>
-    <lastmod>2025-11-19T16:53:13.683Z</lastmod>
+    <lastmod>2026-01-20T18:43:53.143Z</lastmod>
   </url>
   <url>
     <loc>https://alexandra-thompson-dc.github.io/rff-data-gov-guidance/docs/data-management/archival.html</loc>
-    <lastmod>2025-11-19T16:53:13.682Z</lastmod>
+    <lastmod>2026-01-20T18:43:53.142Z</lastmod>
   </url>
   <url>
     <loc>https://alexandra-thompson-dc.github.io/rff-data-gov-guidance/docs/foundations/index.html</loc>
-    <lastmod>2025-11-19T16:53:13.684Z</lastmod>
+    <lastmod>2026-01-20T18:43:53.143Z</lastmod>
+  </url>
+  <url>
+    <loc>https://alexandra-thompson-dc.github.io/rff-data-gov-guidance/docs/software/additional-resources.html</loc>
+    <lastmod>2026-01-20T18:43:53.143Z</lastmod>
+  </url>
+  <url>
+    <loc>https://alexandra-thompson-dc.github.io/rff-data-gov-guidance/docs/software/reproducibility.html</loc>
+    <lastmod>2026-01-20T18:43:53.144Z</lastmod>
+  </url>
+  <url>
+    <loc>https://alexandra-thompson-dc.github.io/rff-data-gov-guidance/docs/software/flexibility.html</loc>
+    <lastmod>2026-01-20T18:43:53.143Z</lastmod>
   </url>
   <url>
     <loc>https://alexandra-thompson-dc.github.io/rff-data-gov-guidance/docs/version-control/index.html</loc>
-    <lastmod>2025-11-19T16:53:13.684Z</lastmod>
+    <lastmod>2026-01-20T18:43:53.144Z</lastmod>
   </url>
   <url>
     <loc>https://alexandra-thompson-dc.github.io/rff-data-gov-guidance/docs/version-control/tutorial-branching.html</loc>
-    <lastmod>2025-11-19T16:53:13.684Z</lastmod>
+    <lastmod>2026-01-20T18:43:53.144Z</lastmod>
   </url>
   <url>
     <loc>https://alexandra-thompson-dc.github.io/rff-data-gov-guidance/docs/version-control/tutorial-basics.html</loc>
-    <lastmod>2025-11-19T16:53:13.684Z</lastmod>
+    <lastmod>2026-01-20T18:43:53.144Z</lastmod>
   </url>
 </urlset>
