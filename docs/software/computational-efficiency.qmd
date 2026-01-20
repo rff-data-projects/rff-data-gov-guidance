@@ -39,7 +39,7 @@ Below we outline a set of recommended practices for improving R code efficiency.
 
 ### Use vectorization over loops
 
-In R, vectorization means operating on entire vectors, matrices, or data structures at once rather than iterating element by element in explicit loops. Vectorization is more efficient should be used instead of `for` loops whenever possible. Applications include:
+In R, vectorization means operating on entire vectors, matrices, or data structures at once rather than iterating element by element in explicit loops. Vectorization is more efficient and should be used instead of `for` loops whenever possible. Applications include:
 
 -   Many base R functions are inherently vectorized, including arithmetic operations (e.g., `+`, `-`, `*`) , summary functions (e.g., `sum()`, `mean()`, `rowSums()`), and math functions (e.g., `log()`, `exp()`, `sqrt()`).
 
