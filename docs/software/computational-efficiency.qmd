@@ -183,7 +183,7 @@ R automatically manages memory through garbage collection (GC), a process that r
 
 The most effective way to limit the runtime cost of garbage collection is to reduce unnecessary object creation. Avoiding large intermediate objects and minimizing repeated allocation and copying can substantially lower GC overhead.
 
-R also allows users to trigger garbage collection explicitly via the `gc()` function. In most cases, automatic garbage collection is sufficient. Explicit calls to gc() are best reserved for two situations:
+R also allows users to trigger garbage collection explicitly via the `gc()` function. In most cases, automatic garbage collection is sufficient. Explicit calls to `gc()` are best reserved for two situations:
 
 1. After removing very large objects that are no longer needed
 2. Before starting a memory-intensive computation
