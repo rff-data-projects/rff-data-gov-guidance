@@ -59,7 +59,7 @@ df <- data.frame(
 
 num_cols <- c("a", "b", "c")
 
-# Using a loop (ineffeicnt)
+# Using a loop (inefficient)
 for (col in num_cols) {
   df[[col]] <- (df[[col]] - mean(df[[col]])) / sd(df[[col]])
 }
