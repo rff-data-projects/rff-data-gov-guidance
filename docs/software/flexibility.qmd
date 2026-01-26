@@ -33,7 +33,7 @@ To use functions effectively:
   Instead of repeating similar operations for each dataset or variable, store them in a list and write a single function to handle the task. Then, use a loop to apply that function to each element of the list automatically. 
 
 
-### Example: functional programming in R {-}
+### Example: functions in R {-}
 
 ```r
 library(tidyverse)
