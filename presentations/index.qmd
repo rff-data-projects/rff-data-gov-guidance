@@ -9,3 +9,5 @@ number-sections: false
 * [Learning Lab: Version Control Part 1, Using Git](learning-lab-vc1/index.qmd){target="_blank"}
 
 * [Learning Lab: Version Control Part 2, Branching and Pull Requests](learning-lab-vc2/index.qmd){target="_blank"}
+
+* [Learning Lab: Software Quality](software_quality_learning_lab.pdf){target="_blank"}
